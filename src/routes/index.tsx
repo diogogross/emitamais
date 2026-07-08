@@ -19,11 +19,9 @@ import {
 import heroPerson from "@/assets/hero-person.png";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
 import smartPos from "@/assets/smart-pos.png";
-import dashParceiro from "@/assets/screens/dash-parceiro.png";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
 import pdvScreen from "@/assets/screens/pdv.png";
 import nfeScreen from "@/assets/screens/nfe.png";
-import produtosScreen from "@/assets/screens/produtos.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -289,11 +287,9 @@ function Index() {
             />
             <div className="grid grid-cols-3 gap-3 md:gap-4">
               {[
-                { label: "Dash Parceiro", src: dashParceiro },
                 { label: "Dash Empresa", src: dashEmpresa },
                 { label: "PDV", src: pdvScreen },
                 { label: "NFe", src: nfeScreen },
-                { label: "Produtos", src: produtosScreen },
               ].map(({ label, src }, i) => (
                 <div
                   key={label}
