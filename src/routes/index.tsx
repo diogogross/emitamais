@@ -278,31 +278,40 @@ function Index() {
           </div>
 
           <div className="order-1 lg:order-2 relative">
-            <div className="grid grid-cols-3 gap-3">
-              {["Painel", "PDV", "Mobile"].map((label, i) => (
+            <div
+              className="absolute inset-0 -z-10 blur-3xl opacity-60"
+              style={{ background: "radial-gradient(circle at 60% 40%, oklch(0.7 0.25 305 / 0.4), transparent 65%)" }}
+            />
+            <div className="grid grid-cols-3 gap-3 md:gap-4">
+              {[
+                { label: "Dash Parceiro", src: dashParceiro },
+                { label: "Dash Empresa", src: dashEmpresa },
+                { label: "PDV", src: pdvScreen },
+                { label: "NFe", src: nfeScreen },
+                { label: "Produtos", src: produtosScreen },
+              ].map(({ label, src }, i) => (
                 <div
                   key={label}
-                  className="glass-card aspect-[3/5] p-3 flex flex-col justify-between animate-float"
-                  style={{ animationDelay: `${i * 0.6}s` }}
+                  className="glass-card p-2 flex flex-col animate-float overflow-hidden"
+                  style={{ animationDelay: `${(i % 3) * 0.6}s` }}
                 >
-                  <div className="text-[10px] uppercase tracking-widest text-muted-foreground">{label}</div>
-                  <div className="space-y-2">
-                    <div className="h-2 rounded-full bg-white/10" />
-                    <div className="h-2 w-3/4 rounded-full bg-white/10" />
-                    <div className="h-12 rounded-lg" style={{ background: "var(--gradient-primary)", opacity: 0.7 }} />
-                    <div className="grid grid-cols-2 gap-2">
-                      <div className="h-8 rounded-md bg-white/5" />
-                      <div className="h-8 rounded-md bg-white/5" />
-                    </div>
+                  <div className="rounded-lg overflow-hidden ring-1 ring-white/10 bg-white/5">
+                    <img
+                      src={src}
+                      alt={`Tela ${label} do sistema Emissor Fiscal`}
+                      loading="lazy"
+                      className="w-full h-auto block"
+                    />
                   </div>
-                  <div className="flex items-center justify-between text-[10px] text-muted-foreground">
-                    <span>Ativo</span>
+                  <div className="flex items-center justify-between px-1 pt-2 text-[10px] uppercase tracking-widest text-muted-foreground">
+                    <span>{label}</span>
                     <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   </div>
                 </div>
               ))}
             </div>
           </div>
+
         </div>
       </section>
 
