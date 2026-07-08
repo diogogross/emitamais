@@ -305,6 +305,65 @@ function Index() {
         </div>
       </section>
 
+      {/* SMART POS */}
+      <section id="smartpos" className="max-w-7xl mx-auto px-6 py-24">
+        <div className="text-center max-w-2xl mx-auto">
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Smart POS</div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold">
+            Venda direto na <span className="gradient-text">Smart POS</span>.
+          </h2>
+          <p className="mt-4 text-muted-foreground text-lg">
+            Nosso sistema PDV (NFCe) está homologado com as principais adquirentes do mercado.
+          </p>
+        </div>
+
+        <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[
+            { name: "Vero", color: "#1F3D8A", style: "font-black italic tracking-tight" },
+            { name: "Stone", color: "#00A868", style: "font-bold lowercase tracking-tight" },
+            { name: "PagBank", color: "#0B8E4E", style: "font-semibold" },
+            { name: "Mercado Pago", color: "#2D9CDB", style: "font-semibold" },
+            { name: "Clover", color: "#149954", style: "font-semibold lowercase" },
+            { name: "Rede Itaú", color: "#EE4D2D", style: "font-black lowercase tracking-tight" },
+            { name: "Azulzinha", color: "#1F3D8A", style: "font-bold lowercase tracking-tight" },
+            { name: "Bin Fiserv", color: "#E85A2C", style: "font-black lowercase" },
+            { name: "Sicredi", color: "#00995D", style: "italic font-bold" },
+            { name: "Getnet", color: "#E4002B", style: "font-black lowercase tracking-tight" },
+            { name: "Cielo", color: "#003A70", style: "font-semibold lowercase" },
+            { name: "SiPag", color: "#7BB53C", style: "font-black lowercase tracking-tight" },
+          ].map((brand) => (
+            <div
+              key={brand.name}
+              className="glass-card group relative overflow-hidden aspect-[16/9] grid place-items-center hover:-translate-y-0.5 transition"
+            >
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-40 transition"
+                style={{ background: `radial-gradient(circle at center, ${brand.color}, transparent 70%)` }}
+              />
+              <div className="relative rounded-xl bg-white w-[86%] h-[76%] grid place-items-center shadow-[0_10px_30px_-10px_rgba(0,0,0,0.35)]">
+                <span
+                  className={`font-display text-xl md:text-2xl ${brand.style}`}
+                  style={{ color: brand.color }}
+                >
+                  {brand.name}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 glass-card p-6 flex flex-wrap items-center gap-4 justify-between">
+          <div className="text-sm text-muted-foreground">
+            <span className="text-foreground font-medium">Homologado:</span> maquininhas Android com NFCe integrada e recebimento imediato.
+          </div>
+          <a href="#planos" className="text-sm font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all">
+            Quero minha Smart POS <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </section>
+
+
+
       {/* PLANOS */}
       <section id="planos" className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center max-w-2xl mx-auto">
