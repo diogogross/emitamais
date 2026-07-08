@@ -161,18 +161,62 @@ function Index() {
         </div>
       </section>
 
-      {/* MARQUEE / trust */}
-      <section className="border-y border-white/5 py-6 overflow-hidden bg-black/10">
-        <div className="flex gap-16 animate-marquee whitespace-nowrap text-sm uppercase tracking-[0.3em] text-muted-foreground/70">
-          {Array.from({ length: 2 }).map((_, i) => (
-            <div key={i} className="flex gap-16 shrink-0">
-              {["SEFAZ integrado", "100% Cloud", "API aberta", "Multiempresas", "Suporte 24/7", "LGPD compliant", "IBPT automático", "Backups automáticos"].map((t) => (
-                <span key={t + i} className="flex items-center gap-3">
-                  <span className="w-1 h-1 rounded-full bg-primary-glow" /> {t}
-                </span>
-              ))}
-            </div>
-          ))}
+      {/* CLIENTES marquee */}
+      <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20">
+        <div className="text-center mb-6 px-6">
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Nossos clientes</div>
+          <h3 className="font-display text-2xl md:text-3xl font-bold">
+            Clientes que <span className="gradient-text">acreditam</span> no nosso potencial
+          </h3>
+        </div>
+        <div className="relative">
+          <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+          <div className="flex gap-6 animate-marquee whitespace-nowrap">
+            {Array.from({ length: 2 }).map((_, i) => (
+              <div key={i} className="flex gap-6 shrink-0">
+                {[
+                  { name: "Clínica VidaPlus", seg: "Saúde", color: "#2D9CDB", style: "font-bold" },
+                  { name: "Borracharia RodaBoa", seg: "Automotivo", color: "#1F1F1F", style: "font-black italic" },
+                  { name: "TransCargo Express", seg: "Transporte", color: "#E4002B", style: "font-black tracking-tight" },
+                  { name: "Padaria Pão Dourado", seg: "Alimentação", color: "#B8730E", style: "italic font-bold" },
+                  { name: "Mercadinho Bom Preço", seg: "Varejo", color: "#00A868", style: "font-bold lowercase" },
+                  { name: "Auto Peças Turbo", seg: "Automotivo", color: "#E85A2C", style: "font-black" },
+                  { name: "Farmácia Saúde+", seg: "Farmácia", color: "#00995D", style: "font-bold" },
+                  { name: "Studio Bella", seg: "Beleza", color: "#C2185B", style: "italic font-semibold" },
+                  { name: "Petshop Amigo Fiel", seg: "Pet", color: "#7B1FA2", style: "font-bold lowercase" },
+                  { name: "Construtora Alicerce", seg: "Construção", color: "#F57C00", style: "font-black tracking-tight" },
+                  { name: "Restaurante Sabor Real", seg: "Alimentação", color: "#D32F2F", style: "italic font-bold" },
+                  { name: "Ótica VisãoMax", seg: "Ótica", color: "#1F3D8A", style: "font-semibold" },
+                  { name: "Fazenda Boa Terra", seg: "Agro", color: "#3B7A22", style: "font-bold" },
+                  { name: "Contabilidade Prisma", seg: "Serviços", color: "#0B3D91", style: "font-black lowercase" },
+                  { name: "Distribuidora Sul", seg: "Atacado", color: "#004D40", style: "font-bold tracking-tight" },
+                  { name: "Barbearia Navalha", seg: "Beleza", color: "#1F1F1F", style: "font-black italic" },
+                ].map((b) => (
+                  <div
+                    key={b.name + i}
+                    className="flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.5)] ring-1 ring-black/5"
+                  >
+                    <span
+                      className={`w-9 h-9 rounded-full grid place-items-center text-white font-display font-bold text-sm shrink-0`}
+                      style={{ background: b.color }}
+                    >
+                      {b.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
+                    </span>
+                    <div className="flex flex-col leading-tight">
+                      <span
+                        className={`font-display text-base ${b.style}`}
+                        style={{ color: b.color }}
+                      >
+                        {b.name}
+                      </span>
+                      <span className="text-[10px] uppercase tracking-widest text-black/50">{b.seg}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
