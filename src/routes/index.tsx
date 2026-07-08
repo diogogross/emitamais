@@ -30,6 +30,7 @@ const docTypes = [
   { name: "CTe / CTeOS", desc: "Transporte de cargas", icon: Truck },
   { name: "MDFe", desc: "Manifesto eletrônico", icon: FileSpreadsheet },
   { name: "NFPe", desc: "Produtor rural", icon: Sparkles },
+  { name: "CIOT", desc: "Operações de transporte", icon: FileSpreadsheet },
 ];
 
 const features = [
