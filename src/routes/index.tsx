@@ -34,8 +34,8 @@ const docTypes = [
 ];
 
 const features = [
-  { icon: Palette, title: "White Label completo", desc: "Sua marca em destaque, do login ao painel." },
-  { icon: Zap, title: "Cadastro simplificado", desc: "Interface rápida, prática e sem fricção." },
+  { icon: Zap, title: "Emissão em segundos", desc: "Fluxo otimizado, do cadastro à autorização SEFAZ." },
+  { icon: ShieldCheck, title: "Conformidade garantida", desc: "Regras fiscais atualizadas automaticamente." },
   { icon: Smartphone, title: "100% responsivo", desc: "Celular, tablet ou desktop — mesma experiência." },
   { icon: CreditCard, title: "Recebimentos integrados", desc: "Pix, cartão e boleto direto no sistema." },
   { icon: Cloud, title: "Online em nuvem", desc: "Acesse de qualquer lugar, com backups automáticos." },
