@@ -58,7 +58,7 @@ const plans = [
       "Até 5 empresas",
       "Notas ilimitadas",
       "Todos os documentos fiscais",
-      "Painel white label",
+      "Integrações e API",
       "Suporte prioritário",
     ],
   },
