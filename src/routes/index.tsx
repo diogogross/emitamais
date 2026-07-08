@@ -289,11 +289,9 @@ function Index() {
             />
             <div className="grid grid-cols-3 gap-3 md:gap-4">
               {[
-                { label: "Dash Parceiro", src: dashParceiro },
                 { label: "Dash Empresa", src: dashEmpresa },
                 { label: "PDV", src: pdvScreen },
                 { label: "NFe", src: nfeScreen },
-                { label: "Produtos", src: produtosScreen },
               ].map(({ label, src }, i) => (
                 <div
                   key={label}
