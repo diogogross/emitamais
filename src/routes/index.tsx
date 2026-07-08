@@ -392,10 +392,10 @@ function Index() {
             style={{ background: "radial-gradient(circle at 30% 20%, oklch(0.7 0.25 305 / 0.6), transparent 60%), radial-gradient(circle at 70% 80%, oklch(0.75 0.2 60 / 0.4), transparent 55%)" }}
           />
           <h2 className="font-display text-4xl md:text-6xl font-bold max-w-3xl mx-auto">
-            Pronto para emitir com <span className="gradient-text">a sua marca?</span>
+            Pronto para modernizar <span className="gradient-text">sua emissão fiscal?</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg max-w-xl mx-auto">
-            Fale com nosso time e descubra como transformar o Notaly no seu produto fiscal.
+            Fale com nosso time e descubra como o Emissor Fiscal pode acelerar sua operação.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
