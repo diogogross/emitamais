@@ -19,6 +19,7 @@ import {
 import heroPerson from "@/assets/hero-person.png";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
 import smartPos from "@/assets/smart-pos.png";
+import brasilMap from "@/assets/brasil-map.png";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
 import pdvScreen from "@/assets/screens/pdv.png";
 import nfeScreen from "@/assets/screens/nfe.png";
