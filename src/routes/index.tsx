@@ -279,7 +279,7 @@ function Index() {
               Do PDV ao mobile — <span className="gradient-text">sem perder controle.</span>
             </h2>
             <p className="mt-5 text-muted-foreground text-lg">
-              Painel do parceiro, dashboard da empresa, PDV e emissores móveis. Mesma experiência fluida em qualquer tela.
+              Dashboard da empresa, PDV e emissores móveis. Mesma experiência fluida em qualquer tela.
             </p>
             <ul className="mt-8 space-y-3">
               {[
