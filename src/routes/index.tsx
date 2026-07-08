@@ -42,39 +42,17 @@ const features = [
   { icon: Repeat, title: "Atualização legal automática", desc: "Sempre em conformidade com a SEFAZ." },
 ];
 
-const plans = [
-  {
-    name: "Starter",
-    price: "59",
-    tag: "Ideal para começar",
-    perks: ["1 empresa", "Até 200 notas/mês", "NFe + NFCe", "Suporte por chat"],
-  },
-  {
-    name: "Pro",
-    price: "149",
-    tag: "Mais escolhido",
-    highlight: true,
-    perks: [
-      "Até 5 empresas",
-      "Notas ilimitadas",
-      "Todos os documentos fiscais",
-      "Integrações e API",
-      "Suporte prioritário",
-    ],
-  },
-  {
-    name: "Enterprise",
-    price: "349",
-    tag: "Alto volume",
-    perks: [
-      "Empresas ilimitadas",
-      "Notas ilimitadas",
-      "API completa",
-      "SLA dedicado",
-      "Gerente de conta",
-    ],
-  },
+const planPerks = [
+  "Todos os documentos fiscais (NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe, CIOT)",
+  "Emissão de notas ilimitada",
+  "Empresas ilimitadas",
+  "PDV online integrado",
+  "Integrações e API completa",
+  "Recebimentos: Pix, cartão e boleto",
+  "Atualização legal automática",
+  "Suporte prioritário",
 ];
+
 
 function Index() {
   return (
