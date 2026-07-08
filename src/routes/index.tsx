@@ -63,15 +63,15 @@ const plans = [
     ],
   },
   {
-    name: "Revenda",
+    name: "Enterprise",
     price: "349",
-    tag: "Para parceiros",
+    tag: "Alto volume",
     perks: [
       "Empresas ilimitadas",
-      "Painel do parceiro",
-      "Sua marca 100%",
-      "Comissão recorrente",
-      "Gerente dedicado",
+      "Notas ilimitadas",
+      "API completa",
+      "SLA dedicado",
+      "Gerente de conta",
     ],
   },
 ];
