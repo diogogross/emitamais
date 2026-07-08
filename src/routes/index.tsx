@@ -98,7 +98,7 @@ function Index() {
             href="#planos"
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
-            Acessar Notaly
+            Acessar sistema
             <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </nav>
