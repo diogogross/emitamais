@@ -152,7 +152,7 @@ function Index() {
             />
             <img
               src={heroPerson}
-              alt="Empresário usando o Notaly em um notebook"
+              alt="Empresário usando o Emissor Fiscal em um notebook"
               width={1200}
               height={1408}
               className="relative w-full max-w-xl mx-auto"
