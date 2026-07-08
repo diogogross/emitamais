@@ -7,7 +7,6 @@ import {
   Smartphone,
   Cloud,
   Repeat,
-  Palette,
   CreditCard,
   Truck,
   Receipt,
