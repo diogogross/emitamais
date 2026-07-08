@@ -419,9 +419,9 @@ function Index() {
             <span className="w-6 h-6 rounded-md grid place-items-center" style={{ background: "var(--gradient-primary)" }}>
               <Sparkles className="w-3 h-3 text-white" />
             </span>
-            Notaly
+            Emissor Fiscal
           </div>
-          <div>© {new Date().getFullYear()} Notaly. Todos os direitos reservados.</div>
+          <div>© {new Date().getFullYear()} Emissor Fiscal. Todos os direitos reservados.</div>
           <div className="flex gap-5">
             <a href="#" className="hover:text-foreground">Termos</a>
             <a href="#" className="hover:text-foreground">Privacidade</a>
