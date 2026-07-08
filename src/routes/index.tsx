@@ -110,13 +110,13 @@ function Index() {
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-              Plataforma fiscal white label
+              Plataforma completa de emissão fiscal
             </div>
             <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-              A tecnologia fiscal <span className="gradient-text">que cabe no bolso</span> da sua empresa.
+              A tecnologia fiscal <span className="gradient-text">que acelera</span> a sua operação.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno, 100% online e com a sua marca. Menos burocracia, mais operação.
+              Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
