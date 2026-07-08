@@ -436,6 +436,89 @@ function Index() {
 
       </section>
 
+      {/* NÚMEROS + MAPA */}
+      <section id="numeros" className="max-w-7xl mx-auto px-6 py-24">
+        <div className="glass-card p-8 md:p-14 grid lg:grid-cols-[1fr_1fr] gap-10 items-center relative overflow-hidden">
+          <div
+            className="absolute inset-0 -z-10 opacity-40"
+            style={{ background: "radial-gradient(circle at 20% 30%, oklch(0.7 0.25 305 / 0.35), transparent 60%)" }}
+          />
+          <div>
+            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Nossa força em números</div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+              Resultados que comprovam nossa <span className="gradient-text">solidez</span> no mercado.
+            </h2>
+
+            <div className="mt-10 grid grid-cols-2 gap-4">
+              {[
+                { value: "Todos", label: "estados do Brasil" },
+                { value: "+1.000", label: "cidades atendidas" },
+                { value: "+5", label: "anos de experiência" },
+                { value: "+500", label: "parceiros ativos" },
+                { value: "+R$280MM", label: "em notas emitidas/mês" },
+                { value: "+15.000", label: "empresas atendidas" },
+              ].map((s) => (
+                <div key={s.label} className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:-translate-y-0.5 transition">
+                  <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{s.value}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div
+              className="absolute inset-0 -z-10 blur-3xl opacity-70"
+              style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.45), transparent 65%)" }}
+            />
+            <img
+              src={brasilMap}
+              alt="Mapa do Brasil com presença do Emissor Fiscal em todos os estados"
+              width={1024}
+              height={1024}
+              loading="lazy"
+              className="w-full max-w-lg mx-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="max-w-4xl mx-auto px-6 py-24">
+        <div className="text-center max-w-2xl mx-auto">
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Perguntas frequentes</div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold">
+            Tudo o que você precisa <span className="gradient-text">saber.</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground text-lg">
+            Ainda com dúvidas? Fale com nosso time — respondemos em minutos.
+          </p>
+        </div>
+
+        <div className="mt-14 space-y-3">
+          {[
+            { q: "O Emissor Fiscal funciona para qualquer segmento?", a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural — emitindo NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT em um único sistema." },
+            { q: "Preciso instalar algum programa?", a: "Não. O sistema é 100% online e roda no navegador — desktop, tablet ou celular. Também rodamos em maquininhas Smart POS Android homologadas." },
+            { q: "Quantas notas e empresas posso emitir?", a: "Notas fiscais e empresas ilimitadas, todas incluídas no plano único de R$ 60/mês. Sem taxa por documento e sem taxa de setup." },
+            { q: "Vocês atendem NFSe da minha cidade?", a: "Estamos integrados com mais de 1.600 municípios brasileiros. Consulte sua cidade com nosso time — novas prefeituras entram semanalmente." },
+            { q: "Como funciona o suporte?", a: "Suporte prioritário por chat, e-mail e WhatsApp, com time especialista em legislação fiscal. Também mantemos base de conhecimento e vídeos de treinamento." },
+            { q: "Consigo integrar com meu ERP ou e-commerce?", a: "Sim. Oferecemos API REST completa e webhooks para integrar com ERPs, e-commerces, marketplaces e sistemas próprios." },
+          ].map((item) => (
+            <details key={item.q} className="glass-card px-6 py-5 group open:pb-6 [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none">
+                <span className="font-display text-lg font-semibold text-foreground">{item.q}</span>
+                <span className="w-8 h-8 rounded-full grid place-items-center border border-white/15 bg-white/5 text-primary-glow transition group-open:rotate-45">
+                  <span className="text-lg leading-none">+</span>
+                </span>
+              </summary>
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+
+
       {/* CTA */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div
