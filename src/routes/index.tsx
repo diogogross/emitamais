@@ -204,10 +204,10 @@ function Index() {
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">O produto</div>
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Tecnologia completa com <span className="gradient-text">sua marca</span> e praticidade em cada detalhe.
+              Tecnologia completa com <span className="gradient-text">praticidade</span> em cada detalhe.
             </h2>
             <p className="mt-5 text-muted-foreground text-lg">
-              Um sistema modular, responsivo e whitelabel — construído para revendas, contadores e empresas que precisam de conformidade sem complexidade.
+              Um sistema modular e responsivo — construído para empresas e contadores que precisam de conformidade sem complexidade.
             </p>
             <div className="mt-8 grid sm:grid-cols-2 gap-4">
               {features.map(({ icon: Icon, title, desc }) => (
