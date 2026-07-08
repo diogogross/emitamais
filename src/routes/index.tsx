@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.png";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
+import smartPos from "@/assets/smart-pos.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
