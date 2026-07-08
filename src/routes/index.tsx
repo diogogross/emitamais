@@ -42,39 +42,17 @@ const features = [
   { icon: Repeat, title: "Atualização legal automática", desc: "Sempre em conformidade com a SEFAZ." },
 ];
 
-const plans = [
-  {
-    name: "Starter",
-    price: "59",
-    tag: "Ideal para começar",
-    perks: ["1 empresa", "Até 200 notas/mês", "NFe + NFCe", "Suporte por chat"],
-  },
-  {
-    name: "Pro",
-    price: "149",
-    tag: "Mais escolhido",
-    highlight: true,
-    perks: [
-      "Até 5 empresas",
-      "Notas ilimitadas",
-      "Todos os documentos fiscais",
-      "Integrações e API",
-      "Suporte prioritário",
-    ],
-  },
-  {
-    name: "Enterprise",
-    price: "349",
-    tag: "Alto volume",
-    perks: [
-      "Empresas ilimitadas",
-      "Notas ilimitadas",
-      "API completa",
-      "SLA dedicado",
-      "Gerente de conta",
-    ],
-  },
+const planPerks = [
+  "Todos os documentos fiscais (NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe, CIOT)",
+  "Emissão de notas ilimitada",
+  "Empresas ilimitadas",
+  "PDV online integrado",
+  "Integrações e API completa",
+  "Recebimentos: Pix, cartão e boleto",
+  "Atualização legal automática",
+  "Suporte prioritário",
 ];
+
 
 function Index() {
   return (
@@ -339,46 +317,40 @@ function Index() {
           </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
-          {plans.map((p) => (
-            <div
-              key={p.name}
-              className={`relative glass-card p-8 flex flex-col ${p.highlight ? "glow-ring border-primary/40" : ""}`}
-              style={p.highlight ? { background: "linear-gradient(180deg, oklch(0.35 0.15 300 / 0.5), oklch(0.22 0.09 295 / 0.5))" } : undefined}
-            >
-              {p.highlight && (
-                <span className="absolute -top-3 left-8 text-[10px] uppercase tracking-widest rounded-full px-3 py-1 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
-                  {p.tag}
-                </span>
-              )}
-              {!p.highlight && (
-                <span className="text-xs uppercase tracking-widest text-muted-foreground">{p.tag}</span>
-              )}
-              <div className="mt-3 font-display text-2xl font-bold">{p.name}</div>
-              <div className="mt-6 flex items-baseline gap-1">
-                <span className="text-sm text-muted-foreground">R$</span>
-                <span className="font-display text-5xl font-bold">{p.price}</span>
-                <span className="text-sm text-muted-foreground">,90 /mês</span>
-              </div>
-              <ul className="mt-6 space-y-3 text-sm flex-1">
-                {p.perks.map((perk) => (
-                  <li key={perk} className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-primary-glow mt-0.5 shrink-0" />
-                    <span className="text-foreground/85">{perk}</span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#"
-                className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full py-3 font-medium transition ${p.highlight ? "text-accent-foreground hover:scale-[1.02]" : "border border-white/15 hover:bg-white/5"}`}
-                style={p.highlight ? { background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" } : undefined}
-              >
-                Assinar {p.name}
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
+        <div className="mt-14 max-w-lg mx-auto">
+          <div
+            className="relative glass-card p-8 md:p-10 flex flex-col glow-ring border-primary/40"
+            style={{ background: "linear-gradient(180deg, oklch(0.35 0.15 300 / 0.5), oklch(0.22 0.09 295 / 0.5))" }}
+          >
+            <span className="absolute -top-3 left-8 text-[10px] uppercase tracking-widest rounded-full px-3 py-1 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
+              Plano único
+            </span>
+            <div className="mt-3 font-display text-2xl font-bold">Emissor Fiscal</div>
+            <p className="text-sm text-muted-foreground mt-1">Tudo incluso, sem limites nem surpresas.</p>
+            <div className="mt-6 flex items-baseline gap-1">
+              <span className="text-sm text-muted-foreground">R$</span>
+              <span className="font-display text-6xl font-bold">60</span>
+              <span className="text-sm text-muted-foreground">,00 /mês</span>
             </div>
-          ))}
+            <ul className="mt-8 space-y-3 text-sm flex-1">
+              {planPerks.map((perk) => (
+                <li key={perk} className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary-glow mt-0.5 shrink-0" />
+                  <span className="text-foreground/85">{perk}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full py-3 font-semibold text-accent-foreground hover:scale-[1.02] transition"
+              style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+            >
+              Assinar agora
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
+
       </section>
 
       {/* CTA */}
