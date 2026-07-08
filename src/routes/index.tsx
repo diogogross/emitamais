@@ -86,7 +86,7 @@ function Index() {
             <span className="w-8 h-8 rounded-lg grid place-items-center" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
               <Sparkles className="w-4 h-4 text-white" />
             </span>
-            Notaly
+            Emissor Fiscal
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#produto" className="hover:text-foreground transition">Produto</a>
