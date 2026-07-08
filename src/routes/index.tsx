@@ -7,7 +7,6 @@ import {
   Smartphone,
   Cloud,
   Repeat,
-  Palette,
   CreditCard,
   Truck,
   Receipt,
@@ -34,8 +33,8 @@ const docTypes = [
 ];
 
 const features = [
-  { icon: Palette, title: "White Label completo", desc: "Sua marca em destaque, do login ao painel." },
-  { icon: Zap, title: "Cadastro simplificado", desc: "Interface rápida, prática e sem fricção." },
+  { icon: Zap, title: "Emissão em segundos", desc: "Fluxo otimizado, do cadastro à autorização SEFAZ." },
+  { icon: ShieldCheck, title: "Conformidade garantida", desc: "Regras fiscais atualizadas automaticamente." },
   { icon: Smartphone, title: "100% responsivo", desc: "Celular, tablet ou desktop — mesma experiência." },
   { icon: CreditCard, title: "Recebimentos integrados", desc: "Pix, cartão e boleto direto no sistema." },
   { icon: Cloud, title: "Online em nuvem", desc: "Acesse de qualquer lugar, com backups automáticos." },
@@ -58,20 +57,20 @@ const plans = [
       "Até 5 empresas",
       "Notas ilimitadas",
       "Todos os documentos fiscais",
-      "Painel white label",
+      "Integrações e API",
       "Suporte prioritário",
     ],
   },
   {
-    name: "Revenda",
+    name: "Enterprise",
     price: "349",
-    tag: "Para parceiros",
+    tag: "Alto volume",
     perks: [
       "Empresas ilimitadas",
-      "Painel do parceiro",
-      "Sua marca 100%",
-      "Comissão recorrente",
-      "Gerente dedicado",
+      "Notas ilimitadas",
+      "API completa",
+      "SLA dedicado",
+      "Gerente de conta",
     ],
   },
 ];
@@ -86,7 +85,7 @@ function Index() {
             <span className="w-8 h-8 rounded-lg grid place-items-center" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
               <Sparkles className="w-4 h-4 text-white" />
             </span>
-            Notaly
+            Emissor Fiscal
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#produto" className="hover:text-foreground transition">Produto</a>
@@ -98,7 +97,7 @@ function Index() {
             href="#planos"
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
-            Acessar Notaly
+            Acessar sistema
             <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </nav>
@@ -110,13 +109,13 @@ function Index() {
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-              Plataforma fiscal white label
+              Plataforma completa de emissão fiscal
             </div>
             <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-              A tecnologia fiscal <span className="gradient-text">que cabe no bolso</span> da sua empresa.
+              A tecnologia fiscal <span className="gradient-text">que acelera</span> a sua operação.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno, 100% online e com a sua marca. Menos burocracia, mais operação.
+              Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
@@ -152,7 +151,7 @@ function Index() {
             />
             <img
               src={heroPerson}
-              alt="Empresário usando o Notaly em um notebook"
+              alt="Empresário usando o Emissor Fiscal em um notebook"
               width={1200}
               height={1408}
               className="relative w-full max-w-xl mx-auto"
@@ -176,7 +175,7 @@ function Index() {
         <div className="flex gap-16 animate-marquee whitespace-nowrap text-sm uppercase tracking-[0.3em] text-muted-foreground/70">
           {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="flex gap-16 shrink-0">
-              {["SEFAZ integrado", "White Label", "100% Cloud", "API aberta", "Multiempresas", "Suporte 24/7", "LGPD compliant", "IBPT automático"].map((t) => (
+              {["SEFAZ integrado", "100% Cloud", "API aberta", "Multiempresas", "Suporte 24/7", "LGPD compliant", "IBPT automático", "Backups automáticos"].map((t) => (
                 <span key={t + i} className="flex items-center gap-3">
                   <span className="w-1 h-1 rounded-full bg-primary-glow" /> {t}
                 </span>
@@ -204,10 +203,10 @@ function Index() {
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">O produto</div>
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Tecnologia completa com <span className="gradient-text">sua marca</span> e praticidade em cada detalhe.
+              Tecnologia completa com <span className="gradient-text">praticidade</span> em cada detalhe.
             </h2>
             <p className="mt-5 text-muted-foreground text-lg">
-              Um sistema modular, responsivo e whitelabel — construído para revendas, contadores e empresas que precisam de conformidade sem complexidade.
+              Um sistema modular e responsivo — construído para empresas e contadores que precisam de conformidade sem complexidade.
             </p>
             <div className="mt-8 grid sm:grid-cols-2 gap-4">
               {features.map(({ icon: Icon, title, desc }) => (
@@ -279,7 +278,7 @@ function Index() {
               Do PDV ao mobile — <span className="gradient-text">sem perder controle.</span>
             </h2>
             <p className="mt-5 text-muted-foreground text-lg">
-              Painel do parceiro, dashboard da empresa, PDV e emissores móveis. Mesma experiência fluida em qualquer tela.
+              Dashboard da empresa, PDV e emissores móveis. Mesma experiência fluida em qualquer tela.
             </p>
             <ul className="mt-8 space-y-3">
               {[
@@ -392,10 +391,10 @@ function Index() {
             style={{ background: "radial-gradient(circle at 30% 20%, oklch(0.7 0.25 305 / 0.6), transparent 60%), radial-gradient(circle at 70% 80%, oklch(0.75 0.2 60 / 0.4), transparent 55%)" }}
           />
           <h2 className="font-display text-4xl md:text-6xl font-bold max-w-3xl mx-auto">
-            Pronto para emitir com <span className="gradient-text">a sua marca?</span>
+            Pronto para modernizar <span className="gradient-text">sua emissão fiscal?</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg max-w-xl mx-auto">
-            Fale com nosso time e descubra como transformar o Notaly no seu produto fiscal.
+            Fale com nosso time e descubra como o Emissor Fiscal pode acelerar sua operação.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
@@ -419,9 +418,9 @@ function Index() {
             <span className="w-6 h-6 rounded-md grid place-items-center" style={{ background: "var(--gradient-primary)" }}>
               <Sparkles className="w-3 h-3 text-white" />
             </span>
-            Notaly
+            Emissor Fiscal
           </div>
-          <div>© {new Date().getFullYear()} Notaly. Todos os direitos reservados.</div>
+          <div>© {new Date().getFullYear()} Emissor Fiscal. Todos os direitos reservados.</div>
           <div className="flex gap-5">
             <a href="#" className="hover:text-foreground">Termos</a>
             <a href="#" className="hover:text-foreground">Privacidade</a>

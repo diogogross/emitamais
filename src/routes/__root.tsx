@@ -77,17 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Notaly — Emissor de Notas Fiscais White Label" },
+      { title: "Emissor Fiscal — Plataforma completa de emissão de notas" },
       {
         name: "description",
         content:
-          "Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema white label. Tecnologia moderna, revenda com sua marca e gestão fiscal simplificada.",
+          "Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema moderno e 100% online. Menos burocracia, mais operação.",
       },
-      { property: "og:title", content: "Notaly — Emissor de Notas Fiscais White Label" },
+      { property: "og:title", content: "Emissor Fiscal — Plataforma completa de emissão de notas" },
       {
         property: "og:description",
         content:
-          "Um único sistema para até 7 tipos de documentos fiscais. Revenda com a sua marca.",
+          "Um único sistema moderno para até 7 tipos de documentos fiscais. 100% online, com foco em operação.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
