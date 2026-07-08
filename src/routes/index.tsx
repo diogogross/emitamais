@@ -23,19 +23,26 @@ import brasilMap from "@/assets/brasil-map.png";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
 import pdvScreen from "@/assets/screens/pdv.png";
 import nfeScreen from "@/assets/screens/nfe.png";
+import docNfe from "@/assets/docs/nfe.jpg";
+import docNfce from "@/assets/docs/nfce.jpg";
+import docNfse from "@/assets/docs/nfse.jpg";
+import docCte from "@/assets/docs/cte.jpg";
+import docMdfe from "@/assets/docs/mdfe.jpg";
+import docNfpe from "@/assets/docs/nfpe.jpg";
+import docCiot from "@/assets/docs/ciot.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
 const docTypes = [
-  { name: "NFe", desc: "Nota Fiscal Eletrônica", icon: FileText },
-  { name: "NFCe", desc: "PDV Online integrado", icon: Store },
-  { name: "NFSe", desc: "+1.600 municípios", icon: Receipt },
-  { name: "CTe / CTeOS", desc: "Transporte de cargas", icon: Truck },
-  { name: "MDFe", desc: "Manifesto eletrônico", icon: FileSpreadsheet },
-  { name: "NFPe", desc: "Produtor rural", icon: Sparkles },
-  { name: "CIOT", desc: "Operações de transporte", icon: FileSpreadsheet },
+  { name: "NFe", desc: "Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ.", icon: FileText, image: docNfe },
+  { name: "NFCe", desc: "PDV online integrado — cupom fiscal eletrônico para o varejo.", icon: Store, image: docNfce },
+  { name: "NFSe", desc: "Nota de serviço integrada com +1.600 municípios brasileiros.", icon: Receipt, image: docNfse },
+  { name: "CTe / CTeOS", desc: "Conhecimento de transporte para cargas e operações de serviço.", icon: Truck, image: docCte },
+  { name: "MDFe", desc: "Manifesto eletrônico de documentos fiscais para o transporte.", icon: FileSpreadsheet, image: docMdfe },
+  { name: "NFPe", desc: "Nota fiscal do produtor rural, emissão simplificada e legalizada.", icon: Sparkles, image: docNfpe },
+  { name: "CIOT", desc: "Código Identificador da Operação de Transporte de cargas.", icon: FileSpreadsheet, image: docCiot },
 ];
 
 const features = [
@@ -219,27 +226,40 @@ function Index() {
           </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {docTypes.map(({ name, desc, icon: Icon }, i) => (
-            <div
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          {docTypes.map(({ name, desc, icon: Icon, image }, i) => (
+            <article
               key={name}
-              className="glass-card p-6 relative overflow-hidden group hover:border-primary-glow/40 transition"
+              className="group relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-white/10 hover:ring-primary-glow/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.7)] cursor-pointer"
             >
-              <div
-                className="absolute -top-16 -right-16 w-40 h-40 rounded-full blur-3xl opacity-0 group-hover:opacity-60 transition"
-                style={{ background: "var(--gradient-primary)" }}
+              <img
+                src={image}
+                alt={`Ilustração do documento fiscal ${name}`}
+                loading="lazy"
+                width={1024}
+                height={640}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="relative flex items-start justify-between">
-                <div>
-                  <div className="w-11 h-11 rounded-xl grid place-items-center mb-4 border border-white/10 bg-white/5">
-                    <Icon className="w-5 h-5 text-primary-glow" />
-                  </div>
-                  <div className="font-display text-2xl font-bold">{name}</div>
-                  <p className="text-sm text-muted-foreground mt-1">{desc}</p>
+              {/* Netflix-style bottom-to-top black gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 via-40% to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <span className="absolute top-3 right-3 text-[10px] font-mono text-white/70 bg-black/50 backdrop-blur px-2 py-1 rounded-full ring-1 ring-white/15">
+                0{i + 1}
+              </span>
+
+              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
+                <div className="flex items-center gap-2.5 mb-2">
+                  <span className="w-8 h-8 rounded-lg grid place-items-center bg-white/10 backdrop-blur ring-1 ring-white/20">
+                    <Icon className="w-4 h-4 text-primary-glow" />
+                  </span>
+                  <h3 className="font-display text-2xl font-bold text-white leading-none">{name}</h3>
                 </div>
-                <span className="text-xs text-muted-foreground/60 font-mono">0{i + 1}</span>
+                <p className="text-sm text-white/80 leading-snug max-w-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+                  {desc}
+                </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
