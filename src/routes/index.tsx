@@ -176,7 +176,7 @@ function Index() {
         <div className="flex gap-16 animate-marquee whitespace-nowrap text-sm uppercase tracking-[0.3em] text-muted-foreground/70">
           {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="flex gap-16 shrink-0">
-              {["SEFAZ integrado", "White Label", "100% Cloud", "API aberta", "Multiempresas", "Suporte 24/7", "LGPD compliant", "IBPT automático"].map((t) => (
+              {["SEFAZ integrado", "100% Cloud", "API aberta", "Multiempresas", "Suporte 24/7", "LGPD compliant", "IBPT automático", "Backups automáticos"].map((t) => (
                 <span key={t + i} className="flex items-center gap-3">
                   <span className="w-1 h-1 rounded-full bg-primary-glow" /> {t}
                 </span>
