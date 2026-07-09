@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   ArrowUpRight,
   FileText,
@@ -15,6 +16,8 @@ import {
   Sparkles,
   Check,
   ArrowRight,
+  ChevronLeft,
+  ChevronRight,
   KeyRound,
   Usb,
   HardDrive,
@@ -24,6 +27,7 @@ import {
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.png";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
+import certificadoMock from "@/assets/screens/certificado-mock.jpg";
 import smartPos from "@/assets/smart-pos.png";
 import brasilMap from "@/assets/brasil-map.png";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
@@ -230,18 +234,8 @@ function Index() {
       {/* PRODUTO showcase */}
       <section id="produto" className="max-w-7xl mx-auto px-6 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
-          <div className="relative">
-            <div className="glass-card p-2 glow-ring">
-              <img
-                src={dashboardMock}
-                alt="Dashboard do sistema emissor de notas fiscais"
-                loading="lazy"
-                width={1600}
-                height={1008}
-                className="w-full rounded-xl"
-              />
-            </div>
-          </div>
+          <ProdutoSlider />
+
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">O produto</div>
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
@@ -678,3 +672,91 @@ function Index() {
     </div>
   );
 }
+
+const produtoSlides = [
+  {
+    tag: "Sistema Emissor",
+    title: "Dashboard completo",
+    desc: "Visão geral de emissões, recebimentos e conformidade em tempo real.",
+    image: dashboardMock,
+    alt: "Dashboard do sistema emissor de notas fiscais",
+  },
+  {
+    tag: "Certificado Digital",
+    title: "Gestão de certificados",
+    desc: "Controle A1 e A3, validade, renovação e titulares em um só lugar.",
+    image: certificadoMock,
+    alt: "Painel de gestão de certificados digitais",
+  },
+];
+
+function ProdutoSlider() {
+  const [i, setI] = useState(0);
+  const total = produtoSlides.length;
+  const s = produtoSlides[i];
+  const go = (n: number) => setI((n + total) % total);
+
+  return (
+    <div className="relative">
+      <div className="glass-card p-2 glow-ring relative overflow-hidden">
+        <div className="relative aspect-[1600/1008] w-full overflow-hidden rounded-xl">
+          {produtoSlides.map((slide, idx) => (
+            <img
+              key={slide.image}
+              src={slide.image}
+              alt={slide.alt}
+              loading="lazy"
+              width={1600}
+              height={1008}
+              className={`absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-500 ${
+                idx === i ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+          <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-black/50 backdrop-blur px-3 py-1.5 text-[11px] font-medium text-white ring-1 ring-white/10">
+            <Sparkles className="w-3 h-3 text-primary-glow" />
+            {s.tag}
+          </div>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => go(i - 1)}
+          aria-label="Slide anterior"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 grid place-items-center rounded-full bg-black/50 backdrop-blur ring-1 ring-white/15 text-white hover:bg-black/70 transition"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <button
+          type="button"
+          onClick={() => go(i + 1)}
+          aria-label="Próximo slide"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 grid place-items-center rounded-full bg-black/50 backdrop-blur ring-1 ring-white/15 text-white hover:bg-black/70 transition"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
+
+      <div className="mt-5 flex items-center justify-between gap-4">
+        <div className="min-w-0">
+          <div className="font-display text-lg font-semibold truncate">{s.title}</div>
+          <div className="text-sm text-muted-foreground truncate">{s.desc}</div>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          {produtoSlides.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => setI(idx)}
+              aria-label={`Ir para slide ${idx + 1}`}
+              className={`h-2 rounded-full transition-all ${
+                idx === i ? "w-8 bg-primary-glow" : "w-2 bg-white/25 hover:bg-white/40"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
