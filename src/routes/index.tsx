@@ -574,7 +574,7 @@ function Index() {
       </div></section>
 
       {/* BLOG */}
-      <section id="blog" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="blog" className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Blog</div>
