@@ -678,7 +678,7 @@ function Index() {
 
 
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
+      <section className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div
           className="glass-card p-10 md:p-16 text-center relative overflow-hidden glow-ring"
           style={{ background: "linear-gradient(135deg, oklch(0.30 0.15 295 / 0.7), oklch(0.20 0.09 295 / 0.7))" }}
