@@ -706,7 +706,7 @@ function Index() {
             </a>
           </div>
         </div>
-      </section>
+      </div></section>
 
       {/* FOOTER */}
       <footer className="border-t border-white/5 mt-10">
