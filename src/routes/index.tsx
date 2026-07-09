@@ -527,7 +527,7 @@ function Index() {
       </div></section>
 
       {/* NÚMEROS + MAPA */}
-      <section id="numeros" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="numeros" className="section-light w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="glass-card p-8 md:p-14 grid lg:grid-cols-[1fr_1fr] gap-10 items-center relative overflow-hidden">
           <div
             className="absolute inset-0 -z-10 opacity-40"
