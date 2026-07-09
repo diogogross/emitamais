@@ -203,7 +203,7 @@ function Index() {
       </section>
 
       {/* PRODUTO showcase */}
-      <section id="produto" className="max-w-7xl mx-auto px-6 py-24 md:py-32">
+      <section id="produto" className="section-light w-full"><div className="max-w-7xl mx-auto px-6 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative">
             <div className="glass-card p-2 glow-ring">
@@ -240,10 +240,10 @@ function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </div></section>
 
       {/* DOCUMENTOS */}
-      <section id="documentos" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="documentos" className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="max-w-2xl">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Documentos</div>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
@@ -299,10 +299,10 @@ function Index() {
             Ver planos <ArrowRight className="w-4 h-4" />
           </a>
         </div>
-      </section>
+      </div></section>
 
       {/* RECURSOS: responsive/mobile */}
-      <section id="recursos" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="recursos" className="section-light w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div className="order-2 lg:order-1">
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Multiplataforma</div>
@@ -363,10 +363,10 @@ function Index() {
           </div>
 
         </div>
-      </section>
+      </div></section>
 
       {/* SMART POS */}
-      <section id="smartpos" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="smartpos" className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
           {/* Device */}
           <div className="relative flex justify-center">
@@ -432,11 +432,11 @@ function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </div></section>
 
 
       {/* CERTIFICADO DIGITAL */}
-      <section id="certificado" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="certificado" className="section-light w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="glass-card relative overflow-hidden p-10 md:p-14">
           <div
             className="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none"
@@ -474,12 +474,12 @@ function Index() {
             </Link>
           </div>
         </div>
-      </section>
+      </div></section>
 
 
 
       {/* PLANOS */}
-      <section id="planos" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="planos" className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Planos</div>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
@@ -524,10 +524,10 @@ function Index() {
           </div>
         </div>
 
-      </section>
+      </div></section>
 
       {/* NÚMEROS + MAPA */}
-      <section id="numeros" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="numeros" className="section-light w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="glass-card p-8 md:p-14 grid lg:grid-cols-[1fr_1fr] gap-10 items-center relative overflow-hidden">
           <div
             className="absolute inset-0 -z-10 opacity-40"
@@ -571,10 +571,10 @@ function Index() {
             />
           </div>
         </div>
-      </section>
+      </div></section>
 
       {/* BLOG */}
-      <section id="blog" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="blog" className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Blog</div>
@@ -637,12 +637,12 @@ function Index() {
             Acessar o blog completo <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
-      </section>
+      </div></section>
 
 
 
       {/* FAQ */}
-      <section id="faq" className="max-w-4xl mx-auto px-6 py-24">
+      <section id="faq" className="section-light w-full"><div className="max-w-4xl mx-auto px-6 py-24">
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Perguntas frequentes</div>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
@@ -673,12 +673,12 @@ function Index() {
             </details>
           ))}
         </div>
-      </section>
+      </div></section>
 
 
 
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
+      <section className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div
           className="glass-card p-10 md:p-16 text-center relative overflow-hidden glow-ring"
           style={{ background: "linear-gradient(135deg, oklch(0.30 0.15 295 / 0.7), oklch(0.20 0.09 295 / 0.7))" }}
@@ -706,7 +706,7 @@ function Index() {
             </a>
           </div>
         </div>
-      </section>
+      </div></section>
 
       {/* FOOTER */}
       <footer className="border-t border-white/5 mt-10">
