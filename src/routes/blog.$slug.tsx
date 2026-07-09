@@ -15,7 +15,8 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!post) throw notFound();
     return { post };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
+    const BASE_URL = "https://volta-fiscal-art.lovable.app";
     if (!loaderData) {
       return {
         meta: [
@@ -25,6 +26,8 @@ export const Route = createFileRoute("/blog/$slug")({
       };
     }
     const { post } = loaderData;
+    const url = `${BASE_URL}/blog/${params.slug}`;
+    const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
     return {
       meta: [
         { title: `${post.title} — Blog Emissor Fiscal` },
@@ -32,8 +35,25 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
-        { property: "og:image", content: post.image },
+        { property: "og:url", content: url },
+        { property: "og:image", content: image },
         { name: "twitter:card", content: "summary_large_image" },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt,
+            image,
+            datePublished: post.date,
+            author: { "@type": "Organization", name: "Emissor Fiscal" },
+            mainEntityOfPage: url,
+          }),
+        },
       ],
     };
   },

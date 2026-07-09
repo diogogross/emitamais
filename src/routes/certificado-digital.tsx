@@ -32,8 +32,10 @@ export const Route = createFileRoute("/certificado-digital")({
           "A1, A3, CNPJ, CPF, NF e Bird ID. Todos os modelos, todas as mídias, emissão rápida e segura.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://volta-fiscal-art.lovable.app/certificado-digital" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://volta-fiscal-art.lovable.app/certificado-digital" }],
   }),
   component: CertificadoDigital,
 });
