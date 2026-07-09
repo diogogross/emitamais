@@ -234,18 +234,8 @@ function Index() {
       {/* PRODUTO showcase */}
       <section id="produto" className="max-w-7xl mx-auto px-6 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
-          <div className="relative">
-            <div className="glass-card p-2 glow-ring">
-              <img
-                src={dashboardMock}
-                alt="Dashboard do sistema emissor de notas fiscais"
-                loading="lazy"
-                width={1600}
-                height={1008}
-                className="w-full rounded-xl"
-              />
-            </div>
-          </div>
+          <ProdutoSlider />
+
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">O produto</div>
             <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
