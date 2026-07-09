@@ -642,7 +642,7 @@ function Index() {
 
 
       {/* FAQ */}
-      <section id="faq" className="max-w-4xl mx-auto px-6 py-24">
+      <section id="faq" className="section-light w-full"><div className="max-w-4xl mx-auto px-6 py-24">
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Perguntas frequentes</div>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
