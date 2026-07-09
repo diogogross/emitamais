@@ -436,7 +436,7 @@ function Index() {
 
 
       {/* CERTIFICADO DIGITAL */}
-      <section id="certificado" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="certificado" className="section-light w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="glass-card relative overflow-hidden p-10 md:p-14">
           <div
             className="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none"
