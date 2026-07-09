@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowUpRight,
   FileText,
@@ -460,131 +460,40 @@ function Index() {
 
       {/* CERTIFICADO DIGITAL */}
       <section id="certificado" className="max-w-7xl mx-auto px-6 py-24">
-        <div className="max-w-2xl">
-          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4 flex items-center gap-2">
-            <KeyRound className="w-3.5 h-3.5" /> Certificado Digital
-          </div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold">
-            Emita seu <span className="gradient-text">certificado digital</span> com a gente.
-          </h2>
-          <p className="mt-4 text-muted-foreground text-lg">
-            Modelos A1 e A3 para CNPJ, CPF, NF e Bird ID — em token, cartão, leitora ou sem mídia. Escolha o que combina com sua operação.
-          </p>
-        </div>
-
-        <div className="mt-14 grid lg:grid-cols-3 gap-6">
-          {[
-            {
-              title: "CNPJ",
-              subtitle: "Para empresas e MEIs",
-              icon: Building2,
-              accent: "var(--gradient-primary)",
-              items: [
-                { name: "CNPJ A1", meta: "1 ano · arquivo digital" },
-                { name: "CNPJ A3 1 Ano em Cartão", meta: "smart card" },
-                { name: "CNPJ A3 1 Ano em Cartão e Leitora", meta: "kit completo" },
-                { name: "CNPJ A3 1 Ano em Token", meta: "USB token" },
-                { name: "CNPJ A3 2 Anos em Cartão", meta: "smart card" },
-                { name: "CNPJ A3 2 Anos em Cartão e Leitora", meta: "kit completo" },
-                { name: "CNPJ A3 2 Anos em Token", meta: "USB token" },
-                { name: "CNPJ A3 2 Anos Sem Mídia", meta: "reaproveite sua mídia" },
-              ],
-            },
-            {
-              title: "CPF",
-              subtitle: "Para pessoa física",
-              icon: User,
-              accent: "linear-gradient(135deg, oklch(0.7 0.22 260), oklch(0.78 0.18 305))",
-              items: [
-                { name: "CPF A1", meta: "1 ano · arquivo digital" },
-                { name: "CPF A3 1 Ano em Cartão", meta: "smart card" },
-                { name: "CPF A3 1 Ano em Cartão e Leitora", meta: "kit completo" },
-                { name: "CPF A3 1 Ano em Token", meta: "USB token" },
-                { name: "CPF A3 1 Ano Sem Mídia", meta: "reaproveite sua mídia" },
-                { name: "CPF A3 2 Anos em Cartão", meta: "smart card" },
-                { name: "CPF A3 2 Anos em Cartão e Leitora", meta: "kit completo" },
-                { name: "CPF A3 2 Anos em Token", meta: "USB token" },
-                { name: "CPF A3 2 Anos Sem Mídia", meta: "reaproveite sua mídia" },
-                { name: "CPF A3 3 Anos em Cartão", meta: "smart card" },
-                { name: "CPF A3 3 Anos em Cartão e Leitora", meta: "kit completo" },
-                { name: "CPF A3 3 Anos em Token", meta: "USB token" },
-                { name: "CPF A3 3 Anos Sem Mídia", meta: "reaproveite sua mídia" },
-              ],
-            },
-            {
-              title: "NF & Bird ID",
-              subtitle: "Nota fiscal e identidade digital",
-              icon: Cpu,
-              accent: "var(--gradient-accent)",
-              items: [
-                { name: "NF A1", meta: "1 ano · arquivo digital" },
-                { name: "Bird ID 5000 Transações", meta: "5 anos · nuvem" },
-              ],
-            },
-          ].map(({ title, subtitle, icon: Icon, accent, items }) => (
-            <div
-              key={title}
-              className="glass-card p-6 md:p-7 flex flex-col hover:-translate-y-1 transition"
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <span
-                  className="w-11 h-11 rounded-xl grid place-items-center shrink-0"
-                  style={{ background: accent, boxShadow: "var(--shadow-glow)" }}
-                >
-                  <Icon className="w-5 h-5 text-white" />
-                </span>
-                <div>
-                  <div className="font-display text-2xl font-bold leading-none">{title}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{subtitle}</div>
-                </div>
+        <div className="glass-card relative overflow-hidden p-10 md:p-14">
+          <div
+            className="absolute -top-24 -right-24 w-80 h-80 rounded-full blur-3xl opacity-40 pointer-events-none"
+            style={{ background: "var(--gradient-primary)" }}
+          />
+          <div
+            className="absolute -bottom-32 -left-24 w-80 h-80 rounded-full blur-3xl opacity-30 pointer-events-none"
+            style={{ background: "var(--gradient-accent)" }}
+          />
+          <div className="relative grid lg:grid-cols-[1.4fr_auto] gap-10 items-center">
+            <div className="max-w-2xl">
+              <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4 flex items-center gap-2">
+                <KeyRound className="w-3.5 h-3.5" /> Certificado Digital
               </div>
-
-              <ul className="space-y-2 flex-1">
-                {items.map((it) => {
-                  const MediaIcon = it.name.includes("Token")
-                    ? Usb
-                    : it.name.includes("Leitora")
-                    ? HardDrive
-                    : it.name.includes("Cartão")
-                    ? CreditCard
-                    : it.name.includes("Sem Mídia")
-                    ? Cloud
-                    : it.name.startsWith("Bird")
-                    ? Cpu
-                    : FileText;
-                  return (
-                    <li
-                      key={it.name}
-                      className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.03] px-3.5 py-2.5 hover:border-primary-glow/30 hover:bg-white/[0.06] transition"
-                    >
-                      <span className="mt-0.5 w-7 h-7 rounded-lg grid place-items-center bg-white/5 ring-1 ring-white/10 shrink-0">
-                        <MediaIcon className="w-3.5 h-3.5 text-primary-glow" />
-                      </span>
-                      <div className="min-w-0">
-                        <div className="text-sm font-medium text-foreground leading-tight">{it.name}</div>
-                        <div className="text-[11px] text-muted-foreground mt-0.5">{it.meta}</div>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
+              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+                Seu <span className="gradient-text">certificado digital</span> pronto em minutos.
+              </h2>
+              <p className="mt-5 text-muted-foreground text-lg">
+                A1, A3, CNPJ, CPF, NF e Bird ID — em token, cartão, leitora ou sem mídia. Emissão 100% online, com
+                validação por videoconferência e suporte especializado do começo ao fim.
+              </p>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-8 glass-card p-6 flex flex-wrap items-center gap-4 justify-between">
-          <div className="text-sm text-muted-foreground">
-            <span className="text-foreground font-medium">Emissão 100% online</span> — validação por videoconferência disponível.
+            <Link
+              to="/certificado-digital"
+              className="group inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-accent-foreground hover:scale-[1.03] transition shrink-0"
+              style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+            >
+              Emitir agora
+              <ArrowUpRight className="w-5 h-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
           </div>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-accent-foreground hover:scale-[1.02] transition"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Solicitar certificado <ArrowUpRight className="w-4 h-4" />
-          </a>
         </div>
       </section>
+
 
 
       {/* PLANOS */}
