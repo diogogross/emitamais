@@ -366,7 +366,7 @@ function Index() {
       </div></section>
 
       {/* SMART POS */}
-      <section id="smartpos" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="smartpos" className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
           {/* Device */}
           <div className="relative flex justify-center">
