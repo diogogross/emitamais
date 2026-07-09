@@ -203,7 +203,7 @@ function Index() {
       </section>
 
       {/* PRODUTO showcase */}
-      <section id="produto" className="max-w-7xl mx-auto px-6 py-24 md:py-32">
+      <section id="produto" className="section-light w-full"><div className="max-w-7xl mx-auto px-6 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative">
             <div className="glass-card p-2 glow-ring">
