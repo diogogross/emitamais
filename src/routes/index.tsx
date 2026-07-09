@@ -536,6 +536,73 @@ function Index() {
         </div>
       </section>
 
+      {/* BLOG */}
+      <section id="blog" className="max-w-7xl mx-auto px-6 py-24">
+        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div className="max-w-2xl">
+            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Blog</div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+              Aprenda <span className="gradient-text">com quem entende</span> de fiscal.
+            </h2>
+            <p className="mt-4 text-muted-foreground text-lg">
+              Guias práticos sobre notas fiscais, transporte e certificado digital — direto ao ponto.
+            </p>
+          </div>
+          <Link
+            to="/blog"
+            className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
+          >
+            Ver todos os artigos
+            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+          {blogPosts.map((p) => (
+            <Link
+              key={p.slug}
+              to="/blog"
+              className="group relative overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/40 hover:-translate-y-1 transition"
+            >
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-widest text-white ring-1 ring-white/15">
+                  {p.category}
+                </span>
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <h3 className="font-display text-lg font-bold text-white leading-tight line-clamp-3">
+                    {p.title}
+                  </h3>
+                  <div className="mt-2 flex items-center gap-3 text-[11px] text-white/70">
+                    <span>{p.date}</span>
+                    <span>·</span>
+                    <span>{p.readMin} min</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground hover:scale-[1.02] transition"
+            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+          >
+            Acessar o blog completo <ArrowUpRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
+
+
       {/* FAQ */}
       <section id="faq" className="max-w-4xl mx-auto px-6 py-24">
         <div className="text-center max-w-2xl mx-auto">
