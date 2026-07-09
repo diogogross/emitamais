@@ -479,7 +479,7 @@ function Index() {
 
 
       {/* PLANOS */}
-      <section id="planos" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="planos" className="section-dark w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Planos</div>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
