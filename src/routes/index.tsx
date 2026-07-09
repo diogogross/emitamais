@@ -678,7 +678,7 @@ function Index() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-          {blogPosts.map((p) => (
+          {blogPosts.slice(0, 5).map((p) => (
             <Link
               key={p.slug}
               to="/blog/$slug"
