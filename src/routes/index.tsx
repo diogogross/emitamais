@@ -18,6 +18,7 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   KeyRound,
   Usb,
   HardDrive,
@@ -164,13 +165,40 @@ function Index() {
             Emissor Fiscal
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#produto" className="hover:text-foreground transition">Produto</a>
-            <a href="#documentos" className="hover:text-foreground transition">Documentos</a>
-            <a href="#recursos" className="hover:text-foreground transition">Recursos</a>
+            <div className="relative group">
+              <button
+                type="button"
+                className="hover:text-foreground transition inline-flex items-center gap-1"
+                aria-haspopup="true"
+              >
+                Emissor Fiscal
+                <ChevronDown className="w-3.5 h-3.5 transition group-hover:rotate-180" />
+              </button>
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="min-w-[260px] rounded-2xl border border-white/10 bg-background/95 backdrop-blur-xl shadow-2xl p-2">
+                  {docTypes.map((d) => (
+                    <a
+                      key={d.name}
+                      href="#documentos"
+                      className="flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition"
+                    >
+                      <span className="mt-0.5 shrink-0 w-8 h-8 rounded-lg grid place-items-center bg-white/5 ring-1 ring-white/10">
+                        <d.icon className="w-4 h-4 text-primary-glow" />
+                      </span>
+                      <span className="flex-1">
+                        <span className="block text-sm font-semibold text-foreground">{d.name}</span>
+                        <span className="block text-xs text-muted-foreground line-clamp-1">{d.desc}</span>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
             <a href="#certificado" className="hover:text-foreground transition">Certificado Digital</a>
             <a href="#planos" className="hover:text-foreground transition">Planos</a>
             <Link to="/blog" className="hover:text-foreground transition">Blog</Link>
           </div>
+
           <a
             href="#planos"
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
