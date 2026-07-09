@@ -524,7 +524,7 @@ function Index() {
           </div>
         </div>
 
-      </section>
+      </div></section>
 
       {/* NÚMEROS + MAPA */}
       <section id="numeros" className="max-w-7xl mx-auto px-6 py-24">
