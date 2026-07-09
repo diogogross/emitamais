@@ -95,6 +95,7 @@ function Index() {
             <a href="#recursos" className="hover:text-foreground transition">Recursos</a>
             <a href="#certificado" className="hover:text-foreground transition">Certificado Digital</a>
             <a href="#planos" className="hover:text-foreground transition">Planos</a>
+            <Link to="/blog" className="hover:text-foreground transition">Blog</Link>
           </div>
           <a
             href="#planos"
