@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as CertificadoDigitalRouteImport } from './routes/certificado-digital'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 
 const CertificadoDigitalRoute = CertificadoDigitalRouteImport.update({
   id: '/certificado-digital',
   path: '/certificado-digital',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/certificado-digital': typeof CertificadoDigitalRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/certificado-digital': typeof CertificadoDigitalRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
   '/certificado-digital': typeof CertificadoDigitalRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/certificado-digital'
+  fullPaths: '/' | '/blog' | '/certificado-digital'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/certificado-digital'
-  id: '__root__' | '/' | '/certificado-digital'
+  to: '/' | '/blog' | '/certificado-digital'
+  id: '__root__' | '/' | '/blog' | '/certificado-digital'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRoute
   CertificadoDigitalRoute: typeof CertificadoDigitalRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/certificado-digital'
       fullPath: '/certificado-digital'
       preLoaderRoute: typeof CertificadoDigitalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRoute,
   CertificadoDigitalRoute: CertificadoDigitalRoute,
 }
 export const routeTree = rootRouteImport
