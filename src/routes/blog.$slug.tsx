@@ -115,7 +115,7 @@ function ArticlePage() {
 
       {/* CONTENT */}
       <article className="max-w-3xl mx-auto px-6 py-16 space-y-6">
-        {post.content.map((section, i) => (
+        {post.content.map((section: BlogSection, i: number) => (
           <SectionRenderer key={i} section={section} />
         ))}
       </article>
