@@ -673,7 +673,7 @@ function Index() {
             </details>
           ))}
         </div>
-      </section>
+      </div></section>
 
 
 
