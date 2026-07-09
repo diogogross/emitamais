@@ -637,7 +637,7 @@ function Index() {
             Acessar o blog completo <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
-      </section>
+      </div></section>
 
 
 
