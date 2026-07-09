@@ -458,6 +458,11 @@ function Index() {
                 A1, A3, CNPJ, CPF, NF e Bird ID — em token, cartão, leitora ou sem mídia. Emissão 100% online, com
                 validação por videoconferência e suporte especializado do começo ao fim.
               </p>
+              <div className="mt-6 inline-flex items-baseline gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5">
+                <span className="text-xs uppercase tracking-widest text-muted-foreground">a partir de</span>
+                <span className="text-sm text-muted-foreground">R$</span>
+                <span className="font-display text-3xl font-bold gradient-text leading-none">119,90</span>
+              </div>
             </div>
             <Link
               to="/certificado-digital"
