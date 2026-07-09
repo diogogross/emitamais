@@ -169,7 +169,7 @@ function Index() {
       </section>
 
       {/* CLIENTES marquee */}
-      <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 -mt-12 md:-mt-20 relative z-10">
+      <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 -mt-16 md:-mt-28 relative z-10">
         <div className="text-center mb-6 px-6">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Nossos clientes</div>
           <h3 className="font-display text-2xl md:text-3xl font-bold">
