@@ -25,13 +25,13 @@ import {
   Building2,
   User,
 } from "lucide-react";
-import heroPerson from "@/assets/hero-person.png";
+import heroPerson from "@/assets/hero-person.webp";
 import { blogPosts } from "@/lib/blog-posts";
-import heroPerson2 from "@/assets/hero-person-2.png";
+import heroPerson2 from "@/assets/hero-person-2.webp";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
-import smartPos from "@/assets/smart-pos.png";
-import brasilMap from "@/assets/brasil-map.png";
+import smartPos from "@/assets/smart-pos.webp";
+import brasilMap from "@/assets/brasil-map.webp";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
 import pdvScreen from "@/assets/screens/pdv.png";
 import nfeScreen from "@/assets/screens/nfe.png";
@@ -62,7 +62,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://volta-fiscal-art.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://volta-fiscal-art.lovable.app/" }],
+    links: [
+      { rel: "canonical", href: "https://volta-fiscal-art.lovable.app/" },
+      { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -827,6 +830,8 @@ function HeroSlide1() {
           alt="Empresário usando o Emissor Fiscal em um notebook"
           width={1200}
           height={1408}
+          fetchPriority="high"
+          decoding="async"
           className="relative w-full max-w-xl mx-auto"
         />
         <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
