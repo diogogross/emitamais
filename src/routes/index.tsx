@@ -564,7 +564,27 @@ function Index() {
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
+
+          <div className="mt-6 relative rounded-2xl p-[1.5px]" style={{ background: "var(--gradient-accent)" }}>
+            <div className="rounded-2xl bg-background/80 backdrop-blur p-5 md:p-6 flex items-start gap-4">
+              <div className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}>
+                <KeyRound className="w-5 h-5 text-accent-foreground" />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-[10px] uppercase tracking-widest rounded-full px-2 py-0.5 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
+                    Combo
+                  </span>
+                  <span className="text-sm font-semibold text-foreground">Certificado + 1º mês grátis</span>
+                </div>
+                <p className="mt-1.5 text-sm text-muted-foreground">
+                  Adquirindo seu <span className="text-foreground font-medium">Certificado Digital A1 PJ ou PF</span>, você ganha o <span className="text-foreground font-medium">primeiro mês sem custo</span> do emissor.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
 
       </div></section>
 
