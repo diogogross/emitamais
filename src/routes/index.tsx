@@ -105,72 +105,9 @@ function Index() {
         </nav>
       </header>
 
-      {/* HERO */}
-      <section className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
-          <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-              Plataforma completa de emissão fiscal
-            </div>
-            <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-              A tecnologia fiscal <span className="gradient-text">que acelera</span> a sua operação.
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="#planos"
-                className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
-                style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-              >
-                Conferir planos
-                <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-              <a href="#produto" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
-                Ver o produto <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-            <div className="mt-12 flex flex-wrap gap-8 text-sm">
-              {[
-                ["+1.600", "municípios NFSe"],
-                ["7", "documentos fiscais"],
-                ["99.9%", "uptime SEFAZ"],
-              ].map(([n, l]) => (
-                <div key={l as string}>
-                  <div className="font-display text-3xl font-bold gradient-text">{n}</div>
-                  <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* HERO SLIDER */}
+      <HeroSlider />
 
-          <div className="relative">
-            <div
-              className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-              style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
-            />
-            <img
-              src={heroPerson}
-              alt="Empresário usando o Emissor Fiscal em um notebook"
-              width={1200}
-              height={1408}
-              className="relative w-full max-w-xl mx-auto"
-            />
-            {/* floating chips */}
-            <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-              <FileText className="w-3.5 h-3.5 text-primary-glow" /> NFe emitida em 1,2s
-            </div>
-            <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-              <ShieldCheck className="w-3.5 h-3.5 text-accent" /> Autorizado pela SEFAZ
-            </div>
-            <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
-              <CreditCard className="w-3.5 h-3.5 text-primary-glow" /> Pix + Cartão + Boleto
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CLIENTES marquee */}
       <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 -mt-16 md:-mt-28 relative z-10">
@@ -234,7 +171,19 @@ function Index() {
       {/* PRODUTO showcase */}
       <section id="produto" className="max-w-7xl mx-auto px-6 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
-          <ProdutoSlider />
+          <div className="relative">
+            <div className="glass-card p-2 glow-ring">
+              <img
+                src={dashboardMock}
+                alt="Dashboard do sistema emissor de notas fiscais"
+                loading="lazy"
+                width={1600}
+                height={1008}
+                className="w-full rounded-xl"
+              />
+            </div>
+          </div>
+
 
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">O produto</div>
@@ -673,57 +622,22 @@ function Index() {
   );
 }
 
-const produtoSlides = [
-  {
-    tag: "Sistema Emissor",
-    title: "Dashboard completo",
-    desc: "Visão geral de emissões, recebimentos e conformidade em tempo real.",
-    image: dashboardMock,
-    alt: "Dashboard do sistema emissor de notas fiscais",
-  },
-  {
-    tag: "Certificado Digital",
-    title: "Gestão de certificados",
-    desc: "Controle A1 e A3, validade, renovação e titulares em um só lugar.",
-    image: certificadoMock,
-    alt: "Painel de gestão de certificados digitais",
-  },
-];
-
-function ProdutoSlider() {
+function HeroSlider() {
+  const slides = [0, 1];
   const [i, setI] = useState(0);
-  const total = produtoSlides.length;
-  const s = produtoSlides[i];
-  const go = (n: number) => setI((n + total) % total);
+  const go = (n: number) => setI((n + slides.length) % slides.length);
 
   return (
-    <div className="relative">
-      <div className="glass-card p-2 glow-ring relative overflow-hidden">
-        <div className="relative aspect-[1600/1008] w-full overflow-hidden rounded-xl">
-          {produtoSlides.map((slide, idx) => (
-            <img
-              key={slide.image}
-              src={slide.image}
-              alt={slide.alt}
-              loading="lazy"
-              width={1600}
-              height={1008}
-              className={`absolute inset-0 w-full h-full object-cover rounded-xl transition-opacity duration-500 ${
-                idx === i ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
-          <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 rounded-full bg-black/50 backdrop-blur px-3 py-1.5 text-[11px] font-medium text-white ring-1 ring-white/10">
-            <Sparkles className="w-3 h-3 text-primary-glow" />
-            {s.tag}
-          </div>
-        </div>
+    <section className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32">
+      <div className="relative">
+        {i === 0 ? <HeroSlide1 /> : <HeroSlide2 />}
 
+        {/* Controls */}
         <button
           type="button"
           onClick={() => go(i - 1)}
           aria-label="Slide anterior"
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 grid place-items-center rounded-full bg-black/50 backdrop-blur ring-1 ring-white/15 text-white hover:bg-black/70 transition"
+          className="hidden md:grid absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 place-items-center rounded-full bg-white/5 backdrop-blur ring-1 ring-white/15 text-white hover:bg-white/10 transition z-20"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -731,32 +645,164 @@ function ProdutoSlider() {
           type="button"
           onClick={() => go(i + 1)}
           aria-label="Próximo slide"
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 grid place-items-center rounded-full bg-black/50 backdrop-blur ring-1 ring-white/15 text-white hover:bg-black/70 transition"
+          className="hidden md:grid absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 place-items-center rounded-full bg-white/5 backdrop-blur ring-1 ring-white/15 text-white hover:bg-white/10 transition z-20"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
-      </div>
 
-      <div className="mt-5 flex items-center justify-between gap-4">
-        <div className="min-w-0">
-          <div className="font-display text-lg font-semibold truncate">{s.title}</div>
-          <div className="text-sm text-muted-foreground truncate">{s.desc}</div>
-        </div>
-        <div className="flex items-center gap-2 shrink-0">
-          {produtoSlides.map((_, idx) => (
+        {/* Dots */}
+        <div className="mt-8 flex items-center justify-center gap-2">
+          {slides.map((_, idx) => (
             <button
               key={idx}
               type="button"
               onClick={() => setI(idx)}
               aria-label={`Ir para slide ${idx + 1}`}
               className={`h-2 rounded-full transition-all ${
-                idx === i ? "w-8 bg-primary-glow" : "w-2 bg-white/25 hover:bg-white/40"
+                idx === i ? "w-10 bg-primary-glow" : "w-2.5 bg-white/25 hover:bg-white/40"
               }`}
             />
           ))}
         </div>
       </div>
+    </section>
+  );
+}
+
+function HeroSlide1() {
+  return (
+    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
+      <div className="relative z-10">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
+          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
+          Plataforma completa de emissão fiscal
+        </div>
+        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
+          A tecnologia fiscal <span className="gradient-text">que acelera</span> a sua operação.
+        </h1>
+        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+          Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação.
+        </p>
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href="#planos"
+            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
+            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+          >
+            Conferir planos
+            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+          <a href="#produto" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
+            Ver o produto <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+        <div className="mt-12 flex flex-wrap gap-8 text-sm">
+          {[
+            ["+1.600", "municípios NFSe"],
+            ["7", "documentos fiscais"],
+            ["99.9%", "uptime SEFAZ"],
+          ].map(([n, l]) => (
+            <div key={l as string}>
+              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative">
+        <div
+          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
+          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
+        />
+        <img
+          src={heroPerson}
+          alt="Empresário usando o Emissor Fiscal em um notebook"
+          width={1200}
+          height={1408}
+          className="relative w-full max-w-xl mx-auto"
+        />
+        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
+          <FileText className="w-3.5 h-3.5 text-primary-glow" /> NFe emitida em 1,2s
+        </div>
+        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
+          <ShieldCheck className="w-3.5 h-3.5 text-accent" /> Autorizado pela SEFAZ
+        </div>
+        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
+          <CreditCard className="w-3.5 h-3.5 text-primary-glow" /> Pix + Cartão + Boleto
+        </div>
+      </div>
     </div>
   );
 }
+
+function HeroSlide2() {
+  return (
+    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
+      <div className="relative z-10">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
+          <KeyRound className="w-3.5 h-3.5 text-accent" />
+          Certificado Digital A1 e A3
+        </div>
+        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
+          Seu certificado digital <span className="gradient-text">pronto em minutos.</span>
+        </h1>
+        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+          CNPJ, CPF, NF e Bird ID — em token, cartão, leitora ou sem mídia. Emissão 100% online, validação por videoconferência e suporte especializado do começo ao fim.
+        </p>
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <Link
+            to="/certificado-digital"
+            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
+            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+          >
+            Emitir agora
+            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+          <Link to="/certificado-digital" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
+            Ver todos os modelos <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+        <div className="mt-12 flex flex-wrap gap-6 text-sm">
+          {[
+            { icon: ShieldCheck, label: "Validação online" },
+            { icon: Cpu, label: "A1, A3 e nuvem" },
+            { icon: Building2, label: "CNPJ, CPF e NF" },
+          ].map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-2 text-foreground/85">
+              <span className="w-8 h-8 rounded-lg grid place-items-center bg-white/5 ring-1 ring-white/10">
+                <Icon className="w-4 h-4 text-primary-glow" />
+              </span>
+              {label}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative">
+        <div
+          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
+          style={{ background: "radial-gradient(circle at center, oklch(0.82 0.18 75 / 0.55), transparent 60%)" }}
+        />
+        <div className="glass-card p-2 glow-ring">
+          <img
+            src={certificadoMock}
+            alt="Painel de gestão de certificados digitais"
+            loading="lazy"
+            width={1600}
+            height={1008}
+            className="w-full rounded-xl"
+          />
+        </div>
+        <div className="hidden md:flex glass-card animate-float absolute -top-4 -left-4 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
+          <KeyRound className="w-3.5 h-3.5 text-accent" /> A1 · A3 disponíveis
+        </div>
+        <div className="hidden md:flex glass-card animate-float absolute -bottom-4 right-4 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
+          <ShieldCheck className="w-3.5 h-3.5 text-primary-glow" /> Emissão 100% online
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
