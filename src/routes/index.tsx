@@ -302,7 +302,7 @@ function Index() {
       </div></section>
 
       {/* RECURSOS: responsive/mobile */}
-      <section id="recursos" className="max-w-7xl mx-auto px-6 py-24">
+      <section id="recursos" className="section-light w-full"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div className="order-2 lg:order-1">
             <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Multiplataforma</div>
