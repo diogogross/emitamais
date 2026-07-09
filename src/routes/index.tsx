@@ -474,7 +474,7 @@ function Index() {
             </Link>
           </div>
         </div>
-      </section>
+      </div></section>
 
 
 
