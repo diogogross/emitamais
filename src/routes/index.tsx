@@ -532,7 +532,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="mt-14 max-w-lg mx-auto">
+        <div className="mt-14 grid md:grid-cols-2 gap-6 max-w-5xl mx-auto items-stretch">
           <div
             className="relative glass-card p-8 md:p-10 flex flex-col glow-ring border-primary/40"
             style={{ background: "linear-gradient(180deg, oklch(0.35 0.15 300 / 0.5), oklch(0.22 0.09 295 / 0.5))" }}
@@ -565,25 +565,46 @@ function Index() {
             </a>
           </div>
 
-          <div className="mt-6 relative rounded-2xl p-[1.5px]" style={{ background: "var(--gradient-accent)" }}>
-            <div className="rounded-2xl bg-background/80 backdrop-blur p-5 md:p-6 flex items-start gap-4">
-              <div className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}>
-                <KeyRound className="w-5 h-5 text-accent-foreground" />
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-[10px] uppercase tracking-widest rounded-full px-2 py-0.5 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
-                    Combo
-                  </span>
-                  <span className="text-sm font-semibold text-foreground">Certificado + 1º mês grátis</span>
-                </div>
-                <p className="mt-1.5 text-sm text-muted-foreground">
-                  Adquirindo seu <span className="text-foreground font-medium">Certificado Digital A1 PJ ou PF</span>, você ganha o <span className="text-foreground font-medium">primeiro mês sem custo</span> do emissor.
-                </p>
-              </div>
+          <div
+            className="relative glass-card p-8 md:p-10 flex flex-col glow-ring border-primary/40"
+            style={{ background: "linear-gradient(180deg, oklch(0.35 0.15 300 / 0.5), oklch(0.22 0.09 295 / 0.5))" }}
+          >
+            <span className="absolute -top-3 left-8 text-[10px] uppercase tracking-widest rounded-full px-3 py-1 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
+              Combo
+            </span>
+            <div className="mt-3 font-display text-2xl font-bold">Certificado Digital A1</div>
+            <p className="text-sm text-muted-foreground mt-1">PJ ou PF, emissão 100% online em minutos.</p>
+            <div className="mt-6 flex items-baseline gap-1">
+              <span className="text-sm text-muted-foreground">a partir de R$</span>
+              <span className="font-display text-6xl font-bold">119</span>
+              <span className="text-sm text-muted-foreground">,90</span>
             </div>
+            <ul className="mt-8 space-y-3 text-sm flex-1">
+              {[
+                "Certificado Digital A1 PJ ou PF",
+                "Ganhe o 1º mês grátis do Emissor Fiscal",
+                "Validade de 12 meses",
+                "Emissão 100% online, sem sair de casa",
+                "Compatível com NFe, NFCe, NFSe, CTe e MDFe",
+                "Suporte especializado na instalação",
+              ].map((perk) => (
+                <li key={perk} className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary-glow mt-0.5 shrink-0" />
+                  <span className="text-foreground/85">{perk}</span>
+                </li>
+              ))}
+            </ul>
+            <Link
+              to="/certificado-digital"
+              className="mt-8 inline-flex items-center justify-center gap-2 rounded-full py-3 font-semibold text-accent-foreground hover:scale-[1.02] transition"
+              style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+            >
+              Adquirir certificado
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
+
 
 
       </div></section>
