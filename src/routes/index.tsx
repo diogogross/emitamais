@@ -113,9 +113,48 @@ const planPerks = [
 
 
 function Index() {
+  const progressRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Scroll progress bar
+    const bar = progressRef.current;
+    const onScroll = () => {
+      if (!bar) return;
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? h.scrollTop / max : 0;
+      bar.style.transform = `scaleX(${pct})`;
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Reveal on scroll (IntersectionObserver)
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.14, rootMargin: "0px 0px -80px 0px" },
+    );
+    document
+      .querySelectorAll<HTMLElement>("[data-reveal], [data-reveal-stagger]")
+      .forEach((el) => io.observe(el));
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      io.disconnect();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden" style={{ background: "var(--gradient-hero)" }}>
-      {/* NAV */}
+      {/* Scroll progress */}
+      <div ref={progressRef} className="scroll-progress" aria-hidden="true" />
+
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2 font-display text-xl font-bold">
