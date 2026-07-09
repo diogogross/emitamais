@@ -176,7 +176,7 @@ function Index() {
               </button>
               <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="min-w-[260px] rounded-2xl border border-white/10 bg-background/95 backdrop-blur-xl shadow-2xl p-2">
-                  {docs.map((d) => (
+                  {docTypes.map((d) => (
                     <a
                       key={d.name}
                       href="#documentos"
