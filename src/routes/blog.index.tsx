@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Blog — Notas Fiscais, Transporte e Certificado Digital" },
