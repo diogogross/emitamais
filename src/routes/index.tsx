@@ -26,6 +26,7 @@ import {
   User,
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.png";
+import heroPerson2 from "@/assets/hero-person-2.png";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
 import smartPos from "@/assets/smart-pos.png";
