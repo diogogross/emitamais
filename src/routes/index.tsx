@@ -105,72 +105,9 @@ function Index() {
         </nav>
       </header>
 
-      {/* HERO */}
-      <section className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32">
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
-          <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-              Plataforma completa de emissão fiscal
-            </div>
-            <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-              A tecnologia fiscal <span className="gradient-text">que acelera</span> a sua operação.
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação.
-            </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="#planos"
-                className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
-                style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-              >
-                Conferir planos
-                <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-              <a href="#produto" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
-                Ver o produto <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-            <div className="mt-12 flex flex-wrap gap-8 text-sm">
-              {[
-                ["+1.600", "municípios NFSe"],
-                ["7", "documentos fiscais"],
-                ["99.9%", "uptime SEFAZ"],
-              ].map(([n, l]) => (
-                <div key={l as string}>
-                  <div className="font-display text-3xl font-bold gradient-text">{n}</div>
-                  <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* HERO SLIDER */}
+      <HeroSlider />
 
-          <div className="relative">
-            <div
-              className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-              style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
-            />
-            <img
-              src={heroPerson}
-              alt="Empresário usando o Emissor Fiscal em um notebook"
-              width={1200}
-              height={1408}
-              className="relative w-full max-w-xl mx-auto"
-            />
-            {/* floating chips */}
-            <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-              <FileText className="w-3.5 h-3.5 text-primary-glow" /> NFe emitida em 1,2s
-            </div>
-            <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-              <ShieldCheck className="w-3.5 h-3.5 text-accent" /> Autorizado pela SEFAZ
-            </div>
-            <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
-              <CreditCard className="w-3.5 h-3.5 text-primary-glow" /> Pix + Cartão + Boleto
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CLIENTES marquee */}
       <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 -mt-16 md:-mt-28 relative z-10">
