@@ -830,6 +830,8 @@ function HeroSlide1() {
           alt="Empresário usando o Emissor Fiscal em um notebook"
           width={1200}
           height={1408}
+          fetchPriority="high"
+          decoding="async"
           className="relative w-full max-w-xl mx-auto"
         />
         <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
