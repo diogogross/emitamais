@@ -25,13 +25,13 @@ import {
   Building2,
   User,
 } from "lucide-react";
-import heroPerson from "@/assets/hero-person.png";
+import heroPerson from "@/assets/hero-person.webp";
 import { blogPosts } from "@/lib/blog-posts";
-import heroPerson2 from "@/assets/hero-person-2.png";
+import heroPerson2 from "@/assets/hero-person-2.webp";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
-import smartPos from "@/assets/smart-pos.png";
-import brasilMap from "@/assets/brasil-map.png";
+import smartPos from "@/assets/smart-pos.webp";
+import brasilMap from "@/assets/brasil-map.webp";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
 import pdvScreen from "@/assets/screens/pdv.png";
 import nfeScreen from "@/assets/screens/nfe.png";
