@@ -432,7 +432,7 @@ function Index() {
             </div>
           </div>
         </div>
-      </section>
+      </div></section>
 
 
       {/* CERTIFICADO DIGITAL */}
