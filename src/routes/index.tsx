@@ -562,7 +562,8 @@ function Index() {
           {blogPosts.map((p) => (
             <Link
               key={p.slug}
-              to="/blog"
+              to="/blog/$slug"
+              params={{ slug: p.slug }}
               className="group relative overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/40 hover:-translate-y-1 transition"
             >
               <div className="relative aspect-[4/5] overflow-hidden">

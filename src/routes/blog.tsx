@@ -192,8 +192,10 @@ function BlogList() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {posts.map((p) => (
-                <article
+                <Link
                   key={p.slug}
+                  to="/blog/$slug"
+                  params={{ slug: p.slug }}
                   className="group relative overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/40 hover:-translate-y-1 transition"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
@@ -220,7 +222,7 @@ function BlogList() {
                       </span>
                     </div>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           </div>
