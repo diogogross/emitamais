@@ -363,7 +363,7 @@ function Index() {
           </div>
 
         </div>
-      </section>
+      </div></section>
 
       {/* SMART POS */}
       <section id="smartpos" className="max-w-7xl mx-auto px-6 py-24">
