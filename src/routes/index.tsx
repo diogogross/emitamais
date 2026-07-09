@@ -18,6 +18,7 @@ import {
   ArrowRight,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   KeyRound,
   Usb,
   HardDrive,
