@@ -26,6 +26,7 @@ import {
   User,
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.png";
+import heroPerson2 from "@/assets/hero-person-2.png";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
 import smartPos from "@/assets/smart-pos.png";
@@ -741,14 +742,14 @@ function HeroSlide2() {
     <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
       <div className="relative z-10">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <KeyRound className="w-3.5 h-3.5 text-accent" />
+          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
           Certificado Digital A1 e A3
         </div>
         <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
           Seu certificado digital <span className="gradient-text">pronto em minutos.</span>
         </h1>
         <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-          CNPJ, CPF, NF e Bird ID — em token, cartão, leitora ou sem mídia. Emissão 100% online, validação por videoconferência e suporte especializado do começo ao fim.
+          CNPJ, CPF, NF e Bird ID — em token, cartão, leitora ou sem mídia. Emissão 100% online, com validação por videoconferência e suporte especializado.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <Link
@@ -763,17 +764,15 @@ function HeroSlide2() {
             Ver todos os modelos <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-        <div className="mt-12 flex flex-wrap gap-6 text-sm">
+        <div className="mt-12 flex flex-wrap gap-8 text-sm">
           {[
-            { icon: ShieldCheck, label: "Validação online" },
-            { icon: Cpu, label: "A1, A3 e nuvem" },
-            { icon: Building2, label: "CNPJ, CPF e NF" },
-          ].map(({ icon: Icon, label }) => (
-            <div key={label} className="flex items-center gap-2 text-foreground/85">
-              <span className="w-8 h-8 rounded-lg grid place-items-center bg-white/5 ring-1 ring-white/10">
-                <Icon className="w-4 h-4 text-primary-glow" />
-              </span>
-              {label}
+            ["+1.600", "municípios NFSe"],
+            ["7", "documentos fiscais"],
+            ["99.9%", "uptime SEFAZ"],
+          ].map(([n, l]) => (
+            <div key={l as string}>
+              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
             </div>
           ))}
         </div>
@@ -782,27 +781,29 @@ function HeroSlide2() {
       <div className="relative">
         <div
           className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-          style={{ background: "radial-gradient(circle at center, oklch(0.82 0.18 75 / 0.55), transparent 60%)" }}
+          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
         />
-        <div className="glass-card p-2 glow-ring">
-          <img
-            src={certificadoMock}
-            alt="Painel de gestão de certificados digitais"
-            loading="lazy"
-            width={1600}
-            height={1008}
-            className="w-full rounded-xl"
-          />
+        <img
+          src={heroPerson2}
+          alt="Consultora apresentando certificado digital no smartphone"
+          loading="lazy"
+          width={1200}
+          height={1408}
+          className="relative w-full max-w-xl mx-auto"
+        />
+        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
+          <KeyRound className="w-3.5 h-3.5 text-primary-glow" /> A1 · A3 disponíveis
         </div>
-        <div className="hidden md:flex glass-card animate-float absolute -top-4 -left-4 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-          <KeyRound className="w-3.5 h-3.5 text-accent" /> A1 · A3 disponíveis
+        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
+          <ShieldCheck className="w-3.5 h-3.5 text-accent" /> Emissão 100% online
         </div>
-        <div className="hidden md:flex glass-card animate-float absolute -bottom-4 right-4 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-          <ShieldCheck className="w-3.5 h-3.5 text-primary-glow" /> Emissão 100% online
+        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
+          <Cpu className="w-3.5 h-3.5 text-primary-glow" /> CNPJ · CPF · Bird ID
         </div>
       </div>
     </div>
   );
 }
+
 
 
