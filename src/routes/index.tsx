@@ -44,6 +44,37 @@ import docNfpe from "@/assets/docs/nfpe.jpg";
 import docCiot from "@/assets/docs/ciot.jpg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
+      {
+        name: "description",
+        content:
+          "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
+      },
+      { property: "og:title", content: "Emissor Fiscal — Plataforma completa de emissão de notas" },
+      {
+        property: "og:description",
+        content:
+          "Um único sistema moderno para até 7 tipos de documentos fiscais. 100% online, com foco em operação.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://volta-fiscal-art.lovable.app/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "https://volta-fiscal-art.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Emissor Fiscal",
+          url: "https://volta-fiscal-art.lovable.app/",
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 

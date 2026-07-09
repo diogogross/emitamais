@@ -26,8 +26,10 @@ export const Route = createFileRoute("/blog")({
         content: "Guias, novidades e boas práticas para acelerar sua emissão fiscal.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://volta-fiscal-art.lovable.app/blog" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://volta-fiscal-art.lovable.app/blog" }],
   }),
   component: BlogPage,
 });
