@@ -571,7 +571,7 @@ function Index() {
             />
           </div>
         </div>
-      </section>
+      </div></section>
 
       {/* BLOG */}
       <section id="blog" className="max-w-7xl mx-auto px-6 py-24">
