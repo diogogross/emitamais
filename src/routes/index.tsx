@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.png";
 import dashboardMock from "@/assets/dashboard-mock.jpg";
+import certificadoMock from "@/assets/screens/certificado-mock.jpg";
 import smartPos from "@/assets/smart-pos.png";
 import brasilMap from "@/assets/brasil-map.png";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
