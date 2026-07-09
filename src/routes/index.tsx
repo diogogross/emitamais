@@ -16,6 +16,8 @@ import {
   Sparkles,
   Check,
   ArrowRight,
+  ChevronLeft,
+  ChevronRight,
   KeyRound,
   Usb,
   HardDrive,
