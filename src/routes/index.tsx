@@ -299,7 +299,7 @@ function Index() {
             Ver planos <ArrowRight className="w-4 h-4" />
           </a>
         </div>
-      </section>
+      </div></section>
 
       {/* RECURSOS: responsive/mobile */}
       <section id="recursos" className="max-w-7xl mx-auto px-6 py-24">
