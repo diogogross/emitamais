@@ -62,7 +62,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://volta-fiscal-art.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://volta-fiscal-art.lovable.app/" }],
+    links: [
+      { rel: "canonical", href: "https://volta-fiscal-art.lovable.app/" },
+      { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
