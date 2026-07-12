@@ -1074,7 +1074,7 @@ function Index() {
 }
 
 function HeroSlider() {
-  const slides = [0, 1, 2];
+  const slides = [0, 1, 2, 3, 4, 5];
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
   const go = (n: number) => setI((n + slides.length) % slides.length);
