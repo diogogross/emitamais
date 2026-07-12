@@ -220,11 +220,9 @@ function Index() {
 
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <a href="#" className="flex items-center gap-2 font-display text-xl font-bold">
-            <span className="w-8 h-8 rounded-lg grid place-items-center" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
-              <Sparkles className="w-4 h-4 text-white" />
-            </span>
-            Emissor Fiscal
+          <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold">
+            <img src={logoEmissor.url} alt="Emissor Fiscal" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
+            <span>Emissor <span className="gradient-text">Fiscal</span></span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <div className="relative group">
