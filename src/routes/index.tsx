@@ -318,6 +318,48 @@ function Index() {
         </div>
       </section>
 
+      {/* SEGMENTOS */}
+      <section className="section-light w-full" data-reveal="up">
+        <div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
+          <h2 className="text-center font-display text-3xl md:text-4xl font-bold mb-12">
+            O <span className="gradient-text">emissor fiscal</span> entende o seu <span className="font-extrabold">segmento</span> para você não ter limites
+          </h2>
+          <div
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4"
+            data-reveal-stagger
+          >
+            {[
+              { icon: Truck, label: "Transportadora" },
+              { icon: Shirt, label: "Moda e Vestuário" },
+              { icon: Wrench, label: "Oficinas" },
+              { icon: Store, label: "Comércio e Varejo" },
+              { icon: Croissant, label: "Panificadora e Confeitaria" },
+              { icon: Stethoscope, label: "Saúde e Clínicas" },
+            ].map((s) => (
+              <div
+                key={s.label}
+                className="glass-card p-6 flex flex-col items-center text-center gap-4 transition-transform hover:-translate-y-1"
+              >
+                <div className="w-14 h-14 rounded-full bg-[oklch(0.95_0.02_295)] grid place-items-center">
+                  <s.icon className="w-7 h-7" style={{ color: "oklch(0.45 0.22 295)" }} />
+                </div>
+                <span className="text-sm font-medium leading-tight">{s.label}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 flex justify-center">
+            <div className="glass-card px-6 py-3 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full border-2 border-current grid place-items-center opacity-70">
+                <Plus className="w-5 h-5" />
+              </div>
+              <span className="text-sm font-medium">Mais de 60 segmentos atendidos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* PRODUTO showcase */}
       <section id="produto" className="section-light section-connector w-full" data-reveal="up"><div className="max-w-7xl mx-auto px-6 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
