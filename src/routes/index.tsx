@@ -669,7 +669,57 @@ function Index() {
 
       </div></section>
 
-      {/* NÚMEROS + MAPA */}
+      {/* DEPOIMENTOS */}
+      <section id="depoimentos" className="section-dark section-connector w-full" data-reveal="up"><div className="max-w-7xl mx-auto px-6 py-24">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Depoimentos</div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold">
+            Quem usa, <span className="gradient-text">recomenda.</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground text-lg">
+            Empresas e profissionais que aceleraram sua rotina fiscal com o Emissor e o Certificado Digital.
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+          <div className="testimonials-track flex gap-5">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <figure
+                key={`${t.name}-${i}`}
+                className="glass-card p-6 md:p-7 w-[320px] md:w-[380px] shrink-0 flex flex-col"
+              >
+                <div className="flex items-center gap-1 text-primary-glow mb-3">
+                  {Array.from({ length: 5 }).map((_, s) => (
+                    <svg key={s} viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                      <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.2 2.8 1-5.9L1.5 7.7l5.9-.9L10 1.5z" />
+                    </svg>
+                  ))}
+                </div>
+                <blockquote className="text-sm md:text-[15px] text-foreground/90 leading-relaxed flex-1">
+                  “{t.quote}”
+                </blockquote>
+                <figcaption className="mt-5 flex items-center gap-3">
+                  <div
+                    className="w-11 h-11 rounded-full grid place-items-center font-display font-bold text-white shrink-0"
+                    style={{ background: "var(--gradient-primary)" }}
+                  >
+                    {t.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-semibold text-sm text-foreground truncate">{t.name}</div>
+                    <div className="text-[11px] text-muted-foreground truncate">{t.role}</div>
+                  </div>
+                  <span className="ml-auto text-[10px] uppercase tracking-widest rounded-full px-2.5 py-1 bg-white/5 ring-1 ring-white/10 text-primary-glow shrink-0">
+                    {t.tag}
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </div></section>
+
+
       <section id="numeros" className="section-light section-connector w-full" data-reveal="left"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="glass-card p-8 md:p-14 grid lg:grid-cols-[1fr_1fr] gap-10 items-center relative overflow-hidden">
           <div
