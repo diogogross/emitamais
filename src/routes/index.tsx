@@ -1071,9 +1071,9 @@ function Index() {
           </div>
           <div>© {new Date().getFullYear()} Emissor Fiscal. Todos os direitos reservados.</div>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-foreground">Termos</a>
-            <a href="#" className="hover:text-foreground">Privacidade</a>
-            <a href="#" className="hover:text-foreground">Contato</a>
+            <Link to="/termos" className="hover:text-foreground">Termos</Link>
+            <Link to="/privacidade" className="hover:text-foreground">Privacidade</Link>
+            <a href="#contato" className="hover:text-foreground">Contato</a>
           </div>
         </div>
       </footer>
