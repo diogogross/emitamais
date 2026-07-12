@@ -33,6 +33,7 @@ import dashboardMock from "@/assets/dashboard-real.jpg";
 import dashboardList from "@/assets/dashboard-list.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
 import smartPos from "@/assets/smart-pos.webp";
+import smartPosFrame from "@/assets/smart-pos-frame.jpg";
 import brasilMap from "@/assets/brasil-map.webp";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
 import pdvScreen from "@/assets/screens/pdv.png";
@@ -444,6 +445,26 @@ function Index() {
           </div>
 
         </div>
+      </div></section>
+
+      {/* SMART POS FRAME */}
+      <section className="section-light w-full" data-reveal="up"><div className="max-w-5xl mx-auto px-6 py-20 md:py-24">
+        <figure className="glass-card p-3 md:p-4 glow-ring overflow-hidden">
+          <img
+            src={smartPosFrame}
+            alt="Ilustração: vendedor emitindo NF-e direto do Smart POS"
+            loading="lazy"
+            width={1600}
+            height={900}
+            className="w-full rounded-xl"
+          />
+        </figure>
+        <figcaption className="mt-8 text-center">
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-3">Smart POS</div>
+          <h3 className="font-display text-3xl md:text-4xl font-bold">
+            Venda direto na <span className="gradient-text">Smart POS</span>.
+          </h3>
+        </figcaption>
       </div></section>
 
       {/* SMART POS */}
