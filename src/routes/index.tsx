@@ -421,7 +421,7 @@ function Index() {
 
       {/* DOCUMENTOS */}
       <section id="documentos" className="section-dark section-connector w-full" data-reveal="scale"><div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Documentos</div>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
             Um único sistema para <span className="gradient-text">7 tipos</span> de documentos fiscais.
@@ -431,38 +431,62 @@ function Index() {
           </p>
         </div>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-          {docTypes.map(({ name, desc, icon: Icon }, i) => (
-            <article
-              key={name}
-              className="group relative overflow-hidden rounded-2xl p-6 md:p-7 ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/50 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(120,60,255,0.35)] transition-all duration-300"
-            >
-              {/* ambient glow */}
+        <div className="mt-14 grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          {/* Person on the left */}
+          <div className="lg:col-span-5 relative order-2 lg:order-1">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              {/* soft glow behind */}
               <div
-                className="pointer-events-none absolute -top-16 -right-16 w-48 h-48 rounded-full opacity-40 group-hover:opacity-70 transition-opacity blur-3xl"
+                className="absolute inset-x-8 bottom-0 h-3/4 rounded-[40%] blur-3xl opacity-60"
                 style={{ background: "var(--gradient-primary)" }}
               />
-              {/* index number watermark */}
-              <span className="absolute top-4 right-5 font-display text-5xl font-bold text-white/5 group-hover:text-white/10 transition-colors">
-                0{i + 1}
-              </span>
-
-              <div className="relative">
-                <div
-                  className="w-14 h-14 rounded-2xl grid place-items-center mb-5 ring-1 ring-white/15 group-hover:scale-110 transition-transform"
-                  style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}
-                >
-                  <Icon className="w-7 h-7 text-white" strokeWidth={1.75} />
-                </div>
-                <h3 className="font-display text-2xl font-bold text-white leading-none">{name}</h3>
-                <p className="mt-3 text-sm text-white/70 leading-relaxed">{desc}</p>
-                <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-medium text-primary-glow opacity-0 group-hover:opacity-100 transition-opacity">
-                  Emitir agora <ArrowRight className="w-3.5 h-3.5" />
-                </div>
+              <img
+                src={womanPointing.url}
+                alt="Especialista do Emissor Fiscal apresentando os tipos de documentos fiscais"
+                loading="lazy"
+                width={768}
+                height={1024}
+                className="relative w-full h-auto max-h-[620px] object-contain drop-shadow-[0_30px_40px_rgba(120,60,255,0.35)]"
+              />
+              {/* floating chip */}
+              <div className="hidden md:flex absolute top-8 left-0 items-center gap-2 rounded-full bg-white/10 backdrop-blur ring-1 ring-white/20 px-4 py-2 text-xs font-medium text-white animate-float">
+                <Sparkles className="w-3.5 h-3.5 text-primary-glow" /> Emissão em segundos
               </div>
-            </article>
-          ))}
+            </div>
+          </div>
+
+          {/* Cards on the right */}
+          <div className="lg:col-span-7 order-1 lg:order-2">
+            <div className="grid sm:grid-cols-2 gap-4">
+              {docTypes.map(({ name, desc, icon: Icon }, i) => (
+                <article
+                  key={name}
+                  className="group relative overflow-hidden rounded-2xl p-5 md:p-6 ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/50 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(120,60,255,0.35)] transition-all duration-300"
+                >
+                  <div
+                    className="pointer-events-none absolute -top-16 -right-16 w-40 h-40 rounded-full opacity-40 group-hover:opacity-70 transition-opacity blur-3xl"
+                    style={{ background: "var(--gradient-primary)" }}
+                  />
+                  <span className="absolute top-3 right-4 font-display text-4xl font-bold text-white/5 group-hover:text-white/10 transition-colors">
+                    0{i + 1}
+                  </span>
+                  <div className="relative">
+                    <div
+                      className="w-12 h-12 rounded-xl grid place-items-center mb-4 ring-1 ring-white/15 group-hover:scale-110 transition-transform"
+                      style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}
+                    >
+                      <Icon className="w-6 h-6 text-white" strokeWidth={1.75} />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-white leading-none">{name}</h3>
+                    <p className="mt-2 text-sm text-white/70 leading-relaxed line-clamp-3">{desc}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
+
+
 
 
         <div className="mt-8 glass-card p-6 flex flex-wrap items-center gap-4 justify-between">
