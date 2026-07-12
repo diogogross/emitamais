@@ -30,6 +30,12 @@ import {
   Croissant,
   Stethoscope,
   Plus,
+  ShoppingCart,
+  Briefcase,
+  ClipboardList,
+  Sprout,
+  Route as RouteIcon,
+
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.webp";
 import { blogPosts } from "@/lib/blog-posts";
