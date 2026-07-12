@@ -30,6 +30,12 @@ import {
   Croissant,
   Stethoscope,
   Plus,
+  ShoppingCart,
+  Briefcase,
+  ClipboardList,
+  Sprout,
+  Route as RouteIcon,
+
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.webp";
 import { blogPosts } from "@/lib/blog-posts";
@@ -91,13 +97,14 @@ export const Route = createFileRoute("/")({
 
 const docTypes = [
   { name: "NFe", desc: "Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ.", icon: FileText, image: docNfe },
-  { name: "NFCe", desc: "PDV online integrado — cupom fiscal eletrônico para o varejo.", icon: Store, image: docNfce },
-  { name: "NFSe", desc: "Nota de serviço integrada com +1.600 municípios brasileiros.", icon: Receipt, image: docNfse },
+  { name: "NFCe", desc: "PDV online integrado — cupom fiscal eletrônico para o varejo.", icon: ShoppingCart, image: docNfce },
+  { name: "NFSe", desc: "Nota de serviço integrada com +1.600 municípios brasileiros.", icon: Briefcase, image: docNfse },
   { name: "CTe / CTeOS", desc: "Conhecimento de transporte para cargas e operações de serviço.", icon: Truck, image: docCte },
-  { name: "MDFe", desc: "Manifesto eletrônico de documentos fiscais para o transporte.", icon: FileSpreadsheet, image: docMdfe },
-  { name: "NFPe", desc: "Nota fiscal do produtor rural, emissão simplificada e legalizada.", icon: Sparkles, image: docNfpe },
-  { name: "CIOT", desc: "Código Identificador da Operação de Transporte de cargas.", icon: FileSpreadsheet, image: docCiot },
+  { name: "MDFe", desc: "Manifesto eletrônico de documentos fiscais para o transporte.", icon: ClipboardList, image: docMdfe },
+  { name: "NFPe", desc: "Nota fiscal do produtor rural, emissão simplificada e legalizada.", icon: Sprout, image: docNfpe },
+  { name: "CIOT", desc: "Código Identificador da Operação de Transporte de cargas.", icon: RouteIcon, image: docCiot },
 ];
+
 
 const features = [
   { icon: Zap, title: "Emissão em segundos", desc: "Fluxo otimizado, do cadastro à autorização SEFAZ." },
@@ -423,41 +430,38 @@ function Index() {
         </div>
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-          {docTypes.map(({ name, desc, icon: Icon, image }, i) => (
+          {docTypes.map(({ name, desc, icon: Icon }, i) => (
             <article
               key={name}
-              className="group relative aspect-[16/10] overflow-hidden rounded-xl ring-1 ring-white/10 hover:ring-primary-glow/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.7)] cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl p-6 md:p-7 ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/50 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(120,60,255,0.35)] transition-all duration-300"
             >
-              <img
-                src={image}
-                alt={`Ilustração do documento fiscal ${name}`}
-                loading="lazy"
-                width={1024}
-                height={640}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              {/* ambient glow */}
+              <div
+                className="pointer-events-none absolute -top-16 -right-16 w-48 h-48 rounded-full opacity-40 group-hover:opacity-70 transition-opacity blur-3xl"
+                style={{ background: "var(--gradient-primary)" }}
               />
-              {/* Netflix-style bottom-to-top black gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 via-40% to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              <span className="absolute top-3 right-3 text-[10px] font-mono text-white/70 bg-black/50 backdrop-blur px-2 py-1 rounded-full ring-1 ring-white/15">
+              {/* index number watermark */}
+              <span className="absolute top-4 right-5 font-display text-5xl font-bold text-white/5 group-hover:text-white/10 transition-colors">
                 0{i + 1}
               </span>
 
-              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-                <div className="flex items-center gap-2.5 mb-2">
-                  <span className="w-8 h-8 rounded-lg grid place-items-center bg-white/10 backdrop-blur ring-1 ring-white/20">
-                    <Icon className="w-4 h-4 text-primary-glow" />
-                  </span>
-                  <h3 className="font-display text-2xl font-bold text-white leading-none">{name}</h3>
+              <div className="relative">
+                <div
+                  className="w-14 h-14 rounded-2xl grid place-items-center mb-5 ring-1 ring-white/15 group-hover:scale-110 transition-transform"
+                  style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}
+                >
+                  <Icon className="w-7 h-7 text-white" strokeWidth={1.75} />
                 </div>
-                <p className="text-sm text-white/80 leading-snug max-w-sm line-clamp-2 group-hover:line-clamp-none transition-all">
-                  {desc}
-                </p>
+                <h3 className="font-display text-2xl font-bold text-white leading-none">{name}</h3>
+                <p className="mt-3 text-sm text-white/70 leading-relaxed">{desc}</p>
+                <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-medium text-primary-glow opacity-0 group-hover:opacity-100 transition-opacity">
+                  Emitir agora <ArrowRight className="w-3.5 h-3.5" />
+                </div>
               </div>
             </article>
           ))}
         </div>
+
 
         <div className="mt-8 glass-card p-6 flex flex-wrap items-center gap-4 justify-between">
           <div className="text-sm text-muted-foreground">
