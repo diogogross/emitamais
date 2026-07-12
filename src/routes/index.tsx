@@ -114,6 +114,45 @@ const planPerks = [
   "Suporte prioritário",
 ];
 
+const testimonials = [
+  {
+    name: "Ricardo Menezes",
+    role: "Sócio · Menezes Distribuidora",
+    tag: "Emissor",
+    quote: "Trocamos três sistemas por um só. Emitimos NFe e MDFe no mesmo lugar, e o suporte responde em minutos. Não voltaria atrás.",
+  },
+  {
+    name: "Camila Duarte",
+    role: "Contadora · Duarte Contábil",
+    tag: "Emissor",
+    quote: "Como escritório, eu precisava de multiempresas ilimitadas sem taxa por CNPJ. O Emissor Fiscal entrega isso — e o XML sai pronto pra minha contabilidade.",
+  },
+  {
+    name: "Fernando Alves",
+    role: "MEI · Alves Serviços",
+    tag: "Certificado",
+    quote: "Emiti meu Certificado Digital A1 PJ em 15 minutos, tudo por videoconferência. E ainda ganhei o primeiro mês do emissor. Combo perfeito.",
+  },
+  {
+    name: "Juliana Prado",
+    role: "Gerente Fiscal · Prado Logística",
+    tag: "Emissor",
+    quote: "Nossa operação de CTe e MDFe é pesada. O sistema aguenta o volume, integra com nosso ERP e nunca deixou nota travada com a SEFAZ.",
+  },
+  {
+    name: "Marcos Bittencourt",
+    role: "Diretor · Bitten Comércio",
+    tag: "Certificado",
+    quote: "Já perdi tempo demais com certificadora tradicional. Aqui é 100% online, sem sair da empresa, e o suporte me guiou passo a passo.",
+  },
+  {
+    name: "Patrícia Nogueira",
+    role: "Dona · Padaria da Praça",
+    tag: "Emissor",
+    quote: "Emito NFCe direto na Smart POS. Meu cliente recebe a nota no WhatsApp na mesma hora. Ficou muito mais profissional.",
+  },
+];
+
 
 function Index() {
   const progressRef = useRef<HTMLDivElement>(null);
@@ -703,7 +742,7 @@ function Index() {
                     className="w-11 h-11 rounded-full grid place-items-center font-display font-bold text-white shrink-0"
                     style={{ background: "var(--gradient-primary)" }}
                   >
-                    {t.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                    {t.name.split(" ").map((n: string) => n[0]).slice(0, 2).join("")}
                   </div>
                   <div className="min-w-0">
                     <div className="font-semibold text-sm text-foreground truncate">{t.name}</div>
