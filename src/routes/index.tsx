@@ -448,7 +448,7 @@ function Index() {
       </div></section>
 
       {/* SMART POS FRAME */}
-      <section className="section-light w-full" data-reveal="up"><div className="max-w-5xl mx-auto px-6 py-20 md:py-24">
+      <section className="section-light w-full" data-reveal="up"><div className="max-w-7xl mx-auto px-6 py-20 md:py-24">
         <figure className="glass-card p-3 md:p-4 glow-ring overflow-hidden">
           <img
             src={smartPosFrame}
