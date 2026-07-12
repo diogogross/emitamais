@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -176,60 +176,105 @@ function BlogList() {
   const categories = ["Notas Fiscais", "Transporte", "Certificado Digital"] as const;
 
   return (
-    <section id="posts" className="max-w-7xl mx-auto px-6 py-16 space-y-16">
+    <section id="posts" className="max-w-7xl mx-auto px-6 py-16 space-y-20">
       {categories.map((cat) => {
         const posts = blogPosts.filter((p) => p.category === cat);
         if (!posts.length) return null;
-        return (
-          <div key={cat}>
-            <div className="flex items-end justify-between mb-6">
-              <div>
-                <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Categoria</div>
-                <h2 className="font-display text-3xl md:text-4xl font-bold">{cat}</h2>
-              </div>
-              <span className="text-sm text-muted-foreground">
-                {posts.length} {posts.length === 1 ? "artigo" : "artigos"}
-              </span>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {posts.map((p) => (
-                <Link
-                  key={p.slug}
-                  to="/blog/$slug"
-                  params={{ slug: p.slug }}
-                  className="group relative overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/40 hover:-translate-y-1 transition"
-                >
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <img
-                      src={p.image}
-                      alt={p.title}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                    <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur px-3 py-1 text-[11px] uppercase tracking-widest text-white ring-1 ring-white/15">
-                      {p.category}
-                    </span>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-display text-lg font-bold leading-tight line-clamp-2">{p.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{p.excerpt}</p>
-                    <div className="mt-4 flex items-center gap-4 text-[11px] text-muted-foreground">
-                      <span className="inline-flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5" /> {p.date}
-                      </span>
-                      <span className="inline-flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5" /> {p.readMin} min
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        );
+        return <CategoryRow key={cat} title={cat} posts={posts} />;
       })}
     </section>
   );
 }
+
+function CategoryRow({
+  title,
+  posts,
+}: {
+  title: string;
+  posts: typeof blogPosts;
+}) {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: 1 | -1) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const step = Math.round(el.clientWidth * 0.85);
+    el.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
+  return (
+    <div>
+      <div className="flex items-end justify-between gap-4 mb-6">
+        <div>
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Categoria</div>
+          <h2 className="font-display text-3xl md:text-4xl font-bold">{title}</h2>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className="hidden sm:inline text-sm text-muted-foreground">
+            {posts.length} {posts.length === 1 ? "artigo" : "artigos"}
+          </span>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              aria-label={`Ver artigos anteriores de ${title}`}
+              onClick={() => scroll(-1)}
+              className="w-10 h-10 grid place-items-center rounded-full border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-primary-glow/50 transition"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              aria-label={`Ver próximos artigos de ${title}`}
+              onClick={() => scroll(1)}
+              className="w-10 h-10 grid place-items-center rounded-full border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-primary-glow/50 transition"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative -mx-6 px-6 [mask-image:linear-gradient(90deg,transparent,#000_2%,#000_98%,transparent)]">
+        <div
+          ref={trackRef}
+          className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {posts.map((p) => (
+            <Link
+              key={p.slug}
+              to="/blog/$slug"
+              params={{ slug: p.slug }}
+              className="group relative overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/40 hover:-translate-y-1 transition shrink-0 snap-start w-[280px] sm:w-[340px] lg:w-[380px]"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur px-3 py-1 text-[11px] uppercase tracking-widest text-white ring-1 ring-white/15">
+                  {p.category}
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-display text-lg font-bold leading-tight line-clamp-2">{p.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground line-clamp-3">{p.excerpt}</p>
+                <div className="mt-4 flex items-center gap-4 text-[11px] text-muted-foreground">
+                  <span className="inline-flex items-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5" /> {p.date}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5" /> {p.readMin} min
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
