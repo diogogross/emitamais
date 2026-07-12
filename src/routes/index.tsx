@@ -29,7 +29,8 @@ import {
 import heroPerson from "@/assets/hero-person.webp";
 import { blogPosts } from "@/lib/blog-posts";
 import heroPerson2 from "@/assets/hero-person-2.webp";
-import dashboardMock from "@/assets/dashboard-mock.jpg";
+import dashboardMock from "@/assets/dashboard-real.jpg";
+import dashboardList from "@/assets/dashboard-list.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
 import smartPos from "@/assets/smart-pos.webp";
 import brasilMap from "@/assets/brasil-map.webp";
@@ -279,7 +280,17 @@ function Index() {
             <div className="glass-card p-2 glow-ring">
               <img
                 src={dashboardMock}
-                alt="Dashboard do sistema emissor de notas fiscais"
+                alt="Dashboard do sistema Emissor Fiscal"
+                loading="lazy"
+                width={1600}
+                height={720}
+                className="w-full rounded-xl"
+              />
+            </div>
+            <div className="glass-card p-2 glow-ring mt-5 ml-8 md:ml-16 hidden sm:block">
+              <img
+                src={dashboardList}
+                alt="Tela de listagem de notas fiscais do Emissor Fiscal"
                 loading="lazy"
                 width={1600}
                 height={1008}
