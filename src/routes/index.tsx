@@ -1070,14 +1070,26 @@ function Index() {
 }
 
 function HeroSlider() {
-  const slides = [0, 1];
+  const slides = [0, 1, 2];
   const [i, setI] = useState(0);
+  const [paused, setPaused] = useState(false);
   const go = (n: number) => setI((n + slides.length) % slides.length);
 
+  useEffect(() => {
+    if (paused) return;
+    const t = setInterval(() => setI((v) => (v + 1) % slides.length), 3000);
+    return () => clearInterval(t);
+  }, [paused, slides.length]);
+
   return (
-    <section className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32">
+    <section
+      className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="relative">
-        {i === 0 ? <HeroSlide1 /> : <HeroSlide2 />}
+        {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : <HeroSlide3 />}
+
 
         {/* Controls */}
         <button
