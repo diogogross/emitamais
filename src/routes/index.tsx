@@ -440,45 +440,14 @@ function Index() {
         <div className="mt-14 grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Person on the left */}
           <div className="lg:col-span-5 relative order-2 lg:order-1">
-            <div
-              className="relative mx-auto w-full max-w-md lg:max-w-none aspect-[4/5] rounded-[2rem] overflow-hidden ring-1 ring-white/10"
-              style={{
-                background:
-                  "radial-gradient(120% 90% at 30% 20%, oklch(0.55 0.28 300 / 0.55), transparent 60%), radial-gradient(120% 90% at 90% 100%, oklch(0.75 0.20 45 / 0.35), transparent 60%), linear-gradient(160deg, oklch(0.30 0.14 295), oklch(0.20 0.10 295))",
-                boxShadow: "var(--shadow-glow)",
-              }}
-            >
-              {/* dotted grid backdrop */}
-              <div
-                className="absolute inset-0 opacity-30"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(oklch(1 0 0 / 0.35) 1px, transparent 1px)",
-                  backgroundSize: "22px 22px",
-                }}
-              />
-              {/* glowing arc */}
-              <div
-                className="absolute -top-20 -left-20 w-72 h-72 rounded-full blur-3xl opacity-70"
-                style={{ background: "var(--gradient-primary)" }}
-              />
-              <div
-                className="absolute -bottom-24 -right-16 w-80 h-80 rounded-full blur-3xl opacity-60"
-                style={{ background: "var(--gradient-accent)" }}
-              />
-              {/* concentric rings behind the subject */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] aspect-square rounded-full border border-white/10" />
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[65%] aspect-square rounded-full border border-white/10" />
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] aspect-square rounded-full border border-white/10" />
-
-              {/* subject */}
+            <div className="relative mx-auto w-full max-w-md lg:max-w-none rounded-[2rem] overflow-hidden ring-1 ring-white/10 shadow-[0_30px_80px_-20px_rgba(120,60,255,0.5)]">
               <img
                 src={womanPointing.url}
                 alt="Especialista do Emissor Fiscal apresentando os tipos de documentos fiscais"
                 loading="lazy"
-                width={768}
-                height={1024}
-                className="absolute inset-x-0 bottom-0 mx-auto h-[95%] w-auto object-contain object-bottom drop-shadow-[0_30px_40px_rgba(120,60,255,0.45)]"
+                width={1280}
+                height={1280}
+                className="block w-full h-auto"
               />
 
               {/* corner tick marks */}
@@ -487,30 +456,19 @@ function Index() {
               <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-white/40 rounded-bl-lg" />
               <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-white/40 rounded-br-lg" />
 
-              {/* floating chips */}
+              {/* floating chip */}
               <div className="hidden md:flex absolute top-6 left-6 items-center gap-2 rounded-full bg-white/10 backdrop-blur-md ring-1 ring-white/20 px-3.5 py-2 text-xs font-medium text-white animate-float shadow-lg">
                 <Sparkles className="w-3.5 h-3.5 text-primary-glow" /> Emissão em segundos
               </div>
-              <div
-                className="hidden md:flex absolute top-24 right-5 items-center gap-2 rounded-full bg-white/10 backdrop-blur-md ring-1 ring-white/20 px-3.5 py-2 text-xs font-medium text-white animate-float shadow-lg"
-                style={{ animationDelay: "1s" }}
-              >
-                <ShieldCheck className="w-3.5 h-3.5 text-accent" /> SEFAZ autorizado
-              </div>
-              <div
-                className="hidden md:flex absolute bottom-24 left-4 items-center gap-2 rounded-full bg-white/10 backdrop-blur-md ring-1 ring-white/20 px-3.5 py-2 text-xs font-medium text-white animate-float shadow-lg"
-                style={{ animationDelay: "2s" }}
-              >
-                <FileText className="w-3.5 h-3.5 text-primary-glow" /> 7 documentos fiscais
-              </div>
 
-              {/* bottom label */}
-              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-5 right-6 text-[10px] uppercase tracking-[0.3em] text-white/60">
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+              <div className="absolute bottom-5 right-6 text-[10px] uppercase tracking-[0.3em] text-white/70">
                 Especialista Emissor Fiscal
               </div>
             </div>
           </div>
+
+
 
 
 
