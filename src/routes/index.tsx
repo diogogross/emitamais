@@ -1066,9 +1066,7 @@ function Index() {
       <footer className="border-t border-white/5 mt-10">
         <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2 font-display font-semibold text-foreground">
-            <span className="w-6 h-6 rounded-md grid place-items-center" style={{ background: "var(--gradient-primary)" }}>
-              <Sparkles className="w-3 h-3 text-white" />
-            </span>
+            <img src={logoEmissor.url} alt="Emissor Fiscal" width={24} height={24} loading="lazy" className="w-6 h-6 object-contain" />
             Emissor Fiscal
           </div>
           <div>© {new Date().getFullYear()} Emissor Fiscal. Todos os direitos reservados.</div>
