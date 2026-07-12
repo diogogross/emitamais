@@ -75,11 +75,11 @@ export const Route = createFileRoute("/")({
         content:
           "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
       },
-      { property: "og:title", content: "Emissor Fiscal — Plataforma completa de emissão de notas" },
+      { property: "og:title", content: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
       {
         property: "og:description",
         content:
-          "Um único sistema moderno para até 7 tipos de documentos fiscais. 100% online, com foco em operação.",
+          "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://volta-fiscal-art.lovable.app/" },

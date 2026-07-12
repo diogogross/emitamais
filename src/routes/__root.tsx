@@ -77,20 +77,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Emissor Fiscal — Plataforma completa de emissão de notas" },
+      { title: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
       {
         name: "description",
         content:
-          "Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema moderno e 100% online. Menos burocracia, mais operação.",
+          "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
       },
-      { property: "og:title", content: "Emissor Fiscal — Plataforma completa de emissão de notas" },
+      { property: "og:title", content: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
       {
         property: "og:description",
         content:
-          "Um único sistema moderno para até 7 tipos de documentos fiscais. 100% online, com foco em operação.",
+          "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
+      { name: "twitter:description", content: "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
