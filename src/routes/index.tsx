@@ -874,38 +874,67 @@ function Index() {
 
 
       {/* FAQ */}
-      <section id="faq" className="section-light section-connector w-full" data-reveal="right"><div className="max-w-4xl mx-auto px-6 py-24">
+      <section id="faq" className="section-light section-connector w-full" data-reveal="right"><div className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Perguntas frequentes</div>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
             Tudo o que você precisa <span className="gradient-text">saber.</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Ainda com dúvidas? Fale com nosso time — respondemos em minutos.
+            Duas colunas, duas soluções. Encontre respostas sobre o Emissor Fiscal e o Certificado Digital.
           </p>
         </div>
 
-        <div className="mt-14 space-y-3">
+        <div className="mt-14 grid lg:grid-cols-2 gap-6">
           {[
-            { q: "O Emissor Fiscal funciona para qualquer segmento?", a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural — emitindo NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT em um único sistema." },
-            { q: "Preciso instalar algum programa?", a: "Não. O sistema é 100% online e roda no navegador — desktop, tablet ou celular. Também rodamos em maquininhas Smart POS Android homologadas." },
-            { q: "Quantas notas e empresas posso emitir?", a: "Notas fiscais e empresas ilimitadas, todas incluídas no plano único de R$ 60/mês. Sem taxa por documento e sem taxa de setup." },
-            { q: "Vocês atendem NFSe da minha cidade?", a: "Estamos integrados com mais de 1.600 municípios brasileiros. Consulte sua cidade com nosso time — novas prefeituras entram semanalmente." },
-            { q: "Como funciona o suporte?", a: "Suporte prioritário por chat, e-mail e WhatsApp, com time especialista em legislação fiscal. Também mantemos base de conhecimento e vídeos de treinamento." },
-            { q: "Consigo integrar com meu ERP ou e-commerce?", a: "Sim. Oferecemos API REST completa e webhooks para integrar com ERPs, e-commerces, marketplaces e sistemas próprios." },
-          ].map((item) => (
-            <details key={item.q} className="glass-card px-6 py-5 group open:pb-6 [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none">
-                <span className="font-display text-lg font-semibold text-foreground">{item.q}</span>
-                <span className="w-8 h-8 rounded-full grid place-items-center border border-white/15 bg-white/5 text-primary-glow transition group-open:rotate-45">
-                  <span className="text-lg leading-none">+</span>
-                </span>
-              </summary>
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{item.a}</p>
-            </details>
+            {
+              title: "Emissor Fiscal",
+              subtitle: "Sistema de emissão de notas",
+              items: [
+                { q: "O Emissor Fiscal funciona para qualquer segmento?", a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural — emitindo NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT em um único sistema." },
+                { q: "Preciso instalar algum programa?", a: "Não. O sistema é 100% online e roda no navegador — desktop, tablet ou celular. Também rodamos em maquininhas Smart POS Android homologadas." },
+                { q: "Quantas notas e empresas posso emitir?", a: "Notas fiscais e empresas ilimitadas, todas incluídas no plano único de R$ 60/mês. Sem taxa por documento e sem taxa de setup." },
+                { q: "Vocês atendem NFSe da minha cidade?", a: "Estamos integrados com mais de 1.600 municípios brasileiros. Consulte sua cidade com nosso time — novas prefeituras entram semanalmente." },
+                { q: "Como funciona o suporte?", a: "Suporte prioritário por chat, e-mail e WhatsApp, com time especialista em legislação fiscal. Também mantemos base de conhecimento e vídeos de treinamento." },
+                { q: "Consigo integrar com meu ERP ou e-commerce?", a: "Sim. Oferecemos API REST completa e webhooks para integrar com ERPs, e-commerces, marketplaces e sistemas próprios." },
+              ],
+            },
+            {
+              title: "Certificado Digital",
+              subtitle: "A1 e A3 · PJ, PF, NF e Bird ID",
+              items: [
+                { q: "Qual a diferença entre A1 e A3?", a: "O A1 é um arquivo digital instalado no computador, com validade de 1 ano. O A3 fica armazenado em token, cartão ou nuvem (Bird ID) e pode ter validade de 1 a 3 anos." },
+                { q: "Preciso ir até um posto para emitir?", a: "Não. A emissão é 100% online, com validação por videoconferência. Você só precisa de webcam, documentos em mãos e cerca de 15 minutos." },
+                { q: "Quanto tempo demora para receber?", a: "Após a validação, o certificado A1 é instalado na hora. Para modelos A3 com mídia física (token ou cartão), o envio leva de 3 a 7 dias úteis." },
+                { q: "Quais documentos preciso apresentar?", a: "Para PJ: contrato social, CNPJ e documento do titular. Para PF: RG, CPF e comprovante de endereço. Todos digitalizados e apresentados por videoconferência." },
+                { q: "O certificado funciona com qualquer sistema?", a: "Sim. É aceito por SEFAZ, Receita Federal, e-CAC, prefeituras, bancos, tribunais e todos os principais sistemas fiscais e contábeis do país." },
+                { q: "E se eu comprar o certificado com o Emissor?", a: "Ao adquirir o Certificado A1 PJ ou PF, você ganha o primeiro mês do Emissor Fiscal sem custo. Combo perfeito para começar a emitir na hora." },
+              ],
+            },
+          ].map((col) => (
+            <div key={col.title} className="flex flex-col">
+              <div className="mb-5 flex items-baseline gap-3">
+                <h3 className="font-display text-2xl md:text-3xl font-bold">{col.title}</h3>
+                <span className="text-xs text-muted-foreground">{col.subtitle}</span>
+              </div>
+              <div className="space-y-3 flex-1">
+                {col.items.map((item) => (
+                  <details key={item.q} className="glass-card px-6 py-5 group open:pb-6 [&_summary::-webkit-details-marker]:hidden">
+                    <summary className="flex items-center justify-between gap-4 cursor-pointer list-none">
+                      <span className="font-display text-base md:text-lg font-semibold text-foreground">{item.q}</span>
+                      <span className="w-8 h-8 rounded-full grid place-items-center border border-white/15 bg-white/5 text-primary-glow transition group-open:rotate-45 shrink-0">
+                        <span className="text-lg leading-none">+</span>
+                      </span>
+                    </summary>
+                    <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{item.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div></section>
+
 
 
 
