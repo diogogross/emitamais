@@ -15,6 +15,7 @@ import {
   ShieldCheck,
   Check,
 } from "lucide-react";
+import logoEmissor from "@/assets/logo-emissor-fiscal.png.asset.json";
 
 export const Route = createFileRoute("/certificado-digital")({
   head: () => ({
