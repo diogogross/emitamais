@@ -38,7 +38,7 @@ import {
 
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.webp";
-import womanPointing from "@/assets/woman-pointing.png.asset.json";
+import womanPointing from "@/assets/woman-pointing-framed.jpg.asset.json";
 import truckHero from "@/assets/truck-hero.png.asset.json";
 import heroServicos from "@/assets/hero-servicos.png.asset.json";
 import heroMaquininha from "@/assets/hero-maquininha.png.asset.json";
