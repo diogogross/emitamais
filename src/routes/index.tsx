@@ -39,6 +39,8 @@ import {
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.webp";
 import womanPointing from "@/assets/woman-pointing.png.asset.json";
+import truckHero from "@/assets/truck-hero.png.asset.json";
+
 
 import { blogPosts } from "@/lib/blog-posts";
 import heroPerson2 from "@/assets/hero-person-2.webp";
@@ -1068,14 +1070,26 @@ function Index() {
 }
 
 function HeroSlider() {
-  const slides = [0, 1];
+  const slides = [0, 1, 2];
   const [i, setI] = useState(0);
+  const [paused, setPaused] = useState(false);
   const go = (n: number) => setI((n + slides.length) % slides.length);
 
+  useEffect(() => {
+    if (paused) return;
+    const t = setInterval(() => setI((v) => (v + 1) % slides.length), 3000);
+    return () => clearInterval(t);
+  }, [paused, slides.length]);
+
   return (
-    <section className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32">
+    <section
+      className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="relative">
-        {i === 0 ? <HeroSlide1 /> : <HeroSlide2 />}
+        {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : <HeroSlide3 />}
+
 
         {/* Controls */}
         <button
@@ -1250,6 +1264,75 @@ function HeroSlide2() {
     </div>
   );
 }
+
+function HeroSlide3() {
+  return (
+    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
+      <div className="relative z-10">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
+          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
+          Documentos de transporte
+        </div>
+        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
+          Sua transportadora <span className="gradient-text">sem nota travada.</span>
+        </h1>
+        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+          CTe, MDFe e CIOT emitidos em segundos, integrados com SEFAZ e ANTT. Um único sistema para toda a operação de cargas.
+        </p>
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <a
+            href="#planos"
+            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
+            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+          >
+            Começar agora
+            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+          <a href="#documentos" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
+            Ver documentos <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+        <div className="mt-12 flex flex-wrap gap-8 text-sm">
+          {[
+            ["CTe", "conhecimento de transporte"],
+            ["MDFe", "manifesto eletrônico"],
+            ["CIOT", "operação de cargas"],
+          ].map(([n, l]) => (
+            <div key={l as string}>
+              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative">
+        <div
+          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
+          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
+        />
+        <img
+          src={truckHero.url}
+          alt="Carreta de transportadora emitindo CTe, MDFe e CIOT pelo Emissor Fiscal"
+          loading="lazy"
+          width={1200}
+          height={1024}
+          className="relative w-full max-w-xl mx-auto animate-float"
+        />
+        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
+          <Truck className="w-3.5 h-3.5 text-primary-glow" /> CTe autorizado em 1,5s
+        </div>
+        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
+          <ClipboardList className="w-3.5 h-3.5 text-accent" /> MDFe integrado
+        </div>
+        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
+          <RouteIcon className="w-3.5 h-3.5 text-primary-glow" /> CIOT emitido
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 
 
