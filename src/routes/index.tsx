@@ -25,6 +25,11 @@ import {
   Cpu,
   Building2,
   User,
+  Shirt,
+  Wrench,
+  Croissant,
+  Stethoscope,
+  Plus,
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.webp";
 import { blogPosts } from "@/lib/blog-posts";
