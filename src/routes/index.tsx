@@ -1092,7 +1092,7 @@ function HeroSlider() {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="relative">
-        {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : <HeroSlide3 />}
+        {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : i === 2 ? <HeroSlide3 /> : i === 3 ? <HeroSlide4 /> : i === 4 ? <HeroSlide5 /> : <HeroSlide6 />}
 
 
         {/* Controls */}
