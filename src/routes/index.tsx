@@ -38,6 +38,8 @@ import {
 
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.webp";
+import womanPointing from "@/assets/woman-pointing.png.asset.json";
+
 import { blogPosts } from "@/lib/blog-posts";
 import heroPerson2 from "@/assets/hero-person-2.webp";
 import dashboardMock from "@/assets/dashboard-real.jpg";
