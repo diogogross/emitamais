@@ -108,10 +108,9 @@ const docTypes = [
   { name: "NFe", desc: "Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ.", icon: FileText, image: docNfe },
   { name: "NFCe", desc: "PDV online integrado — cupom fiscal eletrônico para o varejo.", icon: ShoppingCart, image: docNfce },
   { name: "NFSe", desc: "Nota de serviço integrada com +1.600 municípios brasileiros.", icon: Briefcase, image: docNfse },
-  { name: "CTe / CTeOS", desc: "Conhecimento de transporte para cargas e operações de serviço.", icon: Truck, image: docCte },
+  { name: "CTe / CTeOS + CIOT", desc: "Conhecimento de transporte para cargas e operações de serviço, com CIOT integrado para operações de transporte rodoviário.", icon: Truck, image: docCte },
   { name: "MDFe", desc: "Manifesto eletrônico de documentos fiscais para o transporte.", icon: ClipboardList, image: docMdfe },
   { name: "NFPe", desc: "Nota fiscal do produtor rural, emissão simplificada e legalizada.", icon: Sprout, image: docNfpe },
-  { name: "CIOT", desc: "Código Identificador da Operação de Transporte de cargas.", icon: RouteIcon, image: docCiot },
 ];
 
 
