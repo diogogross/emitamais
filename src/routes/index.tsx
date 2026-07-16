@@ -1281,12 +1281,14 @@ function Index() {
             <div className="flex flex-wrap items-center gap-5">
               <Link to="/termos" className="hover:text-white transition">Termos de uso</Link>
               <Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link>
-              <a href="#cookies" className="hover:text-white transition">Cookies</a>
-              <a href="#lgpd" className="hover:text-white transition">LGPD</a>
+              <button onClick={openCookiePreferences} className="hover:text-white transition">Cookies</button>
+              <button onClick={openCookiePreferences} className="hover:text-white transition">LGPD</button>
             </div>
           </div>
         </div>
       </footer>
+
+      <CookieConsent />
 
     </div>
   );
