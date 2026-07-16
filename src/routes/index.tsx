@@ -178,16 +178,23 @@ function Index() {
   const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Scroll progress bar
+    // Scroll progress bar (rAF-throttled to avoid layout thrash per scroll event)
     const bar = progressRef.current;
-    const onScroll = () => {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
       if (!bar) return;
       const h = document.documentElement;
       const max = h.scrollHeight - h.clientHeight;
       const pct = max > 0 ? h.scrollTop / max : 0;
       bar.style.transform = `scaleX(${pct})`;
     };
-    onScroll();
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    };
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
 
     // Reveal on scroll (IntersectionObserver)
@@ -1080,17 +1087,18 @@ function Index() {
   );
 }
 
+const HERO_SLIDE_COUNT = 6;
+
 function HeroSlider() {
-  const slides = [0, 1, 2, 3, 4, 5];
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
-  const go = (n: number) => setI((n + slides.length) % slides.length);
+  const go = (n: number) => setI((n + HERO_SLIDE_COUNT) % HERO_SLIDE_COUNT);
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(() => setI((v) => (v + 1) % slides.length), 3000);
+    const t = setInterval(() => setI((v) => (v + 1) % HERO_SLIDE_COUNT), 3000);
     return () => clearInterval(t);
-  }, [paused, slides.length]);
+  }, [paused]);
 
   return (
     <section
@@ -1122,7 +1130,7 @@ function HeroSlider() {
 
         {/* Dots */}
         <div className="mt-8 flex items-center justify-center gap-2">
-          {slides.map((_, idx) => (
+          {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
             <button
               key={idx}
               type="button"
