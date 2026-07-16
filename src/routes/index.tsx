@@ -386,23 +386,17 @@ function Index() {
             {Array.from({ length: 2 }).map((_, i) => (
               <div key={i} className="flex gap-5 shrink-0">
                 {[
-                  { name: "Drogaria SãoPaulo Center", seg: "Farmácia", color: "#00A859", Icon: Pill, style: "font-black tracking-tight" },
-                  { name: "Rede Bahia Supermercados", seg: "Varejo", color: "#E30613", Icon: ShoppingCart, style: "font-black italic" },
-                  { name: "TransBrasil Logística", seg: "Transporte", color: "#003DA5", Icon: Truck, style: "font-black tracking-tight" },
-                  { name: "Padaria Real do Ipiranga", seg: "Alimentação", color: "#B8730E", Icon: Croissant, style: "italic font-bold" },
-                  { name: "Auto Center Paulista", seg: "Automotivo", color: "#1F1F1F", Icon: Car, style: "font-black" },
-                  { name: "Óticas VisãoClara", seg: "Ótica", color: "#1F3D8A", Icon: Glasses, style: "font-semibold tracking-wide" },
-                  { name: "Clínica São Rafael", seg: "Saúde", color: "#0071BC", Icon: Stethoscope, style: "font-bold" },
-                  { name: "Barbearia Navalha & Cia", seg: "Beleza", color: "#111111", Icon: Scissors, style: "font-black italic" },
-                  { name: "Petshop Amigo Pet", seg: "Pet", color: "#7B1FA2", Icon: PawPrint, style: "font-bold" },
-                  { name: "Construtora Horizonte", seg: "Construção", color: "#F57C00", Icon: HardHat, style: "font-black tracking-tight" },
-                  { name: "Restaurante Fogo & Brasa", seg: "Alimentação", color: "#C1272D", Icon: UtensilsCrossed, style: "italic font-bold" },
-                  { name: "Distribuidora Sul Brasil", seg: "Atacado", color: "#004D40", Icon: Warehouse, style: "font-bold tracking-tight" },
-                  { name: "Contabilidade Prisma", seg: "Serviços", color: "#0B3D91", Icon: Calculator, style: "font-black" },
-                  { name: "Boutique Bella Moda", seg: "Moda", color: "#C2185B", Icon: Shirt, style: "italic font-semibold" },
-                  { name: "AgroCampo do Vale", seg: "Agro", color: "#3B7A22", Icon: Leaf, style: "font-bold tracking-tight" },
-                  { name: "Mercadinho Bom Preço", seg: "Varejo", color: "#009E4D", Icon: Store, style: "font-black lowercase" },
+                  { name: "Borracharia 24h", seg: "Automotivo", color: "#111111", Icon: Car, style: "font-black italic" },
+                  { name: "Borracharia Regis", seg: "Pneus", color: "#1F1F1F", Icon: Wrench, style: "font-black tracking-tight" },
+                  { name: "Borracharia Duarte", seg: "Automotivo", color: "#E85A2C", Icon: Car, style: "font-black" },
+                  { name: "Zahra Estética", seg: "Saúde e Beleza", color: "#8E2C8E", Icon: Sparkles, style: "italic font-semibold tracking-wide" },
+                  { name: "Clínica Tânia Fidalgo", seg: "Estética", color: "#C2185B", Icon: Scissors, style: "italic font-semibold" },
+                  { name: "Clínica Dra. Poly Moema", seg: "Estética", color: "#0071BC", Icon: Stethoscope, style: "font-bold" },
+                  { name: "KM Transportes Rodoviários", seg: "Cargas", color: "#003DA5", Icon: Truck, style: "font-black tracking-tight" },
+                  { name: "Uppertruck Express", seg: "Transportadora", color: "#E30613", Icon: Truck, style: "font-black italic" },
+                  { name: "Ultra Logística", seg: "Transporte e Armazenagem", color: "#004D40", Icon: Warehouse, style: "font-black tracking-tight" },
                 ].map((b) => (
+
                   <div
                     key={b.name + i}
                     className="flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.5)] ring-1 ring-black/5"
