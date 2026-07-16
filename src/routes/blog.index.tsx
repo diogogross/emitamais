@@ -14,20 +14,25 @@ import { blogPosts } from "@/lib/blog-posts";
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog — Notas Fiscais, Transporte e Certificado Digital" },
+      { title: "Blog Fiscal: NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
       {
         name: "description",
         content:
-          "Conteúdo prático sobre NFe, NFCe, CTe, MDFe e certificados digitais para empresas, transportadoras e contadores.",
+          "Guias práticos sobre emissão de NFe, NFCe, NFSe, CTe, MDFe, CIOT e certificado digital A1 CPF e CNPJ. Conteúdo para empresas, transportadoras e contadores.",
       },
-      { property: "og:title", content: "Blog do Emissor Fiscal" },
       {
-        property: "og:description",
-        content: "Guias, novidades e boas práticas para acelerar sua emissão fiscal.",
+        name: "keywords",
+        content:
+          "blog fiscal, como emitir NFe, como emitir NFCe, guia CTe, guia MDFe, certificado digital A1, notas fiscais eletrônicas, contabilidade digital",
       },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://emissorfiscal.lovable.app/blog" },
+      { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
+      { property: "og:description", content: "Guias, novidades e boas práticas para acelerar sua emissão fiscal." },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Blog Fiscal — Emissor Fiscal" },
+      { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e certificado digital A1." },
     ],
     links: [{ rel: "canonical", href: "https://emissorfiscal.lovable.app/blog" }],
   }),
