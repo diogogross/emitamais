@@ -2,100 +2,83 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowUpRight,
   ArrowLeft,
+  ArrowRight,
   KeyRound,
-  Usb,
-  HardDrive,
-  Cpu,
   Building2,
   User,
-  Cloud,
-  CreditCard,
-  FileText,
-  Sparkles,
+  Video,
   ShieldCheck,
   Check,
+  Zap,
+  Clock,
+  Lock,
+  Wifi,
+  Target,
 } from "lucide-react";
 import logoEmissor from "@/assets/logo-emissor-fiscal.png.asset.json";
 
 export const Route = createFileRoute("/certificado-digital")({
   head: () => ({
     meta: [
-      { title: "Certificado Digital A1 e A3 — CNPJ, CPF, NF e Bird ID" },
+      { title: "Certificado Digital A1 CPF e CNPJ por R$ 129,90 — Emissor Fiscal" },
       {
         name: "description",
         content:
-          "Emita seu certificado digital A1 ou A3 para CNPJ, CPF, NF e Bird ID. Token, cartão, leitora ou sem mídia — 100% online, com validação por videoconferência.",
+          "Certificado Digital A1 para CPF ou CNPJ por R$ 129,90. Emissão 100% online por videoconferência, sem sair de casa, sem token, sem cartão, sem burocracia.",
       },
-      { property: "og:title", content: "Certificado Digital — Emissão 100% online" },
+      { property: "og:title", content: "Certificado Digital A1 por R$ 129,90 — 100% online" },
       {
         property: "og:description",
         content:
-          "A1, A3, CNPJ, CPF, NF e Bird ID. Todos os modelos, todas as mídias, emissão rápida e segura.",
+          "A1 CPF ou CNPJ, 12 meses de validade. Emitido em minutos por videochamada. Chega de token quebrado, chega de cartório.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://volta-fiscal-art.lovable.app/certificado-digital" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://volta-fiscal-art.lovable.app/certificado-digital" }],
   }),
   component: CertificadoDigital,
 });
 
-const groups = [
+const models = [
   {
-    title: "CNPJ",
-    subtitle: "Para empresas e MEIs",
+    tag: "Pessoa Jurídica",
+    title: "A1 CNPJ",
+    subtitle: "Para sua empresa, MEI ou escritório contábil.",
     icon: Building2,
     accent: "var(--gradient-primary)",
-    items: [
-      { name: "CNPJ A1", meta: "1 ano · arquivo digital" },
-      { name: "CNPJ A3 1 Ano em Cartão", meta: "smart card" },
-      { name: "CNPJ A3 1 Ano em Cartão e Leitora", meta: "kit completo" },
-      { name: "CNPJ A3 1 Ano em Token", meta: "USB token" },
-      { name: "CNPJ A3 2 Anos em Cartão", meta: "smart card" },
-      { name: "CNPJ A3 2 Anos em Cartão e Leitora", meta: "kit completo" },
-      { name: "CNPJ A3 2 Anos em Token", meta: "USB token" },
-      { name: "CNPJ A3 2 Anos Sem Mídia", meta: "reaproveite sua mídia" },
+    bullets: [
+      "Emissão de NFe, NFCe, NFSe, CTe e MDFe",
+      "Assinatura de contratos e procurações",
+      "Acesso ao e-CAC, SEFAZ e prefeituras",
+      "Instala em qualquer computador, sem token",
     ],
   },
   {
-    title: "CPF",
-    subtitle: "Para pessoa física",
+    tag: "Pessoa Física",
+    title: "A1 CPF",
+    subtitle: "Para você, autônomo, profissional ou MEI.",
     icon: User,
     accent: "linear-gradient(135deg, oklch(0.7 0.22 260), oklch(0.78 0.18 305))",
-    items: [
-      { name: "CPF A1", meta: "1 ano · arquivo digital" },
-      { name: "CPF A3 1 Ano em Cartão", meta: "smart card" },
-      { name: "CPF A3 1 Ano em Cartão e Leitora", meta: "kit completo" },
-      { name: "CPF A3 1 Ano em Token", meta: "USB token" },
-      { name: "CPF A3 1 Ano Sem Mídia", meta: "reaproveite sua mídia" },
-      { name: "CPF A3 2 Anos em Cartão", meta: "smart card" },
-      { name: "CPF A3 2 Anos em Cartão e Leitora", meta: "kit completo" },
-      { name: "CPF A3 2 Anos em Token", meta: "USB token" },
-      { name: "CPF A3 2 Anos Sem Mídia", meta: "reaproveite sua mídia" },
-      { name: "CPF A3 3 Anos em Cartão", meta: "smart card" },
-      { name: "CPF A3 3 Anos em Cartão e Leitora", meta: "kit completo" },
-      { name: "CPF A3 3 Anos em Token", meta: "USB token" },
-      { name: "CPF A3 3 Anos Sem Mídia", meta: "reaproveite sua mídia" },
-    ],
-  },
-  {
-    title: "NF & Bird ID",
-    subtitle: "Nota fiscal e identidade digital",
-    icon: Cpu,
-    accent: "var(--gradient-accent)",
-    items: [
-      { name: "NF A1", meta: "1 ano · arquivo digital" },
-      { name: "Bird ID 5000 Transações", meta: "5 anos · nuvem" },
+    bullets: [
+      "Assinatura de documentos com validade jurídica",
+      "Acesso ao portal e-CAC e Receita Federal",
+      "Login no Gov.br em nível ouro",
+      "Envio de declarações e recibos digitais",
     ],
   },
 ];
 
-const benefits = [
-  "Validação 100% online por videoconferência",
-  "Compatível com SEFAZ, Receita Federal, e-CAC e prefeituras",
-  "Suporte técnico dedicado durante toda a emissão",
-  "Aceito por todos os principais órgãos e sistemas fiscais",
+const steps = [
+  { icon: Target, title: "1. Escolha", desc: "CPF ou CNPJ. Um preço, um modelo, zero enrolação." },
+  { icon: Video, title: "2. Videochamada", desc: "Validação em minutos com um agente credenciado, direto do seu celular." },
+  { icon: Zap, title: "3. Pronto", desc: "Arquivo A1 liberado na hora, pronto para emitir nota e assinar tudo." },
+];
+
+const objections = [
+  { icon: Lock, title: "Chega de token perdido", desc: "A1 é arquivo digital. Instala no PC e acabou. Sem USB, sem leitora, sem drama." },
+  { icon: Clock, title: "Chega de fila em cartório", desc: "Videoconferência do sofá. Não precisa sair de casa, não precisa reconhecer firma." },
+  { icon: Wifi, title: "Chega de sistema fora do ar", desc: "Emissão direta pelo Emissor Fiscal — se der problema, a gente resolve por você." },
+  { icon: ShieldCheck, title: "Chega de sustos com validade", desc: "Avisamos com antecedência quando renovar. Você nunca mais perde o prazo." },
 ];
 
 function CertificadoDigital() {
@@ -118,41 +101,102 @@ function CertificadoDigital() {
       </header>
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 pt-16 pb-10">
-        <div className="max-w-3xl">
-          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4 flex items-center gap-2">
-            <KeyRound className="w-3.5 h-3.5" /> Certificado Digital
+      <section className="max-w-7xl mx-auto px-6 pt-16 pb-14">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
+          <div>
+            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4 flex items-center gap-2">
+              <KeyRound className="w-3.5 h-3.5" /> Certificado Digital A1
+            </div>
+            <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.02]">
+              Seu <span className="gradient-text">certificado A1</span> em minutos.
+              <br />
+              Sem token. Sem cartório. Sem desculpa.
+            </h1>
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+              A1 para CPF ou CNPJ por <strong className="text-foreground">R$ 129,90</strong>, com 12 meses de validade e
+              emissão 100% online por videochamada. Você entra na reunião com o RG na mão e sai com o certificado
+              instalado — do sofá, do escritório, de onde estiver.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#emitir"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-accent-foreground hover:scale-[1.02] transition"
+                style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+              >
+                Quero emitir agora <ArrowUpRight className="w-4 h-4" />
+              </a>
+              <div className="text-sm text-muted-foreground flex items-center gap-2">
+                <Video className="w-4 h-4 text-primary-glow" /> Validação por videoconferência
+              </div>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-6 text-xs text-muted-foreground">
+              <span className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-primary-glow" /> ICP-Brasil</span>
+              <span className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-primary-glow" /> Aceito pela Receita, SEFAZ e prefeituras</span>
+              <span className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-primary-glow" /> Suporte na instalação incluso</span>
+            </div>
           </div>
-          <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.05]">
-            Emita seu <span className="gradient-text">certificado digital</span> com quem entende do assunto.
-          </h1>
-          <p className="mt-6 text-lg text-muted-foreground">
-            Modelos A1 e A3 para CNPJ, CPF, NF e Bird ID — em token, cartão, leitora ou sem mídia. Escolha o modelo
-            ideal para sua operação e emita em minutos, com validação online e suporte especializado do início ao fim.
-          </p>
 
-          <ul className="mt-8 grid sm:grid-cols-2 gap-3">
-            {benefits.map((b) => (
-              <li key={b} className="flex items-start gap-3 text-sm text-foreground/90">
-                <span className="mt-0.5 w-5 h-5 rounded-md grid place-items-center bg-primary-glow/15 ring-1 ring-primary-glow/30 shrink-0">
-                  <Check className="w-3 h-3 text-primary-glow" />
-                </span>
-                {b}
-              </li>
-            ))}
-          </ul>
+          {/* PRICE CARD */}
+          <div
+            className="relative glass-card p-8 md:p-10 glow-ring border-primary/40"
+            style={{ background: "linear-gradient(180deg, oklch(0.35 0.15 300 / 0.55), oklch(0.22 0.09 295 / 0.55))" }}
+          >
+            <span className="absolute -top-3 left-8 text-[10px] uppercase tracking-widest rounded-full px-3 py-1 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
+              Preço único
+            </span>
+            <div className="mt-3 font-display text-2xl font-bold">Certificado A1</div>
+            <p className="text-sm text-muted-foreground mt-1">CPF ou CNPJ, você escolhe.</p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-6 flex items-baseline gap-1">
+              <span className="text-sm text-muted-foreground">R$</span>
+              <span className="font-display text-7xl font-bold leading-none">129</span>
+              <span className="text-lg text-muted-foreground">,90</span>
+            </div>
+            <div className="text-xs text-muted-foreground mt-1">pagamento único · 12 meses de validade</div>
+
+            <ul className="mt-8 space-y-3 text-sm">
+              {[
+                "A1 CPF ou CNPJ (você escolhe)",
+                "Emissão por videochamada em minutos",
+                "12 meses de validade",
+                "Arquivo digital — sem token, sem cartão",
+                "Compatível com NFe, NFCe, NFSe, CTe e MDFe",
+                "Suporte especializado na instalação",
+              ].map((perk) => (
+                <li key={perk} className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-primary-glow mt-0.5 shrink-0" />
+                  <span className="text-foreground/90">{perk}</span>
+                </li>
+              ))}
+            </ul>
+
             <a
-              href="#modelos"
-              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-accent-foreground hover:scale-[1.02] transition"
+              href="#emitir"
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full py-3.5 font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
-              Emitir agora <ArrowUpRight className="w-4 h-4" />
+              Emitir por R$ 129,90 <ArrowUpRight className="w-4 h-4" />
             </a>
-            <div className="text-sm text-muted-foreground flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-primary-glow" /> Emissão 100% online e segura
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MISSÃO */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="glass-card p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-30 pointer-events-none" style={{ background: "var(--gradient-primary)" }} />
+          <div className="relative max-w-3xl">
+            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Nossa missão</div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
+              Acabar com a <span className="gradient-text">burocracia fiscal</span> que trava o seu negócio.
+            </h2>
+            <p className="mt-5 text-muted-foreground text-lg">
+              Existe muita gente ganhando dinheiro complicando o que deveria ser simples: token que quebra, cartório que
+              fecha, sistema que não responde, preço que muda toda hora. Aqui é diferente. <strong className="text-foreground">Um modelo, um preço, uma videochamada.</strong>{" "}
+              Você compra, entra na reunião, valida e emite. Sem letras miúdas, sem upsell escondido, sem enrolação.
+            </p>
           </div>
         </div>
       </section>
@@ -160,75 +204,157 @@ function CertificadoDigital() {
       {/* MODELOS */}
       <section id="modelos" className="max-w-7xl mx-auto px-6 py-16">
         <div className="max-w-2xl mb-12">
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-3">Escolha o seu</div>
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Todos os modelos <span className="gradient-text">disponíveis</span>.
+            Só trabalhamos com <span className="gradient-text">A1</span>. E tem motivo.
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Escolha entre A1 (arquivo digital) ou A3 (token, cartão, leitora ou sem mídia) para o titular certo.
+            A1 é arquivo digital — instala no computador e pronto. Nada de token USB caindo, nada de leitora
+            incompatível, nada de mídia extra pra comprar. É o certificado que resolve.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
-          {groups.map(({ title, subtitle, icon: Icon, accent, items }) => (
-            <div key={title} className="glass-card p-6 md:p-7 flex flex-col hover:-translate-y-1 transition">
-              <div className="flex items-center gap-3 mb-5">
+        <div className="grid md:grid-cols-2 gap-6">
+          {models.map(({ tag, title, subtitle, icon: Icon, accent, bullets }) => (
+            <div key={title} className="glass-card p-8 flex flex-col hover:-translate-y-1 transition">
+              <div className="flex items-center gap-4 mb-6">
                 <span
-                  className="w-11 h-11 rounded-xl grid place-items-center shrink-0"
+                  className="w-14 h-14 rounded-2xl grid place-items-center shrink-0"
                   style={{ background: accent, boxShadow: "var(--shadow-glow)" }}
                 >
-                  <Icon className="w-5 h-5 text-white" />
+                  <Icon className="w-6 h-6 text-white" />
                 </span>
                 <div>
-                  <div className="font-display text-2xl font-bold leading-none">{title}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{subtitle}</div>
+                  <div className="text-[10px] uppercase tracking-widest text-accent">{tag}</div>
+                  <div className="font-display text-3xl font-bold leading-none mt-1">{title}</div>
+                  <div className="text-xs text-muted-foreground mt-1.5">{subtitle}</div>
                 </div>
               </div>
 
-              <ul className="space-y-2 flex-1">
-                {items.map((it) => {
-                  const MediaIcon = it.name.includes("Token")
-                    ? Usb
-                    : it.name.includes("Leitora")
-                      ? HardDrive
-                      : it.name.includes("Cartão")
-                        ? CreditCard
-                        : it.name.includes("Sem Mídia")
-                          ? Cloud
-                          : it.name.startsWith("Bird")
-                            ? Cpu
-                            : FileText;
-                  return (
-                    <li
-                      key={it.name}
-                      className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.03] px-3.5 py-2.5 hover:border-primary-glow/30 hover:bg-white/[0.06] transition"
-                    >
-                      <span className="mt-0.5 w-7 h-7 rounded-lg grid place-items-center bg-white/5 ring-1 ring-white/10 shrink-0">
-                        <MediaIcon className="w-3.5 h-3.5 text-primary-glow" />
-                      </span>
-                      <div className="min-w-0">
-                        <div className="text-sm font-medium text-foreground leading-tight">{it.name}</div>
-                        <div className="text-[11px] text-muted-foreground mt-0.5">{it.meta}</div>
-                      </div>
-                    </li>
-                  );
-                })}
+              <ul className="space-y-2.5 flex-1">
+                {bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-sm text-foreground/90">
+                    <Check className="w-4 h-4 text-primary-glow mt-0.5 shrink-0" />
+                    {b}
+                  </li>
+                ))}
               </ul>
+
+              <div className="mt-6 pt-6 border-t border-white/5 flex items-baseline justify-between">
+                <div>
+                  <span className="text-xs text-muted-foreground">R$</span>
+                  <span className="font-display text-3xl font-bold ml-1">129,90</span>
+                  <span className="text-xs text-muted-foreground ml-1">/ 12 meses</span>
+                </div>
+                <a
+                  href="#emitir"
+                  className="text-sm font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all"
+                >
+                  Quero esse <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           ))}
         </div>
+      </section>
 
-        <div className="mt-8 glass-card p-6 flex flex-wrap items-center gap-4 justify-between">
-          <div className="text-sm text-muted-foreground">
-            <span className="text-foreground font-medium">Emissão 100% online</span> — validação por videoconferência
-            disponível.
+      {/* VIDEOCHAMADA */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
+          <div className="glass-card p-8 md:p-10 relative overflow-hidden aspect-[4/3] flex flex-col justify-between">
+            <div className="absolute inset-0 opacity-40" style={{ background: "radial-gradient(circle at 30% 30%, oklch(0.65 0.25 300 / 0.5), transparent 60%)" }} />
+            <div className="relative flex items-center gap-2 text-xs text-primary-glow">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" /> AO VIVO — validação em andamento
+            </div>
+            <div className="relative">
+              <div className="w-20 h-20 rounded-2xl grid place-items-center mb-4" style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}>
+                <Video className="w-9 h-9 text-white" />
+              </div>
+              <div className="font-display text-2xl font-bold">Videoconferência ICP-Brasil</div>
+              <p className="text-sm text-muted-foreground mt-2">
+                RG em mãos, câmera ligada, 5 minutinhos. Ao final da chamada, seu A1 já está pronto.
+              </p>
+            </div>
           </div>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-accent-foreground hover:scale-[1.02] transition"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Solicitar certificado <ArrowUpRight className="w-4 h-4" />
-          </a>
+          <div>
+            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Como funciona</div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold">
+              Do <span className="gradient-text">clique à emissão</span> em minutos.
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Chega de rodar cartório, chega de agendar autenticação, chega de esperar dias. A validação é feita por
+              videochamada com um agente credenciado ICP-Brasil, no horário que der pra você.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {steps.map(({ icon: Icon, title, desc }) => (
+                <div key={title} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                  <span className="w-11 h-11 rounded-xl grid place-items-center shrink-0" style={{ background: "var(--gradient-primary)" }}>
+                    <Icon className="w-5 h-5 text-white" />
+                  </span>
+                  <div>
+                    <div className="font-display font-bold">{title}</div>
+                    <div className="text-sm text-muted-foreground mt-0.5">{desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OBJEÇÕES */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-2xl mb-12">
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-3">Por que A1 muda o jogo</div>
+          <h2 className="font-display text-3xl md:text-4xl font-bold">
+            Você não precisa mais aguentar <span className="gradient-text">isso.</span>
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-5">
+          {objections.map(({ icon: Icon, title, desc }) => (
+            <div key={title} className="glass-card p-6 flex gap-4">
+              <span className="w-11 h-11 rounded-xl grid place-items-center shrink-0" style={{ background: "var(--gradient-accent)" }}>
+                <Icon className="w-5 h-5 text-white" />
+              </span>
+              <div>
+                <div className="font-display text-lg font-bold">{title}</div>
+                <div className="text-sm text-muted-foreground mt-1">{desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="emitir" className="max-w-5xl mx-auto px-6 py-24">
+        <div
+          className="glass-card p-10 md:p-14 text-center relative overflow-hidden glow-ring border-primary/40"
+          style={{ background: "linear-gradient(180deg, oklch(0.35 0.15 300 / 0.55), oklch(0.22 0.09 295 / 0.55))" }}
+        >
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Última chamada</div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+            R$ <span className="gradient-text">129,90</span>. Uma videochamada.
+            <br />
+            Seu certificado pronto hoje.
+          </h2>
+          <p className="mt-5 text-muted-foreground text-lg max-w-2xl mx-auto">
+            Não tem letras miúdas. Não tem taxa escondida. Não tem upgrade obrigatório. É esse preço, esse modelo, essa
+            velocidade.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 rounded-full px-9 py-4 text-base font-semibold text-accent-foreground hover:scale-[1.02] transition"
+              style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+            >
+              Emitir por R$ 129,90 <ArrowUpRight className="w-4 h-4" />
+            </a>
+            <Link to="/" className="text-sm font-medium hover:text-primary-glow transition">
+              Voltar ao início
+            </Link>
+          </div>
         </div>
       </section>
     </div>
