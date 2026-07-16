@@ -37,18 +37,18 @@ import {
   Route as RouteIcon,
 
 } from "lucide-react";
-import heroPerson from "@/assets/hero-person.webp";
+import heroPerson from "@/assets/hero-slide1.jpg.asset.json";
 import womanPointing from "@/assets/woman-pointing-framed.jpg.asset.json";
 import truckHero from "@/assets/hero-truck-bus.jpg.asset.json";
-import heroServicos from "@/assets/hero-servicos.png.asset.json";
-import heroMaquininha from "@/assets/hero-maquininha.png.asset.json";
-import heroProduto from "@/assets/hero-produto.png.asset.json";
+import heroServicos from "@/assets/hero-slide4.jpg.asset.json";
+import heroMaquininha from "@/assets/hero-slide5.jpg.asset.json";
+import heroProduto from "@/assets/hero-slide6.jpg.asset.json";
 import logoEmissor from "@/assets/logo-emissor-fiscal.png.asset.json";
 
 
 
 import { blogPosts } from "@/lib/blog-posts";
-import heroPerson2 from "@/assets/hero-person-2.webp";
+import heroPerson2 from "@/assets/hero-slide2.jpg.asset.json";
 import dashboardMock from "@/assets/dashboard-real.jpg";
 import dashboardList from "@/assets/dashboard-list.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
@@ -89,7 +89,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://emissorfiscal.lovable.app/" },
-      { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: heroPerson.url, fetchpriority: "high" },
     ],
     scripts: [
       {
