@@ -1173,7 +1173,7 @@ function HeroSlider() {
 
   return (
     <section
-      className="relative w-full pt-0 pb-12 md:pb-16"
+      className="relative w-full"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
