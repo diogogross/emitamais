@@ -1173,20 +1173,19 @@ function HeroSlider() {
 
   return (
     <section
-      className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32"
+      className="relative w-full pt-6 pb-12 md:pt-10 md:pb-16"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       <div className="relative">
         {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : i === 2 ? <HeroSlide3 /> : i === 3 ? <HeroSlide4 /> : i === 4 ? <HeroSlide5 /> : <HeroSlide6 />}
 
-
         {/* Controls */}
         <button
           type="button"
           onClick={() => go(i - 1)}
           aria-label="Slide anterior"
-          className="hidden md:grid absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 place-items-center rounded-full bg-white/5 backdrop-blur ring-1 ring-white/15 text-white hover:bg-white/10 transition z-20"
+          className="hidden md:grid absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 place-items-center rounded-full bg-white/10 backdrop-blur ring-1 ring-white/20 text-white hover:bg-white/20 transition z-20"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -1194,13 +1193,13 @@ function HeroSlider() {
           type="button"
           onClick={() => go(i + 1)}
           aria-label="Próximo slide"
-          className="hidden md:grid absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 place-items-center rounded-full bg-white/5 backdrop-blur ring-1 ring-white/15 text-white hover:bg-white/10 transition z-20"
+          className="hidden md:grid absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 place-items-center rounded-full bg-white/10 backdrop-blur ring-1 ring-white/20 text-white hover:bg-white/20 transition z-20"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
 
         {/* Dots */}
-        <div className="mt-8 flex items-center justify-center gap-2">
+        <div className="mt-6 flex items-center justify-center gap-2">
           {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
             <button
               key={idx}
@@ -1215,6 +1214,7 @@ function HeroSlider() {
         </div>
       </div>
     </section>
+
   );
 }
 
