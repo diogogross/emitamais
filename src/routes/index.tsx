@@ -39,7 +39,7 @@ import {
 } from "lucide-react";
 import heroPerson from "@/assets/hero-person.webp";
 import womanPointing from "@/assets/woman-pointing-framed.jpg.asset.json";
-import truckHero from "@/assets/truck-hero.png.asset.json";
+import truckHero from "@/assets/hero-truck-bus.jpg.asset.json";
 import heroServicos from "@/assets/hero-servicos.png.asset.json";
 import heroMaquininha from "@/assets/hero-maquininha.png.asset.json";
 import heroProduto from "@/assets/hero-produto.png.asset.json";
@@ -1357,19 +1357,38 @@ function HeroSlide2() {
 
 function HeroSlide3() {
   return (
-    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
-      <div className="relative z-10">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
+    <div className="relative overflow-hidden rounded-3xl min-h-[520px] md:min-h-[600px] animate-fade-in glow-ring">
+      {/* Background image */}
+      <img
+        src={truckHero.url}
+        alt="Carreta 9 eixos e ônibus rodoviário em rodovia brasileira — emissão de CTe, MDFe e CIOT"
+        loading="lazy"
+        width={1920}
+        height={1088}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      {/* Black gradient overlay for text legibility */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.85) 100%)",
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 p-8 md:p-14 flex flex-col justify-end min-h-[520px] md:min-h-[600px] max-w-3xl">
+        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-3 py-1.5 text-xs uppercase tracking-widest text-white/90 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
           Documentos de transporte
         </div>
-        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
           Sua transportadora <span className="gradient-text">sem nota travada.</span>
         </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
+        <p className="mt-5 text-base md:text-lg text-white/85 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
           CTe, MDFe e CIOT emitidos em segundos, integrados com SEFAZ e ANTT. Um único sistema para toda a operação de cargas.
         </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
+        <div className="mt-8 flex flex-wrap items-center gap-4">
           <a
             href="#planos"
             className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
@@ -1378,45 +1397,21 @@ function HeroSlide3() {
             Começar agora
             <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
-          <a href="#documentos" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
+          <a href="#documentos" className="inline-flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white">
             Ver documentos <ArrowRight className="w-4 h-4" />
           </a>
         </div>
-        <div className="mt-12 flex flex-wrap gap-8 text-sm">
+        <div className="mt-8 flex flex-wrap gap-6 md:gap-8 text-sm">
           {[
             ["CTe", "conhecimento de transporte"],
             ["MDFe", "manifesto eletrônico"],
             ["CIOT", "operação de cargas"],
           ].map(([n, l]) => (
             <div key={l as string}>
-              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
+              <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{n}</div>
+              <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/70 mt-1">{l}</div>
             </div>
           ))}
-        </div>
-      </div>
-
-      <div className="relative">
-        <div
-          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
-        />
-        <img
-          src={truckHero.url}
-          alt="Carreta de transportadora emitindo CTe, MDFe e CIOT pelo Emissor Fiscal"
-          loading="lazy"
-          width={1200}
-          height={1024}
-          className="relative w-full max-w-xl mx-auto animate-float"
-        />
-        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-          <Truck className="w-3.5 h-3.5 text-primary-glow" /> CTe autorizado em 1,5s
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-          <ClipboardList className="w-3.5 h-3.5 text-accent" /> MDFe integrado
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
-          <RouteIcon className="w-3.5 h-3.5 text-primary-glow" /> CIOT emitido
         </div>
       </div>
     </div>
