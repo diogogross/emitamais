@@ -37,18 +37,18 @@ import {
   Route as RouteIcon,
 
 } from "lucide-react";
-import heroPerson from "@/assets/hero-person.webp";
+import heroPerson from "@/assets/hero-slide1.jpg.asset.json";
 import womanPointing from "@/assets/woman-pointing-framed.jpg.asset.json";
 import truckHero from "@/assets/hero-truck-bus.jpg.asset.json";
-import heroServicos from "@/assets/hero-servicos.png.asset.json";
-import heroMaquininha from "@/assets/hero-maquininha.png.asset.json";
-import heroProduto from "@/assets/hero-produto.png.asset.json";
+import heroServicos from "@/assets/hero-slide4.jpg.asset.json";
+import heroMaquininha from "@/assets/hero-slide5.jpg.asset.json";
+import heroProduto from "@/assets/hero-slide6.jpg.asset.json";
 import logoEmissor from "@/assets/logo-emissor-fiscal.png.asset.json";
 
 
 
 import { blogPosts } from "@/lib/blog-posts";
-import heroPerson2 from "@/assets/hero-person-2.webp";
+import heroPerson2 from "@/assets/hero-slide2.jpg.asset.json";
 import dashboardMock from "@/assets/dashboard-real.jpg";
 import dashboardList from "@/assets/dashboard-list.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
@@ -89,7 +89,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://emissorfiscal.lovable.app/" },
-      { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: heroPerson.url, fetchpriority: "high" },
     ],
     scripts: [
       {
@@ -1218,140 +1218,135 @@ function HeroSlider() {
   );
 }
 
-function HeroSlide1() {
+function HeroFullBleed({
+  image,
+  alt,
+  eyebrow,
+  title,
+  titleAccent,
+  description,
+  ctaLabel,
+  ctaHref,
+  ctaTo,
+  secondaryLabel,
+  secondaryHref,
+  stats,
+  eager = false,
+}: {
+  image: string;
+  alt: string;
+  eyebrow: string;
+  title: string;
+  titleAccent: string;
+  description: string;
+  ctaLabel: string;
+  ctaHref?: string;
+  ctaTo?: string;
+  secondaryLabel: string;
+  secondaryHref: string;
+  stats: [string, string][];
+  eager?: boolean;
+}) {
+  const CtaEl: any = ctaTo ? Link : "a";
+  const ctaProps: any = ctaTo ? { to: ctaTo } : { href: ctaHref };
   return (
-    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
-      <div className="relative z-10">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
+    <div className="relative overflow-hidden rounded-3xl min-h-[520px] md:min-h-[600px] animate-fade-in glow-ring">
+      <img
+        src={image}
+        alt={alt}
+        {...(eager
+          ? { fetchPriority: "high" as const, decoding: "async" as const }
+          : { loading: "lazy" as const })}
+        width={1920}
+        height={1088}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.85) 100%)",
+        }}
+      />
+      <div className="relative z-10 p-8 md:p-14 flex flex-col justify-end min-h-[520px] md:min-h-[600px] max-w-3xl">
+        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-3 py-1.5 text-xs uppercase tracking-widest text-white/90 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-          Plataforma completa de emissão fiscal
+          {eyebrow}
         </div>
-        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-          A tecnologia fiscal <span className="gradient-text">que acelera</span> a sua operação.
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+          {title} <span className="gradient-text">{titleAccent}</span>
         </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-          Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação.
+        <p className="mt-5 text-base md:text-lg text-white/85 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+          {description}
         </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href="#planos"
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <CtaEl
+            {...ctaProps}
             className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
             style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
           >
-            Conferir planos
+            {ctaLabel}
             <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a href="#produto" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
-            Ver o produto <ArrowRight className="w-4 h-4" />
+          </CtaEl>
+          <a href={secondaryHref} className="inline-flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white">
+            {secondaryLabel} <ArrowRight className="w-4 h-4" />
           </a>
         </div>
-        <div className="mt-12 flex flex-wrap gap-8 text-sm">
-          {[
-            ["+1.600", "municípios NFSe"],
-            ["7", "documentos fiscais"],
-            ["99.9%", "uptime SEFAZ"],
-          ].map(([n, l]) => (
-            <div key={l as string}>
-              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
+        <div className="mt-8 flex flex-wrap gap-6 md:gap-8 text-sm">
+          {stats.map(([n, l]) => (
+            <div key={l}>
+              <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{n}</div>
+              <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/70 mt-1">{l}</div>
             </div>
           ))}
-        </div>
-      </div>
-
-      <div className="relative">
-        <div
-          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
-        />
-        <img
-          src={heroPerson}
-          alt="Empresário usando o Emissor Fiscal em um notebook"
-          width={1200}
-          height={1408}
-          fetchPriority="high"
-          decoding="async"
-          className="relative w-full max-w-xl mx-auto"
-        />
-        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-          <FileText className="w-3.5 h-3.5 text-primary-glow" /> NFe emitida em 1,2s
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-          <ShieldCheck className="w-3.5 h-3.5 text-accent" /> Autorizado pela SEFAZ
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
-          <CreditCard className="w-3.5 h-3.5 text-primary-glow" /> Pix + Cartão + Boleto
         </div>
       </div>
     </div>
   );
 }
 
+function HeroSlide1() {
+  return (
+    <HeroFullBleed
+      image={heroPerson.url}
+      alt="Empresário brasileiro usando o Emissor Fiscal em um notebook"
+      eyebrow="Plataforma completa de emissão fiscal"
+      title="A tecnologia fiscal"
+      titleAccent="que acelera a sua operação."
+      description="Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação."
+      ctaLabel="Conferir planos"
+      ctaHref="#planos"
+      secondaryLabel="Ver o produto"
+      secondaryHref="#produto"
+      stats={[
+        ["+1.600", "municípios NFSe"],
+        ["7", "documentos fiscais"],
+        ["99.9%", "uptime SEFAZ"],
+      ]}
+      eager
+    />
+  );
+}
+
 function HeroSlide2() {
   return (
-    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
-      <div className="relative z-10">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-          Certificado Digital A1 e A3
-        </div>
-        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-          Seu certificado digital <span className="gradient-text">pronto em minutos.</span>
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-          CNPJ, CPF, NF e Bird ID — em token, cartão, leitora ou sem mídia. Emissão 100% online, com validação por videoconferência e suporte especializado.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Link
-            to="/certificado-digital"
-            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Emitir agora
-            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-          <Link to="/certificado-digital" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
-            Ver todos os modelos <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-        <div className="mt-12 flex flex-wrap gap-8 text-sm">
-          {[
-            ["+1.600", "municípios NFSe"],
-            ["7", "documentos fiscais"],
-            ["99.9%", "uptime SEFAZ"],
-          ].map(([n, l]) => (
-            <div key={l as string}>
-              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="relative">
-        <div
-          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
-        />
-        <img
-          src={heroPerson2}
-          alt="Consultora apresentando certificado digital no smartphone"
-          loading="lazy"
-          width={1200}
-          height={1408}
-          className="relative w-full max-w-xl mx-auto"
-        />
-        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-          <KeyRound className="w-3.5 h-3.5 text-primary-glow" /> A1 · A3 disponíveis
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-          <ShieldCheck className="w-3.5 h-3.5 text-accent" /> Emissão 100% online
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
-          <Cpu className="w-3.5 h-3.5 text-primary-glow" /> CNPJ · CPF · Bird ID
-        </div>
-      </div>
-    </div>
+    <HeroFullBleed
+      image={heroPerson2.url}
+      alt="Consultora apresentando certificado digital A1 no smartphone"
+      eyebrow="Certificado Digital A1 CPF e CNPJ"
+      title="Seu certificado digital"
+      titleAccent="por apenas R$ 129,90."
+      description="Emissão A1 CPF ou CNPJ 100% online por videoconferência, sem token, sem cartão e sem leitora. Pronto em minutos."
+      ctaLabel="Emitir por R$ 129,90"
+      ctaTo="/certificado-digital"
+      secondaryLabel="Ver todos os modelos"
+      secondaryHref="/certificado-digital"
+      stats={[
+        ["R$ 129,90", "A1 CPF ou CNPJ"],
+        ["100%", "online"],
+        ["Minutos", "para receber"],
+      ]}
+    />
   );
 }
 
@@ -1420,205 +1415,67 @@ function HeroSlide3() {
 
 function HeroSlide4() {
   return (
-    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
-      <div className="relative z-10">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-          Nota Fiscal de Serviços
-        </div>
-        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-          NFSe integrada com <span className="gradient-text">+1.600 municípios.</span>
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-          Emita nota de serviço da sua cidade em segundos. Integração direta com a prefeitura, sem precisar acessar portal externo.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href="#planos"
-            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Emitir NFSe agora
-            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a href="#documentos" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
-            Ver documentos <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
-        <div className="mt-12 flex flex-wrap gap-8 text-sm">
-          {[
-            ["+1.600", "municípios integrados"],
-            ["100%", "online"],
-            ["1 clique", "envio à prefeitura"],
-          ].map(([n, l]) => (
-            <div key={l as string}>
-              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="relative">
-        <div
-          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
-        />
-        <img
-          src={heroServicos.url}
-          alt="Prestadora de serviços emitindo NFSe pelo Emissor Fiscal"
-          loading="lazy"
-          width={900}
-          height={1024}
-          className="relative w-full max-w-xl mx-auto"
-        />
-        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-          <Briefcase className="w-3.5 h-3.5 text-primary-glow" /> NFSe emitida
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-          <Building2 className="w-3.5 h-3.5 text-accent" /> Prefeitura integrada
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
-          <FileText className="w-3.5 h-3.5 text-primary-glow" /> XML + PDF automáticos
-        </div>
-      </div>
-    </div>
+    <HeroFullBleed
+      image={heroServicos.url}
+      alt="Prestador de serviços brasileiro emitindo NFSe pelo Emissor Fiscal"
+      eyebrow="Nota Fiscal de Serviços"
+      title="NFSe integrada com"
+      titleAccent="+1.600 municípios."
+      description="Emita nota de serviço da sua cidade em segundos. Integração direta com a prefeitura, sem precisar acessar portal externo."
+      ctaLabel="Emitir NFSe agora"
+      ctaHref="#planos"
+      secondaryLabel="Ver documentos"
+      secondaryHref="#documentos"
+      stats={[
+        ["+1.600", "municípios integrados"],
+        ["100%", "online"],
+        ["1 clique", "envio à prefeitura"],
+      ]}
+    />
   );
 }
 
 function HeroSlide5() {
   return (
-    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
-      <div className="relative z-10">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-          Cupom fiscal na maquininha
-        </div>
-        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-          NFCe direto da <span className="gradient-text">sua maquininha.</span>
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-          Venda, receba e emita o cupom fiscal na mesma tela. Homologado com as principais adquirentes Android — sem PDV extra.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href="#planos"
-            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Testar na maquininha
-            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a href="#documentos" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
-            Ver documentos <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
-        <div className="mt-12 flex flex-wrap gap-8 text-sm">
-          {[
-            ["Android", "smart POS"],
-            ["Pix", "cartão e boleto"],
-            ["WhatsApp", "envio automático"],
-          ].map(([n, l]) => (
-            <div key={l as string}>
-              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="relative">
-        <div
-          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
-        />
-        <img
-          src={heroMaquininha.url}
-          alt="Maquininha Android emitindo NFCe pelo Emissor Fiscal"
-          loading="lazy"
-          width={900}
-          height={1024}
-          className="relative w-full max-w-md mx-auto animate-float"
-        />
-        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-          <ShoppingCart className="w-3.5 h-3.5 text-primary-glow" /> NFCe emitida
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-          <CreditCard className="w-3.5 h-3.5 text-accent" /> Pagamento integrado
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
-          <Smartphone className="w-3.5 h-3.5 text-primary-glow" /> Android smart POS
-        </div>
-      </div>
-    </div>
+    <HeroFullBleed
+      image={heroMaquininha.url}
+      alt="Comerciante emitindo NFCe direto da maquininha Android"
+      eyebrow="Cupom fiscal na maquininha"
+      title="NFCe direto da"
+      titleAccent="sua maquininha."
+      description="Venda, receba e emita o cupom fiscal na mesma tela. Homologado com as principais adquirentes Android — sem PDV extra."
+      ctaLabel="Testar na maquininha"
+      ctaHref="#planos"
+      secondaryLabel="Ver documentos"
+      secondaryHref="#documentos"
+      stats={[
+        ["Android", "smart POS"],
+        ["Pix", "cartão e boleto"],
+        ["WhatsApp", "envio automático"],
+      ]}
+    />
   );
 }
 
 function HeroSlide6() {
   return (
-    <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center animate-fade-in">
-      <div className="relative z-10">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs uppercase tracking-widest text-muted-foreground mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-          Nota Fiscal de Produto
-        </div>
-        <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.02]">
-          NFe autorizada em <span className="gradient-text">segundos.</span>
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-          Emissão de Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ, XML pronto para a contabilidade e DANFE em PDF.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href="#planos"
-            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Emitir NFe agora
-            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a href="#documentos" className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground">
-            Ver documentos <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
-        <div className="mt-12 flex flex-wrap gap-8 text-sm">
-          {[
-            ["1,2s", "por autorização"],
-            ["XML", "para contabilidade"],
-            ["DANFE", "em PDF"],
-          ].map(([n, l]) => (
-            <div key={l as string}>
-              <div className="font-display text-3xl font-bold gradient-text">{n}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="relative">
-        <div
-          className="absolute inset-0 -z-10 rounded-full blur-3xl opacity-70 animate-pulse-glow"
-          style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.6), transparent 60%)" }}
-        />
-        <img
-          src={heroProduto.url}
-          alt="Comerciante emitindo NFe de produto no Emissor Fiscal"
-          loading="lazy"
-          width={900}
-          height={1024}
-          className="relative w-full max-w-xl mx-auto"
-        />
-        <div className="hidden md:flex glass-card animate-float absolute top-16 left-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring">
-          <FileText className="w-3.5 h-3.5 text-primary-glow" /> NFe emitida em 1,2s
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-24 right-0 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "1s" }}>
-          <ShieldCheck className="w-3.5 h-3.5 text-accent" /> Autorizada pela SEFAZ
-        </div>
-        <div className="hidden md:flex glass-card animate-float absolute bottom-0 left-8 items-center gap-2 px-3 py-2 text-xs font-medium glow-ring" style={{ animationDelay: "2s" }}>
-          <Store className="w-3.5 h-3.5 text-primary-glow" /> Ideal para o varejo
-        </div>
-      </div>
-    </div>
+    <HeroFullBleed
+      image={heroProduto.url}
+      alt="Gerente de estoque emitindo NFe de produto no Emissor Fiscal"
+      eyebrow="Nota Fiscal de Produto"
+      title="NFe autorizada em"
+      titleAccent="segundos."
+      description="Emissão de Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ, XML pronto para a contabilidade e DANFE em PDF."
+      ctaLabel="Emitir NFe agora"
+      ctaHref="#planos"
+      secondaryLabel="Ver documentos"
+      secondaryHref="#documentos"
+      stats={[
+        ["1,2s", "por autorização"],
+        ["XML", "para contabilidade"],
+        ["DANFE", "em PDF"],
+      ]}
+    />
   );
 }
 
