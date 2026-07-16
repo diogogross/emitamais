@@ -16,7 +16,7 @@ export const Route = createFileRoute("/blog/$slug")({
     return { post };
   },
   head: ({ loaderData, params }) => {
-    const BASE_URL = "https://volta-fiscal-art.lovable.app";
+    const BASE_URL = "https://emissorfiscal.lovable.app";
     if (!loaderData) {
       return {
         meta: [

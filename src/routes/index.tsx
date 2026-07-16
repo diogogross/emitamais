@@ -82,11 +82,11 @@ export const Route = createFileRoute("/")({
           "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://volta-fiscal-art.lovable.app/" },
+      { property: "og:url", content: "https://emissorfiscal.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://volta-fiscal-art.lovable.app/" },
+      { rel: "canonical", href: "https://emissorfiscal.lovable.app/" },
       { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
     ],
     scripts: [
@@ -96,7 +96,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Emissor Fiscal",
-          url: "https://volta-fiscal-art.lovable.app/",
+          url: "https://emissorfiscal.lovable.app/",
         }),
       },
     ],
