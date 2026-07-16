@@ -354,9 +354,9 @@ function Index() {
       <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 -mt-16 md:-mt-28 relative z-10">
         <div className="text-center mb-6 px-6">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Nossos clientes</div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold">
+          <h2 className="font-display text-2xl md:text-3xl font-bold">
             Clientes que <span className="gradient-text">acreditam</span> no nosso potencial
-          </h3>
+          </h2>
         </div>
         <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
