@@ -1193,20 +1193,21 @@ function HeroSlider() {
           {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : i === 2 ? <HeroSlide3 /> : i === 3 ? <HeroSlide4 /> : i === 4 ? <HeroSlide5 /> : <HeroSlide6 />}
         </div>
 
-        {/* Dots */}
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-6 flex items-center justify-center gap-2 z-30">
+        {/* Dots (right side, vertical) */}
+        <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2 z-30">
           {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
             <button
               key={idx}
               type="button"
               onClick={() => setI(idx)}
               aria-label={`Ir para slide ${idx + 1}`}
-              className={`h-2 rounded-full transition-all ${
-                idx === i ? "w-10 bg-primary-glow" : "w-2.5 bg-white/40 hover:bg-white/60"
+              className={`w-2 rounded-full transition-all ${
+                idx === i ? "h-10 bg-primary-glow" : "h-2.5 bg-white/40 hover:bg-white/60"
               }`}
             />
           ))}
         </div>
+
       </div>
 
     </section>
@@ -1269,16 +1270,16 @@ function HeroFullBleed({
       {/* Content — mobile: centered text only; desktop: bottom-left over image */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-14 py-12 md:py-14 flex flex-col justify-center md:justify-end min-h-[520px] md:min-h-[600px] md:max-w-none">
         <div className="md:max-w-3xl">
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.05] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
             {title} <span className="gradient-text">{titleAccent}</span>
           </h1>
-          <p className="mt-5 text-base md:text-lg text-white/85 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+          <p className="mt-4 text-sm md:text-base text-white/85 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
             {description}
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-6 flex flex-wrap items-center gap-4">
             <CtaEl
               {...ctaProps}
-              className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
+              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-accent-foreground transition hover:scale-[1.02]"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
               {ctaLabel}
@@ -1288,14 +1289,15 @@ function HeroFullBleed({
               {secondaryLabel} <ArrowRight className="w-4 h-4" />
             </a>
           </div>
-          <div className="mt-8 flex flex-wrap gap-6 md:gap-8 text-sm">
+          <div className="mt-6 flex flex-wrap gap-5 md:gap-7 text-sm">
             {stats.map(([n, l]) => (
               <div key={l}>
-                <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{n}</div>
+                <div className="font-display text-xl md:text-2xl font-bold gradient-text">{n}</div>
                 <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/70 mt-1">{l}</div>
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </div>
