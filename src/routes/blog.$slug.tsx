@@ -30,14 +30,21 @@ export const Route = createFileRoute("/blog/$slug")({
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
     return {
       meta: [
-        { title: `${post.title} — Blog Emissor Fiscal` },
+        { title: `${post.title} | Blog Emissor Fiscal` },
         { name: "description", content: post.excerpt },
+        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+        { name: "author", content: "Emissor Fiscal" },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
         { property: "og:image", content: image },
+        { property: "article:published_time", content: post.date },
+        { property: "article:author", content: "Emissor Fiscal" },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: post.title },
+        { name: "twitter:description", content: post.excerpt },
+        { name: "twitter:image", content: image },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
