@@ -1250,7 +1250,8 @@ function HeroFullBleed({
   const CtaEl: any = ctaTo ? Link : "a";
   const ctaProps: any = ctaTo ? { to: ctaTo } : { href: ctaHref };
   return (
-    <div className="relative overflow-hidden rounded-3xl min-h-[520px] md:min-h-[600px] animate-fade-in glow-ring">
+    <div className="relative overflow-hidden min-h-[520px] md:min-h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)] md:bg-transparent">
+      {/* Background image (hidden on mobile) */}
       <img
         src={image}
         alt={alt}
@@ -1259,46 +1260,50 @@ function HeroFullBleed({
           : { loading: "lazy" as const })}
         width={1920}
         height={1088}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover"
       />
+      {/* Dark gradient overlay for legibility (desktop only) */}
       <div
-        className="absolute inset-0"
+        className="hidden md:block absolute inset-0"
         style={{
           background:
             "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.85) 100%)",
         }}
       />
-      <div className="relative z-10 p-8 md:p-14 flex flex-col justify-end min-h-[520px] md:min-h-[600px] max-w-3xl">
-        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-3 py-1.5 text-xs uppercase tracking-widest text-white/90 mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-          {eyebrow}
-        </div>
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
-          {title} <span className="gradient-text">{titleAccent}</span>
-        </h1>
-        <p className="mt-5 text-base md:text-lg text-white/85 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
-          {description}
-        </p>
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          <CtaEl
-            {...ctaProps}
-            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            {ctaLabel}
-            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </CtaEl>
-          <a href={secondaryHref} className="inline-flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white">
-            {secondaryLabel} <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
-        <div className="mt-8 flex flex-wrap gap-6 md:gap-8 text-sm">
-          {stats.map(([n, l]) => (
-            <div key={l}>
-              <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{n}</div>
-              <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/70 mt-1">{l}</div>
-            </div>
-          ))}
+      {/* Content — mobile: centered text only; desktop: bottom-left over image */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-14 py-12 md:py-14 flex flex-col justify-center md:justify-end min-h-[520px] md:min-h-[600px] md:max-w-none">
+        <div className="md:max-w-3xl">
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-3 py-1.5 text-xs uppercase tracking-widest text-white/90 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
+            {eyebrow}
+          </div>
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+            {title} <span className="gradient-text">{titleAccent}</span>
+          </h1>
+          <p className="mt-5 text-base md:text-lg text-white/85 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+            {description}
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <CtaEl
+              {...ctaProps}
+              className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
+              style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+            >
+              {ctaLabel}
+              <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </CtaEl>
+            <a href={secondaryHref} className="inline-flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white">
+              {secondaryLabel} <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-6 md:gap-8 text-sm">
+            {stats.map(([n, l]) => (
+              <div key={l}>
+                <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{n}</div>
+                <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/70 mt-1">{l}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
