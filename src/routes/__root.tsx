@@ -78,22 +78,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
+      { name: "theme-color", content: "#0f0722" },
+      { title: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
       {
         name: "description",
         content:
-          "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
+          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF ou CNPJ por R$ 129,90, 100% online, sem token e sem sair de casa.",
       },
-      { property: "og:title", content: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
       {
-        property: "og:description",
+        name: "keywords",
         content:
-          "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
+          "emissor de notas fiscais, emissor de nota fiscal online, sistema emissor de NFe, NFCe online, NFSe online, CTe, MDFe, CIOT, certificado digital A1, certificado digital CNPJ, certificado digital CPF, certificado digital 129,90, emitir nota fiscal, emitir NFe, emissor fiscal",
       },
+      { name: "author", content: "Emissor Fiscal" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+      { name: "google", content: "notranslate" },
+      { property: "og:site_name", content: "Emissor Fiscal" },
+      { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
+      { property: "og:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF/CNPJ por R$ 129,90 — 100% online." },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
-      { name: "twitter:description", content: "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ." },
+      { name: "twitter:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
+      { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF/CNPJ por R$ 129,90." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
     ],
@@ -108,6 +117,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://emissorfiscal.lovable.app/#organization",
+              name: "Emissor Fiscal",
+              url: "https://emissorfiscal.lovable.app/",
+              logo: "https://emissorfiscal.lovable.app/__l5e/assets-v1/704b38d6-7a8e-43ae-a08d-dd51dfde9ad4/logo-emissor-fiscal.png",
+              description:
+                "Sistema emissor de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, CIOT) e certificado digital A1 CPF e CNPJ.",
+              areaServed: "BR",
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://emissorfiscal.lovable.app/#website",
+              url: "https://emissorfiscal.lovable.app/",
+              name: "Emissor Fiscal",
+              inLanguage: "pt-BR",
+              publisher: { "@id": "https://emissorfiscal.lovable.app/#organization" },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -117,7 +154,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

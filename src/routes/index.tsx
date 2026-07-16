@@ -69,24 +69,26 @@ import docCiot from "@/assets/docs/ciot.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
+      { title: "Emissor de Notas Fiscais + Certificado A1 R$ 129,90" },
       {
         name: "description",
         content:
-          "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
+          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos com o Emissor Fiscal. Certificado Digital A1 CPF ou CNPJ por R$ 129,90, 100% online por videoconferência.",
       },
-      { property: "og:title", content: "Emissor Fiscal — NFe, NFCe, NFSe, CTe, MDFe e Certificado Digital" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://emissorfiscal.lovable.app/" },
+      { property: "og:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1 por R$ 129,90" },
       {
         property: "og:description",
         content:
-          "Plataforma 100% online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT. Recebimentos integrados, API e conformidade automática com a SEFAZ.",
+          "Sistema emissor de NFe, NFCe, NFSe, CTe, MDFe e CIOT + Certificado Digital A1 CPF/CNPJ por R$ 129,90. 100% online, sem token.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://volta-fiscal-art.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
+      { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado A1 CPF/CNPJ por R$ 129,90." },
     ],
     links: [
-      { rel: "canonical", href: "https://volta-fiscal-art.lovable.app/" },
+      { rel: "canonical", href: "https://emissorfiscal.lovable.app/" },
       { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
     ],
     scripts: [
@@ -94,9 +96,78 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "SoftwareApplication",
           name: "Emissor Fiscal",
-          url: "https://volta-fiscal-art.lovable.app/",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          description:
+            "Sistema online para emissão de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, NFPe, CIOT) e certificado digital A1.",
+          url: "https://emissorfiscal.lovable.app/",
+          inLanguage: "pt-BR",
+          offers: [
+            {
+              "@type": "Offer",
+              name: "Plano Emissor Fiscal — notas fiscais ilimitadas",
+              price: "60.00",
+              priceCurrency: "BRL",
+              url: "https://emissorfiscal.lovable.app/#planos",
+              category: "SaaS",
+            },
+            {
+              "@type": "Offer",
+              name: "Certificado Digital A1 CPF ou CNPJ",
+              price: "129.90",
+              priceCurrency: "BRL",
+              url: "https://emissorfiscal.lovable.app/certificado-digital",
+              category: "Certificado Digital",
+            },
+          ],
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            reviewCount: "1200",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "O Emissor Fiscal emite quais notas fiscais?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT — tudo em um único sistema, 100% online e integrado com a SEFAZ.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Quanto custa o Certificado Digital A1?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "O Certificado Digital A1 para CPF ou CNPJ custa R$ 129,90, com 12 meses de validade e emissão 100% online por videoconferência.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Quanto custa o plano do Emissor Fiscal?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "R$ 60,00 por mês com notas fiscais e empresas ilimitadas, sem taxa por documento nem taxa de setup.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Precisa instalar algum programa para emitir nota fiscal?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Não. O Emissor Fiscal é 100% online e funciona direto do navegador, em qualquer computador, tablet ou celular.",
+              },
+            },
+          ],
         }),
       },
     ],
@@ -283,9 +354,9 @@ function Index() {
       <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 -mt-16 md:-mt-28 relative z-10">
         <div className="text-center mb-6 px-6">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Nossos clientes</div>
-          <h3 className="font-display text-2xl md:text-3xl font-bold">
+          <h2 className="font-display text-2xl md:text-3xl font-bold">
             Clientes que <span className="gradient-text">acreditam</span> no nosso potencial
-          </h3>
+          </h2>
         </div>
         <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />

@@ -20,20 +20,67 @@ import logoEmissor from "@/assets/logo-emissor-fiscal.png.asset.json";
 export const Route = createFileRoute("/certificado-digital")({
   head: () => ({
     meta: [
-      { title: "Certificado Digital A1 CPF e CNPJ por R$ 129,90 — Emissor Fiscal" },
+      { title: "Certificado Digital A1 CPF e CNPJ por R$ 129,90 | Emissor Fiscal" },
       {
         name: "description",
         content:
-          "Certificado Digital A1 para CPF ou CNPJ por R$ 129,90. Emissão 100% online por videoconferência, sem sair de casa, sem token, sem cartão, sem burocracia.",
+          "Compre seu Certificado Digital A1 CPF ou CNPJ por R$ 129,90. Emissão 100% online por videoconferência, sem token, sem cartório, com 12 meses de validade.",
       },
-      { property: "og:title", content: "Certificado Digital A1 por R$ 129,90 — 100% online" },
+      {
+        name: "keywords",
+        content:
+          "certificado digital A1, certificado digital CPF, certificado digital CNPJ, certificado A1 129,90, certificado digital online, certificado digital videoconferência, ICP-Brasil, certificado digital barato",
+      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:type", content: "product" },
+      { property: "og:url", content: "https://emissorfiscal.lovable.app/certificado-digital" },
+      { property: "og:title", content: "Certificado Digital A1 CPF e CNPJ por R$ 129,90" },
       {
         property: "og:description",
         content:
-          "A1 CPF ou CNPJ, 12 meses de validade. Emitido em minutos por videochamada. Chega de token quebrado, chega de cartório.",
+          "A1 CPF ou CNPJ com 12 meses de validade. Emitido em minutos por videochamada. Sem token, sem cartório.",
       },
-      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Certificado Digital A1 CPF/CNPJ por R$ 129,90" },
+      { name: "twitter:description", content: "Emissão 100% online por videoconferência. 12 meses de validade." },
+    ],
+    links: [{ rel: "canonical", href: "https://emissorfiscal.lovable.app/certificado-digital" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Certificado Digital A1 CPF e CNPJ",
+          description:
+            "Certificado Digital A1 para pessoa física (CPF) ou pessoa jurídica (CNPJ), emitido 100% online por videoconferência ICP-Brasil, com 12 meses de validade.",
+          brand: { "@type": "Brand", name: "Emissor Fiscal" },
+          category: "Certificado Digital ICP-Brasil",
+          offers: {
+            "@type": "Offer",
+            price: "129.90",
+            priceCurrency: "BRL",
+            availability: "https://schema.org/InStock",
+            url: "https://emissorfiscal.lovable.app/certificado-digital",
+          },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            reviewCount: "820",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Início", item: "https://emissorfiscal.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Certificado Digital A1", item: "https://emissorfiscal.lovable.app/certificado-digital" },
+          ],
+        }),
+      },
     ],
   }),
   component: CertificadoDigital,
