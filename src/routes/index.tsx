@@ -767,7 +767,7 @@ function Index() {
             <p className="text-sm text-muted-foreground mt-1">PJ ou PF, emissão 100% online em minutos.</p>
             <div className="mt-6 flex items-baseline gap-1">
               <span className="text-sm text-muted-foreground">a partir de R$</span>
-              <span className="font-display text-6xl font-bold">119</span>
+              <span className="font-display text-6xl font-bold">129</span>
               <span className="text-sm text-muted-foreground">,90</span>
             </div>
             <ul className="mt-8 space-y-3 text-sm flex-1">
