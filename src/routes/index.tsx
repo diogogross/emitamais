@@ -69,7 +69,7 @@ import docCiot from "@/assets/docs/ciot.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Emissor de Notas Fiscais Online + Certificado Digital A1 R$ 129,90" },
+      { title: "Emissor de Notas Fiscais + Certificado A1 R$ 129,90" },
       {
         name: "description",
         content:
