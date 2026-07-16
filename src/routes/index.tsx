@@ -1130,7 +1130,7 @@ function HeroSlider() {
 
         {/* Dots */}
         <div className="mt-8 flex items-center justify-center gap-2">
-          {slides.map((_, idx) => (
+          {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
             <button
               key={idx}
               type="button"
