@@ -351,7 +351,7 @@ function Index() {
 
 
       {/* CLIENTES marquee */}
-      <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 -mt-16 md:-mt-28 relative z-10">
+      <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 relative z-10">
         <div className="text-center mb-6 px-6">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Nossos clientes</div>
           <h2 className="font-display text-2xl md:text-3xl font-bold">
@@ -1269,10 +1269,6 @@ function HeroFullBleed({
       {/* Content — mobile: centered text only; desktop: bottom-left over image */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-14 py-12 md:py-14 flex flex-col justify-center md:justify-end min-h-[520px] md:min-h-[600px] md:max-w-none">
         <div className="md:max-w-3xl">
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-3 py-1.5 text-xs uppercase tracking-widest text-white/90 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-            {eyebrow}
-          </div>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
             {title} <span className="gradient-text">{titleAccent}</span>
           </h1>
