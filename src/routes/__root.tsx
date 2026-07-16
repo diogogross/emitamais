@@ -117,6 +117,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://emissorfiscal.lovable.app/#organization",
+              name: "Emissor Fiscal",
+              url: "https://emissorfiscal.lovable.app/",
+              logo: "https://emissorfiscal.lovable.app/__l5e/assets-v1/704b38d6-7a8e-43ae-a08d-dd51dfde9ad4/logo-emissor-fiscal.png",
+              description:
+                "Sistema emissor de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, CIOT) e certificado digital A1 CPF e CNPJ.",
+              areaServed: "BR",
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://emissorfiscal.lovable.app/#website",
+              url: "https://emissorfiscal.lovable.app/",
+              name: "Emissor Fiscal",
+              inLanguage: "pt-BR",
+              publisher: { "@id": "https://emissorfiscal.lovable.app/#organization" },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
