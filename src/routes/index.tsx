@@ -178,16 +178,23 @@ function Index() {
   const progressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Scroll progress bar
+    // Scroll progress bar (rAF-throttled to avoid layout thrash per scroll event)
     const bar = progressRef.current;
-    const onScroll = () => {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
       if (!bar) return;
       const h = document.documentElement;
       const max = h.scrollHeight - h.clientHeight;
       const pct = max > 0 ? h.scrollTop / max : 0;
       bar.style.transform = `scaleX(${pct})`;
     };
-    onScroll();
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    };
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
 
     // Reveal on scroll (IntersectionObserver)
