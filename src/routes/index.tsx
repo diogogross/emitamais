@@ -35,8 +35,18 @@ import {
   ClipboardList,
   Sprout,
   Route as RouteIcon,
-
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  Award,
+  Users,
 } from "lucide-react";
+
 import heroPerson from "@/assets/hero-slide1.jpg.asset.json";
 import womanPointing from "@/assets/woman-pointing-framed.jpg.asset.json";
 import truckHero from "@/assets/hero-truck-bus.jpg.asset.json";
@@ -1140,20 +1150,137 @@ function Index() {
       </div></section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/5 mt-10">
-        <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2 font-display font-semibold text-foreground">
-            <img src={logoEmissor.url} alt="Emissor Fiscal" width={24} height={24} loading="lazy" className="w-6 h-6 object-contain" />
-            Emissor Fiscal
+      <footer className="relative mt-20 border-t border-white/10 bg-[oklch(0.14_0.05_285)]">
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-px"
+          style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent)" }}
+        />
+
+        {/* Top: brand + columns */}
+        <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 grid gap-12 md:grid-cols-12">
+          {/* Brand / Quem somos */}
+          <div className="md:col-span-4">
+            <div className="flex items-center gap-3">
+              <img src={logoEmissor.url} alt="Emissor Fiscal" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
+              <div className="font-display text-xl font-bold text-white">Emissor Fiscal</div>
+            </div>
+            <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-sm">
+              Há mais de 15 anos simplificando a gestão fiscal de empresas em todo o Brasil.
+              Tecnologia confiável, suporte humano e a experiência de quem entende do assunto —
+              tudo em uma única plataforma pensada para o seu negócio crescer com segurança.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-4 text-xs text-white/70">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+                <Award className="w-3.5 h-3.5 text-primary-glow" />
+                +15 anos no mercado
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+                <Users className="w-3.5 h-3.5 text-primary-glow" />
+                +50 mil empresas
+              </div>
+            </div>
+
+            <div className="mt-6 flex items-center gap-3">
+              {[
+                { Icon: Facebook, href: "#", label: "Facebook" },
+                { Icon: Instagram, href: "#", label: "Instagram" },
+                { Icon: Linkedin, href: "#", label: "LinkedIn" },
+                { Icon: Youtube, href: "#", label: "YouTube" },
+              ].map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:text-white hover:border-white/30 hover:bg-white/10"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
           </div>
-          <div>© {new Date().getFullYear()} Emissor Fiscal. Todos os direitos reservados.</div>
-          <div className="flex gap-5">
-            <Link to="/termos" className="hover:text-foreground">Termos</Link>
-            <Link to="/privacidade" className="hover:text-foreground">Privacidade</Link>
-            <a href="#contato" className="hover:text-foreground">Contato</a>
+
+          {/* Empresa */}
+          <div className="md:col-span-2">
+            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Empresa</div>
+            <ul className="mt-5 space-y-3 text-sm text-white/75">
+              <li><a href="#quem-somos" className="hover:text-white transition">Quem somos</a></li>
+              <li><a href="#historia" className="hover:text-white transition">Nossa história</a></li>
+              <li><Link to="/blog" className="hover:text-white transition">Blog</Link></li>
+              <li><a href="#carreiras" className="hover:text-white transition">Carreiras</a></li>
+              <li><a href="#imprensa" className="hover:text-white transition">Imprensa</a></li>
+              <li><a href="#parceiros" className="hover:text-white transition">Seja parceiro</a></li>
+            </ul>
+          </div>
+
+          {/* Soluções */}
+          <div className="md:col-span-2">
+            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Soluções</div>
+            <ul className="mt-5 space-y-3 text-sm text-white/75">
+              <li><a href="#nfe" className="hover:text-white transition">NF-e</a></li>
+              <li><a href="#nfce" className="hover:text-white transition">NFC-e</a></li>
+              <li><a href="#nfse" className="hover:text-white transition">NFS-e</a></li>
+              <li><a href="#mdfe" className="hover:text-white transition">MDF-e</a></li>
+              <li><a href="#cte" className="hover:text-white transition">CT-e</a></li>
+              <li><a href="#pdv" className="hover:text-white transition">PDV & Maquininha</a></li>
+            </ul>
+          </div>
+
+          {/* Suporte */}
+          <div className="md:col-span-2">
+            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Suporte</div>
+            <ul className="mt-5 space-y-3 text-sm text-white/75">
+              <li><a href="#central" className="hover:text-white transition">Central de ajuda</a></li>
+              <li><a href="#tutoriais" className="hover:text-white transition">Tutoriais</a></li>
+              <li><a href="#status" className="hover:text-white transition">Status do sistema</a></li>
+              <li><a href="#api" className="hover:text-white transition">Documentação API</a></li>
+              <li><a href="#faq" className="hover:text-white transition">Perguntas frequentes</a></li>
+              <li><a href="#contato" className="hover:text-white transition">Fale conosco</a></li>
+            </ul>
+          </div>
+
+          {/* Contato */}
+          <div className="md:col-span-2">
+            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Contato</div>
+            <ul className="mt-5 space-y-4 text-sm text-white/75">
+              <li className="flex items-start gap-3">
+                <Mail className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" />
+                <a href="mailto:contato@emissorfiscal.com.br" className="hover:text-white transition break-all">
+                  contato@emissorfiscal.com.br
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" />
+                <a href="tel:+551140000000" className="hover:text-white transition">
+                  (11) 4000-0000
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" />
+                <span>Av. Paulista, 1000 — Bela Vista<br />São Paulo/SP — 01310-100</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" />
+                <span>Seg. a Sex. — 08h às 20h<br />Sáb. — 09h às 14h</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
+            <div>© {new Date().getFullYear()} Emissor Fiscal Tecnologia Ltda. — CNPJ 00.000.000/0001-00. Todos os direitos reservados.</div>
+            <div className="flex flex-wrap items-center gap-5">
+              <Link to="/termos" className="hover:text-white transition">Termos de uso</Link>
+              <Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link>
+              <a href="#cookies" className="hover:text-white transition">Cookies</a>
+              <a href="#lgpd" className="hover:text-white transition">LGPD</a>
+            </div>
           </div>
         </div>
       </footer>
+
     </div>
   );
 }
