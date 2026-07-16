@@ -1357,64 +1357,23 @@ function HeroSlide2() {
 
 function HeroSlide3() {
   return (
-    <div className="relative overflow-hidden rounded-3xl min-h-[520px] md:min-h-[600px] animate-fade-in glow-ring">
-      {/* Background image */}
-      <img
-        src={truckHero.url}
-        alt="Carreta 9 eixos e ônibus rodoviário em rodovia brasileira — emissão de CTe, MDFe e CIOT"
-        loading="lazy"
-        width={1920}
-        height={1088}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      {/* Black gradient overlay for text legibility */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.85) 100%)",
-        }}
-      />
-
-      {/* Content */}
-      <div className="relative z-10 p-8 md:p-14 flex flex-col justify-end min-h-[520px] md:min-h-[600px] max-w-3xl">
-        <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-3 py-1.5 text-xs uppercase tracking-widest text-white/90 mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-          Documentos de transporte
-        </div>
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.02] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
-          Sua transportadora <span className="gradient-text">sem nota travada.</span>
-        </h1>
-        <p className="mt-5 text-base md:text-lg text-white/85 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
-          CTe, MDFe e CIOT emitidos em segundos, integrados com SEFAZ e ANTT. Um único sistema para toda a operação de cargas.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          <a
-            href="#planos"
-            className="group inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground transition hover:scale-[1.02]"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Começar agora
-            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a href="#documentos" className="inline-flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white">
-            Ver documentos <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
-        <div className="mt-8 flex flex-wrap gap-6 md:gap-8 text-sm">
-          {[
-            ["CTe", "conhecimento de transporte"],
-            ["MDFe", "manifesto eletrônico"],
-            ["CIOT", "operação de cargas"],
-          ].map(([n, l]) => (
-            <div key={l as string}>
-              <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{n}</div>
-              <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/70 mt-1">{l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <HeroFullBleed
+      image={truckHero.url}
+      alt="Carreta 9 eixos e ônibus rodoviário em rodovia brasileira — emissão de CTe, MDFe e CIOT"
+      eyebrow="Documentos de transporte"
+      title="Sua transportadora"
+      titleAccent="sem nota travada."
+      description="CTe, MDFe e CIOT emitidos em segundos, integrados com SEFAZ e ANTT. Um único sistema para toda a operação de cargas."
+      ctaLabel="Começar agora"
+      ctaHref="#planos"
+      secondaryLabel="Ver documentos"
+      secondaryHref="#documentos"
+      stats={[
+        ["CTe", "conhecimento de transporte"],
+        ["MDFe", "manifesto eletrônico"],
+        ["CIOT", "operação de cargas"],
+      ]}
+    />
   );
 }
 
