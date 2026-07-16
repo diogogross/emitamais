@@ -1087,17 +1087,18 @@ function Index() {
   );
 }
 
+const HERO_SLIDE_COUNT = 6;
+
 function HeroSlider() {
-  const slides = [0, 1, 2, 3, 4, 5];
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
-  const go = (n: number) => setI((n + slides.length) % slides.length);
+  const go = (n: number) => setI((n + HERO_SLIDE_COUNT) % HERO_SLIDE_COUNT);
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(() => setI((v) => (v + 1) % slides.length), 3000);
+    const t = setInterval(() => setI((v) => (v + 1) % HERO_SLIDE_COUNT), 3000);
     return () => clearInterval(t);
-  }, [paused, slides.length]);
+  }, [paused]);
 
   return (
     <section
