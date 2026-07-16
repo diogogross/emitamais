@@ -295,7 +295,7 @@ function Index() {
       {/* Scroll progress */}
       <div ref={progressRef} className="scroll-progress" aria-hidden="true" />
 
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
+      <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold">
             <img src={logoEmissor.url} alt="Emissor Fiscal" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
@@ -1173,7 +1173,7 @@ function HeroSlider() {
 
   return (
     <section
-      className="relative w-full pt-6 pb-12 md:pt-10 md:pb-16"
+      className="relative w-full pt-0 pb-12 md:pb-16"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
