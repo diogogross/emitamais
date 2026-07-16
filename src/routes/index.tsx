@@ -45,7 +45,18 @@ import {
   Youtube,
   Award,
   Users,
+  Scissors,
+  PawPrint,
+  HardHat,
+  UtensilsCrossed,
+  Glasses,
+  Warehouse,
+  Calculator,
+  Pill,
+  Car,
+  Leaf,
 } from "lucide-react";
+
 
 import heroPerson from "@/assets/hero-slide1.jpg.asset.json";
 import womanPointing from "@/assets/woman-pointing-framed.jpg.asset.json";
@@ -371,36 +382,36 @@ function Index() {
         <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
-          <div className="flex gap-6 animate-marquee whitespace-nowrap">
+          <div className="flex gap-5 animate-marquee whitespace-nowrap">
             {Array.from({ length: 2 }).map((_, i) => (
-              <div key={i} className="flex gap-6 shrink-0">
+              <div key={i} className="flex gap-5 shrink-0">
                 {[
-                  { name: "Clínica VidaPlus", seg: "Saúde", color: "#2D9CDB", style: "font-bold" },
-                  { name: "Borracharia RodaBoa", seg: "Automotivo", color: "#1F1F1F", style: "font-black italic" },
-                  { name: "TransCargo Express", seg: "Transporte", color: "#E4002B", style: "font-black tracking-tight" },
-                  { name: "Padaria Pão Dourado", seg: "Alimentação", color: "#B8730E", style: "italic font-bold" },
-                  { name: "Mercadinho Bom Preço", seg: "Varejo", color: "#00A868", style: "font-bold lowercase" },
-                  { name: "Auto Peças Turbo", seg: "Automotivo", color: "#E85A2C", style: "font-black" },
-                  { name: "Farmácia Saúde+", seg: "Farmácia", color: "#00995D", style: "font-bold" },
-                  { name: "Studio Bella", seg: "Beleza", color: "#C2185B", style: "italic font-semibold" },
-                  { name: "Petshop Amigo Fiel", seg: "Pet", color: "#7B1FA2", style: "font-bold lowercase" },
-                  { name: "Construtora Alicerce", seg: "Construção", color: "#F57C00", style: "font-black tracking-tight" },
-                  { name: "Restaurante Sabor Real", seg: "Alimentação", color: "#D32F2F", style: "italic font-bold" },
-                  { name: "Ótica VisãoMax", seg: "Ótica", color: "#1F3D8A", style: "font-semibold" },
-                  { name: "Fazenda Boa Terra", seg: "Agro", color: "#3B7A22", style: "font-bold" },
-                  { name: "Contabilidade Prisma", seg: "Serviços", color: "#0B3D91", style: "font-black lowercase" },
-                  { name: "Distribuidora Sul", seg: "Atacado", color: "#004D40", style: "font-bold tracking-tight" },
-                  { name: "Barbearia Navalha", seg: "Beleza", color: "#1F1F1F", style: "font-black italic" },
+                  { name: "Drogaria SãoPaulo Center", seg: "Farmácia", color: "#00A859", Icon: Pill, style: "font-black tracking-tight" },
+                  { name: "Rede Bahia Supermercados", seg: "Varejo", color: "#E30613", Icon: ShoppingCart, style: "font-black italic" },
+                  { name: "TransBrasil Logística", seg: "Transporte", color: "#003DA5", Icon: Truck, style: "font-black tracking-tight" },
+                  { name: "Padaria Real do Ipiranga", seg: "Alimentação", color: "#B8730E", Icon: Croissant, style: "italic font-bold" },
+                  { name: "Auto Center Paulista", seg: "Automotivo", color: "#1F1F1F", Icon: Car, style: "font-black" },
+                  { name: "Óticas VisãoClara", seg: "Ótica", color: "#1F3D8A", Icon: Glasses, style: "font-semibold tracking-wide" },
+                  { name: "Clínica São Rafael", seg: "Saúde", color: "#0071BC", Icon: Stethoscope, style: "font-bold" },
+                  { name: "Barbearia Navalha & Cia", seg: "Beleza", color: "#111111", Icon: Scissors, style: "font-black italic" },
+                  { name: "Petshop Amigo Pet", seg: "Pet", color: "#7B1FA2", Icon: PawPrint, style: "font-bold" },
+                  { name: "Construtora Horizonte", seg: "Construção", color: "#F57C00", Icon: HardHat, style: "font-black tracking-tight" },
+                  { name: "Restaurante Fogo & Brasa", seg: "Alimentação", color: "#C1272D", Icon: UtensilsCrossed, style: "italic font-bold" },
+                  { name: "Distribuidora Sul Brasil", seg: "Atacado", color: "#004D40", Icon: Warehouse, style: "font-bold tracking-tight" },
+                  { name: "Contabilidade Prisma", seg: "Serviços", color: "#0B3D91", Icon: Calculator, style: "font-black" },
+                  { name: "Boutique Bella Moda", seg: "Moda", color: "#C2185B", Icon: Shirt, style: "italic font-semibold" },
+                  { name: "AgroCampo do Vale", seg: "Agro", color: "#3B7A22", Icon: Leaf, style: "font-bold tracking-tight" },
+                  { name: "Mercadinho Bom Preço", seg: "Varejo", color: "#009E4D", Icon: Store, style: "font-black lowercase" },
                 ].map((b) => (
                   <div
                     key={b.name + i}
                     className="flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.5)] ring-1 ring-black/5"
                   >
                     <span
-                      className={`w-9 h-9 rounded-full grid place-items-center text-white font-display font-bold text-sm shrink-0`}
+                      className="w-10 h-10 rounded-xl grid place-items-center text-white shrink-0"
                       style={{ background: b.color }}
                     >
-                      {b.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
+                      <b.Icon className="w-5 h-5" strokeWidth={2.4} />
                     </span>
                     <div className="flex flex-col leading-tight">
                       <span
@@ -416,6 +427,7 @@ function Index() {
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
