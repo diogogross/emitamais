@@ -1173,33 +1173,28 @@ function HeroSlider() {
 
   return (
     <section
-      className="relative w-full pt-0 pb-12 md:pb-16"
+      className="relative w-full"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="relative">
-        {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : i === 2 ? <HeroSlide3 /> : i === 3 ? <HeroSlide4 /> : i === 4 ? <HeroSlide5 /> : <HeroSlide6 />}
+      <div className="relative overflow-hidden">
+        {/* Top gradient for menu legibility */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 md:h-48 z-30"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0) 100%)",
+          }}
+          aria-hidden="true"
+        />
 
-        {/* Controls */}
-        <button
-          type="button"
-          onClick={() => go(i - 1)}
-          aria-label="Slide anterior"
-          className="hidden md:grid absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 place-items-center rounded-full bg-white/10 backdrop-blur ring-1 ring-white/20 text-white hover:bg-white/20 transition z-20"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <button
-          type="button"
-          onClick={() => go(i + 1)}
-          aria-label="Próximo slide"
-          className="hidden md:grid absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 place-items-center rounded-full bg-white/10 backdrop-blur ring-1 ring-white/20 text-white hover:bg-white/20 transition z-20"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
+        {/* Slide (vertical transition via key change) */}
+        <div key={i} className="hero-slide-vertical">
+          {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : i === 2 ? <HeroSlide3 /> : i === 3 ? <HeroSlide4 /> : i === 4 ? <HeroSlide5 /> : <HeroSlide6 />}
+        </div>
 
         {/* Dots */}
-        <div className="mt-6 flex items-center justify-center gap-2">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-6 flex items-center justify-center gap-2 z-30">
           {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
             <button
               key={idx}
@@ -1207,12 +1202,13 @@ function HeroSlider() {
               onClick={() => setI(idx)}
               aria-label={`Ir para slide ${idx + 1}`}
               className={`h-2 rounded-full transition-all ${
-                idx === i ? "w-10 bg-primary-glow" : "w-2.5 bg-white/25 hover:bg-white/40"
+                idx === i ? "w-10 bg-primary-glow" : "w-2.5 bg-white/40 hover:bg-white/60"
               }`}
             />
           ))}
         </div>
       </div>
+
     </section>
 
   );
