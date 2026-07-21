@@ -65,7 +65,7 @@ import truckHero from "@/assets/hero-truck-bus.jpg.asset.json";
 import heroServicos from "@/assets/hero-slide4.jpg.asset.json";
 import heroMaquininha from "@/assets/hero-slide5.jpg.asset.json";
 import heroProduto from "@/assets/hero-slide6.jpg.asset.json";
-import logoEmissor from "@/assets/logo-emita-mais.png.asset.json";
+import faviconEmita from "@/assets/favicon-emita.png.asset.json";
 
 
 
