@@ -20,7 +20,7 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Artigo não encontrado — Blog Emissor Fiscal" },
+          { title: "Artigo não encontrado — Blog Emita Mais" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -30,17 +30,17 @@ export const Route = createFileRoute("/blog/$slug")({
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
     return {
       meta: [
-        { title: `${post.title} | Blog Emissor Fiscal` },
+        { title: `${post.title} | Blog Emita Mais` },
         { name: "description", content: post.excerpt },
         { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
-        { name: "author", content: "Emissor Fiscal" },
+        { name: "author", content: "Emita Mais" },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
         { property: "og:image", content: image },
         { property: "article:published_time", content: post.date },
-        { property: "article:author", content: "Emissor Fiscal" },
+        { property: "article:author", content: "Emita Mais" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: post.title },
         { name: "twitter:description", content: post.excerpt },
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/blog/$slug")({
             description: post.excerpt,
             image,
             datePublished: post.date,
-            author: { "@type": "Organization", name: "Emissor Fiscal" },
+            author: { "@type": "Organization", name: "Emita Mais" },
             mainEntityOfPage: url,
           }),
         },
@@ -101,7 +101,7 @@ function ArticlePage() {
             >
               <Sparkles className="w-4 h-4 text-white" />
             </span>
-            Emissor Fiscal
+            Emita Mais
           </Link>
           <Link
             to="/blog"

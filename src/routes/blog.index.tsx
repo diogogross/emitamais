@@ -31,7 +31,7 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
       { property: "og:description", content: "Guias, novidades e boas práticas para acelerar sua emissão fiscal." },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Blog Fiscal — Emissor Fiscal" },
+      { name: "twitter:title", content: "Blog Fiscal — Emita Mais" },
       { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e certificado digital A1." },
     ],
     links: [{ rel: "canonical", href: "https://emissorfiscal.lovable.app/blog" }],
@@ -72,7 +72,7 @@ function BlogPage() {
             >
               <Sparkles className="w-4 h-4 text-white" />
             </span>
-            Emissor Fiscal
+            Emita Mais
           </Link>
           <Link
             to="/"
