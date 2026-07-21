@@ -8,6 +8,7 @@ import {
   User,
 } from "lucide-react";
 import { blogPosts, getPostBySlug, type BlogSection } from "@/lib/blog-posts";
+import faviconEmita from "@/assets/favicon-emita.png.asset.json";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
