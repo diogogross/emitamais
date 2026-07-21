@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     date: "12 Jan 2026",
     readMin: 6,
     image: nfeGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       {
         type: "paragraph",
@@ -97,7 +97,7 @@ export const blogPosts: BlogPost[] = [
     date: "05 Jan 2026",
     readMin: 5,
     image: nfceVarejo,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       {
         type: "paragraph",
@@ -150,7 +150,7 @@ export const blogPosts: BlogPost[] = [
     date: "28 Dez 2025",
     readMin: 7,
     image: cteTransporte,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       {
         type: "paragraph",
@@ -213,7 +213,7 @@ export const blogPosts: BlogPost[] = [
     date: "18 Dez 2025",
     readMin: 6,
     image: mdfeFrota,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       {
         type: "paragraph",
@@ -275,7 +275,7 @@ export const blogPosts: BlogPost[] = [
     date: "10 Dez 2025",
     readMin: 5,
     image: certificadoGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       {
         type: "paragraph",
@@ -334,7 +334,7 @@ export const blogPosts: BlogPost[] = [
     date: "20 Fev 2026",
     readMin: 6,
     image: nfeGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "A Nota Fiscal de Serviço Eletrônica (NFSe) sempre foi municipal — cada prefeitura tinha seu próprio layout, portal e regras. Com o padrão nacional, o Brasil passa a ter uma única especificação técnica adotada pelos municípios, o que facilita a vida de quem presta serviço em várias cidades." },
       { type: "heading", text: "O que muda na prática" },
@@ -365,7 +365,7 @@ export const blogPosts: BlogPost[] = [
     date: "12 Fev 2026",
     readMin: 4,
     image: nfceVarejo,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "A Carta de Correção Eletrônica (CCe) é o documento que permite ajustar informações da NFe autorizada sem cancelá-la. É rápida, gratuita e tem validade jurídica." },
       { type: "heading", text: "O que pode ser corrigido" },
@@ -393,7 +393,7 @@ export const blogPosts: BlogPost[] = [
     date: "02 Fev 2026",
     readMin: 5,
     image: nfeGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "O cancelamento de NFe deve ser feito em até 24 horas após a autorização, desde que o produto ainda não tenha circulado. Após esse prazo, entra o cancelamento extemporâneo, com regras específicas por estado." },
       { type: "heading", text: "Requisitos do cancelamento" },
@@ -416,7 +416,7 @@ export const blogPosts: BlogPost[] = [
     date: "22 Jan 2026",
     readMin: 5,
     image: nfceVarejo,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "A manifestação do destinatário é o mecanismo que permite ao comprador confirmar, desconhecer ou recusar uma NFe emitida contra o seu CNPJ. Além de obrigatória em vários setores, ela protege contra notas fraudulentas." },
       { type: "heading", text: "Os quatro eventos" },
@@ -438,7 +438,7 @@ export const blogPosts: BlogPost[] = [
     date: "15 Jan 2026",
     readMin: 7,
     image: nfeGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "A reforma tributária substitui gradualmente PIS, COFINS, ICMS e ISS por dois novos tributos: CBS (federal) e IBS (estadual e municipal). O XML da NFe já foi ampliado para receber os novos campos." },
       { type: "heading", text: "Cronograma resumido" },
@@ -468,7 +468,7 @@ export const blogPosts: BlogPost[] = [
     date: "18 Fev 2026",
     readMin: 5,
     image: cteTransporte,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "O CIOT (Código Identificador da Operação de Transporte) é obrigatório sempre que uma empresa contrata um transportador autônomo (TAC) ou uma ETC para transporte rodoviário de cargas. Ele garante que o frete e os tributos sociais sejam registrados corretamente." },
       { type: "heading", text: "Quando emitir" },
@@ -490,7 +490,7 @@ export const blogPosts: BlogPost[] = [
     date: "09 Fev 2026",
     readMin: 4,
     image: mdfeFrota,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "O DAMDFe é a representação impressa do MDFe. Ele acompanha o veículo durante toda a viagem e é o primeiro documento pedido em barreira fiscal." },
       { type: "heading", text: "Checklist de conferência" },
@@ -513,7 +513,7 @@ export const blogPosts: BlogPost[] = [
     date: "30 Jan 2026",
     readMin: 5,
     image: cteTransporte,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "O CTe globalizado permite emitir um único Conhecimento de Transporte para várias NFes do mesmo remetente e destinatário, na mesma viagem. Reduz burocracia e simplifica a apuração." },
       { type: "heading", text: "Requisitos" },
@@ -536,7 +536,7 @@ export const blogPosts: BlogPost[] = [
     date: "20 Jan 2026",
     readMin: 6,
     image: cteTransporte,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "Todo transportador de carga precisa contratar seguros obrigatórios e informá-los no CTe. A ausência ou o preenchimento errado pode transferir para a transportadora prejuízos que seriam da seguradora." },
       { type: "heading", text: "Os seguros do transporte" },
@@ -558,7 +558,7 @@ export const blogPosts: BlogPost[] = [
     date: "10 Jan 2026",
     readMin: 5,
     image: mdfeFrota,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "O RNTRC é o cadastro da ANTT que autoriza empresas, cooperativas e autônomos a exercerem transporte rodoviário de cargas. Sem ele, não há emissão válida de CTe nem CIOT." },
       { type: "heading", text: "Categorias" },
@@ -587,7 +587,7 @@ export const blogPosts: BlogPost[] = [
     date: "16 Fev 2026",
     readMin: 5,
     image: certificadoGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "O certificado em nuvem armazena a chave privada em servidores de alta segurança da Autoridade Certificadora. Você assina pelo celular ou navegador, sem precisar carregar token USB." },
       { type: "heading", text: "Vantagens" },
@@ -610,7 +610,7 @@ export const blogPosts: BlogPost[] = [
     date: "07 Fev 2026",
     readMin: 4,
     image: certificadoGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "O e-CNPJ representa a empresa e assina documentos em nome da pessoa jurídica. O e-CPF representa a pessoa física — inclusive o próprio empresário ou representante legal." },
       { type: "heading", text: "Quando usar e-CNPJ" },
@@ -636,7 +636,7 @@ export const blogPosts: BlogPost[] = [
     date: "28 Jan 2026",
     readMin: 4,
     image: certificadoGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "Certificado vencido é sinônimo de operação parada: nem NFe, nem folha de pagamento, nem acesso ao e-CAC. A boa notícia é que a renovação pode ser 100% online quando feita dentro do prazo." },
       { type: "heading", text: "Renovação online" },
@@ -659,7 +659,7 @@ export const blogPosts: BlogPost[] = [
     date: "18 Jan 2026",
     readMin: 4,
     image: certificadoGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "A revogação cancela a validade do certificado antes do prazo. É uma medida de segurança essencial em situações críticas — e uma vez feita, é irreversível." },
       { type: "heading", text: "Motivos para revogar" },
@@ -681,7 +681,7 @@ export const blogPosts: BlogPost[] = [
     date: "08 Jan 2026",
     readMin: 5,
     image: certificadoGuia,
-    author: "Equipe Emissor Fiscal",
+    author: "Equipe Emita Mais",
     content: [
       { type: "paragraph", text: "A procuração eletrônica no e-CAC permite que o contador acesse serviços da Receita Federal em nome da empresa, usando o próprio certificado dele — sem que você precise emprestar o seu." },
       { type: "heading", text: "Como emitir" },

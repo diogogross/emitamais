@@ -65,7 +65,7 @@ import truckHero from "@/assets/hero-truck-bus.jpg.asset.json";
 import heroServicos from "@/assets/hero-slide4.jpg.asset.json";
 import heroMaquininha from "@/assets/hero-slide5.jpg.asset.json";
 import heroProduto from "@/assets/hero-slide6.jpg.asset.json";
-import logoEmissor from "@/assets/logo-emissor-fiscal.png.asset.json";
+import logoEmissor from "@/assets/logo-emita-mais.png.asset.json";
 
 
 
@@ -95,7 +95,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos com o Emissor Fiscal. Certificado Digital A1 CPF ou CNPJ por R$ 129,90, 100% online por videoconferência.",
+          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos com o Emita Mais. Certificado Digital A1 CPF ou CNPJ por R$ 129,90, 100% online por videoconferência.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://emissorfiscal.lovable.app/" },
@@ -119,7 +119,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "Emissor Fiscal",
+          name: "Emita Mais",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web",
           description:
@@ -129,7 +129,7 @@ export const Route = createFileRoute("/")({
           offers: [
             {
               "@type": "Offer",
-              name: "Plano Emissor Fiscal — notas fiscais ilimitadas",
+              name: "Plano Emita Mais — notas fiscais ilimitadas",
               price: "60.00",
               priceCurrency: "BRL",
               url: "https://emissorfiscal.lovable.app/#planos",
@@ -159,7 +159,7 @@ export const Route = createFileRoute("/")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "O Emissor Fiscal emite quais notas fiscais?",
+              name: "O Emita Mais emite quais notas fiscais?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT — tudo em um único sistema, 100% online e integrado com a SEFAZ.",
@@ -175,7 +175,7 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Question",
-              name: "Quanto custa o plano do Emissor Fiscal?",
+              name: "Quanto custa o plano do Emita Mais?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "R$ 60,00 por mês com notas fiscais e empresas ilimitadas, sem taxa por documento nem taxa de setup.",
@@ -186,7 +186,7 @@ export const Route = createFileRoute("/")({
               name: "Precisa instalar algum programa para emitir nota fiscal?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Não. O Emissor Fiscal é 100% online e funciona direto do navegador, em qualquer computador, tablet ou celular.",
+                text: "Não. O Emita Mais é 100% online e funciona direto do navegador, em qualquer computador, tablet ou celular.",
               },
             },
           ],
@@ -238,7 +238,7 @@ const testimonials = [
     name: "Camila Duarte",
     role: "Contadora · Duarte Contábil",
     tag: "Emissor",
-    quote: "Como escritório, eu precisava de multiempresas ilimitadas sem taxa por CNPJ. O Emissor Fiscal entrega isso — e o XML sai pronto pra minha contabilidade.",
+    quote: "Como escritório, eu precisava de multiempresas ilimitadas sem taxa por CNPJ. O Emita Mais entrega isso — e o XML sai pronto pra minha contabilidade.",
   },
   {
     name: "Fernando Alves",
@@ -320,7 +320,7 @@ function Index() {
       <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold">
-            <img src={logoEmissor.url} alt="Emissor Fiscal" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
+            <img src={logoEmissor.url} alt="Emita Mais" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
             <span>Emissor <span className="gradient-text">Fiscal</span></span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
@@ -330,7 +330,7 @@ function Index() {
                 className="hover:text-foreground transition inline-flex items-center gap-1"
                 aria-haspopup="true"
               >
-                Emissor Fiscal
+                Emita Mais
                 <ChevronDown className="w-3.5 h-3.5 transition group-hover:rotate-180" />
               </button>
               <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -475,7 +475,7 @@ function Index() {
             <div className="glass-card p-2 glow-ring">
               <img
                 src={dashboardMock}
-                alt="Dashboard do sistema Emissor Fiscal"
+                alt="Dashboard do sistema Emita Mais"
                 loading="lazy"
                 width={1600}
                 height={720}
@@ -485,7 +485,7 @@ function Index() {
             <div className="glass-card p-2 glow-ring mt-5 ml-8 md:ml-16 hidden sm:block">
               <img
                 src={dashboardList}
-                alt="Tela de listagem de notas fiscais do Emissor Fiscal"
+                alt="Tela de listagem de notas fiscais do Emita Mais"
                 loading="lazy"
                 width={1600}
                 height={1008}
@@ -536,7 +536,7 @@ function Index() {
             <div className="relative mx-auto w-full max-w-md lg:max-w-none rounded-[2rem] overflow-hidden ring-1 ring-white/10 shadow-[0_30px_80px_-20px_rgba(120,60,255,0.5)]">
               <img
                 src={womanPointing.url}
-                alt="Especialista do Emissor Fiscal apresentando os tipos de documentos fiscais"
+                alt="Especialista do Emita Mais apresentando os tipos de documentos fiscais"
                 loading="lazy"
                 width={1280}
                 height={1280}
@@ -556,7 +556,7 @@ function Index() {
 
               <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
               <div className="absolute bottom-5 right-6 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                Especialista Emissor Fiscal
+                Especialista Emita Mais
               </div>
             </div>
           </div>
@@ -656,7 +656,7 @@ function Index() {
                   <div className="rounded-lg overflow-hidden ring-1 ring-white/10 bg-white/5">
                     <img
                       src={src}
-                      alt={`Tela ${label} do sistema Emissor Fiscal`}
+                      alt={`Tela ${label} do sistema Emita Mais`}
                       loading="lazy"
                       className="w-full h-auto block"
                     />
@@ -704,7 +704,7 @@ function Index() {
             />
             <img
               src={smartPos}
-              alt="Smart POS Android com sistema Emissor Fiscal rodando NFCe"
+              alt="Smart POS Android com sistema Emita Mais rodando NFCe"
               width={780}
               height={1400}
               loading="lazy"
@@ -826,7 +826,7 @@ function Index() {
             <span className="absolute -top-3 left-8 text-[10px] uppercase tracking-widest rounded-full px-3 py-1 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
               Plano único
             </span>
-            <div className="mt-3 font-display text-2xl font-bold">Emissor Fiscal</div>
+            <div className="mt-3 font-display text-2xl font-bold">Emita Mais</div>
             <p className="text-sm text-muted-foreground mt-1">Tudo incluso, sem limites nem surpresas.</p>
             <div className="mt-6 flex items-baseline gap-1">
               <span className="text-sm text-muted-foreground">R$</span>
@@ -868,7 +868,7 @@ function Index() {
             <ul className="mt-8 space-y-3 text-sm flex-1">
               {[
                 "Certificado Digital A1 PJ ou PF",
-                "Ganhe o 1º mês grátis do Emissor Fiscal",
+                "Ganhe o 1º mês grátis do Emita Mais",
                 "Validade de 12 meses",
                 "Emissão 100% online, sem sair de casa",
                 "Compatível com NFe, NFCe, NFSe, CTe e MDFe",
@@ -982,7 +982,7 @@ function Index() {
             />
             <img
               src={brasilMap}
-              alt="Mapa do Brasil com presença do Emissor Fiscal em todos os estados"
+              alt="Mapa do Brasil com presença do Emita Mais em todos os estados"
               width={1024}
               height={1024}
               loading="lazy"
@@ -1068,17 +1068,17 @@ function Index() {
             Tudo o que você precisa <span className="gradient-text">saber.</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Duas colunas, duas soluções. Encontre respostas sobre o Emissor Fiscal e o Certificado Digital.
+            Duas colunas, duas soluções. Encontre respostas sobre o Emita Mais e o Certificado Digital.
           </p>
         </div>
 
         <div className="mt-14 grid lg:grid-cols-2 gap-6">
           {[
             {
-              title: "Emissor Fiscal",
+              title: "Emita Mais",
               subtitle: "Sistema de emissão de notas",
               items: [
-                { q: "O Emissor Fiscal funciona para qualquer segmento?", a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural — emitindo NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT em um único sistema." },
+                { q: "O Emita Mais funciona para qualquer segmento?", a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural — emitindo NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT em um único sistema." },
                 { q: "Preciso instalar algum programa?", a: "Não. O sistema é 100% online e roda no navegador — desktop, tablet ou celular. Também rodamos em maquininhas Smart POS Android homologadas." },
                 { q: "Quantas notas e empresas posso emitir?", a: "Notas fiscais e empresas ilimitadas, todas incluídas no plano único de R$ 60/mês. Sem taxa por documento e sem taxa de setup." },
                 { q: "Vocês atendem NFSe da minha cidade?", a: "Estamos integrados com mais de 1.600 municípios brasileiros. Consulte sua cidade com nosso time — novas prefeituras entram semanalmente." },
@@ -1095,7 +1095,7 @@ function Index() {
                 { q: "Quanto tempo demora para receber?", a: "Após a validação, o certificado A1 é instalado na hora. Para modelos A3 com mídia física (token ou cartão), o envio leva de 3 a 7 dias úteis." },
                 { q: "Quais documentos preciso apresentar?", a: "Para PJ: contrato social, CNPJ e documento do titular. Para PF: RG, CPF e comprovante de endereço. Todos digitalizados e apresentados por videoconferência." },
                 { q: "O certificado funciona com qualquer sistema?", a: "Sim. É aceito por SEFAZ, Receita Federal, e-CAC, prefeituras, bancos, tribunais e todos os principais sistemas fiscais e contábeis do país." },
-                { q: "E se eu comprar o certificado com o Emissor?", a: "Ao adquirir o Certificado A1 PJ ou PF, você ganha o primeiro mês do Emissor Fiscal sem custo. Combo perfeito para começar a emitir na hora." },
+                { q: "E se eu comprar o certificado com o Emissor?", a: "Ao adquirir o Certificado A1 PJ ou PF, você ganha o primeiro mês do Emita Mais sem custo. Combo perfeito para começar a emitir na hora." },
               ],
             },
           ].map((col) => (
@@ -1139,7 +1139,7 @@ function Index() {
             Pronto para modernizar <span className="gradient-text">sua emissão fiscal?</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg max-w-xl mx-auto">
-            Fale com nosso time e descubra como o Emissor Fiscal pode acelerar sua operação.
+            Fale com nosso time e descubra como o Emita Mais pode acelerar sua operação.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
@@ -1168,8 +1168,8 @@ function Index() {
           {/* Brand / Quem somos */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
-              <img src={logoEmissor.url} alt="Emissor Fiscal" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
-              <div className="font-display text-xl font-bold text-white">Emissor Fiscal</div>
+              <img src={logoEmissor.url} alt="Emita Mais" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
+              <div className="font-display text-xl font-bold text-white">Emita Mais</div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-sm">
               Há mais de 15 anos simplificando a gestão fiscal de empresas em todo o Brasil.
@@ -1277,7 +1277,7 @@ function Index() {
         {/* Bottom bar */}
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
-            <div>© {new Date().getFullYear()} Emissor Fiscal Tecnologia Ltda. — CNPJ 00.000.000/0001-00. Todos os direitos reservados.</div>
+            <div>© {new Date().getFullYear()} Emita Mais Tecnologia Ltda. — CNPJ 00.000.000/0001-00. Todos os direitos reservados.</div>
             <div className="flex flex-wrap items-center gap-5">
               <Link to="/termos" className="hover:text-white transition">Termos de uso</Link>
               <Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link>
@@ -1444,7 +1444,7 @@ function HeroSlide1() {
   return (
     <HeroFullBleed
       image={heroPerson.url}
-      alt="Empresário brasileiro usando o Emissor Fiscal em um notebook"
+      alt="Empresário brasileiro usando o Emita Mais em um notebook"
       eyebrow="Plataforma completa de emissão fiscal"
       title="A tecnologia fiscal"
       titleAccent="que acelera a sua operação."
@@ -1511,7 +1511,7 @@ function HeroSlide4() {
   return (
     <HeroFullBleed
       image={heroServicos.url}
-      alt="Prestador de serviços brasileiro emitindo NFSe pelo Emissor Fiscal"
+      alt="Prestador de serviços brasileiro emitindo NFSe pelo Emita Mais"
       eyebrow="Nota Fiscal de Serviços"
       title="NFSe integrada com"
       titleAccent="+1.600 municípios."
@@ -1555,7 +1555,7 @@ function HeroSlide6() {
   return (
     <HeroFullBleed
       image={heroProduto.url}
-      alt="Gerente de estoque emitindo NFe de produto no Emissor Fiscal"
+      alt="Gerente de estoque emitindo NFe de produto no Emita Mais"
       eyebrow="Nota Fiscal de Produto"
       title="NFe autorizada em"
       titleAccent="segundos."

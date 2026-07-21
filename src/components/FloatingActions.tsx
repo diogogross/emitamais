@@ -3,7 +3,7 @@ import { ArrowUp } from "lucide-react";
 
 // Altere aqui: número no formato internacional, apenas dígitos (ex.: 5511999999999)
 const WHATSAPP_NUMBER = "5511999999999";
-const WHATSAPP_MESSAGE = "Olá! Gostaria de saber mais sobre o Emissor Fiscal.";
+const WHATSAPP_MESSAGE = "Olá! Gostaria de saber mais sobre o Emita Mais.";
 
 export function FloatingActions() {
   const [showTop, setShowTop] = useState(false);

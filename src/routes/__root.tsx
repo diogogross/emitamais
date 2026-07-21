@@ -91,10 +91,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "emissor de notas fiscais, emissor de nota fiscal online, sistema emissor de NFe, NFCe online, NFSe online, CTe, MDFe, CIOT, certificado digital A1, certificado digital CNPJ, certificado digital CPF, certificado digital 129,90, emitir nota fiscal, emitir NFe, emissor fiscal",
       },
-      { name: "author", content: "Emissor Fiscal" },
+      { name: "author", content: "Emita Mais" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       { name: "google", content: "notranslate" },
-      { property: "og:site_name", content: "Emissor Fiscal" },
+      { property: "og:site_name", content: "Emita Mais" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
@@ -110,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: indexCss },
-      { rel: "icon", href: "/__l5e/assets-v1/704b38d6-7a8e-43ae-a08d-dd51dfde9ad4/logo-emissor-fiscal.png", type: "image/png" },
+      { rel: "icon", href: "/__l5e/assets-v1/6bd3b22c-eb7f-4948-a188-618670dbc09e/favicon-emita.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -127,9 +127,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             {
               "@type": "Organization",
               "@id": "https://emissorfiscal.lovable.app/#organization",
-              name: "Emissor Fiscal",
+              name: "Emita Mais",
               url: "https://emissorfiscal.lovable.app/",
-              logo: "https://emissorfiscal.lovable.app/__l5e/assets-v1/704b38d6-7a8e-43ae-a08d-dd51dfde9ad4/logo-emissor-fiscal.png",
+              logo: "https://emissorfiscal.lovable.app/__l5e/assets-v1/44e9e993-f68d-4f21-9edf-bae00c5ca8da/logo-emita-mais.png",
               description:
                 "Sistema emissor de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, CIOT) e certificado digital A1 CPF e CNPJ.",
               areaServed: "BR",
@@ -138,7 +138,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": "WebSite",
               "@id": "https://emissorfiscal.lovable.app/#website",
               url: "https://emissorfiscal.lovable.app/",
-              name: "Emissor Fiscal",
+              name: "Emita Mais",
               inLanguage: "pt-BR",
               publisher: { "@id": "https://emissorfiscal.lovable.app/#organization" },
             },

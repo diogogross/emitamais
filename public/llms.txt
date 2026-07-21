@@ -1,8 +1,8 @@
-# Emissor Fiscal
+# Emita Mais
 
 > Sistema online para emissão de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, NFPe, CIOT) e certificado digital A1 CPF e CNPJ por R$ 129,90.
 
-O Emissor Fiscal é uma plataforma brasileira 100% online que reúne, em um único sistema, a emissão de todos os documentos fiscais eletrônicos exigidos pela SEFAZ e prefeituras, além da venda e emissão de certificados digitais A1 (CPF e CNPJ) por videoconferência ICP-Brasil.
+O Emita Mais é uma plataforma brasileira 100% online que reúne, em um único sistema, a emissão de todos os documentos fiscais eletrônicos exigidos pela SEFAZ e prefeituras, além da venda e emissão de certificados digitais A1 (CPF e CNPJ) por videoconferência ICP-Brasil.
 
 ## Pages
 
@@ -12,5 +12,5 @@ O Emissor Fiscal é uma plataforma brasileira 100% online que reúne, em um úni
 
 ## Optional
 
-- [Política de Privacidade](/privacidade): Como o Emissor Fiscal trata dados pessoais em conformidade com a LGPD.
-- [Termos de Uso](/termos): Termos e condições de uso da plataforma Emissor Fiscal.
+- [Política de Privacidade](/privacidade): Como o Emita Mais trata dados pessoais em conformidade com a LGPD.
+- [Termos de Uso](/termos): Termos e condições de uso da plataforma Emita Mais.
