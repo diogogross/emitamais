@@ -65,7 +65,7 @@ import truckHero from "@/assets/hero-truck-bus.jpg.asset.json";
 import heroServicos from "@/assets/hero-slide4.jpg.asset.json";
 import heroMaquininha from "@/assets/hero-slide5.jpg.asset.json";
 import heroProduto from "@/assets/hero-slide6.jpg.asset.json";
-import logoEmissor from "@/assets/logo-emita-mais.png.asset.json";
+import faviconEmita from "@/assets/favicon-emita.png.asset.json";
 
 
 
@@ -320,8 +320,8 @@ function Index() {
       <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold">
-            <img src={logoEmissor.url} alt="Emita Mais" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
-            <span>Emissor <span className="gradient-text">Fiscal</span></span>
+            <img src={faviconEmita.url} alt="Emita Mais" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
+            <span>Emita <span className="gradient-text">Mais</span></span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <div className="relative group">
@@ -1168,7 +1168,7 @@ function Index() {
           {/* Brand / Quem somos */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
-              <img src={logoEmissor.url} alt="Emita Mais" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
+              <img src={faviconEmita.url} alt="Emita Mais" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
               <div className="font-display text-xl font-bold text-white">Emita Mais</div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-sm">
