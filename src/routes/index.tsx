@@ -1168,7 +1168,7 @@ function Index() {
           {/* Brand / Quem somos */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
-              <img src={logoEmissor.url} alt="Emita Mais" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
+              <img src={faviconEmita.url} alt="Emita Mais" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
               <div className="font-display text-xl font-bold text-white">Emita Mais</div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-sm">
