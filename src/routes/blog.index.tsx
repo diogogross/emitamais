@@ -10,6 +10,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
+import faviconEmita from "@/assets/favicon-emita.png.asset.json";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
