@@ -1,27 +1,12 @@
-// Captures the original Error out-of-band so server.ts can recover the stack
-// when h3 has already swallowed the throw into a generic 500 Response.
+export const captureError = (error: Error, context?: Record<string, any>) => {
+  console.error('[Error Capture]:', error, context);
+  // Aqui poderíamos integrar com serviços como Sentry ou LogRocket
+};
 
-let lastCapturedError: { error: unknown; at: number } | undefined;
-const TTL_MS = 5_000;
-
-function record(error: unknown) {
-  lastCapturedError = { error, at: Date.now() };
-}
-
-if (typeof globalThis.addEventListener === "function") {
-  globalThis.addEventListener("error", (event) => record((event as ErrorEvent).error ?? event));
-  globalThis.addEventListener("unhandledrejection", (event) =>
-    record((event as PromiseRejectionEvent).reason),
-  );
-}
-
-export function consumeLastCapturedError(): unknown {
-  if (!lastCapturedError) return undefined;
-  if (Date.now() - lastCapturedError.at > TTL_MS) {
-    lastCapturedError = undefined;
-    return undefined;
+export const handleGlobalError = (error: unknown) => {
+  if (error instanceof Error) {
+    captureError(error);
+  } else {
+    console.error('Unknown error occurred:', error);
   }
-  const { error } = lastCapturedError;
-  lastCapturedError = undefined;
-  return error;
-}
+};
