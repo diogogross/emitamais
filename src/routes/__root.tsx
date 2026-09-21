@@ -1,5 +1,4 @@
 import { createRootRoute, Outlet, ScrollRestoration } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/router-devtools';
 import { Toaster } from '@/components/ui/sonner';
 import '../index.css';
 
@@ -9,7 +8,6 @@ export const Route = createRootRoute({
       <ScrollRestoration />
       <Outlet />
       <Toaster />
-      <TanStackRouterDevtools />
     </>
   ),
   errorComponent: ({ error }) => (
