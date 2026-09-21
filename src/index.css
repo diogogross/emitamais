@@ -1,4 +1,213 @@
-/* Remove Lovable badge - Estilos para ocultar completamente o elemento e evitar vazamento visual ou de acessibilidade */
+@import "tailwindcss";
+
+/* =========================================================
+   Emita Go — global design system
+   Tailwind CSS v4 + custom visual utilities
+   ========================================================= */
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: oklch(0.14 0.045 285);
+  --color-foreground: oklch(0.97 0.01 285);
+  --color-card: oklch(0.19 0.055 285);
+  --color-card-foreground: oklch(0.97 0.01 285);
+  --color-muted: oklch(0.24 0.045 285);
+  --color-muted-foreground: oklch(0.72 0.025 285);
+  --color-primary: oklch(0.68 0.20 295);
+  --color-primary-foreground: oklch(0.98 0.01 285);
+  --color-accent: oklch(0.82 0.16 75);
+  --color-accent-foreground: oklch(0.15 0.03 285);
+}
+
+:root {
+  --background: oklch(0.14 0.045 285);
+  --foreground: oklch(0.97 0.01 285);
+  --gradient-hero:
+    radial-gradient(circle at 75% 18%, oklch(0.34 0.16 300 / 0.55), transparent 38%),
+    radial-gradient(circle at 15% 35%, oklch(0.28 0.13 250 / 0.45), transparent 35%),
+    linear-gradient(180deg, oklch(0.13 0.055 285), oklch(0.18 0.06 285) 55%, oklch(0.12 0.045 285));
+  --gradient-accent: linear-gradient(135deg, oklch(0.76 0.22 295), oklch(0.82 0.17 75));
+  --shadow-accent: 0 14px 40px -12px oklch(0.65 0.20 295 / 0.55);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Typography */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass surfaces */
+.glass-card {
+  border: 1px solid rgb(255 255 255 / 0.10);
+  background: rgb(255 255 255 / 0.055);
+  box-shadow: 0 20px 60px -30px rgb(0 0 0 / 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.glass-card:hover {
+  border-color: rgb(255 255 255 / 0.16);
+}
+
+.section-dark {
+  background:
+    radial-gradient(circle at 15% 15%, oklch(0.28 0.13 300 / 0.20), transparent 35%),
+    oklch(0.14 0.05 285);
+  color: var(--foreground);
+}
+
+.section-light {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fc 100%);
+  color: #15131c;
+}
+
+.section-connector {
+  position: relative;
+}
+
+.section-connector::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.14), transparent);
+}
+
+/* Scroll progress */
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: var(--gradient-accent);
+  box-shadow: 0 0 18px oklch(0.72 0.2 295 / 0.65);
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* Reveal animations */
+[data-reveal],
+[data-reveal-stagger] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(.2,.7,.2,1);
+}
+
+[data-reveal="scale"] {
+  transform: scale(.97);
+}
+
+[data-reveal].is-visible,
+[data-reveal-stagger].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal-stagger] > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+[data-reveal-stagger].is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal-stagger].is-visible > *:nth-child(2) { transition-delay: 60ms; }
+[data-reveal-stagger].is-visible > *:nth-child(3) { transition-delay: 120ms; }
+[data-reveal-stagger].is-visible > *:nth-child(4) { transition-delay: 180ms; }
+[data-reveal-stagger].is-visible > *:nth-child(5) { transition-delay: 240ms; }
+[data-reveal-stagger].is-visible > *:nth-child(6) { transition-delay: 300ms; }
+
+/* Hero */
+.hero-slide-vertical {
+  animation: hero-slide-in 650ms cubic-bezier(.2,.75,.2,1);
+}
+
+@keyframes hero-slide-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 700ms ease both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Client marquee */
+.animate-marquee {
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Accent / helper colors used by the page */
+.text-primary-glow {
+  color: oklch(0.78 0.20 295);
+}
+
+.bg-primary-glow {
+  background: oklch(0.78 0.20 295);
+}
+
+.glow-ring {
+  box-shadow:
+    0 0 0 1px rgb(255 255 255 / 0.08),
+    0 25px 80px -30px oklch(0.62 0.22 295 / 0.55);
+}
+
+/* Keep the former Lovable badge completely hidden */
 #lovable-badge,
 [class*="lovable-badge"],
 [id*="lovable-badge"],
@@ -16,4 +225,13 @@ iframe[src*="lovable"] {
   padding: 0 !important;
   border: none !important;
   outline: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
