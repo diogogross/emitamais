@@ -59,18 +59,18 @@ import {
 } from "lucide-react";
 
 
-import heroPerson from "@/assets/hero-slide1.jpg.asset.json";
-import womanPointing from "@/assets/woman-pointing-framed.jpg.asset.json";
-import truckHero from "@/assets/hero-truck-bus.jpg.asset.json";
-import heroServicos from "@/assets/hero-slide4.jpg.asset.json";
-import heroMaquininha from "@/assets/hero-slide5.jpg.asset.json";
-import heroProduto from "@/assets/hero-slide6.jpg.asset.json";
-import faviconEmita from "@/assets/favicon-emita.png.asset.json";
+import heroPerson from "@/assets/hero-person.webp";
+import womanPointing from "@/assets/hero-person.webp";
+import truckHero from "@/assets/docs/cte.jpg";
+import heroServicos from "@/assets/docs/nfse.jpg";
+import heroMaquininha from "@/assets/smart-pos.webp";
+import heroProduto from "@/assets/docs/nfe.jpg";
+import faviconEmita from "@/assets/emita-mark.svg";
 
 
 
 import { blogPosts } from "@/lib/blog-posts";
-import heroPerson2 from "@/assets/hero-slide2.jpg.asset.json";
+import heroPerson2 from "@/assets/hero-person-2.webp";
 import dashboardMock from "@/assets/dashboard-real.jpg";
 import dashboardList from "@/assets/dashboard-list.jpg";
 import certificadoMock from "@/assets/screens/certificado-mock.jpg";
@@ -98,7 +98,7 @@ export const Route = createFileRoute("/")({
           "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos com o Emita Go. Certificado Digital A1 CPF ou CNPJ por R$ 129,90, 100% online por videoconferência.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://emissorfiscal.lovable.app/" },
+      { property: "og:url", content: "https://emitago.vercel.app" },
       { property: "og:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1 por R$ 129,90" },
       {
         property: "og:description",
@@ -111,7 +111,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://emissorfiscal.lovable.app/" },
-      { rel: "preload", as: "image", href: heroPerson.url, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
     ],
     scripts: [
       {
@@ -320,7 +320,7 @@ function Index() {
       <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold">
-            <img src={faviconEmita.url} alt="Emita Go" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
+            <img src={faviconEmita} alt="Emita Go" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
             <span>Emita <span className="gradient-text">Mais</span></span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
@@ -1168,7 +1168,7 @@ function Index() {
           {/* Brand / Quem somos */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
-              <img src={faviconEmita.url} alt="Emita Go" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
+              <img src={faviconEmita} alt="Emita Go" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
               <div className="font-display text-xl font-bold text-white">Emita Go</div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-sm">
@@ -1443,7 +1443,7 @@ function HeroFullBleed({
 function HeroSlide1() {
   return (
     <HeroFullBleed
-      image={heroPerson.url}
+      image={heroPerson}
       alt="Empresário brasileiro usando o Emita Go em um notebook"
       eyebrow="Plataforma completa de emissão fiscal"
       title="A tecnologia fiscal"
@@ -1466,7 +1466,7 @@ function HeroSlide1() {
 function HeroSlide2() {
   return (
     <HeroFullBleed
-      image={heroPerson2.url}
+      image={heroPerson2}
       alt="Consultora apresentando certificado digital A1 no smartphone"
       eyebrow="Certificado Digital A1 CPF e CNPJ"
       title="Seu certificado digital"
@@ -1488,7 +1488,7 @@ function HeroSlide2() {
 function HeroSlide3() {
   return (
     <HeroFullBleed
-      image={truckHero.url}
+      image={truckHero}
       alt="Carreta 9 eixos e ônibus rodoviário em rodovia brasileira — emissão de CTe, MDFe e CIOT"
       eyebrow="Documentos de transporte"
       title="Sua transportadora"
@@ -1510,7 +1510,7 @@ function HeroSlide3() {
 function HeroSlide4() {
   return (
     <HeroFullBleed
-      image={heroServicos.url}
+      image={heroServicos}
       alt="Prestador de serviços brasileiro emitindo NFSe pelo Emita Go"
       eyebrow="Nota Fiscal de Serviços"
       title="NFSe integrada com"
@@ -1532,7 +1532,7 @@ function HeroSlide4() {
 function HeroSlide5() {
   return (
     <HeroFullBleed
-      image={heroMaquininha.url}
+      image={heroMaquininha}
       alt="Comerciante emitindo NFCe direto da maquininha Android"
       eyebrow="Cupom fiscal na maquininha"
       title="NFCe direto da"
@@ -1554,7 +1554,7 @@ function HeroSlide5() {
 function HeroSlide6() {
   return (
     <HeroFullBleed
-      image={heroProduto.url}
+      image={heroProduto}
       alt="Gerente de estoque emitindo NFe de produto no Emita Go"
       eyebrow="Nota Fiscal de Produto"
       title="NFe autorizada em"
