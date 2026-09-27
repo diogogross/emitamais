@@ -132,7 +132,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               name: "Emita Go",
               alternateName: "Emita Mais",
               url: "https://emitago.vercel.app/",
-              logo: ogImage,
+              logo: {
+                "@type": "ImageObject",
+                url: "https://emitago.vercel.app/favicon-emita.svg",
+              },
               description:
                 "Sistema emissor de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, CIOT) e certificado digital A1 CPF e CNPJ.",
               areaServed: "BR",
