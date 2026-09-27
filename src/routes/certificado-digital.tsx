@@ -26,12 +26,9 @@ export const Route = createFileRoute("/certificado-digital")({
         content:
           "Compre seu Certificado Digital A1 CPF ou CNPJ por R$ 129,90. Emissão 100% online por videoconferência, sem token, sem cartório, com 12 meses de validade.",
       },
-      {
-        name: "keywords",
-        content:
-          "certificado digital A1, certificado digital CPF, certificado digital CNPJ, certificado A1 129,90, certificado digital online, certificado digital videoconferência, ICP-Brasil, certificado digital barato",
-      },
       { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:site_name", content: "Emita Go" },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://emitago.vercel.app/certificado-digital" },
       { property: "og:title", content: "Certificado Digital A1 CPF e CNPJ por R$ 129,90" },
@@ -62,11 +59,6 @@ export const Route = createFileRoute("/certificado-digital")({
             priceCurrency: "BRL",
             availability: "https://schema.org/InStock",
             url: "https://emitago.vercel.app/certificado-digital",
-          },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "820",
           },
         }),
       },
