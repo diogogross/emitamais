@@ -10,7 +10,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
-import faviconEmita from "@/assets/favicon-emita.png.asset.json";
+import faviconEmita from "@/assets/emita-mark.svg";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -28,14 +28,14 @@ export const Route = createFileRoute("/blog/")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://emissorfiscal.lovable.app/blog" },
+      { property: "og:url", content: "https://emitago.vercel.app/blog" },
       { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
       { property: "og:description", content: "Guias, novidades e boas práticas para acelerar sua emissão fiscal." },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Blog Fiscal — Emita Mais" },
       { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e certificado digital A1." },
     ],
-    links: [{ rel: "canonical", href: "https://emissorfiscal.lovable.app/blog" }],
+    links: [{ rel: "canonical", href: "https://emitago.vercel.app/blog" }],
   }),
   component: BlogPage,
 });
@@ -67,7 +67,7 @@ function BlogPage() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={faviconEmita.url} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
+            <img src={faviconEmita} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
             Emita Mais
           </Link>
           <Link
