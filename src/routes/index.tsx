@@ -1072,6 +1072,8 @@ function Index() {
             Acessar o blog completo <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
+      </div></section>
+
       {/* FAQ */}
       <section id="faq" className="section-light section-connector w-full" data-reveal="right">
         <div className="max-w-5xl mx-auto px-6 py-20 md:py-24">
@@ -1126,7 +1128,7 @@ function Index() {
         </div>
       </section>
 
-}
+      {/* CTA */}
       <section className="section-dark section-connector w-full" data-reveal="scale"><div className="max-w-7xl mx-auto px-6 py-24">
         <div
           className="glass-card p-10 md:p-16 text-center relative overflow-hidden glow-ring"
