@@ -29,26 +29,45 @@ export const Route = createFileRoute("/blog/$slug")({
     const { post } = loaderData;
     const url = `${BASE_URL}/blog/${params.slug}`;
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
+    const publishedDate = new Date(post.date).toISOString().slice(0, 10);
     return {
       meta: [
         { title: `${post.title} | Blog Emita Mais` },
         { name: "description", content: post.excerpt },
         { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
-        { name: "author", content: "Emita Mais" },
+        { name: "author", content: post.author },
+        { name: "article:section", content: post.category },
+        { property: "og:locale", content: "pt_BR" },
+        { property: "og:site_name", content: "Emita Go" },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
         { property: "og:image", content: image },
-        { property: "article:published_time", content: post.date },
-        { property: "article:author", content: "Emita Mais" },
+        { property: "og:image:alt", content: post.title },
+        { property: "article:published_time", content: publishedDate },
+        { property: "article:modified_time", content: publishedDate },
+        { property: "article:author", content: post.author },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: post.title },
         { name: "twitter:description", content: post.excerpt },
         { name: "twitter:image", content: image },
+        { name: "twitter:image:alt", content: post.title },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Início", item: BASE_URL + "/" },
+              { "@type": "ListItem", position: 2, name: "Blog Fiscal", item: BASE_URL + "/blog" },
+              { "@type": "ListItem", position: 3, name: post.title, item: url },
+            ],
+          }),
+        },
         {
           type: "application/ld+json",
           children: JSON.stringify({
@@ -88,7 +107,10 @@ function ArticleNotFound() {
 
 function ArticlePage() {
   const { post } = Route.useLoaderData();
-  const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const related = [
+    ...blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category),
+    ...blogPosts.filter((p) => p.slug !== post.slug && p.category !== post.category),
+  ].slice(0, 3);
 
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden" style={{ background: "var(--gradient-hero)" }}>
