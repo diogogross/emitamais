@@ -88,11 +88,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF ou CNPJ por R$ 129,90, 100% online, sem token e sem sair de casa.",
       },
-      {
-        name: "keywords",
-        content:
-          "emissor de notas fiscais, emissor de nota fiscal online, sistema emissor de NFe, NFCe online, NFSe online, CTe, MDFe, CIOT, certificado digital A1, certificado digital CNPJ, certificado digital CPF, certificado digital 129,90, emitir nota fiscal, emitir NFe, emissor fiscal",
-      },
       { name: "author", content: "Emita Mais" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       { name: "google", content: "notranslate" },
