@@ -91,26 +91,48 @@ import docCiot from "@/assets/docs/ciot.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Emissor de Notas Fiscais + Certificado A1 R$ 129,90" },
+      {
+        title: "Emita Go | Emissor de Nota Fiscal Online + Certificado A1",
+      },
       {
         name: "description",
         content:
-          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos com o Emita Go. Certificado Digital A1 CPF ou CNPJ por R$ 129,90, 100% online por videoconferência.",
+          "Emissor de nota fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT. Emita notas pelo computador, celular ou Smart POS e compre seu Certificado Digital A1 online.",
       },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
+      { name: "author", content: "Emita Go" },
+      { name: "application-name", content: "Emita Go" },
+      { name: "theme-color", content: "#24113f" },
+      { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://emitago.vercel.app" },
-      { property: "og:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1 por R$ 129,90" },
+      { property: "og:site_name", content: "Emita Go" },
+      { property: "og:url", content: "https://emitago.vercel.app/" },
+      {
+        property: "og:title",
+        content: "Emita Go | Emissor de Nota Fiscal Online + Certificado A1",
+      },
       {
         property: "og:description",
         content:
-          "Sistema emissor de NFe, NFCe, NFSe, CTe, MDFe e CIOT + Certificado Digital A1 CPF/CNPJ por R$ 129,90. 100% online, sem token.",
+          "Emissão de NFe, NFCe, NFSe, CTe, MDFe e CIOT online, com PDV e acesso pelo celular. Certificado Digital A1 CPF ou CNPJ disponível online.",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
-      { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado A1 CPF/CNPJ por R$ 129,90." },
+      {
+        name: "twitter:title",
+        content: "Emita Go | Emissor de Nota Fiscal Online + Certificado A1",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Emissor fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT + Certificado Digital A1.",
+      },
     ],
     links: [
       { rel: "canonical", href: "https://emitago.vercel.app/" },
+      { rel: "alternate", hrefLang: "pt-BR", href: "https://emitago.vercel.app/" },
       { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
     ],
     scripts: [
@@ -118,37 +140,77 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Emita Go",
+          url: "https://emitago.vercel.app/",
+          inLanguage: "pt-BR",
+          description:
+            "Emissor de nota fiscal online para empresas brasileiras, com emissão de documentos fiscais e Certificado Digital A1.",
+          publisher: {
+            "@type": "Organization",
+            name: "Emita Go",
+            url: "https://emitago.vercel.app/",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "SoftwareApplication",
           name: "Emita Go",
           applicationCategory: "BusinessApplication",
-          operatingSystem: "Web",
-          description:
-            "Sistema online para emissão de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, NFPe, CIOT) e certificado digital A1.",
+          applicationSubCategory: "Fiscal invoicing software",
+          operatingSystem: "Web, Android",
           url: "https://emitago.vercel.app/",
           inLanguage: "pt-BR",
-          offers: [
-            {
-              "@type": "Offer",
-              name: "Plano Emita Go — notas fiscais ilimitadas",
-              price: "60.00",
-              priceCurrency: "BRL",
-              url: "https://emitago.vercel.app/#planos",
-              category: "SaaS",
-            },
-            {
-              "@type": "Offer",
-              name: "Certificado Digital A1 CPF ou CNPJ",
-              price: "129.90",
-              priceCurrency: "BRL",
-              url: "https://emitago.vercel.app/certificado-digital",
-              category: "Certificado Digital",
-            },
+          description:
+            "Sistema online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT.",
+          featureList: [
+            "Emissão de NFe",
+            "Emissão de NFCe",
+            "Emissão de NFSe",
+            "Emissão de CTe e CTeOS",
+            "Emissão de MDFe",
+            "Emissão de NFPe",
+            "CIOT",
+            "PDV online",
+            "Integração com meios de pagamento",
+            "Acesso pelo celular, tablet e computador",
           ],
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "1200",
+          offers: {
+            "@type": "Offer",
+            name: "Plano Emita Go",
+            price: "60.00",
+            priceCurrency: "BRL",
+            url: "https://emitago.vercel.app/#planos",
           },
+          provider: {
+            "@type": "Organization",
+            name: "Emita Go",
+            url: "https://emitago.vercel.app/",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Emita Go | Emissor de Nota Fiscal Online",
+          url: "https://emitago.vercel.app/",
+          inLanguage: "pt-BR",
+          description:
+            "Página oficial do Emita Go, emissor de notas fiscais online e soluções de Certificado Digital A1.",
+          isPartOf: {
+            "@type": "WebSite",
+            name: "Emita Go",
+            url: "https://emitago.vercel.app/",
+          },
+          about: [
+            { "@type": "Thing", name: "Emissão de nota fiscal eletrônica" },
+            { "@type": "Thing", name: "Certificado Digital A1" },
+          ],
         }),
       },
       {
@@ -211,7 +273,7 @@ export const Route = createFileRoute("/")({
     ],
   }),
   component: Index,
-});
+});;
 
 const docTypes = [
   { name: "NFe", desc: "Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ.", icon: FileText, image: docNfe },
@@ -1455,8 +1517,8 @@ function HeroSlide1() {
       imageFit="contain"
       alt="Empresário brasileiro usando o Emita Go em um notebook"
       eyebrow="Plataforma completa de emissão fiscal"
-      title="A tecnologia fiscal"
-      titleAccent="que acelera a sua operação."
+      title="Emissor de nota fiscal online"
+      titleAccent="que acelera sua operação."
       description="Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação."
       ctaLabel="Conferir planos"
       ctaHref="#planos"
