@@ -21,21 +21,56 @@ export const Route = createFileRoute("/blog/")({
         content:
           "Guias práticos sobre emissão de NFe, NFCe, NFSe, CTe, MDFe, CIOT e certificado digital A1 CPF e CNPJ. Conteúdo para empresas, transportadoras e contadores.",
       },
-      {
-        name: "keywords",
-        content:
-          "blog fiscal, como emitir NFe, como emitir NFCe, guia CTe, guia MDFe, certificado digital A1, notas fiscais eletrônicas, contabilidade digital",
-      },
       { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:site_name", content: "Emita Go" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://emitago.vercel.app/blog" },
       { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
-      { property: "og:description", content: "Guias, novidades e boas práticas para acelerar sua emissão fiscal." },
+      { property: "og:description", content: "Guias práticos sobre NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado Digital A1 para empresas e profissionais." },
+      { property: "og:image", content: blogPosts[0].image },
+      { property: "og:image:alt", content: blogPosts[0].title },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Blog Fiscal — Emita Mais" },
-      { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e certificado digital A1." },
+      { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e Certificado Digital A1." },
+      { name: "twitter:image", content: blogPosts[0].image },
+      { name: "twitter:image:alt", content: blogPosts[0].title },
     ],
     links: [{ rel: "canonical", href: "https://emitago.vercel.app/blog" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "@id": "https://emitago.vercel.app/blog#webpage",
+          name: "Blog Fiscal Emita Go",
+          url: "https://emitago.vercel.app/blog",
+          inLanguage: "pt-BR",
+          isPartOf: { "@id": "https://emitago.vercel.app/#website" },
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: blogPosts.map((post, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              url: `https://emitago.vercel.app/blog/${post.slug}`,
+              name: post.title,
+            })),
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Início", item: "https://emitago.vercel.app/" },
+            { "@type": "ListItem", position: 2, name: "Blog Fiscal", item: "https://emitago.vercel.app/blog" },
+          ],
+        }),
+      },
+    ],
   }),
   component: BlogPage,
 });
