@@ -30,9 +30,10 @@ export const Route = createFileRoute("/blog/$slug")({
     const url = `${BASE_URL}/blog/${params.slug}`;
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
     const publishedDate = new Date(post.date).toISOString().slice(0, 10);
+    const seoTitle = post.title.length <= 55 ? post.title + " | Emita Go" : post.title;
     return {
       meta: [
-        { title: `${post.title} | Blog Emita Mais` },
+        { title: seoTitle },
         { name: "description", content: post.excerpt },
         { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
         { name: "author", content: post.author },
