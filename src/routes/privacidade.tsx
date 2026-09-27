@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ShieldCheck, Sparkles } from "lucide-react";
-import logoEmissor from "@/assets/logo-emita-mais.png.asset.json";
+import logoEmissor from "@/assets/emita-mark.svg";
 
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
@@ -299,7 +299,7 @@ function PrivacidadePage() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={logoEmissor.url} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
+            <img src={logoEmissor} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
             Emita Mais
           </Link>
           <Link to="/" className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition">
