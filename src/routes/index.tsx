@@ -1365,6 +1365,7 @@ function HeroFullBleed({
   secondaryHref,
   stats,
   eager = false,
+  imageFit = "cover",
 }: {
   image: string;
   alt: string;
@@ -1379,6 +1380,7 @@ function HeroFullBleed({
   secondaryHref: string;
   stats: [string, string][];
   eager?: boolean;
+  imageFit?: "cover" | "contain";
 }) {
   const CtaEl: any = ctaTo ? Link : "a";
   const ctaProps: any = ctaTo ? { to: ctaTo } : { href: ctaHref };
@@ -1393,7 +1395,7 @@ function HeroFullBleed({
           : { loading: "lazy" as const })}
         width={1920}
         height={1088}
-        className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+        className={`hidden md:block absolute inset-0 w-full h-full ${imageFit === "contain" ? "object-contain object-center" : "object-cover object-center"}`}
       />
       {/* Dark gradient overlay for legibility (desktop only) */}
       <div
@@ -1447,6 +1449,7 @@ function HeroSlide1() {
   return (
     <HeroFullBleed
       image={heroPerson}
+      imageFit="contain"
       alt="Empresário brasileiro usando o Emita Go em um notebook"
       eyebrow="Plataforma completa de emissão fiscal"
       title="A tecnologia fiscal"
@@ -1470,6 +1473,7 @@ function HeroSlide2() {
   return (
     <HeroFullBleed
       image={heroPerson2}
+      imageFit="contain"
       alt="Consultora apresentando certificado digital A1 no smartphone"
       eyebrow="Certificado Digital A1 CPF e CNPJ"
       title="Seu certificado digital"
@@ -1536,6 +1540,7 @@ function HeroSlide5() {
   return (
     <HeroFullBleed
       image={heroMaquininha}
+      imageFit="contain"
       alt="Comerciante emitindo NFCe direto da maquininha Android"
       eyebrow="Cupom fiscal na maquininha"
       title="NFCe direto da"
