@@ -188,6 +188,18 @@
   color: var(--muted-foreground) !important;
 }
 
+.section-light .text-muted-foreground {
+  color: #475569 !important;
+}
+.section-light [class~="text-foreground/90"],
+.section-light [class~="text-foreground/85"],
+.section-light [class~="text-foreground/80"] {
+  color: #1e293b !important;
+}
+.section-light .text-foreground {
+  color: #0f172a !important;
+}
+
 /* Prevent legacy hard-coded white text from becoming invisible inside light sections. */
 .section-light :is(h1,h2,h3,h4,h5,h6,p,a,span,div)[class~="text-white"] {
   color: var(--foreground) !important;
