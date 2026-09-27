@@ -15,7 +15,7 @@ import {
   Wifi,
   Target,
 } from "lucide-react";
-import logoEmissor from "@/assets/logo-emita-mais.png.asset.json";
+import logoEmissor from "@/assets/emita-mark.svg";
 
 export const Route = createFileRoute("/certificado-digital")({
   head: () => ({
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/certificado-digital")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://emissorfiscal.lovable.app/certificado-digital" },
+      { property: "og:url", content: "https://emitago.vercel.app/certificado-digital" },
       { property: "og:title", content: "Certificado Digital A1 CPF e CNPJ por R$ 129,90" },
       {
         property: "og:description",
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/certificado-digital")({
       { name: "twitter:title", content: "Certificado Digital A1 CPF/CNPJ por R$ 129,90" },
       { name: "twitter:description", content: "Emissão 100% online por videoconferência. 12 meses de validade." },
     ],
-    links: [{ rel: "canonical", href: "https://emissorfiscal.lovable.app/certificado-digital" }],
+    links: [{ rel: "canonical", href: "https://emitago.vercel.app/certificado-digital" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -61,7 +61,7 @@ export const Route = createFileRoute("/certificado-digital")({
             price: "129.90",
             priceCurrency: "BRL",
             availability: "https://schema.org/InStock",
-            url: "https://emissorfiscal.lovable.app/certificado-digital",
+            url: "https://emitago.vercel.app/certificado-digital",
           },
           aggregateRating: {
             "@type": "AggregateRating",
@@ -76,8 +76,8 @@ export const Route = createFileRoute("/certificado-digital")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Início", item: "https://emissorfiscal.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Certificado Digital A1", item: "https://emissorfiscal.lovable.app/certificado-digital" },
+            { "@type": "ListItem", position: 1, name: "Início", item: "https://emitago.vercel.app/" },
+            { "@type": "ListItem", position: 2, name: "Certificado Digital A1", item: "https://emitago.vercel.app/certificado-digital" },
           ],
         }),
       },
@@ -135,7 +135,7 @@ function CertificadoDigital() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={logoEmissor.url} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
+            <img src={logoEmissor} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
             Emita Mais
           </Link>
           <Link
