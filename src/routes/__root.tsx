@@ -11,8 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import indexCss from "../index.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+
 import { FloatingActions } from "../components/FloatingActions";
+import brandMark from "@/assets/emita-mark.svg";
+import ogImage from "@/assets/hero-person.webp";
 
 function NotFoundComponent() {
   return (
@@ -40,7 +42,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    console.error("Erro no limite da aplicação:", error);
   }, [error]);
 
   return (
@@ -102,15 +104,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
       { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF/CNPJ por R$ 129,90." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/14bc8027-cdd7-4c7b-bf2c-d91349be351d/id-preview-0ee3ed8f--e17eda4c-f80b-47a5-ac6e-787cf4adb403.lovable.app-1783840968565.png" },
+      { property: "og:image", content: "${ogImage}" },
+      { name: "twitter:image", content: "${ogImage}" },
+      { property: "og:image", content: "${ogImage}" },
+      { name: "twitter:image", content: "${ogImage}" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: indexCss },
-      { rel: "icon", href: "/__l5e/assets-v1/6bd3b22c-eb7f-4948-a188-618670dbc09e/favicon-emita.png", type: "image/png" },
+      { rel: "icon", href: brandMark, type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -126,21 +128,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "https://emissorfiscal.lovable.app/#organization",
+              "@id": "https://emitago.vercel.app/#organization",
               name: "Emita Mais",
-              url: "https://emissorfiscal.lovable.app/",
-              logo: "https://emissorfiscal.lovable.app/__l5e/assets-v1/44e9e993-f68d-4f21-9edf-bae00c5ca8da/logo-emita-mais.png",
+              url: "https://emitago.vercel.app/",
+              logo: "https://emitago.vercel.app/__l5e/assets-v1/44e9e993-f68d-4f21-9edf-bae00c5ca8da/logo-emita-mais.png",
               description:
                 "Sistema emissor de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, CIOT) e certificado digital A1 CPF e CNPJ.",
               areaServed: "BR",
             },
             {
               "@type": "WebSite",
-              "@id": "https://emissorfiscal.lovable.app/#website",
-              url: "https://emissorfiscal.lovable.app/",
+              "@id": "https://emitago.vercel.app/#website",
+              url: "https://emitago.vercel.app/",
               name: "Emita Mais",
               inLanguage: "pt-BR",
-              publisher: { "@id": "https://emissorfiscal.lovable.app/#organization" },
+              publisher: { "@id": "https://emitago.vercel.app/#organization" },
             },
           ],
         }),
