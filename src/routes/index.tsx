@@ -535,7 +535,7 @@ function Index() {
           <div className="lg:col-span-5 relative order-2 lg:order-1">
             <div className="relative mx-auto w-full max-w-md lg:max-w-none rounded-[2rem] overflow-hidden ring-1 ring-white/10 shadow-[0_30px_80px_-20px_rgba(120,60,255,0.5)]">
               <img
-                src={womanPointing.url}
+                src={womanPointing}
                 alt="Especialista do Emita Go apresentando os tipos de documentos fiscais"
                 loading="lazy"
                 width={1280}
@@ -1383,7 +1383,7 @@ function HeroFullBleed({
   const CtaEl: any = ctaTo ? Link : "a";
   const ctaProps: any = ctaTo ? { to: ctaTo } : { href: ctaHref };
   return (
-    <div className="relative overflow-hidden min-h-[520px] md:min-h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)]">
+    <div className="relative overflow-hidden h-[520px] md:h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)]">
       {/* Background image (hidden on mobile) */}
       <img
         src={image}
@@ -1393,7 +1393,7 @@ function HeroFullBleed({
           : { loading: "lazy" as const })}
         width={1920}
         height={1088}
-        className="hidden md:block absolute inset-0 w-full h-full object-cover"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
       />
       {/* Dark gradient overlay for legibility (desktop only) */}
       <div
@@ -1404,7 +1404,7 @@ function HeroFullBleed({
         }}
       />
       {/* Content — mobile: centered text only; desktop: bottom-left over image */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-14 py-12 md:py-14 flex flex-col justify-center md:justify-end min-h-[520px] md:min-h-[600px] md:max-w-none">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-14 py-12 md:py-14 flex flex-col justify-center md:justify-end h-[520px] md:h-[600px] md:max-w-none">
         <div className="md:max-w-3xl">
           <div className="mb-3 text-xs md:text-sm uppercase tracking-[0.24em] font-semibold text-white/75">
             {eyebrow}
