@@ -171,7 +171,7 @@
 .section-light .glow-ring { box-shadow: 0 0 0 1px oklch(0 0 0 / 0.06), 0 30px 60px -30px rgba(30,15,60,0.25); }
 
 /* Prevent legacy hard-coded white text from becoming invisible inside light sections. */
-.section-light :is(h1,h2,h3,h4,h5,h6,p,a,span,div)[class*="text-white"] {
+.section-light :is(h1,h2,h3,h4,h5,h6,p,a,span,div)[class~="text-white"] {
   color: var(--foreground) !important;
   text-shadow: none !important;
 }
