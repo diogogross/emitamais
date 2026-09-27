@@ -110,7 +110,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado A1 CPF/CNPJ por R$ 129,90." },
     ],
     links: [
-      { rel: "canonical", href: "https://emissorfiscal.lovable.app/" },
+      { rel: "canonical", href: "https://emitago.vercel.app/" },
       { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
     ],
     scripts: [
@@ -124,7 +124,7 @@ export const Route = createFileRoute("/")({
           operatingSystem: "Web",
           description:
             "Sistema online para emissão de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, NFPe, CIOT) e certificado digital A1.",
-          url: "https://emissorfiscal.lovable.app/",
+          url: "https://emitago.vercel.app/",
           inLanguage: "pt-BR",
           offers: [
             {
@@ -132,7 +132,7 @@ export const Route = createFileRoute("/")({
               name: "Plano Emita Go — notas fiscais ilimitadas",
               price: "60.00",
               priceCurrency: "BRL",
-              url: "https://emissorfiscal.lovable.app/#planos",
+              url: "https://emitago.vercel.app/#planos",
               category: "SaaS",
             },
             {
@@ -140,7 +140,7 @@ export const Route = createFileRoute("/")({
               name: "Certificado Digital A1 CPF ou CNPJ",
               price: "129.90",
               priceCurrency: "BRL",
-              url: "https://emissorfiscal.lovable.app/certificado-digital",
+              url: "https://emitago.vercel.app/certificado-digital",
               category: "Certificado Digital",
             },
           ],
@@ -1383,7 +1383,7 @@ function HeroFullBleed({
   const CtaEl: any = ctaTo ? Link : "a";
   const ctaProps: any = ctaTo ? { to: ctaTo } : { href: ctaHref };
   return (
-    <div className="relative overflow-hidden min-h-[520px] md:min-h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)] md:bg-transparent">
+    <div className="relative overflow-hidden min-h-[520px] md:min-h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)]">
       {/* Background image (hidden on mobile) */}
       <img
         src={image}
@@ -1406,6 +1406,9 @@ function HeroFullBleed({
       {/* Content — mobile: centered text only; desktop: bottom-left over image */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-14 py-12 md:py-14 flex flex-col justify-center md:justify-end min-h-[520px] md:min-h-[600px] md:max-w-none">
         <div className="md:max-w-3xl">
+          <div className="mb-3 text-xs md:text-sm uppercase tracking-[0.24em] font-semibold text-white/75">
+            {eyebrow}
+          </div>
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.05] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
             {title} <span className="gradient-text">{titleAccent}</span>
           </h1>
