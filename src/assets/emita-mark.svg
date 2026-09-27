@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Emita Go</title>
+  <desc id="desc">Marca Emita Go</desc>
+  <defs>
+    <linearGradient id="g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="0.58" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#F5C542"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="17" fill="#17102B"/>
+  <path d="M18 18h22.5a8.5 8.5 0 0 1 0 17H27v11H18V18Zm9 7v3h12a1.5 1.5 0 0 0 0-3H27Z" fill="url(#g)"/>
+  <circle cx="47" cy="47" r="4" fill="#F5C542"/>
+</svg>
