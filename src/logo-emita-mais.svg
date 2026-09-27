@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" role="img" aria-labelledby="title">
+<title id="title">Emita Mais</title>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+<g transform="translate(6 7)">
+<rect x="0" y="0" width="86" height="86" rx="23" fill="url(#g)"/>
+<path d="M25 22h36v9H35v9h23v9H35v9h27v9H25z" fill="#fff"/>
+<path d="M48 18l18 18-7 7-18-18z" fill="#fff" opacity=".92"/>
+</g>
+<text x="108" y="62" font-family="Inter,Arial,sans-serif" font-size="43" font-weight="800" fill="#fff">Emita <tspan fill="#a78bfa">Mais</tspan></text>
+</svg>
