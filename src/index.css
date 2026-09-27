@@ -235,3 +235,24 @@ iframe[src*="lovable"] {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Contrast guard: never allow light-section text to inherit white-on-white styles. */
+.section-light [class~="text-white"],
+.section-light [class*="text-white/"] {
+  color: #15131c !important;
+}
+
+.section-light [class*="bg-white/"] {
+  background-color: rgb(15 23 42 / 0.045) !important;
+}
+
+.section-light [class*="border-white/"],
+.section-light [class*="ring-white/"] {
+  border-color: rgb(15 23 42 / 0.12) !important;
+  --tw-ring-color: rgb(15 23 42 / 0.12) !important;
+}
+
+.section-light .hover\\:text-white:hover,
+.section-light [class*="hover:text-white"]:hover {
+  color: #15131c !important;
+}
