@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://volta-fiscal-art.lovable.app/sitemap.xml
+Sitemap: https://emitago.vercel.app/sitemap.xml
