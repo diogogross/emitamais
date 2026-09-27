@@ -159,34 +159,50 @@ export const Route = createFileRoute("/")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "O Emita Go emite quais notas fiscais?",
+              name: "O Emita Go funciona para qualquer segmento?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT — tudo em um único sistema, 100% online e integrado com a SEFAZ.",
+                text: "Sim. O Emita Go atende comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
               },
             },
             {
               "@type": "Question",
-              name: "Quanto custa o Certificado Digital A1?",
+              name: "Quais documentos fiscais o Emita Go emite?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O Certificado Digital A1 para CPF ou CNPJ custa R$ 129,90, com 12 meses de validade e emissão 100% online por videoconferência.",
+                text: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT, conforme a operação e a integração fiscal disponível.",
               },
             },
             {
               "@type": "Question",
-              name: "Quanto custa o plano do Emita Go?",
+              name: "Preciso instalar algum programa para usar o sistema?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "R$ 60,00 por mês com notas fiscais e empresas ilimitadas, sem taxa por documento nem taxa de setup.",
+                text: "Não. O Emita Go funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
               },
             },
             {
               "@type": "Question",
-              name: "Precisa instalar algum programa para emitir nota fiscal?",
+              name: "Quantas notas e empresas posso emitir?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Não. O Emita Go é 100% online e funciona direto do navegador, em qualquer computador, tablet ou celular.",
+                text: "O plano apresentado no site inclui emissão de notas e empresas ilimitadas, sem cobrança por documento e sem taxa de setup.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Vocês atendem NFSe da minha cidade?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "O Emita Go possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Quanto custa e como funciona o Certificado Digital A1?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "O Certificado Digital A1 para CPF ou CNPJ custa R$ 129,90, tem validade de 12 meses e pode ser emitido 100% online por videoconferência.",
               },
             },
           ],
@@ -617,7 +633,7 @@ function Index() {
             <h2 className="font-display text-4xl md:text-5xl font-bold">
               Do PDV ao mobile — <span className="gradient-text">sem perder controle.</span>
             </h2>
-            <p className="mt-5 text-muted-foreground text-lg">
+            <p className="mt-5 text-slate-700 text-lg leading-relaxed">
               Dashboard da empresa, PDV e emissores móveis. Mesma experiência fluida em qualquer tela.
             </p>
             <ul className="mt-8 space-y-3">
@@ -627,11 +643,11 @@ function Index() {
                 "Cadastros simplificados de produtos, clientes e empresas",
                 "Emissão em lote e envio automático por e-mail",
               ].map((t) => (
-                <li key={t} className="flex items-start gap-3 text-sm">
-                  <span className="mt-0.5 w-5 h-5 rounded-full grid place-items-center" style={{ background: "var(--gradient-primary)" }}>
+                <li key={t} className="flex items-start gap-3 text-sm text-slate-800">
+                  <span className="mt-0.5 w-5 h-5 rounded-full grid place-items-center shrink-0" style={{ background: "var(--gradient-primary)" }}>
                     <Check className="w-3 h-3 text-white" />
                   </span>
-                  <span className="text-foreground/90">{t}</span>
+                  <span className="font-medium">{t}</span>
                 </li>
               ))}
             </ul>
@@ -1056,76 +1072,61 @@ function Index() {
             Acessar o blog completo <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
-      </div></section>
-
-
-
       {/* FAQ */}
-      <section id="faq" className="section-light section-connector w-full" data-reveal="right"><div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Perguntas frequentes</div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold">
-            Tudo o que você precisa <span className="gradient-text">saber.</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground text-lg">
-            Duas colunas, duas soluções. Encontre respostas sobre o Emita Go e o Certificado Digital.
-          </p>
+      <section id="faq" className="section-light section-connector w-full" data-reveal="right">
+        <div className="max-w-5xl mx-auto px-6 py-20 md:py-24">
+          <div className="text-center max-w-2xl mx-auto">
+            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Perguntas frequentes</div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-950">
+              Tudo o que você precisa <span className="gradient-text">saber.</span>
+            </h2>
+            <p className="mt-4 text-slate-600 text-lg">
+              Respostas rápidas sobre o Emita Go e o Certificado Digital.
+            </p>
+          </div>
+
+          <div className="mt-10 space-y-3">
+            {[
+              {
+                q: "O Emita Go funciona para qualquer segmento?",
+                a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
+              },
+              {
+                q: "Quais documentos fiscais o Emita Go emite?",
+                a: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT, conforme a operação e a integração fiscal disponível.",
+              },
+              {
+                q: "Preciso instalar algum programa para usar o sistema?",
+                a: "Não. O Emita Go funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
+              },
+              {
+                q: "Quantas notas e empresas posso emitir?",
+                a: "O plano apresentado no site inclui emissão de notas e empresas ilimitadas, sem cobrança por documento e sem taxa de setup.",
+              },
+              {
+                q: "Vocês atendem NFSe da minha cidade?",
+                a: "O Emita Go possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
+              },
+              {
+                q: "Quanto custa e como funciona o Certificado Digital A1?",
+                a: "O Certificado Digital A1 para CPF ou CNPJ custa R$ 129,90, tem validade de 12 meses e pode ser emitido 100% online por videoconferência.",
+              },
+            ].map((item) => (
+              <details key={item.q} className="group rounded-2xl border border-slate-200 bg-white/90 px-5 py-4 shadow-sm open:pb-5">
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none [&_::-webkit-details-marker]:hidden">
+                  <span className="font-display text-base md:text-lg font-semibold text-slate-900">{item.q}</span>
+                  <span className="w-8 h-8 rounded-full grid place-items-center border border-slate-200 bg-slate-50 text-primary-glow transition group-open:rotate-45 shrink-0">
+                    <span className="text-lg leading-none">+</span>
+                  </span>
+                </summary>
+                <p className="mt-3 pr-10 text-sm text-slate-600 leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="mt-14 grid lg:grid-cols-2 gap-6">
-          {[
-            {
-              title: "Emita Go",
-              subtitle: "Sistema de emissão de notas",
-              items: [
-                { q: "O Emita Go funciona para qualquer segmento?", a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural — emitindo NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT em um único sistema." },
-                { q: "Preciso instalar algum programa?", a: "Não. O sistema é 100% online e roda no navegador — desktop, tablet ou celular. Também rodamos em maquininhas Smart POS Android homologadas." },
-                { q: "Quantas notas e empresas posso emitir?", a: "Notas fiscais e empresas ilimitadas, todas incluídas no plano único de R$ 60/mês. Sem taxa por documento e sem taxa de setup." },
-                { q: "Vocês atendem NFSe da minha cidade?", a: "Estamos integrados com mais de 1.600 municípios brasileiros. Consulte sua cidade com nosso time — novas prefeituras entram semanalmente." },
-                { q: "Como funciona o suporte?", a: "Suporte prioritário por chat, e-mail e WhatsApp, com time especialista em legislação fiscal. Também mantemos base de conhecimento e vídeos de treinamento." },
-                { q: "Consigo integrar com meu ERP ou e-commerce?", a: "Sim. Oferecemos API REST completa e webhooks para integrar com ERPs, e-commerces, marketplaces e sistemas próprios." },
-              ],
-            },
-            {
-              title: "Certificado Digital",
-              subtitle: "A1 e A3 · PJ, PF, NF e Bird ID",
-              items: [
-                { q: "Qual a diferença entre A1 e A3?", a: "O A1 é um arquivo digital instalado no computador, com validade de 1 ano. O A3 fica armazenado em token, cartão ou nuvem (Bird ID) e pode ter validade de 1 a 3 anos." },
-                { q: "Preciso ir até um posto para emitir?", a: "Não. A emissão é 100% online, com validação por videoconferência. Você só precisa de webcam, documentos em mãos e cerca de 15 minutos." },
-                { q: "Quanto tempo demora para receber?", a: "Após a validação, o certificado A1 é instalado na hora. Para modelos A3 com mídia física (token ou cartão), o envio leva de 3 a 7 dias úteis." },
-                { q: "Quais documentos preciso apresentar?", a: "Para PJ: contrato social, CNPJ e documento do titular. Para PF: RG, CPF e comprovante de endereço. Todos digitalizados e apresentados por videoconferência." },
-                { q: "O certificado funciona com qualquer sistema?", a: "Sim. É aceito por SEFAZ, Receita Federal, e-CAC, prefeituras, bancos, tribunais e todos os principais sistemas fiscais e contábeis do país." },
-                { q: "E se eu comprar o certificado com o Emissor?", a: "Ao adquirir o Certificado A1 PJ ou PF, você ganha o primeiro mês do Emita Go sem custo. Combo perfeito para começar a emitir na hora." },
-              ],
-            },
-          ].map((col) => (
-            <div key={col.title} className="flex flex-col">
-              <div className="mb-5 flex items-baseline gap-3">
-                <h3 className="font-display text-2xl md:text-3xl font-bold">{col.title}</h3>
-                <span className="text-xs text-muted-foreground">{col.subtitle}</span>
-              </div>
-              <div className="space-y-3 flex-1">
-                {col.items.map((item) => (
-                  <details key={item.q} className="glass-card px-6 py-5 group open:pb-6 [&_summary::-webkit-details-marker]:hidden">
-                    <summary className="flex items-center justify-between gap-4 cursor-pointer list-none">
-                      <span className="font-display text-base md:text-lg font-semibold text-foreground">{item.q}</span>
-                      <span className="w-8 h-8 rounded-full grid place-items-center border border-white/15 bg-white/5 text-primary-glow transition group-open:rotate-45 shrink-0">
-                        <span className="text-lg leading-none">+</span>
-                      </span>
-                    </summary>
-                    <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{item.a}</p>
-                  </details>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div></section>
-
-
-
-
-      {/* CTA */}
+}
       <section className="section-dark section-connector w-full" data-reveal="scale"><div className="max-w-7xl mx-auto px-6 py-24">
         <div
           className="glass-card p-10 md:p-16 text-center relative overflow-hidden glow-ring"
