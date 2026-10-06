@@ -276,12 +276,12 @@ export const Route = createFileRoute("/")({
 });;
 
 const docTypes = [
-  { name: "NFe", desc: "Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ.", icon: FileText, image: docNfe },
-  { name: "NFCe", desc: "PDV online integrado — cupom fiscal eletrônico para o varejo.", icon: ShoppingCart, image: docNfce },
-  { name: "NFSe", desc: "Nota de serviço integrada com +1.600 municípios brasileiros.", icon: Briefcase, image: docNfse },
-  { name: "CTe / CTeOS + CIOT", desc: "Conhecimento de transporte para cargas e operações de serviço, com CIOT integrado para operações de transporte rodoviário.", icon: Truck, image: docCte },
-  { name: "MDFe", desc: "Manifesto eletrônico de documentos fiscais para o transporte.", icon: ClipboardList, image: docMdfe },
-  { name: "NFPe", desc: "Nota fiscal do produtor rural, emissão simplificada e legalizada.", icon: Sprout, image: docNfpe },
+  { name: "NFe", slug: "nfe", desc: "Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ.", icon: FileText, image: docNfe },
+  { name: "NFCe", slug: "nfce", desc: "PDV online integrado — cupom fiscal eletrônico para o varejo.", icon: ShoppingCart, image: docNfce },
+  { name: "NFSe", slug: "nfse", desc: "Nota de serviço integrada com +1.600 municípios brasileiros.", icon: Briefcase, image: docNfse },
+  { name: "CTe / CTeOS + CIOT", slug: "cte", desc: "Conhecimento de transporte para cargas e operações de serviço, com CIOT integrado para operações de transporte rodoviário.", icon: Truck, image: docCte },
+  { name: "MDFe", slug: "mdfe", desc: "Manifesto eletrônico de documentos fiscais para o transporte.", icon: ClipboardList, image: docMdfe },
+  { name: "NFPe", slug: "nfpe", desc: "Nota fiscal do produtor rural, emissão simplificada e legalizada.", icon: Sprout, image: docNfpe },
 ];
 
 
@@ -414,9 +414,10 @@ function Index() {
               <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="min-w-[260px] rounded-2xl border border-white/10 bg-background/95 backdrop-blur-xl shadow-2xl p-2">
                   {docTypes.map((d) => (
-                    <a
+                    <Link
                       key={d.name}
-                      href="#documentos"
+                      to="/solucoes/$slug"
+                      params={{ slug: d.slug }}
                       className="flex items-start gap-3 rounded-xl px-3 py-2.5 hover:bg-white/5 transition"
                     >
                       <span className="mt-0.5 shrink-0 w-8 h-8 rounded-lg grid place-items-center bg-white/5 ring-1 ring-white/10">
@@ -426,7 +427,7 @@ function Index() {
                         <span className="block text-sm font-semibold text-foreground">{d.name}</span>
                         <span className="block text-xs text-muted-foreground line-clamp-1">{d.desc}</span>
                       </span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
