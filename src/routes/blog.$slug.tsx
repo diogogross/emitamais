@@ -29,7 +29,11 @@ export const Route = createFileRoute("/blog/$slug")({
     const { post } = loaderData;
     const url = `${BASE_URL}/blog/${params.slug}`;
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
-    const publishedDate = new Date(post.date).toISOString().slice(0, 10);
+    const months: Record<string, string> = { Jan: "01", Fev: "02", Mar: "03", Abr: "04", Mai: "05", Jun: "06", Jul: "07", Ago: "08", Set: "09", Out: "10", Nov: "11", Dez: "12" };
+    const dateParts = post.date.match(/^(\d{1,2})\s+(\w+)\s+(\d{4})$/);
+    const publishedDate = dateParts
+      ? `${dateParts[3]}-${months[dateParts[2]] ?? "01"}-${dateParts[1].padStart(2, "0")}`
+      : "2026-01-01";
     const seoTitle = post.title.length <= 55 ? post.title + " | Emita Mais" : post.title;
     return {
       meta: [
