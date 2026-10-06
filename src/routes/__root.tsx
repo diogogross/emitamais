@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#0f0722" },
-      { title: "Emita Go | Emissor de Notas Fiscais Online + Certificado A1" },
+      { title: "Emita Mais | Emissor de Notas Fiscais Online + Certificado A1" },
       {
         name: "description",
         content:
@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Emita Mais" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       { name: "google", content: "notranslate" },
-      { property: "og:site_name", content: "Emita Go" },
+      { property: "og:site_name", content: "Emita Mais" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
@@ -100,9 +100,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
       { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF/CNPJ por R$ 129,90." },
       { property: "og:image", content: ogImage },
-      { property: "og:image:alt", content: "Emita Go — emissor de notas fiscais online" },
+      { property: "og:image:alt", content: "Emita Mais — emissor de notas fiscais online" },
       { name: "twitter:image", content: ogImage },
-      { name: "twitter:image:alt", content: "Emita Go — emissor de notas fiscais online" },
+      { name: "twitter:image:alt", content: "Emita Mais — emissor de notas fiscais online" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -123,13 +123,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "https://emitago.vercel.app/#organization",
-              name: "Emita Go",
+              "@id": "https://emitago.com.br/#organization",
+              name: "Emita Mais",
               alternateName: "Emita Mais",
-              url: "https://emitago.vercel.app/",
+              url: "https://emitago.com.br/",
               logo: {
                 "@type": "ImageObject",
-                url: "https://emitago.vercel.app/favicon-emita.svg",
+                url: "https://emitago.com.br/favicon-emita.svg",
               },
               description:
                 "Sistema emissor de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, CIOT) e certificado digital A1 CPF e CNPJ.",
@@ -137,12 +137,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             },
             {
               "@type": "WebSite",
-              "@id": "https://emitago.vercel.app/#website",
-              url: "https://emitago.vercel.app/",
-              name: "Emita Go",
+              "@id": "https://emitago.com.br/#website",
+              url: "https://emitago.com.br/",
+              name: "Emita Mais",
               alternateName: "Emita Mais",
               inLanguage: "pt-BR",
-              publisher: { "@id": "https://emitago.vercel.app/#organization" },
+              publisher: { "@id": "https://emitago.com.br/#organization" },
             },
           ],
         }),
