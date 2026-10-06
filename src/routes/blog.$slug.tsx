@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { blogPosts, getPostBySlug, type BlogSection } from "@/lib/blog-posts";
 import faviconEmita from "@/assets/emita-mark.svg";
+import { solutionPages } from "@/lib/solution-pages";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -134,6 +135,13 @@ function ArticlePage() {
     ...blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category),
     ...blogPosts.filter((p) => p.slug !== post.slug && p.category !== post.category),
   ].slice(0, 3);
+  const categorySolution: Record<string, string> = {
+    "Notas Fiscais": "nfe",
+    "Transporte": "cte",
+    "Certificado Digital": "certificado-digital",
+  };
+  const solutionSlug = categorySolution[post.category];
+  const solution = solutionSlug ? solutionPages.find((page) => page.slug === solutionSlug) : undefined;
 
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden" style={{ background: "var(--gradient-hero)" }}>
@@ -225,6 +233,19 @@ function ArticlePage() {
           </div>
         </div>
       </section>
+
+      {solution && (
+        <section className="max-w-5xl mx-auto px-6 pb-16">
+          <div className="rounded-3xl border border-primary/30 bg-primary/5 p-8 md:p-10">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Solução Emita Mais</span>
+            <h2 className="mt-3 font-display text-2xl md:text-3xl font-bold">{solution.h1}</h2>
+            <p className="mt-3 max-w-2xl text-muted-foreground">{solution.description}</p>
+            <Link to="/solucoes/$slug" params={{ slug: solution.slug }} className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">
+              Conheça esta solução <ArrowUpRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* RELATED */}
       {related.length > 0 && (
