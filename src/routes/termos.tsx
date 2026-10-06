@@ -18,10 +18,10 @@ export const Route = createFileRoute("/termos")({
           "Condições que regem a contratação e uso da plataforma Emita Mais para emissão de documentos fiscais e certificados digitais.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://emitago.vercel.app/termos" },
+      { property: "og:url", content: "https://emitago.com.br/termos" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://emitago.vercel.app/termos" }],
+    links: [{ rel: "canonical", href: "https://emitago.com.br/termos" }],
   }),
   component: TermosPage,
 });
