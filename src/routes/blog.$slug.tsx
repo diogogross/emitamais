@@ -17,7 +17,7 @@ export const Route = createFileRoute("/blog/$slug")({
     return { post };
   },
   head: ({ loaderData, params }) => {
-    const BASE_URL = "https://emitago.vercel.app";
+    const BASE_URL = "https://emitago.com.br";
     if (!loaderData) {
       return {
         meta: [
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const url = `${BASE_URL}/blog/${params.slug}`;
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
     const publishedDate = new Date(post.date).toISOString().slice(0, 10);
-    const seoTitle = post.title.length <= 55 ? post.title + " | Emita Go" : post.title;
+    const seoTitle = post.title.length <= 55 ? post.title + " | Emita Mais" : post.title;
     return {
       meta: [
         { title: seoTitle },
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "author", content: post.author },
         { name: "article:section", content: post.category },
         { property: "og:locale", content: "pt_BR" },
-        { property: "og:site_name", content: "Emita Go" },
+        { property: "og:site_name", content: "Emita Mais" },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
@@ -87,7 +87,7 @@ export const Route = createFileRoute("/blog/$slug")({
             },
             publisher: {
               "@type": "Organization",
-              name: "Emita Go",
+              name: "Emita Mais",
               url: BASE_URL,
               logo: {
                 "@type": "ImageObject",
@@ -97,7 +97,7 @@ export const Route = createFileRoute("/blog/$slug")({
             articleSection: post.category,
             inLanguage: "pt-BR",
             mainEntityOfPage: { "@type": "WebPage", "@id": url },
-            isPartOf: { "@id": "https://emitago.vercel.app/blog" },
+            isPartOf: { "@id": "https://emitago.com.br/blog" },
           }),
         },
       ],
