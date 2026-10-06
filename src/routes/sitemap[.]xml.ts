@@ -29,7 +29,6 @@ export const Route = createFileRoute("/sitemap.xml")({
           })),
           ...blogPosts.map((p) => ({
             path: `/blog/${p.slug}`,
-            lastmod: new Date(p.date).toISOString().slice(0, 10),
             changefreq: "monthly" as const,
             priority: "0.7",
           })),
