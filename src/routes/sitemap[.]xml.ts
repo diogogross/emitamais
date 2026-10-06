@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { blogPosts } from "@/lib/blog-posts";
+import { solutionPages } from "@/lib/solution-pages";
 
 const BASE_URL = "https://emitago.com.br";
 
@@ -21,9 +22,13 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/blog", changefreq: "weekly", priority: "0.8" },
           { path: "/privacidade", changefreq: "yearly", priority: "0.4" },
           { path: "/termos", changefreq: "yearly", priority: "0.4" },
+          ...solutionPages.map((p) => ({
+            path: `/solucoes/${p.slug}`,
+            changefreq: "monthly" as const,
+            priority: "0.8",
+          })),
           ...blogPosts.map((p) => ({
             path: `/blog/${p.slug}`,
-            lastmod: new Date(p.date).toISOString().slice(0, 10),
             changefreq: "monthly" as const,
             priority: "0.7",
           })),
