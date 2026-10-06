@@ -28,9 +28,9 @@ export const Route = createFileRoute("/certificado-digital")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:site_name", content: "Emita Go" },
+      { property: "og:site_name", content: "Emita Mais" },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://emitago.vercel.app/certificado-digital" },
+      { property: "og:url", content: "https://emitago.com.br/certificado-digital" },
       { property: "og:title", content: "Certificado Digital A1 CPF e CNPJ por R$ 129,90" },
       {
         property: "og:description",
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/certificado-digital")({
       { name: "twitter:title", content: "Certificado Digital A1 CPF/CNPJ por R$ 129,90" },
       { name: "twitter:description", content: "Emissão 100% online por videoconferência. 12 meses de validade." },
     ],
-    links: [{ rel: "canonical", href: "https://emitago.vercel.app/certificado-digital" }],
+    links: [{ rel: "canonical", href: "https://emitago.com.br/certificado-digital" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -58,7 +58,7 @@ export const Route = createFileRoute("/certificado-digital")({
             price: "129.90",
             priceCurrency: "BRL",
             availability: "https://schema.org/InStock",
-            url: "https://emitago.vercel.app/certificado-digital",
+            url: "https://emitago.com.br/certificado-digital",
           },
         }),
       },
@@ -68,8 +68,8 @@ export const Route = createFileRoute("/certificado-digital")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Início", item: "https://emitago.vercel.app/" },
-            { "@type": "ListItem", position: 2, name: "Certificado Digital A1", item: "https://emitago.vercel.app/certificado-digital" },
+            { "@type": "ListItem", position: 1, name: "Início", item: "https://emitago.com.br/" },
+            { "@type": "ListItem", position: 2, name: "Certificado Digital A1", item: "https://emitago.com.br/certificado-digital" },
           ],
         }),
       },
