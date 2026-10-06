@@ -100,6 +100,7 @@ export interface FileRouteTypes {
     | '/termos'
     | '/blog/$slug'
     | '/blog/'
+    | '/solucoes/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -109,6 +110,7 @@ export interface FileRouteTypes {
     | '/termos'
     | '/blog/$slug'
     | '/blog'
+    | '/solucoes/$slug'
   id:
     | '__root__'
     | '/'
