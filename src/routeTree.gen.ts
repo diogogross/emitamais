@@ -120,6 +120,7 @@ export interface FileRouteTypes {
     | '/termos'
     | '/blog/$slug'
     | '/blog/'
+    | '/solucoes/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -182,6 +183,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/$slug': {
+      id: '/solucoes/$slug'
+      path: '/solucoes/$slug'
+      fullPath: '/solucoes/$slug'
+      preLoaderRoute: typeof SolucoesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
