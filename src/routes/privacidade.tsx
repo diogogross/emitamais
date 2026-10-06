@@ -18,10 +18,10 @@ export const Route = createFileRoute("/privacidade")({
           "Como o Emita Mais trata dados pessoais, cookies, finalidades, bases legais e direitos do titular segundo a LGPD.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://emitago.vercel.app/privacidade" },
+      { property: "og:url", content: "https://emitago.com.br/privacidade" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://emitago.vercel.app/privacidade" }],
+    links: [{ rel: "canonical", href: "https://emitago.com.br/privacidade" }],
   }),
   component: PrivacidadePage,
 });
