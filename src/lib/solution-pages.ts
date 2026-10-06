@@ -65,6 +65,23 @@ export const solutionPages: SolutionPage[] = [
     relatedSlugs: ["nfse-servicos"]
   },
   {
+    slug: "nfpe",
+    title: "NFPe — Nota Fiscal do Produtor Rural",
+    seoTitle: "NFPe Online: emissão de Nota Fiscal do Produtor Rural | Emita Mais",
+    description: "Emita NFPe online e organize a documentação fiscal da produção rural em uma plataforma simples e acessível.",
+    h1: "NFPe online para o produtor rural",
+    intro: "Centralize a emissão e a organização dos documentos fiscais da produção rural, com acesso online e rotina simplificada.",
+    benefits: ["Emissão online de NFPe", "Cadastro de produtos e operações", "Organização dos documentos fiscais", "Acesso por navegador", "Histórico para consulta"],
+    audience: ["Produtores rurais", "Agricultores", "Pequenas propriedades", "Operações de comercialização rural"],
+    steps: ["Cadastre os dados do produtor.", "Configure produtos e informações fiscais.", "Informe os dados da operação.", "Emita e acompanhe o documento fiscal.", "Mantenha os documentos organizados para consulta."],
+    faq: [
+      { question: "O que é NFPe?", answer: "NFPe é a Nota Fiscal Eletrônica utilizada em operações relacionadas ao produtor rural, conforme as regras fiscais aplicáveis." },
+      { question: "Posso acessar o sistema pelo celular?", answer: "O Emita Mais é uma plataforma online e responsiva, permitindo acesso por dispositivos compatíveis." },
+      { question: "A emissão depende das regras do estado?", answer: "Sim. Documentos fiscais do produtor rural podem seguir regras e integrações específicas de cada estado." }
+    ],
+    relatedSlugs: ["nfe-passo-a-passo"]
+  },
+  {
     slug: "cte",
     title: "CTe e CTeOS — Documentos de Transporte",
     seoTitle: "CTe Online: emita CTe e CTeOS | Emita Mais",
