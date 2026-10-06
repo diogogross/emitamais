@@ -16,6 +16,7 @@ import { Route as CertificadoDigitalRouteImport } from './routes/certificado-dig
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as SolucoesSlugRouteImport } from './routes/solucoes.$slug'
 
 const TermosRoute = TermosRouteImport.update({
   id: '/termos',
@@ -52,6 +53,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesSlugRoute = SolucoesSlugRouteImport.update({
+  id: '/solucoes/$slug',
+  path: '/solucoes/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/termos': typeof TermosRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/solucoes/$slug': typeof SolucoesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/termos': typeof TermosRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
+  '/solucoes/$slug': typeof SolucoesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/termos': typeof TermosRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/solucoes/$slug': typeof SolucoesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -119,6 +128,7 @@ export interface RootRouteChildren {
   TermosRoute: typeof TermosRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  SolucoesSlugRoute: typeof SolucoesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -183,6 +193,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermosRoute: TermosRoute,
   BlogSlugRoute: BlogSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
+  SolucoesSlugRoute: SolucoesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
