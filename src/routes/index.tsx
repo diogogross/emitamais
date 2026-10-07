@@ -82,12 +82,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "EmitaGo | Emissor de Nota Fiscal Online + Certificado A1",
+        title: "EmitaGo | Emissor de Notas Fiscais Online",
       },
       {
         name: "description",
         content:
-          "Emissor de nota fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT. Emita notas pelo computador, celular ou Smart POS e compre seu Certificado Digital A1 online.",
+          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT online. PDV integrado, acesso pelo celular e Certificado Digital A1 para CPF ou CNPJ.",
       },
       {
         name: "robots",
@@ -102,22 +102,22 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://emitago.com.br/" },
       {
         property: "og:title",
-        content: "EmitaGo | Emissor de Nota Fiscal Online + Certificado A1",
+        content: "EmitaGo | Emissor de Notas Fiscais Online",
       },
       {
         property: "og:description",
         content:
-          "Emissão de NFe, NFCe, NFSe, CTe, MDFe e CIOT online, com PDV e acesso pelo celular. Certificado Digital A1 CPF ou CNPJ disponível online.",
+          "Emissão de NFe, NFCe, NFSe, CTe, MDFe e CIOT online, com PDV e acesso pelo celular. Certificado Digital A1 para CPF ou CNPJ.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "EmitaGo | Emissor de Nota Fiscal Online + Certificado A1",
+        content: "EmitaGo | Emissor de Notas Fiscais Online",
       },
       {
         name: "twitter:description",
         content:
-          "Emissor fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT + Certificado Digital A1.",
+          "Emissor fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT, com PDV e Certificado Digital A1.",
       },
     ],
     links: [
