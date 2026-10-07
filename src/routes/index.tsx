@@ -20,6 +20,8 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronDown,
+  Menu,
+  X,
   KeyRound,
   Usb,
   HardDrive,
@@ -337,6 +339,7 @@ const testimonials = [
 
 function Index() {
   const progressRef = useRef<HTMLDivElement>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Scroll progress bar (rAF-throttled to avoid layout thrash per scroll event)
@@ -387,10 +390,10 @@ function Index() {
 
       <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold">
+          <Link to="/" className="flex items-center gap-2.5 font-display text-xl font-bold" aria-label="EmitaGo — início">
             <img src={faviconEmita} alt="EmitaGo" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
-            <span>Emita <span className="gradient-text">Mais</span></span>
-          </a>
+            <span>Emita<span className="gradient-text">Go</span></span>
+          </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <div className="relative group">
               <button
@@ -401,7 +404,7 @@ function Index() {
                 EmitaGo
                 <ChevronDown className="w-3.5 h-3.5 transition group-hover:rotate-180" />
               </button>
-              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
                 <div className="min-w-[260px] rounded-2xl border border-white/10 bg-background/95 backdrop-blur-xl shadow-2xl p-2">
                   {docTypes.map((d) => (
                     <Link
@@ -429,12 +432,40 @@ function Index() {
 
           <a
             href="#planos"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
+            className="hidden md:inline-flex group items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
             Acessar sistema
             <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
+
+          <button
+            type="button"
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10 transition"
+            aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </nav>
+
+        {mobileMenuOpen && (
+          <div
+            id="mobile-navigation"
+            className="md:hidden mx-4 mt-1 rounded-2xl border border-white/10 bg-background/95 p-3 shadow-2xl backdrop-blur-xl"
+          >
+            <div className="grid gap-1">
+              <a href="#documentos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Documentos fiscais</a>
+              <a href="#certificado" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Certificado Digital</a>
+              <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Planos</a>
+              <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Blog</Link>
+              <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition">
+                Acessar sistema <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* HERO SLIDER */}
