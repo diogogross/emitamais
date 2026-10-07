@@ -17,6 +17,9 @@ import {
 } from "lucide-react";
 import logoEmissor from "@/assets/emita-mark.svg";
 
+const WHATSAPP_URL =
+  "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
+
 export const Route = createFileRoute("/certificado-digital")({
   head: () => ({
     meta: [
