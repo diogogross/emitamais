@@ -10,6 +10,9 @@ import {
 import { blogPosts, getPostBySlug, type BlogSection } from "@/lib/blog-posts";
 import faviconEmita from "@/assets/emita-mark.svg";
 
+const WHATSAPP_URL =
+  "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
+
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const post = getPostBySlug(params.slug);
@@ -212,20 +215,23 @@ function ArticlePage() {
             Emita todos os documentos fiscais em um único sistema — moderno, online e sem taxa por nota.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              to="/"
-              hash="planos"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
               Começar agora <ArrowUpRight className="w-4 h-4" />
-            </Link>
-            <Link
-              to="/certificado-digital"
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition"
             >
               Emitir certificado digital
-            </Link>
+            </a>
           </div>
         </div>
       </section>
