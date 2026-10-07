@@ -59,6 +59,9 @@ import docCte from "@/assets/docs/cte.jpg";
 import docMdfe from "@/assets/docs/mdfe.jpg";
 import docNfpe from "@/assets/docs/nfpe.jpg";
 
+const WHATSAPP_URL =
+  "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -370,7 +373,9 @@ function Index() {
           </div>
 
           <a
-            href="#planos"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:inline-flex group items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
             Ver planos
@@ -399,7 +404,7 @@ function Index() {
               <a href="#certificado" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Certificado Digital</a>
               <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Planos</a>
               <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Blog</Link>
-              <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition">
                 Ver planos <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
@@ -643,7 +648,7 @@ function Index() {
           <div className="text-sm text-muted-foreground">
             <span className="text-foreground font-medium">Extras inclusos:</span> TEF, Multiempresas, IBPT automático, XML para contabilidade.
           </div>
-          <a href="#planos" className="text-sm font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all">
             Ver planos <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -794,7 +799,7 @@ function Index() {
             <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="text-foreground font-medium">Smart POS</span>
               Android com NFCe integrada.
-              <a href="#planos" className="ml-auto font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="ml-auto font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all">
                 Quero minha Smart POS <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -832,14 +837,16 @@ function Index() {
                 <span className="font-display text-3xl font-bold gradient-text leading-none">129,90</span>
               </div>
             </div>
-            <Link
-              to="/certificado-digital"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-accent-foreground hover:scale-[1.03] transition shrink-0"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
               Emitir agora
               <ArrowUpRight className="w-5 h-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+            </a>
           </div>
         </div>
       </div></section>
@@ -882,7 +889,9 @@ function Index() {
               ))}
             </ul>
             <a
-              href="#planos"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-full py-3 font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
@@ -920,14 +929,16 @@ function Index() {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/certificado-digital"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-full py-3 font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
               Adquirir certificado
               <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -1072,13 +1083,15 @@ function Index() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#planos"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
               Começar agora <ArrowUpRight className="w-4 h-4" />
             </a>
-            <a href="#planos" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
               Ver planos e condições
             </a>
           </div>
@@ -1102,7 +1115,9 @@ function Index() {
               Emissão fiscal online com documentos fiscais, PDV e Certificado Digital A1 em uma única plataforma.
             </p>
             <a
-              href="#planos"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 transition"
             >
               Conhecer os planos <ArrowUpRight className="w-4 h-4" />
@@ -1243,8 +1258,12 @@ function HeroFullBleed({
   eager?: boolean;
   imageFit?: "cover" | "contain";
 }) {
-  const CtaEl: any = ctaTo ? Link : "a";
-  const ctaProps: any = ctaTo ? { to: ctaTo } : { href: ctaHref };
+  const CtaEl: any = "a";
+  const ctaProps: any = {
+    href: WHATSAPP_URL,
+    target: "_blank",
+    rel: "noopener noreferrer",
+  };
   return (
     <div className="relative overflow-hidden h-[560px] md:h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)]">
       {/* The image remains inside the slide on every viewport. On mobile it stays in the visual composition instead of entering normal flow. */}
@@ -1323,7 +1342,7 @@ function HeroSlide1() {
       titleAccent="que acelera sua operação."
       description="Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação."
       ctaLabel="Conferir planos"
-      ctaHref="#planos"
+      ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver o produto"
       secondaryHref="#produto"
       stats={[
@@ -1347,7 +1366,7 @@ function HeroSlide2() {
       titleAccent="por apenas R$ 129,90."
       description="Emissão A1 CPF ou CNPJ 100% online por videoconferência, sem token, sem cartão e sem leitora. Pronto em minutos."
       ctaLabel="Emitir por R$ 129,90"
-      ctaTo="/certificado-digital"
+      ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver todos os modelos"
       secondaryHref="/certificado-digital"
       stats={[
@@ -1369,7 +1388,7 @@ function HeroSlide3() {
       titleAccent="sem nota travada."
       description="CTe, MDFe e CIOT emitidos em segundos, integrados com SEFAZ e ANTT. Um único sistema para toda a operação de cargas."
       ctaLabel="Começar agora"
-      ctaHref="#planos"
+      ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver documentos"
       secondaryHref="#documentos"
       stats={[
@@ -1391,7 +1410,7 @@ function HeroSlide4() {
       titleAccent="+1.600 municípios."
       description="Emita nota de serviço da sua cidade em segundos. Integração direta com a prefeitura, sem precisar acessar portal externo."
       ctaLabel="Emitir NFSe agora"
-      ctaHref="#planos"
+      ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver documentos"
       secondaryHref="#documentos"
       stats={[
@@ -1414,7 +1433,7 @@ function HeroSlide5() {
       titleAccent="sua maquininha."
       description="Venda, receba e emita o cupom fiscal na mesma tela, com PDV integrado para Smart POS Android."
       ctaLabel="Testar na maquininha"
-      ctaHref="#planos"
+      ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver documentos"
       secondaryHref="#documentos"
       stats={[
@@ -1436,7 +1455,7 @@ function HeroSlide6() {
       titleAccent="segundos."
       description="Emissão de Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ, XML pronto para a contabilidade e DANFE em PDF."
       ctaLabel="Emitir NFe agora"
-      ctaHref="#planos"
+      ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver documentos"
       secondaryHref="#documentos"
       stats={[

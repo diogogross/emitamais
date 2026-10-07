@@ -159,7 +159,7 @@ function CertificadoDigital() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="#emitir"
+                href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold text-accent-foreground hover:scale-[1.02] transition"
                 style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
               >
@@ -212,7 +212,7 @@ function CertificadoDigital() {
             </ul>
 
             <a
-              href="#emitir"
+              href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
               className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full py-3.5 font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
@@ -286,7 +286,7 @@ function CertificadoDigital() {
                   <span className="text-xs text-muted-foreground ml-1">/ 12 meses</span>
                 </div>
                 <a
-                  href="#emitir"
+                  href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
                   className="text-sm font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all"
                 >
                   Quero esse <ArrowRight className="w-4 h-4" />
@@ -384,7 +384,7 @@ function CertificadoDigital() {
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#emitir"
+              href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-9 py-4 text-base font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
