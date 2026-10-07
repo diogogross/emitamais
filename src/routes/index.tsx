@@ -458,9 +458,9 @@ function Index() {
       {/* CLIENTES marquee */}
       <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 relative z-10">
         <div className="text-center mb-6 px-6">
-          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Nossos clientes</div>
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Segmentos atendidos</div>
           <h2 className="font-display text-2xl md:text-3xl font-bold">
-            Clientes que <span className="gradient-text">acreditam</span> no nosso potencial
+            Soluções para diferentes <span className="gradient-text">tipos de negócio</span>
           </h2>
         </div>
         <div className="relative">
