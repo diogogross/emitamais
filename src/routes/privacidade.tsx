@@ -5,17 +5,17 @@ import logoEmissor from "@/assets/emita-mark.svg";
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade — Emita Mais" },
+      { title: "Política de Privacidade — EmitaGo" },
       {
         name: "description",
         content:
-          "Política de Privacidade do Emita Mais em conformidade com a LGPD e as diretrizes do Google. Saiba como coletamos, usamos e protegemos seus dados.",
+          "Política de Privacidade do EmitaGo em conformidade com a LGPD e as diretrizes do Google. Saiba como coletamos, usamos e protegemos seus dados.",
       },
-      { property: "og:title", content: "Política de Privacidade — Emita Mais" },
+      { property: "og:title", content: "Política de Privacidade — EmitaGo" },
       {
         property: "og:description",
         content:
-          "Como o Emita Mais trata dados pessoais, cookies, finalidades, bases legais e direitos do titular segundo a LGPD.",
+          "Como o EmitaGo trata dados pessoais, cookies, finalidades, bases legais e direitos do titular segundo a LGPD.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://emitago.com.br/privacidade" },
@@ -33,7 +33,7 @@ const sections = [
     body: (
       <>
         <p>
-          O <strong>Emita Mais</strong> ("nós", "nosso" ou "plataforma") é um serviço online de emissão de
+          O <strong>EmitaGo</strong> ("nós", "nosso" ou "plataforma") é um serviço online de emissão de
           documentos fiscais (NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT) e comercialização de certificados
           digitais. Esta Política de Privacidade descreve como coletamos, usamos, compartilhamos e protegemos as
           informações pessoais dos usuários da nossa plataforma e do nosso site.
@@ -273,7 +273,7 @@ const sections = [
         </p>
         <div className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm">
           <div><strong>E-mail:</strong> privacidade@emissorfiscal.com.br</div>
-          <div className="mt-1"><strong>Empresa:</strong> Emita Mais</div>
+          <div className="mt-1"><strong>Empresa:</strong> EmitaGo</div>
         </div>
         <p className="mt-3 text-sm text-muted-foreground">
           Você também pode registrar uma reclamação junto à Autoridade Nacional de Proteção de Dados (ANPD)
@@ -299,8 +299,8 @@ function PrivacidadePage() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={logoEmissor} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
-            Emita Mais
+            <img src={logoEmissor} alt="EmitaGo" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
+            EmitaGo
           </Link>
           <Link to="/" className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition">
             <ArrowLeft className="w-4 h-4" /> Voltar
