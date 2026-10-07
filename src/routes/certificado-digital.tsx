@@ -56,6 +56,7 @@ export const Route = createFileRoute("/certificado-digital")({
             "Certificado Digital A1 para pessoa física (CPF) ou pessoa jurídica (CNPJ), emitido 100% online por videoconferência ICP-Brasil, com 12 meses de validade.",
           brand: { "@type": "Brand", name: "EmitaGo" },
           category: "Certificado Digital ICP-Brasil",
+          image: ["https://emitago.com.br/assets/hero-person-DiH1ND3b.webp"],
           offers: {
             "@type": "Offer",
             price: "129.90",
