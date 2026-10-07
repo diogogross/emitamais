@@ -340,20 +340,12 @@
   .section-connector::before,
   .section-connector::after { display: none; }
   .scroll-progress { display: none; }
+  .animate-float,
+  .animate-pulse-glow,
+  .animate-marquee,
+  .hero-slide-vertical,
+  .hero-slide-vertical img { animation: none !important; }
 }
 
 
 
-/* Testimonials marquee */
-@keyframes testimonials-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.testimonials-track {
-  animation: testimonials-scroll 40s linear infinite;
-  width: max-content;
-}
-.testimonials-track:hover { animation-play-state: paused; }
-@media (prefers-reduced-motion: reduce) {
-  .testimonials-track { animation: none; }
-}
