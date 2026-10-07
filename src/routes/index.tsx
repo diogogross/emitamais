@@ -1357,19 +1357,30 @@ function HeroSlider() {
           {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : i === 2 ? <HeroSlide3 /> : i === 3 ? <HeroSlide4 /> : i === 4 ? <HeroSlide5 /> : <HeroSlide6 />}
         </div>
 
-        {/* Dots (right side, vertical) */}
-        <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2 z-30">
-          {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
-            <button
-              key={idx}
-              type="button"
-              onClick={() => setI(idx)}
-              aria-label={`Ir para slide ${idx + 1}`}
-              className={`w-2 rounded-full transition-all ${
-                idx === i ? "h-10 bg-primary-glow" : "h-2.5 bg-white/40 hover:bg-white/60"
-              }`}
-            />
-          ))}
+        {/* Controles do carrossel: dots + pausa acessível */}
+        <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-3 z-30">
+          <button
+            type="button"
+            onClick={() => setPaused((value) => !value)}
+            aria-label={paused ? "Continuar apresentação automática" : "Pausar apresentação automática"}
+            className="grid place-items-center w-9 h-9 rounded-full bg-black/35 backdrop-blur border border-white/15 text-white text-xs font-semibold hover:bg-black/55 transition"
+          >
+            {paused ? "▶" : "Ⅱ"}
+          </button>
+          <div className="flex flex-col items-center justify-center gap-2">
+            {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => setI(idx)}
+                aria-label={`Ir para slide ${idx + 1}`}
+                aria-current={idx === i ? "true" : undefined}
+                className={`w-2 rounded-full transition-all ${
+                  idx === i ? "h-10 bg-primary-glow" : "h-2.5 bg-white/40 hover:bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
       </div>
