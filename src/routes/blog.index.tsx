@@ -140,7 +140,7 @@ function BlogHeroSlider() {
   const s = heroSlides[i];
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-10">
+    <section className="max-w-7xl mx-auto px-6 py-10" aria-label="Destaques do blog fiscal">
       <div className="relative glass-card overflow-hidden glow-ring">
         <div className="relative aspect-[16/9] md:aspect-[21/9]">
           {heroSlides.map((slide, idx) => (
@@ -150,7 +150,16 @@ function BlogHeroSlider() {
                 idx === i ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             >
-              <img src={slide.image} alt={slide.title} className="absolute inset-0 w-full h-full object-cover" />
+              <img
+                src={slide.image}
+                alt={slide.title}
+                loading={idx === i ? "eager" : "lazy"}
+                decoding="async"
+                fetchPriority={idx === i ? "high" : "auto"}
+                width={1600}
+                height={900}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/10" />
               <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14 max-w-3xl">
                 <span className="inline-flex self-start items-center gap-1.5 rounded-full bg-white/10 backdrop-blur px-3 py-1 text-[11px] uppercase tracking-widest text-white ring-1 ring-white/15 mb-4">
@@ -196,6 +205,7 @@ function BlogHeroSlider() {
               type="button"
               onClick={() => setI(idx)}
               aria-label={`Ir para slide ${idx + 1}`}
+              aria-current={idx === i ? "true" : undefined}
               className={`h-2 rounded-full transition-all ${
                 idx === i ? "w-8 bg-primary-glow" : "w-2 bg-white/40 hover:bg-white/60"
               }`}
