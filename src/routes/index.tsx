@@ -1129,105 +1129,54 @@ function Index() {
       </div></section>
 
       {/* FOOTER */}
-      <footer className="relative mt-20 border-t border-white/10 bg-[oklch(0.14_0.05_285)]">
+      <footer className="relative mt-16 border-t border-white/10 bg-[oklch(0.14_0.05_285)]">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-px"
           style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent)" }}
         />
 
-        {/* Top: brand + columns */}
-        <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 grid gap-12 md:grid-cols-12">
-          {/* Brand / Quem somos */}
-          <div className="md:col-span-4">
+        <div className="max-w-7xl mx-auto px-6 py-12 md:py-14 grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-6">
             <div className="flex items-center gap-3">
-              <img src={faviconEmita} alt="EmitaGo" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
+              <img src={faviconEmita} alt="EmitaGo" width={36} height={36} loading="lazy" className="w-9 h-9 object-contain" />
               <div className="font-display text-xl font-bold text-white">EmitaGo</div>
             </div>
-            <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-sm">
-              Emissão fiscal online para empresas, com documentos fiscais, PDV e Certificado Digital A1
-              em uma única plataforma. Acesse pelo computador, celular ou tablet e simplifique sua rotina fiscal.
+            <p className="mt-4 text-sm leading-relaxed text-white/65 max-w-lg">
+              Emissão fiscal online com documentos fiscais, PDV e Certificado Digital A1 em uma única plataforma.
             </p>
-
-            <div className="mt-6 flex flex-wrap gap-4 text-xs text-white/70">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-primary-glow" />
-                Emissão 100% online
-              </div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
-                <FileText className="w-3.5 h-3.5 text-primary-glow" />
-                Documentos fiscais em um só lugar
-              </div>
-            </div>
+            <a
+              href="#planos"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 transition"
+            >
+              Conhecer os planos <ArrowUpRight className="w-4 h-4" />
+            </a>
           </div>
 
-          {/* Empresa */}
-          <div className="md:col-span-2">
-            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Empresa</div>
-            <ul className="mt-5 space-y-3 text-sm text-white/75">
+          <div className="md:col-span-3">
+            <div className="text-xs uppercase tracking-widest text-white/45 font-semibold">Navegação</div>
+            <ul className="mt-4 space-y-2.5 text-sm text-white/70">
               <li><a href="#produto" className="hover:text-white transition">O produto</a></li>
               <li><a href="#documentos" className="hover:text-white transition">Documentos fiscais</a></li>
-              <li><Link to="/certificado-digital" className="hover:text-white transition">Certificado Digital</Link></li>
               <li><a href="#planos" className="hover:text-white transition">Planos</a></li>
+              <li><Link to="/certificado-digital" className="hover:text-white transition">Certificado Digital</Link></li>
               <li><Link to="/blog" className="hover:text-white transition">Blog</Link></li>
             </ul>
           </div>
 
-          {/* Soluções */}
-          <div className="md:col-span-2">
-            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Soluções</div>
-            <ul className="mt-5 space-y-3 text-sm text-white/75">
-              <li><a href="#documentos" className="hover:text-white transition">NF-e, NFC-e e NFS-e</a></li>
-              <li><a href="#documentos" className="hover:text-white transition">CT-e, MDF-e e CIOT</a></li>
-              <li><a href="#documentos" className="hover:text-white transition">NFPe</a></li>
-              <li><a href="#smartpos" className="hover:text-white transition">PDV & Maquininha</a></li>
-              <li><a href="#certificado" className="hover:text-white transition">Certificado Digital A1</a></li>
-              <li><Link to="/blog" className="hover:text-white transition">Guias fiscais</Link></li>
+          <div className="md:col-span-3">
+            <div className="text-xs uppercase tracking-widest text-white/45 font-semibold">Legal</div>
+            <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+              <li><Link to="/termos" className="hover:text-white transition">Termos de uso</Link></li>
+              <li><Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link></li>
+              <li><button onClick={openCookiePreferences} className="hover:text-white transition">Cookies e LGPD</button></li>
             </ul>
-          </div>
-
-          {/* Suporte */}
-          <div className="md:col-span-2">
-            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Suporte</div>
-            <ul className="mt-5 space-y-3 text-sm text-white/75">
-              <li><a href="#faq" className="hover:text-white transition">Perguntas frequentes</a></li>
-              <li><Link to="/blog" className="hover:text-white transition">Tutoriais e guias</Link></li>
-              <li><a href="#produto" className="hover:text-white transition">Conheça o produto</a></li>
-              <li><a href="#planos" className="hover:text-white transition">Planos e contratação</a></li>
-              <li><a href="#certificado" className="hover:text-white transition">Certificado Digital</a></li>
-              <li><a href="#documentos" className="hover:text-white transition">Documentos fiscais</a></li>
-            </ul>
-          </div>
-
-          {/* Atendimento */}
-          <div className="md:col-span-2">
-            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Atendimento</div>
-            <div className="mt-5 space-y-4 text-sm text-white/75">
-              <p className="leading-relaxed">
-                Precisa de ajuda para escolher a solução ideal para sua empresa?
-              </p>
-              <a
-                href="#planos"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 font-medium text-white hover:bg-white/10 transition"
-              >
-                Falar com especialista <ArrowUpRight className="w-4 h-4" />
-              </a>
-              <p className="text-xs text-white/50 leading-relaxed">
-                Os canais oficiais de atendimento devem ser informados aqui quando estiverem definidos.
-              </p>
-            </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
+          <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/50">
             <div>© {new Date().getFullYear()} EmitaGo. Todos os direitos reservados.</div>
-            <div className="flex flex-wrap items-center gap-5">
-              <Link to="/termos" className="hover:text-white transition">Termos de uso</Link>
-              <Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link>
-              <button onClick={openCookiePreferences} className="hover:text-white transition">Cookies</button>
-              <button onClick={openCookiePreferences} className="hover:text-white transition">LGPD</button>
-            </div>
+            <div>Emissor fiscal online para empresas brasileiras.</div>
           </div>
         </div>
       </footer>
