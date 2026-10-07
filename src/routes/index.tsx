@@ -504,7 +504,7 @@ function Index() {
               <div className="w-10 h-10 rounded-full border-2 border-current grid place-items-center opacity-70">
                 <Plus className="w-5 h-5" />
               </div>
-              <span className="text-sm font-medium">Mais de 60 segmentos atendidos</span>
+              <span className="text-sm font-medium">Diversos segmentos atendidos</span>
             </div>
           </div>
         </div>
@@ -763,7 +763,7 @@ function Index() {
               Venda direto na <span className="gradient-text">Smart POS</span>.
             </h2>
             <p className="mt-4 text-muted-foreground text-lg max-w-xl">
-              Nosso sistema PDV (NFCe) está homologado com as principais adquirentes do mercado — recebimento imediato, na mesma tela da emissão.
+              Nosso sistema PDV (NFCe) integra emissão fiscal e recebimento em Smart POS Android, conforme os meios de pagamento disponíveis no produto.
             </p>
 
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -796,8 +796,8 @@ function Index() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <span className="text-foreground font-medium">Homologado</span>
-              em maquininhas Android com NFCe integrada.
+              <span className="text-foreground font-medium">Smart POS</span>
+              Android com NFCe integrada.
               <a href="#planos" className="ml-auto font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all">
                 Quero minha Smart POS <ArrowRight className="w-4 h-4" />
               </a>
@@ -1033,7 +1033,7 @@ function Index() {
               },
               {
                 q: "Quantas notas e empresas posso emitir?",
-                a: "O plano apresentado no site inclui emissão de notas e empresas ilimitadas, sem cobrança por documento e sem taxa de setup.",
+                a: "Os limites, documentos e condições comerciais seguem o plano vigente apresentado no momento da contratação.",
               },
               {
                 q: "Vocês atendem NFSe da minha cidade?",
@@ -1416,7 +1416,7 @@ function HeroSlide5() {
       eyebrow="Cupom fiscal na maquininha"
       title="NFCe direto da"
       titleAccent="sua maquininha."
-      description="Venda, receba e emita o cupom fiscal na mesma tela. Homologado com as principais adquirentes Android — sem PDV extra."
+      description="Venda, receba e emita o cupom fiscal na mesma tela, com PDV integrado para Smart POS Android."
       ctaLabel="Testar na maquininha"
       ctaHref="#planos"
       secondaryLabel="Ver documentos"
