@@ -384,7 +384,7 @@ function CertificadoDigital() {
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#"
+              href="#emitir"
               className="inline-flex items-center gap-2 rounded-full px-9 py-4 text-base font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
