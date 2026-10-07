@@ -48,10 +48,8 @@ import { blogPosts } from "@/lib/blog-posts";
 import heroPerson2 from "@/assets/hero-person-2.webp";
 import dashboardMock from "@/assets/dashboard-real.jpg";
 import dashboardList from "@/assets/dashboard-list.jpg";
-import certificadoMock from "@/assets/screens/certificado-mock.jpg";
 import smartPos from "@/assets/smart-pos.webp";
 import smartPosFrame from "@/assets/smart-pos-frame.jpg";
-import brasilMap from "@/assets/brasil-map.webp";
 import dashEmpresa from "@/assets/screens/dash-empresa.png";
 import pdvScreen from "@/assets/screens/pdv.png";
 import nfeScreen from "@/assets/screens/nfe.png";
@@ -61,7 +59,6 @@ import docNfse from "@/assets/docs/nfse.jpg";
 import docCte from "@/assets/docs/cte.jpg";
 import docMdfe from "@/assets/docs/mdfe.jpg";
 import docNfpe from "@/assets/docs/nfpe.jpg";
-import docCiot from "@/assets/docs/ciot.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
