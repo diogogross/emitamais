@@ -44,7 +44,6 @@ import faviconEmita from "@/assets/emita-mark.svg";
 
 
 
-import { blogPosts } from "@/lib/blog-posts";
 import heroPerson2 from "@/assets/hero-person-2.webp";
 import dashboardMock from "@/assets/dashboard-real.jpg";
 import dashboardList from "@/assets/dashboard-list.jpg";
@@ -1254,7 +1253,7 @@ function HeroFullBleed({
         alt={alt}
         {...(eager
           ? { fetchPriority: "high" as const, decoding: "async" as const }
-          : { loading: "lazy" as const })}
+          : { loading: "lazy" as const, decoding: "async" as const })}
         width={1920}
         height={1088}
         className={`absolute inset-0 w-full h-full ${imageFit === "contain" ? "object-contain object-center" : "object-cover object-center"}`}
