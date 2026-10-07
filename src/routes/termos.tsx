@@ -5,17 +5,17 @@ import logoEmissor from "@/assets/emita-mark.svg";
 export const Route = createFileRoute("/termos")({
   head: () => ({
     meta: [
-      { title: "Termos de Uso — Emita Mais" },
+      { title: "Termos de Uso — EmitaGo" },
       {
         name: "description",
         content:
-          "Termos e condições de uso da plataforma Emita Mais: cadastro, planos, responsabilidades, propriedade intelectual, cancelamento e foro.",
+          "Termos e condições de uso da plataforma EmitaGo: cadastro, planos, responsabilidades, propriedade intelectual, cancelamento e foro.",
       },
-      { property: "og:title", content: "Termos de Uso — Emita Mais" },
+      { property: "og:title", content: "Termos de Uso — EmitaGo" },
       {
         property: "og:description",
         content:
-          "Condições que regem a contratação e uso da plataforma Emita Mais para emissão de documentos fiscais e certificados digitais.",
+          "Condições que regem a contratação e uso da plataforma EmitaGo para emissão de documentos fiscais e certificados digitais.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://emitago.com.br/termos" },
@@ -33,7 +33,7 @@ const sections = [
     body: (
       <>
         <p>
-          Ao acessar, cadastrar-se ou utilizar a plataforma <strong>Emita Mais</strong> ("plataforma",
+          Ao acessar, cadastrar-se ou utilizar a plataforma <strong>EmitaGo</strong> ("plataforma",
           "serviço", "nós"), você ("usuário", "contratante") declara ter lido, compreendido e aceito integralmente
           estes Termos de Uso e nossa{" "}
           <Link to="/privacidade" className="text-primary-glow underline">
@@ -52,7 +52,7 @@ const sections = [
     title: "2. Objeto",
     body: (
       <p>
-        O Emita Mais é um serviço online (SaaS) que permite a emissão, gestão e armazenamento de documentos
+        O EmitaGo é um serviço online (SaaS) que permite a emissão, gestão e armazenamento de documentos
         fiscais eletrônicos (NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe, CIOT) e a intermediação para aquisição de
         certificados digitais (A1 e A3) junto a Autoridades Certificadoras (AC) credenciadas pelo ICP-Brasil.
       </p>
@@ -114,7 +114,7 @@ const sections = [
   },
   {
     id: "responsabilidades-plataforma",
-    title: "6. Responsabilidades e limites do Emita Mais",
+    title: "6. Responsabilidades e limites do EmitaGo",
     body: (
       <>
         <p>Comprometemo-nos a:</p>
@@ -124,7 +124,7 @@ const sections = [
           <li>Prestar suporte técnico nos canais e horários informados no plano contratado.</li>
         </ul>
         <p className="mt-3">
-          O Emita Mais não se responsabiliza por: (i) indisponibilidade dos webservices da SEFAZ ou de
+          O EmitaGo não se responsabiliza por: (i) indisponibilidade dos webservices da SEFAZ ou de
           prefeituras; (ii) informações incorretas fornecidas pelo usuário; (iii) uso indevido da plataforma;
           (iv) prejuízos indiretos, lucros cessantes ou danos decorrentes de caso fortuito ou força maior.
         </p>
@@ -137,7 +137,7 @@ const sections = [
     body: (
       <p>
         Todo o conteúdo da plataforma — marca, logotipo, interface, código-fonte, textos, imagens e
-        documentação — é de propriedade exclusiva do Emita Mais, protegido pelas leis brasileiras de
+        documentação — é de propriedade exclusiva do EmitaGo, protegido pelas leis brasileiras de
         propriedade intelectual (Lei 9.279/1996 e Lei 9.610/1998). É vedada qualquer reprodução, distribuição ou
         exploração sem autorização prévia e por escrito.
       </p>
@@ -206,7 +206,7 @@ const sections = [
     title: "12. Contato",
     body: (
       <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm">
-        <div><strong>Empresa:</strong> Emita Mais</div>
+        <div><strong>Empresa:</strong> EmitaGo</div>
         <div className="mt-1"><strong>E-mail:</strong> contato@emissorfiscal.com.br</div>
         <div className="mt-1"><strong>Suporte:</strong> suporte@emissorfiscal.com.br</div>
       </div>
@@ -220,8 +220,8 @@ function TermosPage() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={logoEmissor} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
-            Emita Mais
+            <img src={logoEmissor} alt="EmitaGo" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
+            EmitaGo
           </Link>
           <Link to="/" className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition">
             <ArrowLeft className="w-4 h-4" /> Voltar
