@@ -1331,7 +1331,7 @@ function HeroSlider() {
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(() => setI((v) => (v + 1) % HERO_SLIDE_COUNT), 3000);
+    const t = setInterval(() => setI((v) => (v + 1) % HERO_SLIDE_COUNT), 6000);
     return () => clearInterval(t);
   }, [paused]);
 
