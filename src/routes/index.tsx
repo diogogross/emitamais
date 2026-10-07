@@ -1082,7 +1082,7 @@ function Index() {
             >
               Começar agora <ArrowUpRight className="w-4 h-4" />
             </a>
-            <a href="#" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
+            <a href="#planos" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
               Ver planos e condições
             </a>
           </div>
