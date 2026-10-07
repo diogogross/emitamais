@@ -36,16 +36,6 @@ import {
   ClipboardList,
   Sprout,
   Route as RouteIcon,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-  Award,
-  Users,
   Scissors,
   PawPrint,
   HardHat,
@@ -1270,7 +1260,7 @@ function Index() {
           <div className="md:col-span-2">
             <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Soluções</div>
             <ul className="mt-5 space-y-3 text-sm text-white/75">
-              <a href="#documentos" className="hover:text-white transition">NF-e, NFC-e e NFS-e</a>
+              <li><a href="#documentos" className="hover:text-white transition">NF-e, NFC-e e NFS-e</a></li>
               <li><a href="#documentos" className="hover:text-white transition">CT-e, MDF-e e CIOT</a></li>
               <li><a href="#documentos" className="hover:text-white transition">NFPe</a></li>
               <li><a href="#smartpos" className="hover:text-white transition">PDV & Maquininha</a></li>
