@@ -286,7 +286,7 @@ function CategoryRow({
                 <img
                   src={p.image}
                   alt={p.title}
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
