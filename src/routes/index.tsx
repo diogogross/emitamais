@@ -978,168 +978,70 @@ function Index() {
 
       </div></section>
 
-      {/* DEPOIMENTOS */}
-      <section id="depoimentos" className="section-dark section-connector w-full" data-reveal="up"><div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Depoimentos</div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold">
-            Quem usa, <span className="gradient-text">recomenda.</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground text-lg">
-            Empresas e profissionais que aceleraram sua rotina fiscal com o Emissor e o Certificado Digital.
-          </p>
-        </div>
+      {/* CONFIANÇA E CAPACIDADES */}
+      <section id="depoimentos" className="section-dark section-connector w-full" data-reveal="up">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Feito para a rotina fiscal</div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold">
+              Menos complexidade, <span className="gradient-text">mais controle.</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground text-lg">
+              Recursos pensados para empresas, contadores e profissionais que precisam emitir documentos fiscais com praticidade.
+            </p>
+          </div>
 
-        <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
-          <div className="testimonials-track flex gap-5">
-            {[...testimonials, ...testimonials].map((t, i) => (
-              <figure
-                key={`${t.name}-${i}`}
-                className="glass-card p-6 md:p-7 w-[320px] md:w-[380px] shrink-0 flex flex-col"
-              >
-                <div className="flex items-center gap-1 text-primary-glow mb-3">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <svg key={s} viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                      <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.2 2.8 1-5.9L1.5 7.7l5.9-.9L10 1.5z" />
-                    </svg>
-                  ))}
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              { title: "Operação online", text: "Acesse a emissão e a gestão fiscal de onde estiver, sem depender de instalação local.", icon: Cloud },
+              { title: "Documentos integrados", text: "Centralize NFe, NFCe, NFSe, CTe, MDFe e outros documentos em um único ambiente.", icon: FileText },
+              { title: "Mais produtividade", text: "Automatize tarefas da rotina fiscal e mantenha as informações organizadas em um só lugar.", icon: Zap },
+            ].map((item) => (
+              <article key={item.title} className="glass-card p-7">
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 ring-1 ring-primary/20 grid place-items-center mb-5">
+                  <item.icon className="w-5 h-5 text-primary-glow" />
                 </div>
-                <blockquote className="text-sm md:text-[15px] text-foreground/90 leading-relaxed flex-1">
-                  “{t.quote}”
-                </blockquote>
-                <figcaption className="mt-5 flex items-center gap-3">
-                  <div
-                    className="w-11 h-11 rounded-full grid place-items-center font-display font-bold text-white shrink-0"
-                    style={{ background: "var(--gradient-primary)" }}
-                  >
-                    {t.name.split(" ").map((n: string) => n[0]).slice(0, 2).join("")}
-                  </div>
-                  <div className="min-w-0">
-                    <div className="font-semibold text-sm text-foreground truncate">{t.name}</div>
-                    <div className="text-[11px] text-muted-foreground truncate">{t.role}</div>
-                  </div>
-                  <span className="ml-auto text-[10px] uppercase tracking-widest rounded-full px-2.5 py-1 bg-white/5 ring-1 ring-white/10 text-primary-glow shrink-0">
-                    {t.tag}
-                  </span>
-                </figcaption>
-              </figure>
+                <h3 className="font-display text-xl font-bold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+              </article>
             ))}
           </div>
         </div>
-      </div></section>
+      </section>
 
+      <section id="numeros" className="section-light section-connector w-full" data-reveal="left">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="glass-card p-8 md:p-14 relative overflow-hidden">
+            <div
+              className="absolute inset-0 -z-10 opacity-40"
+              style={{ background: "radial-gradient(circle at 20% 30%, oklch(0.7 0.25 305 / 0.35), transparent 60%)" }}
+            />
+            <div className="max-w-3xl">
+              <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Estrutura do produto</div>
+              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+                Uma plataforma fiscal <span className="gradient-text">completa.</span>
+              </h2>
+              <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
+                Emissão online, PDV, certificado digital e recursos para diferentes necessidades fiscais, com uma experiência simples de usar.
+              </p>
+            </div>
 
-      <section id="numeros" className="section-light section-connector w-full" data-reveal="left"><div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="glass-card p-8 md:p-14 grid lg:grid-cols-[1fr_1fr] gap-10 items-center relative overflow-hidden">
-          <div
-            className="absolute inset-0 -z-10 opacity-40"
-            style={{ background: "radial-gradient(circle at 20% 30%, oklch(0.7 0.25 305 / 0.35), transparent 60%)" }}
-          />
-          <div>
-            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Nossa força em números</div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Resultados que comprovam nossa <span className="gradient-text">solidez</span> no mercado.
-            </h2>
-
-            <div className="mt-10 grid grid-cols-2 gap-4">
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { value: "Todos", label: "estados do Brasil" },
-                { value: "+1.000", label: "cidades atendidas" },
-                { value: "+5", label: "anos de experiência" },
-                { value: "+500", label: "parceiros ativos" },
-                { value: "+R$280MM", label: "em notas emitidas/mês" },
-                { value: "+15.000", label: "empresas atendidas" },
-              ].map((s) => (
-                <div key={s.label} className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:-translate-y-0.5 transition">
-                  <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{s.value}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
+                ["NFe", "Nota Fiscal eletrônica"],
+                ["NFCe", "Nota para consumidor"],
+                ["NFSe", "Nota de serviço"],
+                ["CTe / MDFe", "Transporte e logística"],
+              ].map(([value, label]) => (
+                <div key={value} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div className="font-display text-2xl font-bold gradient-text">{value}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{label}</div>
                 </div>
               ))}
             </div>
           </div>
-
-          <div className="relative">
-            <div
-              className="absolute inset-0 -z-10 blur-3xl opacity-70"
-              style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.45), transparent 65%)" }}
-            />
-            <img
-              src={brasilMap}
-              alt="Mapa do Brasil com presença do EmitaGo em todos os estados"
-              width={1024}
-              height={1024}
-              loading="lazy"
-              className="w-full max-w-lg mx-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]"
-            />
-          </div>
         </div>
-      </div></section>
-
-      {/* BLOG */}
-      <section id="blog" className="section-dark section-connector w-full" data-reveal="up"><div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
-          <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Blog</div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Aprenda <span className="gradient-text">com quem entende</span> de fiscal.
-            </h2>
-            <p className="mt-4 text-muted-foreground text-lg">
-              Guias práticos sobre notas fiscais, transporte e certificado digital — direto ao ponto.
-            </p>
-          </div>
-          <Link
-            to="/blog"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
-          >
-            Ver todos os artigos
-            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-          {blogPosts.slice(0, 5).map((p) => (
-            <Link
-              key={p.slug}
-              to="/blog/$slug"
-              params={{ slug: p.slug }}
-              className="group relative overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/40 hover:-translate-y-1 transition"
-            >
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-widest text-white ring-1 ring-white/15">
-                  {p.category}
-                </span>
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <h3 className="font-display text-lg font-bold text-white leading-tight line-clamp-3">
-                    {p.title}
-                  </h3>
-                  <div className="mt-2 flex items-center gap-3 text-[11px] text-white/70">
-                    <span>{p.date}</span>
-                    <span>·</span>
-                    <span>{p.readMin} min</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-10 text-center">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground hover:scale-[1.02] transition"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Acessar o blog completo <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </div></section>
+      </section>
 
       {/* FAQ */}
       <section id="faq" className="section-light section-connector w-full" data-reveal="right">
