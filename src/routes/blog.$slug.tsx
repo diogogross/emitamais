@@ -241,7 +241,7 @@ function ArticlePage() {
                   <img
                     src={p.image}
                     alt={p.title}
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
@@ -291,7 +291,7 @@ function SectionRenderer({ section }: { section: BlogSection }) {
     case "image":
       return (
         <figure className="my-6">
-          <img src={section.src} alt={section.alt} className="w-full rounded-2xl ring-1 ring-white/10" loading="lazy" />
+          <img src={section.src} alt={section.alt} className="w-full rounded-2xl ring-1 ring-white/10" loading="lazy" decoding="async" />
           {section.caption && (
             <figcaption className="mt-2 text-sm text-muted-foreground text-center">{section.caption}</figcaption>
           )}
