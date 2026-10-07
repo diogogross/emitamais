@@ -15,11 +15,11 @@ import faviconEmita from "@/assets/emita-mark.svg";
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog Fiscal: NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
+      { title: "Blog Fiscal | NFe, NFCe, NFSe, CTe e Certificado Digital" },
       {
         name: "description",
         content:
-          "Guias práticos sobre emissão de NFe, NFCe, NFSe, CTe, MDFe, CIOT e certificado digital A1 CPF e CNPJ. Conteúdo para empresas, transportadoras e contadores.",
+          "Guias práticos sobre NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado Digital para empresas, transportadoras e contadores.",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:locale", content: "pt_BR" },
