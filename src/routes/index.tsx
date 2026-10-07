@@ -92,7 +92,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Emita Mais | Emissor de Nota Fiscal Online + Certificado A1",
+        title: "EmitaGo | Emissor de Nota Fiscal Online + Certificado A1",
       },
       {
         name: "description",
@@ -103,16 +103,16 @@ export const Route = createFileRoute("/")({
         name: "robots",
         content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
-      { name: "author", content: "Emita Mais" },
-      { name: "application-name", content: "Emita Mais" },
+      { name: "author", content: "EmitaGo" },
+      { name: "application-name", content: "EmitaGo" },
       { name: "theme-color", content: "#24113f" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Emita Mais" },
+      { property: "og:site_name", content: "EmitaGo" },
       { property: "og:url", content: "https://emitago.com.br/" },
       {
         property: "og:title",
-        content: "Emita Mais | Emissor de Nota Fiscal Online + Certificado A1",
+        content: "EmitaGo | Emissor de Nota Fiscal Online + Certificado A1",
       },
       {
         property: "og:description",
@@ -122,7 +122,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Emita Mais | Emissor de Nota Fiscal Online + Certificado A1",
+        content: "EmitaGo | Emissor de Nota Fiscal Online + Certificado A1",
       },
       {
         name: "twitter:description",
@@ -141,14 +141,14 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Emita Mais",
+          name: "EmitaGo",
           url: "https://emitago.com.br/",
           inLanguage: "pt-BR",
           description:
             "Emissor de nota fiscal online para empresas brasileiras, com emissão de documentos fiscais e Certificado Digital A1.",
           publisher: {
             "@type": "Organization",
-            name: "Emita Mais",
+            name: "EmitaGo",
             url: "https://emitago.com.br/",
           },
         }),
@@ -158,7 +158,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "Emita Mais",
+          name: "EmitaGo",
           applicationCategory: "BusinessApplication",
           applicationSubCategory: "Fiscal invoicing software",
           operatingSystem: "Web, Android",
@@ -180,14 +180,14 @@ export const Route = createFileRoute("/")({
           ],
           offers: {
             "@type": "Offer",
-            name: "Plano Emita Mais",
+            name: "Plano EmitaGo",
             price: "60.00",
             priceCurrency: "BRL",
             url: "https://emitago.com.br/#planos",
           },
           provider: {
             "@type": "Organization",
-            name: "Emita Mais",
+            name: "EmitaGo",
             url: "https://emitago.com.br/",
           },
         }),
@@ -197,14 +197,14 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          name: "Emita Mais | Emissor de Nota Fiscal Online",
+          name: "EmitaGo | Emissor de Nota Fiscal Online",
           url: "https://emitago.com.br/",
           inLanguage: "pt-BR",
           description:
-            "Página oficial do Emita Mais, emissor de notas fiscais online e soluções de Certificado Digital A1.",
+            "Página oficial do EmitaGo, emissor de notas fiscais online e soluções de Certificado Digital A1.",
           isPartOf: {
             "@type": "WebSite",
-            name: "Emita Mais",
+            name: "EmitaGo",
             url: "https://emitago.com.br/",
           },
           about: [
@@ -221,15 +221,15 @@ export const Route = createFileRoute("/")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "O Emita Mais funciona para qualquer segmento?",
+              name: "O EmitaGo funciona para qualquer segmento?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sim. O Emita Mais atende comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
+                text: "Sim. O EmitaGo atende comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
               },
             },
             {
               "@type": "Question",
-              name: "Quais documentos fiscais o Emita Mais emite?",
+              name: "Quais documentos fiscais o EmitaGo emite?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT, conforme a operação e a integração fiscal disponível.",
@@ -240,7 +240,7 @@ export const Route = createFileRoute("/")({
               name: "Preciso instalar algum programa para usar o sistema?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Não. O Emita Mais funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
+                text: "Não. O EmitaGo funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
               },
             },
             {
@@ -256,7 +256,7 @@ export const Route = createFileRoute("/")({
               name: "Vocês atendem NFSe da minha cidade?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O Emita Mais possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
+                text: "O EmitaGo possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
               },
             },
             {
@@ -316,7 +316,7 @@ const testimonials = [
     name: "Camila Duarte",
     role: "Contadora · Duarte Contábil",
     tag: "Emissor",
-    quote: "Como escritório, eu precisava de multiempresas ilimitadas sem taxa por CNPJ. O Emita Mais entrega isso — e o XML sai pronto pra minha contabilidade.",
+    quote: "Como escritório, eu precisava de multiempresas ilimitadas sem taxa por CNPJ. O EmitaGo entrega isso — e o XML sai pronto pra minha contabilidade.",
   },
   {
     name: "Fernando Alves",
@@ -398,7 +398,7 @@ function Index() {
       <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold">
-            <img src={faviconEmita} alt="Emita Mais" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
+            <img src={faviconEmita} alt="EmitaGo" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
             <span>Emita <span className="gradient-text">Mais</span></span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
@@ -408,7 +408,7 @@ function Index() {
                 className="hover:text-foreground transition inline-flex items-center gap-1"
                 aria-haspopup="true"
               >
-                Emita Mais
+                EmitaGo
                 <ChevronDown className="w-3.5 h-3.5 transition group-hover:rotate-180" />
               </button>
               <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -554,7 +554,7 @@ function Index() {
             <div className="glass-card p-2 glow-ring">
               <img
                 src={dashboardMock}
-                alt="Dashboard do sistema Emita Mais"
+                alt="Dashboard do sistema EmitaGo"
                 loading="lazy"
                 width={1600}
                 height={720}
@@ -564,7 +564,7 @@ function Index() {
             <div className="glass-card p-2 glow-ring mt-5 ml-8 md:ml-16 hidden sm:block">
               <img
                 src={dashboardList}
-                alt="Tela de listagem de notas fiscais do Emita Mais"
+                alt="Tela de listagem de notas fiscais do EmitaGo"
                 loading="lazy"
                 width={1600}
                 height={1008}
@@ -615,7 +615,7 @@ function Index() {
             <div className="relative mx-auto w-full max-w-md lg:max-w-none rounded-[2rem] overflow-hidden ring-1 ring-white/10 shadow-[0_30px_80px_-20px_rgba(120,60,255,0.5)]">
               <img
                 src={womanPointing}
-                alt="Especialista do Emita Mais apresentando os tipos de documentos fiscais"
+                alt="Especialista do EmitaGo apresentando os tipos de documentos fiscais"
                 loading="lazy"
                 width={1280}
                 height={1280}
@@ -635,7 +635,7 @@ function Index() {
 
               <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
               <div className="absolute bottom-5 right-6 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                Especialista Emita Mais
+                Especialista EmitaGo
               </div>
             </div>
           </div>
@@ -735,7 +735,7 @@ function Index() {
                   <div className="rounded-lg overflow-hidden ring-1 ring-white/10 bg-white/5">
                     <img
                       src={src}
-                      alt={`Tela ${label} do sistema Emita Mais`}
+                      alt={`Tela ${label} do sistema EmitaGo`}
                       loading="lazy"
                       className="w-full h-auto block"
                     />
@@ -783,7 +783,7 @@ function Index() {
             />
             <img
               src={smartPos}
-              alt="Smart POS Android com sistema Emita Mais rodando NFCe"
+              alt="Smart POS Android com sistema EmitaGo rodando NFCe"
               width={780}
               height={1400}
               loading="lazy"
@@ -905,7 +905,7 @@ function Index() {
             <span className="absolute -top-3 left-8 text-[10px] uppercase tracking-widest rounded-full px-3 py-1 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
               Plano único
             </span>
-            <div className="mt-3 font-display text-2xl font-bold">Emita Mais</div>
+            <div className="mt-3 font-display text-2xl font-bold">EmitaGo</div>
             <p className="text-sm text-muted-foreground mt-1">Tudo incluso, sem limites nem surpresas.</p>
             <div className="mt-6 flex items-baseline gap-1">
               <span className="text-sm text-muted-foreground">R$</span>
@@ -947,7 +947,7 @@ function Index() {
             <ul className="mt-8 space-y-3 text-sm flex-1">
               {[
                 "Certificado Digital A1 PJ ou PF",
-                "Ganhe o 1º mês grátis do Emita Mais",
+                "Ganhe o 1º mês grátis do EmitaGo",
                 "Validade de 12 meses",
                 "Emissão 100% online, sem sair de casa",
                 "Compatível com NFe, NFCe, NFSe, CTe e MDFe",
@@ -1061,7 +1061,7 @@ function Index() {
             />
             <img
               src={brasilMap}
-              alt="Mapa do Brasil com presença do Emita Mais em todos os estados"
+              alt="Mapa do Brasil com presença do EmitaGo em todos os estados"
               width={1024}
               height={1024}
               loading="lazy"
@@ -1146,23 +1146,23 @@ function Index() {
               Tudo o que você precisa <span className="gradient-text">saber.</span>
             </h2>
             <p className="mt-4 text-slate-600 text-lg">
-              Respostas rápidas sobre o Emita Mais e o Certificado Digital.
+              Respostas rápidas sobre o EmitaGo e o Certificado Digital.
             </p>
           </div>
 
           <div className="mt-10 space-y-3">
             {[
               {
-                q: "O Emita Mais funciona para qualquer segmento?",
+                q: "O EmitaGo funciona para qualquer segmento?",
                 a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
               },
               {
-                q: "Quais documentos fiscais o Emita Mais emite?",
+                q: "Quais documentos fiscais o EmitaGo emite?",
                 a: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT, conforme a operação e a integração fiscal disponível.",
               },
               {
                 q: "Preciso instalar algum programa para usar o sistema?",
-                a: "Não. O Emita Mais funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
+                a: "Não. O EmitaGo funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
               },
               {
                 q: "Quantas notas e empresas posso emitir?",
@@ -1170,7 +1170,7 @@ function Index() {
               },
               {
                 q: "Vocês atendem NFSe da minha cidade?",
-                a: "O Emita Mais possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
+                a: "O EmitaGo possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
               },
               {
                 q: "Quanto custa e como funciona o Certificado Digital A1?",
@@ -1205,7 +1205,7 @@ function Index() {
             Pronto para modernizar <span className="gradient-text">sua emissão fiscal?</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg max-w-xl mx-auto">
-            Fale com nosso time e descubra como o Emita Mais pode acelerar sua operação.
+            Fale com nosso time e descubra como o EmitaGo pode acelerar sua operação.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
@@ -1234,8 +1234,8 @@ function Index() {
           {/* Brand / Quem somos */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
-              <img src={faviconEmita} alt="Emita Mais" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
-              <div className="font-display text-xl font-bold text-white">Emita Mais</div>
+              <img src={faviconEmita} alt="EmitaGo" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
+              <div className="font-display text-xl font-bold text-white">EmitaGo</div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-sm">
               Há mais de 15 anos simplificando a gestão fiscal de empresas em todo o Brasil.
@@ -1343,7 +1343,7 @@ function Index() {
         {/* Bottom bar */}
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
-            <div>© {new Date().getFullYear()} Emita Mais Tecnologia Ltda. — CNPJ 00.000.000/0001-00. Todos os direitos reservados.</div>
+            <div>© {new Date().getFullYear()} EmitaGo Tecnologia Ltda. — CNPJ 00.000.000/0001-00. Todos os direitos reservados.</div>
             <div className="flex flex-wrap items-center gap-5">
               <Link to="/termos" className="hover:text-white transition">Termos de uso</Link>
               <Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link>
@@ -1516,7 +1516,7 @@ function HeroSlide1() {
     <HeroFullBleed
       image={heroPerson}
       imageFit="contain"
-      alt="Empresário brasileiro usando o Emita Mais em um notebook"
+      alt="Empresário brasileiro usando o EmitaGo em um notebook"
       eyebrow="Plataforma completa de emissão fiscal"
       title="Emissor de nota fiscal online"
       titleAccent="que acelera sua operação."
@@ -1584,7 +1584,7 @@ function HeroSlide4() {
   return (
     <HeroFullBleed
       image={heroServicos}
-      alt="Prestador de serviços brasileiro emitindo NFSe pelo Emita Mais"
+      alt="Prestador de serviços brasileiro emitindo NFSe pelo EmitaGo"
       eyebrow="Nota Fiscal de Serviços"
       title="NFSe integrada com"
       titleAccent="+1.600 municípios."
@@ -1629,7 +1629,7 @@ function HeroSlide6() {
   return (
     <HeroFullBleed
       image={heroProduto}
-      alt="Gerente de estoque emitindo NFe de produto no Emita Mais"
+      alt="Gerente de estoque emitindo NFe de produto no EmitaGo"
       eyebrow="Nota Fiscal de Produto"
       title="NFe autorizada em"
       titleAccent="segundos."
