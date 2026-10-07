@@ -23,7 +23,7 @@ export const Route = createFileRoute("/blog/")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:site_name", content: "Emita Mais" },
+      { property: "og:site_name", content: "EmitaGo" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://emitago.com.br/blog" },
       { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
@@ -31,7 +31,7 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:image", content: blogPosts[0].image },
       { property: "og:image:alt", content: blogPosts[0].title },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Blog Fiscal — Emita Mais" },
+      { name: "twitter:title", content: "Blog Fiscal — EmitaGo" },
       { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e Certificado Digital A1." },
       { name: "twitter:image", content: blogPosts[0].image },
       { name: "twitter:image:alt", content: blogPosts[0].title },
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/blog/")({
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           "@id": "https://emitago.com.br/blog#webpage",
-          name: "Blog Fiscal Emita Mais",
+          name: "Blog Fiscal EmitaGo",
           url: "https://emitago.com.br/blog",
           inLanguage: "pt-BR",
           isPartOf: { "@id": "https://emitago.com.br/#website" },
@@ -102,8 +102,8 @@ function BlogPage() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={faviconEmita} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
-            Emita Mais
+            <img src={faviconEmita} alt="EmitaGo" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
+            EmitaGo
           </Link>
           <Link
             to="/"
