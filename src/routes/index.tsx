@@ -520,7 +520,7 @@ function Index() {
               <img
                 src={dashboardMock}
                 alt="Dashboard do sistema EmitaGo"
-                loading="lazy"
+                loading="lazy" decoding="async"
                 width={1600}
                 height={720}
                 className="w-full rounded-xl"
@@ -530,7 +530,7 @@ function Index() {
               <img
                 src={dashboardList}
                 alt="Tela de listagem de notas fiscais do EmitaGo"
-                loading="lazy"
+                loading="lazy" decoding="async"
                 width={1600}
                 height={1008}
                 className="w-full rounded-xl"
@@ -581,7 +581,7 @@ function Index() {
               <img
                 src={womanPointing}
                 alt="Especialista do EmitaGo apresentando os tipos de documentos fiscais"
-                loading="lazy"
+                loading="lazy" decoding="async"
                 width={1280}
                 height={1280}
                 className="block w-full h-auto"
@@ -701,7 +701,7 @@ function Index() {
                     <img
                       src={src}
                       alt={`Tela ${label} do sistema EmitaGo`}
-                      loading="lazy"
+                      loading="lazy" decoding="async"
                       className="w-full h-auto block"
                     />
                   </div>
@@ -723,7 +723,7 @@ function Index() {
           <img
             src={smartPosFrame}
             alt="Ilustração: vendedor emitindo NF-e direto do Smart POS"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1600}
             height={900}
             className="w-full rounded-xl"
@@ -751,7 +751,7 @@ function Index() {
               alt="Smart POS Android com sistema EmitaGo rodando NFCe"
               width={780}
               height={1400}
-              loading="lazy"
+              loading="lazy" decoding="async"
               className="relative w-full max-w-sm animate-float drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)]"
             />
           </div>
@@ -1099,7 +1099,7 @@ function Index() {
         <div className="max-w-7xl mx-auto px-6 py-12 md:py-14 grid gap-10 md:grid-cols-12">
           <div className="md:col-span-6">
             <div className="flex items-center gap-3">
-              <img src={faviconEmita} alt="EmitaGo" width={36} height={36} loading="lazy" className="w-9 h-9 object-contain" />
+              <img src={faviconEmita} alt="EmitaGo" width={36} height={36} loading="lazy" decoding="async" className="w-9 h-9 object-contain" />
               <div className="font-display text-xl font-bold text-white">EmitaGo</div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/65 max-w-lg">
