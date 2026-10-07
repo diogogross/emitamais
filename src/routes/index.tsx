@@ -1091,7 +1091,7 @@ function Index() {
             >
               Começar agora <ArrowUpRight className="w-4 h-4" />
             </a>
-            <a href="#planos" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
               Ver planos e condições
             </a>
           </div>
