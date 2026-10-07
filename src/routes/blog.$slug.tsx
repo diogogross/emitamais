@@ -172,7 +172,15 @@ function ArticlePage() {
       {/* HERO IMAGE */}
       <div className="max-w-5xl mx-auto px-6">
         <div className="relative rounded-3xl overflow-hidden ring-1 ring-white/10 glow-ring">
-          <img src={post.image} alt={post.title} className="w-full aspect-[16/9] object-cover" />
+          <img
+            src={post.image}
+            alt={post.title}
+            width={1600}
+            height={900}
+            fetchPriority="high"
+            decoding="async"
+            className="w-full aspect-[16/9] object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
         </div>
       </div>
