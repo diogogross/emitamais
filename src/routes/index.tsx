@@ -1115,7 +1115,9 @@ function Index() {
               Emissão fiscal online com documentos fiscais, PDV e Certificado Digital A1 em uma única plataforma.
             </p>
             <a
-              href="#planos"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 transition"
             >
               Conhecer os planos <ArrowUpRight className="w-4 h-4" />
