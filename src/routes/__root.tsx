@@ -129,7 +129,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               url: "https://emitago.com.br/",
               logo: {
                 "@type": "ImageObject",
-                url: "https://emitago.com.br/favicon-emita.svg",
+                url: "https://emitago.com.br/og-emita.png",
               },
               description:
                 "Sistema emissor de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, CIOT) e certificado digital A1 CPF e CNPJ.",
