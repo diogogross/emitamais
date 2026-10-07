@@ -223,7 +223,7 @@ export const Route = createFileRoute("/")({
               name: "Quantas notas e empresas posso emitir?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O plano apresentado no site inclui emissão de notas e empresas ilimitadas, sem cobrança por documento e sem taxa de setup.",
+                text: "Os limites, documentos e condições comerciais seguem o plano vigente apresentado no momento da contratação.",
               },
             },
             {
@@ -231,7 +231,7 @@ export const Route = createFileRoute("/")({
               name: "Vocês atendem NFSe da minha cidade?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O EmitaGo possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
+                text: "O EmitaGo possui integrações com municípios brasileiros. A disponibilidade da NFSe varia conforme a prefeitura e a integração fiscal utilizada.",
               },
             },
             {
@@ -253,7 +253,7 @@ export const Route = createFileRoute("/")({
 const docTypes = [
   { name: "NFe", slug: "nfe", desc: "Nota Fiscal Eletrônica para venda de produtos, com envio direto à SEFAZ.", icon: FileText, image: docNfe },
   { name: "NFCe", slug: "nfce", desc: "PDV online integrado — cupom fiscal eletrônico para o varejo.", icon: ShoppingCart, image: docNfce },
-  { name: "NFSe", slug: "nfse", desc: "Nota de serviço integrada com +1.600 municípios brasileiros.", icon: Briefcase, image: docNfse },
+  { name: "NFSe", slug: "nfse", desc: "Nota de serviço integrada a municípios brasileiros, conforme disponibilidade da integração.", icon: Briefcase, image: docNfse },
   { name: "CTe / CTeOS + CIOT", slug: "cte", desc: "Conhecimento de transporte para cargas e operações de serviço, com CIOT integrado para operações de transporte rodoviário.", icon: Truck, image: docCte },
   { name: "MDFe", slug: "mdfe", desc: "Manifesto eletrônico de documentos fiscais para o transporte.", icon: ClipboardList, image: docMdfe },
   { name: "NFPe", slug: "nfpe", desc: "Nota fiscal do produtor rural, emissão simplificada e legalizada.", icon: Sprout, image: docNfpe },
@@ -262,11 +262,11 @@ const docTypes = [
 
 const features = [
   { icon: Zap, title: "Emissão em segundos", desc: "Fluxo otimizado, do cadastro à autorização SEFAZ." },
-  { icon: ShieldCheck, title: "Conformidade garantida", desc: "Regras fiscais atualizadas automaticamente." },
+  { icon: ShieldCheck, title: "Regras fiscais atualizadas", desc: "Recursos fiscais mantidos conforme as integrações e atualizações do sistema." },
   { icon: Smartphone, title: "100% responsivo", desc: "Celular, tablet ou desktop — mesma experiência." },
   { icon: CreditCard, title: "Recebimentos integrados", desc: "Pix, cartão e boleto direto no sistema." },
   { icon: Cloud, title: "Online em nuvem", desc: "Acesse de qualquer lugar, com backups automáticos." },
-  { icon: Repeat, title: "Atualização legal automática", desc: "Sempre em conformidade com a SEFAZ." },
+  { icon: Repeat, title: "Atualizações fiscais", desc: "Acompanhe mudanças fiscais sem precisar refazer seu fluxo de emissão." },
 ];
 
 const planPerks = [
@@ -279,46 +279,6 @@ const planPerks = [
   "Atualização legal automática",
   "Suporte prioritário",
 ];
-
-const testimonials = [
-  {
-    name: "Ricardo Menezes",
-    role: "Sócio · Menezes Distribuidora",
-    tag: "Emissor",
-    quote: "Trocamos três sistemas por um só. Emitimos NFe e MDFe no mesmo lugar, e o suporte responde em minutos. Não voltaria atrás.",
-  },
-  {
-    name: "Camila Duarte",
-    role: "Contadora · Duarte Contábil",
-    tag: "Emissor",
-    quote: "Como escritório, eu precisava de multiempresas ilimitadas sem taxa por CNPJ. O EmitaGo entrega isso — e o XML sai pronto pra minha contabilidade.",
-  },
-  {
-    name: "Fernando Alves",
-    role: "MEI · Alves Serviços",
-    tag: "Certificado",
-    quote: "Emiti meu Certificado Digital A1 PJ em 15 minutos, tudo por videoconferência. E ainda ganhei o primeiro mês do emissor. Combo perfeito.",
-  },
-  {
-    name: "Juliana Prado",
-    role: "Gerente Fiscal · Prado Logística",
-    tag: "Emissor",
-    quote: "Nossa operação de CTe e MDFe é pesada. O sistema aguenta o volume, integra com nosso ERP e nunca deixou nota travada com a SEFAZ.",
-  },
-  {
-    name: "Marcos Bittencourt",
-    role: "Diretor · Bitten Comércio",
-    tag: "Certificado",
-    quote: "Já perdi tempo demais com certificadora tradicional. Aqui é 100% online, sem sair da empresa, e o suporte me guiou passo a passo.",
-  },
-  {
-    name: "Patrícia Nogueira",
-    role: "Dona · Padaria da Praça",
-    tag: "Emissor",
-    quote: "Emito NFCe direto na Smart POS. Meu cliente recebe a nota no WhatsApp na mesma hora. Ficou muito mais profissional.",
-  },
-];
-
 
 function Index() {
   const progressRef = useRef<HTMLDivElement>(null);
@@ -417,7 +377,7 @@ function Index() {
             href="#planos"
             className="hidden md:inline-flex group items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
-            Acessar sistema
+            Ver planos
             <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
 
@@ -444,7 +404,7 @@ function Index() {
               <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Planos</a>
               <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Blog</Link>
               <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition">
-                Acessar sistema <ArrowUpRight className="w-4 h-4" />
+                Ver planos <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -466,7 +426,7 @@ function Index() {
         <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-background to-transparent pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
-          <div className="flex gap-5 animate-marquee whitespace-nowrap">
+          <div className="flex gap-5 animate-marquee whitespace-nowrap" aria-label="Exemplos de segmentos atendidos">
             {Array.from({ length: 2 }).map((_, i) => (
               <div key={i} className="flex gap-5 shrink-0">
                 {[
@@ -479,6 +439,7 @@ function Index() {
                   { name: "KM Transportes Rodoviários", seg: "Cargas", color: "#003DA5", Icon: Truck, style: "font-black tracking-tight" },
                   { name: "Uppertruck Express", seg: "Transportadora", color: "#E30613", Icon: Truck, style: "font-black italic" },
                   { name: "Ultra Logística", seg: "Transporte e Armazenagem", color: "#004D40", Icon: Warehouse, style: "font-black tracking-tight" },
+                  { name: "Coronel Box 7", seg: "Automotivo", color: "#1F1F1F", Icon: Car, style: "font-black tracking-tight" },
                 ].map((b) => (
 
                   <div
@@ -543,7 +504,7 @@ function Index() {
               <div className="w-10 h-10 rounded-full border-2 border-current grid place-items-center opacity-70">
                 <Plus className="w-5 h-5" />
               </div>
-              <span className="text-sm font-medium">Mais de 60 segmentos atendidos</span>
+              <span className="text-sm font-medium">Diversos segmentos atendidos</span>
             </div>
           </div>
         </div>
@@ -559,7 +520,7 @@ function Index() {
               <img
                 src={dashboardMock}
                 alt="Dashboard do sistema EmitaGo"
-                loading="lazy"
+                loading="lazy" decoding="async"
                 width={1600}
                 height={720}
                 className="w-full rounded-xl"
@@ -569,7 +530,7 @@ function Index() {
               <img
                 src={dashboardList}
                 alt="Tela de listagem de notas fiscais do EmitaGo"
-                loading="lazy"
+                loading="lazy" decoding="async"
                 width={1600}
                 height={1008}
                 className="w-full rounded-xl"
@@ -620,7 +581,7 @@ function Index() {
               <img
                 src={womanPointing}
                 alt="Especialista do EmitaGo apresentando os tipos de documentos fiscais"
-                loading="lazy"
+                loading="lazy" decoding="async"
                 width={1280}
                 height={1280}
                 className="block w-full h-auto"
@@ -740,7 +701,7 @@ function Index() {
                     <img
                       src={src}
                       alt={`Tela ${label} do sistema EmitaGo`}
-                      loading="lazy"
+                      loading="lazy" decoding="async"
                       className="w-full h-auto block"
                     />
                   </div>
@@ -762,7 +723,7 @@ function Index() {
           <img
             src={smartPosFrame}
             alt="Ilustração: vendedor emitindo NF-e direto do Smart POS"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1600}
             height={900}
             className="w-full rounded-xl"
@@ -790,7 +751,7 @@ function Index() {
               alt="Smart POS Android com sistema EmitaGo rodando NFCe"
               width={780}
               height={1400}
-              loading="lazy"
+              loading="lazy" decoding="async"
               className="relative w-full max-w-sm animate-float drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)]"
             />
           </div>
@@ -802,7 +763,7 @@ function Index() {
               Venda direto na <span className="gradient-text">Smart POS</span>.
             </h2>
             <p className="mt-4 text-muted-foreground text-lg max-w-xl">
-              Nosso sistema PDV (NFCe) está homologado com as principais adquirentes do mercado — recebimento imediato, na mesma tela da emissão.
+              Nosso sistema PDV (NFCe) integra emissão fiscal e recebimento em Smart POS Android, conforme os meios de pagamento disponíveis no produto.
             </p>
 
             <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -835,8 +796,8 @@ function Index() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <span className="text-foreground font-medium">Homologado</span>
-              em maquininhas Android com NFCe integrada.
+              <span className="text-foreground font-medium">Smart POS</span>
+              Android com NFCe integrada.
               <a href="#planos" className="ml-auto font-medium text-primary-glow inline-flex items-center gap-1 hover:gap-2 transition-all">
                 Quero minha Smart POS <ArrowRight className="w-4 h-4" />
               </a>
@@ -925,11 +886,11 @@ function Index() {
               ))}
             </ul>
             <a
-              href="#"
+              href="#planos"
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-full py-3 font-semibold text-accent-foreground hover:scale-[1.02] transition"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
-              Assinar agora
+              Escolher este plano
               <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
@@ -1072,11 +1033,11 @@ function Index() {
               },
               {
                 q: "Quantas notas e empresas posso emitir?",
-                a: "O plano apresentado no site inclui emissão de notas e empresas ilimitadas, sem cobrança por documento e sem taxa de setup.",
+                a: "Os limites, documentos e condições comerciais seguem o plano vigente apresentado no momento da contratação.",
               },
               {
                 q: "Vocês atendem NFSe da minha cidade?",
-                a: "O EmitaGo possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
+                a: "O EmitaGo possui integrações com municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
               },
               {
                 q: "Quanto custa e como funciona o Certificado Digital A1?",
@@ -1121,8 +1082,8 @@ function Index() {
             >
               Começar agora <ArrowUpRight className="w-4 h-4" />
             </a>
-            <a href="#" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
-              Falar com especialista
+            <a href="#planos" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
+              Ver planos e condições
             </a>
           </div>
         </div>
@@ -1138,7 +1099,7 @@ function Index() {
         <div className="max-w-7xl mx-auto px-6 py-12 md:py-14 grid gap-10 md:grid-cols-12">
           <div className="md:col-span-6">
             <div className="flex items-center gap-3">
-              <img src={faviconEmita} alt="EmitaGo" width={36} height={36} loading="lazy" className="w-9 h-9 object-contain" />
+              <img src={faviconEmita} alt="EmitaGo" width={36} height={36} loading="lazy" decoding="async" className="w-9 h-9 object-contain" />
               <div className="font-display text-xl font-bold text-white">EmitaGo</div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/65 max-w-lg">
@@ -1289,8 +1250,8 @@ function HeroFullBleed({
   const CtaEl: any = ctaTo ? Link : "a";
   const ctaProps: any = ctaTo ? { to: ctaTo } : { href: ctaHref };
   return (
-    <div className="relative overflow-hidden h-[520px] md:h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)]">
-      {/* Background image (hidden on mobile) */}
+    <div className="relative overflow-hidden h-[560px] md:h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)]">
+      {/* The image remains inside the slide on every viewport. On mobile it stays in the visual composition instead of entering normal flow. */}
       <img
         src={image}
         alt={alt}
@@ -1299,50 +1260,56 @@ function HeroFullBleed({
           : { loading: "lazy" as const })}
         width={1920}
         height={1088}
-        className={`hidden md:block absolute inset-0 w-full h-full ${imageFit === "contain" ? "object-contain object-center" : "object-cover object-center"}`}
+        className={`absolute inset-0 w-full h-full ${imageFit === "contain" ? "object-contain object-center" : "object-cover object-center"}`}
       />
-      {/* Dark gradient overlay for legibility (desktop only) */}
       <div
-        className="hidden md:block absolute inset-0"
+        className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.85) 100%)",
+            "linear-gradient(180deg, rgba(10,7,18,0.92) 0%, rgba(10,7,18,0.78) 38%, rgba(10,7,18,0.18) 64%, rgba(10,7,18,0.78) 100%)",
         }}
+        aria-hidden="true"
       />
-      {/* Content — mobile: centered text only; desktop: bottom-left over image */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-14 py-12 md:py-14 flex flex-col justify-center md:justify-end h-[520px] md:h-[600px] md:max-w-none">
+      <div
+        className="absolute inset-0 hidden md:block"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0.85) 100%)",
+        }}
+        aria-hidden="true"
+      />
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-14 pt-28 pb-8 md:py-14 flex flex-col justify-start md:justify-end h-[560px] md:h-[600px] md:max-w-none">
         <div className="md:max-w-3xl">
-          <div className="mb-3 text-xs md:text-sm uppercase tracking-[0.24em] font-semibold text-white/75">
+          <div className="mb-3 text-[11px] md:text-sm uppercase tracking-[0.20em] md:tracking-[0.24em] font-semibold text-white/80">
             {eyebrow}
           </div>
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.05] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+          <h1 className="font-display text-[2rem] md:text-5xl lg:text-6xl font-bold leading-[1.04] text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.65)] max-w-[22rem] md:max-w-none">
             {title} <span className="gradient-text">{titleAccent}</span>
           </h1>
-          <p className="mt-4 text-sm md:text-base text-white/85 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+          <p className="mt-4 text-sm md:text-base text-white/90 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
             {description}
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
+          <div className="mt-5 md:mt-6 flex flex-wrap items-center gap-3 md:gap-4">
             <CtaEl
               {...ctaProps}
-              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-accent-foreground transition hover:scale-[1.02]"
+              className="group inline-flex items-center gap-2 rounded-full px-5 md:px-6 py-3 text-sm font-semibold text-accent-foreground transition hover:scale-[1.02]"
               style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
             >
               {ctaLabel}
               <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </CtaEl>
-            <a href={secondaryHref} className="inline-flex items-center gap-2 text-sm font-medium text-white/90 hover:text-white">
+            <a href={secondaryHref} className="inline-flex items-center gap-2 text-sm font-medium text-white/95 hover:text-white">
               {secondaryLabel} <ArrowRight className="w-4 h-4" />
             </a>
           </div>
-          <div className="mt-6 flex flex-wrap gap-5 md:gap-7 text-sm">
+          <div className="mt-5 md:mt-6 hidden sm:flex flex-wrap gap-5 md:gap-7 text-sm">
             {stats.map(([n, l]) => (
               <div key={l}>
                 <div className="font-display text-xl md:text-2xl font-bold gradient-text">{n}</div>
-                <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/70 mt-1">{l}</div>
+                <div className="text-[10px] md:text-xs uppercase tracking-widest text-white/75 mt-1">{l}</div>
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </div>
@@ -1366,7 +1333,7 @@ function HeroSlide1() {
       stats={[
         ["+1.600", "municípios NFSe"],
         ["7", "documentos fiscais"],
-        ["99.9%", "uptime SEFAZ"],
+        ["Online", "emissão fiscal"],
       ]}
       eager
     />
@@ -1449,7 +1416,7 @@ function HeroSlide5() {
       eyebrow="Cupom fiscal na maquininha"
       title="NFCe direto da"
       titleAccent="sua maquininha."
-      description="Venda, receba e emita o cupom fiscal na mesma tela. Homologado com as principais adquirentes Android — sem PDV extra."
+      description="Venda, receba e emita o cupom fiscal na mesma tela, com PDV integrado para Smart POS Android."
       ctaLabel="Testar na maquininha"
       ctaHref="#planos"
       secondaryLabel="Ver documentos"
@@ -1477,7 +1444,7 @@ function HeroSlide6() {
       secondaryLabel="Ver documentos"
       secondaryHref="#documentos"
       stats={[
-        ["1,2s", "por autorização"],
+        ["Autorização", "fluxo online"],
         ["XML", "para contabilidade"],
         ["DANFE", "em PDF"],
       ]}

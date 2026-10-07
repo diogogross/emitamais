@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT online. Certificado Digital A1 CPF/CNPJ com emissão online." },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Emissor de Notas Fiscais Online | NFe, NFCe, NFSe, CTe e MDFe" },
-      { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF/CNPJ por R$ 129,90." },
+      { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT online. Certificado Digital A1 CPF/CNPJ com emissão online." },
       { property: "og:image", content: ogImage },
       { property: "og:image:alt", content: "EmitaGo — emissor de notas fiscais online" },
       { name: "twitter:image", content: ogImage },

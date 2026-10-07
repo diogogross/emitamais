@@ -207,8 +207,7 @@ const sections = [
     body: (
       <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-sm">
         <div><strong>Empresa:</strong> EmitaGo</div>
-        <div className="mt-1"><strong>E-mail:</strong> contato@emissorfiscal.com.br</div>
-        <div className="mt-1"><strong>Suporte:</strong> suporte@emissorfiscal.com.br</div>
+        <div className="mt-1"><strong>Contato:</strong> pelos canais oficiais disponibilizados na plataforma EmitaGo.</div>
       </div>
     ),
   },
