@@ -1,8 +1,8 @@
-# Emita Mais
+# EmitaGo
 
 > Sistema online para emissão de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, NFPe, CIOT) e certificado digital A1 CPF e CNPJ por R$ 129,90.
 
-O Emita Mais é uma plataforma brasileira 100% online que reúne, em um único sistema, a emissão de todos os documentos fiscais eletrônicos exigidos pela SEFAZ e prefeituras, além da venda e emissão de certificados digitais A1 (CPF e CNPJ) por videoconferência ICP-Brasil.
+O EmitaGo é uma plataforma brasileira 100% online que reúne, em um único sistema, a emissão de todos os documentos fiscais eletrônicos exigidos pela SEFAZ e prefeituras, além da venda e emissão de certificados digitais A1 (CPF e CNPJ) por videoconferência ICP-Brasil.
 
 ## Pages
 
@@ -12,5 +12,5 @@ O Emita Mais é uma plataforma brasileira 100% online que reúne, em um único s
 
 ## Optional
 
-- [Política de Privacidade](/privacidade): Como o Emita Mais trata dados pessoais em conformidade com a LGPD.
-- [Termos de Uso](/termos): Termos e condições de uso da plataforma Emita Mais.
+- [Política de Privacidade](/privacidade): Como o EmitaGo trata dados pessoais em conformidade com a LGPD.
+- [Termos de Uso](/termos): Termos e condições de uso da plataforma EmitaGo.

@@ -11,21 +11,14 @@ import {
   Repeat,
   CreditCard,
   Truck,
-  Receipt,
   Store,
-  FileSpreadsheet,
   Sparkles,
   Check,
   ArrowRight,
-  ChevronLeft,
-  ChevronRight,
   ChevronDown,
+  Menu,
+  X,
   KeyRound,
-  Usb,
-  HardDrive,
-  Cpu,
-  Building2,
-  User,
   Shirt,
   Wrench,
   Croissant,
@@ -35,27 +28,9 @@ import {
   Briefcase,
   ClipboardList,
   Sprout,
-  Route as RouteIcon,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-  Award,
-  Users,
   Scissors,
-  PawPrint,
-  HardHat,
-  UtensilsCrossed,
-  Glasses,
   Warehouse,
-  Calculator,
-  Pill,
   Car,
-  Leaf,
 } from "lucide-react";
 
 
@@ -92,42 +67,42 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Emita Mais | Emissor de Nota Fiscal Online + Certificado A1",
+        title: "EmitaGo | Emissor de Notas Fiscais Online",
       },
       {
         name: "description",
         content:
-          "Emissor de nota fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT. Emita notas pelo computador, celular ou Smart POS e compre seu Certificado Digital A1 online.",
+          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT online. PDV integrado, acesso pelo celular e Certificado Digital A1 para CPF ou CNPJ.",
       },
       {
         name: "robots",
         content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
-      { name: "author", content: "Emita Mais" },
-      { name: "application-name", content: "Emita Mais" },
+      { name: "author", content: "EmitaGo" },
+      { name: "application-name", content: "EmitaGo" },
       { name: "theme-color", content: "#24113f" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Emita Mais" },
+      { property: "og:site_name", content: "EmitaGo" },
       { property: "og:url", content: "https://emitago.com.br/" },
       {
         property: "og:title",
-        content: "Emita Mais | Emissor de Nota Fiscal Online + Certificado A1",
+        content: "EmitaGo | Emissor de Notas Fiscais Online",
       },
       {
         property: "og:description",
         content:
-          "Emissão de NFe, NFCe, NFSe, CTe, MDFe e CIOT online, com PDV e acesso pelo celular. Certificado Digital A1 CPF ou CNPJ disponível online.",
+          "Emissão de NFe, NFCe, NFSe, CTe, MDFe e CIOT online, com PDV e acesso pelo celular. Certificado Digital A1 para CPF ou CNPJ.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Emita Mais | Emissor de Nota Fiscal Online + Certificado A1",
+        content: "EmitaGo | Emissor de Notas Fiscais Online",
       },
       {
         name: "twitter:description",
         content:
-          "Emissor fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT + Certificado Digital A1.",
+          "Emissor fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT, com PDV e Certificado Digital A1.",
       },
     ],
     links: [
@@ -141,14 +116,14 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Emita Mais",
+          name: "EmitaGo",
           url: "https://emitago.com.br/",
           inLanguage: "pt-BR",
           description:
             "Emissor de nota fiscal online para empresas brasileiras, com emissão de documentos fiscais e Certificado Digital A1.",
           publisher: {
             "@type": "Organization",
-            name: "Emita Mais",
+            name: "EmitaGo",
             url: "https://emitago.com.br/",
           },
         }),
@@ -158,7 +133,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          name: "Emita Mais",
+          name: "EmitaGo",
           applicationCategory: "BusinessApplication",
           applicationSubCategory: "Fiscal invoicing software",
           operatingSystem: "Web, Android",
@@ -180,14 +155,14 @@ export const Route = createFileRoute("/")({
           ],
           offers: {
             "@type": "Offer",
-            name: "Plano Emita Mais",
+            name: "Plano EmitaGo",
             price: "60.00",
             priceCurrency: "BRL",
             url: "https://emitago.com.br/#planos",
           },
           provider: {
             "@type": "Organization",
-            name: "Emita Mais",
+            name: "EmitaGo",
             url: "https://emitago.com.br/",
           },
         }),
@@ -197,14 +172,14 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          name: "Emita Mais | Emissor de Nota Fiscal Online",
+          name: "EmitaGo | Emissor de Nota Fiscal Online",
           url: "https://emitago.com.br/",
           inLanguage: "pt-BR",
           description:
-            "Página oficial do Emita Mais, emissor de notas fiscais online e soluções de Certificado Digital A1.",
+            "Página oficial do EmitaGo, emissor de notas fiscais online e soluções de Certificado Digital A1.",
           isPartOf: {
             "@type": "WebSite",
-            name: "Emita Mais",
+            name: "EmitaGo",
             url: "https://emitago.com.br/",
           },
           about: [
@@ -221,15 +196,15 @@ export const Route = createFileRoute("/")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "O Emita Mais funciona para qualquer segmento?",
+              name: "O EmitaGo funciona para qualquer segmento?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sim. O Emita Mais atende comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
+                text: "Sim. O EmitaGo atende comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
               },
             },
             {
               "@type": "Question",
-              name: "Quais documentos fiscais o Emita Mais emite?",
+              name: "Quais documentos fiscais o EmitaGo emite?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT, conforme a operação e a integração fiscal disponível.",
@@ -240,7 +215,7 @@ export const Route = createFileRoute("/")({
               name: "Preciso instalar algum programa para usar o sistema?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Não. O Emita Mais funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
+                text: "Não. O EmitaGo funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
               },
             },
             {
@@ -256,7 +231,7 @@ export const Route = createFileRoute("/")({
               name: "Vocês atendem NFSe da minha cidade?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O Emita Mais possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
+                text: "O EmitaGo possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
               },
             },
             {
@@ -316,7 +291,7 @@ const testimonials = [
     name: "Camila Duarte",
     role: "Contadora · Duarte Contábil",
     tag: "Emissor",
-    quote: "Como escritório, eu precisava de multiempresas ilimitadas sem taxa por CNPJ. O Emita Mais entrega isso — e o XML sai pronto pra minha contabilidade.",
+    quote: "Como escritório, eu precisava de multiempresas ilimitadas sem taxa por CNPJ. O EmitaGo entrega isso — e o XML sai pronto pra minha contabilidade.",
   },
   {
     name: "Fernando Alves",
@@ -347,6 +322,7 @@ const testimonials = [
 
 function Index() {
   const progressRef = useRef<HTMLDivElement>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Scroll progress bar (rAF-throttled to avoid layout thrash per scroll event)
@@ -397,10 +373,10 @@ function Index() {
 
       <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold">
-            <img src={faviconEmita} alt="Emita Mais" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
-            <span>Emita <span className="gradient-text">Mais</span></span>
-          </a>
+          <Link to="/" className="flex items-center gap-2.5 font-display text-xl font-bold" aria-label="EmitaGo — início">
+            <img src={faviconEmita} alt="EmitaGo" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
+            <span>Emita<span className="gradient-text">Go</span></span>
+          </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <div className="relative group">
               <button
@@ -408,10 +384,10 @@ function Index() {
                 className="hover:text-foreground transition inline-flex items-center gap-1"
                 aria-haspopup="true"
               >
-                Emita Mais
+                EmitaGo
                 <ChevronDown className="w-3.5 h-3.5 transition group-hover:rotate-180" />
               </button>
-              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
                 <div className="min-w-[260px] rounded-2xl border border-white/10 bg-background/95 backdrop-blur-xl shadow-2xl p-2">
                   {docTypes.map((d) => (
                     <Link
@@ -439,12 +415,40 @@ function Index() {
 
           <a
             href="#planos"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
+            className="hidden md:inline-flex group items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
             Acessar sistema
             <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
+
+          <button
+            type="button"
+            className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/15 bg-white/5 text-foreground hover:bg-white/10 transition"
+            aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </nav>
+
+        {mobileMenuOpen && (
+          <div
+            id="mobile-navigation"
+            className="md:hidden mx-4 mt-1 rounded-2xl border border-white/10 bg-background/95 p-3 shadow-2xl backdrop-blur-xl"
+          >
+            <div className="grid gap-1">
+              <a href="#documentos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Documentos fiscais</a>
+              <a href="#certificado" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Certificado Digital</a>
+              <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Planos</a>
+              <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Blog</Link>
+              <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition">
+                Acessar sistema <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* HERO SLIDER */}
@@ -454,9 +458,9 @@ function Index() {
       {/* CLIENTES marquee */}
       <section className="border-y border-white/5 py-10 overflow-hidden bg-black/20 relative z-10">
         <div className="text-center mb-6 px-6">
-          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Nossos clientes</div>
+          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-2">Segmentos atendidos</div>
           <h2 className="font-display text-2xl md:text-3xl font-bold">
-            Clientes que <span className="gradient-text">acreditam</span> no nosso potencial
+            Soluções para diferentes <span className="gradient-text">tipos de negócio</span>
           </h2>
         </div>
         <div className="relative">
@@ -554,7 +558,7 @@ function Index() {
             <div className="glass-card p-2 glow-ring">
               <img
                 src={dashboardMock}
-                alt="Dashboard do sistema Emita Mais"
+                alt="Dashboard do sistema EmitaGo"
                 loading="lazy"
                 width={1600}
                 height={720}
@@ -564,7 +568,7 @@ function Index() {
             <div className="glass-card p-2 glow-ring mt-5 ml-8 md:ml-16 hidden sm:block">
               <img
                 src={dashboardList}
-                alt="Tela de listagem de notas fiscais do Emita Mais"
+                alt="Tela de listagem de notas fiscais do EmitaGo"
                 loading="lazy"
                 width={1600}
                 height={1008}
@@ -615,7 +619,7 @@ function Index() {
             <div className="relative mx-auto w-full max-w-md lg:max-w-none rounded-[2rem] overflow-hidden ring-1 ring-white/10 shadow-[0_30px_80px_-20px_rgba(120,60,255,0.5)]">
               <img
                 src={womanPointing}
-                alt="Especialista do Emita Mais apresentando os tipos de documentos fiscais"
+                alt="Especialista do EmitaGo apresentando os tipos de documentos fiscais"
                 loading="lazy"
                 width={1280}
                 height={1280}
@@ -635,7 +639,7 @@ function Index() {
 
               <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
               <div className="absolute bottom-5 right-6 text-[10px] uppercase tracking-[0.3em] text-white/70">
-                Especialista Emita Mais
+                Especialista EmitaGo
               </div>
             </div>
           </div>
@@ -735,7 +739,7 @@ function Index() {
                   <div className="rounded-lg overflow-hidden ring-1 ring-white/10 bg-white/5">
                     <img
                       src={src}
-                      alt={`Tela ${label} do sistema Emita Mais`}
+                      alt={`Tela ${label} do sistema EmitaGo`}
                       loading="lazy"
                       className="w-full h-auto block"
                     />
@@ -783,7 +787,7 @@ function Index() {
             />
             <img
               src={smartPos}
-              alt="Smart POS Android com sistema Emita Mais rodando NFCe"
+              alt="Smart POS Android com sistema EmitaGo rodando NFCe"
               width={780}
               height={1400}
               loading="lazy"
@@ -905,7 +909,7 @@ function Index() {
             <span className="absolute -top-3 left-8 text-[10px] uppercase tracking-widest rounded-full px-3 py-1 font-semibold" style={{ background: "var(--gradient-accent)", color: "var(--accent-foreground)" }}>
               Plano único
             </span>
-            <div className="mt-3 font-display text-2xl font-bold">Emita Mais</div>
+            <div className="mt-3 font-display text-2xl font-bold">EmitaGo</div>
             <p className="text-sm text-muted-foreground mt-1">Tudo incluso, sem limites nem surpresas.</p>
             <div className="mt-6 flex items-baseline gap-1">
               <span className="text-sm text-muted-foreground">R$</span>
@@ -947,7 +951,7 @@ function Index() {
             <ul className="mt-8 space-y-3 text-sm flex-1">
               {[
                 "Certificado Digital A1 PJ ou PF",
-                "Ganhe o 1º mês grátis do Emita Mais",
+                "Ganhe o 1º mês grátis do EmitaGo",
                 "Validade de 12 meses",
                 "Emissão 100% online, sem sair de casa",
                 "Compatível com NFe, NFCe, NFSe, CTe e MDFe",
@@ -974,168 +978,70 @@ function Index() {
 
       </div></section>
 
-      {/* DEPOIMENTOS */}
-      <section id="depoimentos" className="section-dark section-connector w-full" data-reveal="up"><div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Depoimentos</div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold">
-            Quem usa, <span className="gradient-text">recomenda.</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground text-lg">
-            Empresas e profissionais que aceleraram sua rotina fiscal com o Emissor e o Certificado Digital.
-          </p>
-        </div>
+      {/* CONFIANÇA E CAPACIDADES */}
+      <section id="depoimentos" className="section-dark section-connector w-full" data-reveal="up">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Feito para a rotina fiscal</div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold">
+              Menos complexidade, <span className="gradient-text">mais controle.</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground text-lg">
+              Recursos pensados para empresas, contadores e profissionais que precisam emitir documentos fiscais com praticidade.
+            </p>
+          </div>
 
-        <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
-          <div className="testimonials-track flex gap-5">
-            {[...testimonials, ...testimonials].map((t, i) => (
-              <figure
-                key={`${t.name}-${i}`}
-                className="glass-card p-6 md:p-7 w-[320px] md:w-[380px] shrink-0 flex flex-col"
-              >
-                <div className="flex items-center gap-1 text-primary-glow mb-3">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <svg key={s} viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                      <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.2 2.8 1-5.9L1.5 7.7l5.9-.9L10 1.5z" />
-                    </svg>
-                  ))}
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              { title: "Operação online", text: "Acesse a emissão e a gestão fiscal de onde estiver, sem depender de instalação local.", icon: Cloud },
+              { title: "Documentos integrados", text: "Centralize NFe, NFCe, NFSe, CTe, MDFe e outros documentos em um único ambiente.", icon: FileText },
+              { title: "Mais produtividade", text: "Automatize tarefas da rotina fiscal e mantenha as informações organizadas em um só lugar.", icon: Zap },
+            ].map((item) => (
+              <article key={item.title} className="glass-card p-7">
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 ring-1 ring-primary/20 grid place-items-center mb-5">
+                  <item.icon className="w-5 h-5 text-primary-glow" />
                 </div>
-                <blockquote className="text-sm md:text-[15px] text-foreground/90 leading-relaxed flex-1">
-                  “{t.quote}”
-                </blockquote>
-                <figcaption className="mt-5 flex items-center gap-3">
-                  <div
-                    className="w-11 h-11 rounded-full grid place-items-center font-display font-bold text-white shrink-0"
-                    style={{ background: "var(--gradient-primary)" }}
-                  >
-                    {t.name.split(" ").map((n: string) => n[0]).slice(0, 2).join("")}
-                  </div>
-                  <div className="min-w-0">
-                    <div className="font-semibold text-sm text-foreground truncate">{t.name}</div>
-                    <div className="text-[11px] text-muted-foreground truncate">{t.role}</div>
-                  </div>
-                  <span className="ml-auto text-[10px] uppercase tracking-widest rounded-full px-2.5 py-1 bg-white/5 ring-1 ring-white/10 text-primary-glow shrink-0">
-                    {t.tag}
-                  </span>
-                </figcaption>
-              </figure>
+                <h3 className="font-display text-xl font-bold">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+              </article>
             ))}
           </div>
         </div>
-      </div></section>
+      </section>
 
+      <section id="numeros" className="section-light section-connector w-full" data-reveal="left">
+        <div className="max-w-7xl mx-auto px-6 py-24">
+          <div className="glass-card p-8 md:p-14 relative overflow-hidden">
+            <div
+              className="absolute inset-0 -z-10 opacity-40"
+              style={{ background: "radial-gradient(circle at 20% 30%, oklch(0.7 0.25 305 / 0.35), transparent 60%)" }}
+            />
+            <div className="max-w-3xl">
+              <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Estrutura do produto</div>
+              <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+                Uma plataforma fiscal <span className="gradient-text">completa.</span>
+              </h2>
+              <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
+                Emissão online, PDV, certificado digital e recursos para diferentes necessidades fiscais, com uma experiência simples de usar.
+              </p>
+            </div>
 
-      <section id="numeros" className="section-light section-connector w-full" data-reveal="left"><div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="glass-card p-8 md:p-14 grid lg:grid-cols-[1fr_1fr] gap-10 items-center relative overflow-hidden">
-          <div
-            className="absolute inset-0 -z-10 opacity-40"
-            style={{ background: "radial-gradient(circle at 20% 30%, oklch(0.7 0.25 305 / 0.35), transparent 60%)" }}
-          />
-          <div>
-            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Nossa força em números</div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Resultados que comprovam nossa <span className="gradient-text">solidez</span> no mercado.
-            </h2>
-
-            <div className="mt-10 grid grid-cols-2 gap-4">
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { value: "Todos", label: "estados do Brasil" },
-                { value: "+1.000", label: "cidades atendidas" },
-                { value: "+5", label: "anos de experiência" },
-                { value: "+500", label: "parceiros ativos" },
-                { value: "+R$280MM", label: "em notas emitidas/mês" },
-                { value: "+15.000", label: "empresas atendidas" },
-              ].map((s) => (
-                <div key={s.label} className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:-translate-y-0.5 transition">
-                  <div className="font-display text-2xl md:text-3xl font-bold gradient-text">{s.value}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
+                ["NFe", "Nota Fiscal eletrônica"],
+                ["NFCe", "Nota para consumidor"],
+                ["NFSe", "Nota de serviço"],
+                ["CTe / MDFe", "Transporte e logística"],
+              ].map(([value, label]) => (
+                <div key={value} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div className="font-display text-2xl font-bold gradient-text">{value}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{label}</div>
                 </div>
               ))}
             </div>
           </div>
-
-          <div className="relative">
-            <div
-              className="absolute inset-0 -z-10 blur-3xl opacity-70"
-              style={{ background: "radial-gradient(circle at center, oklch(0.7 0.25 305 / 0.45), transparent 65%)" }}
-            />
-            <img
-              src={brasilMap}
-              alt="Mapa do Brasil com presença do Emita Mais em todos os estados"
-              width={1024}
-              height={1024}
-              loading="lazy"
-              className="w-full max-w-lg mx-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]"
-            />
-          </div>
         </div>
-      </div></section>
-
-      {/* BLOG */}
-      <section id="blog" className="section-dark section-connector w-full" data-reveal="up"><div className="max-w-7xl mx-auto px-6 py-24">
-        <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
-          <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Blog</div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
-              Aprenda <span className="gradient-text">com quem entende</span> de fiscal.
-            </h2>
-            <p className="mt-4 text-muted-foreground text-lg">
-              Guias práticos sobre notas fiscais, transporte e certificado digital — direto ao ponto.
-            </p>
-          </div>
-          <Link
-            to="/blog"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5 transition"
-          >
-            Ver todos os artigos
-            <ArrowUpRight className="w-4 h-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-          {blogPosts.slice(0, 5).map((p) => (
-            <Link
-              key={p.slug}
-              to="/blog/$slug"
-              params={{ slug: p.slug }}
-              className="group relative overflow-hidden rounded-2xl ring-1 ring-white/10 bg-white/[0.03] hover:ring-primary-glow/40 hover:-translate-y-1 transition"
-            >
-              <div className="relative aspect-[4/5] overflow-hidden">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur px-2.5 py-1 text-[10px] uppercase tracking-widest text-white ring-1 ring-white/15">
-                  {p.category}
-                </span>
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <h3 className="font-display text-lg font-bold text-white leading-tight line-clamp-3">
-                    {p.title}
-                  </h3>
-                  <div className="mt-2 flex items-center gap-3 text-[11px] text-white/70">
-                    <span>{p.date}</span>
-                    <span>·</span>
-                    <span>{p.readMin} min</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-10 text-center">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-accent-foreground hover:scale-[1.02] transition"
-            style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
-          >
-            Acessar o blog completo <ArrowUpRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </div></section>
+      </section>
 
       {/* FAQ */}
       <section id="faq" className="section-light section-connector w-full" data-reveal="right">
@@ -1146,23 +1052,23 @@ function Index() {
               Tudo o que você precisa <span className="gradient-text">saber.</span>
             </h2>
             <p className="mt-4 text-slate-600 text-lg">
-              Respostas rápidas sobre o Emita Mais e o Certificado Digital.
+              Respostas rápidas sobre o EmitaGo e o Certificado Digital.
             </p>
           </div>
 
           <div className="mt-10 space-y-3">
             {[
               {
-                q: "O Emita Mais funciona para qualquer segmento?",
+                q: "O EmitaGo funciona para qualquer segmento?",
                 a: "Sim. Atendemos comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
               },
               {
-                q: "Quais documentos fiscais o Emita Mais emite?",
+                q: "Quais documentos fiscais o EmitaGo emite?",
                 a: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT, conforme a operação e a integração fiscal disponível.",
               },
               {
                 q: "Preciso instalar algum programa para usar o sistema?",
-                a: "Não. O Emita Mais funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
+                a: "Não. O EmitaGo funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
               },
               {
                 q: "Quantas notas e empresas posso emitir?",
@@ -1170,7 +1076,7 @@ function Index() {
               },
               {
                 q: "Vocês atendem NFSe da minha cidade?",
-                a: "O Emita Mais possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
+                a: "O EmitaGo possui integração com mais de 1.600 municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
               },
               {
                 q: "Quanto custa e como funciona o Certificado Digital A1?",
@@ -1205,7 +1111,7 @@ function Index() {
             Pronto para modernizar <span className="gradient-text">sua emissão fiscal?</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg max-w-xl mx-auto">
-            Fale com nosso time e descubra como o Emita Mais pode acelerar sua operação.
+            Fale com nosso time e descubra como o EmitaGo pode acelerar sua operação.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
@@ -1223,133 +1129,54 @@ function Index() {
       </div></section>
 
       {/* FOOTER */}
-      <footer className="relative mt-20 border-t border-white/10 bg-[oklch(0.14_0.05_285)]">
+      <footer className="relative mt-16 border-t border-white/10 bg-[oklch(0.14_0.05_285)]">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-px"
           style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent)" }}
         />
 
-        {/* Top: brand + columns */}
-        <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 grid gap-12 md:grid-cols-12">
-          {/* Brand / Quem somos */}
-          <div className="md:col-span-4">
+        <div className="max-w-7xl mx-auto px-6 py-12 md:py-14 grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-6">
             <div className="flex items-center gap-3">
-              <img src={faviconEmita} alt="Emita Mais" width={40} height={40} loading="lazy" className="w-10 h-10 object-contain" />
-              <div className="font-display text-xl font-bold text-white">Emita Mais</div>
+              <img src={faviconEmita} alt="EmitaGo" width={36} height={36} loading="lazy" className="w-9 h-9 object-contain" />
+              <div className="font-display text-xl font-bold text-white">EmitaGo</div>
             </div>
-            <p className="mt-5 text-sm leading-relaxed text-white/70 max-w-sm">
-              Há mais de 15 anos simplificando a gestão fiscal de empresas em todo o Brasil.
-              Tecnologia confiável, suporte humano e a experiência de quem entende do assunto —
-              tudo em uma única plataforma pensada para o seu negócio crescer com segurança.
+            <p className="mt-4 text-sm leading-relaxed text-white/65 max-w-lg">
+              Emissão fiscal online com documentos fiscais, PDV e Certificado Digital A1 em uma única plataforma.
             </p>
-
-            <div className="mt-6 flex flex-wrap gap-4 text-xs text-white/70">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
-                <Award className="w-3.5 h-3.5 text-primary-glow" />
-                +15 anos no mercado
-              </div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
-                <Users className="w-3.5 h-3.5 text-primary-glow" />
-                +50 mil empresas
-              </div>
-            </div>
-
-            <div className="mt-6 flex items-center gap-3">
-              {[
-                { Icon: Facebook, href: "#", label: "Facebook" },
-                { Icon: Instagram, href: "#", label: "Instagram" },
-                { Icon: Linkedin, href: "#", label: "LinkedIn" },
-                { Icon: Youtube, href: "#", label: "YouTube" },
-              ].map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:text-white hover:border-white/30 hover:bg-white/10"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
+            <a
+              href="#planos"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/10 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/15 transition"
+            >
+              Conhecer os planos <ArrowUpRight className="w-4 h-4" />
+            </a>
           </div>
 
-          {/* Empresa */}
-          <div className="md:col-span-2">
-            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Empresa</div>
-            <ul className="mt-5 space-y-3 text-sm text-white/75">
-              <li><a href="#quem-somos" className="hover:text-white transition">Quem somos</a></li>
-              <li><a href="#historia" className="hover:text-white transition">Nossa história</a></li>
+          <div className="md:col-span-3">
+            <div className="text-xs uppercase tracking-widest text-white/45 font-semibold">Navegação</div>
+            <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+              <li><a href="#produto" className="hover:text-white transition">O produto</a></li>
+              <li><a href="#documentos" className="hover:text-white transition">Documentos fiscais</a></li>
+              <li><a href="#planos" className="hover:text-white transition">Planos</a></li>
+              <li><Link to="/certificado-digital" className="hover:text-white transition">Certificado Digital</Link></li>
               <li><Link to="/blog" className="hover:text-white transition">Blog</Link></li>
-              <li><a href="#carreiras" className="hover:text-white transition">Carreiras</a></li>
-              <li><a href="#imprensa" className="hover:text-white transition">Imprensa</a></li>
-              <li><a href="#parceiros" className="hover:text-white transition">Seja parceiro</a></li>
             </ul>
           </div>
 
-          {/* Soluções */}
-          <div className="md:col-span-2">
-            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Soluções</div>
-            <ul className="mt-5 space-y-3 text-sm text-white/75">
-              <li><a href="#nfe" className="hover:text-white transition">NF-e</a></li>
-              <li><a href="#nfce" className="hover:text-white transition">NFC-e</a></li>
-              <li><a href="#nfse" className="hover:text-white transition">NFS-e</a></li>
-              <li><a href="#mdfe" className="hover:text-white transition">MDF-e</a></li>
-              <li><a href="#cte" className="hover:text-white transition">CT-e</a></li>
-              <li><a href="#pdv" className="hover:text-white transition">PDV & Maquininha</a></li>
-            </ul>
-          </div>
-
-          {/* Suporte */}
-          <div className="md:col-span-2">
-            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Suporte</div>
-            <ul className="mt-5 space-y-3 text-sm text-white/75">
-              <li><a href="#central" className="hover:text-white transition">Central de ajuda</a></li>
-              <li><a href="#tutoriais" className="hover:text-white transition">Tutoriais</a></li>
-              <li><a href="#status" className="hover:text-white transition">Status do sistema</a></li>
-              <li><a href="#api" className="hover:text-white transition">Documentação API</a></li>
-              <li><a href="#faq" className="hover:text-white transition">Perguntas frequentes</a></li>
-              <li><a href="#contato" className="hover:text-white transition">Fale conosco</a></li>
-            </ul>
-          </div>
-
-          {/* Contato */}
-          <div className="md:col-span-2">
-            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">Contato</div>
-            <ul className="mt-5 space-y-4 text-sm text-white/75">
-              <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" />
-                <a href="mailto:contato@emissorfiscal.com.br" className="hover:text-white transition break-all">
-                  contato@emissorfiscal.com.br
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" />
-                <a href="tel:+551140000000" className="hover:text-white transition">
-                  (11) 4000-0000
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" />
-                <span>Av. Paulista, 1000 — Bela Vista<br />São Paulo/SP — 01310-100</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock className="w-4 h-4 mt-0.5 text-primary-glow shrink-0" />
-                <span>Seg. a Sex. — 08h às 20h<br />Sáb. — 09h às 14h</span>
-              </li>
+          <div className="md:col-span-3">
+            <div className="text-xs uppercase tracking-widest text-white/45 font-semibold">Legal</div>
+            <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+              <li><Link to="/termos" className="hover:text-white transition">Termos de uso</Link></li>
+              <li><Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link></li>
+              <li><button onClick={openCookiePreferences} className="hover:text-white transition">Cookies e LGPD</button></li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
-            <div>© {new Date().getFullYear()} Emita Mais Tecnologia Ltda. — CNPJ 00.000.000/0001-00. Todos os direitos reservados.</div>
-            <div className="flex flex-wrap items-center gap-5">
-              <Link to="/termos" className="hover:text-white transition">Termos de uso</Link>
-              <Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link>
-              <button onClick={openCookiePreferences} className="hover:text-white transition">Cookies</button>
-              <button onClick={openCookiePreferences} className="hover:text-white transition">LGPD</button>
-            </div>
+          <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/50">
+            <div>© {new Date().getFullYear()} EmitaGo. Todos os direitos reservados.</div>
+            <div>Emissor fiscal online para empresas brasileiras.</div>
           </div>
         </div>
       </footer>
@@ -1369,7 +1196,7 @@ function HeroSlider() {
 
   useEffect(() => {
     if (paused) return;
-    const t = setInterval(() => setI((v) => (v + 1) % HERO_SLIDE_COUNT), 3000);
+    const t = setInterval(() => setI((v) => (v + 1) % HERO_SLIDE_COUNT), 6000);
     return () => clearInterval(t);
   }, [paused]);
 
@@ -1395,19 +1222,30 @@ function HeroSlider() {
           {i === 0 ? <HeroSlide1 /> : i === 1 ? <HeroSlide2 /> : i === 2 ? <HeroSlide3 /> : i === 3 ? <HeroSlide4 /> : i === 4 ? <HeroSlide5 /> : <HeroSlide6 />}
         </div>
 
-        {/* Dots (right side, vertical) */}
-        <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2 z-30">
-          {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
-            <button
-              key={idx}
-              type="button"
-              onClick={() => setI(idx)}
-              aria-label={`Ir para slide ${idx + 1}`}
-              className={`w-2 rounded-full transition-all ${
-                idx === i ? "h-10 bg-primary-glow" : "h-2.5 bg-white/40 hover:bg-white/60"
-              }`}
-            />
-          ))}
+        {/* Controles do carrossel: dots + pausa acessível */}
+        <div className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-3 z-30">
+          <button
+            type="button"
+            onClick={() => setPaused((value) => !value)}
+            aria-label={paused ? "Continuar apresentação automática" : "Pausar apresentação automática"}
+            className="grid place-items-center w-9 h-9 rounded-full bg-black/35 backdrop-blur border border-white/15 text-white text-xs font-semibold hover:bg-black/55 transition"
+          >
+            {paused ? "▶" : "Ⅱ"}
+          </button>
+          <div className="flex flex-col items-center justify-center gap-2">
+            {Array.from({ length: HERO_SLIDE_COUNT }).map((_, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => setI(idx)}
+                aria-label={`Ir para slide ${idx + 1}`}
+                aria-current={idx === i ? "true" : undefined}
+                className={`w-2 rounded-full transition-all ${
+                  idx === i ? "h-10 bg-primary-glow" : "h-2.5 bg-white/40 hover:bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
       </div>
@@ -1516,7 +1354,7 @@ function HeroSlide1() {
     <HeroFullBleed
       image={heroPerson}
       imageFit="contain"
-      alt="Empresário brasileiro usando o Emita Mais em um notebook"
+      alt="Empresário brasileiro usando o EmitaGo em um notebook"
       eyebrow="Plataforma completa de emissão fiscal"
       title="Emissor de nota fiscal online"
       titleAccent="que acelera sua operação."
@@ -1584,7 +1422,7 @@ function HeroSlide4() {
   return (
     <HeroFullBleed
       image={heroServicos}
-      alt="Prestador de serviços brasileiro emitindo NFSe pelo Emita Mais"
+      alt="Prestador de serviços brasileiro emitindo NFSe pelo EmitaGo"
       eyebrow="Nota Fiscal de Serviços"
       title="NFSe integrada com"
       titleAccent="+1.600 municípios."
@@ -1629,7 +1467,7 @@ function HeroSlide6() {
   return (
     <HeroFullBleed
       image={heroProduto}
-      alt="Gerente de estoque emitindo NFe de produto no Emita Mais"
+      alt="Gerente de estoque emitindo NFe de produto no EmitaGo"
       eyebrow="Nota Fiscal de Produto"
       title="NFe autorizada em"
       titleAccent="segundos."

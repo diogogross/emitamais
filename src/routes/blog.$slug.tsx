@@ -21,7 +21,7 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Artigo não encontrado — Blog Emita Mais" },
+          { title: "Artigo não encontrado — Blog EmitaGo" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const url = `${BASE_URL}/blog/${params.slug}`;
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
     const publishedDate = new Date(post.date).toISOString().slice(0, 10);
-    const seoTitle = post.title.length <= 55 ? post.title + " | Emita Mais" : post.title;
+    const seoTitle = post.title.length <= 55 ? post.title + " | EmitaGo" : post.title;
     return {
       meta: [
         { title: seoTitle },
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { name: "author", content: post.author },
         { name: "article:section", content: post.category },
         { property: "og:locale", content: "pt_BR" },
-        { property: "og:site_name", content: "Emita Mais" },
+        { property: "og:site_name", content: "EmitaGo" },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },
         { property: "og:type", content: "article" },
@@ -87,7 +87,7 @@ export const Route = createFileRoute("/blog/$slug")({
             },
             publisher: {
               "@type": "Organization",
-              name: "Emita Mais",
+              name: "EmitaGo",
               url: BASE_URL,
               logo: {
                 "@type": "ImageObject",
@@ -137,8 +137,8 @@ function ArticlePage() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={faviconEmita} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
-            Emita Mais
+            <img src={faviconEmita} alt="EmitaGo" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
+            EmitaGo
           </Link>
           <Link
             to="/blog"

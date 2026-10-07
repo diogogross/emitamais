@@ -20,7 +20,7 @@ import logoEmissor from "@/assets/emita-mark.svg";
 export const Route = createFileRoute("/certificado-digital")({
   head: () => ({
     meta: [
-      { title: "Certificado Digital A1 CPF e CNPJ por R$ 129,90 | Emita Mais" },
+      { title: "Certificado Digital A1 CPF e CNPJ por R$ 129,90 | EmitaGo" },
       {
         name: "description",
         content:
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/certificado-digital")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:site_name", content: "Emita Mais" },
+      { property: "og:site_name", content: "EmitaGo" },
       { property: "og:type", content: "product" },
       { property: "og:url", content: "https://emitago.com.br/certificado-digital" },
       { property: "og:title", content: "Certificado Digital A1 CPF e CNPJ por R$ 129,90" },
@@ -51,7 +51,7 @@ export const Route = createFileRoute("/certificado-digital")({
           name: "Certificado Digital A1 CPF e CNPJ",
           description:
             "Certificado Digital A1 para pessoa física (CPF) ou pessoa jurídica (CNPJ), emitido 100% online por videoconferência ICP-Brasil, com 12 meses de validade.",
-          brand: { "@type": "Brand", name: "Emita Mais" },
+          brand: { "@type": "Brand", name: "EmitaGo" },
           category: "Certificado Digital ICP-Brasil",
           offers: {
             "@type": "Offer",
@@ -116,7 +116,7 @@ const steps = [
 const objections = [
   { icon: Lock, title: "Chega de token perdido", desc: "A1 é arquivo digital. Instala no PC e acabou. Sem USB, sem leitora, sem drama." },
   { icon: Clock, title: "Chega de fila em cartório", desc: "Videoconferência do sofá. Não precisa sair de casa, não precisa reconhecer firma." },
-  { icon: Wifi, title: "Chega de sistema fora do ar", desc: "Emissão direta pelo Emita Mais — se der problema, a gente resolve por você." },
+  { icon: Wifi, title: "Chega de sistema fora do ar", desc: "Emissão direta pelo EmitaGo — se der problema, a gente resolve por você." },
   { icon: ShieldCheck, title: "Chega de sustos com validade", desc: "Avisamos com antecedência quando renovar. Você nunca mais perde o prazo." },
 ];
 
@@ -127,8 +127,8 @@ function CertificadoDigital() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={logoEmissor} alt="Emita Mais" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
-            Emita Mais
+            <img src={logoEmissor} alt="EmitaGo" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(139,92,246,0.5)]" />
+            EmitaGo
           </Link>
           <Link
             to="/"

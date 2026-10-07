@@ -21,16 +21,16 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Página não encontrada</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          A página que você procura não existe ou foi movida.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Voltar ao início
           </Link>
         </div>
       </div>
@@ -49,10 +49,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          Não foi possível carregar esta página
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Ocorreu um erro ao carregar o conteúdo. Tente novamente ou volte para a página inicial.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -62,13 +62,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            Tentar novamente
           </button>
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
-            Go home
+            Voltar ao início
           </a>
         </div>
       </div>
@@ -82,27 +82,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#0f0722" },
-      { title: "Emita Mais | Emissor de Notas Fiscais Online + Certificado A1" },
+      { title: "EmitaGo | Emissor de Notas Fiscais Online" },
       {
         name: "description",
         content:
-          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF ou CNPJ por R$ 129,90, 100% online, sem token e sem sair de casa.",
+          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT online. Certificado Digital A1 para CPF ou CNPJ, com emissão online por videoconferência.",
       },
-      { name: "author", content: "Emita Mais" },
+      { name: "author", content: "EmitaGo" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
       { name: "google", content: "notranslate" },
-      { property: "og:site_name", content: "Emita Mais" },
+      { property: "og:site_name", content: "EmitaGo" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
-      { property: "og:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF/CNPJ por R$ 129,90 — 100% online." },
+      { property: "og:title", content: "Emissor de Notas Fiscais Online | NFe, NFCe, NFSe, CTe e MDFe" },
+      { property: "og:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT online. Certificado Digital A1 CPF/CNPJ com emissão online." },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Emissor de Notas Fiscais Online + Certificado Digital A1" },
+      { name: "twitter:title", content: "Emissor de Notas Fiscais Online | NFe, NFCe, NFSe, CTe e MDFe" },
       { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT em segundos. Certificado Digital A1 CPF/CNPJ por R$ 129,90." },
       { property: "og:image", content: ogImage },
-      { property: "og:image:alt", content: "Emita Mais — emissor de notas fiscais online" },
+      { property: "og:image:alt", content: "EmitaGo — emissor de notas fiscais online" },
       { name: "twitter:image", content: ogImage },
-      { name: "twitter:image:alt", content: "Emita Mais — emissor de notas fiscais online" },
+      { name: "twitter:image:alt", content: "EmitaGo — emissor de notas fiscais online" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -124,8 +124,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             {
               "@type": "Organization",
               "@id": "https://emitago.com.br/#organization",
-              name: "Emita Mais",
-              alternateName: "Emita Mais",
+              name: "EmitaGo",
+              alternateName: "EmitaGo",
               url: "https://emitago.com.br/",
               logo: {
                 "@type": "ImageObject",
@@ -139,8 +139,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": "WebSite",
               "@id": "https://emitago.com.br/#website",
               url: "https://emitago.com.br/",
-              name: "Emita Mais",
-              alternateName: "Emita Mais",
+              name: "EmitaGo",
+              alternateName: "EmitaGo",
               inLanguage: "pt-BR",
               publisher: { "@id": "https://emitago.com.br/#organization" },
             },
