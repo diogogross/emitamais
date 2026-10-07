@@ -37,8 +37,10 @@ export function FloatingActions() {
       </button>
 
       <a
-        href="/#planos"
-        aria-label="Falar com especialista"
+        href="https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20o%20EmitaGo."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar com especialista pelo WhatsApp"
         className="grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground shadow-lg transition hover:scale-105 hover:bg-primary/90"
       >
         <MessageCircle className="h-7 w-7" aria-hidden="true" />
