@@ -92,7 +92,7 @@ function SolutionPage() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/90 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link to="/" className="font-display text-xl font-bold">EmitaGo</Link>
+          <img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={160} height={48} className="w-36 sm:w-40 h-12 object-contain" />
           <Link to="/" className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm hover:bg-muted">
             <ArrowLeft className="h-4 w-4" /> Voltar
           </Link>
