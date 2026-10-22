@@ -1098,6 +1098,23 @@ function Index() {
         </div>
       </div></section>
 
+      {/* SEO: páginas específicas de soluções fiscais */}
+      <section aria-labelledby="solucoes-fiscais-title" className="border-t border-white/10 bg-[oklch(0.16_0.05_285)]">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
+          <h2 id="solucoes-fiscais-title" className="font-display text-2xl md:text-3xl font-bold text-white">Conheça nossas soluções fiscais</h2>
+          <p className="mt-3 max-w-3xl text-sm md:text-base leading-relaxed text-white/70">Encontre informações sobre os documentos fiscais e veja como organizar a emissão conforme a necessidade da sua empresa.</p>
+          <ul className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm">
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfe">Emissor de NF-e para produtos</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfce">NFC-e e cupom fiscal para varejo</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfse">Emissão de NFS-e para serviços</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfpe">Nota fiscal para produtor rural</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/cte">CT-e para transportadoras</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/mdfe">MDF-e para transporte de cargas</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/ciot">CIOT e contratação de frete</a></li>
+          </ul>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="relative mt-16 border-t border-white/10 bg-[oklch(0.14_0.05_285)]">
         <div
