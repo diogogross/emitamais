@@ -709,7 +709,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Veja como o MEI pode se preparar para emitir NFS-e em 2027, quais dados conferir e como acompanhar as regras oficiais da Reforma Tributária.",
     date: "22 Out 2026",
     readMin: 6,
-    image: nfeGuia,
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A Nota Fiscal de Serviço eletrônica (NFS-e) registra a prestação de um serviço e ajuda o MEI a comprovar a operação para o cliente. Com as mudanças previstas para 2027, vale conferir desde já o acesso ao Emissor Nacional e manter os dados cadastrais organizados. Regras e leiautes podem receber atualizações técnicas, por isso consulte sempre os canais oficiais." },
@@ -741,7 +741,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Entenda a mudança prevista para a emissão de documentos fiscais pelo MEI, o que continua no DAS e como se organizar antes de 2027.",
     date: "22 Out 2026",
     readMin: 6,
-    image: nfceVarejo,
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "Uma das dúvidas mais buscadas por microempreendedores é se o MEI precisará emitir nota fiscal também para clientes pessoa física em 2027. A regulamentação da Reforma Tributária trouxe mudanças para a emissão de documentos fiscais, por isso é importante separar o que já está definido dos detalhes técnicos que ainda podem ser atualizados." },
@@ -768,7 +768,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Aprenda o fluxo básico de emissão de NF-e, os cadastros que precisam estar corretos e como reduzir rejeições antes de transmitir à SEFAZ.",
     date: "22 Out 2026",
     readMin: 7,
-    image: nfeGuia,
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A Nota Fiscal Eletrônica (NF-e, modelo 55) documenta operações com mercadorias nas situações previstas pela legislação. A emissão envolve cadastro, preenchimento dos dados da operação, assinatura digital quando exigida e transmissão para autorização da SEFAZ. Uma nota preenchida corretamente reduz retrabalho e facilita a escrituração." },
@@ -801,7 +801,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Saiba o que é a NFS-e, quais informações revisar antes de emitir e como acompanhar a adoção do padrão nacional de nota fiscal de serviço.",
     date: "22 Out 2026",
     readMin: 6,
-    image: nfeGuia,
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A Nota Fiscal de Serviço eletrônica (NFS-e) registra serviços prestados e é importante para a documentação fiscal, o controle financeiro e o relacionamento com clientes empresariais. O padrão nacional busca uniformizar dados e processos, embora a aplicação prática e as obrigações possam variar conforme o município, o porte da empresa e o regime tributário." },
@@ -834,7 +834,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Veja como a Reforma Tributária afeta a documentação do transporte, por que atualizar o emissor de CT-e e quais pontos revisar com a contabilidade.",
     date: "22 Out 2026",
     readMin: 7,
-    image: cteTransporte,
+    image: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O Conhecimento de Transporte Eletrônico (CT-e, modelo 57) documenta prestações de serviço de transporte de cargas. A implantação da Reforma Tributária exige atenção aos leiautes fiscais e às informações relacionadas à CBS e ao IBS. Para transportadoras, preparar sistemas, cadastros e processos com antecedência ajuda a reduzir erros operacionais." },
@@ -867,7 +867,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Entenda a diferença entre IBS e CBS, o cronograma da Reforma Tributária e como preparar seu sistema emissor para as novas informações fiscais.",
     date: "22 Out 2026",
     readMin: 7,
-    image: nfeGuia,
+    image: "https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A Reforma Tributária sobre o consumo cria dois tributos centrais: a CBS, de competência federal, e o IBS, compartilhado por estados e municípios. A transição acontece em etapas e exige mudanças em documentos eletrônicos e sistemas fiscais. O impacto concreto depende do regime tributário, da atividade e das regras técnicas vigentes para cada documento." },
