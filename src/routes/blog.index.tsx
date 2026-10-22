@@ -10,7 +10,6 @@ import {
   Calendar,
 } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
-import faviconEmita from "@/assets/emita-mark.svg";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -102,8 +101,7 @@ function BlogPage() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/40 border-b border-white/5">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-1.5 font-display text-xl font-bold">
-            <img src={faviconEmita} alt="EmitaGo" width={44} height={44} className="w-11 h-11 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
-            EmitaGo
+            <img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={160} height={48} className="w-36 sm:w-40 h-12 object-contain" />
           </Link>
           <Link
             to="/"
