@@ -40,7 +40,6 @@ import truckHero from "@/assets/docs/cte.jpg";
 import heroServicos from "@/assets/docs/nfse.jpg";
 import heroMaquininha from "@/assets/smart-pos.webp";
 import heroProduto from "@/assets/docs/nfe.jpg";
-import faviconEmita from "@/assets/emita-mark.svg";
 
 
 
@@ -333,8 +332,7 @@ function Index() {
       <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center gap-2.5 font-display text-xl font-bold" aria-label="EmitaGo — início">
-            <img src={faviconEmita} alt="EmitaGo" width={36} height={36} className="w-9 h-9 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
-            <span>Emita<span className="gradient-text">Go</span></span>
+            <img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={160} height={48} className="w-36 sm:w-40 h-12 object-contain drop-shadow-[0_4px_12px_rgba(59,130,246,0.5)]" />
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <div className="relative group">
@@ -1125,8 +1123,7 @@ function Index() {
         <div className="max-w-7xl mx-auto px-6 py-12 md:py-14 grid gap-10 md:grid-cols-12">
           <div className="md:col-span-6">
             <div className="flex items-center gap-3">
-              <img src={faviconEmita} alt="EmitaGo" width={36} height={36} loading="lazy" decoding="async" className="w-9 h-9 object-contain" />
-              <div className="font-display text-xl font-bold text-white">EmitaGo</div>
+              <img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={160} height={48} loading="lazy" decoding="async" className="w-36 sm:w-40 h-12 object-contain" />
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/65 max-w-lg">
               Emissão fiscal online com documentos fiscais, PDV e Certificado Digital A1 em uma única plataforma.
