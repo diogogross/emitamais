@@ -700,6 +700,200 @@ export const blogPosts: BlogPost[] = [
       { type: "quote", text: "Procuração eletrônica é o meio-termo perfeito: o contador trabalha com autonomia e a empresa mantém total controle sobre o certificado." },
     ],
   },
+
+  // ============ SEO orgânico: MEI, emissão fiscal e Reforma Tributária (outubro/2026) ============
+  {
+    slug: "nfse-mei-2027-como-emitir",
+    category: "Notas Fiscais",
+    title: "NFS-e para MEI em 2027: como emitir nota fiscal de serviço",
+    excerpt: "Veja como o MEI pode se preparar para emitir NFS-e em 2027, quais dados conferir e como acompanhar as regras oficiais da Reforma Tributária.",
+    date: "22 Out 2026",
+    readMin: 6,
+    image: nfeGuia,
+    author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "A Nota Fiscal de Serviço eletrônica (NFS-e) registra a prestação de um serviço e ajuda o MEI a comprovar a operação para o cliente. Com as mudanças previstas para 2027, vale conferir desde já o acesso ao Emissor Nacional e manter os dados cadastrais organizados. Regras e leiautes podem receber atualizações técnicas, por isso consulte sempre os canais oficiais." },
+      { type: "heading", text: "Como se preparar para emitir NFS-e" },
+      { type: "list", items: [
+        "Tenha em mãos o CNPJ e os dados de acesso ao sistema oficial de emissão.",
+        "Confira nome empresarial, endereço e demais informações cadastrais.",
+        "Identifique corretamente o serviço prestado e informe os dados do tomador quando solicitados.",
+        "Revise descrição, valor e competência antes de confirmar a emissão.",
+        "Guarde o documento e o número da nota para localizar o registro depois."
+      ]},
+      { type: "heading", text: "O MEI precisa emitir nota para toda prestação?" },
+      { type: "paragraph", text: "As regras atuais dispensam, em geral, o MEI de emitir nota quando presta serviço para pessoa física, salvo quando o consumidor solicitar; para cliente pessoa jurídica, a emissão é exigida. A legislação e a regulamentação da Reforma Tributária preveem mudanças a partir de 2027. Antes de tomar decisões, confira a regra vigente e as orientações atualizadas no Portal Nacional da NFS-e e na Receita Federal." },
+      { type: "heading", text: "Erros comuns ao emitir nota de serviço" },
+      { type: "list", items: [
+        "Selecionar um serviço que não corresponde ao trabalho realizado.",
+        "Informar incorretamente os dados do cliente ou o valor cobrado.",
+        "Não conferir o documento gerado depois da transmissão.",
+        "Deixar para testar o acesso somente quando precisar faturar."
+      ]},
+      { type: "heading", text: "Checklist para 2027" },
+      { type: "paragraph", text: "Faça um teste de acesso, organize os dados que usa com frequência e acompanhe os comunicados oficiais. Se tiver dúvida sobre enquadramento, obrigação ou tributação, confirme com um contador ou órgão fiscal competente. Este conteúdo é informativo e não substitui orientação contábil." }
+    ],
+  },
+  {
+    slug: "mei-nota-fiscal-pessoa-fisica-2027",
+    category: "Notas Fiscais",
+    title: "MEI em 2027: será obrigatório emitir nota fiscal para pessoa física?",
+    excerpt: "Entenda a mudança prevista para a emissão de documentos fiscais pelo MEI, o que continua no DAS e como se organizar antes de 2027.",
+    date: "22 Out 2026",
+    readMin: 6,
+    image: nfceVarejo,
+    author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "Uma das dúvidas mais buscadas por microempreendedores é se o MEI precisará emitir nota fiscal também para clientes pessoa física em 2027. A regulamentação da Reforma Tributária trouxe mudanças para a emissão de documentos fiscais, por isso é importante separar o que já está definido dos detalhes técnicos que ainda podem ser atualizados." },
+      { type: "heading", text: "O que muda para o MEI em 2027?" },
+      { type: "paragraph", text: "As alterações legais aprovadas para a transição tributária ampliam a emissão de documentos fiscais nas operações do MEI, incluindo vendas e prestações de serviços. A forma de emissão depende da natureza da operação: serviços utilizam a NFS-e de padrão nacional, enquanto mercadorias seguem as regras aplicáveis ao documento fiscal correspondente. Confira as orientações oficiais mais recentes antes de emitir." },
+      { type: "heading", text: "O DAS-MEI vai deixar de ser fixo?" },
+      { type: "paragraph", text: "A Reforma Tributária não significa, por si só, que o MEI deva calcular IBS e CBS como uma empresa do regime regular. O MEI permanece sujeito às regras específicas do SIMEI e ao recolhimento previsto para sua categoria. Não confunda campos ou informações do documento fiscal com uma cobrança automática separada: consulte as normas vigentes para o seu enquadramento." },
+      { type: "heading", text: "Como se preparar antes de janeiro de 2027" },
+      { type: "list", items: [
+        "Verifique o acesso aos emissores oficiais e mantenha o cadastro atualizado.",
+        "Separe os dados de clientes e serviços ou produtos vendidos.",
+        "Converse com o contador sobre as operações específicas do seu negócio.",
+        "Acompanhe comunicados da Receita Federal, do Portal do Empreendedor e dos fiscos estaduais ou municipais.",
+        "Use um sistema fiscal atualizado, se optar por um emissor privado."
+      ]},
+      { type: "heading", text: "Onde confirmar as regras" },
+      { type: "paragraph", text: "Consulte o Portal Nacional da NFS-e para serviços e os canais oficiais da Receita Federal e do Portal do Empreendedor para orientações gerais. As regras de documentos para mercadorias podem depender da legislação estadual. Este artigo tem finalidade educativa e deve ser lido junto das normas vigentes." }
+    ],
+  },
+  {
+    slug: "como-emitir-nfe-passo-a-passo-2027",
+    category: "Notas Fiscais",
+    title: "Como emitir nota fiscal eletrônica (NF-e): passo a passo para empresas",
+    excerpt: "Aprenda o fluxo básico de emissão de NF-e, os cadastros que precisam estar corretos e como reduzir rejeições antes de transmitir à SEFAZ.",
+    date: "22 Out 2026",
+    readMin: 7,
+    image: nfeGuia,
+    author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "A Nota Fiscal Eletrônica (NF-e, modelo 55) documenta operações com mercadorias nas situações previstas pela legislação. A emissão envolve cadastro, preenchimento dos dados da operação, assinatura digital quando exigida e transmissão para autorização da SEFAZ. Uma nota preenchida corretamente reduz retrabalho e facilita a escrituração." },
+      { type: "heading", text: "O que conferir antes de emitir NF-e" },
+      { type: "list", items: [
+        "Credenciamento e situação fiscal do estabelecimento perante a SEFAZ.",
+        "Certificado digital válido, conforme os requisitos do emissor.",
+        "Cadastro do destinatário, incluindo CNPJ/CPF, endereço e inscrição estadual quando aplicável.",
+        "Descrição dos produtos, NCM, CFOP, unidade, quantidade e valores.",
+        "Regras tributárias definidas de acordo com o regime e a operação, com apoio contábil."
+      ]},
+      { type: "heading", text: "Etapas da emissão" },
+      { type: "list", items: [
+        "Selecione o destinatário e confira os dados cadastrais.",
+        "Inclua os produtos e informe quantidades, preços e classificações fiscais.",
+        "Revise CFOP, impostos e natureza da operação conforme a orientação contábil.",
+        "Transmita o documento e aguarde o retorno da SEFAZ.",
+        "Depois da autorização, disponibilize o DANFE e o XML ao destinatário e mantenha os arquivos armazenados."
+      ]},
+      { type: "heading", text: "Por que uma NF-e pode ser rejeitada?" },
+      { type: "paragraph", text: "Rejeições podem ocorrer por inconsistências de cadastro, código fiscal incompatível, certificado inválido ou campos obrigatórios ausentes. Leia a mensagem de retorno, corrija a causa e só então retransmita. Não altere códigos tributários por tentativa e erro: confirme a classificação adequada com seu contador." },
+      { type: "heading", text: "NF-e e Reforma Tributária" },
+      { type: "paragraph", text: "Os leiautes fiscais estão sendo adaptados para os novos tributos IBS e CBS. Em 2026 e 2027, acompanhe notas técnicas e cronogramas oficiais, porque as exigências podem variar conforme o documento e o enquadramento tributário. Um emissor atualizado ajuda a acompanhar mudanças de leiaute, mas não substitui a validação fiscal da operação." }
+    ],
+  },
+  {
+    slug: "emissao-nfse-empresas-padrao-nacional",
+    category: "Notas Fiscais",
+    title: "Emissão de NFS-e para empresas: como funciona o padrão nacional",
+    excerpt: "Saiba o que é a NFS-e, quais informações revisar antes de emitir e como acompanhar a adoção do padrão nacional de nota fiscal de serviço.",
+    date: "22 Out 2026",
+    readMin: 6,
+    image: nfeGuia,
+    author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "A Nota Fiscal de Serviço eletrônica (NFS-e) registra serviços prestados e é importante para a documentação fiscal, o controle financeiro e o relacionamento com clientes empresariais. O padrão nacional busca uniformizar dados e processos, embora a aplicação prática e as obrigações possam variar conforme o município, o porte da empresa e o regime tributário." },
+      { type: "heading", text: "Quais dados revisar na nota de serviço" },
+      { type: "list", items: [
+        "CNPJ e cadastro do prestador.",
+        "Identificação do tomador quando necessária.",
+        "Descrição clara e compatível com o serviço realmente prestado.",
+        "Código de serviço e município de incidência conforme a regra aplicável.",
+        "Valor, retenções e demais informações tributárias confirmadas com o contador."
+      ]},
+      { type: "heading", text: "Como funciona a emissão" },
+      { type: "paragraph", text: "Em linhas gerais, o prestador acessa o emissor autorizado para seu enquadramento, informa os dados da prestação, revisa as informações e conclui a emissão. Depois, deve salvar ou encaminhar o documento ao cliente e manter o registro organizado. Empresas devem verificar com a prefeitura e com a contabilidade qual emissor e procedimento se aplicam ao seu caso." },
+      { type: "heading", text: "O que observar na transição para 2027" },
+      { type: "paragraph", text: "A Reforma Tributária traz mudanças graduais nos documentos e na informação de tributos. A Receita Federal e o Comitê Gestor publicam atos e orientações que podem atualizar prazos e procedimentos. Não presuma que todas as empresas terão exatamente o mesmo fluxo: confira o enquadramento e a orientação vigente para NFS-e." },
+      { type: "heading", text: "Como reduzir erros na emissão de NFS-e" },
+      { type: "list", items: [
+        "Mantenha os cadastros de clientes e serviços atualizados.",
+        "Use descrições objetivas, sem informações contraditórias.",
+        "Confira município, competência e valor antes de confirmar.",
+        "Guarde o documento emitido e acompanhe eventuais cancelamentos ou substituições.",
+        "Revise com o contador as regras de retenção e tributação aplicáveis."
+      ]}
+    ],
+  },
+  {
+    slug: "cte-ibs-cbs-2027-transportadoras",
+    category: "Transporte",
+    title: "CT-e em 2027: como preparar a transportadora para IBS e CBS",
+    excerpt: "Veja como a Reforma Tributária afeta a documentação do transporte, por que atualizar o emissor de CT-e e quais pontos revisar com a contabilidade.",
+    date: "22 Out 2026",
+    readMin: 7,
+    image: cteTransporte,
+    author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "O Conhecimento de Transporte Eletrônico (CT-e, modelo 57) documenta prestações de serviço de transporte de cargas. A implantação da Reforma Tributária exige atenção aos leiautes fiscais e às informações relacionadas à CBS e ao IBS. Para transportadoras, preparar sistemas, cadastros e processos com antecedência ajuda a reduzir erros operacionais." },
+      { type: "heading", text: "O que revisar no CT-e" },
+      { type: "list", items: [
+        "Mantenha o emissor atualizado conforme as versões e notas técnicas oficiais.",
+        "Revise os dados do remetente, destinatário, tomador e percurso.",
+        "Confira valores do frete e informações da prestação antes de transmitir.",
+        "Verifique com a contabilidade como o enquadramento tributário da transportadora afeta o preenchimento.",
+        "Teste os fluxos de autorização, cancelamento, substituição e armazenamento dos XMLs."
+      ]},
+      { type: "heading", text: "O que são IBS e CBS?" },
+      { type: "paragraph", text: "A CBS é a Contribuição sobre Bens e Serviços, de âmbito federal, e o IBS é o Imposto sobre Bens e Serviços, compartilhado por estados e municípios. Eles fazem parte da substituição gradual de tributos sobre o consumo. O calendário de implantação é escalonado; por isso, não se deve presumir que todas as regras de transição entrem em vigor ao mesmo tempo." },
+      { type: "heading", text: "Checklist para transportadoras" },
+      { type: "list", items: [
+        "Defina quem acompanha as notas técnicas e comunicados oficiais.",
+        "Confirme com o fornecedor do sistema quando os leiautes atualizados estarão disponíveis.",
+        "Alinhe com o contador o tratamento fiscal de cada tipo de prestação.",
+        "Treine a equipe para interpretar mensagens de validação e rejeição.",
+        "Faça testes antes de depender do novo fluxo em uma operação real."
+      ]},
+      { type: "heading", text: "Atenção às fontes oficiais" },
+      { type: "paragraph", text: "A Receita Federal informou em outubro de 2026 que documentos fiscais de transporte já vêm sendo adaptados às informações da CBS, e o cronograma prevê novas etapas em 2027. Consulte os portais oficiais da NF-e/CT-e, da Receita Federal e do Comitê Gestor do IBS para confirmar regras e datas aplicáveis ao seu perfil. Este conteúdo é informativo, não substitui orientação contábil." }
+    ],
+  },
+  {
+    slug: "ibs-cbs-reforma-tributaria-nota-fiscal-2027",
+    category: "Notas Fiscais",
+    title: "IBS e CBS na nota fiscal em 2027: o que muda com a Reforma Tributária",
+    excerpt: "Entenda a diferença entre IBS e CBS, o cronograma da Reforma Tributária e como preparar seu sistema emissor para as novas informações fiscais.",
+    date: "22 Out 2026",
+    readMin: 7,
+    image: nfeGuia,
+    author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "A Reforma Tributária sobre o consumo cria dois tributos centrais: a CBS, de competência federal, e o IBS, compartilhado por estados e municípios. A transição acontece em etapas e exige mudanças em documentos eletrônicos e sistemas fiscais. O impacto concreto depende do regime tributário, da atividade e das regras técnicas vigentes para cada documento." },
+      { type: "heading", text: "Qual é a diferença entre IBS e CBS?" },
+      { type: "list", items: [
+        "CBS significa Contribuição sobre Bens e Serviços e integra a esfera federal.",
+        "IBS significa Imposto sobre Bens e Serviços e envolve estados e municípios.",
+        "Os dois fazem parte da reorganização da tributação sobre o consumo.",
+        "A forma de apuração e recolhimento depende do regime tributário e das regras aplicáveis ao contribuinte."
+      ]},
+      { type: "heading", text: "O que acontece em 2027?" },
+      { type: "paragraph", text: "O cronograma prevê uma nova etapa da transição a partir de 2027, incluindo o início da cobrança da CBS e o período de teste do IBS conforme as normas vigentes. A implementação não é igual para todos os contribuintes: o Simples Nacional e o MEI possuem regras específicas, e os detalhes de preenchimento podem depender de notas técnicas atualizadas." },
+      { type: "heading", text: "Como preparar a emissão de notas fiscais" },
+      { type: "list", items: [
+        "Atualize o sistema emissor e acompanhe a versão do leiaute de cada documento.",
+        "Não copie códigos fiscais de outra empresa sem validar se o enquadramento é o mesmo.",
+        "Revise cadastros de produtos, serviços, clientes e operações.",
+        "Faça testes com o fornecedor do sistema e registre dúvidas para o contador.",
+        "Acompanhe comunicados da Receita Federal, do Comitê Gestor do IBS e dos portais fiscais."
+      ]},
+      { type: "heading", text: "A Reforma Tributária aumenta automaticamente o imposto de toda empresa?" },
+      { type: "paragraph", text: "Não é correto concluir que todas as empresas pagarão mais ou menos apenas pela existência de IBS e CBS. O resultado depende da atividade, dos créditos permitidos, dos custos, do regime tributário e das regras aplicáveis. Antes de mudar de regime ou preço, faça uma simulação com um profissional contábil." },
+      { type: "heading", text: "Como evitar informação desatualizada" },
+      { type: "paragraph", text: "Use materiais oficiais para confirmar prazos e obrigações, porque regras e validações técnicas podem mudar durante a implantação. A Receita Federal publicou atualizações do Simples Nacional em 2026 para adequação à Reforma Tributária. Este guia é educativo e não substitui análise fiscal individual." }
+    ],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
