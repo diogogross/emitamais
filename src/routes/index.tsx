@@ -269,7 +269,7 @@ export const Route = createFileRoute("/")({
               name: "Vocês atendem NFSe da minha cidade?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O EmitaGo possui integrações com municípios brasileiros. A disponibilidade da NFSe varia conforme a prefeitura e a integração fiscal utilizada.",
+                text: "O EmitaGo possui integrações com municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
               },
             },
             {
