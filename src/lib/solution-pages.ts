@@ -48,6 +48,40 @@ export const solutionPages: SolutionPage[] = [
     relatedSlugs: ["nfce-varejo", "nfe-passo-a-passo"]
   },
   {
+    slug: "pdv-smart-pos",
+    title: "PDV com NFC-e e Smart POS",
+    seoTitle: "PDV com NFC-e e Smart POS Android | EmitaGo",
+    description: "Sistema PDV com NFC-e e Smart POS Android compatível. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade.",
+    h1: "PDV com NFC-e e Smart POS para o seu comércio",
+    intro: "Organize as vendas do balcão e a emissão fiscal em um único fluxo. Conheça os recursos de PDV do EmitaGo e confirme a compatibilidade do seu equipamento Smart POS antes de contratar.",
+    benefits: [
+      "PDV online integrado à rotina de emissão de NFC-e",
+      "Fluxo de vendas e documentos fiscais centralizados",
+      "Acesso em dispositivos e Smart POS Android compatíveis",
+      "Gestão de produtos e informações fiscais conforme os recursos disponíveis",
+      "Preço pré-pago por CNPJ ativo, sem fidelidade"
+    ],
+    audience: [
+      "Lojas e varejistas",
+      "Mercados e minimercados",
+      "Restaurantes e operações de balcão, conforme compatibilidade fiscal",
+      "Comércios que buscam integrar venda e emissão de NFC-e"
+    ],
+    steps: [
+      "Confirme a compatibilidade do equipamento Smart POS e da operação fiscal.",
+      "Configure a empresa e o ambiente de emissão.",
+      "Cadastre produtos, preços e informações fiscais necessárias.",
+      "Registre a venda no PDV e emita a NFC-e conforme a configuração disponível.",
+      "Acompanhe os documentos e a rotina de vendas no sistema."
+    ],
+    faq: [
+      { question: "O EmitaGo funciona em qualquer Smart POS?", answer: "A compatibilidade depende do equipamento, do sistema operacional e da configuração da operação. Confirme o modelo com a equipe antes de contratar." },
+      { question: "O PDV permite emitir NFC-e?", answer: "O EmitaGo oferece recursos de PDV integrados à emissão de NFC-e, conforme a configuração fiscal e a disponibilidade da integração." },
+      { question: "Quanto custa o PDV com NFC-e?", answer: "O preço do EmitaGo é R$ 60 por CNPJ ativo em cada mês de uso, com pagamento antecipado. A emissão é ilimitada no mês pago para o CNPJ ativo, sem fidelidade." }
+    ],
+    relatedSlugs: ["nfce-varejo", "nfe-passo-a-passo"]
+  },
+  {
     slug: "nfse",
     title: "NFSe — Nota Fiscal de Serviço",
     seoTitle: "NFSe Online: emissão de Nota Fiscal de Serviço | EmitaGo",
