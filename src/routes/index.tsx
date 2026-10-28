@@ -314,8 +314,6 @@ const planPerks = [
   "Modelo pré-pago: pague apenas pelos meses em que precisar emitir",
   "Sem fidelidade e sem multa por cancelamento",
   "PDV online integrado",
-  "Integrações e API conforme os recursos contratados",
-  "Recebimentos: Pix, cartão e boleto, conforme disponibilidade",
   "Atualizações fiscais e suporte conforme as condições do plano",
 ];
 
