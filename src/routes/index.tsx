@@ -65,12 +65,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "EmitaGo | Emissor de Notas Fiscais Online",
+        title: "Emissor de Notas Fiscais Online | EmitaGo Pré-Pago"
       },
       {
         name: "description",
         content:
-          "Emita NFe, NFCe, NFSe, CTe, MDFe e CIOT online. PDV integrado, acesso pelo celular e Certificado Digital A1 para CPF ou CNPJ.",
+          "Emita NF-e, NFC-e, NFS-e, CT-e e MDF-e por R$ 60/mês por CNPJ ativo. Pré-pago, sem fidelidade e com notas ilimitadas no mês pago.",
       },
       {
         name: "robots",
@@ -85,12 +85,12 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://emitago.com.br/" },
       {
         property: "og:title",
-        content: "EmitaGo | Emissor de Notas Fiscais Online",
+        content: "Emissor de Notas Fiscais Online | EmitaGo Pré-Pago",
       },
       {
         property: "og:description",
         content:
-          "Emissão de NFe, NFCe, NFSe, CTe, MDFe e CIOT online, com PDV e acesso pelo celular. Certificado Digital A1 para CPF ou CNPJ.",
+          "Emissão fiscal online por R$ 60 pré-pagos por CNPJ ativo no mês de uso. Sem fidelidade e com emissão ilimitada no mês pago.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -100,7 +100,7 @@ export const Route = createFileRoute("/")({
       {
         name: "twitter:description",
         content:
-          "Emissor fiscal online para NFe, NFCe, NFSe, CTe, MDFe e CIOT, com PDV e Certificado Digital A1.",
+          "NF-e, NFC-e, NFS-e, CT-e e MDF-e por R$ 60 pré-pagos por CNPJ ativo, sem fidelidade.",
       },
     ],
     links: [
@@ -138,7 +138,7 @@ export const Route = createFileRoute("/")({
           url: "https://emitago.com.br/",
           inLanguage: "pt-BR",
           description:
-            "Sistema online para emissão de NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT.",
+            "Sistema online para emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, além de funcionalidades relacionadas ao CIOT. Gerencie múltiplos CNPJs no mesmo painel; o preço é R$ 60 por CNPJ ativo em cada mês de uso.",
           featureList: [
             "Emissão de NFe",
             "Emissão de NFCe",
@@ -157,11 +157,35 @@ export const Route = createFileRoute("/")({
             price: "60.00",
             priceCurrency: "BRL",
             url: "https://emitago.com.br/#planos",
+            description: "R$ 60,00 por CNPJ ativo, pagos antecipadamente para liberar o mês de uso. Emissão ilimitada de notas no mês pago para cada CNPJ ativo, sem fidelidade.",
           },
           provider: {
             "@type": "Organization",
             name: "EmitaGo",
             url: "https://emitago.com.br/",
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": "https://emitago.com.br/#produto",
+          name: "EmitaGo — Sistema Emissor de Notas Fiscais",
+          url: "https://emitago.com.br/",
+          description: "Sistema fiscal online com suporte a múltiplos CNPJs no mesmo painel. R$ 60 por CNPJ ativo em cada mês de uso, com pagamento antecipado e emissão ilimitada no mês pago.",
+          category: "Software de emissão fiscal",
+          brand: {
+            "@type": "Brand",
+            name: "EmitaGo",
+          },
+          offers: {
+            "@type": "Offer",
+            url: "https://emitago.com.br/#planos",
+            price: "60.00",
+            priceCurrency: "BRL",
+            description: "R$ 60,00 por CNPJ ativo, pagos antecipadamente para liberar o mês de uso. Sem fidelidade; emissão ilimitada de notas no mês pago.",
           },
         }),
       },
@@ -218,10 +242,26 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Question",
-              name: "Quantas notas e empresas posso emitir?",
+              name: "Quanto custa o EmitaGo e como funciona o pré-pago?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Os limites, documentos e condições comerciais seguem o plano vigente apresentado no momento da contratação.",
+                text: "O EmitaGo custa R$ 60 por CNPJ ativo em cada mês de uso. O pagamento é antecipado e libera o sistema naquele mês, com emissão ilimitada de notas para o CNPJ pago. Não há fidelidade nem multa por cancelamento.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Posso gerenciar vários CNPJs no mesmo painel?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel, mas a cobrança é individual: cada CNPJ utilizado no mês custa R$ 60. CNPJs cadastrados não estão automaticamente incluídos em um único pagamento.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Preciso pagar nos meses em que não emitir notas?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "O modelo é pré-pago. Você paga antecipadamente pelo mês em que precisar usar cada CNPJ. Nos meses em que não precisar emitir, não é necessário pagar pelo uso daquele CNPJ, conforme as condições comerciais contratadas.",
               },
             },
             {
@@ -229,7 +269,7 @@ export const Route = createFileRoute("/")({
               name: "Vocês atendem NFSe da minha cidade?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O EmitaGo possui integrações com municípios brasileiros. A disponibilidade da NFSe varia conforme a prefeitura e a integração fiscal utilizada.",
+                text: "O EmitaGo possui integrações com municípios brasileiros. Para confirmar uma cidade específica, consulte nossa equipe.",
               },
             },
             {
@@ -268,14 +308,15 @@ const features = [
 ];
 
 const planPerks = [
-  "Todos os documentos fiscais (NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe, CIOT)",
-  "Emissão de notas ilimitada",
-  "Empresas ilimitadas",
+  "Documentos fiscais: NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, além de recursos relacionados ao CIOT",
+  "Emissão ilimitada de notas no mês pago para cada CNPJ ativo",
+  "Gerenciamento de múltiplos CNPJs no mesmo painel, com cobrança individual por CNPJ ativo",
+  "Modelo pré-pago: pague apenas pelos meses em que precisar emitir",
+  "Sem fidelidade e sem multa por cancelamento",
   "PDV online integrado",
-  "Integrações e API completa",
-  "Recebimentos: Pix, cartão e boleto",
-  "Atualização legal automática",
-  "Suporte prioritário",
+  "Integrações e API conforme os recursos contratados",
+  "Recebimentos: Pix, cartão e boleto, conforme disponibilidade",
+  "Atualizações fiscais e suporte conforme as condições do plano",
 ];
 
 function Index() {
@@ -872,13 +913,16 @@ function Index() {
               Plano único
             </span>
             <div className="mt-3 font-display text-2xl font-bold">EmitaGo</div>
-            <p className="text-sm text-muted-foreground mt-1">Tudo incluso, sem limites nem surpresas.</p>
+            <p className="text-sm text-muted-foreground mt-1">Pré-pago: pague pelo CNPJ que usar, sem fidelidade.</p>
             <div className="mt-6 flex items-baseline gap-1">
               <span className="text-sm text-muted-foreground">R$</span>
               <span className="font-display text-6xl font-bold">60</span>
-              <span className="text-sm text-muted-foreground">,00 /mês</span>
+              <span className="text-sm text-muted-foreground">,00 / CNPJ ativo / mês de uso</span>
             </div>
-            <ul className="mt-8 space-y-3 text-sm flex-1">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Pagamento antecipado para liberar o mês de uso. Cada CNPJ ativo custa R$ 60,00; CNPJs cadastrados não estão incluídos automaticamente no mesmo pagamento.
+            </p>
+            <ul className="mt-6 space-y-3 text-sm flex-1">
               {planPerks.map((perk) => (
                 <li key={perk} className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-primary-glow mt-0.5 shrink-0" />
@@ -1037,8 +1081,16 @@ function Index() {
                 a: "Não. O EmitaGo funciona 100% online pelo navegador, no computador, tablet ou celular. Também pode rodar em maquininhas Smart POS Android homologadas.",
               },
               {
-                q: "Quantas notas e empresas posso emitir?",
-                a: "Os limites, documentos e condições comerciais seguem o plano vigente apresentado no momento da contratação.",
+                q: "Quanto custa o EmitaGo e como funciona o pré-pago?",
+                a: "O EmitaGo custa R$ 60 por CNPJ ativo em cada mês de uso. O pagamento é antecipado e libera o sistema naquele mês, com emissão ilimitada de notas para o CNPJ pago. Não há fidelidade nem multa por cancelamento.",
+              },
+              {
+                q: "Posso gerenciar vários CNPJs no mesmo painel?",
+                a: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel, mas a cobrança é individual: cada CNPJ utilizado no mês custa R$ 60. CNPJs cadastrados não estão automaticamente incluídos em um único pagamento.",
+              },
+              {
+                q: "Preciso pagar nos meses em que não emitir notas?",
+                a: "O modelo é pré-pago. Você paga antecipadamente pelo mês em que precisar usar cada CNPJ. Nos meses em que não precisar emitir, não é necessário pagar pelo uso daquele CNPJ, conforme as condições comerciais contratadas.",
               },
               {
                 q: "Vocês atendem NFSe da minha cidade?",
@@ -1104,6 +1156,7 @@ function Index() {
           <ul className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm">
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfe">Emissor de NF-e para produtos</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfce">NFC-e e cupom fiscal para varejo</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/pdv-smart-pos">PDV com NFC-e e Smart POS</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfse">Emissão de NFS-e para serviços</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfpe">Nota fiscal para produtor rural</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/cte">CT-e para transportadoras</a></li>
@@ -1352,9 +1405,9 @@ function HeroSlide1() {
       imageFit="contain"
       alt="Empresário brasileiro usando o EmitaGo em um notebook"
       eyebrow="Plataforma completa de emissão fiscal"
-      title="Emissor de nota fiscal online"
-      titleAccent="que acelera sua operação."
-      description="Emita NFe, NFCe, NFSe, CTe, CTeOS e MDFe em um único sistema — moderno e 100% online. Menos burocracia, mais operação."
+      title="Sistema emissor de notas fiscais online"
+      titleAccent="com pré-pago por CNPJ."
+      description="Emita NF-e, NFC-e, NFS-e, CT-e, CT-e OS e MDF-e em um único sistema. Pague R$ 60 antecipados por CNPJ ativo apenas no mês de uso, sem fidelidade e com notas ilimitadas no mês pago."
       ctaLabel="Conferir planos"
       ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver o produto"
