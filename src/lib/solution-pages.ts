@@ -17,7 +17,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "nfe",
     title: "NFe — Nota Fiscal Eletrônica",
     seoTitle: "NFe Online: emita Nota Fiscal Eletrônica | EmitaGo",
-    description: "Emissor de NF-e online para produtos, com DANFE e XML. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade."
+    description: "Emissor de NF-e online para produtos, com DANFE e XML. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade.",
     h1: "Emita NFe online sem complicação",
     intro: "Centralize a emissão de Nota Fiscal Eletrônica modelo 55, cadastros de produtos, clientes, DANFE e XML em uma plataforma fiscal online.",
     benefits: ["Emissão de NFe pelo navegador", "Cadastro de produtos, clientes e tributação", "Geração de DANFE e XML", "Acesso pelo computador, tablet e celular", "Integração com certificado digital e rotinas fiscais"],
@@ -34,7 +34,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "nfce",
     title: "NFCe — Nota Fiscal do Consumidor",
     seoTitle: "NFCe Online: emissão de cupom fiscal no PDV | EmitaGo",
-    description: "Emissor de NFC-e com PDV e Smart POS compatível. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade."
+    description: "Emissor de NFC-e com PDV e Smart POS compatível. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade.",
     h1: "NFCe online para o seu varejo",
     intro: "Transforme o caixa em um PDV fiscal completo e emita NFCe modelo 65 de forma rápida, organizada e integrada ao restante da operação.",
     benefits: ["PDV online integrado", "Emissão de NFCe modelo 65", "QR Code para consulta do consumidor", "Cadastro de produtos e clientes", "Acesso em computador e Smart POS compatível"],
@@ -85,7 +85,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "nfse",
     title: "NFSe — Nota Fiscal de Serviço",
     seoTitle: "NFSe Online: emissão de Nota Fiscal de Serviço | EmitaGo",
-    description: "Emissor de NFS-e online com integração a mais de 1.600 municípios atendidos. R$ 60 pré-pagos por CNPJ ativo no mês de uso."
+    description: "Emissor de NFS-e online com integração a mais de 1.600 municípios atendidos. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
     h1: "Emita NFSe online para sua empresa",
     intro: "Simplifique a emissão de Nota Fiscal de Serviço Eletrônica e concentre clientes, serviços, impostos e documentos fiscais em um único ambiente.",
     benefits: ["Emissão online de NFSe", "Integração com municípios atendidos", "Cadastro de clientes e serviços", "Histórico e organização dos documentos", "Acesso por navegador"],
@@ -102,7 +102,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "nfpe",
     title: "NFPe — Nota Fiscal do Produtor Rural",
     seoTitle: "NFPe Online: emissão de Nota Fiscal do Produtor Rural | EmitaGo",
-    description: "Emissor de NFP-e para produtor rural, conforme operação e regras estaduais. R$ 60 pré-pagos por CNPJ ativo no mês de uso."
+    description: "Emissor de NFP-e para produtor rural, conforme operação e regras estaduais. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
     h1: "NFPe online para o produtor rural",
     intro: "Centralize a emissão e a organização dos documentos fiscais da produção rural, com acesso online e rotina simplificada.",
     benefits: ["Emissão online de NFPe", "Cadastro de produtos e operações", "Organização dos documentos fiscais", "Acesso por navegador", "Histórico para consulta"],
@@ -119,7 +119,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "cte",
     title: "CTe e CTeOS — Documentos de Transporte",
     seoTitle: "CTe Online: emita CTe e CTeOS | EmitaGo",
-    description: "Emissor de CT-e e CT-e OS para transportadoras, com recursos de MDF-e e CIOT. R$ 60 pré-pagos por CNPJ ativo no mês de uso."
+    description: "Emissor de CT-e e CT-e OS para transportadoras, com recursos de MDF-e e CIOT. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
     h1: "CTe online para transportadoras",
     intro: "Centralize a emissão de Conhecimento de Transporte Eletrônico e conecte CTe, CTeOS, MDFe e CIOT na mesma operação.",
     benefits: ["Emissão de CTe e CTeOS", "Cadastro de tomadores e participantes", "Integração operacional com MDFe", "Organização dos XMLs", "Acesso online para a equipe"],
@@ -136,7 +136,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "mdfe",
     title: "MDFe — Manifesto Eletrônico",
     seoTitle: "MDFe Online: emita Manifesto Eletrônico | EmitaGo",
-    description: "Emissor de MDF-e online para transporte de cargas, com organização de documentos e viagens. R$ 60 pré-pagos por CNPJ ativo no mês de uso."
+    description: "Emissor de MDF-e online para transporte de cargas, com organização de documentos e viagens. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
     h1: "MDFe online para organizar suas viagens",
     intro: "Monte manifestos eletrônicos com mais controle sobre documentos, veículos, motoristas e encerramento das viagens.",
     benefits: ["Emissão de MDFe online", "Vinculação de NFe e CTe", "Cadastro de veículos e condutores", "Controle de viagens e encerramento", "Integração com a operação de transporte"],
@@ -153,7 +153,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "ciot",
     title: "CIOT — Controle de Operações de Transporte",
     seoTitle: "CIOT Online: controle de transporte e frete | EmitaGo",
-    description: "Organize recursos de CIOT e documentos de transporte em um sistema online. R$ 60 pré-pagos por CNPJ ativo no mês de uso."
+    description: "Organize recursos de CIOT e documentos de transporte em um sistema online. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
     h1: "CIOT integrado à sua operação de transporte",
     intro: "Tenha as informações de transporte centralizadas e reduza retrabalho ao trabalhar com CTe, MDFe e CIOT na mesma plataforma.",
     benefits: ["Organização das operações de transporte", "Integração com documentos fiscais", "Cadastro de transportadores e veículos", "Histórico das operações", "Acesso online"],
