@@ -253,7 +253,7 @@ export const Route = createFileRoute("/")({
               name: "Posso gerenciar vários CNPJs no mesmo painel?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sim. É possível gerenciar múltiplos CNPJs no mesmo painel, mas a cobrança é individual: cada CNPJ utilizado no mês custa R$ 60. CNPJs cadastrados não estão automaticamente incluídos em um único pagamento.",
+                text: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel, mas a cobrança é individual: cada CNPJ utilizado no mês custa R$ 60. CNPJs cadastrados não estão automaticamente incluídos em um único pagamento.",
               },
             },
             {
@@ -917,7 +917,7 @@ function Index() {
             <div className="mt-6 flex items-baseline gap-1">
               <span className="text-sm text-muted-foreground">R$</span>
               <span className="font-display text-6xl font-bold">60</span>
-              <span className="text-sm text-muted-foreground">,00 / CNPJ ativo</span>
+              <span className="text-sm text-muted-foreground">,00 / CNPJ ativo / mês de uso</span>
             </div>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Pagamento antecipado para liberar o mês de uso. Cada CNPJ ativo custa R$ 60,00; CNPJs cadastrados não estão incluídos automaticamente no mesmo pagamento.
