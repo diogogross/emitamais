@@ -1133,6 +1133,7 @@ function Index() {
           <ul className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm">
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfe">Emissor de NF-e para produtos</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfce">NFC-e e cupom fiscal para varejo</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/pdv-smart-pos">PDV com NFC-e e Smart POS</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfse">Emissão de NFS-e para serviços</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfpe">Nota fiscal para produtor rural</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/cte">CT-e para transportadoras</a></li>
