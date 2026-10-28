@@ -5,6 +5,21 @@ import { blogPosts } from "@/lib/blog-posts";
 
 const BASE_URL = "https://emitago.com.br";
 
+const pricingFaq = [
+  {
+    question: "Quanto custa o EmitaGo?",
+    answer: "O EmitaGo custa R$ 60 por CNPJ ativo em cada mês de uso. O pagamento é antecipado e libera o sistema naquele mês, com emissão ilimitada de notas para o CNPJ pago. Não há fidelidade nem multa por cancelamento.",
+  },
+  {
+    question: "Posso gerenciar vários CNPJs no mesmo painel?",
+    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel, mas a cobrança é individual: cada CNPJ utilizado no mês custa R$ 60. CNPJs cadastrados não estão automaticamente incluídos em um único pagamento.",
+  },
+  {
+    question: "Preciso pagar nos meses em que não emitir notas?",
+    answer: "O modelo é pré-pago. Você paga antecipadamente pelo mês em que precisar usar cada CNPJ. Nos meses em que não precisar emitir, não é necessário pagar pelo uso daquele CNPJ, conforme as condições comerciais contratadas.",
+  },
+];
+
 export const Route = createFileRoute("/solucoes/$slug")({
   loader: ({ params }) => {
     const page = getSolutionBySlug(params.slug);
@@ -56,6 +71,13 @@ export const Route = createFileRoute("/solucoes/$slug")({
                 description: page.description,
                 provider: { "@type": "Organization", name: "EmitaGo", url: BASE_URL },
                 areaServed: { "@type": "Country", name: "Brasil" },
+                offers: {
+                  "@type": "Offer",
+                  price: "60.00",
+                  priceCurrency: "BRL",
+                  description: "R$ 60 por CNPJ ativo, pagos antecipadamente para liberar o mês de uso. Emissão ilimitada de notas no mês pago, sem fidelidade.",
+                  url: `${BASE_URL}/#planos`,
+                },
                 url
               },
               {
@@ -68,7 +90,7 @@ export const Route = createFileRoute("/solucoes/$slug")({
               },
               {
                 "@type": "FAQPage",
-                mainEntity: page.faq.map((item) => ({
+                mainEntity: [...page.faq, ...pricingFaq].map((item) => ({
                   "@type": "Question",
                   name: item.question,
                   acceptedAnswer: { "@type": "Answer", text: item.answer }
@@ -108,6 +130,11 @@ function SolutionPage() {
               </div>
               <h1 className="font-display text-4xl font-bold leading-tight md:text-6xl">{page.h1}</h1>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl">{page.intro}</p>
+              <div className="mt-6 rounded-2xl border border-primary/20 bg-primary/5 p-5 md:p-6">
+                <p className="text-sm font-semibold uppercase tracking-wide text-primary">Preço pré-pago por CNPJ ativo</p>
+                <p className="mt-2 text-3xl font-bold">R$ 60,00 <span className="text-base font-medium text-muted-foreground">por CNPJ / mês de uso</span></p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Pagamento antecipado para liberar o mês. Emissão ilimitada de notas no período pago para cada CNPJ ativo, sem fidelidade. Vários CNPJs podem ser gerenciados no mesmo painel, com cobrança individual.</p>
+              </div>
               <Link to="/" hash="planos" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground hover:opacity-90">
                 Começar agora <ArrowRight className="h-4 w-4" />
               </Link>
@@ -147,7 +174,7 @@ function SolutionPage() {
         <section className="mx-auto max-w-6xl px-6 py-16">
           <h2 className="font-display text-3xl font-bold">Perguntas frequentes</h2>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {page.faq.map((item) => (
+            {[...page.faq, ...pricingFaq].map((item) => (
               <article key={item.question} className="rounded-2xl border border-border/60 p-6">
                 <h3 className="font-semibold">{item.question}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.answer}</p>
