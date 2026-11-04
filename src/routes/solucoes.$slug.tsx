@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, Check, FileText } from "lucide-react";
+import { ArrowRight, Check, FileText } from "lucide-react";
 import { getSolutionBySlug } from "@/lib/solution-pages";
 import { blogPosts } from "@/lib/blog-posts";
 
