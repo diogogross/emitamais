@@ -42,6 +42,8 @@ export const Route = createFileRoute("/certificado-digital")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Certificado Digital A1 CPF/CNPJ por R$ 129,90" },
       { name: "twitter:description", content: "Emissão 100% online por videoconferência. 12 meses de validade." },
+      { name: "twitter:image", content: "https://emitago.com.br/og-emita.png" },
+      { name: "twitter:image:alt", content: "EmitaGo — Certificado Digital A1 para CPF e CNPJ" },
     ],
     links: [{ rel: "canonical", href: "https://emitago.com.br/certificado-digital" }],
     scripts: [
@@ -55,7 +57,7 @@ export const Route = createFileRoute("/certificado-digital")({
             "Certificado Digital A1 para pessoa física (CPF) ou pessoa jurídica (CNPJ), emitido 100% online por videoconferência ICP-Brasil, com 12 meses de validade.",
           brand: { "@type": "Brand", name: "EmitaGo" },
           category: "Certificado Digital ICP-Brasil",
-          image: ["https://emitago.com.br/assets/hero-person-DiH1ND3b.webp"],
+          image: ["https://emitago.com.br/og-emita.png"],
           offers: {
             "@type": "Offer",
             price: "129.90",
