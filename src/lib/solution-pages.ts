@@ -16,7 +16,7 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "nfe",
     title: "NFe — Nota Fiscal Eletrônica",
-    seoTitle: "Emissor de NF-e Online para Produtos | Nota Fiscal Eletrônica | EmitaGo",
+    seoTitle: "Emissor de NF-e Online para Produtos | EmitaGo",
     description: "Emita NF-e modelo 55 online para venda de produtos. Emissor fiscal com cadastro de produtos e clientes, DANFE e XML. R$ 60 pré-pagos por CNPJ no mês de uso.",
     h1: "Emissor de NF-e online para sua empresa",
     intro: "Emita Nota Fiscal Eletrônica (NF-e modelo 55) para venda de produtos em uma plataforma online. Organize clientes, produtos e informações tributárias, transmita a nota à SEFAZ e tenha DANFE e XML disponíveis para sua operação e contabilidade.",
@@ -86,7 +86,7 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "nfse",
     title: "NFSe — Nota Fiscal de Serviço",
-    seoTitle: "Emissor de NFS-e Online para Prestadores de Serviços | EmitaGo",
+    seoTitle: "Emissor de NFS-e Online para Serviços | EmitaGo",
     description: "Emita NFS-e online para sua empresa. Emissor de nota fiscal de serviço com integração a mais de 1.600 municípios atendidos. Consulte a cobertura da sua cidade. R$ 60 pré-pagos por CNPJ no mês de uso.",
     h1: "Emissor de NFS-e online para prestadores de serviços",
     intro: "Emita Nota Fiscal de Serviço Eletrônica (NFS-e) pela internet e organize clientes, serviços, dados da prestação e documentos fiscais em um só lugar. O EmitaGo possui integração com mais de 1.600 municípios; confirme a disponibilidade para a cidade e o enquadramento da sua empresa antes de começar.",
