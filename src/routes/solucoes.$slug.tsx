@@ -169,9 +169,7 @@ function SolutionPage() {
                 <Link to="/" hash="planos" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground shadow-lg shadow-primary/15 transition hover:-translate-y-0.5 hover:opacity-90">
                   Começar agora <ArrowRight className="h-4 w-4" />
                 </Link>
-                <a href="https://wa.me/5554999999999?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20EmitaGo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded-full border border-border bg-background/70 px-6 py-3.5 font-semibold transition hover:bg-muted">
-                  Tirar dúvidas
-                </a>
+                <Link to="/" hash="planos" className="inline-flex items-center rounded-full border border-border bg-background/70 px-6 py-3.5 font-semibold transition hover:bg-muted">Ver condições</Link>
               </div>
               <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Consulte a configuração fiscal e a disponibilidade da operação para o seu CNPJ antes de emitir.</p>
             </div>
