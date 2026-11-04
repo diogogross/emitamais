@@ -65,12 +65,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Emissor de Notas Fiscais Online | EmitaGo Pré-Pago"
+        title: "Emissor de NF-e e NFS-e Online | Nota Fiscal de Produto e Serviço | EmitaGo"
       },
       {
         name: "description",
         content:
-          "Emita NF-e, NFC-e, NFS-e, CT-e e MDF-e por R$ 60/mês por CNPJ ativo. Pré-pago, sem fidelidade e com notas ilimitadas no mês pago.",
+          "Emita NF-e para produtos e NFS-e para serviços em um sistema online. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade e com emissão ilimitada no período pago.",
       },
       {
         name: "robots",
@@ -85,22 +85,22 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://emitago.com.br/" },
       {
         property: "og:title",
-        content: "Emissor de Notas Fiscais Online | EmitaGo Pré-Pago",
+        content: "Emissor de NF-e e NFS-e Online | EmitaGo",
       },
       {
         property: "og:description",
         content:
-          "Emissão fiscal online por R$ 60 pré-pagos por CNPJ ativo no mês de uso. Sem fidelidade e com emissão ilimitada no mês pago.",
+          "Emissor de NF-e e NFS-e online para empresas. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "EmitaGo | Emissor de Notas Fiscais Online",
+        content: "EmitaGo | Emissor de NF-e e NFS-e Online",
       },
       {
         name: "twitter:description",
         content:
-          "NF-e, NFC-e, NFS-e, CT-e e MDF-e por R$ 60 pré-pagos por CNPJ ativo, sem fidelidade.",
+          "Emita NF-e de produtos e NFS-e de serviços online. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade.",
       },
     ],
     links: [
@@ -1403,9 +1403,9 @@ function HeroSlide1() {
       imageFit="contain"
       alt="Empresário brasileiro usando o EmitaGo em um notebook"
       eyebrow="Plataforma completa de emissão fiscal"
-      title="Sistema emissor de notas fiscais online"
-      titleAccent="com pré-pago por CNPJ."
-      description="Emita NF-e, NFC-e, NFS-e, CT-e, CT-e OS e MDF-e em um único sistema. Pague R$ 60 antecipados por CNPJ ativo apenas no mês de uso, sem fidelidade e com notas ilimitadas no mês pago."
+      title="Emissor de NF-e e NFS-e online"
+      titleAccent="para produtos e serviços."
+      description="Emita Nota Fiscal Eletrônica (NF-e modelo 55) para venda de produtos e Nota Fiscal de Serviço (NFS-e) em uma única plataforma online. Integração com mais de 1.600 municípios para NFS-e. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade."
       ctaLabel="Conferir planos"
       ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver o produto"
