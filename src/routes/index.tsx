@@ -175,6 +175,7 @@ export const Route = createFileRoute("/")({
           name: "EmitaGo — Sistema Emissor de Notas Fiscais",
           url: "https://emitago.com.br/",
           description: "Sistema fiscal online com suporte a múltiplos CNPJs no mesmo painel. R$ 60 por CNPJ ativo em cada mês de uso, com pagamento antecipado e emissão ilimitada no mês pago.",
+          image: "https://emitago.com.br/og-emita.png",
           category: "Software de emissão fiscal",
           brand: {
             "@type": "Brand",
