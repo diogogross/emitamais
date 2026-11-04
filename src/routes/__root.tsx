@@ -16,6 +16,10 @@ import { FloatingActions } from "../components/FloatingActions";
 import brandMark from "@/assets/emita-mark.svg";
 import ogImage from "@/assets/hero-person.webp";
 
+const absoluteOgImage = ogImage.startsWith("http")
+  ? ogImage
+  : `https://emitago.com.br${ogImage.startsWith("/") ? "" : "/"}${ogImage}`;
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -99,9 +103,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Emissor de Notas Fiscais Online | NFe, NFCe, NFSe, CTe e MDFe" },
       { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT online. Certificado Digital A1 CPF/CNPJ com emissão online." },
-      { property: "og:image", content: ogImage },
+      { property: "og:image", content: absoluteOgImage },
       { property: "og:image:alt", content: "EmitaGo — emissor de notas fiscais online" },
-      { name: "twitter:image", content: ogImage },
+      { name: "twitter:image", content: absoluteOgImage },
       { name: "twitter:image:alt", content: "EmitaGo — emissor de notas fiscais online" },
     ],
     links: [

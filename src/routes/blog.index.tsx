@@ -11,6 +11,10 @@ import {
 } from "lucide-react";
 import { blogPosts } from "@/lib/blog-posts";
 
+const blogCoverImage = blogPosts[0].image.startsWith("http")
+  ? blogPosts[0].image
+  : `https://emitago.com.br${blogPosts[0].image.startsWith("/") ? "" : "/"}${blogPosts[0].image}`;
+
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
@@ -27,12 +31,12 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:url", content: "https://emitago.com.br/blog" },
       { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
       { property: "og:description", content: "Guias práticos sobre NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado Digital A1 para empresas e profissionais." },
-      { property: "og:image", content: blogPosts[0].image },
+      { property: "og:image", content: blogCoverImage },
       { property: "og:image:alt", content: blogPosts[0].title },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Blog Fiscal — EmitaGo" },
       { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e Certificado Digital A1." },
-      { name: "twitter:image", content: blogPosts[0].image },
+      { name: "twitter:image", content: blogCoverImage },
       { name: "twitter:image:alt", content: blogPosts[0].title },
     ],
     links: [{ rel: "canonical", href: "https://emitago.com.br/blog" }],

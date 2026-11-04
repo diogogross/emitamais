@@ -16,17 +16,19 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "nfe",
     title: "NFe — Nota Fiscal Eletrônica",
-    seoTitle: "NFe Online: emita Nota Fiscal Eletrônica | EmitaGo",
-    description: "Emissor de NF-e online para produtos, com DANFE e XML. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade.",
-    h1: "Emita NFe online sem complicação",
-    intro: "Centralize a emissão de Nota Fiscal Eletrônica modelo 55, cadastros de produtos, clientes, DANFE e XML em uma plataforma fiscal online.",
-    benefits: ["Emissão de NFe pelo navegador", "Cadastro de produtos, clientes e tributação", "Geração de DANFE e XML", "Acesso pelo computador, tablet e celular", "Integração com certificado digital e rotinas fiscais"],
+    seoTitle: "Emissor de NF-e Online para Produtos | Nota Fiscal Eletrônica | EmitaGo",
+    description: "Emita NF-e modelo 55 online para venda de produtos. Emissor fiscal com cadastro de produtos e clientes, DANFE e XML. R$ 60 pré-pagos por CNPJ no mês de uso.",
+    h1: "Emissor de NF-e online para sua empresa",
+    intro: "Emita Nota Fiscal Eletrônica (NF-e modelo 55) para venda de produtos em uma plataforma online. Organize clientes, produtos e informações tributárias, transmita a nota à SEFAZ e tenha DANFE e XML disponíveis para sua operação e contabilidade.",
+    benefits: ["Emissão de NF-e modelo 55 pelo navegador", "Cadastro de produtos, clientes e informações tributárias", "Geração e acesso ao DANFE em PDF e ao XML da NF-e", "Acesso online por computador, tablet e celular compatíveis", "Assinatura digital e transmissão à SEFAZ conforme a configuração fiscal da empresa"],
     audience: ["Comércio e distribuição", "Indústrias", "Empresas do Simples Nacional", "Escritórios contábeis e operações multiempresa"],
     steps: ["Cadastre a empresa e configure os dados fiscais.", "Cadastre produtos, clientes e regras tributárias.", "Preencha a operação e assine a NFe com o certificado digital.", "Transmita à SEFAZ e acompanhe a autorização.", "Baixe ou envie DANFE e XML ao destinatário."],
     faq: [
-      { question: "O que é NFe?", answer: "A NFe é o documento fiscal eletrônico modelo 55 usado principalmente para documentar operações com mercadorias." },
-      { question: "Preciso de certificado digital para emitir NFe?", answer: "Em regra, a emissão de NFe exige assinatura digital do emitente por certificado compatível com a operação." },
-      { question: "Posso emitir NFe pelo celular?", answer: "O EmitaGo é uma plataforma online e responsiva, permitindo acessar as rotinas fiscais por dispositivos móveis compatíveis." }
+      { question: "O que é NF-e modelo 55?", answer: "A Nota Fiscal Eletrônica (NF-e), modelo 55, é o documento fiscal digital utilizado para registrar operações com mercadorias, como vendas de produtos." },
+      { question: "Como emitir NF-e online pelo EmitaGo?", answer: "Cadastre a empresa, configure os dados fiscais, informe produtos e cliente, preencha a operação e assine digitalmente o documento para transmissão à SEFAZ. A autorização depende da validação fiscal e do ambiente autorizador." },
+      { question: "O emissor de NF-e gera DANFE e XML?", answer: "O EmitaGo disponibiliza a rotina de emissão de NF-e com geração de DANFE e XML para consulta, envio ao destinatário e organização contábil." },
+      { question: "Preciso de certificado digital para emitir NF-e?", answer: "Em regra, a emissão de NF-e exige assinatura digital do emitente por certificado compatível com a operação e com as exigências fiscais aplicáveis." },
+      { question: "Quanto custa emitir NF-e pelo EmitaGo?", answer: "O EmitaGo custa R$ 60 por CNPJ ativo no mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
     ],
     relatedSlugs: ["nfe-passo-a-passo", "carta-correcao-eletronica", "cancelamento-nfe"]
   },
@@ -84,17 +86,19 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "nfse",
     title: "NFSe — Nota Fiscal de Serviço",
-    seoTitle: "NFSe Online: emissão de Nota Fiscal de Serviço | EmitaGo",
-    description: "Emissor de NFS-e online com integração a mais de 1.600 municípios atendidos. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
-    h1: "Emita NFSe online para sua empresa",
-    intro: "Simplifique a emissão de Nota Fiscal de Serviço Eletrônica e concentre clientes, serviços, impostos e documentos fiscais em um único ambiente.",
-    benefits: ["Emissão online de NFSe", "Integração com municípios atendidos", "Cadastro de clientes e serviços", "Histórico e organização dos documentos", "Acesso por navegador"],
+    seoTitle: "Emissor de NFS-e Online para Prestadores de Serviços | EmitaGo",
+    description: "Emita NFS-e online para sua empresa. Emissor de nota fiscal de serviço com integração a mais de 1.600 municípios atendidos. Consulte a cobertura da sua cidade. R$ 60 pré-pagos por CNPJ no mês de uso.",
+    h1: "Emissor de NFS-e online para prestadores de serviços",
+    intro: "Emita Nota Fiscal de Serviço Eletrônica (NFS-e) pela internet e organize clientes, serviços, dados da prestação e documentos fiscais em um só lugar. O EmitaGo possui integração com mais de 1.600 municípios; confirme a disponibilidade para a cidade e o enquadramento da sua empresa antes de começar.",
+    benefits: ["Emissão de NFS-e online pelo navegador", "Integração com mais de 1.600 municípios atendidos, conforme cobertura disponível", "Cadastro de clientes, tomadores e serviços", "Organização do histórico e dos documentos fiscais emitidos", "Acesso online por computador, tablet e celular compatíveis"],
     audience: ["Prestadores de serviços", "Empresas de tecnologia", "Profissionais e pequenas empresas", "Escritórios contábeis"],
     steps: ["Cadastre empresa, inscrição municipal e dados fiscais.", "Configure serviços e tributação.", "Informe tomador e detalhes da prestação.", "Transmita a NFSe ao ambiente municipal ou nacional aplicável.", "Acompanhe o status e mantenha o documento organizado."],
     faq: [
-      { question: "O EmitaGo emite NFSe?", answer: "Sim. O sistema possui integração com municípios atendidos e rotinas para emissão de NFSe." },
-      { question: "A NFSe é igual em todas as cidades?", answer: "Não necessariamente. Municípios podem adotar integrações e regras específicas; por isso a disponibilidade deve ser conferida para a cidade da empresa." },
-      { question: "Posso consultar se minha cidade é atendida?", answer: "Sim. A equipe do EmitaGo pode confirmar a disponibilidade para o município desejado." }
+      { question: "O que é NFS-e?", answer: "A Nota Fiscal de Serviço Eletrônica (NFS-e) documenta a prestação de serviços e reúne informações do prestador, do tomador e da atividade realizada, conforme as regras aplicáveis." },
+      { question: "Como emitir NFS-e online pelo EmitaGo?", answer: "Cadastre a empresa e os dados municipais, configure os serviços e as informações fiscais, informe o tomador e os detalhes da prestação e transmita a nota pelo fluxo integrado disponível para o município." },
+      { question: "O EmitaGo emite nota fiscal de serviço em qualquer cidade?", answer: "O EmitaGo possui integração com mais de 1.600 municípios atendidos, mas a disponibilidade depende da cidade, do padrão de integração e das regras aplicáveis. Consulte a equipe para confirmar seu município." },
+      { question: "MEI e pequenas empresas podem emitir NFS-e pelo sistema?", answer: "A possibilidade depende da atividade, do enquadramento da empresa e das regras do município ou do ambiente nacional aplicável. Confirme a configuração necessária para seu CNPJ." },
+      { question: "Quanto custa o emissor de NFS-e?", answer: "O EmitaGo custa R$ 60 por CNPJ ativo no mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
     ],
     relatedSlugs: ["nfse-servicos"]
   },
