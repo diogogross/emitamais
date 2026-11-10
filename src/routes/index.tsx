@@ -34,12 +34,13 @@ import {
 } from "lucide-react";
 
 
-import heroPerson from "@/assets/hero-person.webp";
-import womanPointing from "@/assets/hero-person.webp";
-import truckHero from "@/assets/docs/cte.jpg";
-import heroServicos from "@/assets/docs/nfse.jpg";
-import heroMaquininha from "@/assets/smart-pos.webp";
-import heroProduto from "@/assets/docs/nfe.jpg";
+// Fotografias reais da Pexels (licença gratuita), escolhidas para cada mensagem da Hero.
+const heroPerson = "https://images.pexels.com/photos/12903176/pexels-photo-12903176.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const heroPerson2 = "https://images.pexels.com/photos/21405528/pexels-photo-21405528.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const truckHero = "https://images.pexels.com/photos/15595843/pexels-photo-15595843.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const heroServicos = "https://images.pexels.com/photos/10318045/pexels-photo-10318045.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const heroMaquininha = "https://images.pexels.com/photos/8834118/pexels-photo-8834118.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const heroProduto = "https://images.pexels.com/photos/4487383/pexels-photo-4487383.jpeg?auto=compress&cs=tinysrgb&w=1920";
 
 
 
@@ -1341,21 +1342,14 @@ function HeroFullBleed({
           : { loading: "lazy" as const, decoding: "async" as const })}
         width={1920}
         height={1088}
-        className={`absolute inset-0 w-full h-full ${imageFit === "contain" ? "object-contain object-center" : "object-cover object-center"}`}
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        style={{ filter: "brightness(1.12) saturate(1.06)" }}
       />
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(10,7,18,0.92) 0%, rgba(10,7,18,0.78) 38%, rgba(10,7,18,0.18) 64%, rgba(10,7,18,0.78) 100%)",
-        }}
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-0 hidden md:block"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.5) 48%, rgba(0,0,0,0.85) 100%)",
+            "linear-gradient(90deg, rgba(13,8,25,0.94) 0%, rgba(13,8,25,0.84) 29%, rgba(13,8,25,0.58) 48%, rgba(13,8,25,0.14) 72%, rgba(13,8,25,0) 100%), linear-gradient(0deg, rgba(13,8,25,0.20) 0%, transparent 34%)",
         }}
         aria-hidden="true"
       />
@@ -1401,8 +1395,7 @@ function HeroSlide1() {
   return (
     <HeroFullBleed
       image={heroPerson}
-      imageFit="contain"
-      alt="Empresário brasileiro usando o EmitaGo em um notebook"
+      alt="Empresário trabalhando em notebook em ambiente profissional iluminado"
       eyebrow="Plataforma completa de emissão fiscal"
       title="Emissor de NF-e e NFS-e online"
       titleAccent="para produtos e serviços."
@@ -1425,8 +1418,7 @@ function HeroSlide2() {
   return (
     <HeroFullBleed
       image={heroPerson2}
-      imageFit="contain"
-      alt="Consultora apresentando certificado digital A1 no smartphone"
+      alt="Profissional realizando atendimento online em escritório iluminado"
       eyebrow="Certificado Digital A1 CPF e CNPJ"
       title="Seu certificado digital"
       titleAccent="por apenas R$ 129,90."
@@ -1492,8 +1484,7 @@ function HeroSlide5() {
   return (
     <HeroFullBleed
       image={heroMaquininha}
-      imageFit="contain"
-      alt="Comerciante emitindo NFCe direto da maquininha Android"
+      alt="Cliente realizando pagamento com cartão em um pequeno comércio"
       eyebrow="Cupom fiscal na maquininha"
       title="NFCe direto da"
       titleAccent="sua maquininha."
