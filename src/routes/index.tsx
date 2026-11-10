@@ -44,7 +44,6 @@ const heroProduto = "https://images.pexels.com/photos/4487383/pexels-photo-44873
 
 
 
-import heroPerson2 from "@/assets/hero-person-2.webp";
 import dashboardMock from "@/assets/dashboard-real.jpg";
 import dashboardList from "@/assets/dashboard-list.jpg";
 import smartPos from "@/assets/smart-pos.webp";
