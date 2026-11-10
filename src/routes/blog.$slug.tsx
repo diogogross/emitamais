@@ -12,6 +12,27 @@ import { blogPosts, getPostBySlug, type BlogSection } from "@/lib/blog-posts";
 const WHATSAPP_URL =
   "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
 
+const MONTHS: Record<string, number> = {
+  jan: 1, janeiro: 1, feb: 2, fev: 2, fevereiro: 2, mar: 3, marco: 3, março: 3,
+  apr: 4, abr: 4, abril: 4, may: 5, mai: 5, maio: 5, jun: 6, junho: 6,
+  jul: 7, julho: 7, aug: 8, ago: 8, agosto: 8, sep: 9, set: 9, setembro: 9,
+  oct: 10, out: 10, outubro: 10, nov: 11, novembro: 11, dec: 12, dez: 12, dezembro: 12,
+};
+
+function toIsoDate(dateLabel: string): string {
+  const match = dateLabel.trim().match(/^(\\d{1,2})\\s+([\\p{L}]+)\\s+(\\d{4})$/u);
+  if (!match) throw new Error(`Data de publicação inválida: ${dateLabel}`);
+  const day = Number(match[1]);
+  const month = MONTHS[match[2].toLocaleLowerCase("pt-BR")];
+  const year = Number(match[3]);
+  if (!month) throw new Error(`Mês não reconhecido na data: ${dateLabel}`);
+  const parsed = new Date(Date.UTC(year, month - 1, day));
+  if (parsed.getUTCFullYear() !== year || parsed.getUTCMonth() !== month - 1 || parsed.getUTCDate() !== day) {
+    throw new Error(`Data de publicação inválida: ${dateLabel}`);
+  }
+  return parsed.toISOString().slice(0, 10);
+}
+
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const post = getPostBySlug(params.slug);
@@ -31,7 +52,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const { post } = loaderData;
     const url = `${BASE_URL}/blog/${params.slug}`;
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
-    const publishedDate = new Date(post.date).toISOString().slice(0, 10);
+    const publishedDate = toIsoDate(post.date);
     const seoTitle = post.title.length <= 55 ? post.title + " | EmitaGo" : post.title;
     return {
       meta: [
