@@ -44,6 +44,7 @@ const heroProduto = "https://images.pexels.com/photos/4487383/pexels-photo-44873
 
 
 
+import womanPointing from "@/assets/hero-person.webp";
 import dashboardMock from "@/assets/dashboard-real.jpg";
 import dashboardList from "@/assets/dashboard-list.jpg";
 import smartPos from "@/assets/smart-pos.webp";
@@ -1307,7 +1308,6 @@ function HeroFullBleed({
   secondaryHref,
   stats,
   eager = false,
-  imageFit = "cover",
 }: {
   image: string;
   alt: string;
@@ -1322,7 +1322,6 @@ function HeroFullBleed({
   secondaryHref: string;
   stats: [string, string][];
   eager?: boolean;
-  imageFit?: "cover" | "contain";
 }) {
   const CtaEl: any = "a";
   const ctaProps: any = {
