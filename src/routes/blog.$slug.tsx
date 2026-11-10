@@ -20,7 +20,7 @@ const MONTHS: Record<string, number> = {
 };
 
 function toIsoDate(dateLabel: string): string {
-  const match = dateLabel.trim().match(/^(\\d{1,2})\\s+([\\p{L}]+)\\s+(\\d{4})$/u);
+  const match = dateLabel.trim().match(/^(\d{1,2})\s+([\p{L}]+)\s+(\d{4})$/u);
   if (!match) throw new Error(`Data de publicação inválida: ${dateLabel}`);
   const day = Number(match[1]);
   const month = MONTHS[match[2].toLocaleLowerCase("pt-BR")];
