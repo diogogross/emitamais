@@ -1438,7 +1438,7 @@ function HeroSlide3() {
   return (
     <HeroFullBleed
       image={truckHero}
-      alt="Carreta 9 eixos e ônibus rodoviário em rodovia brasileira — emissão de CTe, MDFe e CIOT"
+      alt="Caminhão de carga trafegando por rodovia durante o dia"
       eyebrow="Documentos de transporte"
       title="Sua transportadora"
       titleAccent="sem nota travada."
@@ -1460,7 +1460,7 @@ function HeroSlide4() {
   return (
     <HeroFullBleed
       image={heroServicos}
-      alt="Prestador de serviços brasileiro emitindo NFSe pelo EmitaGo"
+      alt="Profissional realizando atendimento de beleza em salão"
       eyebrow="Nota Fiscal de Serviços"
       title="NFSe integrada com"
       titleAccent="+1.600 municípios."
@@ -1504,7 +1504,7 @@ function HeroSlide6() {
   return (
     <HeroFullBleed
       image={heroProduto}
-      alt="Gerente de estoque emitindo NFe de produto no EmitaGo"
+      alt="Equipe conferindo mercadorias em um centro de distribuição"
       eyebrow="Nota Fiscal de Produto"
       title="NFe autorizada em"
       titleAccent="segundos."
