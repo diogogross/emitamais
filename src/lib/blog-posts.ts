@@ -63,11 +63,6 @@ export const blogPosts: BlogPost[] = [
         text: "Com o cadastro correto, o próprio sistema emissor calcula impostos (ICMS, IPI, PIS, COFINS) e gera o XML assinado. Após a transmissão, a SEFAZ retorna um dos três status: autorizada, denegada ou rejeitada. Rejeições costumam ser problemas de cadastro — não de operação — e mostram exatamente qual campo corrigir.",
       },
       {
-        type: "quote",
-        text: "Mais de 80% das rejeições que atendemos são causadas por NCM desatualizado, CFOP incompatível com a operação ou IE do destinatário irregular.",
-        cite: "Time de suporte fiscal",
-      },
-      {
         type: "heading",
         text: "3. DANFE, envio e contingência",
       },
@@ -188,10 +183,6 @@ export const blogPosts: BlogPost[] = [
         text: "Todo transporte interestadual de cargas precisa do MDFe (Manifesto Eletrônico), que agrupa as NFes e os CTes daquela viagem. Um sistema fiscal integrado gera o MDFe a partir dos CTes emitidos, evita divergências e mantém o Passe Fiscal em dia.",
       },
       {
-        type: "quote",
-        text: "CTe autorizado, MDFe encerrado e canhoto assinado: essa é a tríade que evita 90% das autuações em barreira.",
-      },
-      {
         type: "heading",
         text: "Boas práticas para transportadoras",
       },
@@ -248,10 +239,6 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "Muitas multas acontecem porque o MDFe não foi encerrado ao final da viagem. O encerramento informa à SEFAZ que aquela operação terminou — e libera o veículo para o próximo manifesto. Configure um alerta para nunca esquecer.",
-      },
-      {
-        type: "quote",
-        text: "Um MDFe aberto por semanas é sinal para o fisco: ou a operação foi mal encerrada, ou algo está sendo omitido.",
       },
       {
         type: "heading",
@@ -387,7 +374,6 @@ export const blogPosts: BlogPost[] = [
         "Dados do emitente ou do destinatário (CNPJ/CPF, IE, endereço).",
         "Data de emissão que altere o período de apuração.",
       ]},
-      { type: "quote", text: "Se o erro é de valor ou de destinatário, não use CCe: cancele e reemita dentro do prazo de 24h." },
     ],
   },
   {
@@ -507,7 +493,7 @@ export const blogPosts: BlogPost[] = [
         "Percurso com todas as UFs de passagem informadas.",
         "MDFe autorizado — não apenas transmitido.",
       ]},
-      { type: "quote", text: "Fiscal escaneia o QR do DAMDFe em 5 segundos. Se aparecer 'não autorizado', o veículo é retido na hora." },
+      { type: "paragraph", text: "Mantenha o DAMDFE acessível e confira se o MDF-e está autorizado e com os dados da viagem corretos. As medidas adotadas em uma fiscalização dependem da situação concreta da operação e das regras aplicáveis." },
     ],
   },
   {
@@ -580,7 +566,7 @@ export const blogPosts: BlogPost[] = [
         "Recolhimento anual da taxa da ANTT.",
         "Motoristas com cadastro válido.",
       ]},
-      { type: "quote", text: "RNTRC vencido é motivo direto para o CTe ser rejeitado e o veículo ser retido em barreira." },
+      { type: "paragraph", text: "Mantenha o RNTRC atualizado e confira a situação cadastral do transportador. Irregularidades podem gerar restrições e penalidades conforme as regras da ANTT, mas não devem ser confundidas automaticamente com uma rejeição do CT-e." },
     ],
   },
   // ============ Certificado Digital (+5) ============
