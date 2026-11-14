@@ -32,7 +32,7 @@ export const Route = createFileRoute("/certificado-digital")({
       { property: "og:locale", content: "pt_BR" },
       { property: "og:site_name", content: "EmitaGo" },
       { property: "og:type", content: "product" },
-      { property: "og:url", content: "https://emitago.com.br/certificado-digital" },
+      { property: "og:url", content: "https://www.emitago.com.br/certificado-digital" },
       { property: "og:title", content: "Certificado Digital A1 CPF e CNPJ por R$ 129,90" },
       {
         property: "og:description",
@@ -42,10 +42,10 @@ export const Route = createFileRoute("/certificado-digital")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Certificado Digital A1 CPF/CNPJ por R$ 129,90" },
       { name: "twitter:description", content: "Emissão 100% online por videoconferência. 12 meses de validade." },
-      { name: "twitter:image", content: "https://emitago.com.br/og-emita.png" },
+      { name: "twitter:image", content: "https://www.emitago.com.br/og-emita.png" },
       { name: "twitter:image:alt", content: "EmitaGo — Certificado Digital A1 para CPF e CNPJ" },
     ],
-    links: [{ rel: "canonical", href: "https://emitago.com.br/certificado-digital" }],
+    links: [{ rel: "canonical", href: "https://www.emitago.com.br/certificado-digital" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -57,13 +57,13 @@ export const Route = createFileRoute("/certificado-digital")({
             "Certificado Digital A1 para pessoa física (CPF) ou pessoa jurídica (CNPJ), emitido 100% online por videoconferência ICP-Brasil, com 12 meses de validade.",
           brand: { "@type": "Brand", name: "EmitaGo" },
           category: "Certificado Digital ICP-Brasil",
-          image: ["https://emitago.com.br/og-emita.png"],
+          image: ["https://www.emitago.com.br/og-emita.png"],
           offers: {
             "@type": "Offer",
             price: "129.90",
             priceCurrency: "BRL",
             availability: "https://schema.org/InStock",
-            url: "https://emitago.com.br/certificado-digital",
+            url: "https://www.emitago.com.br/certificado-digital",
           },
         }),
       },
@@ -73,8 +73,8 @@ export const Route = createFileRoute("/certificado-digital")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Início", item: "https://emitago.com.br/" },
-            { "@type": "ListItem", position: 2, name: "Certificado Digital A1", item: "https://emitago.com.br/certificado-digital" },
+            { "@type": "ListItem", position: 1, name: "Início", item: "https://www.emitago.com.br/" },
+            { "@type": "ListItem", position: 2, name: "Certificado Digital A1", item: "https://www.emitago.com.br/certificado-digital" },
           ],
         }),
       },
