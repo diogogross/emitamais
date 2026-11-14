@@ -53,6 +53,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const url = `${BASE_URL}/blog/${params.slug}`;
     const image = post.image.startsWith("http") ? post.image : `${BASE_URL}${post.image}`;
     const publishedDate = toIsoDate(post.date);
+    const modifiedDate = toIsoDate(post.updatedAt ?? post.date);
     const seoTitle = post.title.length <= 55 ? post.title + " | EmitaGo" : post.title;
     return {
       meta: [
@@ -70,7 +71,7 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:image", content: image },
         { property: "og:image:alt", content: post.title },
         { property: "article:published_time", content: publishedDate },
-        { property: "article:modified_time", content: publishedDate },
+        { property: "article:modified_time", content: modifiedDate },
         { property: "article:author", content: post.author },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: post.title },
@@ -102,7 +103,7 @@ export const Route = createFileRoute("/blog/$slug")({
             description: post.excerpt,
             image: [image],
             datePublished: publishedDate,
-            dateModified: publishedDate,
+            dateModified: modifiedDate,
             author: {
               "@type": "Organization",
               name: post.author,
@@ -196,8 +197,13 @@ function ArticlePage() {
             <User className="w-4 h-4" /> {post.author}
           </span>
           <span className="inline-flex items-center gap-2">
-            <Calendar className="w-4 h-4" /> {post.date}
+            <Calendar className="w-4 h-4" /> Publicado em {post.date}
           </span>
+          {post.updatedAt && (
+            <span className="inline-flex items-center gap-2">
+              <Calendar className="w-4 h-4" /> Atualizado em {post.updatedAt}
+            </span>
+          )}
           <span className="inline-flex items-center gap-2">
             <Clock className="w-4 h-4" /> {post.readMin} min de leitura
           </span>
@@ -358,6 +364,14 @@ function SectionRenderer({ section }: { section: BlogSection }) {
             <figcaption className="mt-2 text-sm text-muted-foreground text-center">{section.caption}</figcaption>
           )}
         </figure>
+      );
+    case "source":
+      return (
+        <p className="text-sm leading-relaxed">
+          <a href={section.href} target="_blank" rel="noopener noreferrer" className="text-primary-glow underline underline-offset-4 hover:opacity-80">
+            {section.label}
+          </a>
+        </p>
       );
   }
 }

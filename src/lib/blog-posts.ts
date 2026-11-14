@@ -9,7 +9,8 @@ export type BlogSection =
   | { type: "heading"; text: string }
   | { type: "list"; items: string[] }
   | { type: "quote"; text: string; cite?: string }
-  | { type: "image"; src: string; alt: string; caption?: string };
+  | { type: "image"; src: string; alt: string; caption?: string }
+  | { type: "source"; label: string; href: string };
 
 export type BlogPost = {
   slug: string;
@@ -17,6 +18,7 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   date: string;
+  updatedAt?: string;
   readMin: number;
   image: string;
   author: string;
@@ -59,11 +61,6 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "Com o cadastro correto, o próprio sistema emissor calcula impostos (ICMS, IPI, PIS, COFINS) e gera o XML assinado. Após a transmissão, a SEFAZ retorna um dos três status: autorizada, denegada ou rejeitada. Rejeições costumam ser problemas de cadastro — não de operação — e mostram exatamente qual campo corrigir.",
-      },
-      {
-        type: "quote",
-        text: "Mais de 80% das rejeições que atendemos são causadas por NCM desatualizado, CFOP incompatível com a operação ou IE do destinatário irregular.",
-        cite: "Time de suporte fiscal",
       },
       {
         type: "heading",
@@ -186,10 +183,6 @@ export const blogPosts: BlogPost[] = [
         text: "Todo transporte interestadual de cargas precisa do MDFe (Manifesto Eletrônico), que agrupa as NFes e os CTes daquela viagem. Um sistema fiscal integrado gera o MDFe a partir dos CTes emitidos, evita divergências e mantém o Passe Fiscal em dia.",
       },
       {
-        type: "quote",
-        text: "CTe autorizado, MDFe encerrado e canhoto assinado: essa é a tríade que evita 90% das autuações em barreira.",
-      },
-      {
         type: "heading",
         text: "Boas práticas para transportadoras",
       },
@@ -246,10 +239,6 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text: "Muitas multas acontecem porque o MDFe não foi encerrado ao final da viagem. O encerramento informa à SEFAZ que aquela operação terminou — e libera o veículo para o próximo manifesto. Configure um alerta para nunca esquecer.",
-      },
-      {
-        type: "quote",
-        text: "Um MDFe aberto por semanas é sinal para o fisco: ou a operação foi mal encerrada, ou algo está sendo omitido.",
       },
       {
         type: "heading",
@@ -328,32 +317,36 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nfse-servicos",
     category: "Notas Fiscais",
-    title: "NFSe nacional: o padrão único para prestadores de serviço",
-    excerpt:
-      "Como o padrão nacional da NFSe unifica a emissão em milhares de municípios e o que muda para prestadores autônomos e empresas.",
+    title: "NFS-e nacional em 2026: quem deve emitir e como funciona",
+    excerpt: "Veja as regras atuais para MEI, microempresas e empresas de pequeno porte do Simples Nacional e saiba quando usar o Emissor Nacional.",
     date: "20 Fev 2026",
-    readMin: 6,
+    updatedAt: "14 Nov 2026",
+    readMin: 7,
     image: nfeGuia,
     author: "Equipe EmitaGo",
     content: [
-      { type: "paragraph", text: "A Nota Fiscal de Serviço Eletrônica (NFSe) sempre foi municipal — cada prefeitura tinha seu próprio layout, portal e regras. Com o padrão nacional, o Brasil passa a ter uma única especificação técnica adotada pelos municípios, o que facilita a vida de quem presta serviço em várias cidades." },
-      { type: "heading", text: "O que muda na prática" },
+      { type: "paragraph", text: "A Nota Fiscal de Serviço eletrônica (NFS-e) registra a prestação de serviços. Em 2026, é importante diferenciar as regras por enquadramento: o MEI prestador de serviços já utiliza o padrão nacional desde setembro de 2023; para microempresas (ME) e empresas de pequeno porte (EPP) optantes pelo Simples Nacional, a obrigatoriedade do padrão nacional passou a valer em 1º de novembro de 2026 nas prestações sujeitas à emissão." },
+      { type: "heading", text: "Quem deve utilizar a NFS-e de padrão nacional?" },
       { type: "list", items: [
-        "Layout único de XML aceito em todos os municípios aderentes.",
-        "Emissor nacional gratuito para MEI e pequenos prestadores.",
-        "Integração via API padronizada para ERPs e emissores.",
-        "Cadastro único de serviços com código nacional.",
+        "MEI prestador de serviços: utiliza o padrão nacional desde 1º de setembro de 2023. A emissão é obrigatória quando o tomador é pessoa jurídica e, em regra, facultativa para pessoa física, salvo solicitação do consumidor.",
+        "ME e EPP optantes pelo Simples Nacional: devem emitir pelo padrão nacional desde 1º de novembro de 2026, via Emissor Web ou integração por API, nas prestações que exigem nota.",
+        "Empresas de outros regimes: devem verificar as regras do município, os convênios e o enquadramento aplicável."
       ]},
-      { type: "heading", text: "Quem precisa emitir" },
-      { type: "paragraph", text: "Todo prestador de serviço pessoa jurídica é obrigado a emitir NFSe. MEIs, embora dispensados quando o tomador é pessoa física, precisam emitir sempre que o cliente for pessoa jurídica." },
-      { type: "quote", text: "O padrão nacional resolve a maior dor de quem presta serviço em várias cidades: um único sistema, um único XML, um único fluxo." },
-      { type: "heading", text: "Checklist para começar" },
+      { type: "heading", text: "Como funciona a emissão nacional" },
+      { type: "paragraph", text: "O ambiente nacional oferece emissão pela aplicação Web e integração via API. O fluxo depende do perfil do contribuinte e das regras técnicas vigentes. Antes de emitir, confira os dados do prestador, tomador, serviço, competência, município e valores; valide também retenções e informações tributárias com a contabilidade." },
+      { type: "heading", text: "O que conferir ao escolher um emissor" },
       { type: "list", items: [
-        "Certificado digital do CNPJ ativo.",
-        "Inscrição municipal em dia.",
-        "Códigos de serviço (LC 116/03) corretos.",
-        "Alíquota de ISS conforme o município do tomador.",
+        "Se o sistema está integrado ao padrão nacional exigido para o enquadramento da empresa.",
+        "Se o fluxo atende à atividade, município e tipo de operação.",
+        "Se permite revisar os dados fiscais antes da transmissão e consultar o retorno da emissão.",
+        "Se mantém os documentos emitidos organizados para consulta e contabilidade."
       ]},
+      { type: "heading", text: "NFS-e no EmitaGo" },
+      { type: "paragraph", text: "O EmitaGo divulga integrações de NFS-e com mais de 1.600 municípios. Como a regra nacional depende do enquadramento e do fluxo de integração, confirme com a equipe se a cobertura disponível atende ao seu CNPJ e à operação antes de contratar." },
+      { type: "heading", text: "Fontes oficiais" },
+      { type: "source", label: "Portal Nacional da NFS-e — diretrizes para ME e EPP do Simples Nacional", href: "https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-diretrizes-sobre-a-obrigatoriedade-da-emissao-da-nfs-e-nacional-para-optantes-do-simples-nacional/" },
+      { type: "source", label: "Receita Federal — obrigatoriedade desde 1º de novembro de 2026", href: "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/simples-nacional-nfs-e-nacional-sera-obrigatoria-para-me-e-epp-a-partir-de-1o-de-novembro-de-2026" },
+      { type: "source", label: "Portal Nacional da NFS-e — regras para MEI prestador de serviços", href: "https://www.gov.br/nfse/pt-br/mei-prestadores-de-servico-de-todo-o-pais-estao-obrigados-a-emitir-nfs-e" }
     ],
   },
   {
@@ -381,7 +374,6 @@ export const blogPosts: BlogPost[] = [
         "Dados do emitente ou do destinatário (CNPJ/CPF, IE, endereço).",
         "Data de emissão que altere o período de apuração.",
       ]},
-      { type: "quote", text: "Se o erro é de valor ou de destinatário, não use CCe: cancele e reemita dentro do prazo de 24h." },
     ],
   },
   {
@@ -501,7 +493,7 @@ export const blogPosts: BlogPost[] = [
         "Percurso com todas as UFs de passagem informadas.",
         "MDFe autorizado — não apenas transmitido.",
       ]},
-      { type: "quote", text: "Fiscal escaneia o QR do DAMDFe em 5 segundos. Se aparecer 'não autorizado', o veículo é retido na hora." },
+      { type: "paragraph", text: "Mantenha o DAMDFE acessível e confira se o MDF-e está autorizado e com os dados da viagem corretos. As medidas adotadas em uma fiscalização dependem da situação concreta da operação e das regras aplicáveis." },
     ],
   },
   {
@@ -574,7 +566,7 @@ export const blogPosts: BlogPost[] = [
         "Recolhimento anual da taxa da ANTT.",
         "Motoristas com cadastro válido.",
       ]},
-      { type: "quote", text: "RNTRC vencido é motivo direto para o CTe ser rejeitado e o veículo ser retido em barreira." },
+      { type: "paragraph", text: "Mantenha o RNTRC atualizado e confira a situação cadastral do transportador. Irregularidades podem gerar restrições e penalidades conforme as regras da ANTT, mas não devem ser confundidas automaticamente com uma rejeição do CT-e." },
     ],
   },
   // ============ Certificado Digital (+5) ============
@@ -705,60 +697,65 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nfse-mei-2027-como-emitir",
     category: "Notas Fiscais",
-    title: "NFS-e para MEI em 2027: como emitir nota fiscal de serviço",
-    excerpt: "Veja como o MEI pode se preparar para emitir NFS-e em 2027, quais dados conferir e como acompanhar as regras oficiais da Reforma Tributária.",
+    title: "NFS-e para MEI: regras de emissão no padrão nacional",
+    excerpt: "Entenda quando o MEI deve emitir NFS-e, a regra do padrão nacional e os cuidados para registrar serviços em 2026 e 2027.",
     date: "22 Out 2026",
+    updatedAt: "14 Nov 2026",
     readMin: 6,
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
-      { type: "paragraph", text: "A Nota Fiscal de Serviço eletrônica (NFS-e) registra a prestação de um serviço e ajuda o MEI a comprovar a operação para o cliente. Com as mudanças previstas para 2027, vale conferir desde já o acesso ao Emissor Nacional e manter os dados cadastrais organizados. Regras e leiautes podem receber atualizações técnicas, por isso consulte sempre os canais oficiais." },
-      { type: "heading", text: "Como se preparar para emitir NFS-e" },
+      { type: "paragraph", text: "O MEI que presta serviços deve observar as regras específicas da Nota Fiscal de Serviço eletrônica (NFS-e). Desde 1º de setembro de 2023, a emissão de NFS-e pelo MEI ocorre no padrão nacional. A obrigação de emitir depende também de quem recebe o serviço: para tomador pessoa jurídica, a nota é obrigatória; para pessoa física, em regra, é facultativa, salvo quando solicitada pelo consumidor." },
+      { type: "heading", text: "Quando o MEI precisa emitir NFS-e?" },
+      { type: "paragraph", text: "Quando o tomador do serviço é uma empresa ou outra pessoa jurídica, o MEI deve emitir a NFS-e. Quando o tomador é pessoa física, a emissão é facultativa, salvo solicitação do consumidor. Essa orientação trata de prestação de serviços: operações com mercadorias seguem regras próprias de documentos fiscais e de competência estadual." },
+      { type: "heading", text: "Como emitir no padrão nacional" },
       { type: "list", items: [
-        "Tenha em mãos o CNPJ e os dados de acesso ao sistema oficial de emissão.",
-        "Confira nome empresarial, endereço e demais informações cadastrais.",
-        "Identifique corretamente o serviço prestado e informe os dados do tomador quando solicitados.",
-        "Revise descrição, valor e competência antes de confirmar a emissão.",
-        "Guarde o documento e o número da nota para localizar o registro depois."
+        "Acesse o Emissor Nacional da NFS-e pela versão Web ou pelo aplicativo oficial.",
+        "Entre com a forma de autenticação disponível, como conta gov.br ou certificado digital, conforme o perfil.",
+        "Informe os dados solicitados do tomador e descreva corretamente o serviço prestado.",
+        "Confira valor, competência e demais informações antes de concluir.",
+        "Depois da emissão, salve o documento e mantenha o registro organizado."
       ]},
-      { type: "heading", text: "O MEI precisa emitir nota para toda prestação?" },
-      { type: "paragraph", text: "As regras atuais dispensam, em geral, o MEI de emitir nota quando presta serviço para pessoa física, salvo quando o consumidor solicitar; para cliente pessoa jurídica, a emissão é exigida. A legislação e a regulamentação da Reforma Tributária preveem mudanças a partir de 2027. Antes de tomar decisões, confira a regra vigente e as orientações atualizadas no Portal Nacional da NFS-e e na Receita Federal." },
-      { type: "heading", text: "Erros comuns ao emitir nota de serviço" },
-      { type: "list", items: [
-        "Selecionar um serviço que não corresponde ao trabalho realizado.",
-        "Informar incorretamente os dados do cliente ou o valor cobrado.",
-        "Não conferir o documento gerado depois da transmissão.",
-        "Deixar para testar o acesso somente quando precisar faturar."
-      ]},
-      { type: "heading", text: "Checklist para 2027" },
-      { type: "paragraph", text: "Faça um teste de acesso, organize os dados que usa com frequência e acompanhe os comunicados oficiais. Se tiver dúvida sobre enquadramento, obrigação ou tributação, confirme com um contador ou órgão fiscal competente. Este conteúdo é informativo e não substitui orientação contábil." }
+      { type: "heading", text: "O que muda com a Reforma Tributária em 2027?" },
+      { type: "paragraph", text: "A transição tributária traz atualizações próprias para documentos e informações fiscais, mas não confunda essas mudanças com a regra de emissão nacional da NFS-e para o MEI, que já está em vigor desde 2023. Antes de tomar decisões sobre tributos ou enquadramento, consulte as normas e orientações oficiais mais recentes e seu contador." },
+      { type: "heading", text: "Antes de contratar um emissor privado" },
+      { type: "paragraph", text: "Confirme se o sistema atende ao fluxo exigido para o seu enquadramento, atividade e município. O EmitaGo possui integrações de NFS-e; consulte a equipe para validar a cobertura e o procedimento aplicável ao seu CNPJ antes de contratar." },
+      { type: "heading", text: "Fontes oficiais" },
+      { type: "source", label: "Portal Nacional da NFS-e — obrigatoriedade para MEI prestador de serviços", href: "https://www.gov.br/nfse/pt-br/mei-prestadores-de-servico-de-todo-o-pais-estao-obrigados-a-emitir-nfs-e" },
+      { type: "source", label: "Governo Federal — serviço de emissão da NFS-e de padrão nacional", href: "https://www.gov.br/pt-br/servicos/emitir-nota-fiscal-de-servico-eletronica?id=23892&origem=servico" }
     ],
   },
   {
     slug: "mei-nota-fiscal-pessoa-fisica-2027",
     category: "Notas Fiscais",
-    title: "MEI em 2027: será obrigatório emitir nota fiscal para pessoa física?",
-    excerpt: "Entenda a mudança prevista para a emissão de documentos fiscais pelo MEI, o que continua no DAS e como se organizar antes de 2027.",
+    title: "MEI precisa emitir nota fiscal para pessoa física? Entenda a regra",
+    excerpt: "Saiba quando o MEI deve emitir NFS-e para empresas e quando a emissão para consumidor pessoa física é facultativa.",
     date: "22 Out 2026",
+    updatedAt: "14 Nov 2026",
     readMin: 6,
     image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
-      { type: "paragraph", text: "Uma das dúvidas mais buscadas por microempreendedores é se o MEI precisará emitir nota fiscal também para clientes pessoa física em 2027. A regulamentação da Reforma Tributária trouxe mudanças para a emissão de documentos fiscais, por isso é importante separar o que já está definido dos detalhes técnicos que ainda podem ser atualizados." },
-      { type: "heading", text: "O que muda para o MEI em 2027?" },
-      { type: "paragraph", text: "As alterações legais aprovadas para a transição tributária ampliam a emissão de documentos fiscais nas operações do MEI, incluindo vendas e prestações de serviços. A forma de emissão depende da natureza da operação: serviços utilizam a NFS-e de padrão nacional, enquanto mercadorias seguem as regras aplicáveis ao documento fiscal correspondente. Confira as orientações oficiais mais recentes antes de emitir." },
-      { type: "heading", text: "O DAS-MEI vai deixar de ser fixo?" },
-      { type: "paragraph", text: "A Reforma Tributária não significa, por si só, que o MEI deva calcular IBS e CBS como uma empresa do regime regular. O MEI permanece sujeito às regras específicas do SIMEI e ao recolhimento previsto para sua categoria. Não confunda campos ou informações do documento fiscal com uma cobrança automática separada: consulte as normas vigentes para o seu enquadramento." },
-      { type: "heading", text: "Como se preparar antes de janeiro de 2027" },
+      { type: "paragraph", text: "Em regra, o MEI prestador de serviços não é obrigado a emitir NFS-e quando atende uma pessoa física, exceto quando o consumidor solicita o documento. Quando o tomador é pessoa jurídica, a emissão é obrigatória. Essa distinção continua importante para evitar interpretações incorretas sobre as mudanças fiscais previstas para 2027." },
+      { type: "heading", text: "Quando a nota é obrigatória para o MEI?" },
       { type: "list", items: [
-        "Verifique o acesso aos emissores oficiais e mantenha o cadastro atualizado.",
-        "Separe os dados de clientes e serviços ou produtos vendidos.",
-        "Converse com o contador sobre as operações específicas do seu negócio.",
-        "Acompanhe comunicados da Receita Federal, do Portal do Empreendedor e dos fiscos estaduais ou municipais.",
-        "Use um sistema fiscal atualizado, se optar por um emissor privado."
+        "Serviço prestado para pessoa jurídica: emissão obrigatória de NFS-e.",
+        "Serviço prestado para pessoa física: emissão facultativa, salvo solicitação do consumidor.",
+        "A NFS-e de serviço do MEI deve seguir o padrão nacional, obrigatório desde 1º de setembro de 2023."
       ]},
-      { type: "heading", text: "Onde confirmar as regras" },
-      { type: "paragraph", text: "Consulte o Portal Nacional da NFS-e para serviços e os canais oficiais da Receita Federal e do Portal do Empreendedor para orientações gerais. As regras de documentos para mercadorias podem depender da legislação estadual. Este artigo tem finalidade educativa e deve ser lido junto das normas vigentes." }
+      { type: "heading", text: "A Reforma Tributária muda essa regra automaticamente em 2027?" },
+      { type: "paragraph", text: "Não se deve concluir que a transição da Reforma Tributária, por si só, tornou obrigatória a emissão de NFS-e pelo MEI em toda prestação para pessoa física. A obrigação depende das regras específicas aplicáveis ao MEI e da natureza da operação. Para mercadorias, consulte também as regras estaduais do documento fiscal correspondente." },
+      { type: "heading", text: "Como se organizar" },
+      { type: "list", items: [
+        "Identifique se o cliente é pessoa física ou jurídica.",
+        "Mantenha os dados do serviço, valor e competência corretos.",
+        "Use o Emissor Nacional da NFS-e para as prestações de serviço em que o MEI deve emitir o documento.",
+        "Guarde o documento emitido e acompanhe as orientações oficiais.",
+        "Consulte um contador em caso de dúvida sobre enquadramento ou tributação."
+      ]},
+      { type: "heading", text: "Fontes oficiais" },
+      { type: "source", label: "Portal Nacional da NFS-e — perguntas frequentes sobre MEI", href: "https://www.gov.br/nfse/pt-br/copy_of_perguntas-frequentes/copy_of_faq-nfs-e" },
+      { type: "source", label: "Portal Nacional da NFS-e — regra nacional para MEI prestador de serviços", href: "https://www.gov.br/nfse/pt-br/mei-prestadores-de-servico-de-todo-o-pais-estao-obrigados-a-emitir-nfs-e" }
     ],
   },
   {
@@ -797,34 +794,33 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "emissao-nfse-empresas-padrao-nacional",
     category: "Notas Fiscais",
-    title: "Emissão de NFS-e para empresas: como funciona o padrão nacional",
-    excerpt: "Saiba o que é a NFS-e, quais informações revisar antes de emitir e como acompanhar a adoção do padrão nacional de nota fiscal de serviço.",
+    title: "NFS-e nacional para ME e EPP do Simples: regra em vigor",
+    excerpt: "Entenda a obrigatoriedade do Emissor Nacional da NFS-e para microempresas e empresas de pequeno porte optantes pelo Simples Nacional desde 1º de novembro de 2026.",
     date: "22 Out 2026",
-    readMin: 6,
+    updatedAt: "14 Nov 2026",
+    readMin: 7,
     image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
-      { type: "paragraph", text: "A Nota Fiscal de Serviço eletrônica (NFS-e) registra serviços prestados e é importante para a documentação fiscal, o controle financeiro e o relacionamento com clientes empresariais. O padrão nacional busca uniformizar dados e processos, embora a aplicação prática e as obrigações possam variar conforme o município, o porte da empresa e o regime tributário." },
-      { type: "heading", text: "Quais dados revisar na nota de serviço" },
+      { type: "paragraph", text: "A NFS-e de padrão nacional passou a ser obrigatória, a partir de 1º de novembro de 2026, para microempresas (ME) e empresas de pequeno porte (EPP) optantes pelo Simples Nacional nas prestações de serviços que exigem emissão de nota. A regra determina o uso do Emissor Nacional, pela aplicação Web ou por integração via API, conforme as orientações oficiais." },
+      { type: "heading", text: "Quem precisa usar o padrão nacional?" },
+      { type: "paragraph", text: "A obrigatoriedade com efeitos em 1º de novembro de 2026 alcança ME e EPP optantes pelo Simples Nacional. Não confunda essa regra com a situação do MEI: o MEI prestador de serviços já utiliza a NFS-e de padrão nacional desde 1º de setembro de 2023. Para empresas de outros regimes, a aplicação pode depender do convênio e das regras do município, por isso é necessário verificar o enquadramento específico." },
+      { type: "heading", text: "Web ou API: quais são as formas de emissão?" },
+      { type: "paragraph", text: "O Emissor Nacional disponibiliza a emissão pela aplicação Web e também por integração via API. Para sistemas próprios ou emissores privados, é importante confirmar os requisitos técnicos, o credenciamento aplicável e se a solução está efetivamente integrada ao ambiente nacional para o perfil do contribuinte." },
+      { type: "heading", text: "O que revisar antes de emitir" },
       { type: "list", items: [
-        "CNPJ e cadastro do prestador.",
-        "Identificação do tomador quando necessária.",
-        "Descrição clara e compatível com o serviço realmente prestado.",
-        "Código de serviço e município de incidência conforme a regra aplicável.",
-        "Valor, retenções e demais informações tributárias confirmadas com o contador."
+        "Confirme o enquadramento da empresa no Simples Nacional e o porte (ME ou EPP).",
+        "Verifique se o sistema utilizado opera com o padrão nacional exigido para a empresa.",
+        "Revise cadastro do prestador, tomador, serviço, município, competência e valores.",
+        "Confira retenções e informações tributárias com a contabilidade.",
+        "Acompanhe as notas técnicas e a documentação atualizada do Portal Nacional da NFS-e."
       ]},
-      { type: "heading", text: "Como funciona a emissão" },
-      { type: "paragraph", text: "Em linhas gerais, o prestador acessa o emissor autorizado para seu enquadramento, informa os dados da prestação, revisa as informações e conclui a emissão. Depois, deve salvar ou encaminhar o documento ao cliente e manter o registro organizado. Empresas devem verificar com a prefeitura e com a contabilidade qual emissor e procedimento se aplicam ao seu caso." },
-      { type: "heading", text: "O que observar na transição para 2027" },
-      { type: "paragraph", text: "A Reforma Tributária traz mudanças graduais nos documentos e na informação de tributos. A Receita Federal e o Comitê Gestor publicam atos e orientações que podem atualizar prazos e procedimentos. Não presuma que todas as empresas terão exatamente o mesmo fluxo: confira o enquadramento e a orientação vigente para NFS-e." },
-      { type: "heading", text: "Como reduzir erros na emissão de NFS-e" },
-      { type: "list", items: [
-        "Mantenha os cadastros de clientes e serviços atualizados.",
-        "Use descrições objetivas, sem informações contraditórias.",
-        "Confira município, competência e valor antes de confirmar.",
-        "Guarde o documento emitido e acompanhe eventuais cancelamentos ou substituições.",
-        "Revise com o contador as regras de retenção e tributação aplicáveis."
-      ]}
+      { type: "heading", text: "Como o EmitaGo pode ajudar" },
+      { type: "paragraph", text: "O EmitaGo oferece integrações de NFS-e e cobertura divulgada de mais de 1.600 municípios. Como a obrigatoriedade nacional exige atenção ao padrão e ao enquadramento, confirme com a equipe se o fluxo disponível atende sua empresa, município e operação antes de contratar." },
+      { type: "heading", text: "Fontes oficiais e atualizações" },
+      { type: "source", label: "Portal Nacional da NFS-e — diretrizes para optantes do Simples Nacional (29/10/2026)", href: "https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-diretrizes-sobre-a-obrigatoriedade-da-emissao-da-nfs-e-nacional-para-optantes-do-simples-nacional/" },
+      { type: "source", label: "Receita Federal — obrigatoriedade para ME e EPP a partir de 1º/11/2026", href: "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/simples-nacional-nfs-e-nacional-sera-obrigatoria-para-me-e-epp-a-partir-de-1o-de-novembro-de-2026" },
+      { type: "source", label: "Documentação técnica atual da NFS-e nacional", href: "https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual" }
     ],
   },
   {
