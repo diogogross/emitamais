@@ -379,24 +379,45 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "cancelamento-nfe",
     category: "Notas Fiscais",
-    title: "Cancelamento de NFe: prazos, motivos e alternativas",
-    excerpt:
-      "Prazo legal, extemporâneo e o que fazer quando o cancelamento é negado. Guia prático para o dia a dia.",
+    title: "Cancelamento de NF-e: prazo, motivos e o que fazer após o prazo",
+    excerpt: "Entenda quando cancelar uma NF-e, por que o prazo varia conforme a UF e quais alternativas avaliar quando a operação não aconteceu.",
     date: "02 Fev 2026",
-    readMin: 5,
+    updatedAt: "14 Nov 2026",
+    readMin: 7,
     image: nfeGuia,
     author: "Equipe EmitaGo",
     content: [
-      { type: "paragraph", text: "O cancelamento de NFe deve ser feito em até 24 horas após a autorização, desde que o produto ainda não tenha circulado. Após esse prazo, entra o cancelamento extemporâneo, com regras específicas por estado." },
-      { type: "heading", text: "Requisitos do cancelamento" },
+      { type: "paragraph", text: "O cancelamento de uma Nota Fiscal Eletrônica (NF-e, modelo 55) não é uma simples exclusão do documento. A NF-e precisa ter sido autorizada pela SEFAZ e, em regra, o cancelamento depende de a mercadoria não ter circulado nem a prestação ter ocorrido. O prazo e o procedimento devem ser conferidos na legislação da unidade federada do emitente: não use um único prazo como se fosse igual em todo o Brasil." },
+      { type: "heading", text: "Qual é o prazo para cancelar uma NF-e?" },
+      { type: "paragraph", text: "A regra nacional do Ajuste SINIEF 07/05 prevê o prazo de 24 horas contado da autorização, mas a aplicação de procedimentos e prazos estaduais precisa ser verificada na SEFAZ competente. No Rio Grande do Sul, por exemplo, a Receita Estadual informa prazo de até 168 horas (7 dias) após a autorização de uso. Consulte sempre a orientação atual da sua UF antes de transmitir o evento." },
+      { type: "heading", text: "Quais são os requisitos para cancelar?" },
       { type: "list", items: [
-        "NFe autorizada (status 100).",
-        "Mercadoria ainda não entregue ao destinatário.",
-        "Justificativa obrigatória com no mínimo 15 caracteres.",
-        "Assinatura com o mesmo certificado digital que autorizou a NFe.",
+        "A NF-e deve estar autorizada pela SEFAZ; uma nota rejeitada não é cancelada por evento de cancelamento.",
+        "A mercadoria não pode ter saído do estabelecimento nem ter ocorrido a prestação que a nota documenta.",
+        "O pedido deve ser transmitido pelo sistema emissor e autorizado pela SEFAZ, dentro do prazo e das condições aplicáveis.",
+        "A existência de eventos ou documentos vinculados, como CT-e, MDF-e ou confirmação da operação, pode impedir o cancelamento."
       ]},
-      { type: "heading", text: "Alternativas quando não dá para cancelar" },
-      { type: "paragraph", text: "Se o prazo passou ou a mercadoria já circulou, o caminho é emitir uma NFe de devolução ou uma nota de ajuste. Nunca ignore o problema: uma NFe autorizada não estornada permanece na apuração de impostos." },
+      { type: "heading", text: "O que fazer quando o prazo de cancelamento passou?" },
+      { type: "paragraph", text: "Não existe uma solução única para todos os estados. No Rio Grande do Sul, a Receita Estadual orienta que, quando a operação não ocorreu e o prazo de 168 horas foi ultrapassado, o contribuinte avalie a emissão de NF-e de estorno conforme a IN DRP nº 45/98. Em outras UFs, pode existir procedimento de cancelamento extemporâneo com requisitos e limites próprios. Consulte a SEFAZ do seu estado e a contabilidade antes de emitir outro documento." },
+      { type: "heading", text: "Quando usar carta de correção, nota complementar ou devolução?" },
+      { type: "list", items: [
+        "Carta de Correção Eletrônica (CC-e): pode corrigir determinados campos, mas não altera variáveis que determinam o imposto, identificação de remetente/destinatário ou datas vedadas pela regra.",
+        "NF-e complementar: pode ser aplicável para complementar valores ou impostos em hipóteses previstas na legislação.",
+        "NF-e de estorno ou ajuste: pode ser necessária quando a operação não ocorreu e o cancelamento não é mais possível, conforme a regra estadual.",
+        "NF-e de devolução: documenta uma operação de devolução efetiva; não deve ser usada automaticamente como substituta do cancelamento."
+      ]},
+      { type: "heading", text: "Como evitar problemas com o cancelamento" },
+      { type: "list", items: [
+        "Revise destinatário, produtos, CFOP, NCM, quantidades e valores antes de transmitir.",
+        "Acompanhe o retorno da SEFAZ e confirme se a nota foi autorizada.",
+        "Se identificar erro, verifique imediatamente o prazo e as condições da sua UF.",
+        "Guarde XML, protocolo de autorização, evento de cancelamento e documentos de ajuste.",
+        "Converse com o contador antes de regularizar uma operação que já teve circulação de mercadoria."
+      ]},
+      { type: "heading", text: "Fontes oficiais" },
+      { type: "source", label: "Receita Estadual do RS — prazo de 168 horas e procedimento após o prazo (atualizado em 24/08/2026)", href: "https://atendimento.receita.rs.gov.br/qual-e-o-prazo-legal-para-se-cancelar-uma-nf-e-e-possivel-cancelar-uma-nf-e-apos-esse-prazo" },
+      { type: "source", label: "Portal Nacional da NF-e — perguntas frequentes sobre cancelamento e CC-e", href: "https://www.nfe.fazenda.gov.br/portal/perguntasFrequentes.aspx?AspxAutoDetectCookieSupport=1&tipoConteudo=auR4yGlWmRY%3D" },
+      { type: "source", label: "SEFAZ de São Paulo — cancelamento extemporâneo e condições estaduais", href: "https://portal.fazenda.sp.gov.br/servicos/nfe/Paginas/cancelamentoextemp.aspx" }
     ],
   },
   {
