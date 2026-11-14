@@ -29,60 +29,50 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nfe-passo-a-passo",
     category: "Notas Fiscais",
-    title: "NFe passo a passo: emissão sem erros em 2026",
-    excerpt:
-      "Do cadastro do produto à autorização SEFAZ, veja como reduzir rejeições e ganhar velocidade na emissão da nota fiscal eletrônica.",
+    title: "Como emitir NF-e online: passo a passo para empresas",
+    excerpt: "Veja os dados necessários, como revisar a nota fiscal de produto e acompanhar a autorização da SEFAZ antes de compartilhar o DANFE e o XML.",
     date: "12 Jan 2026",
-    readMin: 6,
+    updatedAt: "14 Nov 2026",
+    readMin: 7,
     image: nfeGuia,
     author: "Equipe EmitaGo",
     content: [
-      {
-        type: "paragraph",
-        text: "A Nota Fiscal Eletrônica (NFe, modelo 55) é o documento fiscal obrigatório para operações entre empresas envolvendo circulação de mercadorias. Emitida em XML e transmitida à SEFAZ do estado de origem, ela substitui a antiga nota em papel e é armazenada digitalmente por, no mínimo, cinco anos.",
-      },
-      {
-        type: "heading",
-        text: "1. Pré-requisitos antes de emitir",
-      },
-      {
-        type: "list",
-        items: [
-          "Certificado digital A1 ou A3 do CNPJ emissor.",
-          "Inscrição estadual ativa e regime tributário definido no Simples Nacional, Lucro Presumido ou Real.",
-          "Cadastro completo de produtos com NCM, CFOP, CST/CSOSN e unidade de medida corretos.",
-          "Cadastro do destinatário com CNPJ/CPF, IE e endereço válidos.",
-        ],
-      },
-      {
-        type: "heading",
-        text: "2. Preenchimento e transmissão",
-      },
-      {
-        type: "paragraph",
-        text: "Com o cadastro correto, o próprio sistema emissor calcula impostos (ICMS, IPI, PIS, COFINS) e gera o XML assinado. Após a transmissão, a SEFAZ retorna um dos três status: autorizada, denegada ou rejeitada. Rejeições costumam ser problemas de cadastro — não de operação — e mostram exatamente qual campo corrigir.",
-      },
-      {
-        type: "heading",
-        text: "3. DANFE, envio e contingência",
-      },
-      {
-        type: "paragraph",
-        text: "Depois de autorizada, o sistema gera o DANFE (a representação em PDF da NFe) e envia o XML ao destinatário por e-mail. Em caso de indisponibilidade da SEFAZ, a emissão em contingência (EPEC ou FS-DA) garante que a operação não pare — o XML é regularizado assim que o ambiente volta.",
-      },
-      {
-        type: "heading",
-        text: "Checklist rápido para 2026",
-      },
-      {
-        type: "list",
-        items: [
-          "Atualize a tabela de NCM para a versão vigente do ano.",
-          "Revise CST/CSOSN de acordo com o regime tributário atual.",
-          "Configure regras de ICMS-ST para vendas interestaduais.",
-          "Ative o backup automático dos XMLs em nuvem.",
-        ],
-      },
+      { type: "paragraph", text: "A Nota Fiscal Eletrônica (NF-e, modelo 55) é o documento digital utilizado para registrar operações com mercadorias, conforme as regras fiscais aplicáveis. A emissão ocorre em sistema emissor integrado ao ambiente autorizador da SEFAZ. A nota só pode ser tratada como autorizada depois do retorno oficial de autorização." },
+      { type: "heading", text: "1. O que preparar antes de emitir uma NF-e" },
+      { type: "list", items: [
+        "Dados cadastrais e fiscais atualizados da empresa, incluindo inscrição estadual quando exigida.",
+        "Certificado digital ICP-Brasil compatível com o modelo de emissão utilizado, conforme as exigências aplicáveis.",
+        "Cadastro dos produtos com NCM, unidade, origem e demais informações fiscais necessárias.",
+        "Dados do destinatário e endereço da operação.",
+        "Definição da natureza da operação, CFOP, CST ou CSOSN e demais parâmetros com orientação contábil."
+      ]},
+      { type: "heading", text: "2. Como emitir NF-e online" },
+      { type: "list", items: [
+        "Acesse o sistema emissor e selecione a empresa e o ambiente de emissão corretos.",
+        "Informe destinatário, produtos, quantidades, valores e dados da operação.",
+        "Revise CFOP, NCM, tributação, frete e demais campos exigidos para o caso.",
+        "Assine digitalmente e transmita o documento à SEFAZ.",
+        "Acompanhe o retorno: somente considere a NF-e autorizada após receber a autorização de uso."
+      ]},
+      { type: "heading", text: "3. DANFE e XML: qual a diferença?" },
+      { type: "paragraph", text: "O XML é o arquivo digital da NF-e e contém os dados fiscais do documento. O DANFE é a representação auxiliar usada para acompanhar a operação e facilitar a consulta da chave de acesso. O DANFE não substitui o XML: mantenha os arquivos digitais organizados e disponíveis pelo prazo legal aplicável." },
+      { type: "heading", text: "4. O que fazer quando a SEFAZ rejeita a NF-e?" },
+      { type: "paragraph", text: "Leia o código e a mensagem de rejeição retornados pelo ambiente autorizador, identifique o campo indicado e revise o cadastro e a operação. Corrija apenas a informação que estiver incorreta e transmita novamente conforme o procedimento do sistema. Em caso de dúvida sobre tributação ou enquadramento, valide os dados com a contabilidade." },
+      { type: "heading", text: "5. Emissão em contingência" },
+      { type: "paragraph", text: "A contingência fiscal não é uma solução genérica para qualquer falha. As modalidades disponíveis, os requisitos técnicos e os prazos de transmissão dependem das regras vigentes e da situação do ambiente autorizador. Utilize apenas uma modalidade prevista para a operação e implementada pelo seu sistema, seguindo as orientações da SEFAZ." },
+      { type: "heading", text: "Checklist antes de transmitir" },
+      { type: "list", items: [
+        "Confira destinatário, endereço e inscrição estadual quando aplicável.",
+        "Revise NCM, CFOP, CST ou CSOSN e natureza da operação.",
+        "Confira quantidades, valores, frete e informações tributárias.",
+        "Aguarde e confirme o protocolo de autorização da SEFAZ.",
+        "Guarde o XML autorizado e disponibilize o DANFE conforme a operação."
+      ]},
+      { type: "heading", text: "Emissor de NF-e online para sua empresa" },
+      { type: "paragraph", text: "Ao escolher um emissor de NF-e online, avalie o fluxo de cadastro, revisão fiscal, assinatura digital, transmissão à SEFAZ, consulta de autorização e acesso ao XML e DANFE. O EmitaGo reúne essas rotinas em uma plataforma online; consulte a página de emissão de NF-e para conhecer os recursos e confirmar se a configuração atende à sua operação." },
+      { type: "heading", text: "Fontes oficiais" },
+      { type: "source", label: "Portal Nacional da NF-e — perguntas frequentes e orientações oficiais", href: "https://www.nfe.fazenda.gov.br/portal/perguntasFrequentes.aspx?AspxAutoDetectCookieSupport=1&tipoConteudo=auR4yGlWmRY%3D" },
+      { type: "source", label: "Portal Nacional da NF-e — documentação técnica e Manual de Orientação do Contribuinte", href: "https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=ndIjl+iEFdE=" }
     ],
   },
   {
@@ -352,28 +342,37 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "carta-correcao-eletronica",
     category: "Notas Fiscais",
-    title: "Carta de Correção Eletrônica: quando e como usar",
-    excerpt:
-      "A CCe corrige pequenos erros da NFe sem precisar cancelar. Veja o que pode e o que não pode ser ajustado.",
+    title: "Carta de Correção Eletrônica (CC-e): o que pode e o que não pode corrigir",
+    excerpt: "Entenda os limites da CC-e na NF-e, quais informações não podem ser alteradas e quando avaliar outro procedimento fiscal.",
     date: "12 Fev 2026",
-    readMin: 4,
+    updatedAt: "14 Nov 2026",
+    readMin: 6,
     image: nfceVarejo,
     author: "Equipe EmitaGo",
     content: [
-      { type: "paragraph", text: "A Carta de Correção Eletrônica (CCe) é o documento que permite ajustar informações da NFe autorizada sem cancelá-la. É rápida, gratuita e tem validade jurídica." },
-      { type: "heading", text: "O que pode ser corrigido" },
+      { type: "paragraph", text: "A Carta de Correção Eletrônica (CC-e) é um evento vinculado a uma NF-e já autorizada, utilizado para corrigir determinadas informações permitidas pela legislação. Ela não substitui a nota original nem permite alterar livremente os dados da operação. Antes de emitir uma CC-e, confira as restrições do Ajuste SINIEF 07/05, do Manual de Orientação do Contribuinte e da SEFAZ competente." },
+      { type: "heading", text: "O que não pode ser corrigido por CC-e?" },
       { type: "list", items: [
-        "Descrição do produto (desde que não altere o produto em si).",
-        "Datas de emissão ou saída.",
-        "Código CFOP quando não muda a natureza da operação.",
-        "Dados do transportador e informações complementares.",
+        "Variáveis que determinam o valor do imposto, como base de cálculo, alíquota, diferença de preço, quantidade ou valor da operação.",
+        "Dados cadastrais que impliquem mudança da identidade do remetente ou do destinatário.",
+        "Data de emissão ou data de saída da mercadoria.",
+        "Informações que alterem a natureza da operação ou contrariem outras restrições do Manual de Orientação do Contribuinte."
       ]},
-      { type: "heading", text: "O que NÃO pode ser corrigido" },
+      { type: "heading", text: "O que pode ser corrigido?" },
+      { type: "paragraph", text: "A CC-e pode ser utilizada para corrigir informações complementares e outros campos permitidos, desde que a alteração não modifique valores tributários, identificação das partes, datas vedadas ou características essenciais da operação. A possibilidade depende do campo e do contexto fiscal: confirme a regra aplicável antes de transmitir o evento." },
+      { type: "heading", text: "Quando a CC-e não resolve o erro" },
+      { type: "paragraph", text: "Se o erro envolve valores ou impostos, identificação do emitente ou destinatário, data de emissão ou saída, ou outro campo vedado, não tente contornar a restrição com uma CC-e. Conforme a situação, pode ser necessário avaliar cancelamento dentro do prazo, NF-e complementar, estorno ou outro procedimento previsto na legislação estadual. Consulte a contabilidade e a SEFAZ antes de emitir um novo documento." },
+      { type: "heading", text: "Checklist antes de emitir a CC-e" },
       { type: "list", items: [
-        "Valores unitários, quantidades ou base de cálculo.",
-        "Dados do emitente ou do destinatário (CNPJ/CPF, IE, endereço).",
-        "Data de emissão que altere o período de apuração.",
+        "Confirme que a NF-e original está autorizada.",
+        "Identifique exatamente o campo e a informação que precisam de correção.",
+        "Verifique se a alteração não modifica valores, impostos, partes ou datas vedadas.",
+        "Consulte o Manual de Orientação do Contribuinte e as regras da sua UF.",
+        "Guarde o XML da NF-e e o registro do evento de CC-e."
       ]},
+      { type: "heading", text: "Fontes oficiais" },
+      { type: "source", label: "Portal Nacional da NF-e — perguntas frequentes sobre Carta de Correção Eletrônica", href: "https://www.nfe.fazenda.gov.br/portal/perguntasFrequentes.aspx?AspxAutoDetectCookieSupport=1&tipoConteudo=auR4yGlWmRY%3D" },
+      { type: "source", label: "Receita Estadual do RS — como corrigir erros na emissão da NF-e", href: "https://atendimento.receita.rs.gov.br/como-corrigir-erros-na-emissao-da-nota-fiscal-eletronica-nfe" }
     ],
   },
   {
