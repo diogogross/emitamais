@@ -40,7 +40,7 @@ export const Route = createFileRoute("/blog/$slug")({
     return { post };
   },
   head: ({ loaderData, params }) => {
-    const BASE_URL = "https://emitago.com.br";
+    const BASE_URL = "https://www.emitago.com.br";
     if (!loaderData) {
       return {
         meta: [
@@ -120,7 +120,7 @@ export const Route = createFileRoute("/blog/$slug")({
             articleSection: post.category,
             inLanguage: "pt-BR",
             mainEntityOfPage: { "@type": "WebPage", "@id": url },
-            isPartOf: { "@id": "https://emitago.com.br/blog" },
+            isPartOf: { "@id": "https://www.emitago.com.br/blog" },
           }),
         },
       ],
@@ -153,6 +153,19 @@ function ArticlePage() {
     ...blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category),
     ...blogPosts.filter((p) => p.slug !== post.slug && p.category !== post.category),
   ].slice(0, 3);
+
+  // Connect informational searches to the matching commercial solution without
+  // forcing unrelated certificate or general-interest articles into a sales path.
+  const slug = post.slug.toLowerCase();
+  const solutionCta = slug.includes("nfse")
+    ? { href: "/solucoes/nfse", label: "Conheça o emissor de NFS-e", description: "Veja como organizar a emissão de notas de serviço e consulte a cobertura do seu município." }
+    : slug.includes("nfce")
+      ? { href: "/solucoes/nfce", label: "Conheça a solução de NFC-e", description: "Veja os recursos de emissão de cupom fiscal e PDV para o varejo." }
+      : /nfe|cancelamento|carta-correcao|manifestacao/.test(slug)
+        ? { href: "/solucoes/nfe", label: "Conheça o emissor de NF-e", description: "Veja como emitir NF-e de produtos e manter DANFE e XML organizados." }
+        : /cte|mdfe|ciot|transporte|rntrc|damdfe|seguro-carga/.test(slug)
+          ? { href: "/solucoes/cte", label: "Conheça as soluções para transporte", description: "Conheça os recursos para CT-e, CT-e OS e rotinas relacionadas ao transporte." }
+          : null;
 
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden" style={{ background: "var(--gradient-hero)" }}>
@@ -213,6 +226,22 @@ function ArticlePage() {
           <SectionRenderer key={i} section={section} />
         ))}
       </article>
+
+      {solutionCta && (
+        <section className="max-w-3xl mx-auto px-6 pb-12" aria-label="Solução fiscal relacionada">
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-6 md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Solução relacionada</p>
+            <h2 className="mt-2 font-display text-2xl font-bold">{solutionCta.label}</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{solutionCta.description}</p>
+            <a
+              href={solutionCta.href}
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+            >
+              Ver solução <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="max-w-5xl mx-auto px-6 pb-20">

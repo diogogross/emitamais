@@ -13,7 +13,7 @@ import { blogPosts } from "@/lib/blog-posts";
 
 const blogCoverImage = blogPosts[0].image.startsWith("http")
   ? blogPosts[0].image
-  : `https://emitago.com.br${blogPosts[0].image.startsWith("/") ? "" : "/"}${blogPosts[0].image}`;
+  : `https://www.emitago.com.br${blogPosts[0].image.startsWith("/") ? "" : "/"}${blogPosts[0].image}`;
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:locale", content: "pt_BR" },
       { property: "og:site_name", content: "EmitaGo" },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://emitago.com.br/blog" },
+      { property: "og:url", content: "https://www.emitago.com.br/blog" },
       { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
       { property: "og:description", content: "Guias práticos sobre NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado Digital A1 para empresas e profissionais." },
       { property: "og:image", content: blogCoverImage },
@@ -39,24 +39,24 @@ export const Route = createFileRoute("/blog/")({
       { name: "twitter:image", content: blogCoverImage },
       { name: "twitter:image:alt", content: blogPosts[0].title },
     ],
-    links: [{ rel: "canonical", href: "https://emitago.com.br/blog" }],
+    links: [{ rel: "canonical", href: "https://www.emitago.com.br/blog" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "@id": "https://emitago.com.br/blog#webpage",
+          "@id": "https://www.emitago.com.br/blog#webpage",
           name: "Blog Fiscal EmitaGo",
-          url: "https://emitago.com.br/blog",
+          url: "https://www.emitago.com.br/blog",
           inLanguage: "pt-BR",
-          isPartOf: { "@id": "https://emitago.com.br/#website" },
+          isPartOf: { "@id": "https://www.emitago.com.br/#website" },
           mainEntity: {
             "@type": "ItemList",
             itemListElement: blogPosts.map((post, index) => ({
               "@type": "ListItem",
               position: index + 1,
-              url: `https://emitago.com.br/blog/${post.slug}`,
+              url: `https://www.emitago.com.br/blog/${post.slug}`,
               name: post.title,
             })),
           },
@@ -68,8 +68,8 @@ export const Route = createFileRoute("/blog/")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Início", item: "https://emitago.com.br/" },
-            { "@type": "ListItem", position: 2, name: "Blog Fiscal", item: "https://emitago.com.br/blog" },
+            { "@type": "ListItem", position: 1, name: "Início", item: "https://www.emitago.com.br/" },
+            { "@type": "ListItem", position: 2, name: "Blog Fiscal", item: "https://www.emitago.com.br/blog" },
           ],
         }),
       },
