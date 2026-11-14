@@ -43,9 +43,13 @@ export const Route = createFileRoute("/solucoes/$slug")({
         { property: "og:url", content: url },
         { property: "og:title", content: page.seoTitle },
         { property: "og:description", content: page.description },
-        { name: "twitter:card", content: "summary" },
+        { property: "og:image", content: `${BASE_URL}/og-emita.png` },
+        { property: "og:image:alt", content: `EmitaGo — ${page.title}` },
+        { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: page.seoTitle },
         { name: "twitter:description", content: page.description },
+        { name: "twitter:image", content: `${BASE_URL}/og-emita.png` },
+        { name: "twitter:image:alt", content: `EmitaGo — ${page.title}` },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
@@ -90,7 +94,7 @@ export const Route = createFileRoute("/solucoes/$slug")({
               },
               {
                 "@type": "FAQPage",
-                mainEntity: [...page.faq, ...pricingFaq].map((item) => ({
+                mainEntity: faqItems.map((item) => ({
                   "@type": "Question",
                   name: item.question,
                   acceptedAnswer: { "@type": "Answer", text: item.answer }
@@ -139,6 +143,19 @@ function SolutionPage() {
   const { page } = Route.useLoaderData();
   const related = blogPosts.filter((post) => page.relatedSlugs.includes(post.slug));
   const visual = landingVisuals[page.slug];
+
+  // Avoid repeating the pricing question when a page already has a document-specific pricing answer.
+  const pageHasPricingFaq = page.faq.some((item) =>
+    item.question.toLocaleLowerCase("pt-BR").includes("quanto custa"),
+  );
+  const faqItems = [
+    ...page.faq,
+    ...pricingFaq.filter(
+      (item) =>
+        !pageHasPricingFaq ||
+        !item.question.toLocaleLowerCase("pt-BR").includes("quanto custa"),
+    ),
+  ];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
