@@ -28,7 +28,11 @@ export const solutionPages: SolutionPage[] = [
       { question: "Como emitir NF-e online pelo EmitaGo?", answer: "Cadastre a empresa, configure os dados fiscais, informe produtos e cliente, preencha a operação e assine digitalmente o documento para transmissão à SEFAZ. A autorização depende da validação fiscal e do ambiente autorizador." },
       { question: "O emissor de NF-e gera DANFE e XML?", answer: "O EmitaGo disponibiliza a rotina de emissão de NF-e com geração de DANFE e XML para consulta, envio ao destinatário e organização contábil." },
       { question: "Preciso de certificado digital para emitir NF-e?", answer: "Em regra, a emissão de NF-e exige assinatura digital do emitente por certificado compatível com a operação e com as exigências fiscais aplicáveis." },
-      { question: "Quanto custa emitir NF-e pelo EmitaGo?", answer: "O EmitaGo custa R$ 60 por CNPJ ativo no mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
+      { question: "O que é um emissor de NF-e online?", answer: "É um sistema pela internet usado para preencher, assinar digitalmente e transmitir a Nota Fiscal Eletrônica modelo 55 à SEFAZ. Depois da autorização, o contribuinte deve manter o XML e disponibilizar o DANFE conforme a operação." },
+      { question: "Como emitir NF-e de produto pela internet?", answer: "Configure os dados fiscais da empresa, cadastre produtos e clientes, confira NCM, CFOP, CST ou CSOSN e demais informações da operação, assine o documento e transmita à SEFAZ. A NF-e só está autorizada após o retorno de autorização do Fisco." },
+      { question: "O EmitaGo transmite a NF-e para a SEFAZ e gera DANFE e XML?", answer: "O EmitaGo oferece fluxo de emissão de NF-e com transmissão à SEFAZ e disponibilização de DANFE e XML, conforme a configuração fiscal e a disponibilidade do ambiente autorizador." },
+      { question: "Qual a diferença entre um emissor gratuito e um sistema emissor de NF-e?", answer: "A diferença depende dos recursos oferecidos. Ao comparar, avalie cadastro de produtos e clientes, regras fiscais, transmissão, consulta de autorização, geração de DANFE e XML, suporte, organização de documentos e custo total da operação." },
+            { question: "Quanto custa emitir NF-e pelo EmitaGo?", answer: "O EmitaGo custa R$ 60 por CNPJ ativo no mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
     ],
     relatedSlugs: ["nfe-passo-a-passo", "carta-correcao-eletronica", "cancelamento-nfe"]
   },
