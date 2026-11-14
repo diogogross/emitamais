@@ -83,7 +83,7 @@ export const Route = createFileRoute("/")({
       { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "EmitaGo" },
-      { property: "og:url", content: "https://emitago.com.br/" },
+      { property: "og:url", content: "https://www.emitago.com.br/" },
       {
         property: "og:title",
         content: "Emissor de NF-e e NFS-e Online | EmitaGo",
@@ -105,8 +105,8 @@ export const Route = createFileRoute("/")({
       },
     ],
     links: [
-      { rel: "canonical", href: "https://emitago.com.br/" },
-      { rel: "alternate", hrefLang: "pt-BR", href: "https://emitago.com.br/" },
+      { rel: "canonical", href: "https://www.emitago.com.br/" },
+      { rel: "alternate", hrefLang: "pt-BR", href: "https://www.emitago.com.br/" },
       { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
     ],
     scripts: [
@@ -116,14 +116,14 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "EmitaGo",
-          url: "https://emitago.com.br/",
+          url: "https://www.emitago.com.br/",
           inLanguage: "pt-BR",
           description:
             "Emissor de nota fiscal online para empresas brasileiras, com emissão de documentos fiscais e Certificado Digital A1.",
           publisher: {
             "@type": "Organization",
             name: "EmitaGo",
-            url: "https://emitago.com.br/",
+            url: "https://www.emitago.com.br/",
           },
         }),
       },
@@ -136,7 +136,7 @@ export const Route = createFileRoute("/")({
           applicationCategory: "BusinessApplication",
           applicationSubCategory: "Fiscal invoicing software",
           operatingSystem: "Web, Android",
-          url: "https://emitago.com.br/",
+          url: "https://www.emitago.com.br/",
           inLanguage: "pt-BR",
           description:
             "Sistema online para emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, além de funcionalidades relacionadas ao CIOT. Gerencie múltiplos CNPJs no mesmo painel; o preço é R$ 60 por CNPJ ativo em cada mês de uso.",
@@ -157,13 +157,13 @@ export const Route = createFileRoute("/")({
             name: "Plano EmitaGo",
             price: "60.00",
             priceCurrency: "BRL",
-            url: "https://emitago.com.br/#planos",
+            url: "https://www.emitago.com.br/#planos",
             description: "R$ 60,00 por CNPJ ativo, pagos antecipadamente para liberar o mês de uso. Emissão ilimitada de notas no mês pago para cada CNPJ ativo, sem fidelidade.",
           },
           provider: {
             "@type": "Organization",
             name: "EmitaGo",
-            url: "https://emitago.com.br/",
+            url: "https://www.emitago.com.br/",
           },
         }),
       },
@@ -172,11 +172,11 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
-          "@id": "https://emitago.com.br/#produto",
+          "@id": "https://www.emitago.com.br/#produto",
           name: "EmitaGo — Sistema Emissor de Notas Fiscais",
-          url: "https://emitago.com.br/",
+          url: "https://www.emitago.com.br/",
           description: "Sistema fiscal online com suporte a múltiplos CNPJs no mesmo painel. R$ 60 por CNPJ ativo em cada mês de uso, com pagamento antecipado e emissão ilimitada no mês pago.",
-          image: "https://emitago.com.br/og-emita.png",
+          image: "https://www.emitago.com.br/og-emita.png",
           category: "Software de emissão fiscal",
           brand: {
             "@type": "Brand",
@@ -184,7 +184,7 @@ export const Route = createFileRoute("/")({
           },
           offers: {
             "@type": "Offer",
-            url: "https://emitago.com.br/#planos",
+            url: "https://www.emitago.com.br/#planos",
             price: "60.00",
             priceCurrency: "BRL",
             description: "R$ 60,00 por CNPJ ativo, pagos antecipadamente para liberar o mês de uso. Sem fidelidade; emissão ilimitada de notas no mês pago.",
@@ -197,14 +197,14 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "EmitaGo | Emissor de Nota Fiscal Online",
-          url: "https://emitago.com.br/",
+          url: "https://www.emitago.com.br/",
           inLanguage: "pt-BR",
           description:
             "Página oficial do EmitaGo, emissor de notas fiscais online e soluções de Certificado Digital A1.",
           isPartOf: {
             "@type": "WebSite",
             name: "EmitaGo",
-            url: "https://emitago.com.br/",
+            url: "https://www.emitago.com.br/",
           },
           about: [
             { "@type": "Thing", name: "Emissão de nota fiscal eletrônica" },
