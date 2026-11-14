@@ -1308,6 +1308,7 @@ function HeroFullBleed({
   secondaryHref,
   stats,
   eager = false,
+  imagePosition = "center",
 }: {
   image: string;
   alt: string;
@@ -1322,6 +1323,7 @@ function HeroFullBleed({
   secondaryHref: string;
   stats: [string, string][];
   eager?: boolean;
+  imagePosition?: string;
 }) {
   const CtaEl: any = "a";
   const ctaProps: any = {
@@ -1340,8 +1342,8 @@ function HeroFullBleed({
           : { loading: "lazy" as const, decoding: "async" as const })}
         width={1920}
         height={1088}
-        className="absolute inset-0 w-full h-full object-cover object-center"
-        style={{ filter: "brightness(1.12) saturate(1.06)" }}
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ objectPosition: imagePosition, filter: "brightness(1.12) saturate(1.06)" }}
       />
       <div
         className="absolute inset-0"
@@ -1408,6 +1410,7 @@ function HeroSlide1() {
         ["Online", "emissão fiscal"],
       ]}
       eager
+      imagePosition="50% 35%"
     />
   );
 }
