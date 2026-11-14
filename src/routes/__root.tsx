@@ -18,7 +18,7 @@ import ogImage from "@/assets/hero-person.webp";
 
 const absoluteOgImage = ogImage.startsWith("http")
   ? ogImage
-  : `https://emitago.com.br${ogImage.startsWith("/") ? "" : "/"}${ogImage}`;
+  : `https://www.emitago.com.br${ogImage.startsWith("/") ? "" : "/"}${ogImage}`;
 
 function NotFoundComponent() {
   return (
@@ -127,13 +127,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@graph": [
             {
               "@type": "Organization",
-              "@id": "https://emitago.com.br/#organization",
+              "@id": "https://www.emitago.com.br/#organization",
               name: "EmitaGo",
               alternateName: "EmitaGo",
-              url: "https://emitago.com.br/",
+              url: "https://www.emitago.com.br/",
               logo: {
                 "@type": "ImageObject",
-                url: "https://emitago.com.br/og-emita.png",
+                url: "https://www.emitago.com.br/og-emita.png",
               },
               description:
                 "Sistema emissor de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, CIOT) e certificado digital A1 CPF e CNPJ.",
@@ -141,12 +141,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             },
             {
               "@type": "WebSite",
-              "@id": "https://emitago.com.br/#website",
-              url: "https://emitago.com.br/",
+              "@id": "https://www.emitago.com.br/#website",
+              url: "https://www.emitago.com.br/",
               name: "EmitaGo",
               alternateName: "EmitaGo",
               inLanguage: "pt-BR",
-              publisher: { "@id": "https://emitago.com.br/#organization" },
+              publisher: { "@id": "https://www.emitago.com.br/#organization" },
             },
           ],
         }),
