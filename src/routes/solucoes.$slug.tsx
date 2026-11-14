@@ -3,7 +3,7 @@ import { ArrowRight, Check, FileText } from "lucide-react";
 import { getSolutionBySlug } from "@/lib/solution-pages";
 import { blogPosts } from "@/lib/blog-posts";
 
-const BASE_URL = "https://emitago.com.br";
+const BASE_URL = "https://www.emitago.com.br";
 
 const pricingFaq = [
   {
