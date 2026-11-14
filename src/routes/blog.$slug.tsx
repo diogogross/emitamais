@@ -40,7 +40,7 @@ export const Route = createFileRoute("/blog/$slug")({
     return { post };
   },
   head: ({ loaderData, params }) => {
-    const BASE_URL = "https://emitago.com.br";
+    const BASE_URL = "https://www.emitago.com.br";
     if (!loaderData) {
       return {
         meta: [
@@ -120,7 +120,7 @@ export const Route = createFileRoute("/blog/$slug")({
             articleSection: post.category,
             inLanguage: "pt-BR",
             mainEntityOfPage: { "@type": "WebPage", "@id": url },
-            isPartOf: { "@id": "https://emitago.com.br/blog" },
+            isPartOf: { "@id": "https://www.emitago.com.br/blog" },
           }),
         },
       ],
