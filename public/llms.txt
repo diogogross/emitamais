@@ -1,16 +1,44 @@
 # EmitaGo
 
-> Sistema online para emissão de notas fiscais eletrônicas (NFe, NFCe, NFSe, CTe, MDFe, NFPe, CIOT) e certificado digital A1 CPF e CNPJ por R$ 129,90.
+> Plataforma brasileira de emissão online de documentos fiscais para empresas, com cobrança pré-paga de R$ 60 por CNPJ ativo no mês de uso.
 
-O EmitaGo é uma plataforma brasileira 100% online que reúne, em um único sistema, a emissão de todos os documentos fiscais eletrônicos exigidos pela SEFAZ e prefeituras, além da venda e emissão de certificados digitais A1 (CPF e CNPJ) por videoconferência ICP-Brasil.
+O EmitaGo reúne emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e, NFP-e e rotinas de CIOT em uma plataforma online. A disponibilidade de cada documento, integração, município e operação deve ser confirmada conforme a configuração fiscal do cliente.
 
-## Pages
+## Preços e condições
 
-- [Home](/): Emissor de notas fiscais online (NFe, NFCe, NFSe, CTe, MDFe, NFPe, CIOT) e certificado digital A1 CPF/CNPJ por R$ 129,90.
-- [Certificado Digital A1](/certificado-digital): Certificado Digital A1 CPF ou CNPJ por R$ 129,90, com emissão 100% online por videoconferência e 12 meses de validade.
-- [Blog Fiscal](/blog): Guias práticos sobre NFe, NFCe, CTe, MDFe, CIOT e certificado digital A1 para empresas, transportadoras e contadores.
+- **Sistema emissor:** R$ 60 por CNPJ ativo, pagos antecipadamente para liberar o mês de uso.
+- **Uso no mês pago:** emissões ilimitadas para o CNPJ ativo durante o período contratado.
+- **Meses sem uso:** não é necessário ativar/pagar o CNPJ quando não houver necessidade de emissão, conforme as condições comerciais.
+- **Contrato:** sem fidelidade e sem multa por permanência.
+- **Múltiplos CNPJs:** podem ser administrados no mesmo painel; a cobrança é por CNPJ ativo.
+- **Certificado Digital A1:** produto separado, anunciado por R$ 129,90. Não confundir o preço do certificado com o preço do sistema emissor.
 
-## Optional
+## Soluções fiscais
 
-- [Política de Privacidade](/privacidade): Como o EmitaGo trata dados pessoais em conformidade com a LGPD.
-- [Termos de Uso](/termos): Termos e condições de uso da plataforma EmitaGo.
+- [Emissor de NF-e](/solucoes/nfe): Nota Fiscal Eletrônica modelo 55 para operações com produtos, com fluxo de transmissão, DANFE e XML.
+- [Emissor de NFC-e](/solucoes/nfce): Nota Fiscal de Consumidor Eletrônica modelo 65 para varejo, com recursos de PDV.
+- [Emissor de NFS-e](/solucoes/nfse): emissão de Nota Fiscal de Serviço Eletrônica; integração divulgada com mais de 1.600 municípios. A cobertura depende do município, padrão e operação.
+- [Emissor de CT-e e CT-e OS](/solucoes/cte): documentos eletrônicos para prestações de transporte.
+- [Emissor de MDF-e](/solucoes/mdfe): manifesto eletrônico para operações de transporte.
+- [CIOT](/solucoes/ciot): rotinas relacionadas ao Código Identificador da Operação de Transporte.
+- [NFP-e](/solucoes/nfpe): documento fiscal eletrônico para operações de produtor rural, conforme regras estaduais.
+
+## Certificado digital
+
+- [Certificado Digital A1](/certificado-digital): certificado para pessoa física ou jurídica, vendido separadamente do sistema emissor. Consulte condições, validação de identidade e compatibilidade antes da compra.
+
+## Conteúdo e orientação
+
+- [Blog Fiscal](/blog): guias sobre NF-e, NFC-e, NFS-e, CT-e, MDF-e, CIOT, certificado digital e Reforma Tributária.
+- [Política de Privacidade](/privacidade): tratamento de dados pessoais.
+- [Termos de Uso](/termos): condições de uso da plataforma.
+
+## Reforma Tributária
+
+O blog publica orientações sobre IBS, CBS e adequação dos documentos fiscais. Os cronogramas, leiautes, classificações tributárias e datas de obrigatoriedade devem ser conferidos nas fontes oficiais e com a contabilidade. A presença de um artigo sobre IBS/CBS não significa, por si só, que todos os recursos de emissão relacionados já estejam disponíveis no sistema.
+
+## Fontes oficiais para validação fiscal
+
+- [Receita Federal — Reforma Tributária do Consumo](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda)
+- [Receita Federal — cronograma dos documentos fiscais eletrônicos](https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma)
+- [Portal Nacional da NFS-e](https://www.gov.br/nfse/pt-br)
