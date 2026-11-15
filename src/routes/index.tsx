@@ -1206,7 +1206,7 @@ function Index() {
           </div>
 
           <div className="md:col-span-3">
-            <div className="text-xs uppercase tracking-widest text-white/45 font-semibold">Legal</div>
+            <div className="text-xs uppercase tracking-widest text-white/80 font-semibold">Legal</div>
             <ul className="mt-4 space-y-2.5 text-sm text-white/70">
               <li><Link to="/termos" className="hover:text-white transition">Termos de uso</Link></li>
               <li><Link to="/privacidade" className="hover:text-white transition">Política de privacidade</Link></li>
