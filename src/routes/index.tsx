@@ -66,12 +66,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Emissor de NF-e e NFS-e Online | EmitaGo"
+        title: "Sistema de Notas Fiscais Online | EmitaGo"
       },
       {
         name: "description",
         content:
-          "Emita NF-e e NFS-e online por R$ 60 pré-pagos por CNPJ ativo no mês de uso. Sem fidelidade.",
+          "Sistema de notas fiscais online para emitir NF-e, NFC-e, NFS-e, CT-e e outros documentos. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
       },
       {
         name: "robots",
@@ -86,22 +86,22 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://www.emitago.com.br/" },
       {
         property: "og:title",
-        content: "Emissor de NF-e e NFS-e Online | EmitaGo",
+        content: "Sistema de Notas Fiscais Online | EmitaGo",
       },
       {
         property: "og:description",
         content:
-          "Emissor de NF-e e NFS-e online para empresas. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade.",
+          "Conheça um sistema de notas fiscais online para empresas: NF-e, NFC-e, NFS-e, CT-e e mais. Pré-pago por CNPJ ativo, sem fidelidade.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "EmitaGo | Emissor de NF-e e NFS-e Online",
+        content: "EmitaGo | Sistema de Notas Fiscais Online",
       },
       {
         name: "twitter:description",
         content:
-          "Emita NF-e de produtos e NFS-e de serviços online. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade.",
+          "Sistema online para emitir NF-e, NFC-e, NFS-e e documentos de transporte. Pague antecipadamente apenas pelo CNPJ que usar.",
       },
     ],
     links: [
@@ -608,10 +608,10 @@ function Index() {
         <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.3em] text-accent mb-4">Documentos</div>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
-            Um único sistema para <span className="gradient-text">7 tipos</span> de documentos fiscais.
+            Sistema de notas fiscais para <span className="gradient-text">diferentes operações.</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Emissão centralizada, integrada com SEFAZ e prefeituras. Do PDV ao transporte de cargas, tudo em uma plataforma.
+            Organize a emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e em uma plataforma online. Consulte a cobertura e as integrações disponíveis para cada operação.
           </p>
         </div>
 
@@ -1152,9 +1152,10 @@ function Index() {
       {/* SEO: páginas específicas de soluções fiscais */}
       <section aria-labelledby="solucoes-fiscais-title" className="border-t border-white/10 bg-[oklch(0.16_0.05_285)]">
         <div className="mx-auto max-w-7xl px-6 py-14 md:py-16">
-          <h2 id="solucoes-fiscais-title" className="font-display text-2xl md:text-3xl font-bold text-white">Conheça nossas soluções fiscais</h2>
-          <p className="mt-3 max-w-3xl text-sm md:text-base leading-relaxed text-white/70">Encontre informações sobre os documentos fiscais e veja como organizar a emissão conforme a necessidade da sua empresa.</p>
+          <h2 id="solucoes-fiscais-title" className="font-display text-2xl md:text-3xl font-bold text-white">Sistema de notas fiscais online: conheça o EmitaGo</h2>
+          <p className="mt-3 max-w-3xl text-sm md:text-base leading-relaxed text-white/70">O EmitaGo é um sistema de emissão de notas fiscais para empresas que precisam emitir documentos de produto, serviço, varejo e transporte. Compare os recursos, consulte a cobertura fiscal e escolha a solução adequada à sua operação.</p>
           <ul className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm">
+            <li><a className="text-white font-semibold underline underline-offset-4 hover:text-white/80" href="/solucoes/sistema-notas-fiscais">Sistema de notas fiscais para empresas</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfe">Emissor de NF-e para produtos</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfce">NFC-e e cupom fiscal para varejo</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/pdv-smart-pos">PDV com NFC-e e Smart POS</a></li>
@@ -1199,6 +1200,7 @@ function Index() {
             <ul className="mt-4 space-y-2.5 text-sm text-white/85">
               <li><a href="#produto" className="hover:text-white transition">O produto</a></li>
               <li><a href="#documentos" className="hover:text-white transition">Documentos fiscais</a></li>
+              <li><a href="/solucoes/sistema-notas-fiscais" className="hover:text-white transition">Sistema de notas fiscais</a></li>
               <li><a href="#planos" className="hover:text-white transition">Planos</a></li>
               <li><Link to="/certificado-digital" className="hover:text-white transition">Certificado Digital</Link></li>
               <li><Link to="/blog" className="hover:text-white transition">Blog</Link></li>
@@ -1402,9 +1404,9 @@ function HeroSlide1() {
       image={heroPerson}
       alt="Empresário trabalhando em notebook em ambiente profissional iluminado"
       eyebrow="Plataforma completa de emissão fiscal"
-      title="Emissor de NF-e e NFS-e online"
-      titleAccent="para produtos e serviços."
-      description="Emita Nota Fiscal Eletrônica (NF-e modelo 55) para venda de produtos e Nota Fiscal de Serviço (NFS-e) em uma única plataforma online. Integração com mais de 1.600 municípios para NFS-e. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade."
+      title="Sistema de notas fiscais online"
+      titleAccent="para sua empresa."
+      description="Emita NF-e para produtos, NFC-e para o varejo e NFS-e para serviços, além de documentos de transporte, em um único sistema online. Integração com mais de 1.600 municípios para NFS-e. R$ 60 pré-pagos por CNPJ ativo no mês de uso."
       ctaLabel="Conferir planos"
       ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver o produto"
