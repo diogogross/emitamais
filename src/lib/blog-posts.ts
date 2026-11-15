@@ -1521,7 +1521,7 @@ export const blogPosts: BlogPost[] = [
     slug: "emissao-nfse-empresas-padrao-nacional",
     category: "Notas Fiscais",
     title: "NFS-e nacional: regras para ME e EPP do Simples",
-    excerpt: "Entenda a obrigatoriedade do Emissor Nacional da NFS-e para microempresas e empresas de pequeno porte optantes pelo Simples Nacional desde 1º de novembro de 2026.",
+    excerpt: "Entenda quando ME e EPP do Simples Nacional devem usar o Emissor Nacional da NFS-e e como se preparar para emitir.",
     date: "22 Out 2026",
     updatedAt: "14 Nov 2026",
     readMin: 7,
