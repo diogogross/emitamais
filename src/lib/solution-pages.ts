@@ -174,7 +174,6 @@ export const solutionPages: SolutionPage[] = [
       { question: "Posso controlar CIOT junto com CTe e MDFe?", answer: "A proposta do EmitaGo é centralizar essas rotinas para reduzir retrabalho e manter a operação organizada." }
     ],
     relatedSlugs: ["cte-transporte", "mdfe-frota"]
-  }
   },
   {
     slug: "sistema-notas-fiscais",
