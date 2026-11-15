@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Checklist de preparação fiscal para 2027</title><desc id="desc">Ilustração de checklist de preparação de sistema emissor, cadastros, classificação tributária, testes e documentos fiscais.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101b38"/><stop offset="1" stop-color="#28215b"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf0ff"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#6b67e8"/></linearGradient>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8db4"/><stop offset="1" stop-color="#e66bd0"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#050b1d" flood-opacity=".32"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1450" cy="80" r="330" fill="#6d65d9" opacity=".14"/><circle cx="80" cy="850" r="300" fill="#2ca9d5" opacity=".10"/>
+<path d="M0 690 C330 590 480 940 840 800 S1300 650 1600 760 V900 H0Z" fill="#ffffff" opacity=".035"/>
+<text x="92" y="110" fill="#8bc8ff" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="5">EMITAGO • GUIA FISCAL 2027</text>
+<text x="92" y="230" fill="#fff" font-family="Arial" font-size="62" font-weight="700">Checklist fiscal 2027</text>
+<text x="96" y="292" fill="#c7d5f3" font-family="Arial" font-size="30">Prepare processos, cadastros e sistemas</text>
+<g filter="url(#shadow)" transform="translate(330 350)">
+ <rect width="870" height="450" rx="34" fill="url(#panel)"/>
+ <rect x="52" y="44" width="766" height="74" rx="18" fill="#e2eafa"/>
+ <text x="88" y="91" fill="#27365b" font-family="Arial" font-size="27" font-weight="700">PLANO DE ADEQUAÇÃO DA EMPRESA</text>
+ <g transform="translate(72 155)"><rect width="36" height="36" rx="10" fill="#d5f4e9" stroke="#43b58e" stroke-width="2"/><path d="M9 18 L15 25 L28 10" fill="none" stroke="#167b5b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="58" y="26" fill="#334365" font-family="Arial" font-size="23">Atualizar o sistema emissor</text></g><g transform="translate(72 211)"><rect width="36" height="36" rx="10" fill="#d5f4e9" stroke="#43b58e" stroke-width="2"/><path d="M9 18 L15 25 L28 10" fill="none" stroke="#167b5b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="58" y="26" fill="#334365" font-family="Arial" font-size="23">Revisar produtos, serviços e cadastros</text></g><g transform="translate(72 267)"><rect width="36" height="36" rx="10" fill="#d5f4e9" stroke="#43b58e" stroke-width="2"/><path d="M9 18 L15 25 L28 10" fill="none" stroke="#167b5b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="58" y="26" fill="#334365" font-family="Arial" font-size="23">Validar classificação com a contabilidade</text></g><g transform="translate(72 323)"><rect width="36" height="36" rx="10" fill="#e1e9fb" stroke="#7894d0" stroke-width="2"/><path d="M9 18 L15 25 L28 10" fill="none" stroke="#365b9b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="58" y="26" fill="#334365" font-family="Arial" font-size="23">Testar os novos leiautes e retornos</text></g><g transform="translate(72 379)"><rect width="36" height="36" rx="10" fill="#e1e9fb" stroke="#7894d0" stroke-width="2"/><path d="M9 18 L15 25 L28 10" fill="none" stroke="#365b9b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="58" y="26" fill="#334365" font-family="Arial" font-size="23">Organizar XML e documentos fiscais</text></g>
+</g>
+<g transform="translate(1200 390)"><circle cx="110" cy="110" r="88" fill="url(#blue)"/><path d="M110 50 V110 L153 136" stroke="#fff" stroke-width="12" fill="none" stroke-linecap="round"/><circle cx="110" cy="110" r="12" fill="#fff"/><text x="110" y="238" fill="#dce8ff" font-family="Arial" font-size="22" text-anchor="middle">PLANEJAR</text></g>
+</svg>
