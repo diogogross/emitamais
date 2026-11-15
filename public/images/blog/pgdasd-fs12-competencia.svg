@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">PGDAS-D atualizado para IBS e CBS</title><desc id="desc">Ilustração do PGDAS-D com campos de competência e folha salarial dos últimos 12 meses.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101b38"/><stop offset="1" stop-color="#28215b"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf0ff"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#6b67e8"/></linearGradient>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8db4"/><stop offset="1" stop-color="#e66bd0"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#050b1d" flood-opacity=".32"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1450" cy="80" r="330" fill="#6d65d9" opacity=".14"/><circle cx="80" cy="850" r="300" fill="#2ca9d5" opacity=".10"/>
+<path d="M0 690 C330 590 480 940 840 800 S1300 650 1600 760 V900 H0Z" fill="#ffffff" opacity=".035"/>
+<text x="92" y="110" fill="#8bc8ff" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="5">EMITAGO • GUIA FISCAL 2027</text>
+<text x="92" y="230" fill="#fff" font-family="Arial" font-size="62" font-weight="700">PGDAS-D atualizado</text>
+<text x="96" y="292" fill="#c7d5f3" font-family="Arial" font-size="30">Competência, folha e dados fiscais do Simples</text>
+<g filter="url(#shadow)" transform="translate(260 365)">
+ <rect width="1080" height="410" rx="32" fill="url(#panel)"/>
+ <rect x="42" y="38" width="996" height="66" rx="16" fill="#263a67"/>
+ <text x="78" y="81" fill="#fff" font-family="Arial" font-size="27" font-weight="700">PGDAS-D • APURAÇÃO DO SIMPLES NACIONAL</text>
+ <rect x="52" y="135" width="445" height="210" rx="18" fill="#e7eefc"/>
+ <text x="86" y="183" fill="#26365d" font-family="Arial" font-size="25" font-weight="700">REGIME DE APURAÇÃO</text>
+ <rect x="86" y="210" width="350" height="54" rx="12" fill="#d5f4e9"/><text x="112" y="246" fill="#176b55" font-family="Arial" font-size="22" font-weight="700">Competência em 2027</text>
+ <text x="86" y="310" fill="#536487" font-family="Arial" font-size="18">Atenção aos períodos 11 e 12/2026</text>
+ <rect x="535" y="135" width="493" height="210" rx="18" fill="#fbe8f2"/>
+ <text x="570" y="183" fill="#79375f" font-family="Arial" font-size="25" font-weight="700">FOLHA DOS ÚLTIMOS 12 MESES</text>
+ <g transform="translate(570 218)"><rect width="420" height="62" rx="12" fill="#fff"/><path d="M22 18 H398 M22 34 H330 M22 50 H360" stroke="#d9c5d3" stroke-width="7" stroke-linecap="round"/></g>
+ <text x="570" y="321" fill="#8b4c72" font-family="Arial" font-size="18">FS12 • informação exigida no PGDAS-D</text>
+</g>
+</svg>
