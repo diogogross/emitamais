@@ -730,7 +730,7 @@ export const blogPosts: BlogPost[] = [
         "href": "https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual"
       }
     ]
-  }
+  },
 
   {
     slug: "nfe-passo-a-passo",
