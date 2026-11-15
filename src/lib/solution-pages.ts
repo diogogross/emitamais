@@ -175,6 +175,7 @@ export const solutionPages: SolutionPage[] = [
     ],
     relatedSlugs: ["cte-transporte", "mdfe-frota"]
   }
+  },
   {
     slug: "sistema-notas-fiscais",
     title: "Sistema de Notas Fiscais para Empresas",
