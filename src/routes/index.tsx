@@ -35,12 +35,12 @@ import {
 
 
 // Fotografias reais da Pexels (licença gratuita), escolhidas para cada mensagem da Hero.
-const heroPerson = "https://images.pexels.com/photos/12903176/pexels-photo-12903176.jpeg?auto=compress&cs=tinysrgb&w=1920";
-const heroPerson2 = "https://images.pexels.com/photos/21405528/pexels-photo-21405528.jpeg?auto=compress&cs=tinysrgb&w=1920";
-const truckHero = "https://images.pexels.com/photos/15595843/pexels-photo-15595843.jpeg?auto=compress&cs=tinysrgb&w=1920";
-const heroServicos = "https://images.pexels.com/photos/10318045/pexels-photo-10318045.jpeg?auto=compress&cs=tinysrgb&w=1920";
-const heroMaquininha = "https://images.pexels.com/photos/8834118/pexels-photo-8834118.jpeg?auto=compress&cs=tinysrgb&w=1920";
-const heroProduto = "https://images.pexels.com/photos/4487383/pexels-photo-4487383.jpeg?auto=compress&cs=tinysrgb&w=1920";
+const heroPerson = "https://images.pexels.com/photos/12903176/pexels-photo-12903176.jpeg?auto=compress&cs=tinysrgb&w=1280&q=70";
+const heroPerson2 = "https://images.pexels.com/photos/21405528/pexels-photo-21405528.jpeg?auto=compress&cs=tinysrgb&w=1280&q=70";
+const truckHero = "https://images.pexels.com/photos/15595843/pexels-photo-15595843.jpeg?auto=compress&cs=tinysrgb&w=1280&q=70";
+const heroServicos = "https://images.pexels.com/photos/10318045/pexels-photo-10318045.jpeg?auto=compress&cs=tinysrgb&w=1280&q=70";
+const heroMaquininha = "https://images.pexels.com/photos/8834118/pexels-photo-8834118.jpeg?auto=compress&cs=tinysrgb&w=1280&q=70";
+const heroProduto = "https://images.pexels.com/photos/4487383/pexels-photo-4487383.jpeg?auto=compress&cs=tinysrgb&w=1280&q=70";
 
 
 
@@ -451,6 +451,7 @@ function Index() {
         )}
       </header>
 
+      <main id="main-content">
       {/* HERO SLIDER */}
       <HeroSlider />
 
@@ -1166,6 +1167,8 @@ function Index() {
         </div>
       </section>
 
+      </main>
+
       {/* FOOTER */}
       <footer className="relative mt-16 border-t border-white/10 bg-[oklch(0.14_0.05_285)]">
         <div
@@ -1178,7 +1181,7 @@ function Index() {
             <div className="flex items-center gap-3">
               <img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={160} height={48} loading="lazy" decoding="async" className="w-36 sm:w-40 h-12 object-contain" />
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-white/65 max-w-lg">
+            <p className="mt-4 text-sm leading-relaxed text-white/85 max-w-lg">
               Emissão fiscal online com documentos fiscais, PDV e Certificado Digital A1 em uma única plataforma.
             </p>
             <a
@@ -1192,8 +1195,8 @@ function Index() {
           </div>
 
           <div className="md:col-span-3">
-            <div className="text-xs uppercase tracking-widest text-white/45 font-semibold">Navegação</div>
-            <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+            <div className="text-xs uppercase tracking-widest text-white/80 font-semibold">Navegação</div>
+            <ul className="mt-4 space-y-2.5 text-sm text-white/85">
               <li><a href="#produto" className="hover:text-white transition">O produto</a></li>
               <li><a href="#documentos" className="hover:text-white transition">Documentos fiscais</a></li>
               <li><a href="#planos" className="hover:text-white transition">Planos</a></li>
@@ -1213,7 +1216,7 @@ function Index() {
         </div>
 
         <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/50">
+          <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/75">
             <div>© {new Date().getFullYear()} EmitaGo. Todos os direitos reservados.</div>
             <div>Emissor fiscal online para empresas brasileiras.</div>
           </div>
@@ -1279,8 +1282,8 @@ function HeroSlider() {
                 onClick={() => setI(idx)}
                 aria-label={`Ir para slide ${idx + 1}`}
                 aria-current={idx === i ? "true" : undefined}
-                className={`w-2 rounded-full transition-all ${
-                  idx === i ? "h-10 bg-primary-glow" : "h-2.5 bg-white/40 hover:bg-white/60"
+                className={`w-6 rounded-full transition-all ${
+                  idx === i ? "h-10 bg-primary-glow" : "h-6 bg-white/40 hover:bg-white/60"
                 }`}
               />
             ))}
