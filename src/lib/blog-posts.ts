@@ -26,6 +26,712 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  // ============ Série Reforma Tributária 2027 (+6) ============
+  {
+    "slug": "ibs-cbs-2027-lucro-real-presumido",
+    "category": "Notas Fiscais",
+    "title": "IBS e CBS 2027: mudanças no Lucro Real e Presumido",
+    "excerpt": "Entenda o início da CBS, a transição do IBS, o fim de PIS e Cofins e os cuidados que empresas do Lucro Real e Presumido devem tomar na preparação fiscal para 2027.",
+    "date": "14 Nov 2026",
+    "updatedAt": "14 Nov 2026",
+    "readMin": 9,
+    "image": "/images/blog/ibs-cbs-lucro-real-presumido.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A Reforma Tributária sobre o consumo entra em uma nova etapa em 1º de janeiro de 2027. Para empresas tributadas pelo Lucro Real ou pelo Lucro Presumido, a mudança exige atenção especial porque a transição altera tributos, documentos fiscais, cadastros e rotinas de conferência. O ponto de partida é separar o que muda em 2027 daquilo que continuará em transição nos anos seguintes."
+      },
+      {
+        "type": "heading",
+        "text": "O que são IBS e CBS?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A Contribuição sobre Bens e Serviços (CBS) é o tributo federal que integra o novo modelo de tributação do consumo. O Imposto sobre Bens e Serviços (IBS) é compartilhado por estados e municípios. Os dois foram criados para substituir gradualmente tributos atuais sobre bens e serviços, mas não entram em vigor integralmente de uma só vez."
+      },
+      {
+        "type": "heading",
+        "text": "O que começa em 2027?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Começa a cobrança da CBS, conforme as regras e alíquotas previstas para a etapa de transição.",
+          "O PIS e a Cofins são extintos a partir de 2027, conforme o cronograma legal.",
+          "O IBS inicia a etapa de transição com alíquota de 0,1% em 2027 e 2028, conforme a regulamentação.",
+          "ICMS e ISS continuam durante a transição, com redução gradual prevista entre 2029 e 2032; o novo modelo passa a vigorar integralmente em 2033.",
+          "O Imposto Seletivo também passa a integrar o sistema nos termos da legislação aplicável."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "A Receita Federal apresenta 2027 e 2028 como o início da cobrança da CBS e da etapa inicial do IBS. Isso não significa que ICMS e ISS desapareçam em janeiro de 2027: a substituição desses tributos ocorre gradualmente nos anos seguintes."
+      },
+      {
+        "type": "heading",
+        "text": "Lucro Real e Lucro Presumido terão o mesmo tratamento?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Lucro Real e Lucro Presumido são regimes de apuração do IRPJ e da CSLL. Eles não devem ser confundidos com as regras específicas de IBS e CBS. Para analisar a reforma, a empresa precisa considerar o enquadramento no regime regular dos novos tributos, a natureza da operação, os créditos admitidos em lei e as regras aplicáveis a cada fornecimento. Não é correto presumir que toda compra gere crédito automaticamente ou que o impacto seja idêntico para empresas de atividades diferentes."
+      },
+      {
+        "type": "heading",
+        "text": "O que sua empresa deve revisar antes de 2027"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Mapeie as operações de venda, prestação de serviços, devolução, bonificação e transferência.",
+          "Revise cadastro de produtos e serviços, NCM, NBS quando aplicável e informações fiscais associadas.",
+          "Identifique quem é responsável por validar CST e classificação tributária (cClassTrib) em cada operação.",
+          "Converse com a contabilidade sobre a formação de preços, contratos, créditos e impactos no fluxo de caixa.",
+          "Confirme com o fornecedor do emissor quais leiautes e regras já estão disponíveis para os documentos que sua empresa utiliza.",
+          "Planeje testes e procedimentos para tratar rejeições, correções e armazenamento dos XMLs."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Atenção aos documentos fiscais eletrônicos"
+      },
+      {
+        "type": "paragraph",
+        "text": "A adequação não acontece apenas na apuração dos tributos. NF-e, NFC-e, CT-e, NFS-e e outros documentos recebem alterações técnicas em etapas distintas. O cronograma oficial separa a data de publicação de leiaute da data de início da obrigatoriedade. Por isso, a empresa deve acompanhar o documento fiscal que realmente utiliza e não aplicar uma única data a todos os modelos."
+      },
+      {
+        "type": "heading",
+        "text": "Como escolher um emissor preparado para a transição"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ao avaliar um sistema emissor, pergunte quais versões técnicas atende, como trata os campos de IBS e CBS, como atualiza classificações e como permite acompanhar o retorno dos ambientes autorizadores. Não basta uma promessa genérica de que o sistema está atualizado: peça confirmação para o tipo de documento, regime e operação da sua empresa."
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo reúne emissão online de documentos fiscais em uma plataforma, com proposta pré-paga de R$ 60 por CNPJ ativo no mês de uso e emissões ilimitadas durante o período contratado. Antes de contratar, confirme com a equipe a cobertura técnica disponível para seu enquadramento e suas operações."
+      },
+      {
+        "type": "heading",
+        "text": "Perguntas frequentes"
+      },
+      {
+        "type": "heading",
+        "text": "O ICMS e o ISS acabam em 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. A transição desses tributos para o IBS ocorre gradualmente entre 2029 e 2032. A extinção integral do ICMS e do ISS está prevista para 2033."
+      },
+      {
+        "type": "heading",
+        "text": "Toda empresa do Lucro Presumido ou Real terá o mesmo aumento de imposto?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não é possível afirmar isso de forma geral. O resultado depende da atividade, das operações, dos créditos permitidos, da estrutura de custos e das regras aplicáveis. Faça simulações com a contabilidade."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Entenda a Reforma Tributária do Consumo e o cronograma de transição",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos, atualizado em 28/10/2026",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
+      },
+      {
+        "type": "source",
+        "label": "Planalto — Lei Complementar nº 214/2025",
+        "href": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
+      }
+    ]
+  },
+  {
+    "slug": "nfe-ibs-cbs-novos-campos-2027",
+    "category": "Notas Fiscais",
+    "title": "NF-e com IBS e CBS: campos e emissão em 2027",
+    "excerpt": "Veja o que revisar no leiaute da NF-e, na classificação tributária e nos dados da operação para evitar erros na emissão durante a transição da Reforma Tributária.",
+    "date": "14 Nov 2026",
+    "updatedAt": "14 Nov 2026",
+    "readMin": 8,
+    "image": "/images/blog/nfe-ibs-cbs-campos.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A Nota Fiscal Eletrônica (NF-e, modelo 55) passa a conviver com novas informações relacionadas ao IBS e à CBS durante a implantação da Reforma Tributária. Para quem emite notas de produtos, a preparação não consiste em preencher campos de forma automática ou copiar a configuração de outra empresa: é necessário entender a operação e utilizar o leiaute técnico correspondente."
+      },
+      {
+        "type": "heading",
+        "text": "Quais informações entram na NF-e?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Os leiautes da família de documentos fiscais eletrônicos passaram a prever grupos específicos para os novos tributos. Entre os dados que podem ser exigidos conforme a operação estão a situação tributária (CST), a classificação tributária (cClassTrib), a base de cálculo, alíquotas e valores de IBS e CBS. A presença e o preenchimento de cada campo dependem do tipo de operação e das regras técnicas aplicáveis."
+      },
+      {
+        "type": "heading",
+        "text": "CST e cClassTrib: por que merecem atenção"
+      },
+      {
+        "type": "paragraph",
+        "text": "O CST indica o tratamento tributário aplicável dentro da estrutura prevista para o documento. A classificação tributária detalha o enquadramento da operação nas regras de IBS e CBS. Um código escolhido incorretamente pode produzir informação fiscal incompatível com a operação. Por isso, não selecione códigos apenas pelo nome do produto ou por uma tabela genérica encontrada na internet: valide a classificação com o profissional contábil ou fiscal responsável."
+      },
+      {
+        "type": "heading",
+        "text": "Checklist antes de transmitir a NF-e"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Confirme se a operação é venda, devolução, transferência, bonificação ou outra hipótese.",
+          "Revise NCM, descrição, unidade, origem e demais dados do produto.",
+          "Confira o cadastro do emitente e do destinatário, inclusive indicadores fiscais relevantes.",
+          "Valide CST e cClassTrib conforme a operação e a legislação.",
+          "Confira base de cálculo, alíquotas e valores apresentados pelo sistema.",
+          "Verifique a versão do leiaute e as regras de validação publicadas para o período.",
+          "Após transmitir, confira o protocolo e o status de autorização da SEFAZ."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O cronograma muda conforme o documento e o contribuinte"
+      },
+      {
+        "type": "paragraph",
+        "text": "A Receita Federal e o Comitê Gestor do IBS publicaram um cronograma que diferencia documentos, operações, publicação de leiautes e início de obrigatoriedade. Para documentos fiscais de contribuintes do Simples Nacional, o cronograma aponta 1º de janeiro de 2027 como marco de início da obrigatoriedade das informações previstas para esses contribuintes. Outros documentos e perfis têm etapas anteriores. Sempre confira a linha específica aplicável à sua operação."
+      },
+      {
+        "type": "heading",
+        "text": "O que fazer quando o sistema apresenta rejeição?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Leia o código e a mensagem retornados pela SEFAZ, identifique o campo indicado e compare os dados com a documentação técnica vigente. Não altere códigos fiscais aleatoriamente para tentar autorizar o documento. Se a divergência envolver classificação ou tratamento tributário, solicite validação à contabilidade antes de retransmitir."
+      },
+      {
+        "type": "heading",
+        "text": "Como avaliar seu emissor de NF-e"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pergunte ao fornecedor se a versão utilizada contempla o leiaute correspondente, como são atualizadas as regras e classificações e se a equipe consegue testar os cenários da sua empresa. Verifique também se o sistema permite consultar o XML autorizado e manter os documentos organizados para o contador."
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo oferece emissão online de NF-e e outros documentos fiscais. A plataforma tem proposta de R$ 60 por CNPJ ativo no mês de uso, pré-paga, com emissões ilimitadas durante o período contratado. Consulte a equipe para confirmar os recursos e a cobertura técnica disponíveis para os campos e operações da sua empresa."
+      },
+      {
+        "type": "heading",
+        "text": "Perguntas frequentes"
+      },
+      {
+        "type": "heading",
+        "text": "Posso usar o mesmo CST e cClassTrib para todos os produtos?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. A classificação depende da operação, do produto ou serviço e das regras aplicáveis. O cadastro deve ser validado individualmente conforme a orientação fiscal."
+      },
+      {
+        "type": "heading",
+        "text": "O sistema deve preencher tudo automaticamente?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Um emissor pode automatizar regras configuradas, mas a qualidade depende dos cadastros e parâmetros corretos. A empresa continua responsável por fornecer informações consistentes e validar o enquadramento com a contabilidade."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
+      },
+      {
+        "type": "source",
+        "label": "Portal Nacional da NF-e — documentação técnica e manuais",
+        "href": "https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=ndIjl+iEFdE="
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Entenda a Reforma Tributária do Consumo",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"
+      }
+    ]
+  },
+  {
+    "slug": "checklist-reforma-tributaria-empresa-2027",
+    "category": "Notas Fiscais",
+    "title": "Reforma Tributária 2027: checklist para empresas",
+    "excerpt": "Um roteiro prático para revisar cadastros, operações, classificação tributária, documentos eletrônicos e sistema emissor antes da próxima etapa da reforma.",
+    "date": "14 Nov 2026",
+    "updatedAt": "14 Nov 2026",
+    "readMin": 8,
+    "image": "/images/blog/checklist-reforma-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A chegada de 2027 representa uma nova fase da Reforma Tributária do Consumo. Para evitar correria na virada do ano, empresas precisam organizar cadastros, revisar processos e confirmar se seus sistemas estão acompanhando os leiautes dos documentos fiscais. Este checklist foi pensado para gestores, equipes administrativas e profissionais que acompanham a emissão fiscal."
+      },
+      {
+        "type": "heading",
+        "text": "1. Identifique o regime e as operações da empresa"
+      },
+      {
+        "type": "paragraph",
+        "text": "Comece confirmando o enquadramento tributário e mapeando o que a empresa faz: vende mercadorias, presta serviços, realiza operações interestaduais, devoluções, transferências, importações ou outras atividades. A mesma empresa pode ter diferentes tratamentos conforme a natureza de cada operação."
+      },
+      {
+        "type": "heading",
+        "text": "2. Revise os cadastros fiscais"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Confira NCM e descrição dos produtos, unidade comercial e tributável e origem.",
+          "Revise cadastros de serviços e códigos aplicáveis, incluindo NBS quando pertinente.",
+          "Identifique operações que exigem tratamento específico ou classificação diferenciada.",
+          "Elimine cadastros duplicados e corrija informações incompletas.",
+          "Documente quem aprova alterações nos parâmetros fiscais."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "3. Valide a classificação tributária"
+      },
+      {
+        "type": "paragraph",
+        "text": "Os novos grupos de IBS e CBS exigem atenção a CST e cClassTrib, entre outras informações previstas no leiaute. A classificação não deve ser decidida apenas pela equipe de vendas ou copiada de outra empresa. Monte uma lista de operações recorrentes e valide o enquadramento com a contabilidade."
+      },
+      {
+        "type": "heading",
+        "text": "4. Confira cada documento fiscal utilizado"
+      },
+      {
+        "type": "list",
+        "items": [
+          "NF-e para operações com mercadorias.",
+          "NFC-e para vendas ao consumidor final no varejo.",
+          "NFS-e para prestação de serviços, observando o padrão nacional e as regras do enquadramento.",
+          "CT-e e CT-e OS para prestações de transporte abrangidas.",
+          "MDF-e e outros documentos conforme a atividade da empresa."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O cronograma oficial não utiliza uma única data para todos os documentos. Ele diferencia o início da obrigatoriedade por documento, operação e perfil do contribuinte. A empresa deve consultar o calendário atualizado e acompanhar as notas técnicas de cada modelo."
+      },
+      {
+        "type": "heading",
+        "text": "5. Teste o emissor antes de depender dele na rotina"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Confirme com o fornecedor quais versões de leiaute estão disponíveis.",
+          "Teste operações comuns e situações menos frequentes, como devoluções e ajustes.",
+          "Verifique como o sistema apresenta erros e mensagens de validação.",
+          "Confira se é possível consultar e baixar XMLs e protocolos.",
+          "Defina um procedimento interno para abertura de chamados e atualização do sistema."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "6. Prepare pessoas e processos"
+      },
+      {
+        "type": "paragraph",
+        "text": "Treine quem cadastra produtos, lança pedidos, emite documentos e confere o retorno da autorização. Combine com a contabilidade como serão tratados cadastros novos, exceções e dúvidas de classificação. Uma pequena rotina de conferência diária pode evitar retrabalho e documentos emitidos com dados inconsistentes."
+      },
+      {
+        "type": "heading",
+        "text": "Como escolher um sistema emissor"
+      },
+      {
+        "type": "paragraph",
+        "text": "Compare a cobertura de documentos, os ambientes atendidos, a frequência de atualização, o suporte e a clareza do fluxo de emissão. Solicite confirmação por escrito de quais leiautes e operações estão contemplados. O EmitaGo centraliza a emissão online de diferentes documentos fiscais e trabalha com preço pré-pago de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas no período contratado. Confirme com a equipe se a cobertura atual atende às operações específicas do seu negócio."
+      },
+      {
+        "type": "heading",
+        "text": "Checklist resumido para salvar"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Regime e operações mapeados.",
+          "Cadastros de produtos e serviços revisados.",
+          "CST e cClassTrib validados pela área fiscal.",
+          "Leiautes e datas conferidos nos portais oficiais.",
+          "Testes realizados no emissor.",
+          "Equipe treinada e rotina de conferência definida.",
+          "XMLs e protocolos organizados."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Entenda a Reforma Tributária do Consumo",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"
+      },
+      {
+        "type": "source",
+        "label": "Portal Nacional da NF-e — documentação técnica",
+        "href": "https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=ndIjl+iEFdE="
+      }
+    ]
+  },
+  {
+    "slug": "ibs-cbs-simples-nacional-2027",
+    "category": "Notas Fiscais",
+    "title": "IBS e CBS no Simples Nacional em 2027",
+    "excerpt": "Entenda como IBS e CBS entram no Simples Nacional, o recolhimento pelo DAS, a alternativa do regime regular e os cuidados para micro e pequenas empresas.",
+    "date": "14 Nov 2026",
+    "updatedAt": "14 Nov 2026",
+    "readMin": 9,
+    "image": "/images/blog/simples-nacional-ibs-cbs.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Microempresas (ME) e empresas de pequeno porte (EPP) optantes pelo Simples Nacional também precisam acompanhar a Reforma Tributária do Consumo. A partir de 2027, IBS e CBS passam a fazer parte das regras do regime, mas isso não significa que toda empresa do Simples será automaticamente obrigada a apurar esses tributos fora do DAS."
+      },
+      {
+        "type": "heading",
+        "text": "IBS e CBS ficam dentro do Simples Nacional?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A regra padrão é a permanência de IBS e CBS dentro do recolhimento unificado do Simples Nacional. Assim, a empresa que permanece no modelo padrão recolhe os tributos abrangidos pelo regime por meio do DAS, observadas as regras e os procedimentos atualizados. A regulamentação do Comitê Gestor do Simples Nacional incorporou expressamente os novos tributos ao regime."
+      },
+      {
+        "type": "heading",
+        "text": "O que é o chamado Simples híbrido?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A legislação permite que a empresa continue no Simples Nacional para os demais tributos e opte por apurar IBS e CBS pelo regime regular, fora do DAS. Essa alternativa costuma ser chamada de modelo híbrido. A decisão pode afetar o aproveitamento de créditos na cadeia comercial e a relação com clientes que também são empresas, mas não existe uma resposta universal: a conveniência depende das operações, dos clientes, dos custos e da análise contábil."
+      },
+      {
+        "type": "heading",
+        "text": "O prazo para o primeiro semestre de 2027 já passou"
+      },
+      {
+        "type": "paragraph",
+        "text": "Para produzir efeitos de janeiro a junho de 2027, a opção pelo regime regular de IBS e CBS teve período próprio em 2026, encerrado em 30 de outubro. A Receita também estabeleceu período para cancelamento de opções entre 3 de novembro e 20 de dezembro de 2026. Para o segundo semestre de 2027, a regulamentação prevê nova janela de opção em março de 2027, com efeitos de julho a dezembro. Confirme os prazos e as condições no Portal do Simples Nacional antes de tomar qualquer decisão."
+      },
+      {
+        "type": "heading",
+        "text": "O que muda na rotina das ME e EPP"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Revise o enquadramento da empresa e confirme se existe opção específica registrada para IBS e CBS.",
+          "Converse com a contabilidade sobre o efeito do regime padrão ou regular nos preços e nas relações B2B.",
+          "Mantenha os cadastros de produtos e serviços atualizados.",
+          "Confirme se o emissor está preparado para as informações exigidas no documento fiscal do seu perfil.",
+          "Acompanhe as mudanças do PGDAS-D e os comunicados oficiais.",
+          "Não altere o regime ou os parâmetros fiscais sem avaliar o impacto completo."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "A emissão de notas fiscais também exige atenção"
+      },
+      {
+        "type": "paragraph",
+        "text": "A adaptação do Simples não acontece apenas na guia DAS. O cronograma oficial prevê a etapa de documentos fiscais para contribuintes do Simples Nacional a partir de 1º de janeiro de 2027, abrangendo NF-e, NFC-e, CT-e, NFS-e e outros documentos. Isso torna importante conferir a atualização do emissor e os dados que precisam constar em cada documento."
+      },
+      {
+        "type": "heading",
+        "text": "Como o EmitaGo pode ajudar na rotina fiscal"
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo reúne emissão online de documentos fiscais para empresas e oferece uma proposta pré-paga de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas durante o período contratado. Antes de contratar, confirme com a equipe a compatibilidade do fluxo disponível com o regime tributário, o documento e a operação da sua empresa."
+      },
+      {
+        "type": "heading",
+        "text": "Perguntas frequentes"
+      },
+      {
+        "type": "heading",
+        "text": "Toda empresa do Simples precisa escolher o regime regular?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. A regra padrão é recolher IBS e CBS dentro do Simples. A opção pelo regime regular é uma alternativa que deve ser avaliada e formalizada nos períodos previstos."
+      },
+      {
+        "type": "heading",
+        "text": "O Simples Nacional deixa de existir em 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. O regime continua existindo, com adaptações para incorporar IBS e CBS e atualizar procedimentos de apuração."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — CGSN atualiza regras do Simples Nacional para a Reforma Tributária",
+        "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/cgsn-atualiza-regras-do-simples-nacional-para-adequacao-a-reforma-tributaria-do-consumo"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Simples Nacional 2027: novos prazos e escolhas",
+        "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/setembro/simples-nacional-2027-entenda-os-novos-prazos-e-faca-sua-escolha-com-consciencia-e-tranquilidade/"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
+      }
+    ]
+  },
+  {
+    "slug": "pgdas-d-2027-reforma-tributaria-fs12-competencia",
+    "category": "Notas Fiscais",
+    "title": "PGDAS-D 2027: novas regras para o Simples Nacional",
+    "excerpt": "Veja as mudanças do PGDAS-D que já afetam as apurações de novembro e dezembro de 2026 e prepare sua empresa do Simples Nacional para 2027.",
+    "date": "14 Nov 2026",
+    "updatedAt": "14 Nov 2026",
+    "readMin": 8,
+    "image": "/images/blog/pgdasd-fs12-competencia.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "O PGDAS-D foi atualizado para incorporar mudanças relacionadas à Reforma Tributária do Consumo. O Ministério da Fazenda divulgou as alterações em 13 de novembro de 2026, com efeitos que começam antes da virada do ano: os períodos de apuração de novembro e dezembro de 2026 já exigem atenção às novas informações."
+      },
+      {
+        "type": "heading",
+        "text": "Quais mudanças foram anunciadas?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Deixa de ser necessário escolher entre regime de caixa e regime de competência nas apurações a partir dos períodos indicados pela atualização.",
+          "A partir de 2027, as apurações do Simples Nacional passam a seguir o regime de competência.",
+          "Passa a ser necessário informar a folha de salários dos últimos 12 meses (FS12) para todas as atividades do Simples Nacional.",
+          "As informações declaradas no PGDAS-D serão utilizadas para determinar alíquotas efetivas de IBS e CBS que deverão constar nos documentos fiscais eletrônicos."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Atenção aos períodos de apuração 11/2026 e 12/2026"
+      },
+      {
+        "type": "paragraph",
+        "text": "Segundo o comunicado oficial, as alterações de regime de apuração e informação da folha dos últimos 12 meses já alcançam os períodos de apuração 11/2026 e 12/2026. Portanto, a empresa não deve esperar janeiro de 2027 para organizar os dados. Verifique com a contabilidade como preencher corretamente as informações no sistema."
+      },
+      {
+        "type": "heading",
+        "text": "O que é FS12?"
+      },
+      {
+        "type": "paragraph",
+        "text": "FS12 é a informação da folha de salários dos 12 meses anteriores utilizada nas regras do Simples Nacional. A empresa deve reunir os dados necessários e conferir se os valores estão completos e coerentes com seus registros de folha. Se houver dúvidas sobre quais verbas entram no cálculo, valide o critério com a contabilidade e com a orientação oficial do PGDAS-D."
+      },
+      {
+        "type": "heading",
+        "text": "Por que o regime de competência merece atenção?"
+      },
+      {
+        "type": "paragraph",
+        "text": "O regime de competência considera o período em que a receita é auferida, de acordo com as regras aplicáveis, e não simplesmente o momento em que o dinheiro entra no caixa. A mudança exige alinhamento entre faturamento, documentos fiscais, controles financeiros e informações transmitidas ao PGDAS-D. Diferenças entre a emissão de notas, os registros internos e a apuração podem gerar retrabalho e inconsistências."
+      },
+      {
+        "type": "heading",
+        "text": "Checklist para empresas do Simples"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Confirme com a contabilidade a aplicação das novas regras nos períodos 11/2026 e 12/2026.",
+          "Organize os dados da folha de salários dos 12 meses anteriores.",
+          "Revise a integração entre faturamento, documentos fiscais e controles financeiros.",
+          "Confira se as receitas estão sendo reconhecidas no período correto.",
+          "Guarde relatórios e documentos que sustentem as informações declaradas.",
+          "Acompanhe as atualizações do PGDAS-D e os comunicados do Comitê Gestor do Simples Nacional."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "A relação com a emissão de notas fiscais"
+      },
+      {
+        "type": "paragraph",
+        "text": "A Receita informa que os dados do PGDAS-D serão utilizados para determinar alíquotas efetivas de IBS e CBS que deverão constar nos documentos fiscais eletrônicos. Isso reforça a importância de manter consistentes as informações de faturamento, cadastro e emissão. O emissor fiscal não substitui a apuração tributária, mas precisa acompanhar os leiautes e receber os parâmetros corretos definidos pela empresa e pela contabilidade."
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo centraliza a emissão online de documentos fiscais e oferece preço pré-pago de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas no período contratado. Conheça a plataforma e confirme com a equipe a cobertura adequada para seus documentos e operações."
+      },
+      {
+        "type": "heading",
+        "text": "Perguntas frequentes"
+      },
+      {
+        "type": "heading",
+        "text": "A mudança vale somente a partir de janeiro de 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. O comunicado oficial informa que as mudanças já se aplicam aos períodos de apuração 11/2026 e 12/2026, com apurações de 2027 pelo regime de competência."
+      },
+      {
+        "type": "heading",
+        "text": "Toda empresa do Simples precisa informar a FS12?"
+      },
+      {
+        "type": "paragraph",
+        "text": "O comunicado do Ministério da Fazenda informa a necessidade de declarar a folha dos últimos 12 meses para todas as atividades do Simples Nacional. Em caso de dúvidas sobre a composição dos valores, consulte a contabilidade."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Ministério da Fazenda — PGDAS-D atualizado para atender à Reforma Tributária, publicado em 13/11/2026",
+        "href": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/novembro/programa-gerador-do-documento-de-arrecadacao-do-simples-nacional-pgdas-d-e-atualizado-para-atender-a-reforma-tributaria-a-partir-de-novembro-de-2026"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — CGSN atualiza regras do Simples Nacional",
+        "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/cgsn-atualiza-regras-do-simples-nacional-para-adequacao-a-reforma-tributaria-do-consumo"
+      }
+    ]
+  },
+  {
+    "slug": "nfse-nacional-ibs-cbs-simples-2027",
+    "category": "Notas Fiscais",
+    "title": "NFS-e Nacional 2027: IBS e CBS no Simples Nacional",
+    "excerpt": "Entenda o padrão nacional da nota de serviço, as regras para ME e EPP do Simples e os cuidados para emitir NFS-e durante a transição tributária.",
+    "date": "14 Nov 2026",
+    "updatedAt": "14 Nov 2026",
+    "readMin": 8,
+    "image": "/images/blog/nfse-nacional-simples.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Prestadores de serviços optantes pelo Simples Nacional precisam acompanhar duas frentes da mudança: a adoção do padrão nacional da Nota Fiscal de Serviço eletrônica (NFS-e) e a inclusão das informações relacionadas à Reforma Tributária nos documentos fiscais. As datas e exigências não devem ser confundidas, porque cada etapa possui seu próprio cronograma."
+      },
+      {
+        "type": "heading",
+        "text": "Quem já deve utilizar a NFS-e de padrão nacional?"
+      },
+      {
+        "type": "paragraph",
+        "text": "O MEI prestador de serviços utiliza o padrão nacional desde setembro de 2023. Para microempresas (ME) e empresas de pequeno porte (EPP) optantes pelo Simples Nacional, a obrigatoriedade do padrão nacional passou a valer em 1º de novembro de 2026 nas prestações sujeitas à emissão de nota, conforme as orientações oficiais. Empresas de outros regimes devem verificar o enquadramento, o convênio e as regras municipais aplicáveis."
+      },
+      {
+        "type": "heading",
+        "text": "O que muda com IBS e CBS em 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "O cronograma da Reforma Tributária prevê a etapa dos documentos fiscais dos contribuintes do Simples Nacional a partir de 1º de janeiro de 2027, incluindo NF-e, NFC-e, CT-e, NFS-e e outros modelos. Isso não significa que todos os campos e regras sejam idênticos para qualquer serviço: o preenchimento depende do tipo de fornecimento, da classificação tributária e das notas técnicas vigentes."
+      },
+      {
+        "type": "heading",
+        "text": "Como funciona a emissão pelo padrão nacional"
+      },
+      {
+        "type": "paragraph",
+        "text": "O ambiente nacional disponibiliza emissão pela aplicação Web e integração por API. Sistemas emissores privados precisam confirmar os requisitos técnicos, a integração e a cobertura para o perfil do contribuinte. Antes de transmitir, revise prestador, tomador, município, serviço, competência, valores e informações tributárias exigidas para a operação."
+      },
+      {
+        "type": "heading",
+        "text": "Checklist para prestadores de serviços"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Confirme o porte e o enquadramento da empresa no Simples Nacional.",
+          "Verifique se a emissão está sendo feita no padrão nacional exigido para ME ou EPP.",
+          "Revise o cadastro de serviços e os códigos utilizados na operação.",
+          "Confira município, tomador, competência, valores e eventuais retenções.",
+          "Acompanhe a documentação técnica da NFS-e e o cronograma de IBS e CBS.",
+          "Teste o fluxo de emissão e confira o retorno de autorização e o documento gerado."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Como escolher um emissor de NFS-e"
+      },
+      {
+        "type": "paragraph",
+        "text": "A cobertura municipal, o padrão de integração e o tratamento dos dados fiscais são pontos importantes. Pergunte se o sistema atende ao padrão exigido para sua empresa, como acompanha atualizações técnicas e quais municípios e operações estão contemplados. Não presuma que a cobertura de um município significa cobertura de todos os serviços ou de todos os perfis de contribuinte."
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo divulga integrações de NFS-e com mais de 1.600 municípios e oferece emissão online de documentos fiscais. O preço anunciado é de R$ 60 por CNPJ ativo no mês de uso, pré-pago e com emissões ilimitadas no período contratado. Consulte a equipe para confirmar a cobertura do seu município, atividade e enquadramento, especialmente quanto ao padrão nacional e às novas informações de IBS e CBS."
+      },
+      {
+        "type": "heading",
+        "text": "Perguntas frequentes"
+      },
+      {
+        "type": "heading",
+        "text": "A regra nacional de NFS-e para ME e EPP começou em janeiro de 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. Para ME e EPP optantes pelo Simples Nacional, a obrigatoriedade do padrão nacional começou em 1º de novembro de 2026 nas prestações sujeitas à emissão. O marco de 1º de janeiro de 2027 do cronograma trata da etapa dos documentos fiscais dos contribuintes do Simples relacionada à Reforma Tributária."
+      },
+      {
+        "type": "heading",
+        "text": "Toda empresa do Simples emite NFS-e?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A NFS-e é utilizada para documentar prestações de serviços sujeitas à emissão. Empresas que comercializam mercadorias podem utilizar NF-e ou NFC-e conforme a operação. O documento correto depende da atividade e da natureza do fornecimento."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Portal Nacional da NFS-e — diretrizes para optantes do Simples Nacional",
+        "href": "https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-diretrizes-sobre-a-obrigatoriedade-da-emissao-da-nfs-e-nacional-para-optantes-do-simples-nacional/"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
+      },
+      {
+        "type": "source",
+        "label": "Portal Nacional da NFS-e — documentação técnica atual",
+        "href": "https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual"
+      }
+    ]
+  }
+
   {
     slug: "nfe-passo-a-passo",
     category: "Notas Fiscais",
@@ -910,711 +1616,7 @@ export const blogPosts: BlogPost[] = [
       { type: "paragraph", text: "Use materiais oficiais para confirmar prazos e obrigações, porque regras e validações técnicas podem mudar durante a implantação. A Receita Federal publicou atualizações do Simples Nacional em 2026 para adequação à Reforma Tributária. Este guia é educativo e não substitui análise fiscal individual." }
     ],
   },
-  // ============ Série Reforma Tributária 2027 (+6) ============
-  {
-    "slug": "ibs-cbs-2027-lucro-real-presumido",
-    "category": "Notas Fiscais",
-    "title": "IBS e CBS em 2027: o que muda para empresas do Lucro Real e Presumido",
-    "excerpt": "Entenda o início da CBS, a transição do IBS, o fim de PIS e Cofins e os cuidados que empresas do Lucro Real e Presumido devem tomar na preparação fiscal para 2027.",
-    "date": "14 Nov 2026",
-    "updatedAt": "14 Nov 2026",
-    "readMin": 9,
-    "image": "/images/blog/ibs-cbs-lucro-real-presumido.svg",
-    "author": "Equipe EmitaGo",
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "A Reforma Tributária sobre o consumo entra em uma nova etapa em 1º de janeiro de 2027. Para empresas tributadas pelo Lucro Real ou pelo Lucro Presumido, a mudança exige atenção especial porque a transição altera tributos, documentos fiscais, cadastros e rotinas de conferência. O ponto de partida é separar o que muda em 2027 daquilo que continuará em transição nos anos seguintes."
-      },
-      {
-        "type": "heading",
-        "text": "O que são IBS e CBS?"
-      },
-      {
-        "type": "paragraph",
-        "text": "A Contribuição sobre Bens e Serviços (CBS) é o tributo federal que integra o novo modelo de tributação do consumo. O Imposto sobre Bens e Serviços (IBS) é compartilhado por estados e municípios. Os dois foram criados para substituir gradualmente tributos atuais sobre bens e serviços, mas não entram em vigor integralmente de uma só vez."
-      },
-      {
-        "type": "heading",
-        "text": "O que começa em 2027?"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Começa a cobrança da CBS, conforme as regras e alíquotas previstas para a etapa de transição.",
-          "O PIS e a Cofins são extintos a partir de 2027, conforme o cronograma legal.",
-          "O IBS inicia a etapa de transição com alíquota de 0,1% em 2027 e 2028, conforme a regulamentação.",
-          "ICMS e ISS continuam durante a transição, com redução gradual prevista entre 2029 e 2032; o novo modelo passa a vigorar integralmente em 2033.",
-          "O Imposto Seletivo também passa a integrar o sistema nos termos da legislação aplicável."
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "A Receita Federal apresenta 2027 e 2028 como o início da cobrança da CBS e da etapa inicial do IBS. Isso não significa que ICMS e ISS desapareçam em janeiro de 2027: a substituição desses tributos ocorre gradualmente nos anos seguintes."
-      },
-      {
-        "type": "heading",
-        "text": "Lucro Real e Lucro Presumido terão o mesmo tratamento?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Lucro Real e Lucro Presumido são regimes de apuração do IRPJ e da CSLL. Eles não devem ser confundidos com as regras específicas de IBS e CBS. Para analisar a reforma, a empresa precisa considerar o enquadramento no regime regular dos novos tributos, a natureza da operação, os créditos admitidos em lei e as regras aplicáveis a cada fornecimento. Não é correto presumir que toda compra gere crédito automaticamente ou que o impacto seja idêntico para empresas de atividades diferentes."
-      },
-      {
-        "type": "heading",
-        "text": "O que sua empresa deve revisar antes de 2027"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Mapeie as operações de venda, prestação de serviços, devolução, bonificação e transferência.",
-          "Revise cadastro de produtos e serviços, NCM, NBS quando aplicável e informações fiscais associadas.",
-          "Identifique quem é responsável por validar CST e classificação tributária (cClassTrib) em cada operação.",
-          "Converse com a contabilidade sobre a formação de preços, contratos, créditos e impactos no fluxo de caixa.",
-          "Confirme com o fornecedor do emissor quais leiautes e regras já estão disponíveis para os documentos que sua empresa utiliza.",
-          "Planeje testes e procedimentos para tratar rejeições, correções e armazenamento dos XMLs."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Atenção aos documentos fiscais eletrônicos"
-      },
-      {
-        "type": "paragraph",
-        "text": "A adequação não acontece apenas na apuração dos tributos. NF-e, NFC-e, CT-e, NFS-e e outros documentos recebem alterações técnicas em etapas distintas. O cronograma oficial separa a data de publicação de leiaute da data de início da obrigatoriedade. Por isso, a empresa deve acompanhar o documento fiscal que realmente utiliza e não aplicar uma única data a todos os modelos."
-      },
-      {
-        "type": "heading",
-        "text": "Como escolher um emissor preparado para a transição"
-      },
-      {
-        "type": "paragraph",
-        "text": "Ao avaliar um sistema emissor, pergunte quais versões técnicas atende, como trata os campos de IBS e CBS, como atualiza classificações e como permite acompanhar o retorno dos ambientes autorizadores. Não basta uma promessa genérica de que o sistema está atualizado: peça confirmação para o tipo de documento, regime e operação da sua empresa."
-      },
-      {
-        "type": "paragraph",
-        "text": "O EmitaGo reúne emissão online de documentos fiscais em uma plataforma, com proposta pré-paga de R$ 60 por CNPJ ativo no mês de uso e emissões ilimitadas durante o período contratado. Antes de contratar, confirme com a equipe a cobertura técnica disponível para seu enquadramento e suas operações."
-      },
-      {
-        "type": "heading",
-        "text": "Perguntas frequentes"
-      },
-      {
-        "type": "heading",
-        "text": "O ICMS e o ISS acabam em 2027?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Não. A transição desses tributos para o IBS ocorre gradualmente entre 2029 e 2032. A extinção integral do ICMS e do ISS está prevista para 2033."
-      },
-      {
-        "type": "heading",
-        "text": "Toda empresa do Lucro Presumido ou Real terá o mesmo aumento de imposto?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Não é possível afirmar isso de forma geral. O resultado depende da atividade, das operações, dos créditos permitidos, da estrutura de custos e das regras aplicáveis. Faça simulações com a contabilidade."
-      },
-      {
-        "type": "heading",
-        "text": "Fontes oficiais"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Entenda a Reforma Tributária do Consumo e o cronograma de transição",
-        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos, atualizado em 28/10/2026",
-        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
-      },
-      {
-        "type": "source",
-        "label": "Planalto — Lei Complementar nº 214/2025",
-        "href": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
-      }
-    ]
-  },
-  {
-    "slug": "nfe-ibs-cbs-novos-campos-2027",
-    "category": "Notas Fiscais",
-    "title": "NF-e com IBS e CBS em 2027: novos campos e como preparar a emissão",
-    "excerpt": "Veja o que revisar no leiaute da NF-e, na classificação tributária e nos dados da operação para evitar erros na emissão durante a transição da Reforma Tributária.",
-    "date": "14 Nov 2026",
-    "updatedAt": "14 Nov 2026",
-    "readMin": 8,
-    "image": "/images/blog/nfe-ibs-cbs-campos.svg",
-    "author": "Equipe EmitaGo",
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "A Nota Fiscal Eletrônica (NF-e, modelo 55) passa a conviver com novas informações relacionadas ao IBS e à CBS durante a implantação da Reforma Tributária. Para quem emite notas de produtos, a preparação não consiste em preencher campos de forma automática ou copiar a configuração de outra empresa: é necessário entender a operação e utilizar o leiaute técnico correspondente."
-      },
-      {
-        "type": "heading",
-        "text": "Quais informações entram na NF-e?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Os leiautes da família de documentos fiscais eletrônicos passaram a prever grupos específicos para os novos tributos. Entre os dados que podem ser exigidos conforme a operação estão a situação tributária (CST), a classificação tributária (cClassTrib), a base de cálculo, alíquotas e valores de IBS e CBS. A presença e o preenchimento de cada campo dependem do tipo de operação e das regras técnicas aplicáveis."
-      },
-      {
-        "type": "heading",
-        "text": "CST e cClassTrib: por que merecem atenção"
-      },
-      {
-        "type": "paragraph",
-        "text": "O CST indica o tratamento tributário aplicável dentro da estrutura prevista para o documento. A classificação tributária detalha o enquadramento da operação nas regras de IBS e CBS. Um código escolhido incorretamente pode produzir informação fiscal incompatível com a operação. Por isso, não selecione códigos apenas pelo nome do produto ou por uma tabela genérica encontrada na internet: valide a classificação com o profissional contábil ou fiscal responsável."
-      },
-      {
-        "type": "heading",
-        "text": "Checklist antes de transmitir a NF-e"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Confirme se a operação é venda, devolução, transferência, bonificação ou outra hipótese.",
-          "Revise NCM, descrição, unidade, origem e demais dados do produto.",
-          "Confira o cadastro do emitente e do destinatário, inclusive indicadores fiscais relevantes.",
-          "Valide CST e cClassTrib conforme a operação e a legislação.",
-          "Confira base de cálculo, alíquotas e valores apresentados pelo sistema.",
-          "Verifique a versão do leiaute e as regras de validação publicadas para o período.",
-          "Após transmitir, confira o protocolo e o status de autorização da SEFAZ."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "O cronograma muda conforme o documento e o contribuinte"
-      },
-      {
-        "type": "paragraph",
-        "text": "A Receita Federal e o Comitê Gestor do IBS publicaram um cronograma que diferencia documentos, operações, publicação de leiautes e início de obrigatoriedade. Para documentos fiscais de contribuintes do Simples Nacional, o cronograma aponta 1º de janeiro de 2027 como marco de início da obrigatoriedade das informações previstas para esses contribuintes. Outros documentos e perfis têm etapas anteriores. Sempre confira a linha específica aplicável à sua operação."
-      },
-      {
-        "type": "heading",
-        "text": "O que fazer quando o sistema apresenta rejeição?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Leia o código e a mensagem retornados pela SEFAZ, identifique o campo indicado e compare os dados com a documentação técnica vigente. Não altere códigos fiscais aleatoriamente para tentar autorizar o documento. Se a divergência envolver classificação ou tratamento tributário, solicite validação à contabilidade antes de retransmitir."
-      },
-      {
-        "type": "heading",
-        "text": "Como avaliar seu emissor de NF-e"
-      },
-      {
-        "type": "paragraph",
-        "text": "Pergunte ao fornecedor se a versão utilizada contempla o leiaute correspondente, como são atualizadas as regras e classificações e se a equipe consegue testar os cenários da sua empresa. Verifique também se o sistema permite consultar o XML autorizado e manter os documentos organizados para o contador."
-      },
-      {
-        "type": "paragraph",
-        "text": "O EmitaGo oferece emissão online de NF-e e outros documentos fiscais. A plataforma tem proposta de R$ 60 por CNPJ ativo no mês de uso, pré-paga, com emissões ilimitadas durante o período contratado. Consulte a equipe para confirmar os recursos e a cobertura técnica disponíveis para os campos e operações da sua empresa."
-      },
-      {
-        "type": "heading",
-        "text": "Perguntas frequentes"
-      },
-      {
-        "type": "heading",
-        "text": "Posso usar o mesmo CST e cClassTrib para todos os produtos?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Não. A classificação depende da operação, do produto ou serviço e das regras aplicáveis. O cadastro deve ser validado individualmente conforme a orientação fiscal."
-      },
-      {
-        "type": "heading",
-        "text": "O sistema deve preencher tudo automaticamente?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Um emissor pode automatizar regras configuradas, mas a qualidade depende dos cadastros e parâmetros corretos. A empresa continua responsável por fornecer informações consistentes e validar o enquadramento com a contabilidade."
-      },
-      {
-        "type": "heading",
-        "text": "Fontes oficiais"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos",
-        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
-      },
-      {
-        "type": "source",
-        "label": "Portal Nacional da NF-e — documentação técnica e manuais",
-        "href": "https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=ndIjl+iEFdE="
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Entenda a Reforma Tributária do Consumo",
-        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"
-      }
-    ]
-  },
-  {
-    "slug": "checklist-reforma-tributaria-empresa-2027",
-    "category": "Notas Fiscais",
-    "title": "Reforma Tributária 2027: checklist para preparar sua empresa e o emissor fiscal",
-    "excerpt": "Um roteiro prático para revisar cadastros, operações, classificação tributária, documentos eletrônicos e sistema emissor antes da próxima etapa da reforma.",
-    "date": "14 Nov 2026",
-    "updatedAt": "14 Nov 2026",
-    "readMin": 8,
-    "image": "/images/blog/checklist-reforma-2027.svg",
-    "author": "Equipe EmitaGo",
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "A chegada de 2027 representa uma nova fase da Reforma Tributária do Consumo. Para evitar correria na virada do ano, empresas precisam organizar cadastros, revisar processos e confirmar se seus sistemas estão acompanhando os leiautes dos documentos fiscais. Este checklist foi pensado para gestores, equipes administrativas e profissionais que acompanham a emissão fiscal."
-      },
-      {
-        "type": "heading",
-        "text": "1. Identifique o regime e as operações da empresa"
-      },
-      {
-        "type": "paragraph",
-        "text": "Comece confirmando o enquadramento tributário e mapeando o que a empresa faz: vende mercadorias, presta serviços, realiza operações interestaduais, devoluções, transferências, importações ou outras atividades. A mesma empresa pode ter diferentes tratamentos conforme a natureza de cada operação."
-      },
-      {
-        "type": "heading",
-        "text": "2. Revise os cadastros fiscais"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Confira NCM e descrição dos produtos, unidade comercial e tributável e origem.",
-          "Revise cadastros de serviços e códigos aplicáveis, incluindo NBS quando pertinente.",
-          "Identifique operações que exigem tratamento específico ou classificação diferenciada.",
-          "Elimine cadastros duplicados e corrija informações incompletas.",
-          "Documente quem aprova alterações nos parâmetros fiscais."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "3. Valide a classificação tributária"
-      },
-      {
-        "type": "paragraph",
-        "text": "Os novos grupos de IBS e CBS exigem atenção a CST e cClassTrib, entre outras informações previstas no leiaute. A classificação não deve ser decidida apenas pela equipe de vendas ou copiada de outra empresa. Monte uma lista de operações recorrentes e valide o enquadramento com a contabilidade."
-      },
-      {
-        "type": "heading",
-        "text": "4. Confira cada documento fiscal utilizado"
-      },
-      {
-        "type": "list",
-        "items": [
-          "NF-e para operações com mercadorias.",
-          "NFC-e para vendas ao consumidor final no varejo.",
-          "NFS-e para prestação de serviços, observando o padrão nacional e as regras do enquadramento.",
-          "CT-e e CT-e OS para prestações de transporte abrangidas.",
-          "MDF-e e outros documentos conforme a atividade da empresa."
-        ]
-      },
-      {
-        "type": "paragraph",
-        "text": "O cronograma oficial não utiliza uma única data para todos os documentos. Ele diferencia o início da obrigatoriedade por documento, operação e perfil do contribuinte. A empresa deve consultar o calendário atualizado e acompanhar as notas técnicas de cada modelo."
-      },
-      {
-        "type": "heading",
-        "text": "5. Teste o emissor antes de depender dele na rotina"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Confirme com o fornecedor quais versões de leiaute estão disponíveis.",
-          "Teste operações comuns e situações menos frequentes, como devoluções e ajustes.",
-          "Verifique como o sistema apresenta erros e mensagens de validação.",
-          "Confira se é possível consultar e baixar XMLs e protocolos.",
-          "Defina um procedimento interno para abertura de chamados e atualização do sistema."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "6. Prepare pessoas e processos"
-      },
-      {
-        "type": "paragraph",
-        "text": "Treine quem cadastra produtos, lança pedidos, emite documentos e confere o retorno da autorização. Combine com a contabilidade como serão tratados cadastros novos, exceções e dúvidas de classificação. Uma pequena rotina de conferência diária pode evitar retrabalho e documentos emitidos com dados inconsistentes."
-      },
-      {
-        "type": "heading",
-        "text": "Como escolher um sistema emissor"
-      },
-      {
-        "type": "paragraph",
-        "text": "Compare a cobertura de documentos, os ambientes atendidos, a frequência de atualização, o suporte e a clareza do fluxo de emissão. Solicite confirmação por escrito de quais leiautes e operações estão contemplados. O EmitaGo centraliza a emissão online de diferentes documentos fiscais e trabalha com preço pré-pago de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas no período contratado. Confirme com a equipe se a cobertura atual atende às operações específicas do seu negócio."
-      },
-      {
-        "type": "heading",
-        "text": "Checklist resumido para salvar"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Regime e operações mapeados.",
-          "Cadastros de produtos e serviços revisados.",
-          "CST e cClassTrib validados pela área fiscal.",
-          "Leiautes e datas conferidos nos portais oficiais.",
-          "Testes realizados no emissor.",
-          "Equipe treinada e rotina de conferência definida.",
-          "XMLs e protocolos organizados."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Fontes oficiais"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos",
-        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Entenda a Reforma Tributária do Consumo",
-        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"
-      },
-      {
-        "type": "source",
-        "label": "Portal Nacional da NF-e — documentação técnica",
-        "href": "https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=ndIjl+iEFdE="
-      }
-    ]
-  },
-  {
-    "slug": "ibs-cbs-simples-nacional-2027",
-    "category": "Notas Fiscais",
-    "title": "IBS e CBS no Simples Nacional em 2027: o que muda para ME e EPP",
-    "excerpt": "Entenda como IBS e CBS entram no Simples Nacional, o recolhimento pelo DAS, a alternativa do regime regular e os cuidados para micro e pequenas empresas.",
-    "date": "14 Nov 2026",
-    "updatedAt": "14 Nov 2026",
-    "readMin": 9,
-    "image": "/images/blog/simples-nacional-ibs-cbs.svg",
-    "author": "Equipe EmitaGo",
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "Microempresas (ME) e empresas de pequeno porte (EPP) optantes pelo Simples Nacional também precisam acompanhar a Reforma Tributária do Consumo. A partir de 2027, IBS e CBS passam a fazer parte das regras do regime, mas isso não significa que toda empresa do Simples será automaticamente obrigada a apurar esses tributos fora do DAS."
-      },
-      {
-        "type": "heading",
-        "text": "IBS e CBS ficam dentro do Simples Nacional?"
-      },
-      {
-        "type": "paragraph",
-        "text": "A regra padrão é a permanência de IBS e CBS dentro do recolhimento unificado do Simples Nacional. Assim, a empresa que permanece no modelo padrão recolhe os tributos abrangidos pelo regime por meio do DAS, observadas as regras e os procedimentos atualizados. A regulamentação do Comitê Gestor do Simples Nacional incorporou expressamente os novos tributos ao regime."
-      },
-      {
-        "type": "heading",
-        "text": "O que é o chamado Simples híbrido?"
-      },
-      {
-        "type": "paragraph",
-        "text": "A legislação permite que a empresa continue no Simples Nacional para os demais tributos e opte por apurar IBS e CBS pelo regime regular, fora do DAS. Essa alternativa costuma ser chamada de modelo híbrido. A decisão pode afetar o aproveitamento de créditos na cadeia comercial e a relação com clientes que também são empresas, mas não existe uma resposta universal: a conveniência depende das operações, dos clientes, dos custos e da análise contábil."
-      },
-      {
-        "type": "heading",
-        "text": "O prazo para o primeiro semestre de 2027 já passou"
-      },
-      {
-        "type": "paragraph",
-        "text": "Para produzir efeitos de janeiro a junho de 2027, a opção pelo regime regular de IBS e CBS teve período próprio em 2026, encerrado em 30 de outubro. A Receita também estabeleceu período para cancelamento de opções entre 3 de novembro e 20 de dezembro de 2026. Para o segundo semestre de 2027, a regulamentação prevê nova janela de opção em março de 2027, com efeitos de julho a dezembro. Confirme os prazos e as condições no Portal do Simples Nacional antes de tomar qualquer decisão."
-      },
-      {
-        "type": "heading",
-        "text": "O que muda na rotina das ME e EPP"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Revise o enquadramento da empresa e confirme se existe opção específica registrada para IBS e CBS.",
-          "Converse com a contabilidade sobre o efeito do regime padrão ou regular nos preços e nas relações B2B.",
-          "Mantenha os cadastros de produtos e serviços atualizados.",
-          "Confirme se o emissor está preparado para as informações exigidas no documento fiscal do seu perfil.",
-          "Acompanhe as mudanças do PGDAS-D e os comunicados oficiais.",
-          "Não altere o regime ou os parâmetros fiscais sem avaliar o impacto completo."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "A emissão de notas fiscais também exige atenção"
-      },
-      {
-        "type": "paragraph",
-        "text": "A adaptação do Simples não acontece apenas na guia DAS. O cronograma oficial prevê a etapa de documentos fiscais para contribuintes do Simples Nacional a partir de 1º de janeiro de 2027, abrangendo NF-e, NFC-e, CT-e, NFS-e e outros documentos. Isso torna importante conferir a atualização do emissor e os dados que precisam constar em cada documento."
-      },
-      {
-        "type": "heading",
-        "text": "Como o EmitaGo pode ajudar na rotina fiscal"
-      },
-      {
-        "type": "paragraph",
-        "text": "O EmitaGo reúne emissão online de documentos fiscais para empresas e oferece uma proposta pré-paga de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas durante o período contratado. Antes de contratar, confirme com a equipe a compatibilidade do fluxo disponível com o regime tributário, o documento e a operação da sua empresa."
-      },
-      {
-        "type": "heading",
-        "text": "Perguntas frequentes"
-      },
-      {
-        "type": "heading",
-        "text": "Toda empresa do Simples precisa escolher o regime regular?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Não. A regra padrão é recolher IBS e CBS dentro do Simples. A opção pelo regime regular é uma alternativa que deve ser avaliada e formalizada nos períodos previstos."
-      },
-      {
-        "type": "heading",
-        "text": "O Simples Nacional deixa de existir em 2027?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Não. O regime continua existindo, com adaptações para incorporar IBS e CBS e atualizar procedimentos de apuração."
-      },
-      {
-        "type": "heading",
-        "text": "Fontes oficiais"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — CGSN atualiza regras do Simples Nacional para a Reforma Tributária",
-        "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/cgsn-atualiza-regras-do-simples-nacional-para-adequacao-a-reforma-tributaria-do-consumo"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Simples Nacional 2027: novos prazos e escolhas",
-        "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/setembro/simples-nacional-2027-entenda-os-novos-prazos-e-faca-sua-escolha-com-consciencia-e-tranquilidade/"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos",
-        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
-      }
-    ]
-  },
-  {
-    "slug": "pgdas-d-2027-reforma-tributaria-fs12-competencia",
-    "category": "Notas Fiscais",
-    "title": "PGDAS-D atualizado para 2027: competência e folha dos últimos 12 meses",
-    "excerpt": "Veja as mudanças do PGDAS-D que já afetam as apurações de novembro e dezembro de 2026 e prepare sua empresa do Simples Nacional para 2027.",
-    "date": "14 Nov 2026",
-    "updatedAt": "14 Nov 2026",
-    "readMin": 8,
-    "image": "/images/blog/pgdasd-fs12-competencia.svg",
-    "author": "Equipe EmitaGo",
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "O PGDAS-D foi atualizado para incorporar mudanças relacionadas à Reforma Tributária do Consumo. O Ministério da Fazenda divulgou as alterações em 13 de novembro de 2026, com efeitos que começam antes da virada do ano: os períodos de apuração de novembro e dezembro de 2026 já exigem atenção às novas informações."
-      },
-      {
-        "type": "heading",
-        "text": "Quais mudanças foram anunciadas?"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Deixa de ser necessário escolher entre regime de caixa e regime de competência nas apurações a partir dos períodos indicados pela atualização.",
-          "A partir de 2027, as apurações do Simples Nacional passam a seguir o regime de competência.",
-          "Passa a ser necessário informar a folha de salários dos últimos 12 meses (FS12) para todas as atividades do Simples Nacional.",
-          "As informações declaradas no PGDAS-D serão utilizadas para determinar alíquotas efetivas de IBS e CBS que deverão constar nos documentos fiscais eletrônicos."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Atenção aos períodos de apuração 11/2026 e 12/2026"
-      },
-      {
-        "type": "paragraph",
-        "text": "Segundo o comunicado oficial, as alterações de regime de apuração e informação da folha dos últimos 12 meses já alcançam os períodos de apuração 11/2026 e 12/2026. Portanto, a empresa não deve esperar janeiro de 2027 para organizar os dados. Verifique com a contabilidade como preencher corretamente as informações no sistema."
-      },
-      {
-        "type": "heading",
-        "text": "O que é FS12?"
-      },
-      {
-        "type": "paragraph",
-        "text": "FS12 é a informação da folha de salários dos 12 meses anteriores utilizada nas regras do Simples Nacional. A empresa deve reunir os dados necessários e conferir se os valores estão completos e coerentes com seus registros de folha. Se houver dúvidas sobre quais verbas entram no cálculo, valide o critério com a contabilidade e com a orientação oficial do PGDAS-D."
-      },
-      {
-        "type": "heading",
-        "text": "Por que o regime de competência merece atenção?"
-      },
-      {
-        "type": "paragraph",
-        "text": "O regime de competência considera o período em que a receita é auferida, de acordo com as regras aplicáveis, e não simplesmente o momento em que o dinheiro entra no caixa. A mudança exige alinhamento entre faturamento, documentos fiscais, controles financeiros e informações transmitidas ao PGDAS-D. Diferenças entre a emissão de notas, os registros internos e a apuração podem gerar retrabalho e inconsistências."
-      },
-      {
-        "type": "heading",
-        "text": "Checklist para empresas do Simples"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Confirme com a contabilidade a aplicação das novas regras nos períodos 11/2026 e 12/2026.",
-          "Organize os dados da folha de salários dos 12 meses anteriores.",
-          "Revise a integração entre faturamento, documentos fiscais e controles financeiros.",
-          "Confira se as receitas estão sendo reconhecidas no período correto.",
-          "Guarde relatórios e documentos que sustentem as informações declaradas.",
-          "Acompanhe as atualizações do PGDAS-D e os comunicados do Comitê Gestor do Simples Nacional."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "A relação com a emissão de notas fiscais"
-      },
-      {
-        "type": "paragraph",
-        "text": "A Receita informa que os dados do PGDAS-D serão utilizados para determinar alíquotas efetivas de IBS e CBS que deverão constar nos documentos fiscais eletrônicos. Isso reforça a importância de manter consistentes as informações de faturamento, cadastro e emissão. O emissor fiscal não substitui a apuração tributária, mas precisa acompanhar os leiautes e receber os parâmetros corretos definidos pela empresa e pela contabilidade."
-      },
-      {
-        "type": "paragraph",
-        "text": "O EmitaGo centraliza a emissão online de documentos fiscais e oferece preço pré-pago de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas no período contratado. Conheça a plataforma e confirme com a equipe a cobertura adequada para seus documentos e operações."
-      },
-      {
-        "type": "heading",
-        "text": "Perguntas frequentes"
-      },
-      {
-        "type": "heading",
-        "text": "A mudança vale somente a partir de janeiro de 2027?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Não. O comunicado oficial informa que as mudanças já se aplicam aos períodos de apuração 11/2026 e 12/2026, com apurações de 2027 pelo regime de competência."
-      },
-      {
-        "type": "heading",
-        "text": "Toda empresa do Simples precisa informar a FS12?"
-      },
-      {
-        "type": "paragraph",
-        "text": "O comunicado do Ministério da Fazenda informa a necessidade de declarar a folha dos últimos 12 meses para todas as atividades do Simples Nacional. Em caso de dúvidas sobre a composição dos valores, consulte a contabilidade."
-      },
-      {
-        "type": "heading",
-        "text": "Fontes oficiais"
-      },
-      {
-        "type": "source",
-        "label": "Ministério da Fazenda — PGDAS-D atualizado para atender à Reforma Tributária, publicado em 13/11/2026",
-        "href": "https://www.gov.br/fazenda/pt-br/assuntos/noticias/2026/novembro/programa-gerador-do-documento-de-arrecadacao-do-simples-nacional-pgdas-d-e-atualizado-para-atender-a-reforma-tributaria-a-partir-de-novembro-de-2026"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — CGSN atualiza regras do Simples Nacional",
-        "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/cgsn-atualiza-regras-do-simples-nacional-para-adequacao-a-reforma-tributaria-do-consumo"
-      }
-    ]
-  },
-  {
-    "slug": "nfse-nacional-ibs-cbs-simples-2027",
-    "category": "Notas Fiscais",
-    "title": "NFS-e Nacional em 2027: IBS e CBS para prestadores do Simples Nacional",
-    "excerpt": "Entenda o padrão nacional da nota de serviço, as regras para ME e EPP do Simples e os cuidados para emitir NFS-e durante a transição tributária.",
-    "date": "14 Nov 2026",
-    "updatedAt": "14 Nov 2026",
-    "readMin": 8,
-    "image": "/images/blog/nfse-nacional-simples.svg",
-    "author": "Equipe EmitaGo",
-    "content": [
-      {
-        "type": "paragraph",
-        "text": "Prestadores de serviços optantes pelo Simples Nacional precisam acompanhar duas frentes da mudança: a adoção do padrão nacional da Nota Fiscal de Serviço eletrônica (NFS-e) e a inclusão das informações relacionadas à Reforma Tributária nos documentos fiscais. As datas e exigências não devem ser confundidas, porque cada etapa possui seu próprio cronograma."
-      },
-      {
-        "type": "heading",
-        "text": "Quem já deve utilizar a NFS-e de padrão nacional?"
-      },
-      {
-        "type": "paragraph",
-        "text": "O MEI prestador de serviços utiliza o padrão nacional desde setembro de 2023. Para microempresas (ME) e empresas de pequeno porte (EPP) optantes pelo Simples Nacional, a obrigatoriedade do padrão nacional passou a valer em 1º de novembro de 2026 nas prestações sujeitas à emissão de nota, conforme as orientações oficiais. Empresas de outros regimes devem verificar o enquadramento, o convênio e as regras municipais aplicáveis."
-      },
-      {
-        "type": "heading",
-        "text": "O que muda com IBS e CBS em 2027?"
-      },
-      {
-        "type": "paragraph",
-        "text": "O cronograma da Reforma Tributária prevê a etapa dos documentos fiscais dos contribuintes do Simples Nacional a partir de 1º de janeiro de 2027, incluindo NF-e, NFC-e, CT-e, NFS-e e outros modelos. Isso não significa que todos os campos e regras sejam idênticos para qualquer serviço: o preenchimento depende do tipo de fornecimento, da classificação tributária e das notas técnicas vigentes."
-      },
-      {
-        "type": "heading",
-        "text": "Como funciona a emissão pelo padrão nacional"
-      },
-      {
-        "type": "paragraph",
-        "text": "O ambiente nacional disponibiliza emissão pela aplicação Web e integração por API. Sistemas emissores privados precisam confirmar os requisitos técnicos, a integração e a cobertura para o perfil do contribuinte. Antes de transmitir, revise prestador, tomador, município, serviço, competência, valores e informações tributárias exigidas para a operação."
-      },
-      {
-        "type": "heading",
-        "text": "Checklist para prestadores de serviços"
-      },
-      {
-        "type": "list",
-        "items": [
-          "Confirme o porte e o enquadramento da empresa no Simples Nacional.",
-          "Verifique se a emissão está sendo feita no padrão nacional exigido para ME ou EPP.",
-          "Revise o cadastro de serviços e os códigos utilizados na operação.",
-          "Confira município, tomador, competência, valores e eventuais retenções.",
-          "Acompanhe a documentação técnica da NFS-e e o cronograma de IBS e CBS.",
-          "Teste o fluxo de emissão e confira o retorno de autorização e o documento gerado."
-        ]
-      },
-      {
-        "type": "heading",
-        "text": "Como escolher um emissor de NFS-e"
-      },
-      {
-        "type": "paragraph",
-        "text": "A cobertura municipal, o padrão de integração e o tratamento dos dados fiscais são pontos importantes. Pergunte se o sistema atende ao padrão exigido para sua empresa, como acompanha atualizações técnicas e quais municípios e operações estão contemplados. Não presuma que a cobertura de um município significa cobertura de todos os serviços ou de todos os perfis de contribuinte."
-      },
-      {
-        "type": "paragraph",
-        "text": "O EmitaGo divulga integrações de NFS-e com mais de 1.600 municípios e oferece emissão online de documentos fiscais. O preço anunciado é de R$ 60 por CNPJ ativo no mês de uso, pré-pago e com emissões ilimitadas no período contratado. Consulte a equipe para confirmar a cobertura do seu município, atividade e enquadramento, especialmente quanto ao padrão nacional e às novas informações de IBS e CBS."
-      },
-      {
-        "type": "heading",
-        "text": "Perguntas frequentes"
-      },
-      {
-        "type": "heading",
-        "text": "A regra nacional de NFS-e para ME e EPP começou em janeiro de 2027?"
-      },
-      {
-        "type": "paragraph",
-        "text": "Não. Para ME e EPP optantes pelo Simples Nacional, a obrigatoriedade do padrão nacional começou em 1º de novembro de 2026 nas prestações sujeitas à emissão. O marco de 1º de janeiro de 2027 do cronograma trata da etapa dos documentos fiscais dos contribuintes do Simples relacionada à Reforma Tributária."
-      },
-      {
-        "type": "heading",
-        "text": "Toda empresa do Simples emite NFS-e?"
-      },
-      {
-        "type": "paragraph",
-        "text": "A NFS-e é utilizada para documentar prestações de serviços sujeitas à emissão. Empresas que comercializam mercadorias podem utilizar NF-e ou NFC-e conforme a operação. O documento correto depende da atividade e da natureza do fornecimento."
-      },
-      {
-        "type": "heading",
-        "text": "Fontes oficiais"
-      },
-      {
-        "type": "source",
-        "label": "Portal Nacional da NFS-e — diretrizes para optantes do Simples Nacional",
-        "href": "https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-diretrizes-sobre-a-obrigatoriedade-da-emissao-da-nfs-e-nacional-para-optantes-do-simples-nacional/"
-      },
-      {
-        "type": "source",
-        "label": "Receita Federal — Cronograma dos documentos fiscais eletrônicos",
-        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
-      },
-      {
-        "type": "source",
-        "label": "Portal Nacional da NFS-e — documentação técnica atual",
-        "href": "https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual"
-      }
-    ]
-  }
+
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
