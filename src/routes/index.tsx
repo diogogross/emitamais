@@ -66,12 +66,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Emissor de NF-e e NFS-e Online | Nota Fiscal de Produto e Serviço | EmitaGo"
+        title: "Emissor de NF-e e NFS-e Online | EmitaGo"
       },
       {
         name: "description",
         content:
-          "Emita NF-e para produtos e NFS-e para serviços em um sistema online. R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade e com emissão ilimitada no período pago.",
+          "Emita NF-e e NFS-e online por R$ 60 pré-pagos por CNPJ ativo no mês de uso. Sem fidelidade.",
       },
       {
         name: "robots",
