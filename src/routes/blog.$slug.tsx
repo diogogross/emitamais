@@ -162,8 +162,8 @@ function ArticlePage() {
     ? { href: "/solucoes/nfse", label: "Conheça o emissor de NFS-e", description: "Veja como organizar a emissão de notas de serviço e consulte a cobertura do seu município." }
     : slug.includes("nfce")
       ? { href: "/solucoes/nfce", label: "Conheça a solução de NFC-e", description: "Veja os recursos de emissão de cupom fiscal e PDV para o varejo." }
-      : /nfe|cancelamento|carta-correcao|manifestacao/.test(slug)
-        ? { href: "/solucoes/nfe", label: "Conheça o emissor de NF-e", description: "Veja como emitir NF-e de produtos e manter DANFE e XML organizados." }
+      : /nfe|ibs-cbs|checklist-reforma|simples-nacional/.test(slug)
+        ? { href: "/solucoes/nfe", label: "Conheça o emissor de NF-e", description: "Veja como emitir NF-e de produtos e manter DANFE e XML organizados durante a transição tributária." }
         : /cte|mdfe|ciot|transporte|rntrc|damdfe|seguro-carga/.test(slug)
           ? { href: "/solucoes/cte", label: "Conheça as soluções para transporte", description: "Conheça os recursos para CT-e, CT-e OS e rotinas relacionadas ao transporte." }
           : null;

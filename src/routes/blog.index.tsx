@@ -22,7 +22,7 @@ export const Route = createFileRoute("/blog/")({
       {
         name: "description",
         content:
-          "Guias práticos sobre NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado Digital para empresas, transportadoras e contadores.",
+          "Artigos atualizados sobre Reforma Tributária 2027, IBS, CBS, NF-e, NFC-e, NFS-e, CT-e, MDF-e e Certificado Digital para empresas e contadores.",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:locale", content: "pt_BR" },
@@ -30,12 +30,12 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.emitago.com.br/blog" },
       { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
-      { property: "og:description", content: "Guias práticos sobre NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado Digital A1 para empresas e profissionais." },
+      { property: "og:description", content: "Artigos sobre Reforma Tributária 2027, IBS, CBS, NF-e, NFC-e, NFS-e, CT-e, MDF-e e Certificado Digital A1 para empresas e profissionais." },
       { property: "og:image", content: blogCoverImage },
       { property: "og:image:alt", content: blogPosts[0].title },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Blog Fiscal — EmitaGo" },
-      { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e Certificado Digital A1." },
+      { name: "twitter:description", content: "Guias sobre IBS, CBS, Reforma Tributária 2027, NF-e, NFC-e, NFS-e, CT-e e MDF-e." },
       { name: "twitter:image", content: blogCoverImage },
       { name: "twitter:image:alt", content: blogPosts[0].title },
     ],
@@ -80,22 +80,22 @@ export const Route = createFileRoute("/blog/")({
 
 const heroSlides = [
   {
-    tag: "Notas Fiscais",
-    title: "O que muda na emissão fiscal em 2026",
-    desc: "Novas regras, integrações e o que sua empresa precisa ajustar para começar o ano em conformidade.",
-    image: blogPosts[0].image,
+    tag: "Reforma Tributária",
+    title: "IBS e CBS: prepare sua emissão fiscal para 2027",
+    desc: "Entenda as novas regras, revise os documentos fiscais e organize sua empresa para a próxima etapa da transição.",
+    image: blogPosts.find((post) => post.slug === "ibs-cbs-2027-lucro-real-presumido")?.image ?? blogPosts[0].image,
   },
   {
-    tag: "Transporte",
-    title: "MDFe e CTe: a dupla que sua transportadora precisa dominar",
-    desc: "Como integrar manifesto e conhecimento eletrônico para reduzir erros e evitar multas em fiscalização.",
-    image: blogPosts[2].image,
+    tag: "NF-e",
+    title: "NF-e com IBS e CBS: novos campos e cuidados na emissão",
+    desc: "Veja o que revisar no leiaute, na classificação tributária e nos dados da operação.",
+    image: blogPosts.find((post) => post.slug === "nfe-ibs-cbs-novos-campos-2027")?.image ?? blogPosts[0].image,
   },
   {
-    tag: "Certificado Digital",
-    title: "Certificado digital 100% online: rápido, seguro e sem sair de casa",
-    desc: "Guia atualizado para escolher entre A1, A3, token, cartão ou nuvem — com emissão por videoconferência.",
-    image: blogPosts[4].image,
+    tag: "Simples Nacional",
+    title: "IBS e CBS no Simples Nacional em 2027",
+    desc: "Entenda o DAS, a alternativa do regime regular e as mudanças para ME e EPP.",
+    image: blogPosts.find((post) => post.slug === "ibs-cbs-simples-nacional-2027")?.image ?? blogPosts[0].image,
   },
 ];
 

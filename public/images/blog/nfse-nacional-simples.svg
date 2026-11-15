@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">NFS-e Nacional e IBS CBS para Simples Nacional</title><desc id="desc">Ilustração de nota fiscal de serviço nacional em tela digital, com prestador de serviços, tomador e informações fiscais.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101b38"/><stop offset="1" stop-color="#28215b"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf0ff"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#58a6ff"/><stop offset="1" stop-color="#6b67e8"/></linearGradient>
+  <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8db4"/><stop offset="1" stop-color="#e66bd0"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#050b1d" flood-opacity=".32"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="1450" cy="80" r="330" fill="#6d65d9" opacity=".14"/><circle cx="80" cy="850" r="300" fill="#2ca9d5" opacity=".10"/>
+<path d="M0 690 C330 590 480 940 840 800 S1300 650 1600 760 V900 H0Z" fill="#ffffff" opacity=".035"/>
+<text x="92" y="110" fill="#8bc8ff" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="5">EMITAGO • GUIA FISCAL 2027</text>
+<text x="92" y="230" fill="#fff" font-family="Arial" font-size="62" font-weight="700">NFS-e Nacional</text>
+<text x="96" y="292" fill="#c7d5f3" font-family="Arial" font-size="30">Serviços, Simples Nacional e a transição tributária</text>
+<g filter="url(#shadow)" transform="translate(230 360)">
+ <rect width="1120" height="440" rx="32" fill="#101b34" stroke="#7189c2" stroke-width="4"/>
+ <rect x="36" y="34" width="1048" height="372" rx="22" fill="url(#panel)"/>
+ <rect x="70" y="68" width="980" height="62" rx="14" fill="#e4ebfb"/>
+ <text x="104" y="109" fill="#26365d" font-family="Arial" font-size="27" font-weight="700">NOTA FISCAL DE SERVIÇO ELETRÔNICA</text>
+ <rect x="75" y="160" width="440" height="175" rx="18" fill="#fff" stroke="#d6e0f4" stroke-width="2"/>
+ <text x="105" y="205" fill="#2e426a" font-family="Arial" font-size="23" font-weight="700">PRESTADOR / TOMADOR</text>
+ <path d="M105 235 H470 M105 270 H420 M105 305 H455" stroke="#c6d2e8" stroke-width="10" stroke-linecap="round"/>
+ <rect x="545" y="160" width="505" height="175" rx="18" fill="#fff" stroke="#d6e0f4" stroke-width="2"/>
+ <text x="575" y="205" fill="#2e426a" font-family="Arial" font-size="23" font-weight="700">INFORMAÇÕES TRIBUTÁRIAS</text>
+ <rect x="575" y="230" width="205" height="70" rx="12" fill="#dbeafe"/><text x="600" y="273" fill="#28538d" font-family="Arial" font-size="23" font-weight="700">IBS</text>
+ <rect x="800" y="230" width="220" height="70" rx="12" fill="#fbe1ef"/><text x="825" y="273" fill="#93416e" font-family="Arial" font-size="23" font-weight="700">CBS</text>
+ <rect x="75" y="356" width="975" height="28" rx="10" fill="#d6f3e8"/>
+ <text x="95" y="378" fill="#176b55" font-family="Arial" font-size="17" font-weight="700">PADRÃO NACIONAL • CONFIRA O ENQUADRAMENTO E A VERSÃO TÉCNICA</text>
+</g>
+</svg>
