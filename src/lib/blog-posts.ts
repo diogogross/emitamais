@@ -1150,7 +1150,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "reforma-tributaria-cbs-ibs",
     category: "Notas Fiscais",
-    title: "Reforma Tributária: cronograma de IBS e CBS nos documentos fiscais",
+    title: "IBS e CBS: cronograma nos documentos fiscais",
     excerpt: "Veja as datas oficiais de IBS e CBS nos documentos fiscais, o que muda em 2026 e 2027 e como preparar o emissor.",
     date: "15 Jan 2026",
     updatedAt: "15 Nov 2026",
