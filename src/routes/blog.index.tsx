@@ -80,22 +80,22 @@ export const Route = createFileRoute("/blog/")({
 
 const heroSlides = [
   {
-    tag: "Notas Fiscais",
-    title: "O que muda na emissão fiscal em 2026",
-    desc: "Novas regras, integrações e o que sua empresa precisa ajustar para começar o ano em conformidade.",
-    image: blogPosts[0].image,
+    tag: "Reforma Tributária",
+    title: "IBS e CBS: prepare sua emissão fiscal para 2027",
+    desc: "Entenda as novas regras, revise os documentos fiscais e organize sua empresa para a próxima etapa da transição.",
+    image: blogPosts.find((post) => post.slug === "ibs-cbs-2027-lucro-real-presumido")?.image ?? blogPosts[0].image,
   },
   {
-    tag: "Transporte",
-    title: "MDFe e CTe: a dupla que sua transportadora precisa dominar",
-    desc: "Como integrar manifesto e conhecimento eletrônico para reduzir erros e evitar multas em fiscalização.",
-    image: blogPosts[2].image,
+    tag: "NF-e",
+    title: "NF-e com IBS e CBS: novos campos e cuidados na emissão",
+    desc: "Veja o que revisar no leiaute, na classificação tributária e nos dados da operação.",
+    image: blogPosts.find((post) => post.slug === "nfe-ibs-cbs-novos-campos-2027")?.image ?? blogPosts[0].image,
   },
   {
-    tag: "Certificado Digital",
-    title: "Certificado digital 100% online: rápido, seguro e sem sair de casa",
-    desc: "Guia atualizado para escolher entre A1, A3, token, cartão ou nuvem — com emissão por videoconferência.",
-    image: blogPosts[4].image,
+    tag: "Simples Nacional",
+    title: "IBS e CBS no Simples Nacional em 2027",
+    desc: "Entenda o DAS, a alternativa do regime regular e as mudanças para ME e EPP.",
+    image: blogPosts.find((post) => post.slug === "ibs-cbs-simples-nacional-2027")?.image ?? blogPosts[0].image,
   },
 ];
 
