@@ -174,7 +174,50 @@ export const solutionPages: SolutionPage[] = [
       { question: "Posso controlar CIOT junto com CTe e MDFe?", answer: "A proposta do EmitaGo é centralizar essas rotinas para reduzir retrabalho e manter a operação organizada." }
     ],
     relatedSlugs: ["cte-transporte", "mdfe-frota"]
-  }
+  },
+  {
+    slug: "sistema-notas-fiscais",
+    title: "Sistema de Notas Fiscais para Empresas",
+    seoTitle: "Sistema de Notas Fiscais Online para Empresas | EmitaGo",
+    description: "Conheça um sistema de notas fiscais online para emitir NF-e, NFC-e, NFS-e, CT-e, MDF-e e outros documentos. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
+    h1: "Sistema de notas fiscais online para sua empresa",
+    intro: "O EmitaGo é um sistema de emissão de notas fiscais pela internet para empresas que precisam organizar documentos de produtos, serviços, varejo e transporte. Emita NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, além de recursos relacionados ao CIOT, em uma plataforma online. A disponibilidade depende do documento, da operação, da configuração fiscal e da integração aplicável.",
+    benefits: [
+      "Emissão online de NF-e para operações com produtos",
+      "NFC-e integrada à rotina de PDV para o varejo",
+      "NFS-e com integração a mais de 1.600 municípios, conforme cobertura disponível",
+      "Documentos de transporte como CT-e, CT-e OS e MDF-e, além de recursos relacionados ao CIOT",
+      "Acesso pelo navegador em computador, tablet e celular compatíveis",
+      "Gestão de múltiplos CNPJs no mesmo painel, com cobrança individual por CNPJ ativo",
+      "Modelo pré-pago: R$ 60 por CNPJ ativo no mês de uso, com emissão ilimitada no mês pago"
+    ],
+    audience: [
+      "Comércio, lojas e distribuidores",
+      "Prestadores de serviços",
+      "Transportadoras e operações logísticas",
+      "Indústrias e empresas com emissão recorrente",
+      "Escritórios contábeis que acompanham vários CNPJs",
+      "Produtores rurais, conforme a operação e as regras estaduais"
+    ],
+    steps: [
+      "Converse com a equipe para confirmar se os documentos e as integrações atendem à sua operação.",
+      "Cadastre a empresa e configure os dados fiscais e o certificado digital exigido.",
+      "Organize produtos, serviços, clientes e informações tributárias.",
+      "Preencha cada operação e transmita o documento ao ambiente autorizador correspondente.",
+      "Acompanhe o retorno, consulte os documentos e compartilhe os arquivos com sua contabilidade."
+    ],
+    faq: [
+      { question: "O que é um sistema de notas fiscais?", answer: "É um software utilizado para preencher, assinar quando exigido, transmitir e acompanhar documentos fiscais eletrônicos, como NF-e, NFC-e e NFS-e. Os recursos variam conforme o sistema, o documento e a operação." },
+      { question: "Quais notas fiscais posso emitir pelo EmitaGo?", answer: "O EmitaGo oferece emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, além de recursos relacionados ao CIOT. A disponibilidade deve ser confirmada para o enquadramento e a operação da empresa." },
+      { question: "O EmitaGo é um sistema de notas fiscais online?", answer: "Sim. O acesso é feito pela internet, pelo navegador, em computador, tablet ou celular compatíveis, sem instalar um programa tradicional no computador." },
+      { question: "Quanto custa o sistema de notas fiscais EmitaGo?", answer: "O preço é R$ 60 por CNPJ ativo em cada mês de uso, com pagamento antecipado. No mês pago, a emissão é ilimitada para aquele CNPJ. Não há fidelidade nem cobrança pelo uso nos meses em que o CNPJ não for ativado." },
+      { question: "Posso usar o mesmo painel para mais de uma empresa?", answer: "Sim. É possível gerenciar múltiplos CNPJs no mesmo painel. A cobrança é individual por CNPJ ativo em cada mês de uso." },
+      { question: "O sistema atende empresas do Simples Nacional?", answer: "O sistema atende empresas de diferentes segmentos e enquadramentos, mas a configuração fiscal e a disponibilidade de cada documento dependem da operação e das regras aplicáveis. Confirme os detalhes com a equipe e com a contabilidade." },
+      { question: "Como escolher entre um emissor gratuito e um sistema pago?", answer: "Compare os documentos atendidos, limites de emissão, cadastro de produtos e serviços, integração com SEFAZ ou município, armazenamento de XML e DANFE, suporte, recursos de PDV e custo total. A melhor opção depende do volume e da complexidade da operação." },
+      { question: "O EmitaGo emite NFS-e em qualquer município?", answer: "O EmitaGo possui integração com mais de 1.600 municípios, mas a disponibilidade depende da cidade, do padrão de integração e das regras aplicáveis. Consulte a equipe para confirmar seu município." }
+    ],
+    relatedSlugs: ["nfe-passo-a-passo", "nfse-servicos", "nfce-varejo", "cte-transporte"]
+  },
 ];
 
 export function getSolutionBySlug(slug: string) {
