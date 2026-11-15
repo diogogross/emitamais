@@ -135,11 +135,11 @@ export const Route = createFileRoute("/")({
           name: "EmitaGo",
           applicationCategory: "BusinessApplication",
           applicationSubCategory: "Fiscal invoicing software",
-          operatingSystem: "Web, Android",
+          operatingSystem: "Web browser",
           url: "https://www.emitago.com.br/",
           inLanguage: "pt-BR",
           description:
-            "Sistema online para emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, além de funcionalidades relacionadas ao CIOT. Gerencie múltiplos CNPJs no mesmo painel; o preço é R$ 60 por CNPJ ativo em cada mês de uso.",
+            "Sistema online para emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e. Oferece recursos relacionados ao CIOT conforme a operação. Gerencie múltiplos CNPJs no mesmo painel; o preço é R$ 60 por CNPJ ativo em cada mês de uso.",
           featureList: [
             "Emissão de NFe",
             "Emissão de NFCe",
@@ -147,9 +147,8 @@ export const Route = createFileRoute("/")({
             "Emissão de CTe e CTeOS",
             "Emissão de MDFe",
             "Emissão de NFPe",
-            "CIOT",
+            "Recursos relacionados ao CIOT, conforme a operação",
             "PDV online",
-            "Integração com meios de pagamento",
             "Acesso pelo celular, tablet e computador",
           ],
           offers: {
@@ -223,7 +222,7 @@ export const Route = createFileRoute("/")({
               name: "O EmitaGo funciona para qualquer segmento?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sim. O EmitaGo atende comércio, serviços, indústria, transporte e produtor rural, com os principais documentos fiscais em um único sistema.",
+                text: "O EmitaGo oferece soluções para comércio, serviços, indústria, transporte e produtor rural. A disponibilidade de cada documento e recurso depende da operação, da configuração fiscal e das integrações aplicáveis; confirme os requisitos da sua empresa com a equipe.",
               },
             },
             {
@@ -231,7 +230,7 @@ export const Route = createFileRoute("/")({
               name: "Quais documentos fiscais o EmitaGo emite?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "NFe, NFCe, NFSe, CTe, CTeOS, MDFe, NFPe e CIOT, conforme a operação e a integração fiscal disponível.",
+                text: "O EmitaGo oferece emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e. Também disponibiliza recursos relacionados ao CIOT, conforme a operação e a integração disponível.",
               },
             },
             {
