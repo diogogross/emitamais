@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
     "slug": "ibs-cbs-2027-lucro-real-presumido",
     "category": "Notas Fiscais",
     "title": "IBS e CBS 2027: mudanças no Lucro Real e Presumido",
-    "excerpt": "Entenda o início da CBS, a transição do IBS, o fim de PIS e Cofins e os cuidados que empresas do Lucro Real e Presumido devem tomar na preparação fiscal para 2027.",
+    "excerpt": "Entenda o início da CBS, a transição do IBS e os cuidados fiscais para empresas do Lucro Real e Presumido em 2027.",
     "date": "14 Nov 2026",
     "updatedAt": "14 Nov 2026",
     "readMin": 9,
@@ -156,7 +156,7 @@ export const blogPosts: BlogPost[] = [
     "slug": "nfe-ibs-cbs-novos-campos-2027",
     "category": "Notas Fiscais",
     "title": "NF-e com IBS e CBS: campos e emissão em 2027",
-    "excerpt": "Veja o que revisar no leiaute da NF-e, na classificação tributária e nos dados da operação para evitar erros na emissão durante a transição da Reforma Tributária.",
+    "excerpt": "Veja os campos da NF-e, a classificação tributária e os dados para emitir documentos durante a transição da Reforma Tributária.",
     "date": "14 Nov 2026",
     "updatedAt": "14 Nov 2026",
     "readMin": 8,
@@ -735,7 +735,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nfe-passo-a-passo",
     category: "Notas Fiscais",
-    title: "Como emitir NF-e online: passo a passo para empresas",
+    title: "Como emitir NF-e online: passo a passo",
     excerpt: "Veja os dados necessários, como revisar a nota fiscal de produto e acompanhar a autorização da SEFAZ antes de compartilhar o DANFE e o XML.",
     date: "12 Jan 2026",
     updatedAt: "14 Nov 2026",
@@ -1048,7 +1048,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "carta-correcao-eletronica",
     category: "Notas Fiscais",
-    title: "Carta de Correção Eletrônica (CC-e): o que pode e o que não pode corrigir",
+    title: "Carta de Correção Eletrônica: o que pode corrigir",
     excerpt: "Entenda os limites da CC-e na NF-e, quais informações não podem ser alteradas e quando avaliar outro procedimento fiscal.",
     date: "12 Fev 2026",
     updatedAt: "14 Nov 2026",
@@ -1084,7 +1084,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "cancelamento-nfe",
     category: "Notas Fiscais",
-    title: "Cancelamento de NF-e: prazo, motivos e o que fazer após o prazo",
+    title: "Cancelamento de NF-e: prazo e alternativas",
     excerpt: "Entenda quando cancelar uma NF-e, por que o prazo varia conforme a UF e quais alternativas avaliar quando a operação não aconteceu.",
     date: "02 Fev 2026",
     updatedAt: "14 Nov 2026",
@@ -1128,7 +1128,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "manifestacao-destinatario",
     category: "Notas Fiscais",
-    title: "Manifestação do destinatário: por que ela protege sua empresa",
+    title: "Manifestação do destinatário: como funciona",
     excerpt:
       "Ciência, confirmação, desconhecimento e operação não realizada — o que cada evento significa e como automatizar.",
     date: "22 Jan 2026",
@@ -1150,7 +1150,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "reforma-tributaria-cbs-ibs",
     category: "Notas Fiscais",
-    title: "Reforma tributária: o que muda com CBS e IBS na sua NFe",
+    title: "Reforma Tributária: o que muda com IBS e CBS",
     excerpt:
       "Fim do PIS/COFINS/ICMS/ISS e a chegada de CBS e IBS — cronograma e ajustes no XML da nota fiscal.",
     date: "15 Jan 2026",
@@ -1180,7 +1180,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ciot-contratacao-autonomos",
     category: "Transporte",
-    title: "CIOT: como contratar transportador autônomo sem risco",
+    title: "CIOT: contratação de transportador autônomo",
     excerpt:
       "Código Identificador da Operação de Transporte — quando é obrigatório e como emitir sem esquecimento.",
     date: "18 Fev 2026",
@@ -1270,7 +1270,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "rntrc-transportadora",
     category: "Transporte",
-    title: "RNTRC: como manter sua transportadora regular na ANTT",
+    title: "RNTRC: regularidade da transportadora na ANTT",
     excerpt:
       "Registro Nacional do Transportador Rodoviário de Cargas — cadastro, renovação e vínculo com veículos.",
     date: "10 Jan 2026",
@@ -1423,7 +1423,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nfse-mei-2027-como-emitir",
     category: "Notas Fiscais",
-    title: "NFS-e para MEI: regras de emissão no padrão nacional",
+    title: "NFS-e para MEI: regras do padrão nacional",
     excerpt: "Entenda quando o MEI deve emitir NFS-e, a regra do padrão nacional e os cuidados para registrar serviços em 2026 e 2027.",
     date: "22 Out 2026",
     updatedAt: "14 Nov 2026",
@@ -1454,7 +1454,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "mei-nota-fiscal-pessoa-fisica-2027",
     category: "Notas Fiscais",
-    title: "MEI precisa emitir nota fiscal para pessoa física? Entenda a regra",
+    title: "MEI precisa emitir nota fiscal para pessoa física?",
     excerpt: "Saiba quando o MEI deve emitir NFS-e para empresas e quando a emissão para consumidor pessoa física é facultativa.",
     date: "22 Out 2026",
     updatedAt: "14 Nov 2026",
@@ -1487,7 +1487,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "como-emitir-nfe-passo-a-passo-2027",
     category: "Notas Fiscais",
-    title: "Como emitir nota fiscal eletrônica (NF-e): passo a passo para empresas",
+    title: "Como emitir NF-e: passo a passo para empresas",
     excerpt: "Aprenda o fluxo básico de emissão de NF-e, os cadastros que precisam estar corretos e como reduzir rejeições antes de transmitir à SEFAZ.",
     date: "22 Out 2026",
     readMin: 7,
@@ -1520,7 +1520,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "emissao-nfse-empresas-padrao-nacional",
     category: "Notas Fiscais",
-    title: "NFS-e nacional para ME e EPP do Simples: regra em vigor",
+    title: "NFS-e nacional: regras para ME e EPP do Simples",
     excerpt: "Entenda a obrigatoriedade do Emissor Nacional da NFS-e para microempresas e empresas de pequeno porte optantes pelo Simples Nacional desde 1º de novembro de 2026.",
     date: "22 Out 2026",
     updatedAt: "14 Nov 2026",
@@ -1585,7 +1585,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ibs-cbs-reforma-tributaria-nota-fiscal-2027",
     category: "Notas Fiscais",
-    title: "IBS e CBS na nota fiscal em 2027: o que muda com a Reforma Tributária",
+    title: "IBS e CBS na nota fiscal em 2027: o que muda",
     excerpt: "Entenda a diferença entre IBS e CBS, o cronograma da Reforma Tributária e como preparar seu sistema emissor para as novas informações fiscais.",
     date: "22 Out 2026",
     readMin: 7,

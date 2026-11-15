@@ -91,7 +91,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "nfse",
     title: "NFSe — Nota Fiscal de Serviço",
     seoTitle: "Emissor de NFS-e Online para Serviços | EmitaGo",
-    description: "Emita NFS-e online para sua empresa. Integração com mais de 1.600 municípios atendidos; confirme a cobertura e o padrão aplicável ao seu enquadramento, inclusive as regras nacionais do Simples Nacional. R$ 60 pré-pagos por CNPJ no mês de uso.",
+    description: "Emita NFS-e online com integração a mais de 1.600 municípios. Consulte a cobertura e o padrão aplicável ao seu CNPJ.",
     h1: "Emissor de NFS-e online para prestadores de serviços",
     intro: "Emita Nota Fiscal de Serviço Eletrônica (NFS-e) pela internet e organize clientes, serviços, dados da prestação e documentos fiscais em um só lugar. O EmitaGo possui integração com mais de 1.600 municípios. Desde 1º de novembro de 2026, ME e EPP optantes pelo Simples Nacional devem utilizar o padrão nacional; confirme com nossa equipe se a integração disponível atende ao seu enquadramento, município e operação antes de começar.",
     benefits: ["Emissão de NFS-e online pelo navegador", "Integração com mais de 1.600 municípios atendidos, conforme cobertura disponível", "Cadastro de clientes, tomadores e serviços", "Organização do histórico e dos documentos fiscais emitidos", "Acesso online por computador, tablet e celular compatíveis"],
@@ -110,7 +110,7 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "nfpe",
     title: "NFPe — Nota Fiscal do Produtor Rural",
-    seoTitle: "NFPe Online: emissão de Nota Fiscal do Produtor Rural | EmitaGo",
+    seoTitle: "NFP-e online: nota fiscal do produtor rural | EmitaGo",
     description: "Emissor de NFP-e para produtor rural, conforme operação e regras estaduais. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
     h1: "NFPe online para o produtor rural",
     intro: "Centralize a emissão e a organização dos documentos fiscais da produção rural, com acesso online e rotina simplificada.",
