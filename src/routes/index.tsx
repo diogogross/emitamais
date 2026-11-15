@@ -107,7 +107,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://www.emitago.com.br/" },
       { rel: "alternate", hrefLang: "pt-BR", href: "https://www.emitago.com.br/" },
-      { rel: "preload", as: "image", href: heroPerson, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: heroPerson, imageSrcSet: `${heroPerson.replace("w=1280", "w=640")} 640w, ${heroPerson} 1280w`, imageSizes: "100vw", fetchpriority: "high" },
     ],
     scripts: [
       {
@@ -1339,6 +1339,8 @@ function HeroFullBleed({
       {/* The image remains inside the slide on every viewport. On mobile it stays in the visual composition instead of entering normal flow. */}
       <img
         src={image}
+        srcSet={`${image.replace("w=1280", "w=640")} 640w, ${image} 1280w`}
+        sizes="100vw"
         alt={alt}
         {...(eager
           ? { fetchPriority: "high" as const, decoding: "async" as const }
