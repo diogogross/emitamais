@@ -22,7 +22,7 @@ export const Route = createFileRoute("/blog/")({
       {
         name: "description",
         content:
-          "Guias práticos sobre NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado Digital para empresas, transportadoras e contadores.",
+          "Artigos atualizados sobre Reforma Tributária 2027, IBS, CBS, NF-e, NFC-e, NFS-e, CT-e, MDF-e e Certificado Digital para empresas e contadores.",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:locale", content: "pt_BR" },
@@ -30,12 +30,12 @@ export const Route = createFileRoute("/blog/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.emitago.com.br/blog" },
       { property: "og:title", content: "Blog Fiscal — NFe, NFCe, CTe, MDFe e Certificado Digital A1" },
-      { property: "og:description", content: "Guias práticos sobre NFe, NFCe, NFSe, CTe, MDFe, CIOT e Certificado Digital A1 para empresas e profissionais." },
+      { property: "og:description", content: "Artigos sobre Reforma Tributária 2027, IBS, CBS, NF-e, NFC-e, NFS-e, CT-e, MDF-e e Certificado Digital A1 para empresas e profissionais." },
       { property: "og:image", content: blogCoverImage },
       { property: "og:image:alt", content: blogPosts[0].title },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Blog Fiscal — EmitaGo" },
-      { name: "twitter:description", content: "Guias sobre NFe, NFCe, CTe, MDFe e Certificado Digital A1." },
+      { name: "twitter:description", content: "Guias sobre IBS, CBS, Reforma Tributária 2027, NF-e, NFC-e, NFS-e, CT-e e MDF-e." },
       { name: "twitter:image", content: blogCoverImage },
       { name: "twitter:image:alt", content: blogPosts[0].title },
     ],
