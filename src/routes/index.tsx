@@ -66,12 +66,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Sistema de Notas Fiscais Online | EmitaGo"
+        title: "Emissor de Notas Fiscais Online por R$ 60 | EmitaGo"
       },
       {
         name: "description",
         content:
-          "Sistema de notas fiscais online para emitir NF-e, NFC-e, NFS-e, CT-e e outros documentos. R$ 60 pré-pagos por CNPJ ativo no mês de uso.",
+          "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. R$ 60 pré-pagos por CNPJ no mês de uso, com emissão ilimitada e sem fidelidade.",
       },
       {
         name: "robots",
@@ -91,17 +91,17 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Conheça um sistema de notas fiscais online para empresas: NF-e, NFC-e, NFS-e, CT-e e mais. Pré-pago por CNPJ ativo, sem fidelidade.",
+          "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. R$ 60 pré-pagos por CNPJ no mês de uso, com emissão ilimitada e sem fidelidade.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "EmitaGo | Sistema de Notas Fiscais Online",
+        content: "Emissor de Notas Fiscais Online por R$ 60 | EmitaGo",
       },
       {
         name: "twitter:description",
         content:
-          "Sistema online para emitir NF-e, NFC-e, NFS-e e documentos de transporte. Pague antecipadamente apenas pelo CNPJ que usar.",
+          "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. Pague R$ 60 antecipados por CNPJ no mês de uso, sem fidelidade.",
       },
     ],
     links: [
