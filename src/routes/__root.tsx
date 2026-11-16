@@ -101,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Emissor de Notas Fiscais Online por R$ 60 | EmitaGo" },
       { property: "og:description", content: "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. R$ 60 pré-pagos por CNPJ no mês de uso, sem fidelidade." },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Emissor de Notas Fiscais Online | NFe, NFCe, NFSe, CTe e MDFe" },
+      { name: "twitter:title", content: "Emissor de Notas Fiscais Online por R$ 60 | EmitaGo" },
       { name: "twitter:description", content: "NFe, NFCe, NFSe, CTe, MDFe e CIOT online. Certificado Digital A1 CPF/CNPJ com emissão online." },
       { property: "og:image", content: absoluteOgImage },
       { property: "og:image:alt", content: "EmitaGo — emissor de notas fiscais online" },
