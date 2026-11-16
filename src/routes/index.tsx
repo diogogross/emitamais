@@ -1328,10 +1328,10 @@ function HeroFullBleed({
   imagePosition?: string;
 }) {
   const CtaEl: any = "a";
+  const isExternalCta = (ctaHref || WHATSAPP_URL).startsWith("http");
   const ctaProps: any = {
-    href: WHATSAPP_URL,
-    target: "_blank",
-    rel: "noopener noreferrer",
+    href: ctaHref || WHATSAPP_URL,
+    ...(isExternalCta ? { target: "_blank", rel: "noopener noreferrer" } : {}),
   };
   return (
     <div className="relative overflow-hidden h-[560px] md:h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)]">
