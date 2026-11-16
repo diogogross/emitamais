@@ -23,6 +23,9 @@ function savePrefs(p: Prefs) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
   } catch {}
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent("cookie-consent-changed", { detail: p }));
+  }
 }
 
 export function CookieConsent() {
@@ -32,18 +35,26 @@ export function CookieConsent() {
 
   useEffect(() => {
     const existing = loadPrefs();
-    if (!existing) {
-      const t = setTimeout(() => setOpen(true), 800);
-      return () => clearTimeout(t);
-    } else {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+
+    if (existing) {
       setPrefs(existing);
+    } else {
+      timer = setTimeout(() => setOpen(true), 800);
     }
+
     const openHandler = () => {
+      const latest = loadPrefs();
+      if (latest) setPrefs(latest);
       setShowPrefs(true);
       setOpen(true);
     };
+
     window.addEventListener("open-cookie-preferences", openHandler);
-    return () => window.removeEventListener("open-cookie-preferences", openHandler);
+    return () => {
+      if (timer) clearTimeout(timer);
+      window.removeEventListener("open-cookie-preferences", openHandler);
+    };
   }, []);
 
   const acceptAll = () => {
