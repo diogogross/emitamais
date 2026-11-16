@@ -26,6 +26,606 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+{
+  "slug": "rejeicao-nfe-como-identificar-e-corrigir",
+  "category": "Notas Fiscais",
+  "title": "Rejeição de NF-e: principais causas e como corrigir",
+  "excerpt": "Entenda por que a SEFAZ rejeita uma NF-e, como interpretar o código de retorno e quais dados revisar antes de transmitir novamente.",
+  "date": "16 Nov 2026",
+  "updatedAt": "16 Nov 2026",
+  "readMin": 7,
+  "image": "/images/blog/nfe-rejeicao.svg",
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Uma rejeição de NF-e acontece quando a Secretaria da Fazenda identifica que a solicitação transmitida não atende a uma regra de validação. O retorno informa um código e uma mensagem que ajudam a localizar o problema. A rejeição não significa que a nota foi autorizada: antes de tentar novamente, é importante entender a causa, revisar os dados e corrigir a informação indicada."
+    },
+    {
+      "type": "heading",
+      "text": "Rejeição é diferente de autorização e denegação"
+    },
+    {
+      "type": "paragraph",
+      "text": "Acompanhe sempre o status retornado pelo ambiente autorizador. Uma NF-e rejeitada não recebeu autorização de uso e, em regra, precisa ser corrigida e transmitida novamente. Já uma nota autorizada possui protocolo de autorização. Se o retorno indicar outra situação, como denegação ou duplicidade, não trate todos os casos como se fossem o mesmo erro: consulte a mensagem e o procedimento previsto para aquele evento."
+    },
+    {
+      "type": "heading",
+      "text": "Causas comuns que merecem conferência"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cadastro do emitente ou destinatário com CNPJ, CPF, inscrição estadual ou endereço incompatível com a operação.",
+        "NCM, CFOP, CST ou CSOSN incompatíveis com o produto, o regime ou a natureza da operação.",
+        "Totais de produtos, frete, desconto, base de cálculo ou tributos que não fecham com a soma dos itens.",
+        "Certificado digital vencido, incompatível ou com identificação diferente da exigida para o emitente.",
+        "Campos obrigatórios ausentes, formato de dados inválido ou leiaute desatualizado."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Como interpretar o código de rejeição"
+    },
+    {
+      "type": "paragraph",
+      "text": "Comece pelo código numérico e pela descrição exata retornada pela SEFAZ. Identifique se o problema está no cadastro, no produto, na tributação, nos totais ou na assinatura e transmissão. Compare o campo indicado com o cadastro original e com a documentação técnica vigente. Uma mensagem pode apontar apenas a validação que falhou; a causa real pode estar em um dado anterior que alimenta aquele campo."
+    },
+    {
+      "type": "heading",
+      "text": "Checklist antes de transmitir novamente"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Confira se está trabalhando com a nota e a chave de acesso corretas.",
+        "Revise o cadastro do cliente e do emitente, sem alterar dados apenas para tentar passar na validação.",
+        "Confirme com a contabilidade o CFOP e o enquadramento tributário da operação.",
+        "Recalcule os valores dos itens e os totalizadores da nota.",
+        "Verifique a validade do certificado digital e a versão do leiaute usada pelo emissor.",
+        "Leia o novo retorno após a transmissão e confirme a autorização antes de liberar a mercadoria."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Evite corrigir código fiscal por tentativa e erro"
+    },
+    {
+      "type": "paragraph",
+      "text": "CFOP, NCM, CST e CSOSN não devem ser escolhidos apenas para eliminar uma rejeição. A classificação depende da mercadoria, da operação, da origem e destino, do regime tributário e de outras regras aplicáveis. Quando o retorno envolver tratamento fiscal, valide a alteração com o contador ou responsável fiscal. Isso evita substituir um erro por outro e reduz o risco de emitir um documento com informação incorreta."
+    },
+    {
+      "type": "heading",
+      "text": "Como um emissor organizado ajuda na rotina"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ao avaliar um emissor de NF-e, verifique se ele apresenta o código e a mensagem retornados pela SEFAZ, permite localizar a nota, revisar os dados e consultar o status final. Também confira como ficam disponíveis o XML autorizado e o DANFE. O EmitaGo oferece emissão online de NF-e modelo 55, com preço pré-pago de R$ 60 por CNPJ ativo no mês de uso e emissão ilimitada durante o mês pago. Consulte a página da solução para conhecer o fluxo."
+    },
+    {
+      "type": "heading",
+      "text": "Perguntas frequentes"
+    },
+    {
+      "type": "heading",
+      "text": "Posso transmitir a mesma NF-e várias vezes até autorizar?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Não é recomendável retransmitir sem analisar o retorno. Primeiro identifique o motivo, corrija a informação necessária e confira a situação da chave para evitar duplicidade ou inconsistência."
+    },
+    {
+      "type": "heading",
+      "text": "Uma NF-e rejeitada precisa ser cancelada?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A rejeição significa que aquela solicitação não recebeu autorização de uso. Não confunda rejeição com uma NF-e já autorizada que precisa de evento de cancelamento."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional da NF-e — Perguntas frequentes sobre emissão e autorização",
+      "href": "https://www.nfe.fazenda.gov.br/portal/perguntasFrequentes.aspx"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional da NF-e — Manual de Orientação do Contribuinte",
+      "href": "https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=ndIjl+iEFdE="
+    }
+  ]
+},
+{
+  "slug": "xml-nfe-o-que-e-como-baixar-e-guardar",
+  "category": "Notas Fiscais",
+  "title": "XML da NF-e: o que é, como obter e por que guardar",
+  "excerpt": "Saiba por que o XML é o arquivo fiscal da NF-e, qual é a função do DANFE e como organizar os documentos para a contabilidade.",
+  "date": "16 Nov 2026",
+  "updatedAt": "16 Nov 2026",
+  "readMin": 6,
+  "image": "/images/blog/nfe-xml.svg",
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Quando uma empresa emite ou recebe uma Nota Fiscal Eletrônica, é comum falar em XML e DANFE como se fossem a mesma coisa. Eles estão relacionados, mas têm funções diferentes. O XML contém os dados estruturados da NF-e e representa o documento eletrônico autorizado; o DANFE é a representação gráfica auxiliar usada para facilitar a consulta e acompanhar a circulação da mercadoria, conforme as regras aplicáveis."
+    },
+    {
+      "type": "heading",
+      "text": "O que é o XML da NF-e?"
+    },
+    {
+      "type": "paragraph",
+      "text": "XML é o formato eletrônico estruturado que reúne as informações da operação: emitente, destinatário, produtos, quantidades, valores, tributos, dados de transporte e outros campos do leiaute. O arquivo é assinado digitalmente e transmitido à SEFAZ para validação e autorização. Quando autorizado, deve ser considerado junto com o protocolo correspondente. Uma imagem ou PDF da nota não substitui o arquivo eletrônico original."
+    },
+    {
+      "type": "heading",
+      "text": "XML e DANFE: qual é a diferença?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "XML: arquivo eletrônico com os dados fiscais estruturados da NF-e e sua assinatura digital.",
+        "DANFE: representação gráfica auxiliar, que facilita a leitura e contém a chave de acesso para consulta.",
+        "Protocolo de autorização: retorno que comprova a autorização de uso concedida pelo ambiente autorizador."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "O Portal Nacional da NF-e esclarece que o DANFE não se confunde com a NF-e. A validade e a autenticidade do documento devem ser verificadas por consulta eletrônica. O DANFE ajuda pessoas e transportadores a consultar os dados, mas não deve ser tratado como substituto do XML autorizado."
+    },
+    {
+      "type": "heading",
+      "text": "Como obter o XML de uma NF-e"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para uma nota emitida pela sua empresa, utilize o sistema emissor para localizar o documento autorizado e baixar ou exportar o XML e o protocolo. Para uma nota recebida, solicite o arquivo ao fornecedor ou utilize os meios oficiais de consulta e manifestação disponíveis ao destinatário, observando as regras de acesso. Guarde a chave de acesso e confirme se o arquivo corresponde à nota correta."
+    },
+    {
+      "type": "heading",
+      "text": "Por que enviar o XML ao destinatário e à contabilidade?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O emitente deve disponibilizar o arquivo XML e o protocolo de autorização ao destinatário após a autorização de uso, conforme a disciplina nacional da NF-e. O XML também facilita a escrituração e a conferência de dados pela contabilidade, reduzindo a necessidade de redigitação. Combine com o contador um processo seguro para receber, classificar e armazenar os arquivos."
+    },
+    {
+      "type": "heading",
+      "text": "Como organizar e preservar os arquivos"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Mantenha o XML autorizado e o protocolo juntos, associados à chave de acesso.",
+        "Organize por CNPJ, estabelecimento, ano e mês, com nomes de arquivo padronizados.",
+        "Faça cópias de segurança em local protegido e teste periodicamente a recuperação.",
+        "Restrinja o acesso aos documentos e evite enviar arquivos fiscais por canais públicos.",
+        "Defina com a contabilidade a política de guarda e os prazos legais aplicáveis ao seu caso."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "O que conferir antes de arquivar"
+    },
+    {
+      "type": "paragraph",
+      "text": "Verifique se o XML está completo, se a assinatura e a autorização podem ser consultadas e se os dados coincidem com a operação. Não arquive apenas o DANFE ou uma captura de tela. Em caso de divergência entre o PDF e o XML, a informação fiscal estruturada do documento eletrônico é a referência que precisa ser analisada."
+    },
+    {
+      "type": "heading",
+      "text": "Como o EmitaGo se encaixa nessa rotina"
+    },
+    {
+      "type": "paragraph",
+      "text": "O EmitaGo oferece emissão online de NF-e e disponibilização de DANFE e XML no fluxo do documento. A proposta comercial é pré-paga: R$ 60 por CNPJ ativo no mês de uso, com emissão ilimitada durante o mês pago e sem fidelidade. Conheça a solução e confirme com a equipe os recursos disponíveis para a organização dos documentos da sua operação."
+    },
+    {
+      "type": "heading",
+      "text": "Perguntas frequentes"
+    },
+    {
+      "type": "heading",
+      "text": "Posso guardar somente o DANFE em PDF?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Não trate o PDF como substituto do XML da NF-e. O DANFE é a representação auxiliar; mantenha o arquivo eletrônico e o protocolo de autorização conforme as obrigações aplicáveis."
+    },
+    {
+      "type": "heading",
+      "text": "O destinatário tem direito de receber o XML?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O Portal Nacional da NF-e orienta que o emitente encaminhe ou disponibilize o XML e o protocolo de autorização ao destinatário após a autorização de uso."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional da NF-e — Perguntas frequentes sobre envio do XML e DANFE",
+      "href": "https://www.nfe.fazenda.gov.br/portal/perguntasFrequentes.aspx"
+    },
+    {
+      "type": "source",
+      "label": "CONFAZ — Ajuste SINIEF 07/05, regras gerais da NF-e",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/ajustes/2005/AJ_007_05"
+    }
+  ]
+},
+{
+  "slug": "danfe-o-que-e-para-que-serve-e-como-consultar",
+  "category": "Notas Fiscais",
+  "title": "DANFE: o que é, para que serve e como consultar uma NF-e",
+  "excerpt": "Entenda a função do DANFE, quando ele acompanha a mercadoria e por que não substitui o XML da Nota Fiscal Eletrônica.",
+  "date": "16 Nov 2026",
+  "updatedAt": "16 Nov 2026",
+  "readMin": 6,
+  "image": "/images/blog/nfe-danfe.svg",
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "DANFE é a sigla de Documento Auxiliar da Nota Fiscal Eletrônica. Ele apresenta de forma simplificada informações da NF-e e facilita a consulta do documento eletrônico. No transporte de mercadorias, o DANFE acompanha a operação nas hipóteses previstas na legislação. Apesar de ser muito utilizado no dia a dia, ele não é a própria nota fiscal eletrônica."
+    },
+    {
+      "type": "heading",
+      "text": "Qual é a função do DANFE?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O DANFE permite visualizar dados importantes da operação, como emitente, destinatário, produtos, valores e chave de acesso. Essa chave permite consultar a NF-e no ambiente autorizador ou no Portal Nacional. O documento auxiliar ajuda a conferir a operação e a acompanhar a circulação da mercadoria, sem substituir os dados eletrônicos assinados e autorizados."
+    },
+    {
+      "type": "heading",
+      "text": "DANFE e XML não são a mesma coisa"
+    },
+    {
+      "type": "paragraph",
+      "text": "A NF-e existe como documento eletrônico. O XML contém os dados estruturados e a assinatura digital; o DANFE é uma representação gráfica simplificada. O Portal Nacional da NF-e destaca que o DANFE não se confunde com a NF-e. Portanto, salvar somente o PDF não resolve a necessidade de manter o arquivo XML e o protocolo de autorização."
+    },
+    {
+      "type": "heading",
+      "text": "Quando o DANFE deve acompanhar a mercadoria?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Na rotina comum de circulação de mercadorias documentadas por NF-e, o DANFE correspondente acompanha o trânsito, observadas as regras e modalidades previstas para a operação. A impressão deve refletir o documento eletrônico autorizado e não pode conter informações divergentes do XML. Existem modalidades e situações específicas, inclusive de contingência, que exigem atenção às regras próprias."
+    },
+    {
+      "type": "heading",
+      "text": "Como consultar uma NF-e usando o DANFE"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Localize a chave de acesso impressa no DANFE.",
+        "Acesse a consulta oficial da NF-e no Portal Nacional ou no ambiente da SEFAZ autorizadora.",
+        "Informe a chave de acesso e conclua a validação solicitada pelo portal.",
+        "Confira a situação do documento, a autorização e os dados apresentados.",
+        "Se houver divergência, compare o XML e procure o emitente ou a contabilidade."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "O que conferir antes de enviar ou imprimir"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Confirme se a NF-e recebeu autorização de uso.",
+        "Verifique se a chave de acesso do DANFE corresponde ao XML.",
+        "Confira se destinatário, itens e valores estão legíveis e coerentes.",
+        "Quando houver várias páginas, confira a numeração e a chave em todas elas.",
+        "Mantenha o XML e o protocolo de autorização arquivados separadamente."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "DANFE simplificado e situações especiais"
+    },
+    {
+      "type": "paragraph",
+      "text": "O leiaute do DANFE pode variar conforme o tipo de operação e as regras técnicas aplicáveis. O Portal Nacional publica manuais e notas técnicas que tratam de formatos simplificados e procedimentos de contingência. Não utilize um modelo antigo ou improvisado sem verificar a versão vigente e o cenário em que ele pode ser usado."
+    },
+    {
+      "type": "heading",
+      "text": "Como gerar o DANFE na rotina da empresa"
+    },
+    {
+      "type": "paragraph",
+      "text": "Um emissor de NF-e deve manter coerência entre o XML autorizado e sua representação gráfica. Ao avaliar um sistema, verifique se é possível localizar a nota, consultar seu status e obter o DANFE e o XML correspondentes. O EmitaGo oferece emissão online de NF-e com disponibilização de DANFE e XML, por R$ 60 pré-pagos por CNPJ ativo no mês de uso. Consulte a página da solução para conhecer as condições."
+    },
+    {
+      "type": "heading",
+      "text": "Perguntas frequentes"
+    },
+    {
+      "type": "heading",
+      "text": "O DANFE tem validade sem a autorização da NF-e?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O DANFE é uma representação auxiliar e não substitui a autorização de uso da NF-e. A situação do documento deve ser verificada por consulta eletrônica."
+    },
+    {
+      "type": "heading",
+      "text": "Posso enviar o DANFE por e-mail ao cliente?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O DANFE pode ser compartilhado como representação auxiliar, mas o emitente também deve disponibilizar o XML e o protocolo de autorização ao destinatário conforme as regras da NF-e."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional da NF-e — Perguntas frequentes sobre DANFE, consulta e autorização",
+      "href": "https://www.nfe.fazenda.gov.br/portal/perguntasFrequentes.aspx"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional da NF-e — documentação técnica e manuais",
+      "href": "https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=ndIjl+iEFdE="
+    }
+  ]
+},
+{
+  "slug": "cfop-na-nfe-o-que-e-como-escolher",
+  "category": "Notas Fiscais",
+  "title": "CFOP na NF-e: o que significa e como evitar erros",
+  "excerpt": "Entenda a função do CFOP na nota fiscal, o que considerar na escolha do código e por que ele deve refletir a operação real.",
+  "date": "16 Nov 2026",
+  "updatedAt": "16 Nov 2026",
+  "readMin": 7,
+  "image": "/images/blog/nfe-cfop.svg",
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "CFOP significa Código Fiscal de Operações e Prestações. Na NF-e, ele identifica a natureza da operação ou prestação registrada no documento. A escolha do código influencia a forma como a operação é classificada e precisa refletir o que realmente aconteceu: venda, compra, devolução, transferência, remessa ou outra hipótese prevista na legislação."
+    },
+    {
+      "type": "heading",
+      "text": "Para que serve o CFOP na NF-e?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O CFOP ajuda a identificar se a operação é de entrada ou saída, se ocorre dentro do estado, entre estados ou com o exterior e qual é a natureza da movimentação. Ele não deve ser escolhido apenas pelo nome do produto ou por um código que outra empresa utiliza. Duas operações envolvendo a mesma mercadoria podem exigir tratamento diferente conforme a finalidade, os participantes e o contexto fiscal."
+    },
+    {
+      "type": "heading",
+      "text": "O que analisar antes de escolher o código"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Se a empresa está registrando uma entrada ou uma saída.",
+        "Se a operação é interna, interestadual ou destinada ao exterior.",
+        "Se é venda, compra, devolução, transferência, remessa, retorno ou outra natureza.",
+        "Quem são os participantes e qual é a finalidade econômica da movimentação.",
+        "O regime tributário, a legislação estadual e as particularidades da mercadoria ou operação."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Por que um CFOP incorreto pode gerar rejeição?"
+    },
+    {
+      "type": "paragraph",
+      "text": "As regras de validação da NF-e verificam combinações entre CFOP, tipo de operação, UF, destinatário e outros campos. O Manual de Orientação do Contribuinte apresenta códigos de rejeição associados a incompatibilidades, como CFOP de entrada informado em NF-e de saída ou divergências entre a operação e a localização dos participantes. A validação técnica não substitui a análise fiscal: um documento pode passar por determinada validação e ainda assim exigir revisão de sua classificação."
+    },
+    {
+      "type": "heading",
+      "text": "Exemplos de situações que não devem ser confundidas"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Venda de mercadoria não é a mesma situação de transferência entre estabelecimentos.",
+        "Devolução de compra e devolução de venda possuem contextos e participantes diferentes.",
+        "Remessa para conserto, demonstração ou industrialização não deve ser tratada automaticamente como venda.",
+        "Operação interestadual exige atenção à UF de origem e destino e às regras aplicáveis."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Como revisar o CFOP antes de transmitir"
+    },
+    {
+      "type": "paragraph",
+      "text": "Descreva a operação em linguagem simples e confirme sua natureza com a contabilidade. Depois confira se o CFOP selecionado corresponde ao tipo de entrada ou saída, ao destino e à finalidade. Revise também os demais campos fiscais relacionados, como CST ou CSOSN, NCM e informações tributárias. Se o sistema apresentar rejeição, leia o código e a mensagem antes de alterar qualquer cadastro."
+    },
+    {
+      "type": "heading",
+      "text": "Evite copiar CFOP de outra nota"
+    },
+    {
+      "type": "paragraph",
+      "text": "Uma nota antiga pode servir como referência, mas não é prova de que o mesmo código se aplica à nova operação. O cliente pode ser diferente, a mercadoria pode ter outra finalidade, a UF pode mudar ou a operação pode ter sido classificada incorretamente no passado. Padronize os cenários recorrentes com orientação do responsável fiscal e documente quando houver exceções."
+    },
+    {
+      "type": "heading",
+      "text": "O papel do emissor de NF-e"
+    },
+    {
+      "type": "paragraph",
+      "text": "Um sistema emissor ajuda a manter cadastros e dados da operação organizados, mas a empresa precisa fornecer informações corretas e validar o tratamento tributário. Ao escolher um emissor, confira se ele permite revisar os campos antes da transmissão, consultar o retorno da SEFAZ e acessar o XML e o DANFE. O EmitaGo oferece emissão online de NF-e modelo 55 e custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, com emissão ilimitada no período pago."
+    },
+    {
+      "type": "heading",
+      "text": "Perguntas frequentes"
+    },
+    {
+      "type": "heading",
+      "text": "O CFOP é definido somente pelo produto?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Não. A natureza da operação, a direção da movimentação, a UF, a finalidade e as regras fiscais também precisam ser consideradas."
+    },
+    {
+      "type": "heading",
+      "text": "Posso alterar o CFOP depois que a NF-e foi autorizada?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Uma NF-e autorizada não pode ser editada livremente. A providência depende do tipo de erro e da situação da operação; consulte a contabilidade para avaliar o procedimento permitido."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional da NF-e — Manual de Orientação do Contribuinte e regras de validação",
+      "href": "https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=ndIjl+iEFdE="
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional da NF-e — Perguntas frequentes sobre emissão e correção",
+      "href": "https://www.nfe.fazenda.gov.br/portal/perguntasFrequentes.aspx"
+    }
+  ]
+},
+{
+  "slug": "nota-fiscal-devolucao-como-emitir-nfe",
+  "category": "Notas Fiscais",
+  "title": "NF-e de devolução: quando emitir e o que conferir",
+  "excerpt": "Veja a diferença entre devolução e cancelamento, quais informações revisar e por que a nota original deve orientar a operação.",
+  "date": "16 Nov 2026",
+  "updatedAt": "16 Nov 2026",
+  "readMin": 7,
+  "image": "/images/blog/nfe-devolucao.svg",
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "A devolução de mercadoria ocorre quando um produto retorna ao fornecedor ou à empresa que realizou a venda, conforme a situação da operação. A documentação fiscal precisa representar o movimento real e manter vínculo com a operação original. Por isso, uma NF-e de devolução não deve ser confundida com o cancelamento de uma nota fiscal já emitida."
+    },
+    {
+      "type": "heading",
+      "text": "Devolução é diferente de cancelamento"
+    },
+    {
+      "type": "paragraph",
+      "text": "O cancelamento é um evento aplicável a uma NF-e autorizada quando as condições legais são atendidas, considerando a situação da operação e os prazos e regras da unidade federada. A devolução, por sua vez, registra o retorno de mercadoria em uma operação própria. Se a mercadoria já circulou ou a operação ocorreu, não presuma que basta cancelar a nota original: a contabilidade deve orientar o procedimento fiscal correto."
+    },
+    {
+      "type": "heading",
+      "text": "Quando pode ser necessária uma NF-e de devolução?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Quando o comprador devolve mercadorias ao fornecedor, total ou parcialmente.",
+        "Quando ocorre retorno de mercadoria por recusa ou outra situação que exige documentação fiscal específica.",
+        "Quando a empresa precisa registrar a entrada ou saída de retorno conforme a natureza da operação.",
+        "Quando a legislação exige documento fiscal para acompanhar o retorno da mercadoria."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "A hipótese concreta importa. Uma devolução por desacordo comercial, uma recusa no recebimento e um retorno de mercadoria remetida para demonstração ou conserto podem ter tratamentos diferentes. Não aplique um único procedimento a todos os casos."
+    },
+    {
+      "type": "heading",
+      "text": "O que conferir na nota de devolução"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Identifique a NF-e original e informe a chave de acesso referenciada quando exigido.",
+        "Confira quem está emitindo o documento e se a operação é de entrada ou saída para aquele estabelecimento.",
+        "Revise os itens, quantidades e valores efetivamente devolvidos.",
+        "Valide CFOP, CST ou CSOSN e demais informações tributárias com a contabilidade.",
+        "Confira dados do emitente, destinatário, transporte e informações adicionais aplicáveis.",
+        "Verifique se a operação é total ou parcial e se todos os itens correspondem ao retorno real."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Devolução total e parcial"
+    },
+    {
+      "type": "paragraph",
+      "text": "Na devolução total, a documentação deve representar o retorno de todos os itens abrangidos pela operação original. Na parcial, registre somente os produtos e quantidades efetivamente devolvidos, observando a relação com a nota de origem. A base de cálculo, os valores e os campos tributários precisam seguir o tratamento fiscal aplicável; não copie os totais sem conferir o que está retornando."
+    },
+    {
+      "type": "heading",
+      "text": "Quem deve emitir a nota?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A responsabilidade pela emissão depende de quem está devolvendo, do perfil do remetente e destinatário, da operação original e das regras estaduais. Em algumas situações o próprio adquirente emite o documento de devolução; em outras, o fornecedor ou remetente precisa adotar procedimento específico. Confirme com a contabilidade antes de transmitir, especialmente quando o comprador não é contribuinte do ICMS ou quando há recusa e retorno."
+    },
+    {
+      "type": "heading",
+      "text": "Erros que merecem atenção"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Emitir documento sem referenciar corretamente a operação original, quando a referência é exigida.",
+        "Usar CFOP de venda em uma operação de devolução ou vice-versa.",
+        "Informar quantidades diferentes das efetivamente devolvidas.",
+        "Repetir automaticamente os tributos sem verificar o tratamento aplicável.",
+        "Tentar cancelar uma NF-e autorizada quando a situação exige documento de devolução ou outro procedimento."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Como organizar a emissão"
+    },
+    {
+      "type": "paragraph",
+      "text": "Antes de emitir, reúna a nota original, o motivo do retorno, a quantidade devolvida e a orientação fiscal. Depois confira os dados, transmita a NF-e e aguarde o retorno da SEFAZ. Guarde o XML autorizado, o protocolo e os documentos relacionados à movimentação. O EmitaGo oferece emissão online de NF-e modelo 55, com proposta pré-paga de R$ 60 por CNPJ ativo no mês de uso e emissões ilimitadas no período pago. Consulte a solução para conhecer o fluxo disponível."
+    },
+    {
+      "type": "heading",
+      "text": "Perguntas frequentes"
+    },
+    {
+      "type": "heading",
+      "text": "Devolução é a mesma coisa que carta de correção?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Não. A carta de correção eletrônica permite ajustar determinados campos dentro dos limites legais, mas não substitui o documento fiscal necessário para registrar uma devolução."
+    },
+    {
+      "type": "heading",
+      "text": "Posso devolver somente parte dos produtos?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sim, podem existir devoluções parciais, mas a NF-e deve representar apenas os itens e quantidades que efetivamente retornam, com tratamento fiscal validado."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional da NF-e — Perguntas frequentes sobre correção, cancelamento e emissão",
+      "href": "https://www.nfe.fazenda.gov.br/portal/perguntasFrequentes.aspx"
+    },
+    {
+      "type": "source",
+      "label": "CONFAZ — Ajuste SINIEF 07/05, regras gerais da NF-e",
+      "href": "https://www.confaz.fazenda.gov.br/legislacao/ajustes/2005/AJ_007_05"
+    }
+  ]
+},
+
   // ============ Série Reforma Tributária 2027 (+6) ============
   {
     "slug": "ibs-cbs-2027-lucro-real-presumido",
