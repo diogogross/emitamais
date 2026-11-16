@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
 {
   "slug": "rejeicao-nfe-como-identificar-e-corrigir",
   "category": "Notas Fiscais",
-  "title": "Rejeição de NF-e: principais causas e como corrigir",
+  "title": "Rejeição de NF-e: causas e como corrigir",
   "excerpt": "Entenda por que a SEFAZ rejeita uma NF-e, como interpretar o código de retorno e quais dados revisar antes de transmitir novamente.",
   "date": "16 Nov 2026",
   "updatedAt": "16 Nov 2026",
