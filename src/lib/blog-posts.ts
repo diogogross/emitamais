@@ -260,7 +260,7 @@ export const blogPosts: BlogPost[] = [
   ]
 },
 {
-  "slug": "danfe-o-que-e-para-que-serve-e-como-consultar",
+  "slug": "danfe-nfe-o-que-e-para-que-serve-e-como-consultar",
   "category": "Notas Fiscais",
   "title": "DANFE: o que é, para que serve e como consultar uma NF-e",
   "excerpt": "Entenda a função do DANFE, quando ele acompanha a mercadoria e por que não substitui o XML da Nota Fiscal Eletrônica.",

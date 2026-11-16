@@ -34,7 +34,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "Qual a diferença entre um emissor gratuito e um sistema emissor de NF-e?", answer: "A diferença depende dos recursos oferecidos. Ao comparar, avalie cadastro de produtos e clientes, regras fiscais, transmissão, consulta de autorização, geração de DANFE e XML, suporte, organização de documentos e custo total da operação." },
             { question: "Quanto custa emitir NF-e pelo EmitaGo?", answer: "O EmitaGo custa R$ 60 por CNPJ ativo no mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
     ],
-    relatedSlugs: ["nfe-passo-a-passo", "rejeicao-nfe-como-identificar-e-corrigir", "xml-nfe-o-que-e-como-baixar-e-guardar", "danfe-o-que-e-para-que-serve-e-como-consultar", "cfop-na-nfe-o-que-e-como-escolher", "nota-fiscal-devolucao-como-emitir-nfe", "carta-correcao-eletronica", "cancelamento-nfe"]
+    relatedSlugs: ["nfe-passo-a-passo", "rejeicao-nfe-como-identificar-e-corrigir", "xml-nfe-o-que-e-como-baixar-e-guardar", "danfe-nfe-o-que-e-para-que-serve-e-como-consultar", "cfop-na-nfe-o-que-e-como-escolher", "nota-fiscal-devolucao-como-emitir-nfe", "carta-correcao-eletronica", "cancelamento-nfe"]
   },
   {
     slug: "nfce",
