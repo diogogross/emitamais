@@ -86,7 +86,7 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://www.emitago.com.br/" },
       {
         property: "og:title",
-        content: "Sistema de Notas Fiscais Online | EmitaGo",
+        content: "Emissor de Notas Fiscais Online por R$ 60 | EmitaGo",
       },
       {
         property: "og:description",
