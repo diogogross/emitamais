@@ -411,9 +411,7 @@ function Index() {
           </div>
 
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#planos"
             className="hidden md:inline-flex group items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium hover:bg-white/5 transition"
           >
             Ver planos
@@ -442,7 +440,7 @@ function Index() {
               <a href="#certificado" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Certificado Digital</a>
               <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Planos</a>
               <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Blog</Link>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition">
+              <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition">
                 Ver planos <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
@@ -1141,7 +1139,7 @@ function Index() {
             >
               Começar agora <ArrowUpRight className="w-4 h-4" />
             </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
+            <a href="#planos" className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition">
               Ver planos e condições
             </a>
           </div>
@@ -1330,10 +1328,10 @@ function HeroFullBleed({
   imagePosition?: string;
 }) {
   const CtaEl: any = "a";
+  const isExternalCta = (ctaHref || WHATSAPP_URL).startsWith("http");
   const ctaProps: any = {
-    href: WHATSAPP_URL,
-    target: "_blank",
-    rel: "noopener noreferrer",
+    href: ctaHref || WHATSAPP_URL,
+    ...(isExternalCta ? { target: "_blank", rel: "noopener noreferrer" } : {}),
   };
   return (
     <div className="relative overflow-hidden h-[560px] md:h-[600px] animate-fade-in bg-[oklch(0.16_0.08_295)]">
@@ -1407,7 +1405,7 @@ function HeroSlide1() {
       titleAccent="para sua empresa."
       description="Emita NF-e para produtos, NFC-e para o varejo e NFS-e para serviços, além de documentos de transporte, em um único sistema online. Integração com mais de 1.600 municípios para NFS-e. R$ 60 pré-pagos por CNPJ ativo no mês de uso."
       ctaLabel="Conferir planos"
-      ctaHref={WHATSAPP_URL}
+      ctaHref="#planos"
       secondaryLabel="Ver o produto"
       secondaryHref="#produto"
       stats={[
