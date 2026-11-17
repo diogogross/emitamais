@@ -69,269 +69,67 @@ export const Route = createFileRoute("/parceiros")({
 });
 
 function PartnersPage() {
-  const [clients, setClients] = useState(20);
-  const [resalePrice, setResalePrice] = useState("69.90");
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const numericPrice = Math.max(0, Number(resalePrice) || 0);
-  const revenue = useMemo(() => clients * numericPrice, [clients, numericPrice]);
-  const cost = clients * 40;
-  const margin = revenue - cost;
-  const money = (value: number) =>
-    value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-
-  return (
-    <div className="min-h-screen overflow-x-hidden bg-[#090b18] text-white">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#090b18]/90 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navegação principal">
-          <Link to="/" className="flex items-center gap-3" aria-label="EmitaGo — página inicial">
-            <img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={142} height={44} className="h-10 w-auto object-contain" />
-            <span className="hidden border-l border-white/15 pl-3 text-xs font-semibold uppercase tracking-[0.18em] text-violet-200 sm:block">Parceiros</span>
-          </Link>
-          <div className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
-            <a href="#modelo" className="transition hover:text-white">Como funciona</a>
-            <a href="#vantagens" className="transition hover:text-white">Vantagens</a>
-            <a href="#simulador" className="transition hover:text-white">Simulador</a>
-            <a href="#duvidas" className="transition hover:text-white">Dúvidas</a>
-          </div>
-          <a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-full bg-violet-400 px-5 py-2.5 text-sm font-bold text-slate-950 transition hover:bg-violet-300 md:inline-flex">
-            Quero ser parceiro <ArrowUpRight className="h-4 w-4" />
-          </a>
-          <button type="button" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 md:hidden" aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={mobileOpen} onClick={() => setMobileOpen((open) => !open)}>
-            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </nav>
-        {mobileOpen && (
-          <div className="grid gap-1 border-t border-white/10 px-5 py-3 md:hidden">
-            {[
-              ["Como funciona", "#modelo"],
-              ["Vantagens", "#vantagens"],
-              ["Simulador", "#simulador"],
-              ["Dúvidas", "#duvidas"],
-            ].map(([label, href]) => (
-              <a key={href} href={href} onClick={() => setMobileOpen(false)} className="rounded-xl px-3 py-3 text-sm text-slate-200 hover:bg-white/5">{label}</a>
-            ))}
-            <a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="mt-2 rounded-xl bg-violet-400 px-4 py-3 text-center text-sm font-bold text-slate-950">Quero ser parceiro</a>
-          </div>
-        )}
-      </header>
-
-      <main>
-        <section className="relative isolate overflow-hidden">
-          <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_15%_15%,rgba(124,58,237,.32),transparent_45%),radial-gradient(ellipse_at_85%_70%,rgba(14,165,233,.16),transparent_42%),linear-gradient(135deg,#101326,#090b18_65%)]" />
-          <div className="absolute right-[-12rem] top-[-10rem] -z-10 h-[34rem] w-[34rem] rounded-full border border-violet-300/10" />
-          <div className="absolute right-[-7rem] top-[-5rem] -z-10 h-[24rem] w-[24rem] rounded-full border border-violet-300/10" />
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-16 md:pb-28 md:pt-24 lg:grid-cols-[1.02fr_.98fr] lg:px-8">
-            <div className="relative z-10">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-300/25 bg-violet-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-violet-200">
-                <Sparkles className="h-4 w-4" /> Programa de parceiros EmitaGo
-              </div>
-              <h1 className="max-w-3xl font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-                Sua carteira de clientes pode valer <span className="bg-gradient-to-r from-violet-300 via-fuchsia-200 to-sky-200 bg-clip-text text-transparent">muito mais.</span>
-              </h1>
-              <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">
-                Ofereça uma solução fiscal completa ao seu mercado, fortaleça o relacionamento com seus clientes e defina o preço da sua própria revenda.
-              </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-violet-400 px-7 py-4 font-bold text-slate-950 shadow-[0_12px_45px_rgba(139,92,246,.25)] transition hover:-translate-y-0.5 hover:bg-violet-300">
-                  Quero conhecer a parceria <ArrowRight className="h-5 w-5" />
-                </a>
-                <a href="#simulador" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition hover:bg-white/5">
-                  Simular minha margem
-                </a>
-              </div>
-              <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-slate-400">
-                <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-emerald-300" /> Você define seu preço</span>
-                <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-emerald-300" /> Pré-pago por uso</span>
-                <span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-emerald-300" /> A partir de 5 CNPJs</span>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-violet-500/25 to-sky-500/10 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/5 p-2 shadow-2xl">
-                <img src={partnerImages.hero} alt="Equipe de profissionais reunida em ambiente de trabalho — imagem ilustrativa do programa de parceiros" width={1400} height={1050} fetchPriority="high" className="h-[360px] w-full rounded-[1.5rem] object-cover sm:h-[470px]" />
-                <div className="absolute bottom-7 left-7 right-7 rounded-2xl border border-white/20 bg-[#101326]/90 p-5 shadow-xl backdrop-blur-xl sm:bottom-9 sm:left-9 sm:right-9">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-violet-200">Condição para parceiros</p>
-                      <p className="mt-1 text-3xl font-bold">R$ 40<span className="text-base font-medium text-slate-400"> / CNPJ ativo</span></p>
-                      <p className="mt-1 text-xs text-slate-400">No mês de utilização · mínimo de 5 CNPJs</p>
-                    </div>
-                    <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-violet-400/15 text-violet-200"><Handshake className="h-7 w-7" /></div>
-                  </div>
-                </div>
-              </div>
-              <p className="mt-3 text-center text-xs text-slate-500">Imagem ilustrativa. Substituiremos por telas reais do EmitaGo na próxima etapa.</p>
-            </div>
-          </div>
-          <div className="border-y border-white/10 bg-white/[0.025]">
-            <div className="mx-auto grid max-w-7xl grid-cols-2 gap-5 px-5 py-6 text-center sm:grid-cols-4 lg:px-8">
-              {[
-                ["R$ 40", "custo por CNPJ ativo"],
-                ["5+", "CNPJs para a condição"],
-                ["Livre", "preço definido por você"],
-                ["Pré-pago", "pague pelo mês de uso"],
-              ].map(([value, label]) => (
-                <div key={label}><p className="font-display text-2xl font-bold text-white sm:text-3xl">{value}</p><p className="mt-1 text-xs text-slate-400 sm:text-sm">{label}</p></div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="modelo" className="scroll-mt-24 bg-[#0d1020] py-20 md:py-28">
-          <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
-            <div className="order-2 lg:order-1">
-              <div className="grid grid-cols-2 gap-3">
-                <img src={partnerImages.meeting} alt="Profissionais conversando em reunião — imagem ilustrativa" width={900} height={1100} loading="lazy" className="h-64 w-full rounded-3xl object-cover sm:h-80" />
-                <img src={partnerImages.workspace} alt="Ambiente de trabalho moderno — imagem ilustrativa" width={900} height={1100} loading="lazy" className="mt-10 h-64 w-full rounded-3xl object-cover sm:h-80" />
-              </div>
-              <div className="mt-4 rounded-2xl border border-violet-300/20 bg-violet-300/[0.07] p-5">
-                <p className="text-sm leading-7 text-violet-100">Você constrói a relação comercial com seus clientes. A EmitaGo fornece a solução fiscal dentro do modelo de parceria acordado.</p>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-violet-300">Um novo produto no seu portfólio</p>
-              <h2 className="mt-4 font-display text-3xl font-bold leading-tight sm:text-4xl">Você já tem o relacionamento. <span className="text-violet-300">Agora pode ampliar o que oferece.</span></h2>
-              <p className="mt-6 text-base leading-8 text-slate-300">Se você atende empresas, contabilidades ou negócios locais, pode apresentar uma plataforma de emissão fiscal como mais uma solução para a sua carteira — sem precisar desenvolver um sistema do zero.</p>
-              <div className="mt-8 space-y-5">
-                {[
-                  [Network, "Aproveite sua rede", "Apresente a solução a clientes que já confiam no seu trabalho."],
-                  [Wallet, "Tenha liberdade comercial", "Seu custo é definido pela condição de parceiro. O preço de revenda fica a seu critério."],
-                  [Layers3, "Amplie seu portfólio", "Inclua documentos fiscais para diferentes tipos de operação, conforme os recursos disponíveis."],
-                ].map(([Icon, title, desc]) => {
-                  const ItemIcon = Icon as typeof Network;
-                  return <div key={title as string} className="flex gap-4"><div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-violet-400/10 text-violet-200"><ItemIcon className="h-5 w-5" /></div><div><h3 className="font-semibold text-white">{title as string}</h3><p className="mt-1 text-sm leading-6 text-slate-400">{desc as string}</p></div></div>;
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="vantagens" className="scroll-mt-24 py-20 md:py-28">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-violet-300">Uma parceria com lógica simples</p>
-              <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">Estrutura para você vender. Liberdade para crescer.</h2>
-              <p className="mt-5 leading-7 text-slate-400">Você não precisa criar um emissor fiscal, manter integrações ou construir tudo do início. Concentre sua energia em desenvolver o relacionamento comercial.</p>
-            </div>
-            <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {[
-                [TrendingUp, "Sua própria margem", "Defina o preço de revenda de acordo com sua estratégia e com o valor que entrega ao cliente."],
-                [FileCheck2, "Vários documentos", "Uma solução com documentos fiscais para diferentes operações empresariais."],
-                [ShieldCheck, "Tecnologia fiscal", "Utilize uma plataforma dedicada à rotina de emissão e gestão de documentos fiscais."],
-                [Handshake, "Modelo de parceria", "Condições comerciais específicas para quem trabalha com uma carteira de empresas."],
-              ].map(([Icon, title, desc]) => {
-                const ItemIcon = Icon as typeof TrendingUp;
-                return <article key={title as string} className="group rounded-3xl border border-white/10 bg-white/[0.035] p-7 transition hover:-translate-y-1 hover:border-violet-300/30 hover:bg-violet-300/[0.06]"><div className="grid h-12 w-12 place-items-center rounded-2xl bg-violet-400/10 text-violet-200"><ItemIcon className="h-6 w-6" /></div><h3 className="mt-6 text-lg font-bold">{title as string}</h3><p className="mt-3 text-sm leading-7 text-slate-400">{desc as string}</p></article>;
-              })}
-            </div>
-            <div className="mt-16 grid overflow-hidden rounded-[2rem] border border-white/10 bg-[#11152a] lg:grid-cols-[.9fr_1.1fr]">
-              <div className="p-8 sm:p-12">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-300">Solução fiscal em um só portfólio</p>
-                <h3 className="mt-4 font-display text-3xl font-bold">Atenda diferentes necessidades com uma única parceria.</h3>
-                <p className="mt-5 leading-7 text-slate-400">Apresente os documentos disponíveis conforme o perfil e a operação de cada cliente. A disponibilidade de cada emissão depende das integrações e configurações aplicáveis.</p>
-                <div className="mt-8 flex flex-wrap gap-2">{documents.map((doc) => <span key={doc} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200">{doc}</span>)}</div>
-                <p className="mt-5 text-xs leading-5 text-slate-500">O CIOT possui recursos relacionados conforme a operação e a integração disponível.</p>
-              </div>
-              <div className="relative min-h-[320px]">
-                <img src={partnerImages.team} alt="Equipe colaborando em um projeto — imagem ilustrativa" width={1200} height={900} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#11152a] via-[#11152a]/35 to-transparent lg:bg-gradient-to-r" />
-                <div className="absolute bottom-7 left-7 right-7 rounded-2xl border border-white/15 bg-[#0b1020]/85 p-5 backdrop-blur-xl">
-                  <p className="text-xs uppercase tracking-[0.18em] text-sky-200">Uma solução, diferentes segmentos</p>
-                  <p className="mt-2 text-lg font-semibold">Comércio · Serviços · Transporte · Indústria</p>
-                  <p className="mt-1 text-xs text-slate-400">Imagem ilustrativa — substituível por capturas reais do sistema.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="simulador" className="scroll-mt-24 bg-gradient-to-br from-[#21133b] via-[#15152d] to-[#0b1020] py-20 md:py-28">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[.9fr_1.1fr] lg:px-8">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-violet-200">Faça suas contas</p>
-              <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">Quanto pode sobrar na sua revenda?</h2>
-              <p className="mt-5 leading-8 text-slate-300">Simule o resultado bruto considerando o custo parceiro de R$ 40 por CNPJ ativo e o preço que você pretende praticar.</p>
-              <div className="mt-8 flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5"><CircleHelp className="mt-0.5 h-5 w-5 shrink-0 text-violet-200" /><p className="text-sm leading-6 text-slate-400">O simulador é uma estimativa comercial. Não representa lucro líquido nem inclui impostos, atendimento, marketing ou outras despesas da sua operação.</p></div>
-            </div>
-            <div className="rounded-[2rem] border border-white/15 bg-[#090d1c]/80 p-6 shadow-2xl sm:p-9">
-              <div className="flex items-center justify-between gap-4"><h3 className="text-xl font-bold">Simulador de revenda</h3><span className="rounded-full bg-emerald-300/10 px-3 py-1 text-xs font-semibold text-emerald-200">Interativo</span></div>
-              <div className="mt-8">
-                <div className="flex items-center justify-between gap-4"><label htmlFor="partner-clients" className="text-sm text-slate-300">CNPJs ativos no mês</label><span className="font-display text-2xl font-bold text-white">{clients}</span></div>
-                <input id="partner-clients" type="range" min="5" max="200" step="1" value={clients} onChange={(event) => setClients(Number(event.target.value))} className="mt-4 w-full accent-violet-400" />
-                <div className="mt-1 flex justify-between text-xs text-slate-500"><span>5 CNPJs</span><span>200 CNPJs</span></div>
-              </div>
-              <div className="mt-8">
-                <label htmlFor="partner-price" className="text-sm text-slate-300">Preço de revenda por CNPJ / mês</label>
-                <div className="mt-2 flex items-center rounded-xl border border-white/15 bg-white/5 px-4"><span className="text-slate-400">R$</span><input id="partner-price" type="number" min="0" step="0.01" value={resalePrice} onChange={(event) => setResalePrice(event.target.value)} className="w-full bg-transparent px-3 py-4 text-xl font-bold text-white outline-none" /></div>
-              </div>
-              <div className="mt-8 space-y-4 rounded-2xl border border-white/10 bg-white/[0.035] p-5">
-                <div className="flex justify-between gap-4 text-sm"><span className="text-slate-400">Receita estimada de revenda</span><strong>{money(revenue)}</strong></div>
-                <div className="flex justify-between gap-4 text-sm"><span className="text-slate-400">Custo com a EmitaGo</span><strong>{money(cost)}</strong></div>
-                <div className="border-t border-white/10 pt-4"><p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-200">Diferença bruta estimada</p><p className="mt-1 font-display text-4xl font-bold text-emerald-300">{money(margin)}</p></div>
-              </div>
-              <p className="mt-4 text-xs leading-5 text-slate-500">Cálculo ilustrativo: ({money(numericPrice)} − R$ 40,00) × {clients} CNPJs ativos. Valores negativos indicam preço abaixo do custo parceiro.</p>
-              <a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-violet-400 px-6 py-4 font-bold text-slate-950 transition hover:bg-violet-300">Quero conversar sobre parceria <ArrowRight className="h-5 w-5" /></a>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 md:py-28">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="overflow-hidden rounded-[2rem] border border-white/10">
-                <img src={partnerImages.workspace} alt="Espaço profissional de trabalho — imagem ilustrativa" width={1200} height={900} loading="lazy" className="h-[360px] w-full object-cover sm:h-[460px]" />
-              </div>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-violet-300">Comece com clareza</p>
-                <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">Uma parceria que começa com um próximo passo simples.</h2>
-                <div className="mt-8 space-y-6">
-                  {[
-                    ["01", "Conte sobre sua operação", "Explique seu negócio, seu público e quantos CNPJs pretende atender."],
-                    ["02", "Alinhe as condições", "Nossa equipe apresenta o funcionamento, a condição comercial e o escopo da parceria."],
-                    ["03", "Estruture sua revenda", "Com as condições alinhadas, você organiza sua oferta e define seu preço para os clientes."],
-                  ].map(([number, title, desc]) => <div key={number} className="flex gap-4"><span className="font-display text-2xl font-bold text-violet-300">{number}</span><div><h3 className="font-semibold">{title}</h3><p className="mt-1 text-sm leading-6 text-slate-400">{desc}</p></div></div>)}
-                </div>
-                <a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-2 rounded-full border border-violet-300/40 px-6 py-3.5 font-semibold text-violet-100 transition hover:bg-violet-300/10">Falar com a equipe de parcerias <ArrowUpRight className="h-4 w-4" /></a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="duvidas" className="scroll-mt-24 bg-[#0d1020] py-20 md:py-28">
-          <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.75fr_1.25fr] lg:px-8">
-            <div><p className="text-xs font-bold uppercase tracking-[0.22em] text-violet-300">Perguntas frequentes</p><h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl">Tudo mais claro antes de começar.</h2><p className="mt-5 leading-7 text-slate-400">Veja as respostas iniciais sobre o modelo de revenda. As condições completas são alinhadas no contato comercial.</p></div>
-            <div className="space-y-3">
-              {[
-                ["Quanto custa para ser parceiro?", "A condição apresentada é de R$ 40 por CNPJ ativo no mês de utilização, para parceiros com pelo menos 5 CNPJs ativos. O pagamento é pré-pago, conforme as condições comerciais alinhadas."],
-                ["Posso definir meu próprio preço de revenda?", "Sim. O parceiro define o preço que deseja praticar na revenda. A diferença entre o preço cobrado do cliente e o custo parceiro é uma margem bruta, antes das despesas da operação."],
-                ["Preciso pagar por CNPJs que não vou utilizar?", "O modelo apresentado considera o CNPJ ativo no mês de utilização. O parceiro paga antecipadamente os CNPJs que pretende utilizar naquele período, conforme o acordo comercial."],
-                ["Quais documentos fiscais estão disponíveis?", "A plataforma contempla NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, além de recursos relacionados ao CIOT conforme a operação. A disponibilidade de cada recurso deve ser confirmada para o perfil do cliente."],
-                ["A EmitaGo define o preço que devo cobrar?", "Não. Você tem liberdade para definir o preço de revenda. A condição de aquisição junto à EmitaGo é alinhada no início da parceria."],
-                ["A parceria inclui personalização com minha marca e domínio próprio?", "O escopo de personalização, identidade visual, domínio e demais recursos deve ser confirmado com a equipe antes da contratação. Não presumimos que todos esses itens estejam incluídos em qualquer modalidade."],
-              ].map(([question, answer]) => <details key={question} className="group rounded-2xl border border-white/10 bg-white/[0.025] p-5 open:border-violet-300/25 open:bg-violet-300/[0.04]"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white [&::-webkit-details-marker]:hidden">{question}<ChevronDown className="h-5 w-5 shrink-0 text-violet-300 transition group-open:rotate-180" /></summary><p className="mt-4 max-w-3xl text-sm leading-7 text-slate-400">{answer}</p></details>)}
-            </div>
-          </div>
-        </section>
-
-        <section className="relative isolate overflow-hidden px-5 py-20 text-center md:py-28">
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,.28),transparent_62%)]" />
-          <div className="mx-auto max-w-3xl">
-            <div className="mx-auto grid h-14 w-14 place-items-center rounded-2xl border border-violet-300/20 bg-violet-300/10 text-violet-200"><Rocket className="h-7 w-7" /></div>
-            <p className="mt-7 text-xs font-bold uppercase tracking-[0.22em] text-violet-300">Seu próximo passo começa aqui</p>
-            <h2 className="mt-4 font-display text-3xl font-bold sm:text-5xl">Leve uma nova solução para a sua carteira de clientes.</h2>
-            <p className="mx-auto mt-6 max-w-2xl leading-8 text-slate-400">Converse com a equipe EmitaGo, entenda as condições para parceiros e avalie como incluir a revenda fiscal no seu negócio.</p>
-            <a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-violet-400 px-8 py-4 font-bold text-slate-950 shadow-[0_12px_45px_rgba(139,92,246,.22)] transition hover:-translate-y-0.5 hover:bg-violet-300">Quero ser parceiro EmitaGo <ArrowRight className="h-5 w-5" /></a>
-          </div>
-        </section>
-      </main>
-
-      <footer className="border-t border-white/10 bg-[#070914] px-5 py-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-          <Link to="/" className="flex items-center gap-3"><img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={120} height={36} className="h-8 w-auto object-contain" /><span className="text-xs text-slate-500">Programa de Parceiros</span></Link>
-          <div className="flex flex-wrap justify-center gap-5 text-xs text-slate-500"><Link to="/" className="hover:text-white">Página inicial</Link><Link to="/blog" className="hover:text-white">Blog</Link><Link to="/privacidade" className="hover:text-white">Privacidade</Link><Link to="/termos" className="hover:text-white">Termos</Link></div>
-          <p className="text-xs text-slate-600">© {new Date().getFullYear()} EmitaGo</p>
+  const [clients,setClients]=useState(20);
+  const [resalePrice,setResalePrice]=useState("69.90");
+  const [mobileOpen,setMobileOpen]=useState(false);
+  const [faq,setFaq]=useState(0);
+  const price=Math.max(0,Number(resalePrice.replace(",","."))||0);
+  const revenue=clients*price, cost=clients*40, margin=revenue-cost;
+  const money=(v:number)=>v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+  const questions=[
+    ["Posso usar a logo da minha contabilidade?","Sim. O programa permite apresentar a solução com a identidade visual do seu escritório. Os detalhes de aplicação da marca são alinhados na adesão."],
+    ["Qual é o custo para o parceiro?","R$ 40 por CNPJ ativo, por mês de utilização, na condição para carteiras a partir de 5 CNPJs. A equipe confirma as condições comerciais na adesão."],
+    ["Eu escolho quanto cobrar dos meus clientes?","Sim. Você define seu preço de revenda. A diferença entre a receita e o custo parceiro representa sua margem bruta, antes de impostos e demais despesas."],
+    ["Preciso pagar nos meses em que não usar?","O modelo é pré-pago por mês de utilização. O custo considera os CNPJs ativos no período contratado."],
+    ["Quais documentos estão disponíveis?","NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, conforme operação, configuração e integrações aplicáveis."]
+  ];
+  return <div className="min-h-screen overflow-x-hidden bg-[#f7f9fc] text-[#17243b]">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#142947] text-white shadow-lg">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8" aria-label="Navegação principal">
+        <Link to="/" className="flex items-center gap-3" aria-label="EmitaGo — página inicial">
+          <img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={142} height={44} className="h-10 w-auto object-contain"/>
+          <span className="hidden border-l border-white/20 pl-3 text-xs font-bold uppercase tracking-[.18em] text-sky-200 sm:block">Parceiros</span>
+        </Link>
+        <div className="hidden items-center gap-7 text-sm font-semibold text-slate-200 md:flex">
+          <a href="#contabilidades" className="hover:text-white">Para contabilidades</a><a href="#modelo" className="hover:text-white">Como funciona</a><a href="#simulador" className="hover:text-white">Simulador</a><a href="#duvidas" className="hover:text-white">Dúvidas</a>
         </div>
-      </footer>
-    </div>
-  );
+        <a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-lg bg-[#f18ab6] px-5 py-3 text-sm font-extrabold text-[#14233d] hover:bg-[#f6a4c7] md:inline-flex">Quero ser parceiro <ArrowUpRight className="h-4 w-4"/></a>
+        <button type="button" className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 md:hidden" aria-label={mobileOpen?"Fechar menu":"Abrir menu"} aria-expanded={mobileOpen} onClick={()=>setMobileOpen(v=>!v)}>{mobileOpen?<X/>:<Menu/>}</button>
+      </nav>
+      {mobileOpen&&<div className="grid gap-1 border-t border-white/10 px-5 py-3 md:hidden">{[["Para contabilidades","#contabilidades"],["Como funciona","#modelo"],["Simulador","#simulador"],["Dúvidas","#duvidas"]].map(([label,href])=><a key={href} href={href} onClick={()=>setMobileOpen(false)} className="rounded-lg px-3 py-3 text-sm text-white hover:bg-white/10">{label}</a>)}<a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="mt-2 rounded-lg bg-[#f18ab6] p-3 text-center font-bold text-[#14233d]">Quero ser parceiro</a></div>}
+    </header>
+    <main>
+      <section className="relative isolate overflow-hidden bg-white">
+        <div className="absolute -right-40 -top-40 -z-10 h-[34rem] w-[34rem] rounded-full bg-[#dcecff] blur-3xl"/><div className="absolute -bottom-48 left-[-8rem] -z-10 h-[30rem] w-[30rem] rounded-full bg-[#fde6f0] blur-3xl"/>
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-14 md:pb-24 md:pt-20 lg:grid-cols-[1.02fr_.98fr] lg:px-8">
+          <div>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-md border border-[#d8e5f4] bg-[#f2f7fd] px-3.5 py-2 text-xs font-extrabold uppercase tracking-[.14em] text-[#285b91]"><BadgeCheck className="h-4 w-4"/> Programa de parceiros EmitaGo</div>
+            <h1 className="max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-[-.04em] text-[#14233d] sm:text-5xl lg:text-[3.65rem]">Sua contabilidade pode oferecer mais. <span className="text-[#2876c7]">Com a sua marca.</span></h1>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[#52627a]">Leve uma solução de emissão fiscal para o portfólio do seu escritório. Apresente aos seus clientes com a identidade visual da sua contabilidade e tenha liberdade para definir seu preço de revenda.</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row"><a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#2876c7] px-7 py-4 font-extrabold text-white shadow-lg shadow-blue-900/15 hover:bg-[#1f66b0]">Quero conhecer o programa <ArrowRight className="h-5 w-5"/></a><a href="#simulador" className="inline-flex items-center justify-center rounded-lg border border-[#cbd7e6] bg-white px-7 py-4 font-bold text-[#243b5c] hover:border-[#2876c7]">Simular minha margem</a></div>
+            <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold text-[#43536b]"><span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-emerald-600"/> Sua identidade visual</span><span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-emerald-600"/> Você define o preço</span><span className="inline-flex items-center gap-2"><Check className="h-4 w-4 text-emerald-600"/> Pré-pago por uso</span></div>
+          </div>
+          <div className="relative"><div className="overflow-hidden rounded-[1.6rem] border border-[#dce5ef] bg-white p-2 shadow-[0_28px_80px_rgba(24,49,82,.16)]"><img src={partnerImages.hero} alt="Equipe profissional reunida em ambiente de trabalho — imagem ilustrativa" width={1400} height={1050} fetchPriority="high" className="h-[340px] w-full rounded-[1.2rem] object-cover sm:h-[450px]"/><div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/70 bg-white/95 p-5 shadow-xl sm:bottom-8 sm:left-8 sm:right-8"><p className="text-xs font-extrabold uppercase tracking-[.14em] text-[#2876c7]">Condição para escritórios parceiros</p><p className="mt-1 text-3xl font-extrabold text-[#14233d]">R$ 40 <span className="text-sm font-semibold text-[#68778c]">/ CNPJ ativo</span></p><p className="mt-1 text-xs text-[#68778c]">Por mês de utilização · condição a partir de 5 CNPJs</p></div></div><p className="mt-3 text-center text-xs text-[#7b8798]">Imagem ilustrativa. Telas reais do EmitaGo podem substituir esta imagem.</p></div>
+        </div>
+        <div className="border-y border-[#e4ebf3] bg-[#f7f9fc]"><div className="mx-auto grid max-w-7xl grid-cols-2 gap-5 px-5 py-6 text-center sm:grid-cols-4 lg:px-8">{[["R$ 40","por CNPJ ativo"],["5+","CNPJs na condição parceiro"],["Livre","preço de revenda"],["Pré-pago","mês de utilização"]].map(([v,l])=><div key={l}><p className="text-2xl font-extrabold text-[#18365b] sm:text-3xl">{v}</p><p className="mt-1 text-xs text-[#6b7b91] sm:text-sm">{l}</p></div>)}</div></div>
+      </section>
+      <section id="contabilidades" className="scroll-mt-24 bg-[#f7f9fc] py-20 md:py-28"><div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
+        <div className="grid grid-cols-2 gap-4"><img src={partnerImages.meeting} alt="Profissionais em reunião — imagem ilustrativa" width={900} height={1100} loading="lazy" className="h-60 w-full rounded-xl object-cover sm:h-80"/><img src={partnerImages.workspace} alt="Escritório profissional — imagem ilustrativa" width={900} height={1100} loading="lazy" className="mt-10 h-60 w-full rounded-xl object-cover sm:h-80"/></div>
+        <div><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#2876c7]">Feito para escritórios contábeis</p><h2 className="mt-4 text-3xl font-extrabold leading-tight text-[#14233d] sm:text-4xl">Seu cliente já confia na sua contabilidade. <span className="text-[#2876c7]">Amplie essa relação.</span></h2><p className="mt-6 leading-8 text-[#596a80]">Ofereça uma ferramenta para a rotina fiscal das empresas atendidas. Fortaleça o relacionamento, amplie seu portfólio e crie uma nova frente comercial — sem desenvolver um emissor do zero.</p>
+          <div className="mt-8 space-y-5">{[[Network,"Sua identidade na apresentação","Apresente a ferramenta aos seus clientes utilizando a logo da sua contabilidade."],[Wallet,"Liberdade para montar sua oferta","Seu custo parceiro é definido. O preço de revenda fica a seu critério."],[Layers3,"Mais valor para sua carteira","Ofereça documentos fiscais para diferentes operações empresariais, conforme a disponibilidade."]].map(([Icon,title,desc])=>{const I=Icon as typeof Network;return <div key={title as string} className="flex gap-4"><div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-[#e7f1fc] text-[#2876c7]"><I className="h-5 w-5"/></div><div><h3 className="font-extrabold text-[#1b2d48]">{title as string}</h3><p className="mt-1 text-sm leading-6 text-[#68788e]">{desc as string}</p></div></div>})}</div>
+        </div>
+      </div></section>
+      <section id="modelo" className="scroll-mt-24 border-y border-[#e4ebf3] bg-white py-20 md:py-24"><div className="mx-auto max-w-7xl px-5 lg:px-8"><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#2876c7]">Um modelo direto e transparente</p><h2 className="mt-4 text-3xl font-extrabold text-[#14233d] sm:text-4xl">Como funciona a parceria</h2><div className="mt-12 grid gap-5 md:grid-cols-3">{[["01","Converse com a equipe","Alinhe o perfil da sua carteira, a aplicação da marca e as condições comerciais."],["02","Apresente aos seus clientes","Inclua a solução fiscal no portfólio do escritório e defina sua estratégia de revenda."],["03","Desenvolva sua carteira","Acompanhe os CNPJs ativos e trabalhe sua oferta conforme a demanda dos clientes."]].map(([n,t,d])=><article key={n} className="border-t-2 border-[#2876c7] bg-[#f7f9fc] p-7"><p className="text-sm font-extrabold tracking-widest text-[#e17aa8]">{n}</p><h3 className="mt-5 text-xl font-extrabold text-[#1b2d48]">{t}</h3><p className="mt-3 text-sm leading-7 text-[#68788e]">{d}</p></article>)}</div>
+        <div className="mt-14 grid overflow-hidden rounded-2xl border border-[#dce6f1] lg:grid-cols-[.85fr_1.15fr]"><div className="bg-[#142947] p-8 text-white sm:p-10"><p className="text-xs font-bold uppercase tracking-[.18em] text-[#a9d2ff]">Documentos fiscais</p><h3 className="mt-4 text-2xl font-extrabold">Uma plataforma para diferentes rotinas empresariais.</h3><p className="mt-4 text-sm leading-7 text-slate-300">Apresente os recursos conforme a necessidade e a operação de cada empresa atendida.</p><div className="mt-7 flex flex-wrap gap-2">{documents.map(d=><span key={d} className="rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm font-bold">{d}</span>)}</div><p className="mt-5 text-xs text-slate-400">A disponibilidade depende das integrações e configurações aplicáveis.</p></div><div className="relative min-h-[300px]"><img src={partnerImages.team} alt="Equipe colaborando em um projeto — imagem ilustrativa" width={1200} height={900} loading="lazy" className="absolute inset-0 h-full w-full object-cover"/><div className="absolute inset-0 bg-gradient-to-r from-[#142947]/70 to-transparent"/><div className="absolute bottom-6 left-6 right-6 rounded-xl bg-white/95 p-5 shadow-xl"><p className="text-xs font-bold uppercase tracking-wider text-[#2876c7]">Para sua carteira de empresas</p><p className="mt-2 text-lg font-extrabold text-[#1b2d48]">Comércio · Serviços · Transporte · Indústria</p><p className="mt-1 text-xs text-[#748196]">Imagem ilustrativa — substituível por capturas reais do sistema.</p></div></div></div>
+      </div></section>
+      <section id="simulador" className="scroll-mt-24 bg-[#eaf1f8] py-20 md:py-28"><div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[.85fr_1.15fr] lg:px-8"><div><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#2876c7]">Planeje sua oferta</p><h2 className="mt-4 text-3xl font-extrabold text-[#14233d] sm:text-4xl">Quanto pode render sua carteira?</h2><p className="mt-5 leading-8 text-[#5f7087]">Escolha quantos CNPJs pretende atender e o preço mensal de revenda. O cálculo mostra a diferença bruta entre sua receita e o custo parceiro.</p><p className="mt-7 rounded-lg border border-[#d3dfeb] bg-white p-4 text-sm leading-6 text-[#62738a]"><strong className="text-[#1b2d48]">Importante:</strong> exemplo ilustrativo. A margem não desconta impostos, atendimento, vendas ou outros custos da sua operação.</p></div>
+        <div className="rounded-2xl border border-[#d7e2ed] bg-white p-6 shadow-xl sm:p-9"><div className="grid gap-7 sm:grid-cols-2"><div><label htmlFor="partner-clients" className="text-sm font-bold text-[#344a67]">CNPJs ativos</label><p className="mt-1 text-3xl font-extrabold text-[#14233d]">{clients}</p><input id="partner-clients" type="range" min="5" max="100" value={clients} onChange={e=>setClients(Number(e.target.value))} className="mt-4 w-full accent-[#2876c7]"/><div className="mt-1 flex justify-between text-xs text-[#8290a2]"><span>5</span><span>100</span></div></div><div><label htmlFor="partner-price" className="text-sm font-bold text-[#344a67]">Preço por CNPJ / mês</label><div className="mt-3 flex items-center rounded-lg border border-[#cbd8e6] px-3"><span className="font-semibold text-[#7b899a]">R$</span><input id="partner-price" inputMode="decimal" value={resalePrice} onChange={e=>setResalePrice(e.target.value)} className="w-full bg-transparent px-2 py-3 text-xl font-extrabold text-[#14233d] outline-none"/></div><p className="mt-2 text-xs text-[#8290a2]">Você define o valor cobrado.</p></div></div>
+          <div className="mt-8 border-t border-[#e6edf4] pt-7"><div className="grid gap-4 sm:grid-cols-3"><div><p className="text-xs font-bold uppercase text-[#8290a2]">Receita estimada</p><p className="mt-2 text-xl font-extrabold text-[#1b2d48]">{money(revenue)}</p></div><div><p className="text-xs font-bold uppercase text-[#8290a2]">Custo parceiro</p><p className="mt-2 text-xl font-extrabold text-[#1b2d48]">{money(cost)}</p></div><div className="rounded-lg bg-[#eaf6f1] p-3"><p className="text-xs font-bold uppercase text-[#287b5b]">Margem bruta</p><p className={margin>=0?"mt-2 text-xl font-extrabold text-[#18734f]":"mt-2 text-xl font-extrabold text-[#b43c54]"}>{money(margin)}</p></div></div><div className="mt-6 flex items-center justify-between rounded-lg bg-[#142947] px-5 py-4 text-white"><span className="text-sm font-semibold text-slate-200">Custo por CNPJ ativo</span><span className="text-xl font-extrabold">R$ 40,00</span></div></div><a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#2876c7] px-6 py-4 font-extrabold text-white hover:bg-[#1f66b0]">Quero conversar sobre a parceria <ArrowUpRight className="h-4 w-4"/></a>
+        </div>
+      </div></section>
+      <section id="duvidas" className="scroll-mt-24 bg-white py-20 md:py-24"><div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.7fr_1.3fr] lg:px-8"><div><p className="text-xs font-extrabold uppercase tracking-[.2em] text-[#2876c7]">Perguntas frequentes</p><h2 className="mt-4 text-3xl font-extrabold text-[#14233d] sm:text-4xl">Tudo claro antes de começar.</h2><p className="mt-5 leading-7 text-[#68788e]">Nossa equipe pode explicar as condições e os próximos passos para o seu escritório.</p><a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 font-bold text-[#2876c7]">Falar com a equipe <ArrowUpRight className="h-4 w-4"/></a></div><div className="divide-y divide-[#e5ebf2] border-y border-[#e5ebf2]">{questions.map(([q,a],i)=><div key={q} className="py-5"><button type="button" className="flex w-full items-center justify-between gap-4 text-left font-bold text-[#1b2d48]" aria-expanded={faq===i} onClick={()=>setFaq(faq===i?-1:i)}>{q}<ChevronDown className={faq===i?"h-5 w-5 rotate-180 text-[#2876c7]":"h-5 w-5 text-[#2876c7]"}/></button>{faq===i&&<p className="mt-3 max-w-3xl pr-8 text-sm leading-7 text-[#68788e]">{a}</p>}</div>)}</div></div></section>
+      <section className="bg-[#142947] py-16 text-white md:py-20"><div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 md:flex-row md:items-center lg:px-8"><div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#a9d2ff]">Programa de Parceiros EmitaGo</p><h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">Sua contabilidade pronta para oferecer mais uma solução.</h2><p className="mt-4 leading-7 text-slate-300">Conheça as condições para levar a emissão fiscal ao portfólio do seu escritório.</p></div><a href={WHATSAPP_PARTNERS} target="_blank" rel="noreferrer" className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-[#f18ab6] px-7 py-4 font-extrabold text-[#18243b]">Quero ser parceiro <ArrowUpRight className="h-5 w-5"/></a></div></section>
+    </main>
+    <footer className="border-t border-[#e2e9f1] bg-white"><div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-8"><Link to="/" className="inline-flex items-center rounded-md bg-[#142947] px-4 py-2"><img src="/logo%20transparente%20letra%20braca.png" alt="EmitaGo" width={125} height={38} className="h-8 w-auto object-contain"/></Link><p className="text-xs text-[#7b8798]">© {new Date().getFullYear()} EmitaGo. Todos os direitos reservados.</p><Link to="/" className="text-sm font-bold text-[#2876c7]">Conhecer o EmitaGo</Link></div></footer>
+  </div>;
 }
