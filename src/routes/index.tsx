@@ -408,6 +408,7 @@ function Index() {
             <a href="#certificado" className="hover:text-foreground transition">Certificado Digital</a>
             <a href="#planos" className="hover:text-foreground transition">Planos</a>
             <Link to="/blog" className="hover:text-foreground transition">Blog</Link>
+            <Link to="/parceiros" className="hover:text-foreground transition">Parceiros</Link>
           </div>
 
           <a
@@ -440,6 +441,7 @@ function Index() {
               <a href="#certificado" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Certificado Digital</a>
               <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Planos</a>
               <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium hover:bg-white/5 transition">Blog</Link>
+              <Link to="/parceiros" onClick={() => setMobileMenuOpen(false)} className="rounded-xl px-4 py-3 text-sm font-medium text-violet-200 hover:bg-white/5 transition">Seja parceiro</Link>
               <a href="#planos" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition">
                 Ver planos <ArrowUpRight className="w-4 h-4" />
               </a>
