@@ -155,7 +155,8 @@ export const solutionPages: SolutionPage[] = [
     audience: ["Transportadoras e ETCs", "Embarcadores", "Transportadores autônomos", "Empresas com frota própria"],
     steps: ["Selecione os documentos fiscais da viagem.", "Informe veículo, motorista, percurso e demais dados exigidos.", "Confira as informações do manifesto e o CIOT quando aplicável.", "Transmita o MDF-e e acompanhe a autorização.", "Encerre a viagem quando a operação terminar."],
     faq: [
-      { question: "Manifesto de carga e MDF-e são a mesma coisa?", answer: "No uso comum do transporte, manifesto de carga é a forma popular de se referir ao MDF-e — Manifesto Eletrônico de Documentos Fiscais, modelo 58." },\n      { question: "O que é MDF-e?", answer: "O MDF-e é o Manifesto Eletrônico de Documentos Fiscais, documento fiscal eletrônico que reúne documentos e informações de uma operação de transporte, conforme as regras aplicáveis." },
+      { question: "Manifesto de carga e MDF-e são a mesma coisa?", answer: "No uso comum do transporte, manifesto de carga é a forma popular de se referir ao MDF-e — Manifesto Eletrônico de Documentos Fiscais, modelo 58." },
+      { question: "O que é MDF-e?", answer: "O MDF-e é o Manifesto Eletrônico de Documentos Fiscais, documento fiscal eletrônico que reúne documentos e informações de uma operação de transporte, conforme as regras aplicáveis." },
       { question: "Posso vincular NF-e e CT-e no MDF-e?", answer: "Sim. Conforme o tipo de operação, o manifesto reúne os documentos fiscais correspondentes à viagem." },
       { question: "O manifesto de carga é ilimitado no EmitaGo?", answer: "Sim. A emissão de MDF-e (manifesto de carga) e CT-e é ilimitada durante o mês em que o CNPJ estiver ativo no EmitaGo." },
       { question: "Preciso encerrar o MDF-e?", answer: "O encerramento comunica ao ambiente fiscal o fim da viagem e deve ser realizado conforme o procedimento e o momento previstos para a operação." },
