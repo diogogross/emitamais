@@ -146,22 +146,22 @@ export const solutionPages: SolutionPage[] = [
   },
   {
     slug: "mdfe",
-    title: "MDFe — Manifesto Eletrônico",
-    seoTitle: "Emissor de MDF-e Online para Transportadoras | EmitaGo",
-    description: "Emita MDF-e online e organize documentos, veículos, motoristas e viagens. MDF-e e CT-e ilimitados no mês ativo do CNPJ; CIOT com custo adicional.",
-    h1: "Emissor de MDF-e online para transportadoras",
-    intro: "Monte manifestos eletrônicos, vincule os documentos fiscais da viagem e acompanhe as etapas de autorização e encerramento. O EmitaGo oferece emissão ilimitada de MDF-e e CT-e no mês ativo do CNPJ, além de CIOT com custo adicional e calculadora da ANTT.",
+    title: "MDF-e — Manifesto de Carga Eletrônico",
+    seoTitle: "Emissor de Manifesto de Carga e MDF-e Online | EmitaGo",
+    description: "Emita manifesto de carga (MDF-e) online e organize documentos, veículos, motoristas e viagens. MDF-e e CT-e ilimitados no mês ativo do CNPJ; recursos de CIOT à parte.",
+    h1: "Emissor de manifesto de carga (MDF-e) online para transportadoras",
+    intro: "Emita o manifesto de carga (MDF-e), vincule os documentos fiscais da viagem e acompanhe autorização e encerramento. O EmitaGo oferece emissão ilimitada de MDF-e e CT-e no mês ativo do CNPJ, calculadora da ANTT e recursos de CIOT contratados à parte.",
     benefits: ["Emissão ilimitada de MDF-e e CT-e no mês ativo do CNPJ", "Vinculação de NF-e e CT-e conforme a operação", "Cadastro de veículos e condutores", "Organização de viagens e encerramento do manifesto", "Recursos de CIOT com custo adicional", "Calculadora da ANTT integrada ao sistema"],
     audience: ["Transportadoras e ETCs", "Embarcadores", "Transportadores autônomos", "Empresas com frota própria"],
     steps: ["Selecione os documentos fiscais da viagem.", "Informe veículo, motorista, percurso e demais dados exigidos.", "Confira as informações do manifesto e o CIOT quando aplicável.", "Transmita o MDF-e e acompanhe a autorização.", "Encerre a viagem quando a operação terminar."],
     faq: [
-      { question: "O que é MDF-e?", answer: "O MDF-e é o Manifesto Eletrônico de Documentos Fiscais, utilizado para reunir documentos fiscais e informações de uma operação de transporte, conforme as regras aplicáveis." },
+      { question: "Manifesto de carga e MDF-e são a mesma coisa?", answer: "No uso comum do transporte, manifesto de carga é a forma popular de se referir ao MDF-e — Manifesto Eletrônico de Documentos Fiscais, modelo 58." },\n      { question: "O que é MDF-e?", answer: "O MDF-e é o Manifesto Eletrônico de Documentos Fiscais, documento fiscal eletrônico que reúne documentos e informações de uma operação de transporte, conforme as regras aplicáveis." },
       { question: "Posso vincular NF-e e CT-e no MDF-e?", answer: "Sim. Conforme o tipo de operação, o manifesto reúne os documentos fiscais correspondentes à viagem." },
-      { question: "O MDF-e é ilimitado no EmitaGo?", answer: "Sim. A emissão de MDF-e e CT-e é ilimitada durante o mês em que o CNPJ estiver ativo no EmitaGo." },
+      { question: "O manifesto de carga é ilimitado no EmitaGo?", answer: "Sim. A emissão de MDF-e (manifesto de carga) e CT-e é ilimitada durante o mês em que o CNPJ estiver ativo no EmitaGo." },
       { question: "Preciso encerrar o MDF-e?", answer: "O encerramento comunica ao ambiente fiscal o fim da viagem e deve ser realizado conforme o procedimento e o momento previstos para a operação." },
       { question: "O CIOT tem custo adicional?", answer: "Sim. O CIOT está disponível no EmitaGo com custo adicional, separado do plano mensal principal." }
     ],
-    relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "mdfe-como-emitir-e-encerrar-manifesto", "calculadora-antt-piso-minimo-frete-como-calcular", "cte-transporte", "mdfe-frota"]
+    relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "mdfe-como-emitir-e-encerrar-manifesto", "manifesto-de-carga-o-que-e-para-que-serve", "como-emitir-manifesto-de-carga-online", "manifesto-de-carga-encerramento-e-consulta", "emissor-de-manifesto-de-carga-para-transportadora", "calculadora-antt-piso-minimo-frete-como-calcular", "cte-transporte", "mdfe-frota"]
   },
   {
     slug: "ciot",
