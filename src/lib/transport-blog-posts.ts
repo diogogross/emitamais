@@ -38,12 +38,12 @@ export const transportBlogPosts: BlogPost[] = [
         "Confira o vínculo do CIOT ao MDF-e e mantenha os documentos da viagem organizados."
       ] },
       { type: "heading", text: "Como o EmitaGo ajuda a transportadora" },
-      { type: "paragraph", text: "O EmitaGo reúne emissão de CT-e e MDF-e e recursos para CIOT, além de calculadora da ANTT para apoiar a conferência do frete. A emissão de CT-e e MDF-e é ilimitada no mês ativo do CNPJ. O CIOT possui custo adicional por operação/uso, informado separadamente. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. Consulte a equipe para confirmar as condições do CIOT para sua operação." },
+      { type: "paragraph", text: "O EmitaGo reúne emissão de CT-e e MDF-e e recursos para CIOT, além de calculadora da ANTT para apoiar a conferência do frete. A emissão de CT-e e MDF-e é ilimitada no mês ativo do CNPJ. O EmitaGo também oferece recursos relacionados ao CIOT. Consulte a equipe para confirmar a disponibilidade e as condições aplicáveis à sua operação. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade." },
       { type: "heading", text: "Perguntas frequentes" },
       { type: "heading", text: "O CIOT substitui o MDF-e?" },
       { type: "paragraph", text: "Não. São registros diferentes. O CIOT identifica a operação de transporte e deve ser informado e vinculado ao MDF-e correspondente quando aplicável." },
       { type: "heading", text: "Posso emitir CT-e e MDF-e ilimitados no EmitaGo?" },
-      { type: "paragraph", text: "Sim. A emissão de CT-e e MDF-e é ilimitada durante o mês em que o CNPJ estiver ativo no EmitaGo. O CIOT tem custo adicional." },
+      { type: "paragraph", text: "Sim. A emissão de CT-e e MDF-e é ilimitada durante o mês em que o CNPJ estiver ativo no EmitaGo. O EmitaGo também oferece recursos relacionados ao CIOT." },
       { type: "heading", text: "Fontes oficiais" },
       { type: "source", label: "ANTT — CIOT Para Todos: orientações e legislação", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/codigo-identificador-da-operacao-de-transporte-ciot" },
       { type: "source", label: "ANTT — Perguntas frequentes sobre CIOT", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" },
@@ -73,7 +73,7 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "heading", text: "E o CIOT, quando devo considerar?" },
       { type: "paragraph", text: "O CIOT possui regras próprias e sua obrigatoriedade depende da operação de transporte rodoviário remunerado e das exceções aplicáveis. A responsabilidade pela geração também varia conforme a contratação. Não conclua que a emissão do CT-e, sozinha, resolve o CIOT: confira as orientações atuais da ANTT." },
       { type: "heading", text: "Emita CT-e e MDF-e em um único sistema" },
-      { type: "paragraph", text: "O EmitaGo oferece emissão online de CT-e, CT-e OS e MDF-e, com emissão ilimitada desses documentos no mês ativo do CNPJ. O plano custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. O CIOT possui custo adicional. Conheça a solução para transportadoras e confirme os detalhes da sua operação." },
+      { type: "paragraph", text: "O EmitaGo oferece emissão online de CT-e, CT-e OS e MDF-e, com emissão ilimitada desses documentos no mês ativo do CNPJ. O plano custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. O EmitaGo também oferece recursos relacionados ao CIOT. Conheça a solução para transportadoras e confirme os detalhes da sua operação." },
       { type: "source", label: "Portal do CT-e — documentação e orientações", href: "https://www.cte.fazenda.gov.br/" },
       { type: "source", label: "ANTT — Perguntas frequentes sobre CIOT", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" }
     ]
@@ -123,7 +123,7 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "heading", text: "A calculadora substitui o CIOT?" },
       { type: "paragraph", text: "Não. A calculadora é uma ferramenta de apoio para estimar o piso mínimo. O CIOT é o código que identifica a operação de transporte registrada perante a ANTT. A conferência do piso não substitui o registro nem as demais obrigações documentais." },
       { type: "heading", text: "Como o EmitaGo ajuda" },
-      { type: "paragraph", text: "O EmitaGo disponibiliza calculadora da ANTT no sistema e reúne emissão ilimitada de CT-e e MDF-e durante o mês ativo do CNPJ. O CIOT está disponível com custo adicional. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade." },
+      { type: "paragraph", text: "O EmitaGo disponibiliza calculadora da ANTT no sistema e reúne emissão ilimitada de CT-e e MDF-e durante o mês ativo do CNPJ. O EmitaGo também oferece recursos relacionados ao CIOT. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade." },
       { type: "source", label: "ANTT — Piso Mínimo de Frete", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/politica-nacional-de-pisos-minimos-de-frete" },
       { type: "source", label: "ANTT — CIOT Para Todos", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" }
     ]
@@ -146,7 +146,7 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "heading", text: "E qual é o papel do CIOT?" },
       { type: "paragraph", text: "O CIOT identifica o registro da operação de transporte perante a ANTT. Ele não substitui o manifesto de carga, o CT-e ou a nota fiscal. Quando houver MDF-e aplicável, o CIOT deve ser informado e vinculado ao manifesto correspondente, conforme as regras vigentes." },
       { type: "heading", text: "Emita manifesto de carga e CT-e no EmitaGo" },
-      { type: "paragraph", text: "O EmitaGo oferece emissão online e ilimitada de CT-e e MDF-e (manifesto de carga) durante o mês ativo do CNPJ. O sistema também disponibiliza recursos de CIOT e calculadora da ANTT. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. Consulte as condições comerciais do recurso adicional de CIOT." },
+      { type: "paragraph", text: "O EmitaGo oferece emissão online e ilimitada de CT-e e MDF-e (manifesto de carga) durante o mês ativo do CNPJ. O sistema também disponibiliza recursos de CIOT e calculadora da ANTT. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. Consulte a equipe para confirmar a disponibilidade dos recursos de CIOT para sua operação." },
       { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" },
       { type: "source", label: "ANTT — Perguntas frequentes sobre CIOT", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" }
     ]
@@ -167,7 +167,7 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "heading", text: "Preciso informar CIOT no manifesto de carga?" },
       { type: "paragraph", text: "Quando a operação estiver sujeita ao CIOT e houver MDF-e aplicável, o código deve ser informado e vinculado ao manifesto correspondente conforme a regulamentação. A responsabilidade pela geração varia conforme a contratação e o enquadramento dos transportadores." },
       { type: "heading", text: "Emissão ilimitada de manifesto de carga no EmitaGo" },
-      { type: "paragraph", text: "No EmitaGo, a emissão de MDF-e (manifesto de carga) e CT-e é ilimitada durante o mês ativo do CNPJ. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. O sistema também oferece calculadora da ANTT e recursos de CIOT, com condições comerciais próprias." },
+      { type: "paragraph", text: "No EmitaGo, a emissão de MDF-e (manifesto de carga) e CT-e é ilimitada durante o mês ativo do CNPJ. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. O sistema também oferece calculadora da ANTT e recursos de CIOT, consulte a equipe para conhecer a disponibilidade conforme sua operação." },
       { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" },
       { type: "source", label: "Manual de Orientação do Contribuinte — MDF-e (CONFAZ)", href: "https://www.confaz.fazenda.gov.br/legislacao/arquivo-manuais/manual_mdfe_v3-00.pdf" }
     ]
@@ -203,8 +203,8 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "paragraph", text: "O CT-e registra a prestação do serviço de transporte, enquanto o MDF-e organiza os documentos e informações da viagem. Quando os dois fluxos estão na mesma plataforma, a equipe pode reduzir retrabalho na preparação da documentação." },
       { type: "heading", text: "CIOT e calculadora ANTT também importam" },
       { type: "paragraph", text: "O CIOT é um registro regulatório da operação perante a ANTT e deve ser vinculado ao MDF-e quando aplicável. A calculadora da ANTT apoia a conferência do piso mínimo de frete, mas não substitui o registro do CIOT." },
-      { type: "heading", text: "Quanto custa o emissor de manifesto de carga EmitaGo?" },
-      { type: "paragraph", text: "O plano principal do EmitaGo custa R$ 60 pré-pagos por CNPJ ativo no mês de uso e oferece emissão ilimitada de CT-e e MDF-e durante o mês pago, sem fidelidade. A plataforma também oferece calculadora da ANTT e recursos de CIOT com condições comerciais próprias." },
+      { type: "heading", text: "O EmitaGo oferece recursos de CIOT?" },
+      { type: "paragraph", text: "O plano principal do EmitaGo custa R$ 60 pré-pagos por CNPJ ativo no mês de uso e oferece emissão ilimitada de CT-e e MDF-e durante o mês pago, sem fidelidade. A plataforma também oferece calculadora da ANTT e recursos relacionados ao CIOT. Consulte a equipe para confirmar a disponibilidade conforme sua operação." },
       { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" },
       { type: "source", label: "ANTT — Perguntas frequentes sobre CIOT", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" }
     ]
