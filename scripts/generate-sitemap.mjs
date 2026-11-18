@@ -5,6 +5,7 @@ import ts from "typescript";
 
 const ROOT = process.cwd();
 const BLOG_SOURCE = path.join(ROOT, "src/lib/blog-posts.ts");
+const TRANSPORT_BLOG_SOURCE = path.join(ROOT, "src/lib/transport-blog-posts.ts");
 const SITEMAP_PATH = path.join(ROOT, "public/sitemap.xml");
 const SITE_URL = "https://www.emitago.com.br";
 const SITEMAP_NAMESPACE = "http://www.sitemaps.org/schemas/sitemap/0.9";
@@ -68,9 +69,9 @@ function toIsoDate(value, fieldName, slug) {
   return date.toISOString().slice(0, 10);
 }
 
-function extractBlogPosts(sourceText) {
+function extractBlogPosts(sourceText, sourcePath = BLOG_SOURCE, arrayName = "blogPosts") {
   const source = ts.createSourceFile(
-    BLOG_SOURCE,
+    sourcePath,
     sourceText,
     ts.ScriptTarget.Latest,
     true,
@@ -80,13 +81,13 @@ function extractBlogPosts(sourceText) {
   const declaration = source.statements
     .filter(ts.isVariableStatement)
     .flatMap((statement) => [...statement.declarationList.declarations])
-    .find((item) => ts.isIdentifier(item.name) && item.name.text === "blogPosts");
+    .find((item) => ts.isIdentifier(item.name) && item.name.text === arrayName);
 
   if (!declaration || !declaration.initializer || !ts.isArrayLiteralExpression(declaration.initializer)) {
     fail('não foi possível localizar o array "blogPosts" em src/lib/blog-posts.ts.');
   }
 
-  const posts = declaration.initializer.elements.map((element) => {
+  const posts = declaration.initializer.elements.filter(ts.isObjectLiteralExpression).map((element) => {
     if (!ts.isObjectLiteralExpression(element)) {
       fail("cada artigo em blogPosts precisa ser um objeto literal.");
     }
