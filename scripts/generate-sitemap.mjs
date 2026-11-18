@@ -149,12 +149,16 @@ function escapeXml(value) {
     .replaceAll("'", "&apos;");
 }
 
-const [blogSource, existingSitemap] = await Promise.all([
+const [blogSource, transportBlogSource, existingSitemap] = await Promise.all([
   readFile(BLOG_SOURCE, "utf8"),
+  readFile(TRANSPORT_BLOG_SOURCE, "utf8"),
   readFile(SITEMAP_PATH, "utf8"),
 ]);
 
-const posts = extractBlogPosts(blogSource);
+const posts = [
+  ...extractBlogPosts(blogSource),
+  ...extractBlogPosts(transportBlogSource, TRANSPORT_BLOG_SOURCE, "transportBlogPosts"),
+];
 const staticUrls = readExistingStaticUrls(existingSitemap);
 const blogUrls = posts.map((post) => ({
   location: `${SITE_URL}/blog/${post.slug}`,
