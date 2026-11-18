@@ -158,15 +158,19 @@ function ArticlePage() {
   // Connect informational searches to the matching commercial solution without
   // forcing unrelated certificate or general-interest articles into a sales path.
   const slug = post.slug.toLowerCase();
-  const solutionCta = slug.includes("nfse")
-    ? { href: "/solucoes/nfse", label: "Conheça o emissor de NFS-e", description: "Veja como organizar a emissão de notas de serviço e consulte a cobertura do seu município." }
-    : slug.includes("nfce")
-      ? { href: "/solucoes/nfce", label: "Conheça a solução de NFC-e", description: "Veja os recursos de emissão de cupom fiscal e PDV para o varejo." }
-      : /nfe|ibs-cbs|checklist-reforma|simples-nacional/.test(slug)
-        ? { href: "/solucoes/nfe", label: "Conheça o emissor de NF-e", description: "Veja como emitir NF-e de produtos e manter DANFE e XML organizados durante a transição tributária." }
-        : /cte|mdfe|ciot|transporte|rntrc|damdfe|seguro-carga/.test(slug)
-          ? { href: "/solucoes/cte", label: "Conheça as soluções para transporte", description: "Conheça os recursos para CT-e, CT-e OS e rotinas relacionadas ao transporte." }
-          : null;
+  const solutionCta = /nfpe|produtor-rural/.test(slug)
+    ? { href: "/solucoes/nfpe", label: "Conheça a solução de NFP-e", description: "Veja informações sobre emissão de nota fiscal do produtor rural e confirme os requisitos aplicáveis à sua operação e ao seu estado." }
+    : slug.includes("nfse")
+      ? { href: "/solucoes/nfse", label: "Conheça o emissor de NFS-e", description: "Veja como organizar a emissão de notas de serviço e consulte a cobertura do seu município." }
+      : slug.includes("nfce")
+        ? { href: "/solucoes/nfce", label: "Conheça a solução de NFC-e", description: "Veja os recursos de emissão de cupom fiscal e PDV para o varejo." }
+        : /nfe|ibs-cbs|checklist-reforma|simples-nacional/.test(slug)
+          ? { href: "/solucoes/nfe", label: "Conheça o emissor de NF-e", description: "Veja como emitir NF-e de produtos e manter DANFE e XML organizados durante a transição tributária." }
+          : /cte|mdfe|ciot|transporte|rntrc|damdfe|seguro-carga/.test(slug)
+            ? { href: "/solucoes/cte", label: "Conheça as soluções para transporte", description: "Conheça os recursos para CT-e, CT-e OS e rotinas relacionadas ao transporte." }
+            : /certificado|e-cnpj|e-cpf|procuracao/.test(slug)
+              ? { href: "/certificado-digital", label: "Conheça o Certificado Digital A1", description: "Veja as opções de certificado digital para CPF e CNPJ e confira as condições de emissão online." }
+              : null;
 
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden" style={{ background: "var(--gradient-hero)" }}>
