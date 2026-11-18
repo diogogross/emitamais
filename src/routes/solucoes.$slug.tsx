@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, Check, FileText } from "lucide-react";
-import { getSolutionBySlug } from "@/lib/solution-pages";
+import { getSolutionBySlug, solutionPages } from "@/lib/solution-pages";
 import { blogPosts } from "@/lib/blog-posts";
 
 const BASE_URL = "https://www.emitago.com.br";
@@ -142,6 +142,7 @@ const landingVisuals: Record<string, { image: string; alt: string; eyebrow: stri
 function SolutionPage() {
   const { page } = Route.useLoaderData();
   const related = blogPosts.filter((post) => page.relatedSlugs.includes(post.slug));
+  const relatedSolutions = solutionPages.filter((solution) => solution.slug !== page.slug);
   const visual = landingVisuals[page.slug];
 
   return (
@@ -305,6 +306,25 @@ function SolutionPage() {
             </div>
           </section>
         )}
+
+        <section className="bg-muted/30" aria-labelledby="outras-solucoes-title">
+          <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Ecossistema EmitaGo</p>
+              <h2 id="outras-solucoes-title" className="mt-3 font-display text-3xl font-bold md:text-4xl">Conheça também nossas outras soluções fiscais</h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">Encontre a solução adequada para cada documento e conecte as rotinas fiscais da sua empresa em uma única plataforma.</p>
+            </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {relatedSolutions.map((solution) => (
+                <Link key={solution.slug} to="/solucoes/$slug" params={{ slug: solution.slug }} className="group rounded-2xl border border-border/70 bg-background p-5 transition hover:-translate-y-1 hover:border-primary/50">
+                  <h3 className="font-semibold leading-snug group-hover:text-primary">{solution.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-3">{solution.description}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary">Conhecer solução <ArrowRight className="h-4 w-4" /></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
           <div className="overflow-hidden rounded-3xl bg-foreground px-7 py-10 text-background md:px-12 md:py-14">
