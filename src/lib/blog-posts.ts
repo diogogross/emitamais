@@ -1686,8 +1686,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "cancelamento-nfe",
     category: "Notas Fiscais",
-    title: "Cancelamento de NF-e: prazo e alternativas",
-    excerpt: "Entenda quando cancelar uma NF-e, por que o prazo varia conforme a UF e quais alternativas avaliar quando a operação não aconteceu.",
+    title: "Cancelamento de NF-e: prazo, regras e o que fazer",
+    excerpt: "Saiba qual é o prazo para cancelar uma NF-e, como consultar a regra da SEFAZ do seu estado e o que fazer quando o prazo terminou.",
     date: "02 Fev 2026",
     updatedAt: "14 Nov 2026",
     readMin: 7,

@@ -166,8 +166,10 @@ function ArticlePage() {
         ? { href: "/solucoes/nfce", label: "Conheça a solução de NFC-e", description: "Veja os recursos de emissão de cupom fiscal e PDV para o varejo." }
         : /nfe|ibs-cbs|checklist-reforma|simples-nacional/.test(slug)
           ? { href: "/solucoes/nfe", label: "Conheça o emissor de NF-e", description: "Veja como emitir NF-e de produtos e manter DANFE e XML organizados durante a transição tributária." }
-          : /cte|mdfe|ciot|transporte|rntrc|damdfe|seguro-carga/.test(slug)
-            ? { href: "/solucoes/cte", label: "Conheça as soluções para transporte", description: "Conheça os recursos para CT-e, CT-e OS e rotinas relacionadas ao transporte." }
+          : /mdfe|manifesto|antt|piso-minimo/.test(slug)
+            ? { href: "/solucoes/mdfe", label: "Conheça o emissor de manifesto de carga (MDF-e)", description: "Veja como emitir e organizar o manifesto de carga, vincular documentos da viagem e acompanhar autorização e encerramento." }
+            : /cte|ciot|transporte|rntrc|damdfe|seguro-carga/.test(slug)
+              ? { href: "/solucoes/cte", label: "Conheça as soluções para transporte", description: "Conheça os recursos para CT-e, CT-e OS e rotinas relacionadas ao transporte." }
             : /certificado|e-cnpj|e-cpf|procuracao/.test(slug)
               ? { href: "/certificado-digital", label: "Conheça o Certificado Digital A1", description: "Veja as opções de certificado digital para CPF e CNPJ e confira as condições de emissão online." }
               : null;
@@ -288,7 +290,7 @@ function ArticlePage() {
               rel="noopener noreferrer"
               className="rounded-full border border-white/15 px-7 py-4 font-medium hover:bg-white/5 transition"
             >
-              Emitir certificado digital
+              Falar com a equipe
             </a>
           </div>
         </div>

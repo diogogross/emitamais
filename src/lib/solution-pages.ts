@@ -142,7 +142,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "O sistema possui calculadora da ANTT?", answer: "Sim. O EmitaGo disponibiliza uma calculadora da ANTT para apoiar a conferência do piso mínimo de frete. A calculadora não substitui o registro do CIOT nem a consulta às regras oficiais." },
       { question: "Quanto custa o EmitaGo para transportadoras?", answer: "O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, com emissão ilimitada de CT-e e MDF-e durante o mês pago. O EmitaGo também oferece recursos relacionados ao CIOT." }
     ],
-    relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "como-emitir-cte-transportadora-passo-a-passo", "mdfe-como-emitir-e-encerrar-manifesto", "calculadora-antt-piso-minimo-frete-como-calcular", "cte-transporte", "mdfe-frota"]
+    relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "como-emitir-cte-transportadora-passo-a-passo", "mdfe-como-emitir-e-encerrar-manifesto", "calculadora-antt-piso-minimo-frete-como-calcular", "manifesto-de-carga-o-que-e-para-que-serve", "como-emitir-manifesto-de-carga-online", "manifesto-de-carga-encerramento-e-consulta", "emissor-de-manifesto-de-carga-para-transportadora", "cte-transporte", "mdfe-frota"]
   },
   {
     slug: "mdfe",
@@ -168,9 +168,9 @@ export const solutionPages: SolutionPage[] = [
     slug: "ciot",
     title: "CIOT — Controle de Operações de Transporte",
     seoTitle: "Emissor de CIOT Online: CIOT para Transportadoras | EmitaGo",
-    description: "Organize o CIOT junto com CT-e e MDF-e no EmitaGo. recursos relacionados ao CIOT, emissão ilimitada de CT-e e MDF-e no mês ativo do CNPJ e calculadora da ANTT integrada.",
+    description: "Organize as rotinas de CIOT, CT-e e MDF-e em uma plataforma online para transporte. Consulte os recursos disponíveis e use a calculadora da ANTT para apoiar a conferência do piso mínimo de frete.",
     h1: "CIOT para transportadoras: organize o registro da operação",
-    intro: "O EmitaGo reúne recursos de CIOT, emissão ilimitada de CT-e e MDF-e no mês ativo do CNPJ e calculadora da ANTT. O EmitaGo também oferece recursos relacionados ao CIOT. Confira as regras da ANTT para identificar quem deve gerar o código em cada tipo de contratação.",
+    intro: "Organize as rotinas de transporte no EmitaGo: emissão ilimitada de CT-e e MDF-e durante o mês ativo do CNPJ, calculadora da ANTT para apoiar a conferência do piso mínimo de frete e recursos relacionados ao CIOT. Confira as regras da ANTT para identificar quem deve gerar o código em cada tipo de contratação e consulte a equipe sobre a disponibilidade dos recursos para sua operação.",
     benefits: ["Recursos de CIOT integrados à rotina de transporte", "CT-e e MDF-e ilimitados no mês ativo do CNPJ", "Calculadora da ANTT para apoiar a conferência do piso mínimo de frete", "Organização de dados de transportadores, veículos e operações", "Documentos de transporte reunidos em uma plataforma online"],
     audience: ["Transportadoras e ETCs", "Embarcadores e contratantes", "Operadores logísticos", "Empresas que contratam transporte rodoviário remunerado"],
     steps: ["Identifique o tipo de operação e os participantes do transporte.", "Verifique quem é responsável pela geração do CIOT conforme a contratação.", "Confira dados do frete e o piso mínimo aplicável com apoio da calculadora da ANTT.", "Realize o registro do CIOT conforme o fluxo disponível e as regras vigentes.", "Informe e vincule o CIOT ao MDF-e correspondente quando aplicável."],
