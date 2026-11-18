@@ -128,4 +128,85 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "source", label: "ANTT — CIOT Para Todos", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" }
     ]
   }
+
+  ,
+  {
+    slug: "manifesto-de-carga-o-que-e-para-que-serve", category: "Transporte",
+    title: "Manifesto de carga: o que é, para que serve e quando emitir",
+    excerpt: "Entenda o que é o manifesto de carga, sua relação com MDF-e, CT-e, NF-e e CIOT e quais informações devem acompanhar a viagem.",
+    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 7, image: "/images/blog/mdfe-frota.svg", author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "Manifesto de carga é o nome usado no dia a dia por transportadoras e motoristas para falar do Manifesto Eletrônico de Documentos Fiscais (MDF-e). Esse documento fiscal eletrônico reúne informações dos documentos fiscais vinculados a uma viagem e dados do transporte, conforme o tipo de operação e as regras aplicáveis." },
+      { type: "heading", text: "Manifesto de carga e MDF-e são a mesma coisa?" },
+      { type: "paragraph", text: "No contexto da documentação fiscal eletrônica do transporte rodoviário, quando alguém procura por manifesto de carga, geralmente está se referindo ao MDF-e. A denominação oficial é Manifesto Eletrônico de Documentos Fiscais, modelo 58. Por isso, este guia utiliza as duas expressões: manifesto de carga, como termo popular de pesquisa, e MDF-e, como sigla oficial." },
+      { type: "heading", text: "Para que serve o manifesto de carga?" },
+      { type: "list", items: ["Reunir os documentos fiscais vinculados à viagem, conforme a operação.", "Identificar dados do veículo, condutor e percurso quando exigidos.", "Acompanhar a movimentação da carga durante o transporte.", "Registrar eventos fiscais, como encerramento da viagem.", "Informar o CIOT da operação quando houver obrigatoriedade e MDF-e aplicável."] },
+      { type: "heading", text: "Qual a diferença entre manifesto, CT-e e NF-e?" },
+      { type: "paragraph", text: "A NF-e documenta operações com mercadorias. O CT-e registra a prestação do serviço de transporte. O MDF-e, conhecido como manifesto de carga, reúne documentos e informações da viagem. São documentos diferentes e complementares, e a necessidade de cada um depende da operação e da legislação aplicável." },
+      { type: "heading", text: "E qual é o papel do CIOT?" },
+      { type: "paragraph", text: "O CIOT identifica o registro da operação de transporte perante a ANTT. Ele não substitui o manifesto de carga, o CT-e ou a nota fiscal. Quando houver MDF-e aplicável, o CIOT deve ser informado e vinculado ao manifesto correspondente, conforme as regras vigentes." },
+      { type: "heading", text: "Emita manifesto de carga e CT-e no EmitaGo" },
+      { type: "paragraph", text: "O EmitaGo oferece emissão online e ilimitada de CT-e e MDF-e (manifesto de carga) durante o mês ativo do CNPJ. O sistema também disponibiliza recursos de CIOT e calculadora da ANTT. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. Consulte as condições comerciais do recurso adicional de CIOT." },
+      { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" },
+      { type: "source", label: "ANTT — Perguntas frequentes sobre CIOT", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" }
+    ]
+  },
+  {
+    slug: "como-emitir-manifesto-de-carga-online", category: "Transporte",
+    title: "Como emitir manifesto de carga online: passo a passo do MDF-e",
+    excerpt: "Veja como preparar os documentos, cadastrar veículo e motorista, preencher o MDF-e e acompanhar a autorização do manifesto de carga.",
+    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 8, image: "/images/blog/mdfe-frota.svg", author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "Para emitir manifesto de carga online, a transportadora utiliza o MDF-e (Manifesto Eletrônico de Documentos Fiscais), documento fiscal eletrônico que organiza informações da viagem e os documentos vinculados à carga." },
+      { type: "heading", text: "Antes de começar a emissão do manifesto" },
+      { type: "list", items: ["Confira se a empresa está habilitada para emitir MDF-e.", "Tenha certificado digital válido e compatível com o emissor.", "Separe CT-e ou NF-e que serão vinculados, conforme o tipo de operação.", "Confira cadastro de veículo, reboques e motorista.", "Defina percurso e informações da carga.", "Verifique o CIOT quando exigido e aplicável."] },
+      { type: "heading", text: "Passo a passo para emitir manifesto de carga" },
+      { type: "list", items: ["Acesse o emissor de MDF-e e selecione a operação correta.", "Informe os documentos fiscais que acompanharão a viagem.", "Preencha dados do veículo, condutor e percurso.", "Revise as informações e valide os campos obrigatórios.", "Assine digitalmente e transmita o MDF-e ao ambiente autorizador.", "Aguarde o retorno e confirme a autorização antes de iniciar a viagem.", "Disponibilize o DAMDFE conforme as exigências da operação."] },
+      { type: "heading", text: "O que fazer se o manifesto for rejeitado?" },
+      { type: "paragraph", text: "Leia o código e a mensagem de rejeição retornados pelo ambiente autorizador. Confira cadastro, documentos vinculados, veículo, percurso e campos obrigatórios. Corrija a causa identificada e transmita novamente. Não considere o manifesto autorizado apenas porque os dados foram enviados." },
+      { type: "heading", text: "Preciso informar CIOT no manifesto de carga?" },
+      { type: "paragraph", text: "Quando a operação estiver sujeita ao CIOT e houver MDF-e aplicável, o código deve ser informado e vinculado ao manifesto correspondente conforme a regulamentação. A responsabilidade pela geração varia conforme a contratação e o enquadramento dos transportadores." },
+      { type: "heading", text: "Emissão ilimitada de manifesto de carga no EmitaGo" },
+      { type: "paragraph", text: "No EmitaGo, a emissão de MDF-e (manifesto de carga) e CT-e é ilimitada durante o mês ativo do CNPJ. O plano principal custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, sem fidelidade. O sistema também oferece calculadora da ANTT e recursos de CIOT, com condições comerciais próprias." },
+      { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" },
+      { type: "source", label: "Manual de Orientação do Contribuinte — MDF-e (CONFAZ)", href: "https://www.confaz.fazenda.gov.br/legislacao/arquivo-manuais/manual_mdfe_v3-00.pdf" }
+    ]
+  },
+  {
+    slug: "manifesto-de-carga-encerramento-e-consulta", category: "Transporte",
+    title: "Como encerrar manifesto de carga e consultar o MDF-e",
+    excerpt: "Saiba quando encerrar o manifesto de carga, por que o evento é importante e como consultar a situação do MDF-e após a viagem.",
+    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 6, image: "/images/blog/mdfe-frota.svg", author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "O encerramento do manifesto de carga é o evento que informa ao ambiente fiscal que a viagem vinculada ao MDF-e foi concluída. Depois de finalizar a operação, a transportadora deve conferir os dados e registrar o evento de encerramento no momento e nas condições previstos pela legislação." },
+      { type: "heading", text: "Por que encerrar o MDF-e?" },
+      { type: "list", items: ["Atualiza a situação fiscal do manifesto após a conclusão da viagem.", "Mantém o histórico da operação coerente com o transporte realizado.", "Ajuda a evitar manifestos que permanecem abertos indevidamente.", "Permite organizar a documentação para auditoria e consulta."] },
+      { type: "heading", text: "Como encerrar manifesto de carga" },
+      { type: "list", items: ["Localize o MDF-e autorizado correspondente à viagem.", "Confira se a operação foi concluída e se os dados estão corretos.", "Acesse a função de encerramento no emissor.", "Informe os dados solicitados e transmita o evento.", "Aguarde a confirmação do ambiente autorizador.", "Consulte a situação atualizada do MDF-e e guarde o protocolo."] },
+      { type: "heading", text: "Como consultar um manifesto de carga?" },
+      { type: "paragraph", text: "A consulta deve ser feita pelos canais oficiais ou pelo sistema emissor, utilizando a chave de acesso e os dados de identificação disponíveis. Confira autorização, eventos e situação atual do documento." },
+      { type: "heading", text: "Controle seus manifestos no EmitaGo" },
+      { type: "paragraph", text: "O EmitaGo reúne emissão online de CT-e e MDF-e (manifesto de carga), com emissão ilimitada durante o mês ativo do CNPJ, além de recursos de CIOT e calculadora da ANTT. O plano principal é pré-pago, por R$ 60 por CNPJ ativo no mês de uso, sem fidelidade." },
+      { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" }
+    ]
+  },
+  {
+    slug: "emissor-de-manifesto-de-carga-para-transportadora", category: "Transporte",
+    title: "Emissor de manifesto de carga para transportadora: como escolher",
+    excerpt: "Compare os recursos importantes em um emissor de manifesto de carga: MDF-e, CT-e, CIOT, calculadora ANTT, autorização e controle de viagens.",
+    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 7, image: "/images/blog/cte-transporte.svg", author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "Um emissor de manifesto de carga é o sistema utilizado pela transportadora para preencher, assinar, transmitir e acompanhar o MDF-e. Ao escolher uma plataforma, vale avaliar também como ela se conecta à rotina de CT-e, CIOT, veículos, motoristas e documentos da viagem." },
+      { type: "heading", text: "O que avaliar em um emissor de MDF-e?" },
+      { type: "list", items: ["Emissão e acompanhamento de MDF-e (manifesto de carga).", "Integração com CT-e e documentos fiscais relacionados.", "Cadastro e reutilização de dados de veículos e motoristas.", "Consulta de autorização e eventos, inclusive encerramento.", "Recursos de CIOT e clareza sobre as condições comerciais.", "Calculadora da ANTT para apoiar a conferência do piso mínimo de frete.", "Acesso online e organização dos documentos para a equipe."] },
+      { type: "heading", text: "Por que integrar CT-e e manifesto de carga?" },
+      { type: "paragraph", text: "O CT-e registra a prestação do serviço de transporte, enquanto o MDF-e organiza os documentos e informações da viagem. Quando os dois fluxos estão na mesma plataforma, a equipe pode reduzir retrabalho na preparação da documentação." },
+      { type: "heading", text: "CIOT e calculadora ANTT também importam" },
+      { type: "paragraph", text: "O CIOT é um registro regulatório da operação perante a ANTT e deve ser vinculado ao MDF-e quando aplicável. A calculadora da ANTT apoia a conferência do piso mínimo de frete, mas não substitui o registro do CIOT." },
+      { type: "heading", text: "Quanto custa o emissor de manifesto de carga EmitaGo?" },
+      { type: "paragraph", text: "O plano principal do EmitaGo custa R$ 60 pré-pagos por CNPJ ativo no mês de uso e oferece emissão ilimitada de CT-e e MDF-e durante o mês pago, sem fidelidade. A plataforma também oferece calculadora da ANTT e recursos de CIOT com condições comerciais próprias." },
+      { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" },
+      { type: "source", label: "ANTT — Perguntas frequentes sobre CIOT", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" }
+    ]
+  }
 ];
