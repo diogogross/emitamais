@@ -99,7 +99,7 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "heading", text: "CIOT e MDF-e: qual é o vínculo?" },
       { type: "paragraph", text: "CIOT e MDF-e (manifesto de carga) têm funções diferentes. Quando o CIOT for exigido para a operação, ele deve ser informado e vinculado ao MDF-e correspondente conforme a regulamentação. Verifique também quem é o responsável pela geração, pois isso depende da relação contratual e do tipo de transportador." },
       { type: "heading", text: "Emissão ilimitada de MDF-e (manifesto de carga) no EmitaGo" },
-      { type: "paragraph", text: "Com o EmitaGo, sua transportadora pode emitir CT-e e MDF-e de forma ilimitada durante o mês ativo do CNPJ. O plano é pré-pago, custa R$ 60 por CNPJ ativo no mês de uso e não exige fidelidade. O CIOT possui custo adicional. Consulte os detalhes e confirme a configuração necessária para sua operação." },
+      { type: "paragraph", text: "Com o EmitaGo, sua transportadora pode emitir CT-e e MDF-e de forma ilimitada durante o mês ativo do CNPJ. O plano é pré-pago, custa R$ 60 por CNPJ ativo no mês de uso e não exige fidelidade. O EmitaGo também oferece recursos relacionados ao CIOT. Consulte a equipe para confirmar a disponibilidade conforme sua operação." },
       { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" },
       { type: "source", label: "ANTT — CIOT Para Todos", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/codigo-identificador-da-operacao-de-transporte-ciot" }
     ]
