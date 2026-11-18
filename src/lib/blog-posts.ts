@@ -3,6 +3,7 @@ import nfceVarejo from "@/assets/blog/nfce-varejo.jpg";
 import cteTransporte from "@/assets/blog/cte-transporte.jpg";
 import mdfeFrota from "@/assets/blog/mdfe-frota.jpg";
 import certificadoGuia from "@/assets/blog/certificado-guia.jpg";
+import { transportBlogPosts } from "./transport-blog-posts";
 
 export type BlogSection =
   | { type: "paragraph"; text: string }
@@ -26,6 +27,7 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  ...transportBlogPosts,
 {
   "slug": "rejeicao-nfe-como-identificar-e-corrigir",
   "category": "Notas Fiscais",

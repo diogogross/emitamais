@@ -1449,7 +1449,7 @@ function HeroSlide3() {
       eyebrow="Documentos de transporte"
       title="Sua transportadora"
       titleAccent="sem nota travada."
-      description="CTe, MDFe e CIOT emitidos em segundos, integrados com SEFAZ e ANTT. Um único sistema para toda a operação de cargas."
+      description="Emita CT-e e MDF-e ilimitados no mês ativo do CNPJ, consulte a calculadora da ANTT e utilize os recursos de CIOT com custo adicional. Tudo em um único sistema para sua operação de cargas."
       ctaLabel="Começar agora"
       ctaHref={WHATSAPP_URL}
       secondaryLabel="Ver documentos"
@@ -1457,7 +1457,7 @@ function HeroSlide3() {
       stats={[
         ["CTe", "conhecimento de transporte"],
         ["MDFe", "manifesto eletrônico"],
-        ["CIOT", "operação de cargas"],
+        ["CIOT", "custo adicional"],
       ]}
     />
   );
