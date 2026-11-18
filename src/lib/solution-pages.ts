@@ -148,7 +148,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "mdfe",
     title: "MDF-e — Manifesto de Carga Eletrônico",
     seoTitle: "Emissor de Manifesto de Carga e MDF-e Online | EmitaGo",
-    description: "Emita manifesto de carga (MDF-e) online e organize documentos, veículos, motoristas e viagens. MDF-e e CT-e ilimitados no mês ativo do CNPJ; recursos de CIOT à parte.",
+    description: "Emita manifesto de carga (MDF-e) online e organize documentos, veículos, motoristas e viagens. MDF-e e CT-e ilimitados no mês ativo do CNPJ, além de recursos relacionados ao CIOT.",
     h1: "Emissor de manifesto de carga (MDF-e) online para transportadoras",
     intro: "Emita o manifesto de carga (MDF-e), vincule os documentos fiscais da viagem e acompanhe autorização e encerramento. O EmitaGo oferece emissão ilimitada de MDF-e e CT-e no mês ativo do CNPJ, calculadora da ANTT e recursos relacionados ao CIOT.",
     benefits: ["Emissão ilimitada de MDF-e e CT-e no mês ativo do CNPJ", "Vinculação de NF-e e CT-e conforme a operação", "Cadastro de veículos e condutores", "Organização de viagens e encerramento do manifesto", "Recursos relacionados ao CIOT", "Calculadora da ANTT integrada ao sistema"],
@@ -160,7 +160,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "Posso vincular NF-e e CT-e no MDF-e?", answer: "Sim. Conforme o tipo de operação, o manifesto reúne os documentos fiscais correspondentes à viagem." },
       { question: "O manifesto de carga é ilimitado no EmitaGo?", answer: "Sim. A emissão de MDF-e (manifesto de carga) e CT-e é ilimitada durante o mês em que o CNPJ estiver ativo no EmitaGo." },
       { question: "Preciso encerrar o MDF-e?", answer: "O encerramento comunica ao ambiente fiscal o fim da viagem e deve ser realizado conforme o procedimento e o momento previstos para a operação." },
-      { question: "O CIOT tem custo adicional?", answer: "Sim. O EmitaGo também oferece recursos relacionados ao CIOT. Consulte a equipe para confirmar a disponibilidade conforme sua operação." }
+      { question: "O EmitaGo oferece recursos relacionados ao CIOT?", answer: "Sim. Consulte a equipe para confirmar a disponibilidade dos recursos de CIOT conforme sua operação." }
     ],
     relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "mdfe-como-emitir-e-encerrar-manifesto", "manifesto-de-carga-o-que-e-para-que-serve", "como-emitir-manifesto-de-carga-online", "manifesto-de-carga-encerramento-e-consulta", "emissor-de-manifesto-de-carga-para-transportadora", "calculadora-antt-piso-minimo-frete-como-calcular", "cte-transporte", "mdfe-frota"]
   },
@@ -168,7 +168,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "ciot",
     title: "CIOT — Controle de Operações de Transporte",
     seoTitle: "Emissor de CIOT Online: CIOT para Transportadoras | EmitaGo",
-    description: "Organize o CIOT junto com CT-e e MDF-e no EmitaGo. CIOT com custo adicional; emissão ilimitada de CT-e e MDF-e no mês ativo do CNPJ e calculadora da ANTT integrada.",
+    description: "Organize o CIOT junto com CT-e e MDF-e no EmitaGo. recursos relacionados ao CIOT, emissão ilimitada de CT-e e MDF-e no mês ativo do CNPJ e calculadora da ANTT integrada.",
     h1: "CIOT para transportadoras: organize o registro da operação",
     intro: "O EmitaGo reúne recursos de CIOT, emissão ilimitada de CT-e e MDF-e no mês ativo do CNPJ e calculadora da ANTT. O EmitaGo também oferece recursos relacionados ao CIOT. Confira as regras da ANTT para identificar quem deve gerar o código em cada tipo de contratação.",
     benefits: ["Recursos de CIOT integrados à rotina de transporte", "CT-e e MDF-e ilimitados no mês ativo do CNPJ", "Calculadora da ANTT para apoiar a conferência do piso mínimo de frete", "Organização de dados de transportadores, veículos e operações", "Documentos de transporte reunidos em uma plataforma online"],
@@ -179,7 +179,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "CIOT substitui CT-e ou MDF-e?", answer: "Não. O CT-e documenta a prestação de transporte, o MDF-e reúne documentos da viagem e o CIOT identifica o registro da operação perante a ANTT." },
       { question: "O CIOT é obrigatório para todas as transportadoras?", answer: "A regra geral alcança operações de transporte rodoviário remunerado de cargas, observadas as exceções e as responsabilidades previstas na regulamentação. A análise depende da operação concreta." },
       { question: "Quem deve gerar o CIOT?", answer: "A responsabilidade varia conforme a contratação. Quando há contratação ou subcontratação de TAC ou TAC equiparado, aplicam-se regras próprias para contratante ou subcontratante; sem TAC ou equiparado, a ETC que efetivamente realiza a operação responde pelo registro, conforme os meios regulamentares." },
-      { question: "O CIOT tem custo adicional no EmitaGo?", answer: "Sim. O EmitaGo oferece recursos relacionados ao CIOT. Consulte a equipe para confirmar a disponibilidade conforme sua operação. O plano principal de R$ 60 por CNPJ ativo no mês inclui emissão ilimitada de CT-e e MDF-e durante o mês pago." },
+      { question: "O EmitaGo oferece recursos relacionados ao CIOT?", answer: "Sim. Consulte a equipe para confirmar a disponibilidade dos recursos de CIOT conforme sua operação. O plano principal de R$ 60 por CNPJ ativo no mês inclui emissão ilimitada de CT-e e MDF-e durante o mês pago." },
       { question: "A calculadora da ANTT gera o CIOT?", answer: "Não. A calculadora apoia a conferência do piso mínimo de frete. O registro e a geração do CIOT são procedimentos distintos e devem seguir os canais e requisitos autorizados pela ANTT." }
     ],
     relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "calculadora-antt-piso-minimo-frete-como-calcular", "como-emitir-cte-transportadora-passo-a-passo", "mdfe-como-emitir-e-encerrar-manifesto", "cte-transporte", "mdfe-frota"]
