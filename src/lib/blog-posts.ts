@@ -1825,7 +1825,7 @@ export const blogPosts: BlogPost[] = [
       "Documento auxiliar do MDFe é o passaporte da carga. Veja como preencher e evitar retenção do veículo.",
     date: "09 Fev 2026",
     readMin: 4,
-    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O DAMDFe é a representação impressa do MDFe. Ele acompanha o veículo durante toda a viagem e é o primeiro documento pedido em barreira fiscal." },
