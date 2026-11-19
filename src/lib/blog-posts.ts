@@ -1337,7 +1337,7 @@ export const blogPosts: BlogPost[] = [
     date: "12 Jan 2026",
     updatedAt: "14 Nov 2026",
     readMin: 7,
-    image: nfeGuia,
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A Nota Fiscal Eletrônica (NF-e, modelo 55) é o documento digital utilizado para registrar operações com mercadorias, conforme as regras fiscais aplicáveis. A emissão ocorre em sistema emissor integrado ao ambiente autorizador da SEFAZ. A nota só pode ser tratada como autorizada depois do retorno oficial de autorização." },
@@ -1386,7 +1386,7 @@ export const blogPosts: BlogPost[] = [
       "Entenda quando usar NFCe, o que muda no PDV e como configurar contingência offline para não parar as vendas.",
     date: "05 Jan 2026",
     readMin: 5,
-    image: nfceVarejo,
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       {
@@ -1439,7 +1439,7 @@ export const blogPosts: BlogPost[] = [
       "Conhecimento de transporte eletrônico — obrigatoriedade, tipos, tomadores e como integrar com o MDFe da sua viagem.",
     date: "28 Dez 2025",
     readMin: 7,
-    image: cteTransporte,
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       {
@@ -1498,7 +1498,7 @@ export const blogPosts: BlogPost[] = [
       "Manifesto Eletrônico de Documentos Fiscais na prática — quando emitir, encerrar corretamente e evitar multas em fiscalização.",
     date: "18 Dez 2025",
     readMin: 6,
-    image: mdfeFrota,
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       {
@@ -1556,7 +1556,7 @@ export const blogPosts: BlogPost[] = [
       "Diferenças entre A1 e A3, mídias suportadas (token, cartão, nuvem) e como emitir 100% online com validação por videoconferência.",
     date: "10 Dez 2025",
     readMin: 5,
-    image: certificadoGuia,
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       {
@@ -1825,7 +1825,7 @@ export const blogPosts: BlogPost[] = [
       "Documento auxiliar do MDFe é o passaporte da carga. Veja como preencher e evitar retenção do veículo.",
     date: "09 Fev 2026",
     readMin: 4,
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O DAMDFe é a representação impressa do MDFe. Ele acompanha o veículo durante toda a viagem e é o primeiro documento pedido em barreira fiscal." },
@@ -1893,7 +1893,7 @@ export const blogPosts: BlogPost[] = [
       "Registro Nacional do Transportador Rodoviário de Cargas — cadastro, renovação e vínculo com veículos.",
     date: "10 Jan 2026",
     readMin: 5,
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O RNTRC é o cadastro da ANTT que autoriza empresas, cooperativas e autônomos a exercerem transporte rodoviário de cargas. Sem ele, não há emissão válida de CTe nem CIOT." },
