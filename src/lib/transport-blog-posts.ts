@@ -86,7 +86,7 @@ export const transportBlogPosts: BlogPost[] = [
     date: "18 Nov 2026",
     updatedAt: "18 Nov 2026",
     readMin: 7,
-    image: "/images/blog/mdfe-frota.svg",
+    image: "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O Manifesto Eletrônico de Documentos Fiscais (MDF-e), conhecido no dia a dia como manifesto de carga ou simplesmente manifesto, organiza informações dos documentos fiscais vinculados a uma viagem. A emissão correta depende do tipo de operação, dos documentos que acompanham a carga e dos dados de veículo, condutor e percurso." },
@@ -112,7 +112,7 @@ export const transportBlogPosts: BlogPost[] = [
     date: "18 Nov 2026",
     updatedAt: "18 Nov 2026",
     readMin: 6,
-    image: "/images/blog/cte-transporte.svg",
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A conferência do piso mínimo de frete faz parte da preparação de determinadas operações de transporte rodoviário remunerado de cargas. A calculadora da ANTT ajuda a estimar o valor mínimo conforme os parâmetros oficiais, mas o resultado depende dos dados informados e da tabela vigente." },
@@ -134,7 +134,7 @@ export const transportBlogPosts: BlogPost[] = [
     slug: "manifesto-de-carga-o-que-e-para-que-serve", category: "Transporte",
     title: "Manifesto de carga: o que é, para que serve e quando emitir",
     excerpt: "Entenda o que é o manifesto de carga, sua relação com MDF-e, CT-e, NF-e e CIOT e quais informações devem acompanhar a viagem.",
-    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 7, image: "/images/blog/mdfe-frota.svg", author: "Equipe EmitaGo",
+    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 7, image: "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=1200&q=80", author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "Manifesto de carga é o nome usado no dia a dia por transportadoras e motoristas para falar do Manifesto Eletrônico de Documentos Fiscais (MDF-e). Esse documento fiscal eletrônico reúne informações dos documentos fiscais vinculados a uma viagem e dados do transporte, conforme o tipo de operação e as regras aplicáveis." },
       { type: "heading", text: "Manifesto de carga e MDF-e são a mesma coisa?" },
@@ -155,7 +155,7 @@ export const transportBlogPosts: BlogPost[] = [
     slug: "como-emitir-manifesto-de-carga-online", category: "Transporte",
     title: "Como emitir manifesto de carga online: passo a passo do MDF-e",
     excerpt: "Veja como preparar os documentos, cadastrar veículo e motorista, preencher o MDF-e e acompanhar a autorização do manifesto de carga.",
-    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 8, image: "/images/blog/mdfe-frota.svg", author: "Equipe EmitaGo",
+    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 8, image: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80", author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "Para emitir manifesto de carga online, a transportadora utiliza o MDF-e (Manifesto Eletrônico de Documentos Fiscais), documento fiscal eletrônico que organiza informações da viagem e os documentos vinculados à carga." },
       { type: "heading", text: "Antes de começar a emissão do manifesto" },
@@ -176,7 +176,7 @@ export const transportBlogPosts: BlogPost[] = [
     slug: "manifesto-de-carga-encerramento-e-consulta", category: "Transporte",
     title: "Como encerrar manifesto de carga e consultar o MDF-e",
     excerpt: "Saiba quando encerrar o manifesto de carga, por que o evento é importante e como consultar a situação do MDF-e após a viagem.",
-    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 6, image: "/images/blog/mdfe-frota.svg", author: "Equipe EmitaGo",
+    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 6, image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80", author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O encerramento do manifesto de carga é o evento que informa ao ambiente fiscal que a viagem vinculada ao MDF-e foi concluída. Depois de finalizar a operação, a transportadora deve conferir os dados e registrar o evento de encerramento no momento e nas condições previstos pela legislação." },
       { type: "heading", text: "Por que encerrar o MDF-e?" },
@@ -194,7 +194,7 @@ export const transportBlogPosts: BlogPost[] = [
     slug: "emissor-de-manifesto-de-carga-para-transportadora", category: "Transporte",
     title: "Emissor de manifesto de carga para transportadora: como escolher",
     excerpt: "Compare os recursos importantes em um emissor de manifesto de carga: MDF-e, CT-e, CIOT, calculadora ANTT, autorização e controle de viagens.",
-    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 7, image: "/images/blog/cte-transporte.svg", author: "Equipe EmitaGo",
+    date: "18 Nov 2026", updatedAt: "18 Nov 2026", readMin: 7, image: "https://images.unsplash.com/photo-1633409361618-c73427e4e206?auto=format&fit=crop&w=1200&q=80", author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "Um emissor de manifesto de carga é o sistema utilizado pela transportadora para preencher, assinar, transmitir e acompanhar o MDF-e. Ao escolher uma plataforma, vale avaliar também como ela se conecta à rotina de CT-e, CIOT, veículos, motoristas e documentos da viagem." },
       { type: "heading", text: "O que avaliar em um emissor de MDF-e?" },
@@ -208,5 +208,50 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "source", label: "Portal Nacional do MDF-e", href: "https://www.mdfe.fazenda.gov.br/" },
       { type: "source", label: "ANTT — Perguntas frequentes sobre CIOT", href: "https://www.gov.br/antt/pt-br/assuntos/cargas/ciot-para-todos-1/perguntas-frequentes" }
     ]
-  }
+  },
+
+  {
+    slug: "cte-os-modelo-67",
+    category: "Transporte",
+    title: "CT-e OS modelo 67: guia para transporte de passageiros e outros serviços",
+    excerpt: "Entenda quando emitir CT-e OS, a diferença para o CT-e modelo 57, os requisitos de credenciamento e os cuidados com o DACTE OS.",
+    date: "18 Nov 2026",
+    readMin: 8,
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+    author: "Equipe EmitaGo",
+    content: [
+      { type: "paragraph", text: "O Conhecimento de Transporte Eletrônico para Outros Serviços (CT-e OS), modelo 67, é um documento fiscal eletrônico destinado a determinadas prestações de transporte que não são documentadas pelo CT-e de cargas modelo 57. Seu uso mais conhecido é no transporte fretado de pessoas, mas a legislação também prevê hipóteses específicas para transporte de valores e excesso de bagagem." },
+      { type: "image", src: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80", alt: "Ônibus rodoviário utilizado em transporte de passageiros", caption: "O CT-e OS modelo 67 é utilizado, entre outras hipóteses previstas na legislação, no transporte de pessoas por fretamento." },
+      { type: "heading", text: "O que é CT-e OS modelo 67?" },
+      { type: "paragraph", text: "É o Conhecimento de Transporte Eletrônico para Outros Serviços, emitido e armazenado digitalmente. A validade fiscal depende da assinatura digital do emitente e da autorização de uso concedida pela administração tributária. O documento substitui a Nota Fiscal de Serviço de Transporte, modelo 7, nas situações previstas nas normas aplicáveis." },
+      { type: "heading", text: "Quando o CT-e OS deve ser emitido?" },
+      { type: "list", items: [
+        "Transporte intermunicipal, interestadual ou internacional de pessoas realizado por agência de viagem ou transportador, em veículo próprio ou afretado, conforme as condições legais.",
+        "Transporte de valores, para reunir as prestações realizadas para cada tomador dentro do período de apuração, conforme a regra aplicável.",
+        "Transporte de passageiros, para englobar os documentos de excesso de bagagem emitidos durante o mês, nas condições previstas na legislação."
+      ]},
+      { type: "heading", text: "CT-e modelo 57 e CT-e OS modelo 67: qual a diferença?" },
+      { type: "paragraph", text: "O CT-e modelo 57 documenta prestações de serviço de transporte de cargas. Já o CT-e OS modelo 67 documenta outros serviços de transporte previstos na legislação, como fretamento de pessoas, além das hipóteses específicas de transporte de valores e excesso de bagagem. Escolher o modelo correto depende da natureza real da prestação, não apenas do tipo de veículo utilizado." },
+      { type: "image", src: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80", alt: "Veículo de transporte coletivo de passageiros", caption: "Identifique a natureza do serviço e o enquadramento fiscal antes de selecionar o documento." },
+      { type: "heading", text: "O que conferir antes de emitir" },
+      { type: "list", items: [
+        "Verifique se a empresa está regularmente inscrita e credenciada para emitir CT-e OS na unidade federada competente.",
+        "Confirme se a atividade, o CNAE e as autorizações do órgão regulador atendem à operação realizada.",
+        "Revise os dados do emitente, tomador, percurso, modalidade e informações específicas do fretamento, quando aplicáveis.",
+        "Utilize certificado digital válido e confira o leiaute técnico vigente.",
+        "Transmita o documento e aguarde a autorização de uso antes de considerar a emissão concluída."
+      ]},
+      { type: "heading", text: "O que é DACTE OS?" },
+      { type: "paragraph", text: "O DACTE OS é a representação auxiliar do CT-e OS. Ele contém informações que permitem identificar e consultar o documento eletrônico e, no transporte de pessoas por fretamento, deve acompanhar a prestação conforme as regras aplicáveis. O DACTE OS não substitui o XML autorizado: mantenha o documento eletrônico e os protocolos organizados." },
+      { type: "heading", text: "Como funciona o credenciamento?" },
+      { type: "paragraph", text: "O credenciamento e os documentos exigidos variam conforme a unidade federada e a atividade. No Rio Grande do Sul, por exemplo, a Receita Estadual informa que o transporte de pessoas por fretamento exige cadastro como transportador de pessoas perante o DAER, ANTT ou METROPLAN, conforme o caso, antes da liberação fiscal. Consulte sempre a SEFAZ e o órgão regulador competente no seu estado." },
+      { type: "heading", text: "Como o EmitaGo pode ajudar" },
+      { type: "paragraph", text: "O EmitaGo reúne recursos de emissão de documentos de transporte em uma plataforma online. Consulte a equipe para confirmar a disponibilidade do fluxo de CT-e OS para o enquadramento, estado e operação da sua empresa antes de iniciar a emissão." },
+      { type: "heading", text: "Fontes oficiais para consulta" },
+      { type: "source", label: "SEFAZ Paraná — Conhecimento de Transporte Eletrônico para Outros Serviços (CT-e OS)", href: "https://sped.fazenda.pr.gov.br/CTeOS/Pagina/Conhecimento-de-Transporte-Eletronico-para-Outros-Servicos-CT-e-OS" },
+      { type: "source", label: "SEFAZ São Paulo — CT-e OS, hipóteses de utilização e credenciamento", href: "https://portal.fazenda.sp.gov.br/servicos/cte/Paginas/CT-e-OS.aspx" },
+      { type: "source", label: "Receita Estadual do Rio Grande do Sul — credenciamento para CT-e ou CT-e OS", href: "https://atendimento.receita.rs.gov.br/carta-de-servicos/servicos?servico=1729" }
+    ]
+  },
+
 ];
