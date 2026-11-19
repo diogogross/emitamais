@@ -102,7 +102,7 @@ export const blogPosts: BlogPost[] = [
     },
     {
       "type": "paragraph",
-      "text": "Ao avaliar um emissor de NF-e, verifique se ele apresenta o código e a mensagem retornados pela SEFAZ, permite localizar a nota, revisar os dados e consultar o status final. Também confira como ficam disponíveis o XML autorizado e o DANFE. O EmitaGo oferece emissão online de NF-e modelo 55, com preço pré-pago de R$ 60 por CNPJ ativo no mês de uso e emissão ilimitada durante o mês pago. Consulte a página da solução para conhecer o fluxo."
+      "text": "Ao avaliar um emissor de NF-e, verifique se ele apresenta o código e a mensagem retornados pela SEFAZ, permite localizar a nota, revisar os dados e consultar o status final. Também confira como ficam disponíveis o XML autorizado e o DANFE. O EmitaGo oferece emissão online de NF-e modelo 55, com preço pré-pago de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Consulte a página da solução para conhecer o fluxo."
     },
     {
       "type": "heading",
@@ -223,7 +223,7 @@ export const blogPosts: BlogPost[] = [
     },
     {
       "type": "paragraph",
-      "text": "O EmitaGo oferece emissão online de NF-e e disponibilização de DANFE e XML no fluxo do documento. A proposta comercial é pré-paga: R$ 60 por CNPJ ativo no mês de uso, com emissão ilimitada durante o mês pago e sem fidelidade. Conheça a solução e confirme com a equipe os recursos disponíveis para a organização dos documentos da sua operação."
+      "text": "O EmitaGo oferece emissão online de NF-e e disponibilização de DANFE e XML no fluxo do documento. A proposta comercial é pré-paga: R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Conheça a solução e confirme com a equipe os recursos disponíveis para a organização dos documentos da sua operação."
     },
     {
       "type": "heading",
@@ -342,7 +342,7 @@ export const blogPosts: BlogPost[] = [
     },
     {
       "type": "paragraph",
-      "text": "Um emissor de NF-e deve manter coerência entre o XML autorizado e sua representação gráfica. Ao avaliar um sistema, verifique se é possível localizar a nota, consultar seu status e obter o DANFE e o XML correspondentes. O EmitaGo oferece emissão online de NF-e com disponibilização de DANFE e XML, por R$ 60 pré-pagos por CNPJ ativo no mês de uso. Consulte a página da solução para conhecer as condições."
+      "text": "Um emissor de NF-e deve manter coerência entre o XML autorizado e sua representação gráfica. Ao avaliar um sistema, verifique se é possível localizar a nota, consultar seu status e obter o DANFE e o XML correspondentes. O EmitaGo oferece emissão online de NF-e com disponibilização de DANFE e XML, por R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Consulte a página da solução para conhecer as condições."
     },
     {
       "type": "heading",
@@ -460,7 +460,7 @@ export const blogPosts: BlogPost[] = [
     },
     {
       "type": "paragraph",
-      "text": "Um sistema emissor ajuda a manter cadastros e dados da operação organizados, mas a empresa precisa fornecer informações corretas e validar o tratamento tributário. Ao escolher um emissor, confira se ele permite revisar os campos antes da transmissão, consultar o retorno da SEFAZ e acessar o XML e o DANFE. O EmitaGo oferece emissão online de NF-e modelo 55 e custa R$ 60 pré-pagos por CNPJ ativo no mês de uso, com emissão ilimitada no período pago."
+      "text": "Um sistema emissor ajuda a manter cadastros e dados da operação organizados, mas a empresa precisa fornecer informações corretas e validar o tratamento tributário. Ao escolher um emissor, confira se ele permite revisar os campos antes da transmissão, consultar o retorno da SEFAZ e acessar o XML e o DANFE. O EmitaGo oferece emissão online de NF-e modelo 55 e custa R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs."
     },
     {
       "type": "heading",
@@ -589,7 +589,7 @@ export const blogPosts: BlogPost[] = [
     },
     {
       "type": "paragraph",
-      "text": "Antes de emitir, reúna a nota original, o motivo do retorno, a quantidade devolvida e a orientação fiscal. Depois confira os dados, transmita a NF-e e aguarde o retorno da SEFAZ. Guarde o XML autorizado, o protocolo e os documentos relacionados à movimentação. O EmitaGo oferece emissão online de NF-e modelo 55, com proposta pré-paga de R$ 60 por CNPJ ativo no mês de uso e emissões ilimitadas no período pago. Consulte a solução para conhecer o fluxo disponível."
+      "text": "Antes de emitir, reúna a nota original, o motivo do retorno, a quantidade devolvida e a orientação fiscal. Depois confira os dados, transmita a NF-e e aguarde o retorno da SEFAZ. Guarde o XML autorizado, o protocolo e os documentos relacionados à movimentação. O EmitaGo oferece emissão online de NF-e modelo 55, com proposta pré-paga de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Consulte a solução para conhecer o fluxo disponível."
     },
     {
       "type": "heading",
@@ -711,7 +711,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "type": "paragraph",
-        "text": "O EmitaGo reúne emissão online de documentos fiscais em uma plataforma, com proposta pré-paga de R$ 60 por CNPJ ativo no mês de uso e emissões ilimitadas durante o período contratado. Antes de contratar, confirme com a equipe a cobertura técnica disponível para seu enquadramento e suas operações."
+        "text": "O EmitaGo reúne emissão online de documentos fiscais em uma plataforma, com proposta pré-paga de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Antes de contratar, confirme com a equipe a cobertura técnica disponível para seu enquadramento e suas operações."
       },
       {
         "type": "heading",
@@ -827,7 +827,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "type": "paragraph",
-        "text": "O EmitaGo oferece emissão online de NF-e e outros documentos fiscais. A plataforma tem proposta de R$ 60 por CNPJ ativo no mês de uso, pré-paga, com emissões ilimitadas durante o período contratado. Consulte a equipe para confirmar os recursos e a cobertura técnica disponíveis para os campos e operações da sua empresa."
+        "text": "O EmitaGo oferece emissão online de NF-e e outros documentos fiscais. A plataforma tem proposta de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Consulte a equipe para confirmar os recursos e a cobertura técnica disponíveis para os campos e operações da sua empresa."
       },
       {
         "type": "heading",
@@ -961,7 +961,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "type": "paragraph",
-        "text": "Compare a cobertura de documentos, os ambientes atendidos, a frequência de atualização, o suporte e a clareza do fluxo de emissão. Solicite confirmação por escrito de quais leiautes e operações estão contemplados. O EmitaGo centraliza a emissão online de diferentes documentos fiscais e trabalha com preço pré-pago de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas no período contratado. Confirme com a equipe se a cobertura atual atende às operações específicas do seu negócio."
+        "text": "Compare a cobertura de documentos, os ambientes atendidos, a frequência de atualização, o suporte e a clareza do fluxo de emissão. Solicite confirmação por escrito de quais leiautes e operações estão contemplados. O EmitaGo centraliza a emissão online de diferentes documentos fiscais e trabalha com preço pré-pago de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Confirme com a equipe se a cobertura atual atende às operações específicas do seu negócio."
       },
       {
         "type": "heading",
@@ -1068,7 +1068,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "type": "paragraph",
-        "text": "O EmitaGo reúne emissão online de documentos fiscais para empresas e oferece uma proposta pré-paga de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas durante o período contratado. Antes de contratar, confirme com a equipe a compatibilidade do fluxo disponível com o regime tributário, o documento e a operação da sua empresa."
+        "text": "O EmitaGo reúne emissão online de documentos fiscais para empresas e oferece uma proposta pré-paga de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Antes de contratar, confirme com a equipe a compatibilidade do fluxo disponível com o regime tributário, o documento e a operação da sua empresa."
       },
       {
         "type": "heading",
@@ -1188,7 +1188,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "type": "paragraph",
-        "text": "O EmitaGo centraliza a emissão online de documentos fiscais e oferece preço pré-pago de R$ 60 por CNPJ ativo no mês de uso, com emissões ilimitadas no período contratado. Conheça a plataforma e confirme com a equipe a cobertura adequada para seus documentos e operações."
+        "text": "O EmitaGo centraliza a emissão online de documentos fiscais e oferece preço pré-pago de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Conheça a plataforma e confirme com a equipe a cobertura adequada para seus documentos e operações."
       },
       {
         "type": "heading",
@@ -1290,7 +1290,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         "type": "paragraph",
-        "text": "O EmitaGo divulga integrações de NFS-e com mais de 1.600 municípios e oferece emissão online de documentos fiscais. O preço anunciado é de R$ 60 por CNPJ ativo no mês de uso, pré-pago e com emissões ilimitadas no período contratado. Consulte a equipe para confirmar a cobertura do seu município, atividade e enquadramento, especialmente quanto ao padrão nacional e às novas informações de IBS e CBS."
+        "text": "O EmitaGo divulga integrações de NFS-e com mais de 1.600 municípios e oferece emissão online de documentos fiscais. O preço anunciado é de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Consulte a equipe para confirmar a cobertura do seu município, atividade e enquadramento, especialmente quanto ao padrão nacional e às novas informações de IBS e CBS."
       },
       {
         "type": "heading",
