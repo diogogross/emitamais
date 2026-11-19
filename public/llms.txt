@@ -1,12 +1,12 @@
 # EmitaGo
 
-> Plataforma brasileira de emissão online de documentos fiscais para empresas, com cobrança pré-paga de R$ 60 por CNPJ ativo no mês de uso.
+> Plataforma brasileira de emissão online de documentos fiscais para empresas, com cobrança pré-paga de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs.
 
 O EmitaGo reúne emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e, NFP-e e rotinas de CIOT em uma plataforma online. A disponibilidade de cada documento, integração, município e operação deve ser confirmada conforme a configuração fiscal do cliente.
 
 ## Preços e condições
 
-- **Sistema emissor:** R$ 60 por CNPJ ativo, pagos antecipadamente para liberar o mês de uso.
+- **Sistema emissor:** R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, pagos antecipadamente para liberar o mês de uso.
 - **Uso no mês pago:** emissões ilimitadas para o CNPJ ativo durante o período contratado.
 - **Meses sem uso:** não é necessário ativar/pagar o CNPJ quando não houver necessidade de emissão, conforme as condições comerciais.
 - **Contrato:** sem fidelidade e sem multa por permanência.
