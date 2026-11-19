@@ -197,6 +197,11 @@ function SolutionPage() {
               <p className="mt-3 text-3xl font-bold">R$ 40–60</p>
               <p className="mt-1 text-sm text-muted-foreground">por CNPJ/mês, conforme a quantidade contratada</p>
             </div>
+            <div className="rounded-2xl border border-border/70 bg-card p-6">
+              <p className="text-xs font-semibold uppercase tracking-wider text-primary">Modelo pré-pago</p>
+              <p className="mt-3 text-2xl font-bold">Você decide quando usar</p>
+              <p className="mt-1 text-sm text-muted-foreground">Sem contratos, sem fidelidade e sem necessidade de cartão de crédito.</p>
+            </div>
             <div className="rounded-2xl border border-border/70 bg-card p-6 sm:col-span-2">
               <p className="text-sm leading-relaxed text-muted-foreground">No mês pago, a emissão é ilimitada para aquele CNPJ. É possível gerenciar vários CNPJs no mesmo painel, com cobrança individual por CNPJ ativo.</p>
             </div>
