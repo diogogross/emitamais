@@ -8,11 +8,11 @@ const BASE_URL = "https://www.emitago.com.br";
 const pricingFaq = [
   {
     question: "Quanto custa o EmitaGo?",
-    answer: "O EmitaGo custa R$ 60 por CNPJ ativo em cada mês de uso. O pagamento é antecipado e libera o sistema naquele mês, com emissão ilimitada de notas para o CNPJ pago. Não há fidelidade nem multa por cancelamento.",
+    answer: "O EmitaGo cobra R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. O pagamento é antecipado e libera o sistema naquele mês, com emissão ilimitada de notas para o CNPJ pago. Não há fidelidade nem multa por cancelamento.",
   },
   {
     question: "Posso gerenciar vários CNPJs no mesmo painel?",
-    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel, mas a cobrança é individual: cada CNPJ utilizado no mês custa R$ 60. CNPJs cadastrados não estão automaticamente incluídos em um único pagamento.",
+    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel, mas a cobrança é individual: cada CNPJ utilizado no mês custa R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. CNPJs cadastrados não estão automaticamente incluídos em um único pagamento.",
   },
   {
     question: "Preciso pagar nos meses em que não emitir notas?",
@@ -79,7 +79,7 @@ export const Route = createFileRoute("/solucoes/$slug")({
                   "@type": "Offer",
                   price: "60.00",
                   priceCurrency: "BRL",
-                  description: "R$ 60 por CNPJ ativo, pagos antecipadamente para liberar o mês de uso. Emissão ilimitada de notas no mês pago, sem fidelidade.",
+                  description: "R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Emissão ilimitada de notas no mês pago, sem fidelidade.",
                   url: `${BASE_URL}/#planos`,
                 },
                 url
@@ -193,13 +193,7 @@ function SolutionPage() {
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="rounded-2xl border border-border/70 bg-card p-6">
               <p className="text-xs font-semibold uppercase tracking-wider text-primary">Preço transparente</p>
-              <p className="mt-3 text-3xl font-bold">R$ 60,00</p>
-              <p className="mt-1 text-sm text-muted-foreground">por CNPJ ativo no mês de uso</p>
-            </div>
-            <div className="rounded-2xl border border-border/70 bg-card p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-primary">Modelo pré-pago</p>
-              <p className="mt-3 text-2xl font-bold">Você decide quando usar</p>
-              <p className="mt-1 text-sm text-muted-foreground">Pagamento antecipado, sem fidelidade ou multa.</p>
+              <p className="mt-3 text-3xl font-bold">R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs.</p>
             </div>
             <div className="rounded-2xl border border-border/70 bg-card p-6 sm:col-span-2">
               <p className="text-sm leading-relaxed text-muted-foreground">No mês pago, a emissão é ilimitada para aquele CNPJ. É possível gerenciar vários CNPJs no mesmo painel, com cobrança individual por CNPJ ativo.</p>
@@ -331,7 +325,7 @@ function SolutionPage() {
             <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
               <div><p className="text-xs font-semibold uppercase tracking-[0.18em] text-background/60">EmitaGo • Emissão fiscal online</p>
                 <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold md:text-4xl">Organize sua emissão fiscal sem complicar a rotina.</h2>
-                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-background/70">R$ 60 pré-pagos por CNPJ ativo no mês de uso. Sem fidelidade e sem cobrança pelo uso nos meses em que você não ativar o CNPJ.</p>
+                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-background/70">R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Sem fidelidade e sem cobrança pelo uso nos meses em que você não ativar o CNPJ.</p>
               </div>
               <Link to="/" hash="planos" className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-7 py-4 font-semibold text-foreground transition hover:opacity-90">Conhecer o EmitaGo <ArrowRight className="h-4 w-4" /></Link>
             </div>
