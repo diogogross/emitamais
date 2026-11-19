@@ -1,8 +1,3 @@
-import nfeGuia from "@/assets/blog/nfe-guia.jpg";
-import nfceVarejo from "@/assets/blog/nfce-varejo.jpg";
-import cteTransporte from "@/assets/blog/cte-transporte.jpg";
-import mdfeFrota from "@/assets/blog/mdfe-frota.jpg";
-import certificadoGuia from "@/assets/blog/certificado-guia.jpg";
 import { transportBlogPosts } from "./transport-blog-posts";
 
 export type BlogSection =
@@ -1620,7 +1615,7 @@ export const blogPosts: BlogPost[] = [
     date: "20 Fev 2026",
     updatedAt: "14 Nov 2026",
     readMin: 7,
-    image: nfeGuia,
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A Nota Fiscal de Serviço eletrônica (NFS-e) registra a prestação de serviços. Em 2026, é importante diferenciar as regras por enquadramento: o MEI prestador de serviços já utiliza o padrão nacional desde setembro de 2023; para microempresas (ME) e empresas de pequeno porte (EPP) optantes pelo Simples Nacional, a obrigatoriedade do padrão nacional passou a valer em 1º de novembro de 2026 nas prestações sujeitas à emissão." },
@@ -1655,7 +1650,7 @@ export const blogPosts: BlogPost[] = [
     date: "12 Fev 2026",
     updatedAt: "14 Nov 2026",
     readMin: 6,
-    image: nfceVarejo,
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A Carta de Correção Eletrônica (CC-e) é um evento vinculado a uma NF-e já autorizada, utilizado para corrigir determinadas informações permitidas pela legislação. Ela não substitui a nota original nem permite alterar livremente os dados da operação. Antes de emitir uma CC-e, confira as restrições do Ajuste SINIEF 07/05, do Manual de Orientação do Contribuinte e da SEFAZ competente." },
@@ -1691,7 +1686,7 @@ export const blogPosts: BlogPost[] = [
     date: "02 Fev 2026",
     updatedAt: "14 Nov 2026",
     readMin: 7,
-    image: nfeGuia,
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O cancelamento de uma Nota Fiscal Eletrônica (NF-e, modelo 55) não é uma simples exclusão do documento. A NF-e precisa ter sido autorizada pela SEFAZ e, em regra, o cancelamento depende de a mercadoria não ter circulado nem a prestação ter ocorrido. O prazo e o procedimento devem ser conferidos na legislação da unidade federada do emitente: não use um único prazo como se fosse igual em todo o Brasil." },
@@ -1735,7 +1730,7 @@ export const blogPosts: BlogPost[] = [
       "Ciência, confirmação, desconhecimento e operação não realizada — o que cada evento significa e como automatizar.",
     date: "22 Jan 2026",
     readMin: 5,
-    image: nfceVarejo,
+    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A manifestação do destinatário é o mecanismo que permite ao comprador confirmar, desconhecer ou recusar uma NFe emitida contra o seu CNPJ. Além de obrigatória em vários setores, ela protege contra notas fraudulentas." },
@@ -1757,7 +1752,7 @@ export const blogPosts: BlogPost[] = [
     date: "15 Jan 2026",
     updatedAt: "15 Nov 2026",
     readMin: 6,
-    image: nfeGuia,
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A Reforma Tributária do Consumo cria a CBS, de competência federal, e o IBS, compartilhado por estados e municípios. A transição não acontece de uma só vez: as regras tributárias, os leiautes dos documentos fiscais e as datas de obrigatoriedade têm cronogramas próprios. Por isso, empresas não devem tratar 2026 e 2027 como uma única virada nem presumir que todos os documentos seguem a mesma data." },
@@ -1808,7 +1803,7 @@ export const blogPosts: BlogPost[] = [
       "Código Identificador da Operação de Transporte — quando é obrigatório e como emitir sem esquecimento.",
     date: "18 Fev 2026",
     readMin: 5,
-    image: cteTransporte,
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O CIOT (Código Identificador da Operação de Transporte) é obrigatório sempre que uma empresa contrata um transportador autônomo (TAC) ou uma ETC para transporte rodoviário de cargas. Ele garante que o frete e os tributos sociais sejam registrados corretamente." },
@@ -1830,7 +1825,7 @@ export const blogPosts: BlogPost[] = [
       "Documento auxiliar do MDFe é o passaporte da carga. Veja como preencher e evitar retenção do veículo.",
     date: "09 Fev 2026",
     readMin: 4,
-    image: mdfeFrota,
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O DAMDFe é a representação impressa do MDFe. Ele acompanha o veículo durante toda a viagem e é o primeiro documento pedido em barreira fiscal." },
@@ -1853,7 +1848,7 @@ export const blogPosts: BlogPost[] = [
       "Reduza documentos e ganhe agilidade emitindo um CTe globalizado para o mesmo tomador. Requisitos e cuidados.",
     date: "30 Jan 2026",
     readMin: 5,
-    image: cteTransporte,
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O CTe globalizado permite emitir um único Conhecimento de Transporte para várias NFes do mesmo remetente e destinatário, na mesma viagem. Reduz burocracia e simplifica a apuração." },
@@ -1876,7 +1871,7 @@ export const blogPosts: BlogPost[] = [
       "Entenda os seguros obrigatórios e facultativos do transporte rodoviário e como informá-los corretamente no CTe.",
     date: "20 Jan 2026",
     readMin: 6,
-    image: cteTransporte,
+    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "Todo transportador de carga precisa contratar seguros obrigatórios e informá-los no CTe. A ausência ou o preenchimento errado pode transferir para a transportadora prejuízos que seriam da seguradora." },
@@ -1898,7 +1893,7 @@ export const blogPosts: BlogPost[] = [
       "Registro Nacional do Transportador Rodoviário de Cargas — cadastro, renovação e vínculo com veículos.",
     date: "10 Jan 2026",
     readMin: 5,
-    image: mdfeFrota,
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O RNTRC é o cadastro da ANTT que autoriza empresas, cooperativas e autônomos a exercerem transporte rodoviário de cargas. Sem ele, não há emissão válida de CTe nem CIOT." },
@@ -1927,7 +1922,7 @@ export const blogPosts: BlogPost[] = [
       "Como funciona o A3 em nuvem, quais os limites de uso e por que ele vem substituindo o token USB.",
     date: "16 Fev 2026",
     readMin: 5,
-    image: certificadoGuia,
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O certificado em nuvem armazena a chave privada em servidores de alta segurança da Autoridade Certificadora. Você assina pelo celular ou navegador, sem precisar carregar token USB." },
@@ -1950,7 +1945,7 @@ export const blogPosts: BlogPost[] = [
       "Certificado da empresa ou do titular? Entenda os usos permitidos e como não misturar os dois.",
     date: "07 Fev 2026",
     readMin: 4,
-    image: certificadoGuia,
+    image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O e-CNPJ representa a empresa e assina documentos em nome da pessoa jurídica. O e-CPF representa a pessoa física — inclusive o próprio empresário ou representante legal." },
@@ -1976,7 +1971,7 @@ export const blogPosts: BlogPost[] = [
       "Alertas, renovação online e o que fazer quando o certificado vence no meio de uma emissão.",
     date: "28 Jan 2026",
     readMin: 4,
-    image: certificadoGuia,
+    image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "Certificado vencido é sinônimo de operação parada: nem NFe, nem folha de pagamento, nem acesso ao e-CAC. A boa notícia é que a renovação pode ser 100% online quando feita dentro do prazo." },
@@ -1999,7 +1994,7 @@ export const blogPosts: BlogPost[] = [
       "Perdeu o token, mudou o representante legal ou desconfia de acesso indevido? Revogar é urgente.",
     date: "18 Jan 2026",
     readMin: 4,
-    image: certificadoGuia,
+    image: "https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A revogação cancela a validade do certificado antes do prazo. É uma medida de segurança essencial em situações críticas — e uma vez feita, é irreversível." },
@@ -2021,7 +2016,7 @@ export const blogPosts: BlogPost[] = [
       "Delegue acesso ao contador sem entregar o certificado digital da empresa. Guia da procuração no e-CAC.",
     date: "08 Jan 2026",
     readMin: 5,
-    image: certificadoGuia,
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "A procuração eletrônica no e-CAC permite que o contador acesse serviços da Receita Federal em nome da empresa, usando o próprio certificado dele — sem que você precise emprestar o seu." },
