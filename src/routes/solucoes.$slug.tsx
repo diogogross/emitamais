@@ -12,7 +12,7 @@ const pricingFaq = [
   },
   {
     question: "Posso gerenciar vários CNPJs no mesmo painel?",
-    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel, mas a cobrança é individual: cada CNPJ utilizado no mês custa R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. CNPJs cadastrados não estão automaticamente incluídos em um único pagamento.",
+    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente: até 5 CNPJs custam R$ 60,00 por CNPJ/mês; acima de 5 CNPJs, R$ 40,00 por CNPJ/mês. O pagamento contempla apenas os CNPJs contratados.",
   },
   {
     question: "Preciso pagar nos meses em que não emitir notas?",
@@ -76,8 +76,9 @@ export const Route = createFileRoute("/solucoes/$slug")({
                 provider: { "@type": "Organization", name: "EmitaGo", url: BASE_URL },
                 areaServed: { "@type": "Country", name: "Brasil" },
                 offers: {
-                  "@type": "Offer",
-                  price: "60.00",
+                  "@type": "AggregateOffer",
+                  lowPrice: 40.00,
+                  highPrice: 60.00,
                   priceCurrency: "BRL",
                   description: "R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Emissão ilimitada de notas no mês pago, sem fidelidade.",
                   url: `${BASE_URL}/#planos`,
@@ -193,7 +194,8 @@ function SolutionPage() {
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="rounded-2xl border border-border/70 bg-card p-6">
               <p className="text-xs font-semibold uppercase tracking-wider text-primary">Preço transparente</p>
-              <p className="mt-3 text-3xl font-bold">R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs.</p>
+              <p className="mt-3 text-3xl font-bold">R$ 40–60</p>
+              <p className="mt-1 text-sm text-muted-foreground">por CNPJ/mês, conforme a quantidade contratada</p>
             </div>
             <div className="rounded-2xl border border-border/70 bg-card p-6 sm:col-span-2">
               <p className="text-sm leading-relaxed text-muted-foreground">No mês pago, a emissão é ilimitada para aquele CNPJ. É possível gerenciar vários CNPJs no mesmo painel, com cobrança individual por CNPJ ativo.</p>
