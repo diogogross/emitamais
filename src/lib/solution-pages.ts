@@ -142,7 +142,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "O sistema possui calculadora da ANTT?", answer: "Sim. O EmitaGo disponibiliza uma calculadora da ANTT para apoiar a conferência do piso mínimo de frete. A calculadora não substitui o registro do CIOT nem a consulta às regras oficiais." },
       { question: "Quanto custa o EmitaGo para transportadoras?", answer: "O plano principal custa R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, com emissão ilimitada de CT-e e MDF-e durante o mês pago. O EmitaGo também oferece recursos relacionados ao CIOT." }
     ],
-    relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "como-emitir-cte-transportadora-passo-a-passo", "mdfe-como-emitir-e-encerrar-manifesto", "calculadora-antt-piso-minimo-frete-como-calcular", "manifesto-de-carga-o-que-e-para-que-serve", "como-emitir-manifesto-de-carga-online", "manifesto-de-carga-encerramento-e-consulta", "emissor-de-manifesto-de-carga-para-transportadora", "cte-transporte", "mdfe-frota"]
+    relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "como-emitir-cte-transportadora-passo-a-passo", "mdfe-como-emitir-e-encerrar-manifesto", "calculadora-antt-piso-minimo-frete-como-calcular", "manifesto-de-carga-o-que-e-para-que-serve", "como-emitir-manifesto-de-carga-online", "manifesto-de-carga-encerramento-e-consulta", "emissor-de-manifesto-de-carga-para-transportadora", "cte-transporte", "cte-os-modelo-67", "mdfe-frota"]
   },
   {
     slug: "mdfe",
@@ -226,7 +226,46 @@ export const solutionPages: SolutionPage[] = [
       { question: "O EmitaGo emite NFS-e em qualquer município?", answer: "O EmitaGo possui integração com mais de 1.600 municípios, mas a disponibilidade depende da cidade, do padrão de integração e das regras aplicáveis. Consulte a equipe para confirmar seu município." }
     ],
     relatedSlugs: ["nfe-passo-a-passo", "nfse-servicos", "nfce-varejo", "cte-transporte"]
+  },,
+
+  {
+    slug: "cte-os",
+    title: "CT-e OS — Conhecimento de Transporte para Outros Serviços",
+    seoTitle: "Emissor de CT-e OS Online Modelo 67 | EmitaGo",
+    description: "Conheça o emissor de CT-e OS modelo 67 para transporte de pessoas por fretamento e outras hipóteses previstas na legislação. Consulte a disponibilidade conforme seu estado e operação.",
+    h1: "Emissor de CT-e OS online modelo 67",
+    intro: "Emita e organize o Conhecimento de Transporte Eletrônico para Outros Serviços (CT-e OS), modelo 67, em uma plataforma online. O documento atende hipóteses específicas como transporte de pessoas por fretamento, transporte de valores e excesso de bagagem, conforme a legislação e o credenciamento aplicáveis.",
+    benefits: [
+      "Rotina online para emissão e organização do CT-e OS modelo 67, conforme disponibilidade do fluxo para a operação",
+      "Organização dos dados do emitente, tomador e prestação de transporte",
+      "Acesso aos documentos fiscais e informações da emissão",
+      "Apoio à rotina de transporte em conjunto com os demais documentos atendidos pela plataforma",
+      "Atendimento para confirmar enquadramento, estado e disponibilidade antes da contratação"
+    ],
+    audience: [
+      "Empresas de transporte de passageiros por fretamento",
+      "Agências de viagem que realizam transporte de pessoas em veículo próprio ou afretado",
+      "Transportadores de valores, nas hipóteses previstas na legislação",
+      "Transportadores de passageiros que precisam documentar excesso de bagagem conforme as regras fiscais"
+    ],
+    steps: [
+      "Confirme se a atividade da empresa e a prestação se enquadram nas hipóteses de emissão do CT-e OS modelo 67.",
+      "Verifique inscrição estadual, credenciamento fiscal e autorizações exigidas pela unidade federada e pelo órgão regulador.",
+      "Configure os dados do emitente, tomador, modalidade e informações específicas da prestação.",
+      "Assine digitalmente e transmita o CT-e OS ao ambiente autorizador da SEFAZ.",
+      "Aguarde a autorização, mantenha o XML e disponibilize o DACTE OS conforme a operação."
+    ],
+    faq: [
+      { question: "O que é CT-e OS modelo 67?", answer: "É o Conhecimento de Transporte Eletrônico para Outros Serviços, documento fiscal digital utilizado nas hipóteses previstas na legislação, como transporte de pessoas por fretamento, transporte de valores e excesso de bagagem." },
+      { question: "Qual a diferença entre CT-e e CT-e OS?", answer: "O CT-e modelo 57 documenta serviços de transporte de cargas. O CT-e OS modelo 67 documenta outros serviços de transporte previstos na legislação, como fretamento de pessoas." },
+      { question: "Quem precisa emitir CT-e OS?", answer: "Agências de viagem ou transportadores que realizam determinadas prestações intermunicipais, interestaduais ou internacionais de pessoas em veículo próprio ou afretado; transportadores de valores nas condições legais; e transportadores de passageiros para registrar excesso de bagagem, conforme a legislação." },
+      { question: "Toda empresa de fretamento pode emitir CT-e OS automaticamente?", answer: "Não. A emissão depende do enquadramento da atividade, da inscrição estadual, do credenciamento na SEFAZ e das autorizações ou cadastros exigidos pelo órgão regulador competente em cada estado." },
+      { question: "O que é DACTE OS?", answer: "É o documento auxiliar que representa graficamente o CT-e OS e permite identificar e consultar o documento eletrônico. Ele não substitui o XML autorizado." },
+      { question: "O EmitaGo está disponível para qualquer empresa emitir CT-e OS?", answer: "A disponibilidade depende do estado, do enquadramento fiscal e da operação. Consulte a equipe do EmitaGo para confirmar o atendimento antes de contratar." }
+    ],
+    relatedSlugs: ["cte-os-modelo-67", "cte-transporte"]
   },
+
 ];
 
 export function getSolutionBySlug(slug: string) {
