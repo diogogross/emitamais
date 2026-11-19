@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/blog/ciot-para-todos-2026",
+      "destination": "/blog/ciot-para-todos-2026-o-que-mudou",
+      "permanent": true
+    }
+  ]
+}
