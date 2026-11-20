@@ -7,10 +7,6 @@ const BASE_URL = "https://www.emitago.com.br";
 
 const pricingFaq = [
   {
-    question: "Quanto custa o EmitaGo?",
-    answer: "O EmitaGo cobra R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. O pagamento é antecipado e libera o sistema naquele mês, com emissão ilimitada de notas para o CNPJ pago. Não há fidelidade nem multa por cancelamento.",
-  },
-  {
     question: "Posso gerenciar vários CNPJs no mesmo painel?",
     answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente: até 5 CNPJs custam R$ 60,00 por CNPJ/mês; acima de 5 CNPJs, R$ 40,00 por CNPJ/mês. O pagamento contempla apenas os CNPJs contratados.",
   },
@@ -129,13 +125,39 @@ const landingVisuals: Record<string, { image: string; alt: string; eyebrow: stri
     image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
     alt: "Equipe de profissionais trabalhando em conjunto em um escritório",
     eyebrow: "NFS-e • Nota fiscal de serviço",
-    headline: "Menos tempo com burocracia, mais foco no serviço",
-    description: "Organize a emissão das notas de serviço em uma plataforma online. Cadastre tomadores e serviços, informe os dados da prestação e utilize o fluxo integrado disponível para o município da sua empresa.",
-    points: ["Cadastro de tomadores e serviços", "Dados da prestação reunidos em um só fluxo", "Integração com mais de 1.600 municípios atendidos, conforme cobertura", "Histórico de documentos para consulta e organização"],
+    headline: "Emita notas de serviço com atenção ao município e ao padrão fiscal",
+    description: "A emissão de NFS-e depende do município, do enquadramento e do padrão de integração aplicável. O EmitaGo reúne cadastro de tomadores e serviços e integração com mais de 1.600 municípios atendidos, conforme cobertura. Confirme a disponibilidade para sua operação antes de contratar.",
+    points: ["Cadastro de tomadores e serviços", "Dados da prestação organizados para a emissão", "Consulta prévia da cobertura municipal e do padrão aplicável", "Histórico de documentos para consulta e organização"],
     useCases: [
-      { title: "Prestadores de serviços", text: "Emita NFS-e para registrar os serviços realizados e documentar a prestação ao cliente." },
-      { title: "Pequenas empresas e MEI", text: "Consulte a disponibilidade do município e as regras do seu enquadramento antes de iniciar a emissão." },
-      { title: "Escritórios contábeis", text: "Apoie a organização dos documentos fiscais dos clientes em uma rotina online." }
+      { title: "Prestadores de serviços", text: "Organize a emissão das notas referentes aos serviços prestados e os dados de cada tomador." },
+      { title: "Empresas do Simples Nacional", text: "Confira a exigência do padrão nacional vigente e valide se o fluxo integrado atende ao seu enquadramento." },
+      { title: "Escritórios contábeis", text: "Centralize a consulta da rotina de NFS-e dos clientes, respeitando as particularidades de cada município." }
+    ]
+  },
+  cte: {
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=85",
+    alt: "Caminhão de carga em operação logística",
+    eyebrow: "CT-e modelo 57 • CT-e OS modelo 67",
+    headline: "Documentação de transporte organizada do início ao fim da prestação",
+    description: "Prepare a emissão do Conhecimento de Transporte Eletrônico com os dados dos participantes, percurso, valores e informações fiscais da prestação. O fluxo também se conecta à rotina de MDF-e quando a operação exigir.",
+    points: ["Emissão online de CT-e e CT-e OS, conforme disponibilidade", "Dados de remetente, destinatário e tomador organizados", "Acompanhamento do retorno de autorização da SEFAZ", "Integração operacional com MDF-e e recursos relacionados ao CIOT"],
+    useCases: [
+      { title: "Transportadoras", text: "Organize a documentação fiscal das prestações de transporte rodoviário de cargas." },
+      { title: "Operações com CT-e OS", text: "Consulte a disponibilidade do modelo 67 para o estado, enquadramento e tipo de serviço da empresa." },
+      { title: "Gestão de viagens", text: "Conecte a preparação do CT-e à documentação de viagem e ao MDF-e quando aplicável." }
+    ]
+  },
+  mdfe: {
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=85",
+    alt: "Caminhão de transporte rodoviário em uma estrada",
+    eyebrow: "MDF-e modelo 58 • Manifesto de carga",
+    headline: "Organize os documentos e as informações de cada viagem",
+    description: "Emita o Manifesto Eletrônico de Documentos Fiscais, conhecido como manifesto de carga, reunindo documentos vinculados, veículo, condutor e percurso conforme a operação. Acompanhe a autorização e o encerramento do manifesto.",
+    points: ["Emissão online de MDF-e (manifesto de carga)", "Vinculação de NF-e e CT-e conforme a operação", "Dados de veículo, condutor e percurso organizados", "Acompanhamento de autorização e encerramento da viagem"],
+    useCases: [
+      { title: "Transportadoras", text: "Reúna os documentos fiscais que acompanham as viagens e organize os eventos do manifesto." },
+      { title: "Frotas próprias", text: "Prepare as informações de veículos, condutores e percurso conforme a operação realizada." },
+      { title: "Embarcadores e transportadores", text: "Consulte os documentos vinculados e as exigências aplicáveis antes de iniciar a viagem." }
     ]
   }
 };
@@ -145,6 +167,13 @@ function SolutionPage() {
   const related = blogPosts.filter((post) => page.relatedSlugs.includes(post.slug));
   const relatedSolutions = solutionPages.filter((solution) => solution.slug !== page.slug);
   const visual = landingVisuals[page.slug];
+  const sectionCopy: Record<string, { benefitsEyebrow: string; benefitsTitle: string; benefitsIntro: string; stepsTitle: string; stepsIntro: string; audienceTitle: string }> = {
+    nfe: { benefitsEyebrow: "Emissão de nota de produto", benefitsTitle: "Recursos para a rotina de NF-e da empresa", benefitsIntro: "Da conferência dos itens à autorização da SEFAZ, mantenha os dados da venda e os arquivos fiscais organizados.", stepsTitle: "Etapas para emitir uma NF-e", stepsIntro: "Confira os dados comerciais e tributários antes de assinar e transmitir o documento.", audienceTitle: "Quem emite NF-e modelo 55?" },
+    nfse: { benefitsEyebrow: "Emissão de nota de serviço", benefitsTitle: "O que avaliar na emissão de NFS-e", benefitsIntro: "Município, enquadramento e padrão nacional ou municipal influenciam o fluxo. Valide a cobertura antes de iniciar.", stepsTitle: "Etapas para emitir uma NFS-e", stepsIntro: "Os campos e a transmissão variam conforme o município e o padrão fiscal aplicável.", audienceTitle: "Quem precisa emitir NFS-e?" },
+    cte: { benefitsEyebrow: "Documentos fiscais de transporte", benefitsTitle: "Recursos para a rotina de CT-e e CT-e OS", benefitsIntro: "Organize os dados da prestação, acompanhe a autorização e conecte o conhecimento à documentação da viagem quando necessário.", stepsTitle: "Etapas para emitir CT-e", stepsIntro: "Revise participantes, percurso, valores e tributação antes de transmitir o conhecimento à SEFAZ.", audienceTitle: "Quem utiliza CT-e e CT-e OS?" },
+    mdfe: { benefitsEyebrow: "Manifesto eletrônico de documentos fiscais", benefitsTitle: "Recursos para emitir e acompanhar MDF-e", benefitsIntro: "Prepare os documentos vinculados e os dados da viagem, acompanhe a autorização e registre o encerramento quando a operação terminar.", stepsTitle: "Etapas para emitir manifesto de carga", stepsIntro: "A emissão do MDF-e depende dos documentos, veículo, condutor, percurso e demais dados exigidos para a operação.", audienceTitle: "Quem precisa emitir MDF-e?" }
+  };
+  const copy = sectionCopy[page.slug] ?? { benefitsEyebrow: "Recursos e organização", benefitsTitle: "Recursos para sua rotina fiscal", benefitsIntro: "Organize a emissão e mantenha as informações fiscais acessíveis.", stepsTitle: "Como funciona a emissão", stepsIntro: "O processo depende da configuração fiscal da empresa e das validações do ambiente autorizador.", audienceTitle: "Quem pode usar?" };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -184,7 +213,7 @@ function SolutionPage() {
               <img src={visual?.image ?? "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85"} alt={visual?.alt ?? "Rotina de trabalho e gestão fiscal"} width="1200" height="900" fetchPriority="high" decoding="async" className="relative aspect-[4/3] w-full rounded-[1.75rem] object-cover shadow-2xl" />
               <div className="absolute -bottom-4 left-4 right-4 rounded-2xl border border-border/70 bg-background/95 p-4 shadow-xl backdrop-blur md:left-8 md:right-8">
                 <p className="text-xs font-semibold uppercase tracking-wider text-primary">EmitaGo • Emissão online</p>
-                <p className="mt-1 text-sm font-medium">Informações fiscais e documentos organizados em um só lugar.</p>
+                <p className="mt-1 text-sm font-medium">{visual?.headline ?? page.title}</p>
               </div>
             </div>
           </div>
@@ -240,9 +269,9 @@ function SolutionPage() {
 
         <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Recursos e organização</p>
-            <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">Por que usar o EmitaGo?</h2>
-            <p className="mt-4 leading-relaxed text-muted-foreground">Uma rotina de emissão mais organizada ajuda a reduzir retrabalho e facilita o acesso às informações fiscais do negócio.</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">{copy.benefitsEyebrow}</p>
+            <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">{copy.benefitsTitle}</h2>
+            <p className="mt-4 leading-relaxed text-muted-foreground">{copy.benefitsIntro}</p>
           </div>
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {page.benefits.map((item, index) => <article key={item} className="rounded-2xl border border-border/70 bg-card p-5 transition hover:-translate-y-1 hover:border-primary/40">
@@ -257,8 +286,8 @@ function SolutionPage() {
             <div className="grid gap-10 md:grid-cols-[.8fr_1.2fr]">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Passo a passo</p>
-                <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">Como funciona a emissão</h2>
-                <p className="mt-4 leading-relaxed text-muted-foreground">O processo depende da configuração fiscal da empresa e das validações do ambiente autorizador.</p>
+                <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">{copy.stepsTitle}</h2>
+                <p className="mt-4 leading-relaxed text-muted-foreground">{copy.stepsIntro}</p>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
                 {page.steps.map((step, index) => <article key={step} className="rounded-2xl border border-border/70 bg-background p-5">
@@ -273,7 +302,7 @@ function SolutionPage() {
         <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Para diferentes operações</p>
-            <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">Quem pode usar?</h2>
+            <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">{copy.audienceTitle}</h2>
           </div>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {page.audience.map((item) => <div key={item} className="rounded-xl border border-border/70 bg-card p-5 text-sm font-medium">{item}</div>)}
