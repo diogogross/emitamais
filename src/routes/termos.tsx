@@ -85,12 +85,12 @@ const sections = [
           aviso prévio de 30 (trinta) dias, sem prejuízo dos contratos vigentes.
         </p>
         <ul className="mt-3 space-y-2 list-disc pl-5">
-          <li>A cobrança é recorrente, conforme periodicidade escolhida (mensal, semestral ou anual).</li>
-          <li>O não pagamento em até 5 (cinco) dias da data de vencimento poderá suspender o acesso ao serviço.</li>
-          <li>Reajustes anuais serão aplicados com base no IPCA/IBGE ou índice que vier a substituí-lo.</li>
-          <li>
-            O usuário poderá cancelar o plano a qualquer momento, sem multa, respeitado o período já pago.
-          </li>
+          <li>O modelo comercial é pré-pago: o pagamento antecipado libera o uso dos CNPJs contratados durante o período mensal pago.</li>
+          <li>O valor padrão é de R$ 60,00 por CNPJ ativo por mês de uso para até 5 (cinco) CNPJs; acima de 5 (cinco) CNPJs, o valor é de R$ 40,00 por CNPJ/mês, conforme as condições comerciais vigentes.</li>
+          <li>Cada CNPJ é contratado e pago individualmente. CNPJs apenas cadastrados não são automaticamente incluídos no pagamento.</li>
+          <li>Não há cobrança automática recorrente nem obrigação de pagar pelos meses em que o usuário não contratar o uso do CNPJ, conforme as condições comerciais aplicáveis.</li>
+          <li>O acesso ao período seguinte depende de novo pagamento antecipado. O usuário pode deixar de contratar novos períodos sem multa, respeitado o período já pago.</li>
+          <li>Valores, funcionalidades e condições comerciais podem ser alterados mediante aviso prévio de 30 (trinta) dias, sem prejuízo dos períodos já pagos.</li>
         </ul>
       </>
     ),
@@ -234,7 +234,7 @@ function TermosPage() {
           Termos de <span className="gradient-text">Uso</span>
         </h1>
         <p className="mt-4 text-sm text-muted-foreground">
-          Última atualização: 12 de julho de 2026 · Leia atentamente antes de contratar.
+          Última atualização: 21 de novembro de 2026 · Leia atentamente antes de contratar.
         </p>
       </section>
 
