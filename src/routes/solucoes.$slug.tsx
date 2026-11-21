@@ -147,6 +147,19 @@ const landingVisuals: Record<string, { image: string; alt: string; eyebrow: stri
       { title: "Gestão de viagens", text: "Conecte a preparação do CT-e à documentação de viagem e ao MDF-e quando aplicável." }
     ]
   },
+  "cte-os": {
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=85",
+    alt: "Ônibus rodoviário utilizado no transporte de passageiros por fretamento",
+    eyebrow: "CT-e OS • modelo 67",
+    headline: "Emissão de CT-e OS para serviços de transporte previstos na legislação",
+    description: "Organize a emissão do Conhecimento de Transporte Eletrônico para Outros Serviços, modelo 67. Confira o enquadramento da prestação, os dados do tomador e as exigências de credenciamento antes de transmitir à SEFAZ.",
+    points: ["Página específica para CT-e OS modelo 67", "Dados de emitente, tomador e prestação organizados", "Orientações sobre DACTE OS, XML e autorização", "Confirme estado, credenciamento e operação antes de contratar"],
+    useCases: [
+      { title: "Fretamento de passageiros", text: "Confira as hipóteses legais e os requisitos de emissão para o transporte de pessoas." },
+      { title: "Transporte de valores", text: "Consulte o enquadramento fiscal e os requisitos específicos aplicáveis à prestação." },
+      { title: "Outros serviços previstos", text: "Verifique se a operação se enquadra no modelo 67 e se o fluxo está disponível para sua empresa." }
+    ]
+  },
   mdfe: {
     image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=85",
     alt: "Caminhão de transporte rodoviário em uma estrada",
@@ -159,9 +172,22 @@ const landingVisuals: Record<string, { image: string; alt: string; eyebrow: stri
       { title: "Frotas próprias", text: "Prepare as informações de veículos, condutores e percurso conforme a operação realizada." },
       { title: "Embarcadores e transportadores", text: "Consulte os documentos vinculados e as exigências aplicáveis antes de iniciar a viagem." }
     ]
+  },
+  ciot: {
+    image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1200&q=85",
+    alt: "Operação logística com carga preparada para transporte rodoviário",
+    eyebrow: "CIOT • Registro da operação de transporte",
+    headline: "Organize o CIOT antes do início da operação",
+    description: "Reúna os dados de contratante, transportador, veículo, carga, origem, destino e valores do frete. Confira quem deve gerar o código e siga o fluxo autorizado pela ANTT para sua operação.",
+    points: ["Orientação sobre obrigatoriedade e responsabilidades", "CIOT relacionado à rotina de CT-e e MDF-e", "Conferência do piso mínimo de frete com apoio da calculadora ANTT", "Registro prévio à operação, conforme regras vigentes"],
+    useCases: [
+      { title: "Embarcadores", text: "Confira as responsabilidades do contratante e os dados necessários ao registro." },
+      { title: "Transportadoras", text: "Organize o registro das operações realizadas e a documentação de transporte." },
+      { title: "Operadores logísticos", text: "Mantenha as informações da contratação e do transporte reunidas para consulta." }
+    ]
   }
 };
-
+ 
 function SolutionPage() {
   const { page } = Route.useLoaderData();
   const related = blogPosts.filter((post) => page.relatedSlugs.includes(post.slug));
@@ -171,6 +197,9 @@ function SolutionPage() {
     nfe: { benefitsEyebrow: "Emissão de nota de produto", benefitsTitle: "Recursos para a rotina de NF-e da empresa", benefitsIntro: "Da conferência dos itens à autorização da SEFAZ, mantenha os dados da venda e os arquivos fiscais organizados.", stepsTitle: "Etapas para emitir uma NF-e", stepsIntro: "Confira os dados comerciais e tributários antes de assinar e transmitir o documento.", audienceTitle: "Quem emite NF-e modelo 55?" },
     nfse: { benefitsEyebrow: "Emissão de nota de serviço", benefitsTitle: "O que avaliar na emissão de NFS-e", benefitsIntro: "Município, enquadramento e padrão nacional ou municipal influenciam o fluxo. Valide a cobertura antes de iniciar.", stepsTitle: "Etapas para emitir uma NFS-e", stepsIntro: "Os campos e a transmissão variam conforme o município e o padrão fiscal aplicável.", audienceTitle: "Quem precisa emitir NFS-e?" },
     cte: { benefitsEyebrow: "Documentos fiscais de transporte", benefitsTitle: "Recursos para a rotina de CT-e e CT-e OS", benefitsIntro: "Organize os dados da prestação, acompanhe a autorização e conecte o conhecimento à documentação da viagem quando necessário.", stepsTitle: "Etapas para emitir CT-e", stepsIntro: "Revise participantes, percurso, valores e tributação antes de transmitir o conhecimento à SEFAZ.", audienceTitle: "Quem utiliza CT-e e CT-e OS?" },
+    "cte-os": { benefitsEyebrow: "CT-e OS modelo 67", benefitsTitle: "Recursos para a emissão de CT-e OS", benefitsIntro: "O modelo 67 atende hipóteses específicas. Confirme enquadramento, credenciamento e disponibilidade para sua operação.", stepsTitle: "Etapas para emitir CT-e OS", stepsIntro: "Revise os requisitos estaduais, os dados da prestação e a autorização da SEFAZ antes de considerar o documento emitido.", audienceTitle: "Quem utiliza CT-e OS modelo 67?" },
+    ciot: { benefitsEyebrow: "Registro da operação de transporte", benefitsTitle: "Organize a rotina de CIOT", benefitsIntro: "A responsabilidade pela geração depende do tipo de operação e de quem efetivamente realiza o transporte. Consulte as regras e confirme o fluxo disponível.", stepsTitle: "Etapas para registrar o CIOT", stepsIntro: "O registro deve ocorrer antes do início da operação, conforme as regras vigentes e os canais autorizados.", audienceTitle: "Quem precisa organizar o CIOT?" },
+
     mdfe: { benefitsEyebrow: "Manifesto eletrônico de documentos fiscais", benefitsTitle: "Recursos para emitir e acompanhar MDF-e", benefitsIntro: "Prepare os documentos vinculados e os dados da viagem, acompanhe a autorização e registre o encerramento quando a operação terminar.", stepsTitle: "Etapas para emitir manifesto de carga", stepsIntro: "A emissão do MDF-e depende dos documentos, veículo, condutor, percurso e demais dados exigidos para a operação.", audienceTitle: "Quem precisa emitir MDF-e?" }
   };
   const copy = sectionCopy[page.slug] ?? { benefitsEyebrow: "Recursos e organização", benefitsTitle: "Recursos para sua rotina fiscal", benefitsIntro: "Organize a emissão e mantenha as informações fiscais acessíveis.", stepsTitle: "Como funciona a emissão", stepsIntro: "O processo depende da configuração fiscal da empresa e das validações do ambiente autorizador.", audienceTitle: "Quem pode usar?" };

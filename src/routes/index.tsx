@@ -66,12 +66,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Emissor de Notas Fiscais Online com preço por CNPJ | EmitaGo"
+        title: "Emissor de NF-e, NFS-e e Documentos de Transporte Online | EmitaGo"
       },
       {
         name: "description",
         content:
-          "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. Planos pré-pagos de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, sem fidelidade.",
+          "Emita NF-e, NFC-e, NFS-e, CT-e, CT-e OS e MDF-e online, com recursos relacionados ao CIOT. Planos pré-pagos por CNPJ ativo, sem fidelidade.",
       },
       {
         name: "robots",
@@ -468,7 +468,7 @@ function Index() {
           <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none" />
           <div className="flex gap-5 animate-marquee whitespace-nowrap" aria-label="Exemplos de segmentos atendidos">
             {Array.from({ length: 2 }).map((_, i) => (
-              <div key={i} className="flex gap-5 shrink-0">
+              <div key={i} className="flex gap-5 shrink-0" aria-hidden={i === 1}>
                 {[
                   { name: "Borracharia 24h", seg: "Automotivo", color: "#111111", Icon: Car, style: "font-black italic" },
                   { name: "Borracharia Regis", seg: "Pneus", color: "#1F1F1F", Icon: Wrench, style: "font-black tracking-tight" },
@@ -1169,8 +1169,9 @@ function Index() {
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfse">Emissão de NFS-e para serviços</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/nfpe">Nota fiscal para produtor rural</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/cte">CT-e para transportadoras</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/cte-os">Emissor de CT-e OS modelo 67</a></li>
             <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/mdfe">MDF-e para transporte de cargas</a></li>
-            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/ciot">CIOT e contratação de frete</a></li>
+            <li><a className="text-white/85 underline-offset-4 hover:underline hover:text-white" href="/solucoes/ciot">Emissor de CIOT e contratação de frete</a></li>
           </ul>
         </div>
       </section>
