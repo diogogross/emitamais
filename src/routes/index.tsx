@@ -66,7 +66,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Emissor de NF-e, NFS-e e Documentos de Transporte Online | EmitaGo"
+        title: "Emissor de NF-e e NFS-e Online | EmitaGo"
       },
       {
         name: "description",
