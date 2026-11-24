@@ -2085,7 +2085,7 @@ export const blogPosts: BlogPost[] = [
       { type: "heading", text: "Quando a nota é obrigatória para o MEI?" },
       { type: "list", items: [
         "Serviço prestado para pessoa jurídica: emissão obrigatória de NFS-e.",
-        "Serviço prestado para pessoa física: emissão facultativa, salvo solicitação do consumidor.",
+        "Para consumidor final pessoa física: o Decreto nº 13.140/2026 permite utilizar a DASN-SIMEI como documento fiscal eletrônico nas hipóteses previstas; confira as instruções oficiais.",
         "A NFS-e de serviço do MEI deve seguir o padrão nacional, obrigatório desde 1º de setembro de 2023."
       ]},
       { type: "heading", text: "A Reforma Tributária muda essa regra automaticamente em 2027?" },
@@ -2099,6 +2099,7 @@ export const blogPosts: BlogPost[] = [
         "Consulte um contador em caso de dúvida sobre enquadramento ou tributação."
       ]},
       { type: "heading", text: "Fontes oficiais" },
+      { type: "source", label: "MEMP — MEI pode usar declaração anual como documento fiscal para pessoa física", href: "https://www.gov.br/memp/pt-br/assuntos/noticias/mei-podera-usar-declaracao-anual-no-lugar-da-nota-fiscal-para-pessoas-fisicas" },
       { type: "source", label: "Portal Nacional da NFS-e — perguntas frequentes sobre MEI", href: "https://www.gov.br/nfse/pt-br/copy_of_perguntas-frequentes/copy_of_faq-nfs-e" },
       { type: "source", label: "Portal Nacional da NFS-e — regra nacional para MEI prestador de serviços", href: "https://www.gov.br/nfse/pt-br/mei-prestadores-de-servico-de-todo-o-pais-estao-obrigados-a-emitir-nfs-e" }
     ],
