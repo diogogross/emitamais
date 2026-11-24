@@ -925,8 +925,7 @@ function Index() {
               <span className="mt-2 block">Sem contratos, sem fidelidade e sem necessidade de cartão de crédito. O pagamento antecipado libera o mês de uso de cada CNPJ; você ativa somente os CNPJs que precisar.</span>
               <span className="mt-4 block font-semibold text-foreground">VALORES POR CNPJ:</span>
               <ul className="mt-2 space-y-2">
-                <li>Até 5 CNPJs: R$ 60,00 por CNPJ ativo em cada mês de uso.</li>
-                <li>Acima de 5 CNPJs: R$ 40,00 por CNPJ/mês.</li>
+                <li>R$ 60,00 por CNPJ ativo em cada mês de uso.</li>
               </ul>
               <span className="mt-3 block">Cada CNPJ ativo é cobrado individualmente. O pagamento contempla apenas os CNPJs contratados.</span>
             </div>
