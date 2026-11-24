@@ -8,7 +8,7 @@ const BASE_URL = "https://www.emitago.com.br";
 const pricingFaq = [
   {
     question: "Posso gerenciar vários CNPJs no mesmo painel?",
-    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente: até 5 CNPJs custam R$ 60,00 por CNPJ/mês; acima de 5 CNPJs, R$ 40,00 por CNPJ/mês. O pagamento contempla apenas os CNPJs contratados.",
+    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente: cada CNPJ ativo custa R$ 60,00 por mês de uso. O pagamento contempla apenas os CNPJs contratados.",
   },
   {
     question: "Preciso pagar nos meses em que não emitir notas?",
@@ -72,11 +72,10 @@ export const Route = createFileRoute("/solucoes/$slug")({
                 provider: { "@type": "Organization", name: "EmitaGo", url: BASE_URL },
                 areaServed: { "@type": "Country", name: "Brasil" },
                 offers: {
-                  "@type": "AggregateOffer",
-                  lowPrice: 40.00,
-                  highPrice: 60.00,
-                  priceCurrency: "BRL",
-                  description: "R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Emissão ilimitada de notas no mês pago, sem fidelidade.",
+                  "@type": "Offer",
+                  price: 60.00,
+            priceCurrency: "BRL",
+                  description: "R$ 60,00 por CNPJ ativo em cada mês de uso. Emissão ilimitada de notas no mês pago, sem fidelidade.",
                   url: `${BASE_URL}/#planos`,
                 },
                 url
@@ -252,8 +251,8 @@ function SolutionPage() {
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="rounded-2xl border border-border/70 bg-card p-6">
               <p className="text-xs font-semibold uppercase tracking-wider text-primary">Preço transparente</p>
-              <p className="mt-3 text-3xl font-bold">R$ 40–60</p>
-              <p className="mt-1 text-sm text-muted-foreground">por CNPJ/mês, conforme a quantidade contratada</p>
+              <p className="mt-3 text-3xl font-bold">R$ 60,00</p>
+              <p className="mt-1 text-sm text-muted-foreground">por CNPJ ativo em cada mês de uso</p>
             </div>
             <div className="rounded-2xl border border-border/70 bg-card p-6">
               <p className="text-xs font-semibold uppercase tracking-wider text-primary">Modelo pré-pago</p>
@@ -390,7 +389,7 @@ function SolutionPage() {
             <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
               <div><p className="text-xs font-semibold uppercase tracking-[0.18em] text-background/60">EmitaGo • Emissão fiscal online</p>
                 <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold md:text-4xl">Organize sua emissão fiscal sem complicar a rotina.</h2>
-                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-background/70">R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Sem fidelidade e sem cobrança pelo uso nos meses em que você não ativar o CNPJ.</p>
+                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-background/70">R$ 60,00 por CNPJ ativo em cada mês de uso. Sem fidelidade e sem cobrança pelo uso nos meses em que você não ativar o CNPJ.</p>
               </div>
               <Link to="/" hash="planos" className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-7 py-4 font-semibold text-foreground transition hover:opacity-90">Conhecer o EmitaGo <ArrowRight className="h-4 w-4" /></Link>
             </div>
