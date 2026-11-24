@@ -72,10 +72,9 @@ export const Route = createFileRoute("/solucoes/$slug")({
                 provider: { "@type": "Organization", name: "EmitaGo", url: BASE_URL },
                 areaServed: { "@type": "Country", name: "Brasil" },
                 offers: {
-                  "@type": "AggregateOffer",
-                  lowPrice: 40.00,
-                  highPrice: 60.00,
-                  priceCurrency: "BRL",
+                  "@type": "Offer",
+                  price: 60.00,
+            priceCurrency: "BRL",
                   description: "R$ 60,00 por CNPJ ativo em cada mês de uso. Emissão ilimitada de notas no mês pago, sem fidelidade.",
                   url: `${BASE_URL}/#planos`,
                 },
