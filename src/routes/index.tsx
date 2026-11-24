@@ -91,7 +91,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. Planos pré-pagos de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, sem fidelidade.",
+          "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. Planos pré-pagos de R$ 60,00 por CNPJ ativo em cada mês de uso, sem fidelidade.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -101,7 +101,7 @@ export const Route = createFileRoute("/")({
       {
         name: "twitter:description",
         content:
-          "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. Pague R$ 60,00 por CNPJ/mês para até 5 CNPJs ou R$ 40,00 por CNPJ/mês acima de 5 CNPJs, sem fidelidade.",
+          "Emita NF-e, NFC-e, NFS-e e documentos de transporte online. Pague R$ 60,00 por CNPJ ativo em cada mês de uso, sem fidelidade.",
       },
     ],
     links: [
@@ -158,7 +158,7 @@ export const Route = createFileRoute("/")({
             highPrice: 60.00,
             priceCurrency: "BRL",
             url: "https://www.emitago.com.br/#planos",
-            description: "Sistema pré-pago: R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Sem contratos, sem fidelidade e sem necessidade de cartão de crédito.",
+            description: "Sistema pré-pago: R$ 60,00 por CNPJ ativo em cada mês de uso. Sem contratos, sem fidelidade e sem necessidade de cartão de crédito.",
           },
           provider: {
             "@type": "Organization",
@@ -175,7 +175,7 @@ export const Route = createFileRoute("/")({
           "@id": "https://www.emitago.com.br/#produto",
           name: "EmitaGo — Sistema Emissor de Notas Fiscais",
           url: "https://www.emitago.com.br/",
-          description: "Sistema fiscal online com suporte a múltiplos CNPJs no mesmo painel. Preços pré-pagos por CNPJ/mês: R$ 60,00 para até 5 CNPJs e R$ 40,00 acima de 5 CNPJs.",
+          description: "Sistema fiscal online com suporte a múltiplos CNPJs no mesmo painel. Preços pré-pagos por CNPJ/mês: R$ 60,00 por CNPJ ativo em cada mês de uso.",
           image: "https://www.emitago.com.br/og-emita.png",
           category: "Software de emissão fiscal",
           brand: {
@@ -188,7 +188,7 @@ export const Route = createFileRoute("/")({
             lowPrice: 40.00,
             highPrice: 60.00,
             priceCurrency: "BRL",
-            description: "R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, no modelo pré-pago e sem fidelidade.",
+            description: "R$ 60,00 por CNPJ ativo em cada mês de uso, no modelo pré-pago e sem fidelidade.",
           },
         }),
       },
@@ -248,7 +248,7 @@ export const Route = createFileRoute("/")({
               name: "Quanto custa o EmitaGo e como funciona o pré-pago?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "O EmitaGo funciona no modelo pré-pago: até 5 CNPJs custam R$ 60,00 por CNPJ/mês; acima de 5 CNPJs, R$ 40,00 por CNPJ/mês. Você paga somente pelos CNPJs contratados no mês de uso, sem contratos ou fidelidade.",
+                text: "O EmitaGo funciona no modelo pré-pago: cada CNPJ ativo custa R$ 60,00 por mês de uso. Você paga somente pelos CNPJs contratados no mês de uso, sem contratos ou fidelidade.",
               },
             },
             {
@@ -256,7 +256,7 @@ export const Route = createFileRoute("/")({
               name: "Posso gerenciar vários CNPJs no mesmo painel?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente conforme a faixa contratada: até 5 CNPJs, R$ 60,00 por CNPJ/mês; acima de 5 CNPJs, R$ 40,00 por CNPJ/mês. O pagamento contempla apenas os CNPJs contratados.",
+                text: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente por R$ 60,00 em cada mês de uso. CNPJs cadastrados não estão automaticamente incluídos no pagamento. O pagamento contempla apenas os CNPJs contratados.",
               },
             },
             {
@@ -916,16 +916,16 @@ function Index() {
             <p className="text-sm text-muted-foreground mt-1">Pré-pago: pague pelo CNPJ que usar, sem fidelidade.</p>
             <div className="mt-6 flex items-baseline gap-1">
               <span className="text-sm text-muted-foreground">R$</span>
-              <span className="font-display text-5xl md:text-6xl font-bold">40–60</span>
-              <span className="text-sm text-muted-foreground"> / CNPJ / mês</span>
+              <span className="font-display text-5xl md:text-6xl font-bold">60</span>
+              <span className="text-sm text-muted-foreground"> / CNPJ ativo / mês de uso</span>
             </div>
             <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
               <span className="block font-semibold text-foreground">SISTEMA PRÉ-PAGO</span>
               <span className="mt-2 block">Pague somente pelo mês que utilizar!</span>
-              <span className="mt-2 block">Sem contratos, sem fidelidade e sem necessidade de cartão de crédito. Você paga mensalmente para manter seu acesso ativo e tem liberdade para continuar ou parar quando quiser.</span>
+              <span className="mt-2 block">Sem contratos, sem fidelidade e sem necessidade de cartão de crédito. O pagamento antecipado libera o mês de uso de cada CNPJ; você ativa somente os CNPJs que precisar.</span>
               <span className="mt-4 block font-semibold text-foreground">VALORES POR CNPJ:</span>
               <ul className="mt-2 space-y-2">
-                <li>Até 5 CNPJs: R$ 60,00 por CNPJ/mês.</li>
+                <li>Até 5 CNPJs: R$ 60,00 por CNPJ ativo em cada mês de uso.</li>
                 <li>Acima de 5 CNPJs: R$ 40,00 por CNPJ/mês.</li>
               </ul>
               <span className="mt-3 block">Cada CNPJ ativo é cobrado individualmente. O pagamento contempla apenas os CNPJs contratados.</span>
@@ -1090,11 +1090,11 @@ function Index() {
               },
               {
                 q: "Quanto custa o EmitaGo e como funciona o pré-pago?",
-                a: "O EmitaGo funciona no modelo pré-pago: até 5 CNPJs custam R$ 60,00 por CNPJ/mês; acima de 5 CNPJs, R$ 40,00 por CNPJ/mês. Você paga somente pelos CNPJs contratados no mês de uso, sem contratos ou fidelidade.",
+                a: "O EmitaGo funciona no modelo pré-pago: cada CNPJ ativo custa R$ 60,00 por mês de uso. Você paga somente pelos CNPJs contratados no mês de uso, sem contratos ou fidelidade.",
               },
               {
                 q: "Posso gerenciar vários CNPJs no mesmo painel?",
-                a: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente conforme a faixa contratada: até 5 CNPJs, R$ 60,00 por CNPJ/mês; acima de 5 CNPJs, R$ 40,00 por CNPJ/mês. O pagamento contempla apenas os CNPJs contratados.",
+                a: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente por R$ 60,00 em cada mês de uso. CNPJs cadastrados não estão automaticamente incluídos no pagamento. O pagamento contempla apenas os CNPJs contratados.",
               },
               {
                 q: "Preciso pagar nos meses em que não emitir notas?",
