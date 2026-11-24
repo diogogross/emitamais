@@ -894,39 +894,39 @@ function Index() {
 
 
 
-      {/* SUPORTE HUMANO */}
+      {/* SUPORTE HUMANO — cores de alto contraste */}
       <section id="suporte" className="section-light section-connector w-full" data-reveal="up">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-          <div className="relative overflow-hidden rounded-[2rem] bg-[#17102b] p-8 md:p-12 lg:p-14 text-white shadow-[0_25px_70px_-25px_rgba(36,17,63,0.45)]">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#dbe4f5] bg-white p-8 md:p-12 lg:p-14 text-[#17152b] shadow-[0_25px_70px_-25px_rgba(36,17,63,0.22)]">
             <div
-              className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl opacity-25"
-              style={{ background: "var(--gradient-primary)" }}
+              className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full blur-3xl opacity-20"
+              style={{ background: "radial-gradient(circle, #8ab8ff 0%, transparent 70%)" }}
               aria-hidden="true"
             />
             <div
               className="pointer-events-none absolute -bottom-28 -left-20 h-64 w-64 rounded-full blur-3xl opacity-20"
-              style={{ background: "var(--gradient-accent)" }}
+              style={{ background: "radial-gradient(circle, #d5a8ff 0%, transparent 70%)" }}
               aria-hidden="true"
             />
             <div className="relative grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-14 items-center">
               <div className="max-w-3xl">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-xs font-semibold tracking-wide text-white/85">
-                  <Headphones className="h-4 w-4 text-primary-glow" />
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#cbd9f3] bg-[#eef4ff] px-4 py-2 text-xs font-semibold tracking-wide text-[#244b9b]">
+                  <Headphones className="h-4 w-4 text-[#2859bd]" />
                   SUPORTE EMITAGO
                 </div>
-                <h2 className="mt-5 font-display text-3xl md:text-5xl font-bold leading-tight">
-                  Aqui você fala com <span className="gradient-text">pessoas de verdade.</span>
+                <h2 className="mt-5 font-display text-3xl md:text-5xl font-bold leading-tight text-[#17152b]">
+                  Aqui você fala com <span className="text-[#2859bd]">pessoas de verdade.</span>
                 </h2>
-                <p className="mt-5 max-w-2xl text-base md:text-lg leading-relaxed text-white/75">
+                <p className="mt-5 max-w-2xl text-base md:text-lg leading-relaxed text-[#45445a]">
                   Ficou com dúvida na emissão de uma nota ou precisa de ajuda com o sistema? Nosso time está pronto para conversar e ajudar você a seguir com sua rotina fiscal.
                 </p>
-                <div className="mt-7 flex flex-wrap gap-x-7 gap-y-4 text-sm text-white/90">
+                <div className="mt-7 flex flex-wrap gap-x-7 gap-y-4 text-sm text-[#34334a]">
                   <div className="inline-flex items-center gap-2.5">
-                    <Clock3 className="h-5 w-5 text-primary-glow" />
-                    <span><strong className="text-white">Das 07h às 00h</strong> — horário de atendimento</span>
+                    <Clock3 className="h-5 w-5 text-[#2859bd]" />
+                    <span><strong className="text-[#17152b]">Das 07h às 00h</strong> — horário de atendimento</span>
                   </div>
                   <div className="inline-flex items-center gap-2.5">
-                    <UserRound className="h-5 w-5 text-primary-glow" />
+                    <UserRound className="h-5 w-5 text-[#2859bd]" />
                     <span>Atendimento humano, sem chatbot</span>
                   </div>
                 </div>
@@ -936,14 +936,13 @@ function Index() {
                   href="https://wa.me/5554991193146?text=Ol%C3%A1%21%20Estou%20no%20site%20da%20EmitaGo%20e%20preciso%20de%20ajuda%20com%20o%20sistema."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-4 text-sm md:text-base font-semibold text-accent-foreground transition hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#17102b]"
-                  style={{ background: "var(--gradient-accent)", boxShadow: "var(--shadow-accent)" }}
+                  className="group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#2859bd] px-7 py-4 text-sm md:text-base font-semibold text-white shadow-[0_10px_25px_-8px_rgba(40,89,189,0.55)] transition hover:bg-[#1f469a] hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2859bd] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 >
                   <MessageCircle className="h-5 w-5" />
                   Falar com nosso suporte
                   <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
-                <span className="text-xs text-white/55">Chame a equipe pelo WhatsApp</span>
+                <span className="text-xs text-[#65647a]">Chame a equipe pelo WhatsApp</span>
               </div>
             </div>
           </div>
