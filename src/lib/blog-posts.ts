@@ -752,10 +752,10 @@ export const blogPosts: BlogPost[] = [
   {
     "slug": "nfe-ibs-cbs-novos-campos-2027",
     "category": "Notas Fiscais",
-    "title": "NF-e com IBS e CBS: campos e emissão em 2027",
-    "excerpt": "Veja os campos da NF-e, a classificação tributária e os dados para emitir documentos durante a transição da Reforma Tributária.",
+    "title": "NF-e 2027: novos campos de IBS e CBS",
+    "excerpt": "Entenda quais informações de IBS e CBS aparecem na NF-e em 2027, como revisar CST e cClassTrib e o que conferir antes de transmitir.",
     "date": "14 Nov 2026",
-    "updatedAt": "14 Nov 2026",
+    "updatedAt": "24 Nov 2026",
     "readMin": 8,
     "image": "/images/blog/nfe-ibs-cbs-campos.svg",
     "author": "Equipe EmitaGo",
