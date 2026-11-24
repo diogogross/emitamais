@@ -1681,16 +1681,17 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "cancelamento-nfe",
     category: "Notas Fiscais",
-    title: "Cancelamento de NF-e: prazo, regras e o que fazer",
-    excerpt: "Saiba qual é o prazo para cancelar uma NF-e, como consultar a regra da SEFAZ do seu estado e o que fazer quando o prazo terminou.",
+    title: "Prazo de cancelamento de NF-e: até quando cancelar?",
+    excerpt: "Veja o prazo para cancelar nota fiscal eletrônica, os requisitos do evento e como regularizar a NF-e quando o prazo de cancelamento terminou.",
     date: "02 Fev 2026",
-    updatedAt: "14 Nov 2026",
+    updatedAt: "24 Nov 2026",
     readMin: 7,
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O cancelamento de uma Nota Fiscal Eletrônica (NF-e, modelo 55) não é uma simples exclusão do documento. A NF-e precisa ter sido autorizada pela SEFAZ e, em regra, o cancelamento depende de a mercadoria não ter circulado nem a prestação ter ocorrido. O prazo e o procedimento devem ser conferidos na legislação da unidade federada do emitente: não use um único prazo como se fosse igual em todo o Brasil." },
-      { type: "heading", text: "Qual é o prazo para cancelar uma NF-e?" },
+      { type: "paragraph", text: "Antes de solicitar o cancelamento, consulte a situação da NF-e e confirme o protocolo de autorização. Se a nota estiver rejeitada, não há evento de cancelamento a transmitir: corrija os dados indicados pela SEFAZ e faça uma nova tentativa de emissão. Se estiver autorizada, confira o prazo e as condições da sua unidade federada." },
+      { type: "heading", text: "Prazo de cancelamento de NF-e: qual regra consultar?" },
       { type: "paragraph", text: "A regra nacional do Ajuste SINIEF 07/05 prevê o prazo de 24 horas contado da autorização, mas a aplicação de procedimentos e prazos estaduais precisa ser verificada na SEFAZ competente. No Rio Grande do Sul, por exemplo, a Receita Estadual informa prazo de até 168 horas (7 dias) após a autorização de uso. Consulte sempre a orientação atual da sua UF antes de transmitir o evento." },
       { type: "heading", text: "Quais são os requisitos para cancelar?" },
       { type: "list", items: [
