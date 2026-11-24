@@ -12,6 +12,25 @@ import { blogPosts, getPostBySlug, type BlogSection } from "@/lib/blog-posts";
 const WHATSAPP_URL =
   "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
 
+const RELATED_POST_SLUGS: Record<string, string[]> = {
+  "nfse-ibs-cbs-calendario-prazos-2027": ["ibs-cbs-transicao-2026-2027-o-que-muda", "ibs-e-cbs-diferenca-federal-estadual-municipal", "nfse-nacional-ibs-cbs-simples-2027"],
+  "ibs-cbs-transicao-2026-2027-o-que-muda": ["ibs-e-cbs-diferenca-federal-estadual-municipal", "nfe-ibs-cbs-novos-campos-2027", "checklist-reforma-tributaria-empresa-2027"],
+  "ibs-e-cbs-diferenca-federal-estadual-municipal": ["ibs-cbs-transicao-2026-2027-o-que-muda", "credito-ibs-cbs-como-funciona-empresa", "nota-fornecedor-ibs-cbs-credito-comprador"],
+  "credito-ibs-cbs-como-funciona-empresa": ["nota-fornecedor-ibs-cbs-credito-comprador", "ibs-e-cbs-diferenca-federal-estadual-municipal", "ibs-cbs-simples-nacional-2027"],
+  "nota-fornecedor-ibs-cbs-credito-comprador": ["credito-ibs-cbs-como-funciona-empresa", "nfe-ibs-cbs-novos-campos-2027", "ibs-cbs-transicao-2026-2027-o-que-muda"],
+  "ibs-cbs-nfce-varejo-pdv-2027": ["ibs-cbs-transicao-2026-2027-o-que-muda", "nfe-ibs-cbs-novos-campos-2027", "checklist-reforma-tributaria-empresa-2027"],
+  "ibs-cbs-cte-transporte-frete-2027": ["ciot-para-todos-2026-o-que-mudou", "ibs-cbs-transicao-2026-2027-o-que-muda", "checklist-reforma-tributaria-empresa-2027"],
+  "simples-ibs-cbs-consultar-opcao-cancelamento-2027": ["ibs-cbs-simples-nacional-2027", "pgdas-d-2027-reforma-tributaria-fs12-competencia", "ibs-cbs-transicao-2026-2027-o-que-muda"],
+  "mei-limite-faturamento-2027-110-mil": ["mei-limite-proporcional-2027", "mei-ultrapassou-limite-faturamento-2027", "mei-dois-funcionarios-2027"],
+  "mei-dois-funcionarios-2027": ["mei-limite-faturamento-2027-110-mil", "mei-limite-proporcional-2027", "dasn-simei-2027-como-declarar-2026"],
+  "das-mei-2027-valor-contribuicao": ["dasn-simei-2027-como-declarar-2026", "mei-limite-faturamento-2027-110-mil", "mei-ibs-cbs-2027-o-que-muda"],
+  "dasn-simei-2027-como-declarar-2026": ["mei-limite-faturamento-2027-110-mil", "das-mei-2027-valor-contribuicao", "mei-ultrapassou-limite-faturamento-2027"],
+  "mei-ibs-cbs-2027-o-que-muda": ["ibs-cbs-transicao-2026-2027-o-que-muda", "mei-limite-faturamento-2027-110-mil", "das-mei-2027-valor-contribuicao"],
+  "mei-limite-proporcional-2027": ["mei-limite-faturamento-2027-110-mil", "mei-ultrapassou-limite-faturamento-2027", "mei-dois-funcionarios-2027"],
+  "mei-ultrapassou-limite-faturamento-2027": ["mei-limite-faturamento-2027-110-mil", "mei-limite-proporcional-2027", "dasn-simei-2027-como-declarar-2026"],
+  "nfse-nacional-ibs-cbs-simples-2027": ["nfse-ibs-cbs-calendario-prazos-2027", "ibs-cbs-transicao-2026-2027-o-que-muda", "ibs-cbs-simples-nacional-2027"],
+};
+
 const MONTHS: Record<string, number> = {
   jan: 1, janeiro: 1, feb: 2, fev: 2, fevereiro: 2, mar: 3, marco: 3, março: 3,
   apr: 4, abr: 4, abril: 4, may: 5, mai: 5, maio: 5, jun: 6, junho: 6,
@@ -150,9 +169,14 @@ function ArticleNotFound() {
 
 function ArticlePage() {
   const { post } = Route.useLoaderData();
+  const preferredSlugs = RELATED_POST_SLUGS[post.slug] ?? [];
+  const preferredPosts = preferredSlugs
+    .map((slug) => blogPosts.find((p) => p.slug === slug))
+    .filter((p): p is (typeof blogPosts)[number] => Boolean(p) && p.slug !== post.slug);
   const related = [
-    ...blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category),
-    ...blogPosts.filter((p) => p.slug !== post.slug && p.category !== post.category),
+    ...preferredPosts,
+    ...blogPosts.filter((p) => p.slug !== post.slug && !preferredSlugs.includes(p.slug) && p.category === post.category),
+    ...blogPosts.filter((p) => p.slug !== post.slug && !preferredSlugs.includes(p.slug) && p.category !== post.category),
   ].slice(0, 3);
 
   // Connect informational searches to the matching commercial solution without
@@ -164,7 +188,7 @@ function ArticlePage() {
       ? { href: "/solucoes/nfse", label: "Conheça o emissor de NFS-e", description: "Veja como organizar a emissão de notas de serviço e consulte a cobertura do seu município." }
       : slug.includes("nfce")
         ? { href: "/solucoes/nfce", label: "Conheça a solução de NFC-e", description: "Veja os recursos de emissão de cupom fiscal e PDV para o varejo." }
-        : /nfe|ibs-cbs|checklist-reforma|simples-nacional/.test(slug)
+        : /nfe|ibs-cbs|checklist-reforma|simples-nacional/.test(slug) && !/mdfe|manifesto|antt|piso-minimo|cte|ciot|transporte|rntrc|damdfe|seguro-carga/.test(slug)
           ? { href: "/solucoes/nfe", label: "Conheça o emissor de NF-e", description: "Veja como emitir NF-e de produtos e manter DANFE e XML organizados durante a transição tributária." }
           : /mdfe|manifesto|antt|piso-minimo/.test(slug)
             ? { href: "/solucoes/mdfe", label: "Conheça o emissor de manifesto de carga (MDF-e)", description: "Veja como emitir e organizar o manifesto de carga, vincular documentos da viagem e acompanhar autorização e encerramento." }
