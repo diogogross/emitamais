@@ -2800,6 +2800,150 @@ export const blogPosts: BlogPost[] = [
       }
     ]
   }
+,
+
+  {
+    "slug":"nfse-ibs-cbs-calendario-prazos-2027","category":"Notas Fiscais","title":"NFS-e com IBS e CBS em 2027: calendário atualizado por tipo de serviço","excerpt":"Confira as datas oficiais para adequar a NFS-e ao IBS e à CBS em 2027 e entenda por que o prazo depende da operação.","date":"24 Nov 2026","updatedAt":"24 Nov 2026","readMin":6,"image":"/images/blog/nfse-ibs-cbs-calendario-2027.svg","author":"Equipe EmitaGo",
+    "content":[
+      {"type":"paragraph","text":"A implantação dos campos de IBS e CBS na Nota Fiscal de Serviço eletrônica não tem uma única data para todas as atividades. O cronograma foi atualizado pelo Ato Conjunto RFB/CGIBS nº 7/2026, em novembro. Prestadores devem identificar o tipo de fornecimento e conferir a data aplicável antes de parametrizar o emissor."},
+      {"type":"heading","text":"Datas que merecem atenção em 2027"},
+      {"type":"list","items":["1º de janeiro de 2027: serviços gerais e hipóteses residuais abrangidas, além de bens imateriais, receitas condominiais e determinadas locações/arrendamentos.","1º de março de 2027: outras hipóteses específicas, incluindo algumas atividades de plataformas digitais, serviços de TI/streaming e transporte coletivo, conforme o cronograma.","Datas anteriores continuam valendo para categorias que já entraram em fase obrigatória em 2026."]},
+      {"type":"heading","text":"Como descobrir a data da sua atividade"},
+      {"type":"paragraph","text":"Confira o código de serviço, a natureza do fornecimento e o enquadramento da operação. O nome comercial, sozinho, pode não determinar a regra. Compare a atividade com o cronograma oficial e a documentação técnica vigente do padrão nacional da NFS-e."},
+      {"type":"heading","text":"O que preparar no sistema"},
+      {"type":"list","items":["Revisar cadastro de serviços e códigos utilizados.","Confirmar município, ambiente e versão do emissor.","Validar os campos aplicáveis à operação.","Testar emissão e conferência antes de colocar alterações em produção.","Guardar XML, protocolo e evidências conforme a rotina fiscal."]},
+      {"type":"paragraph","text":"Não altere códigos tributários apenas para preencher um campo. A classificação depende da operação e deve ser validada com o responsável fiscal. O EmitaGo oferece emissão fiscal online; consulte a equipe para confirmar o atendimento ao seu tipo de NFS-e."},
+      {"type":"heading","text":"Fontes oficiais"},
+      {"type":"source","label":"Receita Federal — Cronograma dos documentos fiscais eletrônicos (atualizado em novembro de 2026)","href":"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"},
+      {"type":"source","label":"Portal Nacional da NFS-e — atualização do cronograma pelo Ato Conjunto nº 7/2026","href":"https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-informa-ato-conjunto-rfb-cgibs-no-7-2026-atualiza-o-cronograma-de-obrigatoriedade-de-emissao-da-nfs-e-para-ibs-e-cbs/"}
+    ]
+  },
+  {
+    "slug":"ibs-cbs-transicao-2026-2027-o-que-muda","category":"Notas Fiscais","title":"IBS e CBS: o que muda de 2026 para 2027 na prática","excerpt":"Entenda o ano de teste, a mudança dos tributos em 2027 e os cuidados para não confundir destaque fiscal com recolhimento.","date":"24 Nov 2026","updatedAt":"24 Nov 2026","readMin":7,"image":"/images/blog/ibs-cbs-transicao-2026-2027.svg","author":"Equipe EmitaGo",
+    "content":[
+      {"type":"paragraph","text":"A Reforma Tributária do Consumo está sendo implantada por etapas. Em 2026, IBS e CBS fazem parte de uma fase de teste e adaptação dos documentos fiscais. Em 2027 começa uma nova etapa, com a CBS substituindo PIS/Cofins e o IBS iniciando sua transição. Separe as obrigações de informação nos documentos da apuração efetiva dos tributos."},
+      {"type":"heading","text":"2026: fase de teste e adaptação"},
+      {"type":"paragraph","text":"A Receita Federal descreve 2026 como ano de teste. O destaque de informações e as regras de cumprimento devem ser acompanhados conforme os atos e notas técnicas aplicáveis. Houve flexibilizações e ajustes de validação; não presuma que uma regra de determinado documento ou período vale para todos."},
+      {"type":"heading","text":"2027: início de uma nova etapa"},
+      {"type":"list","items":["A CBS passa a ocupar o lugar de PIS e Cofins, conforme a transição legal.","O IBS inicia a fase de transição, enquanto ICMS e ISS continuam em redução gradual nos anos seguintes.","Sistemas fiscais precisam acompanhar leiautes, cadastros, regras de apuração e documentos de cada operação."]},
+      {"type":"heading","text":"O destaque na nota significa que já paguei?"},
+      {"type":"paragraph","text":"Não necessariamente. Informar tributos no documento fiscal é obrigação acessória e não equivale, por si só, a concluir apuração ou recolhimento. A forma de cálculo, compensação e pagamento depende do regime, do período e das regras vigentes."},
+      {"type":"heading","text":"Checklist para atravessar a mudança"},
+      {"type":"list","items":["Identifique quais documentos sua empresa emite: NF-e, NFC-e, NFS-e, CT-e ou outros.","Acompanhe as notas técnicas e o cronograma oficial.","Revise cadastro e parametrizações com a contabilidade.","Faça testes e mantenha os sistemas atualizados.","Treine quem emite, confere e arquiva os documentos."]},
+      {"type":"paragraph","text":"O EmitaGo é um emissor fiscal online. Consulte a equipe sobre os documentos atendidos e as configurações adequadas ao seu negócio."},
+      {"type":"heading","text":"Fontes oficiais"},
+      {"type":"source","label":"Receita Federal — Entenda a Reforma Tributária do Consumo","href":"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"},
+      {"type":"source","label":"Receita Federal — Cronograma dos documentos fiscais eletrônicos","href":"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"}
+    ]
+  },
+  {
+    "slug":"ibs-e-cbs-diferenca-federal-estadual-municipal","category":"Notas Fiscais","title":"IBS e CBS: qual é a diferença entre os dois tributos?","excerpt":"Saiba o que é CBS, o que é IBS, quem administra cada tributo e por que os dois aparecem juntos na Reforma Tributária.","date":"24 Nov 2026","updatedAt":"24 Nov 2026","readMin":6,"image":"/images/blog/diferenca-ibs-cbs-2027.svg","author":"Equipe EmitaGo",
+    "content":[
+      {"type":"paragraph","text":"IBS e CBS são tributos diferentes que compõem o novo modelo de tributação sobre o consumo. Eles foram desenhados para funcionar de forma coordenada, mas têm competências distintas. Entender essa diferença ajuda a interpretar documentos fiscais e planejar a adaptação do sistema."},
+      {"type":"heading","text":"O que é a CBS?"},
+      {"type":"paragraph","text":"CBS significa Contribuição sobre Bens e Serviços e é de competência federal. Na transição, substitui PIS/Pasep e Cofins conforme as etapas previstas na legislação. Sua apuração segue regras próprias e o regime aplicável ao contribuinte."},
+      {"type":"heading","text":"O que é o IBS?"},
+      {"type":"paragraph","text":"IBS significa Imposto sobre Bens e Serviços e é de competência compartilhada entre estados, Distrito Federal e municípios. Ele substitui gradualmente ICMS e ISS ao longo da transição."},
+      {"type":"heading","text":"Por que aparecem juntos na nota?"},
+      {"type":"paragraph","text":"Os documentos fiscais podem conter grupos de informação para CBS e IBS, pois ambos fazem parte do novo sistema. A presença de campos não significa que sejam idênticos nem tenham a mesma administração. O preenchimento segue leiaute, operação e calendário aplicáveis."},
+      {"type":"heading","text":"O que muda para a empresa?"},
+      {"type":"list","items":["Atualizar o emissor conforme as notas técnicas.","Revisar produtos, serviços e dados da operação.","Conferir documentos recebidos de fornecedores.","Não aplicar regras por conta própria sem validar o enquadramento.","Acompanhar a transição até o modelo integral."]},
+      {"type":"paragraph","text":"ICMS e ISS não desaparecem de uma vez em 2027. O EmitaGo ajuda na emissão e organização de documentos fiscais online; consulte a equipe sobre os documentos disponíveis para sua atividade."},
+      {"type":"heading","text":"Fontes oficiais"},
+      {"type":"source","label":"Receita Federal — Entenda a Reforma Tributária do Consumo","href":"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"},
+      {"type":"source","label":"Lei Complementar nº 214/2025","href":"https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"}
+    ]
+  },
+  {
+    "slug":"credito-ibs-cbs-como-funciona-empresa","category":"Notas Fiscais","title":"Crédito de IBS e CBS: como funciona para empresas?","excerpt":"Entenda a lógica da não cumulatividade, a relação entre compras e vendas e os cuidados antes de considerar um crédito tributário.","date":"24 Nov 2026","updatedAt":"24 Nov 2026","readMin":8,"image":"/images/blog/credito-ibs-cbs-empresa.svg","author":"Equipe EmitaGo",
+    "content":[
+      {"type":"paragraph","text":"Uma mudança estrutural da Reforma Tributária é a lógica de não cumulatividade do IBS e da CBS. Em termos gerais, o modelo prevê que créditos relacionados a aquisições possam ser considerados na apuração, conforme as condições legais. Isso não significa que toda compra gera automaticamente crédito ou que o valor pode ser abatido sem documentação."},
+      {"type":"heading","text":"O que significa não cumulatividade?"},
+      {"type":"paragraph","text":"A ideia é reduzir a incidência em cascata ao longo da cadeia. A apuração considera débitos das operações realizadas e créditos admitidos das aquisições, de acordo com a legislação. O cálculo depende do tipo de operação, do contribuinte, do documento fiscal e das regras vigentes."},
+      {"type":"heading","text":"Toda despesa gera crédito?"},
+      {"type":"paragraph","text":"Não. É necessário verificar se a aquisição está em hipótese legal de crédito, se o documento fiscal está correto e se as condições foram cumpridas. Gastos pessoais, operações não documentadas ou situações vedadas não devem ser tratados como crédito automaticamente."},
+      {"type":"heading","text":"O que conferir e guardar"},
+      {"type":"list","items":["Documento fiscal eletrônico válido e vinculado à aquisição.","Identificação correta do fornecedor e do adquirente.","Descrição, quantidade e natureza dos itens ou serviços.","Informações fiscais e valores conforme o leiaute aplicável.","Registros necessários para conciliação contábil."]},
+      {"type":"heading","text":"Como se preparar"},
+      {"type":"paragraph","text":"Organize compras por fornecedor e categoria, concilie documentos recebidos com pagamentos e mantenha cadastros atualizados. Trabalhe com a contabilidade para definir quais aquisições podem gerar crédito no seu regime. Não use percentuais genéricos nem calcule créditos apenas pelo valor total da nota."},
+      {"type":"paragraph","text":"O EmitaGo oferece emissão fiscal online. Para a gestão de documentos de entrada e apuração de créditos, confirme os recursos disponíveis e mantenha a validação tributária com seu contador."},
+      {"type":"heading","text":"Fontes oficiais"},
+      {"type":"source","label":"Lei Complementar nº 214/2025 — regras de IBS e CBS","href":"https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"},
+      {"type":"source","label":"Receita Federal — Reforma Tributária do Consumo","href":"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo"}
+    ]
+  },
+  {
+    "slug":"nota-fornecedor-ibs-cbs-credito-comprador","category":"Notas Fiscais","title":"Nota do fornecedor com IBS e CBS: o que o comprador precisa conferir?","excerpt":"Veja quais dados revisar em notas de entrada e por que erros no documento podem afetar a escrituração e a análise de créditos.","date":"24 Nov 2026","updatedAt":"24 Nov 2026","readMin":7,"image":"/images/blog/nota-fornecedor-ibs-cbs.svg","author":"Equipe EmitaGo",
+    "content":[
+      {"type":"paragraph","text":"Com a implantação do IBS e da CBS, a conferência de documentos fiscais recebidos ganha importância. A empresa compradora deve verificar se a nota representa corretamente a operação e se os dados estão consistentes. Isso ajuda a evitar divergências na escrituração e permite à contabilidade avaliar eventual crédito conforme a legislação."},
+      {"type":"heading","text":"Confira a operação e os participantes"},
+      {"type":"list","items":["CNPJ/CPF e identificação do fornecedor e destinatário.","Descrição, quantidade e valor dos produtos ou serviços.","Natureza da operação e finalidade da aquisição.","Documento, série, data e situação de autorização.","Compatibilidade com pedido, contrato, entrega ou serviço realizado."]},
+      {"type":"heading","text":"O que observar nos campos IBS/CBS"},
+      {"type":"paragraph","text":"Quando os campos forem exigidos para a operação e período, confira se os grupos tributários estão preenchidos de acordo com o leiaute vigente. Não compare apenas a alíquota aparente: classificação, base, tratamento tributário e situação da operação podem alterar o resultado. Em caso de divergência, solicite correção ao fornecedor."},
+      {"type":"heading","text":"Uma nota correta garante crédito?"},
+      {"type":"paragraph","text":"Não automaticamente. A documentação é parte importante da análise, mas o direito ao crédito depende das condições previstas em lei e da situação do contribuinte. A equipe fiscal deve avaliar o documento, a aquisição e o regime antes de registrar valores como crédito."},
+      {"type":"heading","text":"Rotina para contas a pagar"},
+      {"type":"list","items":["Receber o XML e conferir a autorização.","Cruzar a nota com pedido e recebimento.","Sinalizar divergências antes da escrituração.","Separar documentos pendentes de correção.","Manter arquivo digital organizado."]},
+      {"type":"paragraph","text":"O EmitaGo oferece emissão fiscal online para operações de venda e serviço. A conferência de documentos de entrada e o aproveitamento de créditos devem seguir o processo contábil da empresa."},
+      {"type":"heading","text":"Fontes oficiais"},
+      {"type":"source","label":"Receita Federal — Cronograma e documentação fiscal","href":"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"},
+      {"type":"source","label":"Lei Complementar nº 214/2025","href":"https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"}
+    ]
+  },
+  {
+    "slug":"ibs-cbs-nfce-varejo-pdv-2027","category":"Notas Fiscais","title":"IBS e CBS na NFC-e: o que o varejo deve preparar no PDV","excerpt":"Checklist para lojas revisarem cadastro, emissão de NFC-e e integração do ponto de venda na transição tributária.","date":"24 Nov 2026","updatedAt":"24 Nov 2026","readMin":7,"image":"/images/blog/ibs-cbs-nfce-varejo.svg","author":"Equipe EmitaGo",
+    "content":[
+      {"type":"paragraph","text":"A NFC-e documenta vendas ao consumidor no varejo. Durante a transição para IBS e CBS, lojas precisam acompanhar os leiautes e regras de validação do modelo 65, além de preparar o cadastro de produtos e o sistema de ponto de venda. O cronograma oficial inclui a NFC-e entre os documentos abrangidos."},
+      {"type":"heading","text":"Revise o cadastro de produtos"},
+      {"type":"list","items":["Descrição e unidade de venda atualizadas.","NCM e classificações exigidas para o produto.","Código interno consistente entre retaguarda e PDV.","Tratamento fiscal validado com a contabilidade.","Preço e regras promocionais sincronizados."]},
+      {"type":"heading","text":"Teste o fluxo completo no caixa"},
+      {"type":"paragraph","text":"Não confira apenas a tela de emissão. Simule abertura de venda, desconto, transmissão e consulta do status, além dos procedimentos de cancelamento e contingência quando aplicáveis. Verifique se a NFC-e autorizada e seus dados ficam disponíveis para o fechamento."},
+      {"type":"heading","text":"Atenção às atualizações"},
+      {"type":"paragraph","text":"A obrigação de informar campos específicos depende do documento, do período, da operação e das regras técnicas vigentes. A Receita e o Comitê Gestor publicam cronogramas e ajustes; mantenha o PDV atualizado e evite configurar campos com base em notícias antigas."},
+      {"type":"heading","text":"Checklist antes de 2027"},
+      {"type":"list","items":["Confirmar atualização compatível do fornecedor do PDV.","Revisar produtos de maior volume.","Treinar operadores e responsáveis pelo fechamento.","Guardar XML e protocolos.","Planejar suporte para os primeiros dias após a atualização."]},
+      {"type":"paragraph","text":"O EmitaGo possui soluções de emissão fiscal online. Consulte a equipe para verificar disponibilidade de NFC-e e integração adequada ao seu modelo de varejo."},
+      {"type":"heading","text":"Fontes oficiais"},
+      {"type":"source","label":"Receita Federal — Cronograma dos documentos fiscais eletrônicos","href":"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"},
+      {"type":"source","label":"Receita Federal — flexibilização das validações IBS/CBS","href":"https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/julho/receita-federal-e-cgibs-flexibilizarao-obrigatoriedade-de-informacoes-em-documentos-fiscais"}
+    ]
+  },
+  {
+    "slug":"ibs-cbs-cte-transporte-frete-2027","category":"Transporte","title":"IBS e CBS no CT-e: cuidados para transportadoras e embarcadores","excerpt":"Entenda como acompanhar o leiaute do CT-e na reforma tributária e organizar dados de frete, tomador e documentos vinculados.","date":"24 Nov 2026","updatedAt":"24 Nov 2026","readMin":7,"image":"/images/blog/ibs-cbs-cte-transporte.svg","author":"Equipe EmitaGo",
+    "content":[
+      {"type":"paragraph","text":"O CT-e documenta prestações de transporte de cargas em situações previstas na legislação. A implantação de IBS e CBS inclui documentos de transporte no cronograma de adequação, por isso transportadoras, embarcadores e equipes fiscais devem revisar dados operacionais e acompanhar as notas técnicas do modelo."},
+      {"type":"heading","text":"Dados que merecem revisão"},
+      {"type":"list","items":["Identificação dos participantes da prestação, conforme a operação.","Origem, destino e percurso informado.","Valores do serviço e componentes do frete.","Documentos fiscais vinculados à carga.","Cadastro da transportadora e demais dados exigidos pelo CT-e."]},
+      {"type":"heading","text":"Não confunda CT-e com MDF-e"},
+      {"type":"paragraph","text":"O CT-e documenta a prestação de transporte; o MDF-e reúne informações para controle do transporte de cargas, conforme o caso. A adequação tributária pode envolver documentos e regras diferentes. Atualizar apenas um deles não garante que todo o fluxo esteja correto."},
+      {"type":"heading","text":"Como preparar a operação"},
+      {"type":"list","items":["Conferir o sistema de emissão e sua versão técnica.","Testar emissão, autorização e consulta.","Validar dados com a equipe fiscal e operacional.","Treinar faturamento, expedição e atendimento.","Manter procedimento para rejeições e divergências."]},
+      {"type":"heading","text":"Se houver divergência"},
+      {"type":"paragraph","text":"Leia o código e a mensagem retornados pelo autorizador, identifique o campo apontado e compare com a documentação da operação. Não altere valores, tomador ou natureza do serviço apenas para obter autorização. Quando envolver regra tributária, confirme com o responsável fiscal."},
+      {"type":"paragraph","text":"O EmitaGo oferece emissão fiscal online; consulte a equipe para confirmar os documentos de transporte disponíveis e a adequação ao seu fluxo."},
+      {"type":"heading","text":"Fontes oficiais"},
+      {"type":"source","label":"Receita Federal — Cronograma dos documentos fiscais eletrônicos","href":"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"},
+      {"type":"source","label":"Portal do CT-e — Ato Conjunto RFB/CGIBS nº 4/2026","href":"https://www.cte.fazenda.gov.br/PORTAL/informe.aspx?informe=176"}
+    ]
+  },
+  {
+    "slug":"simples-ibs-cbs-consultar-opcao-cancelamento-2027","category":"Notas Fiscais","title":"IBS e CBS no Simples: como consultar ou cancelar a opção para 2027","excerpt":"Saiba onde verificar o pedido de regime regular, quais prazos de cancelamento foram divulgados e o que confirmar antes de 2027.","date":"24 Nov 2026","updatedAt":"24 Nov 2026","readMin":6,"image":"/images/blog/simples-ibs-cbs-consulta-opcao.svg","author":"Equipe EmitaGo",
+    "content":[
+      {"type":"paragraph","text":"Empresas do Simples Nacional (exceto MEI) puderam escolher se manteriam IBS e CBS dentro do recolhimento unificado ou se optariam pelo regime regular para o primeiro semestre de 2027. Como o período de opção passou, a dúvida agora é consultar o registro, conferir o processamento e entender os prazos de cancelamento ainda vigentes."},
+      {"type":"heading","text":"Onde consultar a solicitação"},
+      {"type":"paragraph","text":"A Receita Federal disponibiliza o serviço de escolha do regime de apuração de IBS e CBS, que permite formalizar a opção, consultar o histórico e, dentro do prazo previsto, cancelar uma solicitação. Acesse o serviço oficial com a autenticação exigida e confira o status registrado para o CNPJ."},
+      {"type":"heading","text":"Prazo de cancelamento em 2026"},
+      {"type":"paragraph","text":"A Receita Federal informou que o período de cancelamento das opções realizadas para 2027 começou em 3 de novembro e permanece aberto até 20 de dezembro de 2026. Antes de cancelar, avalie o impacto com a contabilidade e confira se o pedido exibido é o correto. Confirme as regras no canal oficial."},
+      {"type":"heading","text":"O que revisar com o contador"},
+      {"type":"list","items":["Se a empresa permanece no Simples Nacional em 2027.","Se houve escolha pelo regime regular e para qual semestre.","Se a solicitação foi deferida, cancelada ou está pendente.","Como a opção afeta clientes PJ, documentos fiscais e fluxo de caixa.","Qual será a próxima janela de opção e quando seus efeitos começam."]},
+      {"type":"heading","text":"Não confunda duas opções"},
+      {"type":"paragraph","text":"A opção pelo Simples Nacional e a escolha do regime regular de IBS/CBS são procedimentos diferentes. Uma empresa pode estar no Simples e, em determinadas condições, recolher IBS/CBS pelo regime regular. O MEI não participa dessa opção nos mesmos termos."},
+      {"type":"paragraph","text":"O EmitaGo ajuda empresas a emitir documentos fiscais online. Para definir o regime tributário e avaliar créditos ou recolhimentos, procure a contabilidade; um emissor não substitui essa análise."},
+      {"type":"heading","text":"Fontes oficiais"},
+      {"type":"source","label":"Receita Federal — atualização sobre cancelamento das opções em novembro de 2026","href":"https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/a-receita-federal-divulga-a-atualizacao-dos-numeros-referentes-as-solicitacoes-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs"},
+      {"type":"source","label":"Gov.br — escolher regime de apuração de IBS e CBS","href":"https://www.gov.br/pt-br/servicos/escolher-regime-de-apuracao-de-bens-e-servicos-ibs-e-da-contribuicao-sobre-bens-e-servicos-cbs"}
+    ]
+  }
 
 ];
 
