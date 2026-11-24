@@ -1335,7 +1335,7 @@ export const blogPosts: BlogPost[] = [
     title: "Como emitir NF-e online: passo a passo",
     excerpt: "Veja os dados necessários, como revisar a nota fiscal de produto e acompanhar a autorização da SEFAZ antes de compartilhar o DANFE e o XML.",
     date: "12 Jan 2026",
-    updatedAt: "14 Nov 2026",
+    updatedAt: "24 Nov 2026",
     readMin: 7,
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
@@ -2073,15 +2073,15 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "mei-nota-fiscal-pessoa-fisica-2027",
     category: "Notas Fiscais",
-    title: "MEI precisa emitir nota fiscal para pessoa física?",
-    excerpt: "Saiba quando o MEI deve emitir NFS-e para empresas e quando a emissão para consumidor pessoa física é facultativa.",
+    title: "MEI precisa emitir nota fiscal em 2027? Veja a regra",
+    excerpt: "Entenda quando o MEI deve emitir nota para empresas e como a DASN-SIMEI pode servir como documento fiscal para consumidor pessoa física em 2027.",
     date: "22 Out 2026",
     updatedAt: "14 Nov 2026",
     readMin: 6,
     image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
-      { type: "paragraph", text: "Em regra, o MEI prestador de serviços não é obrigado a emitir NFS-e quando atende uma pessoa física, exceto quando o consumidor solicita o documento. Quando o tomador é pessoa jurídica, a emissão é obrigatória. Essa distinção continua importante para evitar interpretações incorretas sobre as mudanças fiscais previstas para 2027." },
+      { type: "paragraph", text: "As regras de emissão fiscal do MEI receberam novidades para 2027. Para operações com empresas (pessoas jurídicas), a emissão do documento fiscal continua obrigatória conforme a natureza da operação. Para vendas de produtos e serviços diretamente a consumidor final pessoa física, o Decreto nº 13.140/2026 permite utilizar a Declaração Anual Simplificada (DASN-SIMEI) como documento fiscal eletrônico, nos termos da regulamentação. Isso não elimina a necessidade de registrar corretamente a receita nem substitui obrigações em operações com empresas." },
       { type: "heading", text: "Quando a nota é obrigatória para o MEI?" },
       { type: "list", items: [
         "Serviço prestado para pessoa jurídica: emissão obrigatória de NFS-e.",
@@ -2089,7 +2089,7 @@ export const blogPosts: BlogPost[] = [
         "A NFS-e de serviço do MEI deve seguir o padrão nacional, obrigatório desde 1º de setembro de 2023."
       ]},
       { type: "heading", text: "A Reforma Tributária muda essa regra automaticamente em 2027?" },
-      { type: "paragraph", text: "Não se deve concluir que a transição da Reforma Tributária, por si só, tornou obrigatória a emissão de NFS-e pelo MEI em toda prestação para pessoa física. A obrigação depende das regras específicas aplicáveis ao MEI e da natureza da operação. Para mercadorias, consulte também as regras estaduais do documento fiscal correspondente." },
+      { type: "paragraph", text: "A regra da DASN-SIMEI como documento fiscal para consumidor pessoa física decorre de medida específica de simplificação, não apenas da Reforma Tributária. O MEI deve acompanhar as instruções oficiais sobre como registrar e apresentar a declaração. Em operações com pessoa jurídica, mantenha a emissão do documento fiscal exigido. Para mercadorias e serviços, confirme também o documento adequado à atividade e ao tipo de operação." },
       { type: "heading", text: "Como se organizar" },
       { type: "list", items: [
         "Identifique se o cliente é pessoa física ou jurídica.",
@@ -2235,6 +2235,570 @@ export const blogPosts: BlogPost[] = [
       { type: "paragraph", text: "Use materiais oficiais para confirmar prazos e obrigações, porque regras e validações técnicas podem mudar durante a implantação. A Receita Federal publicou atualizações do Simples Nacional em 2026 para adequação à Reforma Tributária. Este guia é educativo e não substitui análise fiscal individual." }
     ],
   },
+
+  // ============ Guia MEI 2027: cluster SEO e atualização legal (24/11/2026) ============
+  {
+    "slug": "mei-limite-faturamento-2027-110-mil",
+    "category": "Notas Fiscais",
+    "title": "MEI 2027: novo limite de faturamento de R$ 110 mil",
+    "excerpt": "Veja quando começa a valer o novo teto do MEI, o que muda em 2027 e como controlar a receita bruta sem confundir limite anual com mensal.",
+    "date": "24 Nov 2026",
+    "updatedAt": "24 Nov 2026",
+    "readMin": 7,
+    "image": "/images/blog/mei-limite-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Uma das principais dúvidas de quem trabalha como Microempreendedor Individual é quanto poderá faturar em 2027 sem sair do regime. A Lei Complementar nº 238/2026 atualizou o teto anual do MEI: o limite passa a R$ 110 mil a partir de 1º de janeiro de 2027. O valor anterior, de R$ 81 mil, continua sendo a referência para o ano-calendário de 2026."
+      },
+      {
+        "type": "heading",
+        "text": "Qual é o limite do MEI em 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Para o ano-calendário de 2027, o teto anual de receita bruta é de R$ 110.000. Isso equivale a uma média de R$ 9.166,67 por mês apenas como referência de planejamento. Não significa que exista um limite rígido de faturamento idêntico para cada mês: o acompanhamento é feito sobre a receita bruta acumulada no ano, respeitadas as regras legais."
+      },
+      {
+        "type": "heading",
+        "text": "E em 2028, o limite aumenta novamente?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A lei prevê uma nova etapa: o teto passa a R$ 140 mil a partir de 2028. Como as regras e seus efeitos precisam ser observados por ano-calendário, não use o limite de 2028 para justificar faturamento de 2026 ou 2027."
+      },
+      {
+        "type": "heading",
+        "text": "O que entra no faturamento do MEI?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Considere a receita bruta obtida com a atividade do negócio, e não apenas o lucro depois de pagar despesas.",
+          "Registre vendas e serviços independentemente de terem sido recebidos por Pix, cartão, dinheiro ou transferência.",
+          "Separe movimentações pessoais, empréstimos e transferências que não representem receita da atividade.",
+          "Guarde notas, comprovantes e relatórios para conferir o total acumulado."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O novo teto vale para 2026?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. O aumento começa em 1º de janeiro de 2027. Para analisar excesso de faturamento ocorrido em 2026, utilize o limite aplicável ao ano de 2026 e procure orientação contábil. A mudança futura não deve ser aplicada retroativamente por conta própria."
+      },
+      {
+        "type": "heading",
+        "text": "Como se preparar para faturar mais"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Faça uma planilha ou relatório mensal de receita bruta.",
+          "Compare o acumulado com o teto do ano em curso.",
+          "Projete compras, despesas e capacidade de atendimento sem confundir faturamento com lucro.",
+          "Converse com a contabilidade antes de ultrapassar o limite ou mudar de enquadramento."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Se sua empresa precisa emitir e organizar documentos fiscais, conheça o EmitaGo. A plataforma oferece soluções online de emissão fiscal; consulte a equipe para confirmar o documento, o regime e a cobertura adequados à sua operação."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Ministério do Empreendedorismo — Teto do MEI e LC nº 238/2026",
+        "href": "https://www.gov.br/memp/pt-br/prospera-mei/teto-do-mei"
+      },
+      {
+        "type": "source",
+        "label": "Senado Federal — Lei Complementar nº 238, de 21 de outubro de 2026",
+        "href": "https://legis.senado.gov.br/norma/44276013"
+      }
+    ]
+  },
+  {
+    "slug": "mei-dois-funcionarios-2027",
+    "category": "Notas Fiscais",
+    "title": "MEI pode contratar 2 funcionários em 2027? Entenda a regra",
+    "excerpt": "Saiba quando o MEI poderá ter dois empregados, quais salários são permitidos e quais obrigações trabalhistas precisam ser cumpridas.",
+    "date": "24 Nov 2026",
+    "updatedAt": "24 Nov 2026",
+    "readMin": 6,
+    "image": "/images/blog/mei-funcionarios-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A legislação atualizada para 2027 amplia a capacidade de contratação do Microempreendedor Individual. A Lei Complementar nº 238/2026 permite que o MEI tenha até dois empregados registrados, em vez do limite anterior de um, a partir de 1º de janeiro de 2027."
+      },
+      {
+        "type": "heading",
+        "text": "Quantos funcionários o MEI poderá contratar?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A partir de 2027, o MEI poderá manter até dois empregados, observadas as condições legais. A mudança não transforma o MEI em empresa de grande porte nem elimina as demais exigências de registro, folha de pagamento e cumprimento da legislação trabalhista."
+      },
+      {
+        "type": "heading",
+        "text": "Qual salário pode pagar ao empregado?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A remuneração deve respeitar pelo menos o salário mínimo nacional ou o piso salarial previsto para a categoria profissional, quando aplicável. Verifique também convenção coletiva, jornada, adicionais e demais direitos de acordo com a atividade e a localidade."
+      },
+      {
+        "type": "heading",
+        "text": "Quais obrigações continuam existindo?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Registrar o trabalhador corretamente antes do início das atividades.",
+          "Cumprir as obrigações de folha, eSocial, FGTS e contribuição previdenciária aplicáveis.",
+          "Controlar jornada, férias, 13º salário e demais direitos trabalhistas.",
+          "Manter documentos e comprovantes organizados.",
+          "Observar o limite de receita e as atividades permitidas para o MEI."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Posso contratar dois funcionários antes de 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não antecipe a nova regra. Até o início de sua vigência, siga o limite e as condições aplicáveis ao período. Confirme a data de produção dos efeitos na lei e com o profissional responsável pela folha."
+      },
+      {
+        "type": "heading",
+        "text": "Como organizar a operação quando o negócio cresce"
+      },
+      {
+        "type": "paragraph",
+        "text": "Com mais pessoas na equipe, aumenta a importância de controlar vendas, serviços, documentos fiscais e custos. O EmitaGo oferece soluções online para emissão de documentos fiscais e organização da rotina de empresas. Consulte a equipe para confirmar quais recursos se encaixam no seu negócio e no seu enquadramento."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Ministério do Empreendedorismo — Teto do MEI e aumento no número de empregados",
+        "href": "https://www.gov.br/memp/pt-br/prospera-mei/teto-do-mei"
+      },
+      {
+        "type": "source",
+        "label": "Senado Federal — Lei Complementar nº 238/2026",
+        "href": "https://legis.senado.gov.br/norma/44276013"
+      }
+    ]
+  },
+  {
+    "slug": "das-mei-2027-valor-contribuicao",
+    "category": "Notas Fiscais",
+    "title": "DAS MEI 2027: quanto vai pagar e como calcular",
+    "excerpt": "Entenda como é calculado o DAS do MEI em 2027, quais parcelas entram na guia e por que o valor oficial depende do salário mínimo.",
+    "date": "24 Nov 2026",
+    "updatedAt": "24 Nov 2026",
+    "readMin": 6,
+    "image": "/images/blog/mei-das-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "O Documento de Arrecadação do Simples Nacional (DAS) é a guia mensal do MEI. O valor reúne a contribuição previdenciária e, conforme a atividade, uma parcela de ICMS e/ou ISS. Para 2027, o valor final depende do salário mínimo vigente e dos valores fixos previstos para cada tipo de atividade."
+      },
+      {
+        "type": "heading",
+        "text": "Como é calculado o DAS do MEI?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A contribuição previdenciária do MEI corresponde a 5% do salário mínimo. Além dela, pode haver R$ 1 de ICMS para atividades sujeitas a esse imposto e/ou R$ 5 de ISS para prestação de serviços, conforme o enquadramento. Por isso, comércio, serviços e atividades mistas podem ter valores diferentes."
+      },
+      {
+        "type": "heading",
+        "text": "O valor de 2027 já está definido?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Até a publicação oficial do salário mínimo de 2027 e da atualização correspondente dos sistemas, não é seguro informar um valor fechado para a guia. Evite confiar em tabelas que apresentam um número definitivo sem indicar a base oficial. Consulte o PGMEI para emitir o DAS correto do mês."
+      },
+      {
+        "type": "heading",
+        "text": "Quando vence o DAS?"
+      },
+      {
+        "type": "paragraph",
+        "text": "O vencimento regular ocorre no dia 20 de cada mês, conforme as regras do SIMEI. Se a data cair em dia sem expediente bancário, verifique o calendário de pagamento no sistema oficial. A guia pode ser emitida pelo PGMEI, inclusive para consultar períodos anteriores."
+      },
+      {
+        "type": "heading",
+        "text": "O MEI paga DAS mesmo sem faturar?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Em regra, o DAS mensal continua devido enquanto o MEI permanece enquadrado no SIMEI, mesmo que não tenha tido receita no mês. A ausência de faturamento também deve ser informada na declaração anual, conforme as instruções aplicáveis."
+      },
+      {
+        "type": "heading",
+        "text": "Como evitar atraso e multas"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Emita a guia no portal oficial do Simples Nacional/PGMEI.",
+          "Confira CNPJ, período de apuração e vencimento.",
+          "Ative lembretes e mantenha comprovantes de pagamento.",
+          "Regularize guias atrasadas e consulte opções de parcelamento quando disponíveis."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Além de manter o DAS em dia, empresas que precisam emitir documentos fiscais podem conhecer o EmitaGo, uma solução online de emissão fiscal. Consulte a equipe para validar os recursos e a cobertura para sua atividade."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — PGMEI e cálculo do DAS",
+        "href": "https://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=8"
+      },
+      {
+        "type": "source",
+        "label": "Governo Federal — declaração anual de receita do MEI",
+        "href": "https://www.gov.br/pt-br/servicos/declarar-receita-bruta-anual-para-o-mei?id=10871&origem=servico"
+      }
+    ]
+  },
+  {
+    "slug": "dasn-simei-2027-como-declarar-2026",
+    "category": "Notas Fiscais",
+    "title": "DASN-SIMEI 2027: como declarar o faturamento de 2026",
+    "excerpt": "Veja o prazo da declaração anual do MEI em 2027, quais receitas informar e por que o novo teto de R$ 110 mil não vale para 2026.",
+    "date": "24 Nov 2026",
+    "updatedAt": "24 Nov 2026",
+    "readMin": 7,
+    "image": "/images/blog/mei-dasn-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A DASN-SIMEI é a declaração anual em que o Microempreendedor Individual informa a receita bruta do ano anterior e se teve empregado. Em 2027, a declaração será referente ao ano-calendário de 2026 e deverá ser enviada até 31 de maio de 2027, conforme o prazo geral vigente."
+      },
+      {
+        "type": "heading",
+        "text": "O que informar na DASN-SIMEI?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "A receita bruta total obtida no ano anterior com comércio, indústria ou serviços, conforme sua atividade.",
+          "A parcela de receita sujeita a cada tipo de atividade, quando o sistema solicitar.",
+          "Se houve empregado durante o período declarado.",
+          "As informações corretas mesmo quando não houve faturamento."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O novo limite de R$ 110 mil vale na declaração de 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Atenção ao ano de referência: a declaração enviada em 2027 informa a receita de 2026. O novo teto de R$ 110 mil começa a valer para o ano-calendário de 2027. Portanto, não use o limite novo para analisar automaticamente a receita de 2026, que segue as regras aplicáveis àquele ano."
+      },
+      {
+        "type": "heading",
+        "text": "Como enviar a declaração"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Acesse o serviço oficial da DASN-SIMEI no Portal do Simples Nacional.",
+          "Informe o CNPJ e selecione o ano-calendário correto.",
+          "Preencha a receita bruta e a informação sobre empregado.",
+          "Revise os valores e transmita a declaração.",
+          "Salve o recibo de entrega e mantenha os relatórios de receita arquivados."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "E se eu não tive faturamento?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A declaração anual continua sendo exigida, mesmo quando a receita foi zero. Informe os dados conforme o sistema e não deixe de transmitir por acreditar que a ausência de vendas dispensa a obrigação."
+      },
+      {
+        "type": "heading",
+        "text": "DASN-SIMEI e Imposto de Renda da pessoa física são a mesma coisa?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. A DASN-SIMEI é uma obrigação do CNPJ/MEI. A declaração de Imposto de Renda da pessoa física (IRPF) depende das regras e dos critérios de obrigatoriedade da pessoa, considerando rendimentos, patrimônio e outras condições. Uma declaração não substitui automaticamente a outra."
+      },
+      {
+        "type": "paragraph",
+        "text": "Para manter a rotina fiscal organizada, o EmitaGo oferece soluções online de emissão de documentos fiscais. Conheça a plataforma e confirme com a equipe o fluxo adequado ao seu tipo de empresa."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Governo Federal — DASN-SIMEI: declarar receita bruta anual",
+        "href": "https://www.gov.br/pt-br/servicos/declarar-receita-bruta-anual-para-o-mei?id=10871&origem=servico"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — serviços do Simples Nacional",
+        "href": "https://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=8"
+      }
+    ]
+  },
+  {
+    "slug": "mei-ibs-cbs-2027-o-que-muda",
+    "category": "Notas Fiscais",
+    "title": "MEI em 2027: IBS e CBS vão aumentar os impostos?",
+    "excerpt": "Entenda como a Reforma Tributária chega ao MEI em 2027, o que muda nos documentos fiscais e por que não é correto afirmar que o DAS será automaticamente maior.",
+    "date": "24 Nov 2026",
+    "updatedAt": "24 Nov 2026",
+    "readMin": 7,
+    "image": "/images/blog/mei-ibs-cbs-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "A partir de 2027, a Reforma Tributária entra em uma nova etapa com a CBS e o IBS. Para o MEI, é importante separar três assuntos: a forma de recolher os tributos no SIMEI, as informações que podem aparecer nos documentos fiscais e as regras específicas do regime simplificado."
+      },
+      {
+        "type": "heading",
+        "text": "O que são IBS e CBS?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "CBS é a Contribuição sobre Bens e Serviços, de competência federal.",
+          "IBS é o Imposto sobre Bens e Serviços, compartilhado por estados e municípios.",
+          "Os dois fazem parte da transição para um novo modelo de tributação sobre o consumo."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O MEI vai pagar IBS e CBS por fora do DAS?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não se deve presumir que o MEI passe automaticamente a apurar e recolher IBS e CBS pelo regime regular como uma empresa fora do Simples. O MEI tem regras próprias no SIMEI e não realiza a opção pelo modelo híbrido do Simples Nacional destinada a outros contribuintes. Confirme a regra vigente e o tratamento da sua operação com a contabilidade."
+      },
+      {
+        "type": "heading",
+        "text": "O que pode mudar na nota fiscal?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A adaptação dos documentos fiscais pode envolver novos campos, códigos, informações tributárias e validações técnicas. O documento e os campos aplicáveis dependem da operação, do tipo de nota e das orientações oficiais. Não preencha CST, cClassTrib ou outros códigos por tentativa e erro."
+      },
+      {
+        "type": "heading",
+        "text": "Checklist para o MEI em 2027"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Acompanhe as orientações oficiais do Portal Nacional da NFS-e e dos documentos fiscais estaduais.",
+          "Confirme com o fornecedor do emissor se o fluxo utilizado está atualizado para seu enquadramento.",
+          "Revise cadastro, atividade, descrição do serviço ou produto e dados do cliente.",
+          "Consulte um contador se houver dúvida sobre tributação ou preenchimento."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Emissor fiscal atualizado faz diferença"
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo oferece soluções online para emissão de documentos fiscais eletrônicos. Antes de contratar, consulte a equipe para confirmar se o documento, o município, a atividade e o regime do seu MEI estão contemplados. O sistema emissor ajuda na rotina, mas não substitui a orientação fiscal individual."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — Entenda a Reforma Tributária do Consumo",
+        "href": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — adequação do Simples Nacional à Reforma Tributária",
+        "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/cgsn-atualiza-regras-do-simples-nacional-para-adequacao-a-reforma-tributaria-do-consumo"
+      }
+    ]
+  },
+  {
+    "slug": "mei-limite-proporcional-2027",
+    "category": "Notas Fiscais",
+    "title": "MEI aberto em 2027: como calcular o limite proporcional",
+    "excerpt": "Abriu MEI durante 2027? Entenda como calcular o limite de faturamento proporcional ao número de meses de atividade.",
+    "date": "24 Nov 2026",
+    "updatedAt": "24 Nov 2026",
+    "readMin": 6,
+    "image": "/images/blog/mei-proporcional-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Quem abre um MEI durante o ano não deve considerar automaticamente o teto anual integral. No ano de início da atividade, o limite é proporcional aos meses em que o negócio esteve ativo, conforme as regras do SIMEI."
+      },
+      {
+        "type": "heading",
+        "text": "Qual é a conta para 2027?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Com o teto anual de R$ 110.000 previsto para 2027, a referência proporcional é de R$ 9.166,67 por mês de atividade. Para calcular o limite, multiplique o valor mensal proporcional pelo número de meses considerados no ano de abertura, incluindo o mês de início conforme a regra aplicável."
+      },
+      {
+        "type": "heading",
+        "text": "Exemplo de cálculo"
+      },
+      {
+        "type": "paragraph",
+        "text": "Se o MEI iniciar atividade em julho de 2027, serão considerados seis meses de atividade no ano (julho a dezembro). A referência proporcional seria R$ 9.166,67 × 6, total aproximado de R$ 55.000. Use o cálculo oficial e confirme o tratamento do mês de abertura no sistema ou com a contabilidade."
+      },
+      {
+        "type": "heading",
+        "text": "O limite mensal é fixo?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. O valor mensal é uma referência para calcular o limite proporcional no ano de abertura, não uma trava independente que obrigue o MEI a faturar exatamente o mesmo em cada mês. O acompanhamento deve considerar a receita bruta acumulada e o limite proporcional total."
+      },
+      {
+        "type": "heading",
+        "text": "O que registrar desde o primeiro mês"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Registre toda receita bruta da atividade, inclusive recebimentos por diferentes meios.",
+          "Separe receitas do negócio de movimentações pessoais que não sejam faturamento.",
+          "Guarde notas, recibos e relatórios de vendas.",
+          "Acompanhe o total acumulado e faça projeções antes de se aproximar do teto."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo oferece soluções online para emissão fiscal e organização de documentos. Consulte a equipe para confirmar o atendimento à sua atividade e ao documento fiscal que você precisa emitir."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Ministério do Empreendedorismo — Teto do MEI",
+        "href": "https://www.gov.br/memp/pt-br/prospera-mei/teto-do-mei"
+      },
+      {
+        "type": "source",
+        "label": "Senado Federal — Lei Complementar nº 238/2026",
+        "href": "https://legis.senado.gov.br/norma/44276013"
+      }
+    ]
+  },
+  {
+    "slug": "mei-ultrapassou-limite-faturamento-2027",
+    "category": "Notas Fiscais",
+    "title": "MEI ultrapassou o limite em 2027: o que fazer?",
+    "excerpt": "Descubra quais cuidados tomar ao exceder o faturamento anual do MEI, como registrar a receita e quando buscar o desenquadramento.",
+    "date": "24 Nov 2026",
+    "updatedAt": "24 Nov 2026",
+    "readMin": 7,
+    "image": "/images/blog/mei-excesso-limite-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Ultrapassar o limite anual do MEI pode exigir desenquadramento do SIMEI e mudança na forma de apuração dos tributos. Em 2027, o teto previsto pela Lei Complementar nº 238/2026 é de R$ 110 mil. Antes de tomar qualquer decisão, confirme o total de receita bruta e o ano em que o excesso ocorreu."
+      },
+      {
+        "type": "heading",
+        "text": "O que fazer assim que perceber o excesso?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Reúna notas fiscais, relatórios de vendas e comprovantes de recebimento.",
+          "Calcule a receita bruta acumulada do ano, sem confundir faturamento com lucro.",
+          "Compare o total com o teto aplicável ao ano-calendário.",
+          "Procure um contador para verificar o procedimento de comunicação e desenquadramento."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "O excesso foi de até 20% ou maior?"
+      },
+      {
+        "type": "paragraph",
+        "text": "As regras do SIMEI diferenciam situações em que o faturamento ultrapassa o limite em até 20% e situações em que o excesso é superior. Essa diferença pode afetar a data a partir da qual o desenquadramento produz efeitos e a necessidade de recolher tributos por outra sistemática. Não calcule sozinho valores retroativos: a regra depende do ano, do momento do excesso e do enquadramento."
+      },
+      {
+        "type": "heading",
+        "text": "O novo teto vale para receita de 2026?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. O limite de R$ 110 mil começa em 2027. Se o excesso ocorreu em 2026, utilize o teto aplicável ao ano de 2026 e peça orientação contábil. A lei nova não deve ser usada para apagar ou recalcular automaticamente ocorrências de períodos anteriores."
+      },
+      {
+        "type": "heading",
+        "text": "Como evitar surpresas no próximo ano"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Acompanhe o faturamento mês a mês.",
+          "Faça previsão de vendas e serviços para o restante do ano.",
+          "Considere o impacto de crescimento sobre custos, contratação e regime tributário.",
+          "Avalie com a contabilidade se MEI continuará sendo o enquadramento adequado."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Uma emissão fiscal organizada ajuda a manter os registros de venda e serviço em dia. Conheça o EmitaGo e consulte a equipe sobre os documentos fiscais e recursos adequados ao seu negócio."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — serviços e orientações do SIMEI",
+        "href": "https://www8.receita.fazenda.gov.br/SIMPLESNACIONAL/Servicos/Grupo.aspx?grp=8"
+      },
+      {
+        "type": "source",
+        "label": "Ministério do Empreendedorismo — Teto do MEI",
+        "href": "https://www.gov.br/memp/pt-br/prospera-mei/teto-do-mei"
+      },
+      {
+        "type": "source",
+        "label": "Senado Federal — Lei Complementar nº 238/2026",
+        "href": "https://legis.senado.gov.br/norma/44276013"
+      }
+    ]
+  }
 
 ];
 
