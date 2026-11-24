@@ -753,7 +753,7 @@ export const blogPosts: BlogPost[] = [
     "slug": "nfe-ibs-cbs-novos-campos-2027",
     "category": "Notas Fiscais",
     "title": "NF-e 2027: novos campos de IBS e CBS",
-    "excerpt": "Entenda quais informações de IBS e CBS aparecem na NF-e em 2027, como revisar CST e cClassTrib e o que conferir antes de transmitir."
+    "excerpt": "Entenda quais informações de IBS e CBS aparecem na NF-e em 2027, como revisar CST e cClassTrib e o que conferir antes de transmitir.",
     "date": "14 Nov 2026",
     "updatedAt": "24 Nov 2026",
     "readMin": 8,
