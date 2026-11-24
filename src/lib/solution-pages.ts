@@ -33,7 +33,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "O EmitaGo transmite a NF-e para a SEFAZ e gera DANFE e XML?", answer: "O EmitaGo oferece fluxo de emissão de NF-e com transmissão à SEFAZ e disponibilização de DANFE e XML, conforme a configuração fiscal e a disponibilidade do ambiente autorizador." },
       { question: "Como escolher um emissor de NF-e para minha empresa?", answer: "Compare o fluxo de cadastro de produtos e clientes, configuração fiscal, assinatura digital, transmissão à SEFAZ, consulta de autorização, geração de DANFE e XML, suporte e custo por CNPJ. Confirme também se o sistema atende ao tipo de operação e ao regime tributário da empresa." },
       { question: "Qual a diferença entre um emissor gratuito e um sistema emissor de NF-e?", answer: "A diferença depende dos recursos oferecidos. Ao comparar, avalie cadastro de produtos e clientes, regras fiscais, transmissão, consulta de autorização, geração de DANFE e XML, suporte, organização de documentos e custo total da operação." },
-            { question: "Quanto custa emitir NF-e pelo EmitaGo?", answer: "O EmitaGo custa R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
+            { question: "Quanto custa emitir NF-e pelo EmitaGo?", answer: "O EmitaGo custa R$ 60,00 por CNPJ ativo em cada mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
     ],
     relatedSlugs: ["nfe-passo-a-passo", "rejeicao-nfe-como-identificar-e-corrigir", "xml-nfe-o-que-e-como-baixar-e-guardar", "danfe-nfe-o-que-e-para-que-serve-e-como-consultar", "cfop-na-nfe-o-que-e-como-escolher", "nota-fiscal-devolucao-como-emitir-nfe", "carta-correcao-eletronica", "cancelamento-nfe"]
   },
@@ -41,7 +41,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "nfce",
     title: "NFCe — Nota Fiscal do Consumidor",
     seoTitle: "NFCe Online: emissão de cupom fiscal no PDV | EmitaGo",
-    description: "Emissor de NFC-e com PDV e Smart POS compatível. R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, sem fidelidade.",
+    description: "Emissor de NFC-e com PDV e Smart POS compatível. R$ 60,00 por CNPJ ativo em cada mês de uso, sem fidelidade.",
     h1: "NFCe online para o seu varejo",
     intro: "Transforme o caixa em um PDV fiscal completo e emita NFCe modelo 65 de forma rápida, organizada e integrada ao restante da operação.",
     benefits: ["PDV online integrado", "Emissão de NFCe modelo 65", "QR Code para consulta do consumidor", "Cadastro de produtos e clientes", "Acesso em computador e Smart POS compatível"],
@@ -58,7 +58,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "pdv-smart-pos",
     title: "PDV com NFC-e e Smart POS",
     seoTitle: "PDV com NFC-e e Smart POS Android | EmitaGo",
-    description: "Sistema PDV com NFC-e e Smart POS Android compatível. R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, sem fidelidade.",
+    description: "Sistema PDV com NFC-e e Smart POS Android compatível. R$ 60,00 por CNPJ ativo em cada mês de uso, sem fidelidade.",
     h1: "PDV com NFC-e e Smart POS para o seu comércio",
     intro: "Organize as vendas do balcão e a emissão fiscal em um único fluxo. Conheça os recursos de PDV do EmitaGo e confirme a compatibilidade do seu equipamento Smart POS antes de contratar.",
     benefits: [
@@ -84,7 +84,7 @@ export const solutionPages: SolutionPage[] = [
     faq: [
       { question: "O EmitaGo funciona em qualquer Smart POS?", answer: "A compatibilidade depende do equipamento, do sistema operacional e da configuração da operação. Confirme o modelo com a equipe antes de contratar." },
       { question: "O PDV permite emitir NFC-e?", answer: "O EmitaGo oferece recursos de PDV integrados à emissão de NFC-e, conforme a configuração fiscal e a disponibilidade da integração." },
-      { question: "Quanto custa o PDV com NFC-e?", answer: "O preço do EmitaGo é R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, com pagamento antecipado. A emissão é ilimitada no mês pago para o CNPJ ativo, sem fidelidade." }
+      { question: "Quanto custa o PDV com NFC-e?", answer: "O preço do EmitaGo é R$ 60,00 por CNPJ ativo em cada mês de uso, com pagamento antecipado. A emissão é ilimitada no mês pago para o CNPJ ativo, sem fidelidade." }
     ],
     relatedSlugs: ["nfce-varejo", "nfe-passo-a-passo"]
   },
@@ -105,7 +105,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "Como escolher um emissor de NFS-e para minha empresa?", answer: "Antes de contratar, confirme se o emissor atende ao município e ao padrão nacional ou municipal aplicável à sua empresa. Avalie também cadastro de serviços e tomadores, transmissão, consulta de status, armazenamento dos documentos, suporte e preço por CNPJ." },
       { question: "O EmitaGo emite nota fiscal de serviço em qualquer cidade?", answer: "O EmitaGo possui integração com mais de 1.600 municípios atendidos, mas a disponibilidade depende da cidade, do padrão de integração e das regras aplicáveis. Consulte a equipe para confirmar seu município." },
       { question: "MEI e pequenas empresas podem emitir NFS-e pelo sistema?", answer: "A possibilidade depende da atividade, do enquadramento da empresa e das regras do município ou do ambiente nacional aplicável. Confirme a configuração necessária para seu CNPJ." },
-      { question: "Quanto custa o emissor de NFS-e?", answer: "O EmitaGo custa R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
+      { question: "Quanto custa o emissor de NFS-e?", answer: "O EmitaGo custa R$ 60,00 por CNPJ ativo em cada mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
     ],
     relatedSlugs: ["nfse-servicos"]
   },
@@ -113,7 +113,7 @@ export const solutionPages: SolutionPage[] = [
     slug: "nfpe",
     title: "NFPe — Nota Fiscal do Produtor Rural",
     seoTitle: "NFP-e online: nota fiscal do produtor rural | EmitaGo",
-    description: "Emissor de NFP-e para produtor rural, conforme operação e regras estaduais. R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs.",
+    description: "Emissor de NFP-e para produtor rural, conforme operação e regras estaduais. R$ 60,00 por CNPJ ativo em cada mês de uso.",
     h1: "NFPe online para o produtor rural",
     intro: "Centralize a emissão e a organização dos documentos fiscais da produção rural, com acesso online e rotina simplificada.",
     benefits: ["Emissão online de NFPe", "Cadastro de produtos e operações", "Organização dos documentos fiscais", "Acesso por navegador", "Histórico para consulta"],
@@ -142,7 +142,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "O CT-e é ilimitado no EmitaGo?", answer: "Sim. A emissão de CT-e e MDF-e é ilimitada durante o mês em que o CNPJ estiver ativo no EmitaGo." },
       { question: "O EmitaGo também oferece CIOT?", answer: "Sim. O EmitaGo também oferece recursos relacionados ao CIOT. Consulte a equipe para conhecer a disponibilidade para sua operação." },
       { question: "O sistema possui calculadora da ANTT?", answer: "Sim. O EmitaGo disponibiliza uma calculadora da ANTT para apoiar a conferência do piso mínimo de frete. A calculadora não substitui o registro do CIOT nem a consulta às regras oficiais." },
-      { question: "Quanto custa o EmitaGo para transportadoras?", answer: "O plano principal custa R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, com emissão ilimitada de CT-e e MDF-e durante o mês pago. O EmitaGo também oferece recursos relacionados ao CIOT." }
+      { question: "Quanto custa o EmitaGo para transportadoras?", answer: "O plano principal custa R$ 60,00 por CNPJ ativo em cada mês de uso, com emissão ilimitada de CT-e e MDF-e durante o mês pago. O EmitaGo também oferece recursos relacionados ao CIOT." }
     ],
     relatedSlugs: ["ciot-para-todos-2026-o-que-mudou", "como-emitir-cte-transportadora-passo-a-passo", "mdfe-como-emitir-e-encerrar-manifesto", "calculadora-antt-piso-minimo-frete-como-calcular", "manifesto-de-carga-o-que-e-para-que-serve", "como-emitir-manifesto-de-carga-online", "manifesto-de-carga-encerramento-e-consulta", "emissor-de-manifesto-de-carga-para-transportadora", "cte-transporte", "cte-os-modelo-67", "mdfe-frota"]
   },
@@ -181,7 +181,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "CIOT substitui CT-e ou MDF-e?", answer: "Não. O CT-e documenta a prestação de transporte, o MDF-e reúne documentos da viagem e o CIOT identifica o registro da operação perante a ANTT." },
       { question: "Quando o CIOT é obrigatório?", answer: "A partir de 18 de setembro de 2026, o registro por CIOT é obrigatório para operações de transporte rodoviário remunerado de cargas, observadas as exceções previstas na regulamentação. A obrigação depende da natureza da operação, não apenas da emissão de CT-e ou MDF-e." },
       { question: "Quem deve gerar o CIOT?", answer: "Quando há contratação de TAC ou TAC equiparado, o contratante ou subcontratante responsável deve gerar o CIOT por meio de Instituição de Pagamento autorizada. Quando uma ETC realiza diretamente o transporte sem TAC ou TAC equiparado, ela responde pelo registro e pode usar integração à ANTT ou Instituição de Pagamento, conforme as regras vigentes." },
-      { question: "O EmitaGo oferece recursos relacionados ao CIOT?", answer: "Sim. Consulte a equipe para confirmar a disponibilidade dos recursos de CIOT conforme sua operação. O plano principal de R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, inclui emissão ilimitada de CT-e e MDF-e durante o mês pago." },
+      { question: "O EmitaGo oferece recursos relacionados ao CIOT?", answer: "Sim. Consulte a equipe para confirmar a disponibilidade dos recursos de CIOT conforme sua operação. O plano principal de R$ 60,00 por CNPJ ativo em cada mês de uso, inclui emissão ilimitada de CT-e e MDF-e durante o mês pago." },
       { question: "A calculadora da ANTT gera o CIOT?", answer: "Não. A calculadora apoia a conferência do piso mínimo de frete. O registro e a geração do CIOT são procedimentos distintos e devem seguir os canais e requisitos autorizados pela ANTT." },
       { question: "A geração do CIOT tem custo?", answer: "O cadastramento da operação e a geração e recebimento do CIOT devem ser gratuitos. O valor mensal do EmitaGo é pelo acesso e uso da plataforma fiscal por CNPJ ativo; não é uma taxa oficial da ANTT nem uma cobrança por CIOT gerado." },
       { question: "Quando devo gerar o CIOT?", answer: "O CIOT deve ser gerado antes do início da operação de transporte, conforme a regulamentação aplicável. Confira os dados do contratante, transportador, veículo, carga, origem, destino e valores antes de registrar a operação." }
@@ -202,7 +202,7 @@ export const solutionPages: SolutionPage[] = [
       "Documentos de transporte como CT-e, CT-e OS e MDF-e, além de recursos relacionados ao CIOT",
       "Acesso pelo navegador em computador, tablet e celular compatíveis",
       "Gestão de múltiplos CNPJs no mesmo painel, com cobrança individual por CNPJ ativo",
-      "Modelo pré-pago: R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, com emissão ilimitada no mês pago"
+      "Modelo pré-pago: R$ 60,00 por CNPJ ativo em cada mês de uso, com emissão ilimitada no mês pago"
     ],
     audience: [
       "Comércio, lojas e distribuidores",
@@ -223,7 +223,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "O que é um sistema de notas fiscais?", answer: "É um software utilizado para preencher, assinar quando exigido, transmitir e acompanhar documentos fiscais eletrônicos, como NF-e, NFC-e e NFS-e. Os recursos variam conforme o sistema, o documento e a operação." },
       { question: "Quais notas fiscais posso emitir pelo EmitaGo?", answer: "O EmitaGo oferece emissão de NF-e, NFC-e, NFS-e, CT-e, CT-e OS, MDF-e e NFP-e, além de recursos relacionados ao CIOT. A disponibilidade deve ser confirmada para o enquadramento e a operação da empresa." },
       { question: "O EmitaGo é um sistema de notas fiscais online?", answer: "Sim. O acesso é feito pela internet, pelo navegador, em computador, tablet ou celular compatíveis, sem instalar um programa tradicional no computador." },
-      { question: "Quanto custa o sistema de notas fiscais EmitaGo?", answer: "O preço é R$ 60,00 por CNPJ/mês para até 5 CNPJs e R$ 40,00 por CNPJ/mês acima de 5 CNPJs, com pagamento antecipado. No mês pago, a emissão é ilimitada para aquele CNPJ. Não há fidelidade nem cobrança pelo uso nos meses em que o CNPJ não for ativado." },
+      { question: "Quanto custa o sistema de notas fiscais EmitaGo?", answer: "O preço é R$ 60,00 por CNPJ ativo em cada mês de uso, com pagamento antecipado. No mês pago, a emissão é ilimitada para aquele CNPJ. Não há fidelidade nem cobrança pelo uso nos meses em que o CNPJ não for ativado." },
       { question: "Posso usar o mesmo painel para mais de uma empresa?", answer: "Sim. É possível gerenciar múltiplos CNPJs no mesmo painel. A cobrança é individual por CNPJ ativo em cada mês de uso." },
       { question: "O sistema atende empresas do Simples Nacional?", answer: "O sistema atende empresas de diferentes segmentos e enquadramentos, mas a configuração fiscal e a disponibilidade de cada documento dependem da operação e das regras aplicáveis. Confirme os detalhes com a equipe e com a contabilidade." },
       { question: "Como escolher entre um emissor gratuito e um sistema pago?", answer: "Compare os documentos atendidos, limites de emissão, cadastro de produtos e serviços, integração com SEFAZ ou município, armazenamento de XML e DANFE, suporte, recursos de PDV e custo total. A melhor opção depende do volume e da complexidade da operação." },
