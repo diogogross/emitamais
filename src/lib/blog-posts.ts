@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
 {
   "slug": "simples-nacional-2027-resolucao-cgsn-196",
   "category": "Notas Fiscais",
-  "title": "Simples Nacional 2027: o que muda com a Resolução CGSN nº 196/2026?",
+  "title": "Simples Nacional 2027: mudanças da Resolução CGSN 196",
   "excerpt": "Veja as novas regras para IBS e CBS, apuração por competência, receitas de contratos públicos, regime de caixa em 2026 e prazo da Defis 2027.",
   "date": "25 Nov 2026",
   "updatedAt": "25 Nov 2026",
@@ -41,12 +41,6 @@ export const blogPosts: BlogPost[] = [
     {
       "type": "paragraph",
       "text": "A mudança não significa o fim do Simples Nacional em 2027. As empresas continuam no regime, mas precisam acompanhar os ajustes de apuração, declaração e documentos fiscais. Este guia reúne os pontos operacionais divulgados pela Receita Federal e pelo Comitê Gestor do Simples Nacional."
-    },
-    {
-      "type": "image",
-      "src": "/images/blog/simples-nacional-cgsn-196-2027.svg",
-      "alt": "Resolução CGSN 196 de 2026: Simples Nacional, IBS e CBS na transição para 2027",
-      "caption": "Resolução CGSN nº 196/2026: atenção aos procedimentos que começam a produzir efeitos em 2027."
     },
     {
       "type": "heading",
