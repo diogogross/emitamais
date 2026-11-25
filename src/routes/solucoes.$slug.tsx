@@ -8,7 +8,7 @@ const BASE_URL = "https://www.emitago.com.br";
 const pricingFaq = [
   {
     question: "Posso gerenciar vários CNPJs no mesmo painel?",
-    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Cada CNPJ ativo é cobrado individualmente: cada CNPJ ativo custa R$ 60,00 por mês de uso. O pagamento contempla apenas os CNPJs contratados.",
+    answer: "Sim. Você pode gerenciar múltiplos CNPJs no mesmo painel. Até 5 CNPJs, o valor é R$ 60,00 por CNPJ/mês; acima de 5 CNPJs, R$ 40,00 por CNPJ/mês. O modelo é pré-pago por mês de uso, e o pagamento contempla apenas os CNPJs contratados.",
   },
   {
     question: "Preciso pagar nos meses em que não emitir notas?",
@@ -75,7 +75,7 @@ export const Route = createFileRoute("/solucoes/$slug")({
                   "@type": "Offer",
                   price: 60.00,
             priceCurrency: "BRL",
-                  description: "R$ 60,00 por CNPJ ativo em cada mês de uso. Emissão ilimitada de notas no mês pago, sem fidelidade.",
+                  description: "R$ 60,00 por CNPJ/mês para até 5 CNPJs; R$ 40,00 por CNPJ/mês acima de 5 CNPJs. Emissão ilimitada no mês pago, sem fidelidade.",
                   url: `${BASE_URL}/#planos`,
                 },
                 url
