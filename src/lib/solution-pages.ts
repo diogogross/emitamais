@@ -91,8 +91,8 @@ export const solutionPages: SolutionPage[] = [
   {
     slug: "nfse",
     title: "NFSe — Nota Fiscal de Serviço",
-    seoTitle: "Emissor de NFS-e Online | EmitaGo",
-    description: "Emissor de NFS-e online para prestadores de serviços. Integração com mais de 1.600 municípios, conforme cobertura. Consulte sua cidade e os valores por CNPJ.",
+    seoTitle: "Emissor de Nota Fiscal de Serviço (NFS-e) Online | EmitaGo",
+    description: "Emita nota fiscal de serviço (NFS-e) online pelo EmitaGo. Integração com mais de 1.600 municípios, conforme cobertura. Consulte sua cidade e pague por CNPJ ativo.",
     h1: "Emissor de NFS-e online para prestadores de serviços",
     intro: "Use o EmitaGo como emissor de NFS-e online para organizar a emissão de nota fiscal de serviço da sua empresa. Cadastre clientes, tomadores e serviços, reúna os dados da prestação e consulte o histórico dos documentos em um só lugar. A plataforma possui integração com mais de 1.600 municípios, conforme cobertura disponível. Desde 1º de novembro de 2026, ME e EPP optantes pelo Simples Nacional devem utilizar o padrão nacional; confirme com a equipe se a integração atende ao seu enquadramento, município e operação antes de contratar.",
     benefits: ["Emissão de NFS-e online pelo navegador", "Integração com mais de 1.600 municípios atendidos, conforme cobertura disponível", "Cadastro de clientes, tomadores e serviços", "Organização do histórico e dos documentos fiscais emitidos", "Acesso online por computador, tablet e celular compatíveis"],
@@ -107,7 +107,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "MEI e pequenas empresas podem emitir NFS-e pelo sistema?", answer: "A possibilidade depende da atividade, do enquadramento da empresa e das regras do município ou do ambiente nacional aplicável. Confirme a configuração necessária para seu CNPJ." },
       { question: "Quanto custa o emissor de NFS-e?", answer: "O EmitaGo custa R$ 60,00 por CNPJ ativo em cada mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
     ],
-    relatedSlugs: ["nfse-servicos"]
+    relatedSlugs: ["nfse-servicos", "nfse-mei-2027-como-emitir", "nfse-nacional-ibs-cbs-simples-2027", "emissao-nfse-empresas-padrao-nacional"]
   },
   {
     slug: "nfpe",
