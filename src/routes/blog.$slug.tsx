@@ -13,6 +13,7 @@ const WHATSAPP_URL =
   "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
 
 const RELATED_POST_SLUGS: Record<string, string[]> = {
+  "simples-nacional-2027-resolucao-cgsn-196": ["ibs-cbs-simples-nacional-2027", "pgdas-d-2027-reforma-tributaria-fs12-competencia", "simples-ibs-cbs-consultar-opcao-cancelamento-2027"],
   "nfse-ibs-cbs-calendario-prazos-2027": ["ibs-cbs-transicao-2026-2027-o-que-muda", "ibs-e-cbs-diferenca-federal-estadual-municipal", "nfse-nacional-ibs-cbs-simples-2027"],
   "ibs-cbs-transicao-2026-2027-o-que-muda": ["ibs-e-cbs-diferenca-federal-estadual-municipal", "nfe-ibs-cbs-novos-campos-2027", "checklist-reforma-tributaria-empresa-2027"],
   "ibs-e-cbs-diferenca-federal-estadual-municipal": ["ibs-cbs-transicao-2026-2027-o-que-muda", "credito-ibs-cbs-como-funciona-empresa", "nota-fornecedor-ibs-cbs-credito-comprador"],
@@ -20,7 +21,7 @@ const RELATED_POST_SLUGS: Record<string, string[]> = {
   "nota-fornecedor-ibs-cbs-credito-comprador": ["credito-ibs-cbs-como-funciona-empresa", "nfe-ibs-cbs-novos-campos-2027", "ibs-cbs-transicao-2026-2027-o-que-muda"],
   "ibs-cbs-nfce-varejo-pdv-2027": ["ibs-cbs-transicao-2026-2027-o-que-muda", "nfe-ibs-cbs-novos-campos-2027", "checklist-reforma-tributaria-empresa-2027"],
   "ibs-cbs-cte-transporte-frete-2027": ["ciot-para-todos-2026-o-que-mudou", "ibs-cbs-transicao-2026-2027-o-que-muda", "checklist-reforma-tributaria-empresa-2027"],
-  "simples-ibs-cbs-consultar-opcao-cancelamento-2027": ["ibs-cbs-simples-nacional-2027", "pgdas-d-2027-reforma-tributaria-fs12-competencia", "ibs-cbs-transicao-2026-2027-o-que-muda"],
+  "simples-ibs-cbs-consultar-opcao-cancelamento-2027": ["simples-nacional-2027-resolucao-cgsn-196", "ibs-cbs-simples-nacional-2027", "pgdas-d-2027-reforma-tributaria-fs12-competencia"],
   "mei-limite-faturamento-2027-110-mil": ["mei-limite-proporcional-2027", "mei-ultrapassou-limite-faturamento-2027", "mei-dois-funcionarios-2027"],
   "mei-dois-funcionarios-2027": ["mei-limite-faturamento-2027-110-mil", "mei-limite-proporcional-2027", "dasn-simei-2027-como-declarar-2026"],
   "das-mei-2027-valor-contribuicao": ["dasn-simei-2027-como-declarar-2026", "mei-limite-faturamento-2027-110-mil", "mei-ibs-cbs-2027-o-que-muda"],
