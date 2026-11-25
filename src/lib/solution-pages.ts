@@ -107,7 +107,7 @@ export const solutionPages: SolutionPage[] = [
       { question: "MEI e pequenas empresas podem emitir NFS-e pelo sistema?", answer: "A possibilidade depende da atividade, do enquadramento da empresa e das regras do município ou do ambiente nacional aplicável. Confirme a configuração necessária para seu CNPJ." },
       { question: "Quanto custa o emissor de NFS-e?", answer: "O EmitaGo custa R$ 60,00 por CNPJ ativo em cada mês de uso, pagos antecipadamente. No mês pago, a emissão é ilimitada para aquele CNPJ, sem fidelidade." }
     ],
-    relatedSlugs: ["nfse-servicos", "nfse-mei-2027-como-emitir", "nfse-nacional-ibs-cbs-simples-2027", "emissao-nfse-empresas-padrao-nacional"]
+    relatedSlugs: ["nfse-servicos", "nfse-mei-2027-como-emitir", "emissao-nfse-empresas-padrao-nacional", "reforma-tributaria-cbs-ibs"]
   },
   {
     slug: "nfpe",
