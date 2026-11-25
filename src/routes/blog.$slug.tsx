@@ -35,7 +35,7 @@ const RELATED_POST_SLUGS: Record<string, string[]> = {
   "mei-ultrapassou-limite-faturamento-2027": ["mei-limite-faturamento-2027-110-mil", "mei-limite-proporcional-2027", "dasn-simei-2027-como-declarar-2026"],
   "cancelamento-nfe": ["rejeicao-nfe-como-identificar-e-corrigir", "xml-nfe-o-que-e-como-baixar-e-guardar", "cfop-na-nfe-o-que-e-como-escolher"],
   "danfe-nfe-o-que-e-para-que-serve-e-como-consultar": ["xml-nfe-o-que-e-como-baixar-e-guardar", "rejeicao-nfe-como-identificar-e-corrigir", "cfop-na-nfe-o-que-e-como-escolher"],
-  "nfse-nacional-ibs-cbs-simples-2027": ["nfse-ibs-cbs-calendario-prazos-2027", "ibs-cbs-transicao-2026-2027-o-que-muda", "ibs-cbs-simples-nacional-2027"],
+  
 };
 
 const MONTHS: Record<string, number> = {
