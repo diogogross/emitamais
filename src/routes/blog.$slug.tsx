@@ -13,6 +13,8 @@ const WHATSAPP_URL =
   "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
 
 const RELATED_POST_SLUGS: Record<string, string[]> = {
+  "nfe-ibs-cbs-novos-campos-2027": ["simples-nacional-2027-resolucao-cgsn-196", "ibs-cbs-2027-lucro-real-presumido", "ibs-cbs-transicao-2026-2027-o-que-muda"],
+  "ibs-cbs-2027-lucro-real-presumido": ["simples-nacional-2027-resolucao-cgsn-196", "nfe-ibs-cbs-novos-campos-2027", "ibs-cbs-transicao-2026-2027-o-que-muda"],
   "simples-nacional-2027-resolucao-cgsn-196": ["ibs-cbs-simples-nacional-2027", "pgdas-d-2027-reforma-tributaria-fs12-competencia", "simples-ibs-cbs-consultar-opcao-cancelamento-2027"],
   "nfse-ibs-cbs-calendario-prazos-2027": ["ibs-cbs-transicao-2026-2027-o-que-muda", "ibs-e-cbs-diferenca-federal-estadual-municipal", "nfse-nacional-ibs-cbs-simples-2027"],
   "ibs-cbs-transicao-2026-2027-o-que-muda": ["ibs-e-cbs-diferenca-federal-estadual-municipal", "nfe-ibs-cbs-novos-campos-2027", "checklist-reforma-tributaria-empresa-2027"],
