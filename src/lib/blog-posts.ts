@@ -24,6 +24,184 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   ...transportBlogPosts,
 {
+  "slug": "simples-nacional-2027-resolucao-cgsn-196",
+  "category": "Notas Fiscais",
+  "title": "Simples Nacional 2027: mudanças da Resolução CGSN 196",
+  "excerpt": "Veja as novas regras para IBS e CBS, apuração por competência, receitas de contratos públicos, regime de caixa em 2026 e prazo da Defis 2027.",
+  "date": "25 Nov 2026",
+  "updatedAt": "25 Nov 2026",
+  "readMin": 9,
+  "image": "/images/blog/simples-nacional-cgsn-196-2027.svg",
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "A Resolução CGSN nº 196, de 16 de novembro de 2026, foi publicada no Diário Oficial da União em 24 de novembro. A norma altera regras do Simples Nacional para adaptar procedimentos à implantação gradual do IBS (Imposto sobre Bens e Serviços) e da CBS (Contribuição sobre Bens e Serviços), prevista na Reforma Tributária do consumo."
+    },
+    {
+      "type": "paragraph",
+      "text": "A mudança não significa o fim do Simples Nacional em 2027. As empresas continuam no regime, mas precisam acompanhar os ajustes de apuração, declaração e documentos fiscais. Este guia reúne os pontos operacionais divulgados pela Receita Federal e pelo Comitê Gestor do Simples Nacional."
+    },
+    {
+      "type": "heading",
+      "text": "O que é a Resolução CGSN nº 196/2026?"
+    },
+    {
+      "type": "paragraph",
+      "text": "É uma norma do Comitê Gestor do Simples Nacional que modifica as Resoluções CGSN nº 140/2018 e nº 190/2026. O objetivo é ajustar o regime às mudanças da tributação sobre o consumo e disciplinar procedimentos durante a transição do IBS e da CBS, que ocorrerá gradualmente entre 2027 e 2033."
+    },
+    {
+      "type": "heading",
+      "text": "O Simples Nacional acaba em 2027?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Não. A publicação não extingue o Simples Nacional. Microempresas e empresas de pequeno porte continuam podendo recolher tributos pelo regime, observadas as regras de enquadramento e as opções previstas na legislação. A reforma modifica a composição tributária e os procedimentos ao longo da transição; por isso, é importante não confundir adaptação do regime com seu encerramento."
+    },
+    {
+      "type": "heading",
+      "text": "Principais mudanças para empresas do Simples Nacional"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Atualização das tabelas para contemplar a entrada gradual do IBS e da CBS e a repartição dos valores arrecadados.",
+        "Regras mais claras para o momento de reconhecimento da receita, em geral no faturamento representado pela emissão do documento fiscal.",
+        "Identificação específica de receitas de vendas e serviços prestados a órgãos públicos, para permitir a destinação das parcelas de IBS e CBS conforme a legislação.",
+        "Regra de transição para valores não recebidos até 31 de dezembro de 2026 por empresas que utilizaram o regime de caixa.",
+        "Prazo da Defis do ano-calendário 2026: até 31 de março de 2027, pelo PGDAS-D 2018."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Receita: quando considerar o faturamento?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A Receita Federal informa que, como regra, a receita será reconhecida no momento do faturamento da operação, representado pela emissão do documento fiscal correspondente. O contribuinte deve alinhar a escrituração, os registros de vendas e a emissão de notas com a orientação contábil aplicável ao seu caso."
+    },
+    {
+      "type": "paragraph",
+      "text": "Não use esta regra como autorização para emitir documentos com data ou valor diferente da operação real. A emissão deve refletir a operação e seguir as regras fiscais do documento utilizado. Em caso de dúvida sobre competência, cancelamento, devolução ou desfazimento, confirme o procedimento com o contador e consulte a norma."
+    },
+    {
+      "type": "heading",
+      "text": "Contratos com órgãos públicos: como identificar as receitas?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Microempresas e empresas de pequeno porte que vendem ou prestam serviços para órgãos públicos deverão identificar essas receitas de forma específica nas declarações. A informação é importante para a correta destinação das parcelas de IBS e CBS aos entes públicos contratantes, de acordo com a legislação da Reforma Tributária."
+    },
+    {
+      "type": "heading",
+      "text": "Regime de caixa em 2026: atenção aos valores a receber"
+    },
+    {
+      "type": "paragraph",
+      "text": "A regra de transição alcança a ME ou EPP optante pelo regime de caixa no ano-calendário de 2026 que tenha, em 31 de dezembro de 2026, valores ainda não recebidos — inclusive parcelas não vencidas — referentes a serviços ou operações com mercadorias realizadas até essa data."
+    },
+    {
+      "type": "paragraph",
+      "text": "Esses valores deverão integrar a base de cálculo do mês de dezembro de 2026. Quando forem recebidos posteriormente, não deverão ser incluídos novamente na receita bruta mensal. A regra evita a dupla inclusão dos mesmos valores, mas exige que a empresa mantenha controle confiável dos recebíveis e da apuração de dezembro."
+    },
+    {
+      "type": "heading",
+      "text": "PGDAS-D: mudanças que já exigem preparação em novembro e dezembro de 2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "Além da Resolução CGSN nº 196, a Receita Federal divulgou atualização do PGDAS-D para os períodos de apuração de novembro e dezembro de 2026. Nesses dois períodos, todas as atividades do Simples Nacional deverão informar a folha de salários dos últimos 12 meses (FS12)."
+    },
+    {
+      "type": "paragraph",
+      "text": "A Receita também informou que, a partir de 2027, as apurações serão feitas pelo regime de competência, sem a escolha entre caixa e competência que existia anteriormente. Portanto, empresas que costumavam acompanhar o caixa para fins de apuração precisam conversar com a contabilidade e ajustar seus controles antes do novo ano."
+    },
+    {
+      "type": "heading",
+      "text": "Defis 2026: qual é o prazo em 2027?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A Defis relativa ao ano-calendário de 2026 deverá ser entregue até 31 de março de 2027, por meio do módulo PGDAS-D 2018. Separe com antecedência os dados econômicos e fiscais solicitados e confirme com o contador quem será responsável pelo preenchimento e transmissão."
+    },
+    {
+      "type": "heading",
+      "text": "Checklist para se preparar para 2027"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Confirme com o contador o regime e os procedimentos de apuração aplicáveis à empresa a partir de 2027.",
+        "Organize os recebíveis de operações realizadas até 31/12/2026, especialmente se utilizou regime de caixa durante 2026.",
+        "Prepare os dados da FS12 para os períodos de apuração de novembro e dezembro de 2026.",
+        "Revise como identificar receitas de contratos com órgãos públicos.",
+        "Confira os dados dos documentos fiscais e acompanhe as orientações de IBS/CBS aplicáveis ao seu tipo de operação.",
+        "Programe a entrega da Defis 2026 até 31/03/2027.",
+        "Acompanhe as atualizações oficiais do PGDAS-D, do Simples Nacional e dos leiautes de documentos fiscais."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "O que muda na emissão de notas fiscais?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A transição do IBS e da CBS também envolve adaptações dos documentos fiscais eletrônicos e seus campos. O contribuinte deve acompanhar as orientações do documento que utiliza — NF-e, NFC-e ou NFS-e, por exemplo — e validar com o contador a configuração tributária correta. Não copie códigos ou percentuais de outra empresa sem verificar o enquadramento e a operação."
+    },
+    {
+      "type": "paragraph",
+      "text": "Para aprofundar o tema, veja também os artigos relacionados ao IBS e à CBS no Simples Nacional, aos novos campos de IBS e CBS na NF-e e ao calendário de NFS-e para 2027, indicados ao final desta página."
+    },
+    {
+      "type": "heading",
+      "text": "Perguntas frequentes"
+    },
+    {
+      "type": "heading",
+      "text": "A Resolução CGSN 196 começa a valer quando?"
+    },
+    {
+      "type": "paragraph",
+      "text": "As alterações relacionadas ao IBS e à CBS produzem efeitos a partir de 1º de janeiro de 2027, observados os cronogramas previstos na legislação. A regra específica sobre regime de caixa de 2026 e o prazo da Defis se referem ao fechamento do ano-calendário 2026."
+    },
+    {
+      "type": "heading",
+      "text": "Toda empresa do Simples precisa mudar para o regime regular de IBS e CBS?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A resolução não determina que todas as empresas deixem o Simples Nacional. Existem regras e opções específicas para o tratamento do IBS e da CBS. A decisão deve ser analisada conforme atividade, clientes, créditos, operações e orientação contábil; não escolha um regime apenas com base em uma notícia."
+    },
+    {
+      "type": "heading",
+      "text": "Onde consultar a norma e as orientações oficiais?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Consulte a publicação da Receita Federal sobre a Resolução CGSN nº 196/2026 e a legislação no Diário Oficial da União. Para as mudanças operacionais do PGDAS-D, consulte também o comunicado específico da Receita Federal publicado em novembro de 2026."
+    },
+    {
+      "type": "source",
+      "label": "Receita Federal — novas regras do Simples Nacional e transição da Reforma Tributária (24/11/2026)",
+      "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/comite-gestor-do-simples-nacional-publica-novas-regras-para-o-simples-nacional-e-para-a-transicao-da-reforma-tributaria"
+    },
+    {
+      "type": "source",
+      "label": "Diário Oficial da União — Resolução CGSN nº 196, de 16/11/2026",
+      "href": "https://www.in.gov.br/web/dou/-/resolucao-cgsn-n-196-de-16-de-novembro-de-2026-745832719"
+    },
+    {
+      "type": "source",
+      "label": "Receita Federal — atualização do PGDAS-D a partir de novembro de 2026",
+      "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/novembro/pgdas-d-e-atualizado-para-atender-a-reforma-tributaria-a-partir-de-novembro-de-2026"
+    },
+    {
+      "type": "paragraph",
+      "text": "O EmitaGo ajuda empresas a organizar a emissão de documentos fiscais online. Conheça o emissor de NF-e e confira as condições, recursos e compatibilidade com a sua operação antes de contratar."
+    }
+  ]
+},
+{
   "slug": "rejeicao-nfe-como-identificar-e-corrigir",
   "category": "Notas Fiscais",
   "title": "Rejeição de NF-e: causas e como corrigir",
