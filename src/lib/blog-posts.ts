@@ -156,7 +156,7 @@ export const blogPosts: BlogPost[] = [
     },
     {
       "type": "paragraph",
-      "text": "Para aprofundar o tema, leia também nossos conteúdos sobre [IBS e CBS no Simples Nacional em 2027], [novos campos de IBS e CBS na NF-e] e [calendário de NFS-e e IBS/CBS para 2027]."
+      "text": "Para aprofundar o tema, veja também os artigos relacionados ao IBS e à CBS no Simples Nacional, aos novos campos de IBS e CBS na NF-e e ao calendário de NFS-e para 2027, indicados ao final desta página."
     },
     {
       "type": "heading",
