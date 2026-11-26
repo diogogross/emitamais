@@ -2281,25 +2281,31 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nfse-mei-2027-como-emitir",
     category: "Notas Fiscais",
-    title: "NFS-e para MEI: regras do padrão nacional",
-    excerpt: "Entenda quando o MEI deve emitir NFS-e, a regra do padrão nacional e os cuidados para registrar serviços em 2026 e 2027.",
+    title: "Como emitir NFS-e MEI pelo gov.br: passo a passo 2027",
+    excerpt: "Aprenda a emitir a nota de serviço do MEI no Emissor Nacional pelo gov.br, quando a NFS-e é obrigatória e como salvar o documento.",
     date: "22 Out 2026",
-    updatedAt: "14 Nov 2026",
+    updatedAt: "26 Nov 2026",
     readMin: 6,
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/blog/mei-nfse-govbr-2027.svg",
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O MEI que presta serviços deve observar as regras específicas da Nota Fiscal de Serviço eletrônica (NFS-e). Desde 1º de setembro de 2023, a emissão de NFS-e pelo MEI ocorre no padrão nacional. A obrigação de emitir depende também de quem recebe o serviço: para tomador pessoa jurídica, a nota é obrigatória; para pessoa física, em regra, é facultativa, salvo quando solicitada pelo consumidor." },
       { type: "heading", text: "Quando o MEI precisa emitir NFS-e?" },
       { type: "paragraph", text: "Quando o tomador do serviço é uma empresa ou outra pessoa jurídica, o MEI deve emitir a NFS-e. Quando o tomador é pessoa física, a emissão é facultativa, salvo solicitação do consumidor. Essa orientação trata de prestação de serviços: operações com mercadorias seguem regras próprias de documentos fiscais e de competência estadual." },
-      { type: "heading", text: "Como emitir no padrão nacional" },
+      { type: "heading", text: "Como emitir NFS-e MEI pelo gov.br: passo a passo" },
+      { type: "paragraph", text: "Para o MEI prestador de serviços, a emissão ocorre no Emissor Nacional da NFS-e. O acesso via gov.br é feito com o CPF do responsável; depois da autenticação, o sistema direciona para o CNPJ MEI vinculado. A NFS-e é obrigatória quando o tomador é pessoa jurídica e, em regra, dispensada para pessoa física, salvo quando solicitada." },
       { type: "list", items: [
-        "Acesse o Emissor Nacional da NFS-e pela versão Web ou pelo aplicativo oficial.",
-        "Entre com a forma de autenticação disponível, como conta gov.br ou certificado digital, conforme o perfil.",
-        "Informe os dados solicitados do tomador e descreva corretamente o serviço prestado.",
-        "Confira valor, competência e demais informações antes de concluir.",
-        "Depois da emissão, salve o documento e mantenha o registro organizado."
+        "Acesse o Portal Nacional da NFS-e e escolha o Emissor Web.",
+        "Clique em acesso via gov.br e entre com o CPF do titular do MEI.",
+        "Selecione a opção de emissão Simplificada ou Completa, conforme disponível para sua operação.",
+        "Informe os dados do cliente (CPF ou CNPJ), a descrição do serviço e os dados de competência solicitados.",
+        "Preencha o valor e revise os campos antes de transmitir.",
+        "Clique em Emitir e salve o documento gerado para enviar ao cliente e guardar na contabilidade."
       ]},
+      { type: "heading", text: "MEI que vende produtos: é o mesmo procedimento?" },
+      { type: "paragraph", text: "Não. A NFS-e é para prestação de serviços. Na venda de mercadorias, o MEI deve observar as regras estaduais para NF-e, NFC-e ou outros documentos disponíveis ao seu perfil. Consulte a SEFAZ do estado e verifique se há uma ferramenta como a Nota Fiscal Fácil (NFF). Não use o Emissor Nacional de NFS-e para documentar uma venda de produto." },
+      { type: "heading", text: "E se o gov.br não permitir emitir?" },
+      { type: "paragraph", text: "Confira se entrou com o CPF do titular, se o MEI está ativo e se o serviço selecionado corresponde à atividade prestada. Se o problema continuar, consulte as orientações oficiais da NFS-e e o atendimento indicado para MEI. Não compartilhe senha gov.br com terceiros." },
       { type: "heading", text: "O que muda com a Reforma Tributária em 2027?" },
       { type: "paragraph", text: "A transição tributária traz atualizações próprias para documentos e informações fiscais, mas não confunda essas mudanças com a regra de emissão nacional da NFS-e para o MEI, que já está em vigor desde 2023. Antes de tomar decisões sobre tributos ou enquadramento, consulte as normas e orientações oficiais mais recentes e seu contador." },
       { type: "heading", text: "Antes de contratar um emissor privado" },
@@ -3186,7 +3192,308 @@ export const blogPosts: BlogPost[] = [
       {"type":"source","label":"Gov.br — escolher regime de apuração de IBS e CBS","href":"https://www.gov.br/pt-br/servicos/escolher-regime-de-apuracao-de-bens-e-servicos-ibs-e-da-contribuicao-sobre-bens-e-servicos-cbs"}
     ]
   }
-
+,
+  
+  {
+    "slug": "como-emitir-nota-fiscal-simples-nacional-2027",
+    "category": "Notas Fiscais",
+    "title": "Como emitir nota fiscal no Simples Nacional em 2027",
+    "excerpt": "Veja como escolher entre NF-e de produtos e NFS-e de serviços, quais dados conferir e como emitir corretamente no Simples Nacional.",
+    "date": "26 Nov 2026",
+    "updatedAt": "26 Nov 2026",
+    "readMin": 8,
+    "image": "/images/blog/nota-fiscal-simples-nacional-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Para emitir nota fiscal no Simples Nacional, primeiro identifique o tipo de operação. A NF-e documenta operações com mercadorias; a NFS-e registra prestação de serviços; e, no varejo, pode ser necessário emitir NFC-e conforme a operação e a legislação estadual. O regime tributário não significa que todas as empresas usem o mesmo emissor."
+      },
+      {
+        "type": "heading",
+        "text": "1. Como emitir NF-e de produtos no Simples Nacional"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Confira se o estabelecimento está credenciado para emissão na SEFAZ e se o certificado digital está válido, quando exigido.",
+          "Cadastre corretamente o cliente e os produtos, incluindo NCM, unidade, quantidade e valores.",
+          "Revise natureza da operação, CFOP e os códigos tributários aplicáveis ao Simples (CSOSN/CST), com orientação contábil.",
+          "Transmita a NF-e pelo emissor e aguarde o retorno de autorização da SEFAZ.",
+          "Depois de autorizada, guarde o XML e disponibilize o DANFE conforme a operação."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "2. Como emitir NFS-e de serviços no Simples Nacional"
+      },
+      {
+        "type": "paragraph",
+        "text": "Desde 1º de novembro de 2026, ME e EPP optantes pelo Simples Nacional devem emitir NFS-e pelo padrão nacional nas prestações de serviços sujeitas à emissão, por meio do Emissor Nacional Web ou integração via API. A autenticação e os recursos disponíveis dependem do perfil do contribuinte; empresas que não são MEI devem seguir as formas de acesso indicadas no Portal Nacional."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Acesse o Emissor Nacional da NFS-e e entre com a credencial disponível para sua empresa.",
+          "Selecione a emissão e informe o tomador, o serviço, o município e os dados de competência solicitados.",
+          "Revise o código de serviço, os valores e as informações tributárias conforme orientação contábil.",
+          "Emita a nota, confira o documento autorizado e salve os arquivos para seus registros."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "3. Como escolher o documento correto"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não escolha NF-e, NFC-e ou NFS-e apenas pelo fato de a empresa ser do Simples Nacional. A escolha depende da natureza da operação, do destinatário e das regras aplicáveis. Em caso de dúvida sobre CFOP, NCM, código de serviço ou tributação, confirme com a contabilidade antes de transmitir."
+      },
+      {
+        "type": "heading",
+        "text": "O Simples Nacional não substitui a emissão fiscal"
+      },
+      {
+        "type": "paragraph",
+        "text": "O recolhimento do DAS e a emissão de documentos fiscais são obrigações diferentes. Mantenha os documentos autorizados, XML, notas de entrada e registros de receita organizados para a escrituração."
+      },
+      {
+        "type": "heading",
+        "text": "Emissão fiscal online com o EmitaGo"
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo oferece emissão online de documentos fiscais, incluindo NF-e e NFS-e. Para notas de serviço, confirme a cobertura do município e os requisitos do seu CNPJ antes de contratar. Conheça a solução e veja se ela atende ao fluxo fiscal da sua empresa."
+      },
+      {
+        "type": "heading",
+        "text": "Perguntas frequentes"
+      },
+      {
+        "type": "heading",
+        "text": "Toda empresa do Simples usa o mesmo sistema para emitir nota?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Não. NF-e, NFC-e e NFS-e têm finalidades diferentes e podem utilizar ambientes autorizadores distintos. O tipo de operação define o documento."
+      },
+      {
+        "type": "heading",
+        "text": "A NFS-e nacional é obrigatória para ME e EPP do Simples?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A obrigatoriedade do padrão nacional para ME e EPP optantes pelo Simples passou a valer em 1º de novembro de 2026 para prestações sujeitas à emissão, conforme a regulamentação do CGSN."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Federal — NFS-e Nacional para ME e EPP do Simples, a partir de 1º de novembro de 2026",
+        "href": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/agosto/simples-nacional-nfs-e-nacional-sera-obrigatoria-para-me-e-epp-a-partir-de-1o-de-novembro-de-2026"
+      },
+      {
+        "type": "source",
+        "label": "Governo Federal — serviço de emissão de NFS-e de padrão nacional",
+        "href": "https://www.gov.br/pt-br/servicos/emitir-nota-fiscal-de-servico-eletronica"
+      },
+      {
+        "type": "source",
+        "label": "Portal Nacional da NF-e",
+        "href": "https://www.nfe.fazenda.gov.br/portal/principal.aspx"
+      }
+    ]
+  },
+  {
+    "slug": "nota-fiscal-produtor-rural-rs-2027",
+    "category": "Notas Fiscais",
+    "title": "Como emitir nota fiscal de produtor rural no RS em 2027",
+    "excerpt": "Veja como emitir nota fiscal eletrônica de produtor rural no Rio Grande do Sul pela NFF, e-CAC ou NFA-e e quais cuidados conferir.",
+    "date": "26 Nov 2026",
+    "updatedAt": "26 Nov 2026",
+    "readMin": 8,
+    "image": "/images/blog/nota-fiscal-produtor-rural-rs-2027.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "No Rio Grande do Sul, a nota eletrônica passou a ser obrigatória para todos os produtores rurais a partir de 1º de maio de 2026. O talão de produtor em papel não pode mais ser utilizado como documento fiscal válido. Antes de emitir, confira qual ferramenta está habilitada para seu CPF, inscrição estadual e tipo de operação."
+      },
+      {
+        "type": "heading",
+        "text": "Quais são as opções de emissão no RS?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nota Fiscal Fácil (NFF): aplicativo e portal web, com acesso pela conta gov.br, para produtores rurais pessoa física habilitados.",
+          "NF-e pelo portal e-CAC da Receita Estadual: opção disponível conforme o perfil e o credenciamento do produtor.",
+          "Nota Fiscal Avulsa eletrônica (NFA-e): acesso com gov.br, indicada para operações ou situações em que a modalidade seja apropriada."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Como emitir pelo aplicativo ou portal NFF"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Acesse o aplicativo Nota Fiscal Fácil (NFF) ou o portal web disponibilizado para produtores rurais.",
+          "Entre com sua conta gov.br e confirme as opções liberadas para seu CPF.",
+          "Selecione o perfil Produtor Primário e o estabelecimento/inscrição estadual autorizado.",
+          "Se for o primeiro acesso, conclua o cadastro solicitado e configure o PIN de segurança do aplicativo.",
+          "Informe os produtos, o cliente, a operação, as quantidades e os valores exigidos.",
+          "Revise os dados, emita o documento e salve/compartilhe o comprovante fiscal gerado."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Quando utilizar e-CAC ou NFA-e"
+      },
+      {
+        "type": "paragraph",
+        "text": "A Receita Estadual do RS também disponibiliza emissão de NF-e pelo e-CAC e emissão de NFA-e com login gov.br. A NFF é a solução recomendada para as operações habilitadas, mas nem todas as situações podem estar disponíveis em uma única modalidade. Confira o serviço oficial e escolha o canal adequado à operação."
+      },
+      {
+        "type": "heading",
+        "text": "O que conferir antes de emitir"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Inscrição estadual e estabelecimento rural vinculados ao CPF.",
+          "Dados do destinatário e endereço da operação.",
+          "Produtos, unidades, quantidades e valores.",
+          "Natureza da operação e tratamento do ICMS, com orientação contábil.",
+          "Dados do transporte e documentos complementares, quando aplicáveis."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Precisa de um emissor fiscal para sua operação rural?"
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo oferece solução de emissão fiscal para operações rurais. Antes de contratar, confirme a cobertura do documento, o estado, o perfil do produtor e os requisitos de credenciamento aplicáveis ao seu caso."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais do Rio Grande do Sul"
+      },
+      {
+        "type": "source",
+        "label": "Sefaz RS — nota eletrônica obrigatória para produtores rurais desde 1º de maio de 2026",
+        "href": "https://www.fazenda.rs.gov.br/nota-eletronica-e-documento-fiscal-obrigatorio-para-todos-os-produtores-do-rs"
+      },
+      {
+        "type": "source",
+        "label": "Estado do RS — portal web da Nota Fiscal Fácil para produtores rurais",
+        "href": "https://www3.estado.rs.gov.br/servico-da-nota-fiscal-facil-para-produtores-rurais-pode-ser-acessado-no-computador"
+      },
+      {
+        "type": "source",
+        "label": "Receita Estadual RS — emissão de notas fiscais de produção primária",
+        "href": "https://atendimento.receita.rs.gov.br/cidadaos/servicos?servico=1848"
+      },
+      {
+        "type": "source",
+        "label": "Receita Estadual RS — serviço Nota Fiscal Fácil (NFF)",
+        "href": "https://atendimento.receita.rs.gov.br/pessoa-fisica/servicos?servico=1972"
+      }
+    ]
+  },
+  {
+    "slug": "contra-nota-produtor-rural-rs-como-emitir",
+    "category": "Notas Fiscais",
+    "title": "Contra nota de produtor rural no RS: quem emite e como fazer",
+    "excerpt": "Entenda quando o comprador deve emitir a contra nota de produtor rural no RS, como funciona o diferimento do ICMS e a atualização de 2026.",
+    "date": "26 Nov 2026",
+    "updatedAt": "26 Nov 2026",
+    "readMin": 8,
+    "image": "/images/blog/contra-nota-produtor-rural-rs.svg",
+    "author": "Equipe EmitaGo",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "No Rio Grande do Sul, a contra nota (nota fiscal relativa à entrada) é emitida, em regra, pelo estabelecimento comprador quando adquire produção de produtor rural em operação com diferimento do ICMS. Portanto, normalmente não é o produtor rural que emite a contra nota: ela documenta a entrada da mercadoria no comprador."
+      },
+      {
+        "type": "heading",
+        "text": "Quando a contra nota é necessária?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A obrigação depende do enquadramento da operação e do diferimento do ICMS. Nas vendas internas em que o imposto é diferido, o comprador contribuinte do ICMS deve emitir a nota fiscal relativa à entrada conforme as regras estaduais. Confira a natureza da operação, a inscrição estadual do destinatário e a orientação contábil."
+      },
+      {
+        "type": "heading",
+        "text": "Quando não há contra nota?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Quando a operação não possui diferimento do ICMS, como em vendas para consumidor final nas hipóteses indicadas pela Receita Estadual.",
+          "Nas situações em que o destinatário é MEI ou pessoa jurídica sem inscrição estadual, conforme orientação da Receita Estadual do RS.",
+          "Nas operações para fora do RS ou em outras hipóteses sem diferimento, o tratamento tributário pode ser diferente e não se deve presumir a emissão de contra nota."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Como emitir a contra nota (nota de entrada)"
+      },
+      {
+        "type": "list",
+        "items": [
+          "O comprador deve confirmar com a contabilidade o enquadramento e a necessidade da nota de entrada.",
+          "Utilize o sistema emissor de NF-e habilitado para o estabelecimento comprador.",
+          "Informe o produtor rural como fornecedor e preencha os dados da operação, itens, quantidades e valores com base na nota recebida.",
+          "Revise o tratamento do ICMS e os demais campos fiscais conforme a operação.",
+          "Referencie o documento fiscal original pelo campo correto e transmita a NF-e para autorização."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Atenção: atualização técnica de outubro de 2026"
+      },
+      {
+        "type": "paragraph",
+        "text": "A Receita Estadual do RS publicou orientação sobre a Nota Técnica 2026.002 e a validação BA10-10. A contra nota não deve referenciar a Nota Fiscal de Produtor modelo 4 pelo grupo refNFP; essa referência pode gerar a Rejeição 682. A orientação estadual determina utilizar o campo refNFe para referenciar a nota original, e os sistemas emissores precisam estar atualizados."
+      },
+      {
+        "type": "heading",
+        "text": "Como o EmitaGo pode ajudar"
+      },
+      {
+        "type": "paragraph",
+        "text": "O EmitaGo oferece emissão online de NF-e para empresas. Se sua empresa compra produção rural e precisa emitir notas de entrada, conheça o emissor e confirme com a contabilidade os parâmetros fiscais e o fluxo correto para sua operação."
+      },
+      {
+        "type": "heading",
+        "text": "Fontes oficiais"
+      },
+      {
+        "type": "source",
+        "label": "Receita Estadual RS — quando emitir contra nota na compra de produtor rural",
+        "href": "https://atendimento.receita.rs.gov.br/adquiri-mercadoria-de-produtor-rural-como-faco-para-emitir-a-contra-nota"
+      },
+      {
+        "type": "source",
+        "label": "Receita Estadual RS — atualização de 19/10/2026 sobre referência da contranota",
+        "href": "https://atendimento.receita.rs.gov.br/19-10-2026-atencao-aos-emissores-de-contranota-de-produtor-rural"
+      },
+      {
+        "type": "source",
+        "label": "Receita Estadual RS — nota de esclarecimento sobre obrigatoriedade da contranota",
+        "href": "https://atendimento.receita.rs.gov.br/upload/arquivos/202508/22094950-20250210150744nota-de-esclarecimento-obrigatoriedade-contranota-rev.pdf"
+      },
+      {
+        "type": "source",
+        "label": "Receita Estadual RS — como escriturar a contranota",
+        "href": "https://atendimento.receita.rs.gov.br/como-escriturar-a-contranota"
+      }
+    ]
+  }
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
