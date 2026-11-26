@@ -1,4 +1,6 @@
 import type { BlogPost } from "./blog-posts";
+import mdfeFrotaImage from "../assets/blog/mdfe-frota.jpg";
+import cteTransporteImage from "../assets/blog/cte-transporte.jpg";
 
 // Conteúdo editorial focado nas dúvidas que cresceram após a ampliação das regras do CIOT em 2026.
 export const transportBlogPosts: BlogPost[] = [
@@ -10,7 +12,7 @@ export const transportBlogPosts: BlogPost[] = [
     date: "18 Nov 2026",
     updatedAt: "21 Nov 2026",
     readMin: 9,
-    image: "/images/blog/mdfe-frota.svg",
+    image: mdfeFrotaImage,
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O CIOT ganhou ainda mais importância na rotina do transporte rodoviário de cargas em 2026. A ANTT ampliou o registro das operações remuneradas e publicou orientações específicas para geração, retificação, cancelamento e encerramento. Por isso, transportadoras, embarcadores e contratantes precisam revisar seus processos antes de iniciar cada viagem." },
@@ -60,7 +62,7 @@ export const transportBlogPosts: BlogPost[] = [
     date: "18 Nov 2026",
     updatedAt: "18 Nov 2026",
     readMin: 7,
-    image: "/images/blog/cte-transporte.svg",
+    image: cteTransporteImage,
     author: "Equipe EmitaGo",
     content: [
       { type: "paragraph", text: "O Conhecimento de Transporte Eletrônico (CT-e) registra prestações de serviço de transporte de cargas. Para emitir corretamente, a transportadora precisa reunir os dados dos participantes, da carga, do percurso, dos valores e da tributação antes de transmitir o documento à SEFAZ." },
