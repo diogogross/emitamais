@@ -13,11 +13,14 @@ const WHATSAPP_URL =
   "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
 
 const RELATED_POST_SLUGS: Record<string, string[]> = {
+  "como-emitir-nota-fiscal-simples-nacional-2027": ["nfe-passo-a-passo", "nfse-servicos", "emissao-nfse-empresas-padrao-nacional"],
+  "nota-fiscal-produtor-rural-rs-2027": ["contra-nota-produtor-rural-rs-como-emitir", "nfe-passo-a-passo", "como-emitir-nfe-passo-a-passo-2027"],
+  "contra-nota-produtor-rural-rs-como-emitir": ["nota-fiscal-produtor-rural-rs-2027", "nota-fiscal-devolucao-como-emitir-nfe", "nfe-passo-a-passo"],
   "nfe-ibs-cbs-novos-campos-2027": ["simples-nacional-2027-resolucao-cgsn-196", "ibs-cbs-2027-lucro-real-presumido", "ibs-cbs-transicao-2026-2027-o-que-muda"],
   "ibs-cbs-2027-lucro-real-presumido": ["simples-nacional-2027-resolucao-cgsn-196", "nfe-ibs-cbs-novos-campos-2027", "ibs-cbs-transicao-2026-2027-o-que-muda"],
   "simples-nacional-2027-resolucao-cgsn-196": ["ibs-cbs-simples-nacional-2027", "pgdas-d-2027-reforma-tributaria-fs12-competencia", "simples-ibs-cbs-consultar-opcao-cancelamento-2027"],
-  "nfse-servicos": ["nfse-mei-2027-como-emitir", "emissao-nfse-empresas-padrao-nacional", "reforma-tributaria-cbs-ibs"],
-  "nfse-mei-2027-como-emitir": ["nfse-servicos", "emissao-nfse-empresas-padrao-nacional", "reforma-tributaria-cbs-ibs"],
+  "nfse-servicos": ["nfse-mei-2027-como-emitir", "emissao-nfse-empresas-padrao-nacional", "como-emitir-nota-fiscal-simples-nacional-2027"],
+  "nfse-mei-2027-como-emitir": ["nfse-servicos", "emissao-nfse-empresas-padrao-nacional", "mei-nota-fiscal-pessoa-fisica-2027"],
   "emissao-nfse-empresas-padrao-nacional": ["nfse-servicos", "nfse-mei-2027-como-emitir", "reforma-tributaria-cbs-ibs"],
   "ibs-cbs-transicao-2026-2027-o-que-muda": ["ibs-e-cbs-diferenca-federal-estadual-municipal", "nfe-ibs-cbs-novos-campos-2027", "checklist-reforma-tributaria-empresa-2027"],
   "ibs-e-cbs-diferenca-federal-estadual-municipal": ["ibs-cbs-transicao-2026-2027-o-que-muda", "credito-ibs-cbs-como-funciona-empresa", "nota-fornecedor-ibs-cbs-credito-comprador"],
@@ -190,7 +193,11 @@ function ArticlePage() {
   // Connect informational searches to the matching commercial solution without
   // forcing unrelated certificate or general-interest articles into a sales path.
   const slug = post.slug.toLowerCase();
-  const solutionCta = /nfpe|produtor-rural/.test(slug)
+  const solutionCta = slug.includes("contra-nota")
+    ? { href: "/solucoes/nfe", label: "Conheça o emissor de NF-e", description: "Veja como emitir NF-e de entrada e organizar os documentos fiscais da sua empresa." }
+    : slug.includes("como-emitir-nota-fiscal-simples-nacional-2027")
+      ? { href: "/solucoes/sistema-notas-fiscais", label: "Conheça o emissor de notas fiscais", description: "Conheça os recursos de emissão de NF-e e NFS-e e confirme a cobertura para sua empresa." }
+      : /nfpe|produtor-rural/.test(slug)
     ? { href: "/solucoes/nfpe", label: "Conheça a solução de NFP-e", description: "Veja informações sobre emissão de nota fiscal do produtor rural e confirme os requisitos aplicáveis à sua operação e ao seu estado." }
     : slug.includes("nfse")
       ? { href: "/solucoes/nfse", label: "Conheça o emissor de NFS-e", description: "Veja como organizar a emissão de notas de serviço e consulte a cobertura do seu município." }
