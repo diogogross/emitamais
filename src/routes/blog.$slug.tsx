@@ -13,7 +13,12 @@ const WHATSAPP_URL =
   "https://wa.me/5554991193146?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20EmitaGo.";
 
 const RELATED_POST_SLUGS: Record<string, string[]> = {
-  "como-emitir-nota-fiscal-simples-nacional-2027": ["nfe-passo-a-passo", "nfse-servicos", "emissao-nfse-empresas-padrao-nacional"],
+  "nfe-passo-a-passo": ["como-emitir-nfe-passo-a-passo-2027", "nfe-ibs-cbs-novos-campos-2027", "rejeicao-nfe-como-identificar-e-corrigir"],
+  "como-emitir-nfe-passo-a-passo-2027": ["nfe-passo-a-passo", "como-emitir-nota-fiscal-simples-nacional-2027", "nfe-ibs-cbs-novos-campos-2027"],
+  "nota-fiscal-devolucao-como-emitir-nfe": ["nfe-passo-a-passo", "cancelamento-nfe", "cfop-na-nfe-o-que-e-como-escolher"],
+  "cancelamento-nfe": ["nfe-passo-a-passo", "rejeicao-nfe-como-identificar-e-corrigir", "xml-nfe-o-que-e-como-baixar-e-guardar"],
+  "certificado-digital-a1-a3": ["nfe-passo-a-passo", "como-emitir-nfe-passo-a-passo-2027", "certificado-nuvem-bird-id"],
+  "como-emitir-nota-fiscal-simples-nacional-2027": ["como-emitir-nfe-passo-a-passo-2027", "nfse-servicos", "emissao-nfse-empresas-padrao-nacional"],
   "nota-fiscal-produtor-rural-rs-2027": ["contra-nota-produtor-rural-rs-como-emitir", "nfe-passo-a-passo", "como-emitir-nfe-passo-a-passo-2027"],
   "contra-nota-produtor-rural-rs-como-emitir": ["nota-fiscal-produtor-rural-rs-2027", "nota-fiscal-devolucao-como-emitir-nfe", "nfe-passo-a-passo"],
   "nfe-ibs-cbs-novos-campos-2027": ["simples-nacional-2027-resolucao-cgsn-196", "ibs-cbs-2027-lucro-real-presumido", "ibs-cbs-transicao-2026-2027-o-que-muda"],
@@ -40,6 +45,7 @@ const RELATED_POST_SLUGS: Record<string, string[]> = {
   "cancelamento-nfe": ["rejeicao-nfe-como-identificar-e-corrigir", "xml-nfe-o-que-e-como-baixar-e-guardar", "cfop-na-nfe-o-que-e-como-escolher"],
   "danfe-nfe-o-que-e-para-que-serve-e-como-consultar": ["xml-nfe-o-que-e-como-baixar-e-guardar", "rejeicao-nfe-como-identificar-e-corrigir", "cfop-na-nfe-o-que-e-como-escolher"],
   
+
 };
 
 const MONTHS: Record<string, number> = {
