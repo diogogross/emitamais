@@ -23,7 +23,6 @@ const RELATED_POST_SLUGS: Record<string, string[]> = {
   "ibs-e-cbs-diferenca-federal-estadual-municipal": ["ibs-cbs-transicao-2026-2027-o-que-muda", "credito-ibs-cbs-como-funciona-empresa", "nota-fornecedor-ibs-cbs-credito-comprador"],
   "credito-ibs-cbs-como-funciona-empresa": ["nota-fornecedor-ibs-cbs-credito-comprador", "ibs-e-cbs-diferenca-federal-estadual-municipal", "ibs-cbs-simples-nacional-2027"],
   "nota-fornecedor-ibs-cbs-credito-comprador": ["credito-ibs-cbs-como-funciona-empresa", "nfe-ibs-cbs-novos-campos-2027", "ibs-cbs-transicao-2026-2027-o-que-muda"],
-  "ibs-cbs-nfce-varejo-pdv-2027": ["ibs-cbs-transicao-2026-2027-o-que-muda", "nfe-ibs-cbs-novos-campos-2027", "checklist-reforma-tributaria-empresa-2027"],
   "nfce-varejo": ["ibs-cbs-nfce-varejo-pdv-2027", "nfe-passo-a-passo", "nfe-ibs-cbs-novos-campos-2027"],
   "ibs-cbs-nfce-varejo-pdv-2027": ["nfce-varejo", "nfe-ibs-cbs-novos-campos-2027", "ibs-cbs-transicao-2026-2027-o-que-muda"],
   "ibs-cbs-cte-transporte-frete-2027": ["ciot-para-todos-2026-o-que-mudou", "ibs-cbs-transicao-2026-2027-o-que-muda", "checklist-reforma-tributaria-empresa-2027"],
