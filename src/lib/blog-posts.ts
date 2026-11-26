@@ -3192,7 +3192,8 @@ export const blogPosts: BlogPost[] = [
       {"type":"source","label":"Gov.br — escolher regime de apuração de IBS e CBS","href":"https://www.gov.br/pt-br/servicos/escolher-regime-de-apuracao-de-bens-e-servicos-ibs-e-da-contribuicao-sobre-bens-e-servicos-cbs"}
     ]
   }
-,[
+,
+  
   {
     "slug": "como-emitir-nota-fiscal-simples-nacional-2027",
     "category": "Notas Fiscais",
@@ -3493,7 +3494,6 @@ export const blogPosts: BlogPost[] = [
       }
     ]
   }
-]
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
