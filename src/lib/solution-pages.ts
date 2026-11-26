@@ -39,26 +39,29 @@ export const solutionPages: SolutionPage[] = [
   },
   {
     slug: "nfce",
-    title: "NFCe — Nota Fiscal do Consumidor",
-    seoTitle: "NFCe Online: emissão de cupom fiscal no PDV | EmitaGo",
-    description: "Emissor de NFC-e com PDV e Smart POS compatível. R$ 60,00 por CNPJ ativo em cada mês de uso, sem fidelidade.",
-    h1: "NFCe online para o seu varejo",
-    intro: "Transforme o caixa em um PDV fiscal completo e emita NFCe modelo 65 de forma rápida, organizada e integrada ao restante da operação.",
-    benefits: ["PDV online integrado", "Emissão de NFCe modelo 65", "QR Code para consulta do consumidor", "Cadastro de produtos e clientes", "Acesso em computador e Smart POS compatível"],
-    audience: ["Lojas e varejistas", "Mercados e minimercados", "Restaurantes e operações de balcão", "Comércios que precisam de PDV fiscal"],
-    steps: ["Configure a empresa e o ambiente fiscal.", "Cadastre produtos, preços e tributação.", "Registre a venda no PDV.", "Emita a NFCe e gere o documento para o consumidor.", "Acompanhe vendas e documentos pelo sistema."],
+    title: "Emissor de NFC-e online — Nota Fiscal de Consumidor",
+    seoTitle: "Emissor de NFC-e Online | Cupom Fiscal no PDV | EmitaGo",
+    description: "Emita NFC-e modelo 65 no PDV online do EmitaGo. Organize vendas e produtos, gere o cupom fiscal com QR Code e confira a compatibilidade do seu Smart POS.",
+    h1: "Emissor de NFC-e online para emitir cupom fiscal no varejo",
+    intro: "A NFC-e (Nota Fiscal de Consumidor Eletrônica, modelo 65) documenta vendas de mercadorias no varejo ao consumidor. Com o EmitaGo, organize a venda no PDV online e conecte a rotina comercial à emissão fiscal, conforme a configuração da empresa e as regras da SEFAZ do seu estado.",
+    benefits: ["PDV online integrado à emissão de NFC-e modelo 65", "Registro organizado das vendas de balcão", "Documento fiscal com QR Code para consulta do consumidor, após autorização", "Cadastro de produtos, preços e informações fiscais", "Uso em computador e Smart POS Android compatível, após confirmação do equipamento"],
+    audience: ["Lojas e varejistas", "Mercados e minimercados", "Comércios de venda presencial", "Operações de balcão que precisam de PDV com emissão fiscal"],
+    steps: ["Confirme o credenciamento e os requisitos fiscais aplicáveis à sua empresa e UF.", "Configure os dados da empresa e o ambiente de emissão no sistema.", "Cadastre produtos, preços e informações tributárias com apoio da contabilidade.", "Registre a venda no PDV e transmita a NFC-e para autorização.", "Após a autorização, disponibilize o DANFE NFC-e ao consumidor e mantenha os documentos fiscais organizados."],
     faq: [
-      { question: "Qual a diferença entre NFe e NFCe?", answer: "A NFCe modelo 65 é voltada principalmente ao varejo e ao consumidor final, enquanto a NFe modelo 55 atende outras operações fiscais." },
-      { question: "A NFCe pode ser emitida pelo PDV?", answer: "Sim. O EmitaGo integra a rotina de venda do PDV à emissão do documento fiscal." },
-      { question: "A NFCe possui QR Code?", answer: "A NFCe autorizada possui informações para consulta pelo consumidor, incluindo o QR Code conforme as regras fiscais aplicáveis." }
+      { question: "O que é NFC-e modelo 65?", answer: "É a Nota Fiscal de Consumidor Eletrônica usada para documentar operações de venda de mercadorias no varejo, conforme as regras fiscais aplicáveis." },
+      { question: "NFC-e é a mesma coisa que NF-e?", answer: "Não. A NFC-e modelo 65 é voltada principalmente às vendas no varejo ao consumidor. A NF-e modelo 55 atende outras operações, como vendas entre empresas e operações previstas na legislação." },
+      { question: "O que preciso para emitir NFC-e?", answer: "Em geral, é necessário estar habilitado pela SEFAZ da UF, configurar os dados fiscais da empresa e providenciar os requisitos técnicos aplicáveis, como certificado digital e código de segurança do contribuinte (CSC), quando exigidos. Confirme as regras do seu estado e com a contabilidade." },
+      { question: "A NFC-e substituiu o SAT em todo o Brasil?", answer: "A transição de documentos e equipamentos antigos depende da legislação estadual. Em São Paulo, a NFC-e passou a ser obrigatória no varejo em 1º de janeiro de 2026, substituindo o CF-e-SAT e outros documentos indicados pela SEFAZ-SP. Consulte sempre a regra da sua UF." },
+      { question: "O EmitaGo funciona em qualquer Smart POS?", answer: "Não necessariamente. A compatibilidade depende do modelo, do sistema operacional e da configuração. Confirme o equipamento com a equipe antes de contratar." },
+      { question: "Quanto custa o EmitaGo para emitir NFC-e?", answer: "O plano custa R$ 60,00 por CNPJ ativo por mês para até 5 CNPJs e R$ 40,00 por CNPJ ativo por mês para empresas com mais de 5 CNPJs. O mês de uso é pré-pago, sem fidelidade; confirme as condições vigentes antes da contratação." }
     ],
-    relatedSlugs: ["nfce-varejo", "nfe-passo-a-passo"]
+    relatedSlugs: ["nfce-varejo", "ibs-cbs-nfce-varejo-pdv-2027", "nfe-passo-a-passo"]
   },
   {
     slug: "pdv-smart-pos",
     title: "PDV com NFC-e e Smart POS",
     seoTitle: "PDV com NFC-e e Smart POS Android | EmitaGo",
-    description: "Sistema PDV com NFC-e e Smart POS Android compatível. R$ 60,00 por CNPJ ativo em cada mês de uso, sem fidelidade.",
+    description: "PDV online com emissão de NFC-e e Smart POS Android compatível. R$ 60,00 por CNPJ ativo/mês para até 5 CNPJs e R$ 40,00 por CNPJ ativo/mês acima de 5 CNPJs, pré-pago e sem fidelidade.",
     h1: "PDV com NFC-e e Smart POS para o seu comércio",
     intro: "Organize as vendas do balcão e a emissão fiscal em um único fluxo. Conheça os recursos de PDV do EmitaGo e confirme a compatibilidade do seu equipamento Smart POS antes de contratar.",
     benefits: [
@@ -84,7 +87,7 @@ export const solutionPages: SolutionPage[] = [
     faq: [
       { question: "O EmitaGo funciona em qualquer Smart POS?", answer: "A compatibilidade depende do equipamento, do sistema operacional e da configuração da operação. Confirme o modelo com a equipe antes de contratar." },
       { question: "O PDV permite emitir NFC-e?", answer: "O EmitaGo oferece recursos de PDV integrados à emissão de NFC-e, conforme a configuração fiscal e a disponibilidade da integração." },
-      { question: "Quanto custa o PDV com NFC-e?", answer: "O preço do EmitaGo é R$ 60,00 por CNPJ ativo em cada mês de uso, com pagamento antecipado. A emissão é ilimitada no mês pago para o CNPJ ativo, sem fidelidade." }
+      { question: "Quanto custa o PDV com NFC-e?", answer: "O preço é R$ 60,00 por CNPJ ativo/mês para até 5 CNPJs e R$ 40,00 por CNPJ ativo/mês para empresas com mais de 5 CNPJs. O mês de uso é pré-pago, sem fidelidade; consulte as condições vigentes." }
     ],
     relatedSlugs: ["nfce-varejo", "nfe-passo-a-passo"]
   },
