@@ -1559,55 +1559,116 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nfce-varejo",
     category: "Notas Fiscais",
-    title: "NFCe no varejo: o cupom fiscal que substitui o SAT",
+    title: "NFC-e modelo 65: emissor de cupom fiscal e PDV para o varejo",
     excerpt:
-      "Entenda quando usar NFCe, o que muda no PDV e como configurar contingência offline para não parar as vendas.",
-    date: "05 Jan 2026",
-    readMin: 5,
+      "Entenda o que é NFC-e modelo 65, como escolher um emissor de cupom fiscal e preparar seu PDV, credenciamento, QR Code e contingência conforme a SEFAZ.",
+    date: "26 Nov 2026",
+    updatedAt: "26 Nov 2026",
+    readMin: 8,
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
     author: "Equipe EmitaGo",
     content: [
       {
         type: "paragraph",
-        text: "A NFCe (modelo 65) é o documento fiscal eletrônico usado no varejo para vendas ao consumidor final. Ela substitui o cupom fiscal do ECF e, em vários estados, também o SAT — com a vantagem de rodar 100% online e imprimir em impressoras térmicas comuns.",
+        text: "A NFC-e (Nota Fiscal de Consumidor Eletrônica, modelo 65) é um documento fiscal digital usado para registrar vendas de mercadorias no varejo ao consumidor. O emissor transmite os dados à SEFAZ; após a autorização, o consumidor recebe o DANFE NFC-e, que pode ser consultado pelo QR Code conforme o leiaute vigente."
       },
       {
         type: "heading",
-        text: "Quando usar NFCe em vez de NFe",
+        text: "NFC-e, NF-e e NFS-e: qual a diferença?"
       },
       {
         type: "list",
         items: [
-          "Venda presencial para consumidor final (pessoa física ou jurídica sem IE).",
-          "Operações dentro do estado de origem da empresa.",
-          "Valor por operação abaixo dos limites definidos pela SEFAZ do seu estado.",
-        ],
-      },
-      {
-        type: "paragraph",
-        text: "Para vendas interestaduais, para outra empresa (B2B) ou acima do teto, o correto continua sendo NFe modelo 55.",
+          "NFC-e modelo 65: documento voltado principalmente às vendas de mercadorias no varejo ao consumidor.",
+          "NF-e modelo 55: documento usado em outras operações com mercadorias, como diversas vendas entre empresas e operações previstas na legislação.",
+          "NFS-e: documento fiscal relacionado à prestação de serviços."
+        ]
       },
       {
         type: "heading",
-        text: "PDV integrado e QR Code",
+        text: "Quem precisa emitir NFC-e?"
       },
       {
         type: "paragraph",
-        text: "Um bom PDV integrado gera a NFCe em segundos, imprime o cupom com QR Code para consulta pelo consumidor e envia o XML para a nuvem automaticamente. O QR Code é obrigatório e permite validar a autenticidade do cupom direto no site da SEFAZ.",
+        text: "A obrigatoriedade, as operações permitidas e as regras de credenciamento são definidas pela legislação aplicável e pela SEFAZ de cada estado. Antes de configurar o caixa, confirme o enquadramento da empresa, a inscrição estadual e os requisitos locais com a contabilidade."
       },
       {
         type: "heading",
-        text: "Contingência offline",
+        text: "O que conferir antes de escolher um emissor de cupom fiscal"
+      },
+      {
+        type: "list",
+        items: [
+          "Credenciamento da empresa e ambiente de emissão exigido pela SEFAZ da UF.",
+          "Certificado digital e CSC/token, quando exigidos para a configuração.",
+          "Cadastro de produtos e dados fiscais revisados com a contabilidade, incluindo NCM e demais campos aplicáveis.",
+          "Emissão do DANFE NFC-e e apresentação do QR Code ao consumidor.",
+          "Compatibilidade do PDV, computador ou Smart POS usado no estabelecimento.",
+          "Procedimentos para rejeições, cancelamento e contingência conforme as regras estaduais e os recursos do sistema."
+        ]
+      },
+      {
+        type: "heading",
+        text: "Como emitir NFC-e no PDV"
+      },
+      {
+        type: "list",
+        items: [
+          "Configure os dados cadastrais e fiscais da empresa no emissor.",
+          "Cadastre os produtos, preços e informações tributárias.",
+          "Registre os itens e a forma de pagamento da venda no PDV.",
+          "Transmita a NFC-e e acompanhe o retorno da SEFAZ.",
+          "Após a autorização, disponibilize o documento ao consumidor e mantenha o XML e os protocolos organizados."
+        ]
+      },
+      {
+        type: "heading",
+        text: "NFC-e e SAT: a regra depende do estado"
       },
       {
         type: "paragraph",
-        text: "Se a internet ou a SEFAZ ficam fora do ar, o sistema entra em contingência offline: as NFCes são geradas com numeração própria, impressas normalmente e transmitidas em lote assim que a conexão volta. Sem isso, o caixa para — e no varejo cada minuto conta.",
+        text: "Não é correto afirmar que a NFC-e substituiu todos os equipamentos e documentos antigos ao mesmo tempo em todo o Brasil. Em São Paulo, a SEFAZ-SP tornou a NFC-e obrigatória para o varejo a partir de 1º de janeiro de 2026, substituindo o CF-e-SAT (modelo 59), a Nota Fiscal de Venda ao Consumidor (modelo 2) e a Nota Fiscal de Venda a Consumidor online (modelo 56). Consulte a legislação da sua UF para confirmar a transição aplicável."
       },
       {
-        type: "quote",
-        text: "Contingência bem configurada é a diferença entre uma loja lotada que continua vendendo e uma loja parada esperando a internet voltar.",
+        type: "heading",
+        text: "Contingência offline: confirme o suporte"
       },
-    ],
+      {
+        type: "paragraph",
+        text: "A possibilidade de emitir NFC-e em contingência, os procedimentos de impressão e o prazo para transmitir documentos pendentes dependem das regras técnicas e fiscais vigentes e dos recursos do emissor. Antes de contratar, confirme se o sistema oferece a modalidade necessária para sua operação e como o procedimento deve ser executado no seu estado. Não presuma que todo PDV online emite offline automaticamente."
+      },
+      {
+        type: "heading",
+        text: "IBS e CBS: mantenha o emissor atualizado"
+      },
+      {
+        type: "paragraph",
+        text: "A Receita Federal e o Comitê Gestor do IBS atualizaram o cronograma de documentos fiscais eletrônicos em novembro de 2026. O calendário contempla a NFC-e modelo 65 e apresenta prazos diferentes por documento, operação e enquadramento; também há datas específicas para documentos de contribuintes do Simples Nacional em 2027. Acompanhe o cronograma oficial e as notas técnicas, em vez de aplicar uma única data a todas as empresas."
+      },
+      {
+        type: "paragraph",
+        text: "Para vendas de balcão, o EmitaGo oferece PDV online integrado à emissão de NFC-e e acesso em Smart POS Android compatível. Confirme com a equipe a compatibilidade do equipamento e a configuração fiscal necessária para sua UF antes de contratar."
+      },
+      {
+        type: "heading",
+        text: "Fontes oficiais para consultar"
+      },
+      {
+        type: "source",
+        label: "Receita Federal — Cronograma dos documentos fiscais eletrônicos, atualizado em 19/11/2026",
+        href: "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/orientacoes-da-reforma-tributaria/cronograma"
+      },
+      {
+        type: "source",
+        label: "SEFAZ-SP — Sobre a NFC-e e obrigatoriedade no varejo paulista",
+        href: "https://portal.fazenda.sp.gov.br/servicos/nfce/"
+      },
+      {
+        type: "source",
+        label: "SEFAZ-SP — Sobre o SAT e orientações após 31/12/2025",
+        href: "https://portal.fazenda.sp.gov.br/servicos/sat/"
+      }
+    ]
   },
   {
     slug: "cte-transporte",
