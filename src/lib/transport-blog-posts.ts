@@ -257,7 +257,6 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "source", label: "Receita Estadual do Rio Grande do Sul — credenciamento para CT-e ou CT-e OS", href: "https://atendimento.receita.rs.gov.br/carta-de-servicos/servicos?servico=1729" }
     ]
   },
-,
 {
   "slug": "cte-subcontratacao-cbs-2027-o-que-muda",
   "category": "Transporte",
