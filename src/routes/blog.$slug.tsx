@@ -80,6 +80,11 @@ const RELATED_POST_SLUGS: Record<string, string[]> = {
   "manifesto-de-carga-encerramento-e-consulta": ["mdfe-como-emitir-e-encerrar-manifesto", "manifesto-de-carga-o-que-e-para-que-serve", "cte-transporte"],
   "emissor-de-manifesto-de-carga-para-transportadora": ["mdfe-como-emitir-e-encerrar-manifesto", "como-emitir-manifesto-de-carga-online", "ciot-para-todos-2026-o-que-mudou"],
   "cte-os-modelo-67": ["cte-transporte", "cte-ibs-cbs-2027-transportadoras", "ciot-para-todos-2026-o-que-mudou"],
+  "cte-subcontratacao-cbs-2027-o-que-muda": ["subcontratada-ct-e-cbs-credito-2027", "como-emitir-cte-subcontratacao-transportadora-2027", "ibs-cbs-ct-e-subcontratacao-valor-liquido-2027"],
+  "subcontratada-ct-e-cbs-credito-2027": ["cte-subcontratacao-cbs-2027-o-que-muda", "checklist-transportadora-subcontratacao-cbs-2027", "como-emitir-cte-subcontratacao-transportadora-2027"],
+  "como-emitir-cte-subcontratacao-transportadora-2027": ["cte-subcontratacao-cbs-2027-o-que-muda", "subcontratada-ct-e-cbs-credito-2027", "cte-transporte"],
+  "ibs-cbs-ct-e-subcontratacao-valor-liquido-2027": ["cte-subcontratacao-cbs-2027-o-que-muda", "subcontratada-ct-e-cbs-credito-2027", "ibs-cbs-cte-transporte-frete-2027"],
+  "checklist-transportadora-subcontratacao-cbs-2027": ["cte-subcontratacao-cbs-2027-o-que-muda", "como-emitir-cte-subcontratacao-transportadora-2027", "cte-transporte"],
 };
 
 const MONTHS: Record<string, number> = {
