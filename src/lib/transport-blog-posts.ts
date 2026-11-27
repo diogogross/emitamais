@@ -257,5 +257,547 @@ export const transportBlogPosts: BlogPost[] = [
       { type: "source", label: "Receita Estadual do Rio Grande do Sul — credenciamento para CT-e ou CT-e OS", href: "https://atendimento.receita.rs.gov.br/carta-de-servicos/servicos?servico=1729" }
     ]
   },
-
+,
+{
+  "slug": "cte-subcontratacao-cbs-2027-o-que-muda",
+  "category": "Transporte",
+  "title": "CT-e de subcontratação em 2027: CBS, crédito e o que muda para transportadoras",
+  "excerpt": "Entenda como a entrada da CBS em 2027 afeta a documentação do frete subcontratado, a análise de crédito da contratante e a emissão do CT-e.",
+  "date": "27 Nov 2026",
+  "updatedAt": "27 Nov 2026",
+  "readMin": 8,
+  image: cteTransporteImage,
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "A partir de 2027, a CBS inicia uma nova etapa da Reforma Tributária do consumo. Para transportadoras que contratam outras empresas para executar fretes, surge uma dúvida prática: como documentar o serviço adquirido e reunir os documentos necessários para a análise de créditos tributários?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O assunto é importante, mas é preciso separar a regra de crédito da regra estadual de emissão do CT-e. Não se deve afirmar que toda subcontratada, em qualquer estado, estará automaticamente obrigada a emitir um CT-e próprio apenas por causa da CBS."
+    },
+    {
+      "type": "heading",
+      "text": "O que é CT-e de subcontratação?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Na subcontratação, a transportadora A assume perante o cliente o transporte integral e contrata a transportadora B para executar o percurso desde a origem. A empresa A continua responsável perante seu cliente; B realiza o serviço contratado por A."
+    },
+    {
+      "type": "paragraph",
+      "text": "O CT-e da transportadora principal documenta a prestação assumida perante o cliente. Quando a subcontratada emite CT-e próprio, ele documenta a prestação entre B e A, com os dados e referências exigidos pela legislação e pelo leiaute aplicável."
+    },
+    {
+      "type": "heading",
+      "text": "Por que o documento pode ser importante para o crédito de CBS?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O art. 47 da Lei Complementar nº 214/2025 prevê que o contribuinte sujeito ao regime regular poderá apropriar créditos de IBS e CBS nas aquisições, observadas as condições legais. A comprovação da operação por documento fiscal eletrônico idôneo é uma das exigências. Por isso, a contratante deve organizar os documentos que comprovam o serviço de transporte adquirido."
+    },
+    {
+      "type": "paragraph",
+      "text": "O crédito não é automático para toda empresa nem em qualquer operação. O regime tributário do adquirente, o enquadramento do serviço e o cumprimento das condições legais devem ser analisados pelo setor fiscal e pelo contador."
+    },
+    {
+      "type": "heading",
+      "text": "A subcontratada será obrigada a emitir CT-e em todos os estados?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A regra de emissão ou dispensa deve ser conferida na legislação estadual e na situação concreta. No Rio Grande do Sul, a Receita Estadual informa que a subcontratada fica dispensada de emitir CT-e; se optar pela emissão, deve utilizar o tipo de serviço de subcontratação, informar a transportadora contratante como tomadora e referenciar o CT-e anterior conforme a orientação oficial."
+    },
+    {
+      "type": "paragraph",
+      "text": "Em outras UFs, consulte a SEFAZ competente. Também diferencie subcontratação total de redespacho, pois são operações distintas."
+    },
+    {
+      "type": "heading",
+      "text": "O que muda no CT-e com a NT 2026.004 v1.01?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A Nota Técnica CT-e 2026.004 v1.01 cria o campo vPrestLiq para informar o valor líquido da prestação sem tributos e ajusta o total do documento. A partir de 2027, vTotDFe soma vTPrest aos valores de IBS e CBS. A versão 1.01 retirou a orientação anterior de incluir IBS e CBS em vTPrest. A implantação em produção está prevista para 14 de dezembro de 2026."
+    },
+    {
+      "type": "heading",
+      "text": "Como se preparar"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Mapeie os fretes executados por subcontratadas e os estados de início das prestações.",
+        "Confirme com a contabilidade se a subcontratada deve ou pode emitir CT-e.",
+        "Combine o envio do XML autorizado e a referência correta ao CT-e da contratante.",
+        "Revise regime tributário e classificação fiscal com o contador.",
+        "Atualize o sistema emissor e teste o leiaute técnico vigente."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Emita CT-e de subcontratação com EmitaGo"
+    },
+    {
+      "type": "paragraph",
+      "text": "O EmitaGo oferece emissão online de CT-e, incluindo CT-e de subcontratação. A plataforma ajuda a organizar a rotina fiscal de transporte; o enquadramento tributário e a obrigação de emissão devem ser confirmados conforme a operação e a legislação aplicável."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Lei Complementar nº 214/2025 — art. 47",
+      "href": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
+    },
+    {
+      "type": "source",
+      "label": "Receita Estadual do RS — CT-e na subcontratação",
+      "href": "https://atendimento.receita.rs.gov.br/como-emitir-ct-e-no-caso-de-subcontratacao"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional do CT-e — Nota Técnica 2026.004 v1.01",
+      "href": "https://www.cte.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=urai6j7wfLM%3D"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional do CT-e — cronograma de implantação",
+      "href": "https://www.cte.fazenda.gov.br/portal/informe.aspx?informe=183"
+    }
+  ]
+},
+{
+  "slug": "subcontratada-ct-e-cbs-credito-2027",
+  "category": "Transporte",
+  "title": "Subcontratada precisa emitir CT-e em 2027 para a contratante aproveitar crédito de CBS?",
+  "excerpt": "Veja por que a documentação fiscal da subcontratação importa na apuração de créditos e quais condições precisam ser observadas em 2027.",
+  "date": "27 Nov 2026",
+  "updatedAt": "27 Nov 2026",
+  "readMin": 7,
+  image: cteTransporteImage,
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Uma dúvida frequente é se, a partir de 1º de janeiro de 2027, toda transportadora subcontratada terá que emitir CT-e para que a contratante aproveite crédito de CBS. A resposta exige separar a regra de crédito tributário da regra estadual de emissão do conhecimento de transporte."
+    },
+    {
+      "type": "heading",
+      "text": "O que diz a lei sobre crédito de CBS?"
+    },
+    {
+      "type": "paragraph",
+      "text": "O art. 47 da Lei Complementar nº 214/2025 prevê crédito de IBS e CBS para contribuintes sujeitos ao regime regular, conforme as condições legais. A apropriação depende da comprovação da operação por documento fiscal eletrônico idôneo e de outras condições previstas na lei."
+    },
+    {
+      "type": "paragraph",
+      "text": "Isso torna essencial que a contratante tenha documentação adequada para comprovar o serviço adquirido. Mas um CT-e, isoladamente, não garante o crédito nem torna todas as empresas sujeitas ao mesmo tratamento."
+    },
+    {
+      "type": "heading",
+      "text": "Qual é o papel do CT-e da subcontratada?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quando emitido, o CT-e da subcontratada documenta a prestação que ela realizou para a transportadora contratante. Pode ser relevante para registrar a aquisição, reconciliar o valor pago e fornecer ao setor fiscal o documento necessário para analisar a operação."
+    },
+    {
+      "type": "paragraph",
+      "text": "A contratante deve receber e guardar o XML autorizado, verificar sua validade e conferir os dados com o contrato, o pagamento e o CT-e da prestação principal."
+    },
+    {
+      "type": "heading",
+      "text": "A regra é igual em todo o Brasil?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Não presuma que sim. Os procedimentos de emissão e dispensa dependem da legislação estadual e da operação. No RS, a Receita Estadual informa que a subcontratada fica dispensada de emitir CT-e, mas pode optar pela emissão, observando o tipo de serviço, a tomadora e a referência ao documento anterior."
+    },
+    {
+      "type": "paragraph",
+      "text": "A empresa deve confirmar com seu contador e com a SEFAZ competente como conciliar a documentação necessária à análise de crédito com a regra estadual de emissão."
+    },
+    {
+      "type": "heading",
+      "text": "E quando o prestador é TAC?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A NT CT-e 2026.004 v1.01 prevê evento de apropriação de crédito presumido pelo tomador do serviço prestado por Transportador Autônomo de Cargas (TAC). Esse procedimento é específico e não deve ser confundido com uma obrigação geral de todas as transportadoras subcontratadas."
+    },
+    {
+      "type": "heading",
+      "text": "Checklist para contratante e subcontratada"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Identifique o regime tributário de ambas as empresas.",
+        "Confirme se a subcontratada deve emitir CT-e ou se há dispensa estadual.",
+        "Se emitir, valide o tipo de serviço e a referência ao CT-e da contratante.",
+        "Defina quem recebe, confere e arquiva o XML autorizado.",
+        "Analise com o contador as condições de crédito aplicáveis."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Conclusão"
+    },
+    {
+      "type": "paragraph",
+      "text": "A CBS aumenta a importância da organização documental na cadeia de transporte. A contratante deve solicitar e guardar os documentos necessários à comprovação da aquisição, mas a obrigação de emissão do CT-e da subcontratada deve ser verificada por estado e operação — não presumida como universal."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Lei Complementar nº 214/2025 — art. 47",
+      "href": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
+    },
+    {
+      "type": "source",
+      "label": "Receita Estadual do RS — procedimento na subcontratação",
+      "href": "https://atendimento.receita.rs.gov.br/como-emitir-ct-e-no-caso-de-subcontratacao"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional do CT-e — NT 2026.004 v1.01",
+      "href": "https://www.cte.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=urai6j7wfLM%3D"
+    }
+  ]
+},
+{
+  "slug": "como-emitir-cte-subcontratacao-transportadora-2027",
+  "category": "Transporte",
+  "title": "Como emitir CT-e de subcontratação: dados e cuidados para 2027",
+  "excerpt": "Passo a passo para transportadoras subcontratadas que precisam emitir CT-e, informar a contratante e referenciar o documento anterior.",
+  "date": "27 Nov 2026",
+  "updatedAt": "27 Nov 2026",
+  "readMin": 7,
+  image: cteTransporteImage,
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "O CT-e de subcontratação documenta a prestação de transporte executada por uma empresa contratada por outra. Antes de emitir, confirme se a operação é subcontratação total, redespacho ou prestação independente, pois cada situação pode exigir um tipo de serviço diferente."
+    },
+    {
+      "type": "heading",
+      "text": "1. Confirme a relação contratual"
+    },
+    {
+      "type": "paragraph",
+      "text": "Na subcontratação, a transportadora principal assume perante o cliente o transporte integral e contrata outra empresa para executar o percurso desde a origem. Guarde contrato, pedido de frete ou registro que demonstre quem contratou e quem é responsável pelo pagamento."
+    },
+    {
+      "type": "heading",
+      "text": "2. Confira se a emissão é obrigatória ou facultativa"
+    },
+    {
+      "type": "paragraph",
+      "text": "A regra depende da legislação aplicável. No RS, a Receita Estadual informa que a subcontratada fica dispensada de emitir CT-e, mas pode optar pela emissão. Em outras UFs, consulte a SEFAZ local antes de definir o procedimento."
+    },
+    {
+      "type": "heading",
+      "text": "3. Selecione o tipo de serviço correto"
+    },
+    {
+      "type": "paragraph",
+      "text": "Quando a subcontratada emitir CT-e de subcontratação, a orientação do RS indica CT-e modelo 57 com tpServ=1 (Subcontratação). Não confunda com tpServ=2 (Redespacho) ou tpServ=3 (Redespacho Intermediário). Siga o leiaute vigente e a regra estadual."
+    },
+    {
+      "type": "heading",
+      "text": "4. Informe a contratante e o documento anterior"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Informe como tomadora a transportadora que contratou a subcontratada, conforme contrato e regra aplicável.",
+        "Referencie no grupo docAnt o CT-e da transportadora contratante, quando exigido.",
+        "Confira a chave de acesso e os participantes antes de transmitir.",
+        "Valide CFOP e tratamento tributário com a contabilidade; não copie automaticamente o procedimento de outra UF."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "5. Revise os campos de IBS e CBS"
+    },
+    {
+      "type": "paragraph",
+      "text": "A NT CT-e 2026.004 v1.01 atualiza campos e validações. vPrestLiq informa o valor líquido da prestação sem tributos. A partir de 2027, vTotDFe soma vTPrest aos valores de IBS e CBS. Use a versão técnica atual e os parâmetros fiscais definidos com o contador."
+    },
+    {
+      "type": "heading",
+      "text": "6. Transmita, valide e entregue o XML"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Assine com o certificado digital adequado.",
+        "Transmita à SEFAZ e aguarde a autorização.",
+        "Corrija rejeições conforme a regra retornada.",
+        "Depois da autorização, entregue o XML à contratante e mantenha o arquivo guardado."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Erros que podem atrasar a emissão"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Confundir subcontratação com redespacho.",
+        "Informar tomador incorreto.",
+        "Deixar passar muito tempo e perder a janela técnica de referência do CT-e anterior.",
+        "Preencher IBS/CBS sem validar o enquadramento.",
+        "Enviar somente DACTE quando a contratante precisa do XML autorizado."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Emita CT-e de subcontratação com EmitaGo"
+    },
+    {
+      "type": "paragraph",
+      "text": "O EmitaGo oferece emissão online de CT-e, incluindo operações de subcontratação. A plataforma ajuda a organizar os dados e a rotina de emissão; confirme com seu contador o enquadramento fiscal e a regra estadual aplicável."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Receita Estadual do RS — como emitir CT-e na subcontratação",
+      "href": "https://atendimento.receita.rs.gov.br/como-emitir-ct-e-no-caso-de-subcontratacao"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional do CT-e — NT 2026.004 v1.01",
+      "href": "https://www.cte.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=urai6j7wfLM%3D"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional do CT-e — perguntas frequentes",
+      "href": "https://www.cte.fazenda.gov.br/portal/perguntasFrequentes.aspx"
+    }
+  ]
+},
+{
+  "slug": "ibs-cbs-ct-e-subcontratacao-valor-liquido-2027",
+  "category": "Transporte",
+  "title": "CBS no CT-e de subcontratação: valor do frete, documento e crédito em 2027",
+  "excerpt": "Entenda o valor líquido da prestação, o total do CT-e com IBS e CBS e como comparar valores entre a transportadora contratante e a subcontratada.",
+  "date": "27 Nov 2026",
+  "updatedAt": "27 Nov 2026",
+  "readMin": 7,
+  image: cteTransporteImage,
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "A Reforma Tributária muda a forma de apresentar e conferir valores nos documentos fiscais de transporte. Na subcontratação, é importante separar o preço do serviço, os tributos e o valor total do documento para que as empresas não comparem números com significados diferentes."
+    },
+    {
+      "type": "heading",
+      "text": "O que a NT CT-e 2026.004 v1.01 atualiza?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A versão 1.01 cria o campo vPrestLiq, que representa o valor líquido total da prestação sem tributos. O campo é opcional. A nota também ajusta a regra do total geral do documento fiscal eletrônico."
+    },
+    {
+      "type": "heading",
+      "text": "Como será calculado o total do documento em 2027?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Segundo a NT 2026.004 v1.01, a partir de 2027 vTotDFe deve corresponder ao valor da prestação informado em vTPrest somado aos totais de IBS e CBS. A versão 1.01 retirou a orientação anterior de incluir IBS e CBS na composição de vTPrest. Não use exemplos de versões anteriores sem conferir a atualização."
+    },
+    {
+      "type": "heading",
+      "text": "Por que o valor líquido ajuda na subcontratação?"
+    },
+    {
+      "type": "paragraph",
+      "text": "A transportadora principal pode comparar o valor cobrado do cliente com o valor pago à subcontratada para analisar custo e margem. Com os campos de tributos e valor líquido, a comparação deve evitar misturar o preço do serviço com o total do documento. Como vPrestLiq é opcional, confirme sua disponibilidade no sistema e combine o preenchimento com os parceiros."
+    },
+    {
+      "type": "heading",
+      "text": "Documento fiscal e crédito de CBS"
+    },
+    {
+      "type": "paragraph",
+      "text": "O art. 47 da LC 214/2025 condiciona o crédito de IBS e CBS, para contribuintes do regime regular, às condições legais e à comprovação por documento fiscal eletrônico idôneo. O CT-e é importante para documentar o serviço, mas o crédito deve ser analisado conforme o regime da contratante e o tratamento da operação."
+    },
+    {
+      "type": "heading",
+      "text": "Atenção ao TAC"
+    },
+    {
+      "type": "paragraph",
+      "text": "A NT também prevê evento de apropriação de crédito presumido pelo tomador do serviço prestado por TAC. Esse mecanismo específico deve ser analisado separadamente da emissão de CT-e entre duas transportadoras."
+    },
+    {
+      "type": "heading",
+      "text": "Checklist para revisar o sistema"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Confirme que o sistema utiliza a NT CT-e 2026.004 v1.01.",
+        "Revise vTPrest e vTotDFe conforme a versão vigente.",
+        "Confira o campo vPrestLiq e se o sistema permite informá-lo.",
+        "Valide grupos IBS/CBS, cClassTrib e alíquotas com a contabilidade.",
+        "Teste em homologação e confira o XML autorizado."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Prazo de implantação"
+    },
+    {
+      "type": "paragraph",
+      "text": "O Portal Nacional do CT-e informou a implantação em produção da NT 2026.004 v1.01 para 14 de dezembro de 2026. Acompanhe os avisos oficiais, pois cronogramas técnicos podem ser atualizados."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional do CT-e — Nota Técnica 2026.004 v1.01",
+      "href": "https://www.cte.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=urai6j7wfLM%3D"
+    },
+    {
+      "type": "source",
+      "label": "Lei Complementar nº 214/2025 — art. 47",
+      "href": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional do CT-e — cronograma",
+      "href": "https://www.cte.fazenda.gov.br/portal/informe.aspx?informe=183"
+    }
+  ]
+},
+{
+  "slug": "checklist-transportadora-subcontratacao-cbs-2027",
+  "category": "Transporte",
+  "title": "Checklist 2027: como transportadoras devem se preparar para CT-e de subcontratação e CBS",
+  "excerpt": "Organize contratos, emissão de CT-e, recebimento de XML e conferência de crédito para a nova etapa tributária de 2027.",
+  "date": "27 Nov 2026",
+  "updatedAt": "27 Nov 2026",
+  "readMin": 6,
+  image: cteTransporteImage,
+  "author": "Equipe EmitaGo",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "A entrada da CBS em 2027 exige que transportadoras revisem contratação de fretes, emissão de CT-e e guarda de documentos. Na subcontratação, a preparação deve envolver a empresa contratante e quem executa o transporte."
+    },
+    {
+      "type": "heading",
+      "text": "1. Mapeie a cadeia de transporte"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Liste os clientes e os fretes contratados.",
+        "Identifique as prestações executadas por subcontratadas e os estados de início.",
+        "Separe subcontratação total, redespacho e prestação independente.",
+        "Registre quem é responsável pelo pagamento em cada contrato."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "2. Revise a regra de emissão de CT-e"
+    },
+    {
+      "type": "paragraph",
+      "text": "Confirme, estado por estado, se a subcontratada está dispensada ou deve emitir CT-e e quais dados precisa informar. No RS, a Receita Estadual orienta que a subcontratada pode optar por emitir CT-e de subcontratação, informando a contratante como tomadora e referenciando o CT-e anterior. Não aplique automaticamente essa regra a outras UFs."
+    },
+    {
+      "type": "heading",
+      "text": "3. Padronize a entrega do XML"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Defina quando a subcontratada enviará o XML autorizado.",
+        "Confira a chave do CT-e anterior quando a referência for necessária.",
+        "Verifique validade e autorização e compare com contrato e pagamento.",
+        "Armazene o XML pelo prazo fiscal aplicável."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "4. Prepare a análise de crédito de CBS"
+    },
+    {
+      "type": "paragraph",
+      "text": "O crédito depende das condições legais e do regime tributário do adquirente. O setor fiscal deve identificar quais aquisições podem gerar crédito e quais documentos comprovam a operação. Não trate a emissão de CT-e como garantia automática de crédito."
+    },
+    {
+      "type": "heading",
+      "text": "5. Atualize o emissor e teste o leiaute"
+    },
+    {
+      "type": "paragraph",
+      "text": "A NT CT-e 2026.004 v1.01 inclui vPrestLiq, ajusta o total do documento e atualiza regras técnicas relacionadas ao IBS e à CBS. A implantação em produção está prevista para 14 de dezembro de 2026. Teste em homologação antes de iniciar a emissão com as novas regras."
+    },
+    {
+      "type": "heading",
+      "text": "6. Alinhe equipe e parceiros"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Oriente o financeiro sobre valor líquido e total do documento.",
+        "Treine o fiscal para conferir XML e classificação tributária.",
+        "Atualize contratos e procedimentos com apoio jurídico e contábil.",
+        "Defina um canal para tratar rejeições e correções antes do fechamento do frete."
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "7. Use um sistema preparado para transporte"
+    },
+    {
+      "type": "paragraph",
+      "text": "O EmitaGo oferece emissão online de CT-e, CT-e OS e MDF-e, incluindo CT-e de subcontratação. Conheça a solução para organizar a rotina fiscal e confirme com a equipe os recursos disponíveis para seu fluxo."
+    },
+    {
+      "type": "heading",
+      "text": "Resumo"
+    },
+    {
+      "type": "paragraph",
+      "text": "Não espere a virada do ano para descobrir que o XML não chega, que a referência ao CT-e anterior está incorreta ou que o sistema precisa de atualização. Mapeie a operação, confirme a regra estadual, alinhe a documentação e teste o leiaute oficial."
+    },
+    {
+      "type": "heading",
+      "text": "Fontes oficiais"
+    },
+    {
+      "type": "source",
+      "label": "Receita Estadual do RS — subcontratação e emissão de CT-e",
+      "href": "https://atendimento.receita.rs.gov.br/como-emitir-ct-e-no-caso-de-subcontratacao"
+    },
+    {
+      "type": "source",
+      "label": "Portal Nacional do CT-e — NT 2026.004 v1.01",
+      "href": "https://www.cte.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=urai6j7wfLM%3D"
+    },
+    {
+      "type": "source",
+      "label": "Lei Complementar nº 214/2025",
+      "href": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
+    }
+  ]
+}
 ];
